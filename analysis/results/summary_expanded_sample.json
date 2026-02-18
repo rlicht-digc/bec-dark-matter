@@ -1,0 +1,47 @@
+{
+  "pipeline": "expanded_sample",
+  "n_galaxies_total": 255,
+  "n_dense": 38,
+  "n_field": 217,
+  "datasets": {
+    "deBlok2002": 17,
+    "WALLABY": 165,
+    "SS20_S": 54,
+    "SS20_A": 2,
+    "SS20_LT": 11,
+    "SS20_TH": 2,
+    "SS20_R": 4
+  },
+  "sigma_dense": 0.3044500500135996,
+  "sigma_field": 0.3713088394921359,
+  "delta_sigma": 0.0668587894785363,
+  "binned_results": [
+    {
+      "center": -12.5,
+      "n_dense": 35,
+      "n_field": 220,
+      "sigma_dense": 0.408862439798518,
+      "sigma_field": 0.3778170674145155,
+      "delta": -0.031045372384002512,
+      "p_field_gt_dense": 0.26
+    },
+    {
+      "center": -11.5,
+      "n_dense": 169,
+      "n_field": 1132,
+      "sigma_dense": 0.26600093769659866,
+      "sigma_field": 0.36091477893009444,
+      "delta": 0.09491384123349578,
+      "p_field_gt_dense": 1.0
+    },
+    {
+      "center": -10.5,
+      "n_dense": 6,
+      "n_field": 39,
+      "sigma_dense": 0.1595664320124673,
+      "sigma_field": 0.21696128440378765,
+      "delta": 0.05739485239132033,
+      "p_field_gt_dense": 0.7078
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-16T20:37:23 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-16T20:37:23	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/MNRAS/388/500/galaxies&-out.max=unlimited	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_73880500
+#Name: J/MNRAS/388/500
+#Title: GHASP: H{alpha} data cubes for 108 galaxies (Epinat+, 2008)
+#INFO	ivoid=ivo://cds.vizier/j/mnras/388/500	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/mnras/388/500	    IVOID of underlying data collection
+#INFO	creator=Epinat B.	    First author or institution
+#INFO	cites=bibcode:2008MNRAS.388..500E	    Article or Data origin sources
+#INFO	journal=MNRA	    Journal name
+#INFO	original_date=2008	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/388/500	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.73880500	    Dataset identifier that can be used for citation
+#INFO	publication_date=2024-07-07	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_MNRAS_388_500_galaxies:
+#Name: J/MNRAS/388/500/galaxies
+#Title: Model and galaxy parameters
+#Column	Name	(a9)	Name	[ucd=meta.id;meta.main]
+#Column	Vsys-L	(I4)	Systemic velocity found in HyperLeda data base	[ucd=phys.veloc]
+#Column	Vsys-FP	(I4)	? Systemic velocity deduced from our velocity field analysis	[ucd=phys.veloc]
+#Column	i-L	(I2)	Morphological inclination from HyperLeda	[ucd=src.morph]
+#Column	i-FP	(I2)	? Inclination deduced from the analysis of our velocity field	[ucd=src.orbital.inclination]
+#Column	l_Vres	(A1)	Limit flag on Res	[ucd=meta.code.error]
+#Column	Vres	(F7.1)	? Mean residual velocity in the whole velocity field	[ucd=stat.fit.residual;phys.veloc;stat.mean]
+#Column	sigres	(I2)	? Residual velocity dispersion in the whole velocity field	[ucd=stat.fit.residual;phys.veloc]
+#Column	chi2	(F4.1)	? Reduced {chi}^2^ of the model	[ucd=stat.fit.chi2]
+#Column	T	(F4.1)	RC3 morphological type from HyperLeda data base	[ucd=src.morph.type]
+#Column	MType	(a11)	Morphological type from the HyperLeda data base	[ucd=src.morph.type]
+#Column	Dist	(F5.1)	Distance (1)	[ucd=pos.distance]
+#Column	i	(I2)	Inclination derived from the axial ratio, arccos(b/a)	[ucd=src.orbital.inclination]
+#Column	D25	(I3)	Isophotal radius at the limiting surface brightness of 25Bmag/arcsec^2^	[ucd=phys.angSize]
+#Column	Vmax	(I3)	? Maximum velocity (3)	[ucd=spect.dopplerVeloc;pos.heliocentric]
+#Column	q_Vmax	(I1)	[1/4]? Quality flag on Vmax (5)	[ucd=meta.code.qual]
+#Column	Simbad	(a6)	Simbad column added by the CDS	[ucd=]
+#Column	NED	(A3)	Simbad column added by the CDS	[ucd=]
+#Column	LEDA	(A4)	Simbad column added by the CDS	[ucd=]
+#Column	_RA	(F9.5)	Right Ascension (J2000) from SIMBAD (not part of the original data)	[ucd=pos.eq.ra;meta.main]
+#Column	_DE	(F9.5)	Declination (J2000) from SIMBAD (not part of the original data)	[ucd=pos.eq.dec;meta.main]
+Name	Vsys-L	Vsys-FP	i-L	i-FP	l_Vres	Vres	sigres	chi2	T	MType	Dist	i	D25	Vmax	q_Vmax	Simbad	NED	LEDA	_RA	_DE
+ 	km/s	km/s	deg	deg	 	m/s	km/s	 	 	 	Mpc	deg	arcsec	km/s	 	 	 	 	deg	deg
+---------	----	----	--	--	-	-------	--	----	----	-----------	-----	--	---	---	-	------	---	----	---------	---------
+UGC 12893	1102	1097	30	19	 	  -28.1	 8	 1.2	 8.4	Sd         	 12.5	27	 34	 72	2	Simbad	NED	LEDA	000.11729	+17.21886
+UGC 89   	4564	4510	40	33	 	   42.5	23	 8.6	 1.2	SBa        	 64.2	38	 46	343	1	Simbad	NED	LEDA	002.47246	+25.92406
+UGC 94   	4592	4548	50	42	 	   -3.9	13	 2.7	 2.4	S(r)ab     	 64.2	47	 34	209	1	Simbad	NED	LEDA	002.60858	+25.83197
+UGC 1013 	5190	    	80	  	 	       	  	    	 3.1	SB(r)b pec 	 70.8	72	 88	   	 	Simbad	NED	LEDA	021.59137	+34.70300
+NGC 542  	4660	    	90	  	 	       	  	    	 2.8	Sb pec     	 63.7	77	 34	125	2	Simbad	NED	LEDA	021.62883	+34.67550
+UGC 1317 	3111	3090	75	73	 	   -1.3	15	 3.3	 4.9	SAB(r)c    	 42.2	71	114	205	1	Simbad	NED	LEDA	027.82321	+22.35797
+UGC 1437 	4893	4858	52	47	 	   -0.8	18	 5.2	 4.9	SABc       	 66.8	51	 43	218	1	Simbad	NED	LEDA	029.42579	+35.91614
+UGC 1655 	5340	5427	45	45	 	-2744.9	30	15.4	 1.0	Sa         	 73.0	42	 86	205	4	Simbad	NED	LEDA	032.53992	+39.19039
+UGC 1810 	7556	    	75	42	 	       	  	    	 3.1	Sb pec     	102.4	69	 52	   	 	Simbad	NED	LEDA	035.36958	+39.37572
+UGC 3056 	-100	    	65	  	 	       	  	    	 9.6	IB         	  2.5	55	119	   	 	Simbad	NED	LEDA	067.70546	+64.84797
+UGC 3334 	3934	3952	47	47	 	    9.9	54	46.0	 4.2	SABb       	 55.6	45	132	377	1	Simbad	NED	LEDA	085.52262	+69.37842
+UGC 3382 	4497	4489	21	21	 	  -11.5	16	 4.1	 1.0	SB(r)a     	 62.8	20	 38	322	2	Simbad	NED	LEDA	089.94912	+62.15800
+UGC 3463 	2692	2679	63	63	 	   -0.1	15	 3.6	 4.7	SABc       	 38.6	61	 66	168	1	Simbad	NED	LEDA	096.73254	+59.07997
+UGC 3521 	4426	4415	61	58	 	    3.2	16	 4.1	 4.8	Sc         	 62.6	59	 35	167	3	Simbad	NED	LEDA	103.75233	+84.04200
+UGC 3528 	4421	4340	59	42	 	  -17.8	32	17.6	 2.0	SBab       	 61.8	55	 41	276	2	Simbad	NED	LEDA	104.04483	+84.07894
+UGC 3618 	5851	    	49	  	 	       	  	    	 2.0	Sab        	 80.0	46	 44	   	 	Simbad	NED	LEDA	104.65679	+45.21061
+UGC 3685 	1796	1795	55	12	 	   -1.3	 9	 1.4	 3.0	SB(r)b     	 26.3	52	 57	133	3	Simbad	NED	LEDA	107.27425	+61.59519
+UGC 3708 	5201	5161	16	44	 	  -11.6	18	 5.4	 4.5	Sbc pec    	 70.0	15	 25	235	1	Simbad	NED	LEDA	107.29958	+20.60361
+UGC 3709 	5223	5292	46	55	 	   -4.7	18	 5.3	 5.7	Sc         	 70.7	45	 35	241	1	Simbad	NED	LEDA	107.32617	+20.63550
+UGC 3826 	1733	1724	30	20	 	  135.4	 9	 1.2	 6.5	SABc       	 25.7	29	 98	 74	1	Simbad	NED	LEDA	111.11575	+61.69397
+UGC 3740 	2417	2416	40	48	<	    0.1	11	 1.7	 5.4	SAB(r)c pec	 17.1	39	 67	 87	2	Simbad	NED	LEDA	111.82292	+85.75392
+UGC 3876 	 860	 854	61	59	 	   -0.2	10	 1.6	 6.5	Scd        	 14.5	60	 57	112	2	Simbad	NED	LEDA	112.32325	+27.90019
+UGC 3915 	4679	4659	59	47	 	    6.8	13	 2.7	 4.6	SBc        	 63.6	57	 34	205	1	Simbad	NED	LEDA	113.73229	+31.27628
+IC 476   	4734	4767	40	55	 	   -5.9	18	 5.5	 4.2	SABb       	 63.9	39	 18	 71	3	Simbad	NED	LEDA	116.81833	+26.95083
+UGC 4026 	4782	4892	73	56	 	    4.0	19	 5.7	 2.0	Sab        	 64.7	66	 43	285	2	Simbad	NED	LEDA	116.83471	+26.93022
+UGC 4165 	 515	 504	21	41	 	   -0.4	10	 1.6	 6.9	SBcd       	 11.0	20	 74	 80	1	Simbad	NED	LEDA	120.47179	+50.73711
+UGC 4256 	5252	5252	36	38	 	   15.9	26	11.1	 5.2	SABc       	 71.7	35	 50	123	1	Simbad	NED	LEDA	122.56333	+33.95650
+UGC 4393 	2126	2119	50	50	 	    0.6	11	 1.7	 4.6	SBc        	 31.5	49	 44	 47	4	Simbad	NED	LEDA	126.51896	+45.96761
+UGC 4422 	4333	4321	49	25	 	  -18.3	20	 6.2	 4.9	SAB(r)c    	 58.1	47	 51	354	1	Simbad	NED	LEDA	126.92496	+21.47908
+UGC 4456 	5497	5470	28	 9	 	    7.3	14	 3.1	 5.2	S(r)c      	 74.0	27	 31	212	1	Simbad	NED	LEDA	128.01508	+24.01050
+UGC 4555 	4235	4235	21	38	 	    0.5	15	 3.5	 4.0	SABb       	 58.0	20	 45	185	1	Simbad	NED	LEDA	131.03462	+34.71717
+UGC 4770 	7063	7026	36	20	 	  -36.8	14	 3.0	 1.1	SBa        	 95.9	34	 48	330	3	Simbad	NED	LEDA	136.49787	+35.37714
+UGC 4820 	1355	1350	41	38	<	    0.1	13	 2.7	 1.7	S(r)ab     	 17.1	38	127	337	1	Simbad	NED	LEDA	137.58392	+07.03842
+UGC 5045 	7716	7667	41	16	 	   -2.8	13	 2.7	 5.0	SAB(r)c    	105.1	40	 35	429	1	Simbad	NED	LEDA	142.04187	+44.66492
+UGC 5175 	3052	3049	65	56	 	   -2.3	13	 2.9	 3.2	Sb         	 44.1	61	 62	188	1	Simbad	NED	LEDA	145.94500	+74.85989
+UGC 5228 	1873	1869	82	72	 	   -0.7	 9	 1.3	 4.9	SBc        	 24.7	76	 68	125	1	Simbad	NED	LEDA	146.51529	+01.66822
+UGC 5251 	1481	1465	88	73	<	    0.1	15	 3.5	 4.3	SBbc pec   	 21.5	77	142	125	3	Simbad	NED	LEDA	147.15021	+33.42150
+UGC 5279 	1488	    	90	  	 	       	  	    	 9.7	IB         	 21.3	74	 67	110	1	Simbad	NED	LEDA	147.73050	+28.55081
+UGC 5319 	2448	2439	40	30	 	  -21.0	 9	 1.3	 5.3	SB(r)c     	 35.8	39	 47	180	2	Simbad	NED	LEDA	149.05025	+75.86656
+UGC 5351 	1473	    	82	  	 	       	  	    	 2.1	SABa       	 19.3	71	 62	135	1	Simbad	NED	LEDA	149.58775	+32.37000
+UGC 5373 	 302	 291	60	10	 	   -0.5	 8	 0.9	 9.9	IB         	  1.4	52	148	 90	2	Simbad	NED	LEDA	150.00021	+05.33233
+UGC 5398 	  14	    	40	45	 	       	  	    	 7.9	Sd         	  3.8	36	162	   	 	Simbad	NED	LEDA	150.82946	+68.73394
+IC 2542  	6113	6111	43	20	 	   -0.9	20	 6.3	 4.6	SBc        	 83.4	42	 31	290	2	Simbad	NED	LEDA	151.96033	+34.31489
+UGC 5510 	1301	1298	38	31	 	   -0.3	10	 1.4	 4.6	SAB(r)c    	 18.6	37	 64	167	1	Simbad	NED	LEDA	153.38154	+22.73758
+UGC 5532 	2812	2802	33	32	<	    0.1	14	 2.9	 3.9	Sbc        	 41.1	32	122	398	1	Simbad	NED	LEDA	154.22346	+73.40064
+UGC 5556 	1581	    	75	  	 	       	  	    	 5.0	SBc pec    	 22.2	71	 67	   	 	Simbad	NED	LEDA	154.44967	+21.87325
+UGC 5786 	 990	 992	16	53	 	 -574.4	18	 4.9	 4.0	SAB(r)b    	 14.2	15	 54	 80	3	Simbad	NED	LEDA	159.69108	+53.50319
+UGC 5840 	 582	 580	18	18	<	    0.1	12	 2.1	 4.0	SB(r)bc    	  6.9	17	200	251	1	Simbad	NED	LEDA	160.87979	+24.92222
+UGC 5842 	1261	1245	34	47	 	   -1.5	10	 1.7	 6.0	SBc        	 15.2	34	 79	115	2	Simbad	NED	LEDA	160.91204	+14.87197
+UGC 6118 	1539	1525	27	39	 	   16.3	11	 1.9	 2.1	SB(r)ab    	 19.8	26	 74	137	1	Simbad	NED	LEDA	165.79662	+27.97244
+UGC 6277 	1192	1191	17	17	 	   -5.1	19	 5.7	 5.1	SABc       	 16.9	17	106	268	2	Simbad	NED	LEDA	168.77621	+14.78669
+UGC 6419 	1365	1381	57	66	 	   -1.8	 8	 0.9	 8.9	SBm        	 18.8	50	 44	 53	3	Simbad	NED	LEDA	171.10092	+03.32481
+UGC 6521 	5879	5842	50	46	 	   -0.9	17	 4.5	 3.7	S(r)bc     	 78.6	48	 50	249	1	Simbad	NED	LEDA	173.05646	+00.81919
+UGC 6523 	5913	5947	24	24	 	   -6.4	13	 2.8	 1.4	Sa         	 80.0	23	 32	118	4	Simbad	NED	LEDA	173.09000	+00.80417
+UGC 6787 	1173	1157	57	70	 	   -0.7	17	 4.4	 1.7	Sab        	 18.9	53	104	232	2	Simbad	NED	LEDA	177.31404	+56.08436
+UGC 7021 	1979	1976	56	56	 	   -0.6	14	 3.1	 1.3	SAB(r)a    	 26.8	52	 77	223	1	Simbad	NED	LEDA	180.67583	+01.97714
+UGC 7045 	 770	 758	70	68	 	    0.2	10	 1.5	 5.3	SABc       	 11.4	67	124	160	1	Simbad	NED	LEDA	181.01596	+31.89581
+UGC 7154 	1011	1009	64	65	<	    0.1	12	 2.3	 6.9	SBcd       	 16.2	63	139	145	1	Simbad	NED	LEDA	182.50633	+39.88386
+UGC 7429 	1476	    	73	  	 	       	  	    	 2.4	SB(r)ab    	 23.7	67	 73	   	 	Simbad	NED	LEDA	185.43271	+75.32261
+UGC 7699 	 496	    	78	  	 	       	  	    	 6.0	SBc        	  9.3	74	108	 92	1	Simbad	NED	LEDA	188.20050	+37.62172
+UGC 7766 	 814	 807	65	69	<	    0.1	12	 2.4	 6.0	SBc        	 13.0	63	317	120	1	Simbad	NED	LEDA	188.99087	+27.95961
+UGC 7831 	 147	 136	70	56	<	    0.1	 9	 1.2	 4.9	SBc        	  5.2	67	177	 92	2	Simbad	NED	LEDA	189.99742	+61.60919
+UGC 7853 	 537	 530	58	58	 	   12.8	 8	 1.1	 8.6	SBm        	  8.9	50	106	110	3	Simbad	NED	LEDA	190.38683	+41.15075
+UGC 7861 	 611	 598	47	47	<	    0.1	11	 1.9	 8.8	SAB(r)m pec	 10.2	41	 41	 50	3	Simbad	NED	LEDA	190.46958	+41.27372
+UGC 7876 	 955	 944	44	53	 	    0.3	 8	 1.1	 6.5	SABc       	 14.5	44	 58	 98	2	Simbad	NED	LEDA	190.66337	+19.94544
+UGC 7901 	 799	 788	50	53	<	    0.1	12	 2.2	 5.2	Sc pec     	 20.7	49	115	215	1	Simbad	NED	LEDA	190.92762	+16.39339
+UGC 7985 	 653	 642	24	49	 	   -0.1	 8	 1.0	 6.9	SBcd       	 13.7	23	 51	112	1	Simbad	NED	LEDA	192.49167	+05.31111
+UGC 8334 	 508	 484	55	66	 	   -0.1	11	 1.7	 4.0	Sbc        	  9.8	53	356	214	1	Simbad	NED	LEDA	198.95533	+42.02958
+UGC 8403 	 969	 975	54	57	 	   -0.1	 9	 1.3	 5.8	SBc        	 19.1	52	 90	128	1	Simbad	NED	LEDA	200.48542	+38.73450
+NGC 5296 	2243	2254	65	65	 	   -6.2	 4	 0.3	-1.1	S0-a       	 32.8	54	 28	 80	3	Simbad	NED	LEDA	206.57771	+43.85117
+UGC 8709 	2407	2405	82	76	 	    0.1	15	 3.3	 4.9	SABc pec   	 35.0	76	112	207	1	Simbad	NED	LEDA	206.59871	+43.87203
+UGC 8852 	2023	2075	55	52	 	    0.9	10	 1.5	 2.3	SAB(r)a    	 30.6	52	 77	187	3	Simbad	NED	LEDA	208.81696	+59.50669
+UGC 8863 	1796	1789	77	77	 	  -41.4	14	 3.3	 1.1	SBa        	 25.5	67	108	193	2	Simbad	NED	LEDA	209.06946	+47.23556
+UGC 8898 	3464	3448	71	27	 	   41.5	 7	 0.7	 3.1	SBb pec    	 49.0	66	 79	 65	4	Simbad	NED	LEDA	209.64021	+37.45347
+UGC 8900 	3466	3511	66	57	 	    5.8	20	 6.6	 3.2	Sb pec     	 49.2	62	 75	346	2	Simbad	NED	LEDA	209.65808	+37.42458
+UGC 8937 	2968	2961	50	32	 	 2361.4	19	 5.7	 3.1	SBb        	 49.0	48	 69	320	1	Simbad	NED	LEDA	210.19092	+59.32864
+UGC 9013 	 255	 262	50	21	 	    1.8	 7	 0.8	 6.0	Sc pec     	  7.2	49	 72	 62	2	Simbad	NED	LEDA	211.25604	+53.66239
+UGC 9179 	 302	 293	53	36	<	    0.1	 9	 1.4	 6.9	SABc       	  5.7	52	128	111	3	Simbad	NED	LEDA	214.95083	+56.72906
+UGC 9219 	 666	    	81	  	 	       	  	    	 9.7	IB         	 10.2	64	 49	 45	2	Simbad	NED	LEDA	215.82404	+41.77536
+UGC 9248 	3867	3865	58	58	 	    3.5	15	 3.6	 3.1	Sb         	 54.9	55	 40	166	1	Simbad	NED	LEDA	216.55117	+48.56372
+UGC 9358 	1907	1912	62	54	 	    2.3	15	 3.5	 3.3	SABb       	 29.1	59	 94	221	1	Simbad	NED	LEDA	218.02325	+57.92144
+UGC 9363 	1584	1577	33	18	 	    3.2	 8	 1.1	 6.9	S(r)cd     	 22.3	33	 57	143	1	Simbad	NED	LEDA	218.35125	+04.45056
+UGC 9406 	2279	2281	51	59	 	   78.0	11	 2.0	 6.9	SB(r)cd    	 33.8	50	 44	 19	4	Simbad	NED	LEDA	219.04725	+48.58497
+UGC 9465 	1495	1485	90	65	 	    0.3	 8	 1.1	 7.9	SABd       	 26.4	67	 23	 97	1	Simbad	NED	LEDA	220.10975	+33.98839
+UGC 9576 	1565	1555	52	41	 	   -0.4	10	 1.6	 6.9	SABc pec   	 27.4	51	 51	104	1	Simbad	NED	LEDA	223.42758	+03.58208
+UGC 9736 	3128	3135	51	51	 	    2.9	14	 3.2	 5.0	SABc       	 45.4	49	 71	193	1	Simbad	NED	LEDA	226.96583	+54.75272
+UGC 9866 	 427	 430	69	56	 	   -5.1	 7	 0.8	 4.0	S(r)bc     	  7.4	65	 55	116	2	Simbad	NED	LEDA	232.00279	+64.76317
+UGC 9943 	1958	1946	48	54	 	   -0.1	 9	 1.4	 5.0	SB(r)c     	 28.0	46	 82	185	1	Simbad	NED	LEDA	234.62550	+12.18636
+UGC 10075	 831	 827	66	62	<	    0.1	 9	 1.4	 6.0	Sc         	 14.7	64	174	168	1	Simbad	NED	LEDA	237.85512	+62.31003
+UGC 10521	 852	 832	71	59	 	    0.7	 9	 1.2	 4.9	Sc         	 18.0	68	106	124	1	Simbad	NED	LEDA	250.76562	+36.83242
+UGC 10652	1092	1089	30	21	 	    0.6	 8	 1.0	 3.8	S(r)bc     	 18.2	29	 33	141	2	Simbad	NED	LEDA	254.86067	+49.92197
+UGC 10713	1073	    	90	  	 	       	  	    	 3.0	Sb         	 18.3	79	 54	105	2	Simbad	NED	LEDA	256.14117	+72.44578
+UGC 10757	1168	1210	59	44	 	    0.7	11	 1.8	 6.0	Sc         	 19.5	58	 36	 81	3	Simbad	NED	LEDA	257.55592	+72.41025
+UGC 10769	1230	    	57	  	 	       	  	    	 3.0	SABb       	 20.0	54	 28	   	 	Simbad	NED	LEDA	257.89046	+72.40200
+UGC 10791	1328	1318	 0	34	 	  726.5	10	 1.7	 8.8	SABm       	 21.7	 0	 56	 96	3	Simbad	NED	LEDA	258.66217	+72.39844
+UGC 11012	  36	  25	74	72	 	    0.4	 8	 1.0	 5.9	Sc         	  5.3	71	185	117	1	Simbad	NED	LEDA	267.36046	+70.14433
+UGC 11269	2590	2563	60	69	 	    3.8	30	14.4	 2.0	SABa       	 35.0	56	 56	202	1	Simbad	NED	LEDA	277.66567	+67.98689
+UGC 11300	 488	 480	77	76	<	    0.1	10	 1.6	 6.4	SABc       	  8.4	74	 99	114	2	Simbad	NED	LEDA	278.70767	+70.52383
+UGC 11332	1569	    	82	  	 	       	  	    	 7.0	SBcd       	 23.0	78	 63	 91	3	Simbad	NED	LEDA	279.85417	+73.58111
+UGC 11407	2412	2402	64	64	 	    1.0	20	 6.6	 3.6	SBbc       	 35.8	61	 75	159	1	Simbad	NED	LEDA	287.06904	+50.93306
+UGC 11466	 820	 826	55	66	 	   -0.3	13	 2.6	 4.8	Sc         	 14.2	54	 45	133	1	Simbad	NED	LEDA	295.74458	+45.29892
+UGC 11470	3530	3546	47	47	 	  258.0	25	10.7	 2.2	Sab        	 50.8	45	 72	380	2	Simbad	NED	LEDA	295.92042	+56.10911
+UGC 11496	2105	2115	 0	44	 	  135.8	 9	 1.2	 8.8	Sm         	 31.9	 0	 57	 96	2	Simbad	NED	LEDA	298.25846	+67.66500
+UGC 11498	3266	3284	79	71	 	  -23.4	22	 7.9	 3.1	SBb        	 44.9	71	 84	273	1	Simbad	NED	LEDA	299.31350	+05.89064
+UGC 11597	  46	  40	17	40	 	    0.4	13	 2.5	 5.9	SABc       	  5.9	16	342	154	3	Simbad	NED	LEDA	308.71417	+60.15500
+UGC 11670	 778	 776	90	65	 	    0.8	16	 3.9	 0.5	S(r)a      	 12.8	71	125	190	1	Simbad	NED	LEDA	315.89017	+29.89714
+UGC 11872	1147	1140	54	47	 	   -0.1	13	 2.7	 2.5	SAB(r)b    	 18.1	51	 85	183	1	Simbad	NED	LEDA	330.17192	+17.73792
+UGC 12082	 803	 792	29	14	 	    0.6	 8	 1.1	 8.7	SABm       	 10.1	26	 81	105	3	Simbad	NED	LEDA	338.54542	+32.86131
+

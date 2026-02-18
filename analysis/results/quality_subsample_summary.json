@@ -1,0 +1,96 @@
+{
+  "n_galaxies_total": 43,
+  "n_tier1": 29,
+  "n_tier2": 14,
+  "n_ned_upgrades": 5,
+  "n_data_points": 1063,
+  "overall_scatter": 0.11085950655221982,
+  "dense_scatter": 0.11221405755075314,
+  "field_scatter": 0.10811382885856441,
+  "delta_sigma": -0.004100228692188734,
+  "p_field_gt_dense": 0.44899999999999995,
+  "levene_p": 0.8932923589859533,
+  "n_dense_galaxies": 29,
+  "n_field_galaxies": 14,
+  "n_dense_points": 639,
+  "n_field_points": 424,
+  "binned_results": [
+    {
+      "bin_center": -12.0,
+      "n_dense": 89,
+      "n_field": 26,
+      "sigma_dense": 0.09718193427775412,
+      "sigma_field": 0.09910378753185929,
+      "delta": 0.0019218532541051686,
+      "p_field_gt_dense": 0.6266
+    },
+    {
+      "bin_center": -11.0,
+      "n_dense": 362,
+      "n_field": 212,
+      "sigma_dense": 0.08942556506285153,
+      "sigma_field": 0.11584928562479924,
+      "delta": 0.02642372056194771,
+      "p_field_gt_dense": 0.9712
+    },
+    {
+      "bin_center": -10.0,
+      "n_dense": 184,
+      "n_field": 146,
+      "sigma_dense": 0.15234062863714765,
+      "sigma_field": 0.09214967941421491,
+      "delta": -0.060190949222932735,
+      "p_field_gt_dense": 0.09160000000000001
+    }
+  ],
+  "skewness_profile": [
+    {
+      "center": -12.178571428571429,
+      "n": 27,
+      "std": 0.10879995457037424,
+      "moment_skew": -0.43593974807021285,
+      "quantile_skew": 0.07173401918183755,
+      "kurtosis": -0.5542605900279631
+    },
+    {
+      "center": -11.535714285714285,
+      "n": 283,
+      "std": 0.10746542137243706,
+      "moment_skew": -1.2036284566346844,
+      "quantile_skew": 0.09055658531020275,
+      "kurtosis": 5.673898074245958
+    },
+    {
+      "center": -10.892857142857142,
+      "n": 344,
+      "std": 0.09757429723508332,
+      "moment_skew": -2.105095875769615,
+      "quantile_skew": -0.19158235083761285,
+      "kurtosis": 8.29677885473057
+    },
+    {
+      "center": -10.25,
+      "n": 308,
+      "std": 0.09320090961290128,
+      "moment_skew": -4.07286675657701,
+      "quantile_skew": -0.15704592713446822,
+      "kurtosis": 27.256955967329187
+    },
+    {
+      "center": -9.607142857142858,
+      "n": 84,
+      "std": 0.18563310483946252,
+      "moment_skew": -4.448547374222632,
+      "quantile_skew": 0.0076919591493908365,
+      "kurtosis": 21.829311415966547
+    }
+  ],
+  "tier1_only": {
+    "delta_sigma": -0.01523485127731121,
+    "p_field_gt_dense": 0.23939999999999995,
+    "dense_scatter": 0.12334868013587562,
+    "field_scatter": 0.10811382885856441,
+    "n_dense": 15,
+    "n_field": 14
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "total_galaxies": 40,
+  "breakdown": {
+    "confirmed_TRGB": 31,
+    "confirmed_Cepheid": 3,
+    "Hubble_upgraded_to_TRGB": 5,
+    "UMa_upgraded_to_Cepheid": 1
+  },
+  "environment": {
+    "group": 22,
+    "field": 18
+  },
+  "distance_upgrades": {
+    "n_hubble_flow_with_trgb": 5,
+    "mean_distance_change_pct": 24.4,
+    "max_distance_change_pct": 61.8
+  },
+  "key_results": {
+    "original_UMa_vs_field": {
+      "UMa_scatter_dex": 0.0853,
+      "field_scatter_dex": 0.125,
+      "delta_sigma": 0.0397,
+      "P_field_larger": 0.999,
+      "note": "Replicated original result with quality cuts"
+    },
+    "trgb_tier1_group_vs_field": {
+      "group_scatter_dex": 0.1448,
+      "field_scatter_dex": 0.0915,
+      "delta_sigma": -0.0533,
+      "P_field_larger": 0.003,
+      "note": "REVERSED: groups show MORE scatter (mass confound - groups are dwarf-rich)"
+    },
+    "trgb_tier2_with_UMa": {
+      "group_scatter_dex": 0.1277,
+      "field_scatter_dex": 0.0954,
+      "delta_sigma": -0.0323,
+      "P_field_larger": 0.014,
+      "note": "Still reversed even with UMa included"
+    },
+    "mass_matched_dwarfs": {
+      "group_scatter_dex": 0.1562,
+      "field_scatter_dex": 0.1322,
+      "delta_sigma": -0.024,
+      "note": "Vflat < 100 km/s only"
+    },
+    "mass_matched_massive": {
+      "group_scatter_dex": 0.0756,
+      "field_scatter_dex": 0.0606,
+      "delta_sigma": -0.015,
+      "note": "Vflat >= 100 km/s only"
+    },
+    "hubble_flow_upgraded_vs_original": {
+      "upgraded_scatter_dex": 0.0933,
+      "original_scatter_dex": 0.1278,
+      "reduction_pct": 27,
+      "note": "5 galaxies with TRGB distances show 27% less scatter than full HF sample"
+    }
+  },
+  "interpretation": {
+    "distance_quality_accounts_for": "~35% of original \u0394\u03c3 signal (from confounder analysis)",
+    "mass_confound": "Group environments in TRGB subsample are dwarf-rich, inflating group scatter",
+    "environmental_signal": "Cannot be confirmed or refuted with current TRGB/Cepheid sample",
+    "key_limitation": "Only 1/28 UMa galaxies has Cepheid distance; comparison requires cluster TF distances",
+    "recommendation": "Use BIG-SPARC (~4000 galaxies) with CF4 distances for definitive environmental test"
+  }
+}

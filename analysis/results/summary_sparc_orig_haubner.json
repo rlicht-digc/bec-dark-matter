@@ -1,0 +1,126 @@
+{
+  "pipeline": "sparc_orig_haubner",
+  "use_cf4": false,
+  "use_haubner_errors": true,
+  "n_galaxies": 98,
+  "n_data_points": 2540,
+  "overall_scatter_dex": 0.1198364193585017,
+  "mean_residual_dex": -0.016321908021489848,
+  "environment": {
+    "n_dense": 21,
+    "n_field": 77,
+    "sigma_dense": 0.12177046723511122,
+    "sigma_field": 0.1193628201717704,
+    "delta_sigma": -0.0024076470633408176,
+    "p_field_gt_dense": 0.40269999999999995,
+    "levene_p": 0.5709297970077867,
+    "n_dense_points": 435,
+    "n_field_points": 2105
+  },
+  "binned_results": [
+    {
+      "center": -12.0,
+      "n_dense": 19,
+      "n_field": 173,
+      "sigma_dense": 0.0941857153407367,
+      "sigma_field": 0.13667450452944,
+      "delta": 0.04248878918870329,
+      "p_field_gt_dense": 0.7716000000000001
+    },
+    {
+      "center": -11.0,
+      "n_dense": 219,
+      "n_field": 945,
+      "sigma_dense": 0.09096542238566961,
+      "sigma_field": 0.1126435442015503,
+      "delta": 0.02167812181588069,
+      "p_field_gt_dense": 0.8824
+    },
+    {
+      "center": -10.0,
+      "n_dense": 156,
+      "n_field": 657,
+      "sigma_dense": 0.15740469464756465,
+      "sigma_field": 0.119450343977165,
+      "delta": -0.03795435067039965,
+      "p_field_gt_dense": 0.11219999999999997
+    },
+    {
+      "center": -9.0,
+      "n_dense": 34,
+      "n_field": 315,
+      "sigma_dense": 0.09138580145102095,
+      "sigma_field": 0.11019850690199803,
+      "delta": 0.018812705450977088,
+      "p_field_gt_dense": 0.4034
+    }
+  ],
+  "skewness_profile": [
+    {
+      "center": -12.178571428571429,
+      "n": 39,
+      "std": 0.2057832185429856,
+      "moment_skew": -1.6568796004592645,
+      "quantile_skew": -0.06501951424867253,
+      "kurtosis": 3.1664461555983223
+    },
+    {
+      "center": -11.535714285714285,
+      "n": 516,
+      "std": 0.12258001346794219,
+      "moment_skew": -2.5828929748461786,
+      "quantile_skew": 0.018971755879989345,
+      "kurtosis": 18.969469205890743
+    },
+    {
+      "center": -10.892857142857142,
+      "n": 729,
+      "std": 0.09907135336541857,
+      "moment_skew": -2.2292552700162287,
+      "quantile_skew": -0.14259091628905188,
+      "kurtosis": 12.122527690897389
+    },
+    {
+      "center": -10.25,
+      "n": 618,
+      "std": 0.10685815590809926,
+      "moment_skew": -1.2277982168268924,
+      "quantile_skew": -0.0972064948523267,
+      "kurtosis": 26.737574282545125
+    },
+    {
+      "center": -9.607142857142858,
+      "n": 409,
+      "std": 0.12777041268305225,
+      "moment_skew": -5.221779855757535,
+      "quantile_skew": 0.1869432997611765,
+      "kurtosis": 39.64927488519652
+    },
+    {
+      "center": -8.964285714285714,
+      "n": 189,
+      "std": 0.13703297558848687,
+      "moment_skew": 0.48372546464169386,
+      "quantile_skew": -0.25622976365082334,
+      "kurtosis": 34.89139179226901
+    },
+    {
+      "center": -8.321428571428571,
+      "n": 37,
+      "std": 0.15766498728788317,
+      "moment_skew": 1.494374735161978,
+      "quantile_skew": 0.00867813141100966,
+      "kurtosis": 2.303096746906328
+    }
+  ],
+  "haubner_params": {
+    "delta_inf": 0.022,
+    "alpha": -0.8,
+    "D_tr": 46.0,
+    "kappa": 1.8,
+    "phi_VZoI": 30.0,
+    "delta_VZoI": 0.17,
+    "D_VZoI_min": 1.0,
+    "D_VZoI_max": 33.0
+  }
+}

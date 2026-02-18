@@ -1,0 +1,1621 @@
+{
+  "F563-V1": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_408418",
+    "logMh": 0.0,
+    "richness": 1,
+    "central": 1,
+    "yang_z": 0.0131116,
+    "separation_arcsec": 2.0674972463813988,
+    "env_class": "field",
+    "env_dense": "field",
+    "grp_ra": 131.65795068,
+    "grp_dec": 18.88989529
+  },
+  "F563-V2": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_403544",
+    "logMh": 0.0,
+    "richness": 1,
+    "central": 1,
+    "yang_z": 0.0144113,
+    "separation_arcsec": 28.019938759436712,
+    "env_class": "field",
+    "env_dense": "field",
+    "grp_ra": 133.26605417,
+    "grp_dec": 18.43570611
+  },
+  "F571-8": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_449062",
+    "logMh": 0.0,
+    "richness": 1,
+    "central": 1,
+    "yang_z": 0.0124993,
+    "separation_arcsec": 21.345299665720333,
+    "env_class": "field",
+    "env_dense": "field",
+    "grp_ra": 173.47962362,
+    "grp_dec": 19.36000251
+  },
+  "F571-V1": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_65560",
+    "logMh": 11.7436,
+    "richness": 2,
+    "central": 0,
+    "yang_z": 0.0190345,
+    "separation_arcsec": 20.523973951708914,
+    "env_class": "poor_group",
+    "env_dense": "field",
+    "grp_ra": 171.72324882,
+    "grp_dec": 18.83273554
+  },
+  "IC4202": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_440574",
+    "logMh": 12.2906,
+    "richness": 1,
+    "central": 1,
+    "yang_z": 0.0237604,
+    "separation_arcsec": 0.24802898832710737,
+    "env_class": "group",
+    "env_dense": "field",
+    "grp_ra": 197.13157808,
+    "grp_dec": 24.70076196
+  },
+  "NGC2998": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_586",
+    "logMh": 12.6034,
+    "richness": 25,
+    "central": 1,
+    "yang_z": 0.0159101,
+    "separation_arcsec": 0.5040117334929087,
+    "env_class": "group",
+    "env_dense": "dense",
+    "grp_ra": 147.40739247,
+    "grp_dec": 44.10151571
+  },
+  "NGC6195": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_3981",
+    "logMh": 12.839,
+    "richness": 7,
+    "central": 1,
+    "yang_z": 0.029986,
+    "separation_arcsec": 0.6153851669616939,
+    "env_class": "group",
+    "env_dense": "dense",
+    "grp_ra": 249.10526947,
+    "grp_dec": 39.04034573
+  },
+  "UGC05750": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_437051",
+    "logMh": 0.0,
+    "richness": 1,
+    "central": 1,
+    "yang_z": 0.0139083,
+    "separation_arcsec": 0.3447488507470531,
+    "env_class": "field",
+    "env_dense": "field",
+    "grp_ra": 158.93804297,
+    "grp_dec": 20.9902463
+  },
+  "UGC06614": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_23431",
+    "logMh": 12.0656,
+    "richness": 3,
+    "central": 1,
+    "yang_z": 0.0212134,
+    "separation_arcsec": 0.8831464310483232,
+    "env_class": "group",
+    "env_dense": "field",
+    "grp_ra": 174.81441038,
+    "grp_dec": 17.13866399
+  },
+  "UGC09037": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_15517",
+    "logMh": 11.9232,
+    "richness": 3,
+    "central": 1,
+    "yang_z": 0.0198194,
+    "separation_arcsec": 1.0338856917995594,
+    "env_class": "poor_group",
+    "env_dense": "field",
+    "grp_ra": 212.13741656,
+    "grp_dec": 7.06731481
+  },
+  "UGC09133": {
+    "source": "Yang_DR7",
+    "group_name": "Yang_324215",
+    "logMh": 12.4333,
+    "richness": 1,
+    "central": 1,
+    "yang_z": 0.0128956,
+    "separation_arcsec": 0.5488049560123575,
+    "env_class": "group",
+    "env_dense": "field",
+    "grp_ra": 214.0322628,
+    "grp_dec": 35.34382727
+  },
+  "CamB": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 9.5,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "D512-2": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "D564-8": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "D631-7": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "DDO064": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "DDO154": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "DDO161": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "DDO168": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "DDO170": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.5,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "ESO444-G084": {
+    "source": "literature",
+    "group_name": "CenA",
+    "logMh": 12.5,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "dense"
+  },
+  "IC2574": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "KK98-251": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 9.5,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC0055": {
+    "source": "literature",
+    "group_name": "Sculptor",
+    "logMh": 11.5,
+    "richness": 15,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC0247": {
+    "source": "literature",
+    "group_name": "Sculptor",
+    "logMh": 11.5,
+    "richness": 15,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC0300": {
+    "source": "literature",
+    "group_name": "Sculptor",
+    "logMh": 11.5,
+    "richness": 15,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC1705": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC2366": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "NGC2403": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "NGC2915": {
+    "source": "literature",
+    "group_name": "CenA",
+    "logMh": 12.5,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "dense"
+  },
+  "NGC2976": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "NGC3109": {
+    "source": "literature",
+    "group_name": "Antlia",
+    "logMh": 10.5,
+    "richness": 5,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC3726": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3741": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC3769": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3877": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3893": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3917": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3949": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3953": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3972": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC3992": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 1,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4010": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4013": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4051": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4068": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC4085": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4088": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4100": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4138": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4157": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4183": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4214": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC4217": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC4389": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "NGC5055": {
+    "source": "literature",
+    "group_name": "M101",
+    "logMh": 12.0,
+    "richness": 10,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "NGC5585": {
+    "source": "literature",
+    "group_name": "M101",
+    "logMh": 12.0,
+    "richness": 10,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "NGC6503": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC6789": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 9.5,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC6946": {
+    "source": "literature",
+    "group_name": "NGC6946",
+    "logMh": 11.5,
+    "richness": 5,
+    "central": 1,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "NGC7793": {
+    "source": "literature",
+    "group_name": "Sculptor",
+    "logMh": 11.5,
+    "richness": 15,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC01281": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC04305": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "UGC04483": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "UGC05764": {
+    "source": "literature",
+    "group_name": "M81",
+    "logMh": 12.0,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "field"
+  },
+  "UGC05918": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC06399": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06446": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06667": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06786": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06787": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06818": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06917": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06923": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06930": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06973": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC06983": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC07089": {
+    "source": "literature",
+    "group_name": "UMa",
+    "logMh": 13.2,
+    "richness": 79,
+    "central": 0,
+    "env_class": "rich_group",
+    "env_dense": "dense"
+  },
+  "UGC07232": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC07524": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC07559": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC07577": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC07866": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC08490": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGC08837": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC12632": {
+    "source": "literature",
+    "group_name": "field",
+    "logMh": 10.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGCA281": {
+    "source": "literature",
+    "group_name": "CVnI",
+    "logMh": 11.0,
+    "richness": 12,
+    "central": 0,
+    "env_class": "poor_group",
+    "env_dense": "field"
+  },
+  "UGCA442": {
+    "source": "literature",
+    "group_name": "CenA",
+    "logMh": 12.5,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "dense"
+  },
+  "UGCA444": {
+    "source": "literature",
+    "group_name": "CenA",
+    "logMh": 12.5,
+    "richness": 30,
+    "central": 0,
+    "env_class": "group",
+    "env_dense": "dense"
+  },
+  "ESO079-G014": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "ESO116-G012": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "ESO563-G021": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F561-1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F563-1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F565-V2": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F567-2": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F568-1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F568-3": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F568-V1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F574-1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F574-2": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F579-V1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F583-1": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "F583-4": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC0024": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC0100": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC0289": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC0801": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC0891": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC1003": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC1090": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC2683": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC2841": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC2903": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC2955": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC3198": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC3521": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC4559": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC5005": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC5033": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC5371": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC5907": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC5985": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC6015": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC6674": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC7331": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "NGC7814": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "PGC51017": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC00128": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC00191": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC00634": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC00731": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC00891": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC01230": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02023": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02259": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02455": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02487": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02885": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02916": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC02953": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC03205": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC03546": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC03580": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC04278": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC04325": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC04499": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05005": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05253": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05414": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05716": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05721": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05829": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05986": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC05999": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC06628": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07125": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07151": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07261": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07323": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07399": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07603": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07608": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC07690": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC08286": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC08550": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC08699": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC09992": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC10310": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC11455": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC11557": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC11820": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC11914": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC12506": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  },
+  "UGC12732": {
+    "source": "default_field",
+    "group_name": "field",
+    "logMh": 11.0,
+    "richness": 1,
+    "central": 1,
+    "env_class": "field",
+    "env_dense": "field"
+  }
+}

@@ -1,0 +1,26 @@
+# Yang catalogs — entire directory is large binaries (17GB+)
+# Only track the readme files
+data/yang_catalogs/*
+!data/yang_catalogs/readme_*
+
+# S4G stellar mass FITS images (134MB)
+data/s4g/*.fits
+
+# Tempel SDSS group/galaxy catalogs (250MB+ TSVs)
+data/tempel/
+
+# PROBES individual galaxy profiles (25K files, 181MB)
+data/probes/profiles/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Symlinks (scripts use these to find data/results at old relative paths)
+analysis/pipeline/data
+analysis/pipeline/results
+
+# OS
+.DS_Store

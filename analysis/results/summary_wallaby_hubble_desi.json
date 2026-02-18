@@ -1,0 +1,30 @@
+{
+  "pipeline": "wallaby_hubble_desi",
+  "n_galaxies": 165,
+  "n_data_points": 1220,
+  "n_gas_dominated": 1220,
+  "gas_dom_threshold": -10.5,
+  "overall_scatter_dex": 0.3743567790515618,
+  "overall_scatter_gas_dex": 0.3743567790515618,
+  "mean_residual_dex": 0.39462914663657067,
+  "environment": {
+    "n_dense": 0,
+    "n_field": 165,
+    "sigma_dense": null,
+    "sigma_field": 0.3743567790515618,
+    "delta_sigma": null,
+    "p_field_gt_dense": null
+  },
+  "environment_gas_dom": {
+    "sigma_dense": null,
+    "sigma_field": 0.3743567790515618,
+    "delta_sigma": 0.0,
+    "p_field_gt_dense": 0.5,
+    "n_dense_pts": 0,
+    "n_field_pts": 1220
+  },
+  "binned_results": [],
+  "distance_sources": {
+    "Hubble": 165
+  }
+}

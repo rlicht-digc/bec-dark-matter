@@ -1,0 +1,32 @@
+{
+  "test_name": "probes_gas_corrected_rar_tightness",
+  "n_total": 168,
+  "n_gas_corrected": 37,
+  "n_stars_only": 131,
+  "alfalfa_matched": 454,
+  "alfalfa_unmatched": 296,
+  "alfalfa_out_of_footprint": 2299,
+  "scatter": {
+    "combined_point": 0.4195,
+    "combined_galaxy": 0.3857,
+    "gas_corrected_point": 0.3801,
+    "gas_corrected_galaxy": 0.3491,
+    "stars_only_point": 0.4248,
+    "stars_only_galaxy": 0.3935
+  },
+  "offsets": {
+    "combined": 0.239,
+    "gas_corrected": 0.1205,
+    "stars_only": 0.2831
+  },
+  "correlations": {
+    "logMs_rho": 0.2782,
+    "logMs_p": 0.0003
+  },
+  "levene_by_mass": {
+    "F": 0.559,
+    "p": 0.4559
+  },
+  "r_squared": 0.0386,
+  "improvement_dex": 0.0447
+}

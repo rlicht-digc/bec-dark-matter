@@ -1,0 +1,11 @@
+{
+  "WALLABY J130906+051433": {
+    "logMh": 11.2071,
+    "env_class": "poor_group",
+    "env_dense": "field",
+    "match_sep_arcsec": 3.057820945461062,
+    "desi_grp_id": 54779326,
+    "grp_z": 0.124,
+    "richness": 1
+  }
+}

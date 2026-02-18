@@ -1,0 +1,6 @@
+recno	Region	Name	OName	RSA	RC3	Bmag	u_Bmag	b/a	u_b/a	Incl	Dist	<HI>	rHa95	rR	e_rR	ra(1-3rR)	e_ra(1-3rR)	f_ra(1-3rR)	ra(1-2rR)	e_ra(1-2rR)	f_ra(1-2rR)	ra(rR-rs)	e_ra(rR-rs)	f_ra(rR-rs)	rmax	SimbadName	_RA	_DE
+8	"Virgo"	"N 4293"	"U 7405"	"Sa pec"	"SB0/a pec"	11.2	 	0.438	 	67	16.6	1.5	44	60	5			 			 			 		"NGC 4293"	185.30175	18.38222
+9	"Virgo"	"N 4294"	"U 7407"	"SBc"	"SBcd"	12.62	 	0.391	 	70	16.6	-0.37	51	22	2	12	2	 	15	2	 	14	1	 	64	"NGC 4294"	185.32487	11.51031
+15	"Virgo"	"N 4380"	"U 7503"	"Sab"	"SAb:"	12.36	 	0.53	 	60	16.6	0.66	63	35	5			 			*			 		"NGC 4380"	186.3425	10.01653
+29	"Virgo"	"N 4522"	"U 7711"	"Sc/Sb:"	"SBcd:"	12.73	 	0.276	 	79	16.6	0.69	54	32	3	14	2	 	8	2	d	11	1	 	43	"NGC 4522"	188.41479	9.1735
+31	"Virgo"	"N 4532"	"U 7726"	"Sm"	"Im"	12.3	 	0.391	 	70	16.6	-0.35	68	18	3	15	1	 	14	2	 	13	1	 	40	"NGC 4532"	188.58129	6.46733

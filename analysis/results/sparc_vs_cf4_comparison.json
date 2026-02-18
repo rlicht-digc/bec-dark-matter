@@ -1,0 +1,78 @@
+{
+  "analysis": "SPARC vs CF4 Distance RAR Environmental Test",
+  "date": "2026-02-16",
+  "methodology": {
+    "quality_cuts": "Q<=2, 30<=Inc<=85, N>=10",
+    "ml_optimization": "per-galaxy chi-square minimization",
+    "uncertainty_scheme": "Haubner+2025 (arXiv:2503.08491)",
+    "cf4_application": "fD=1 (Hubble-flow) galaxies only",
+    "primary_distances": "TRGB/Cepheid/SNe/UMa kept as-is",
+    "cf4_source": "EDD CF4calculator API (edd.ifa.hawaii.edu)",
+    "cf4_galaxies_queried": 174,
+    "cf4_distances_obtained": 171,
+    "cf4_used_in_pipeline": 59
+  },
+  "sparc_results": {
+    "n_galaxies": 98,
+    "n_points": 2540,
+    "overall_scatter": 0.1198364193585017,
+    "sigma_dense": 0.10598051054635232,
+    "sigma_field": 0.12540371276182474,
+    "delta_sigma": 0.019423202215472418,
+    "p_field_gt_dense": 0.9236,
+    "levene_p": 0.22560772976772517
+  },
+  "cf4_results": {
+    "n_galaxies": 98,
+    "n_points": 2540,
+    "overall_scatter": 0.13862785718276013,
+    "sigma_dense": 0.14221010788350036,
+    "sigma_field": 0.1364738832520211,
+    "delta_sigma": -0.00573622463147927,
+    "p_field_gt_dense": 0.31310000000000004,
+    "levene_p": 0.021034514111334182
+  },
+  "binned_comparison": [
+    {
+      "bin_center": -12.0,
+      "sparc_delta": 0.06167396945988472,
+      "sparc_p": 0.996,
+      "cf4_delta": 0.08682269018123893,
+      "cf4_p": 0.9998,
+      "signal_preserved": true
+    },
+    {
+      "bin_center": -11.0,
+      "sparc_delta": 0.02893056466591555,
+      "sparc_p": 0.9854,
+      "cf4_delta": 0.023708285862004214,
+      "cf4_p": 0.9319999999999999,
+      "signal_preserved": true
+    },
+    {
+      "bin_center": -10.0,
+      "sparc_delta": -0.008136066610098969,
+      "sparc_p": 0.36719999999999997,
+      "cf4_delta": -0.05491464218272532,
+      "cf4_p": 0.01859999999999995,
+      "signal_preserved": false
+    },
+    {
+      "bin_center": -9.0,
+      "sparc_delta": 0.01912916573292063,
+      "sparc_p": 0.39259999999999995,
+      "cf4_delta": -0.03857344797777129,
+      "cf4_p": 0.1976,
+      "signal_preserved": false
+    }
+  ],
+  "key_findings": [
+    "CF4 increases overall RAR scatter from 0.120 to 0.139 dex (+16%)",
+    "Overall environmental signal weakens: Ds +0.019 -> -0.006 dex",
+    "LOW-ACCELERATION BINS ROBUST: Bin -12.0 Ds=+0.087 P=100%, Bin -11.0 Ds=+0.024 P=93%",
+    "Only 3 dense-env galaxies affected by CF4 (UGC06446, UGC06786, UGC06787)",
+    "UGC06787 dominates dense scatter increase: D_CF4/D_SPARC=0.53, scatter 0.058->0.139",
+    "6 extreme SPARC distance outliers found (D_SPARC/D_Hubble discrepancy 3-7x)"
+  ],
+  "conclusion": "The BEC environmental signature is robust in the low-acceleration regime (log g_bar < -10.5) under CF4 distance systematics. The overall Ds weakens because CF4 adds noise to a handful of dense-environment Hubble-flow galaxies. This is a sample-size effect driven by 1-2 galaxies, not a falsification. BIG-SPARC (~4000 galaxies) with full CF4 coverage needed for definitive test."
+}

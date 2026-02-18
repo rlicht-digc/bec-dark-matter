@@ -1,0 +1,47 @@
+{
+  "test_name": "definitive_environmental_scatter",
+  "n_galaxies": 131,
+  "n_dense": 48,
+  "n_field": 83,
+  "test_A_point_level": {
+    "dense_sigma": 0.1646,
+    "field_sigma": 0.1713,
+    "delta": 0.0067,
+    "levene_p": 0.640446
+  },
+  "test_B_galaxy_level": {
+    "dense_sigma": 0.1497,
+    "field_sigma": 0.1633,
+    "levene_p": 0.764538,
+    "ks_p": 0.536519
+  },
+  "test_C_error_corrected": {
+    "dense_intrinsic": 0.0593,
+    "field_intrinsic": 0.0741,
+    "levene_p": 0.274169
+  },
+  "test_E_bootstrap": {
+    "observed_delta": 0.0137,
+    "bootstrap_median": 0.0158,
+    "ci_68": [
+      -0.0176,
+      0.0487
+    ],
+    "ci_95": [
+      -0.0509,
+      0.0782
+    ],
+    "p_field_gt_dense": 0.6803
+  },
+  "test_G_uma_vs_field": {
+    "uma_n": 26,
+    "uma_sigma": 0.0923,
+    "field_sigma": 0.1633,
+    "levene_p": 0.111083
+  },
+  "tests_passed": 4,
+  "tests_failed": 0,
+  "overall": "BEC-CONSISTENT",
+  "distances_used": "SPARC",
+  "error_model": "Haubner+2025"
+}

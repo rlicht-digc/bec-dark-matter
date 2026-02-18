@@ -1,0 +1,49 @@
+{
+  "pipeline": "wallaby_hubble_nodesi",
+  "n_galaxies": 165,
+  "n_data_points": 1220,
+  "n_gas_dominated": 1220,
+  "gas_dom_threshold": -10.5,
+  "overall_scatter_dex": 0.3743567790515618,
+  "overall_scatter_gas_dex": 0.3743567790515618,
+  "mean_residual_dex": 0.39462914663657067,
+  "environment": {
+    "n_dense": 32,
+    "n_field": 133,
+    "sigma_dense": 0.29717755213934227,
+    "sigma_field": 0.3772060701155102,
+    "delta_sigma": 0.08002851797616795,
+    "p_field_gt_dense": 0.9991
+  },
+  "environment_gas_dom": {
+    "sigma_dense": 0.29717755213934227,
+    "sigma_field": 0.3772060701155102,
+    "delta_sigma": 0.08002851797616795,
+    "p_field_gt_dense": 0.9996,
+    "n_dense_pts": 204,
+    "n_field_pts": 1016
+  },
+  "binned_results": [
+    {
+      "center": -12.5,
+      "n_dense": 35,
+      "n_field": 191,
+      "sigma_dense": 0.40886240181879463,
+      "sigma_field": 0.38314795986155625,
+      "delta": -0.025714441957238376,
+      "p_field_gt_dense": 0.3026
+    },
+    {
+      "center": -11.5,
+      "n_dense": 169,
+      "n_field": 825,
+      "sigma_dense": 0.26600098849016374,
+      "sigma_field": 0.3735933358670469,
+      "delta": 0.10759234737688317,
+      "p_field_gt_dense": 1.0
+    }
+  ],
+  "distance_sources": {
+    "Hubble": 165
+  }
+}

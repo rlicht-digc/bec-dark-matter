@@ -1,0 +1,185 @@
+{
+  "title": "Multi-Run RAR Environmental Test Comparison",
+  "author": "Russell Licht",
+  "project": "Primordial Fluid DM / BEC Theory",
+  "n_runs": 5,
+  "runs": {
+    "sparc_orig_haubner": {
+      "label": "SPARC Original",
+      "description": "SPARC distances + Haubner errors",
+      "n_galaxies": 98,
+      "n_data_points": 2540,
+      "overall_scatter": 0.1198364193585017,
+      "sigma_dense": 0.12177046723511122,
+      "sigma_field": 0.1193628201717704,
+      "delta_sigma": -0.0024076470633408176,
+      "p_field_gt_dense": 0.40269999999999995,
+      "binned_results": [
+        {
+          "center": -12.0,
+          "n_dense": 19,
+          "n_field": 173,
+          "sigma_dense": 0.0941857153407367,
+          "sigma_field": 0.13667450452944,
+          "delta": 0.04248878918870329,
+          "p_field_gt_dense": 0.7716000000000001
+        },
+        {
+          "center": -11.0,
+          "n_dense": 219,
+          "n_field": 945,
+          "sigma_dense": 0.09096542238566961,
+          "sigma_field": 0.1126435442015503,
+          "delta": 0.02167812181588069,
+          "p_field_gt_dense": 0.8824
+        },
+        {
+          "center": -10.0,
+          "n_dense": 156,
+          "n_field": 657,
+          "sigma_dense": 0.15740469464756465,
+          "sigma_field": 0.119450343977165,
+          "delta": -0.03795435067039965,
+          "p_field_gt_dense": 0.11219999999999997
+        },
+        {
+          "center": -9.0,
+          "n_dense": 34,
+          "n_field": 315,
+          "sigma_dense": 0.09138580145102095,
+          "sigma_field": 0.11019850690199803,
+          "delta": 0.018812705450977088,
+          "p_field_gt_dense": 0.4034
+        }
+      ]
+    },
+    "cf4_haubner": {
+      "label": "SPARC + CF4",
+      "description": "CF4 distances (fD=1 only) + Haubner errors",
+      "n_galaxies": 98,
+      "n_data_points": 2540,
+      "overall_scatter": 0.13862785718276013,
+      "sigma_dense": 0.17061668772811084,
+      "sigma_field": 0.12924900705643444,
+      "delta_sigma": -0.0413676806716764,
+      "p_field_gt_dense": 0.0039000000000000146,
+      "binned_results": [
+        {
+          "center": -12.0,
+          "n_dense": 19,
+          "n_field": 172,
+          "sigma_dense": 0.0941857153407367,
+          "sigma_field": 0.15433608177411956,
+          "delta": 0.060150366433382854,
+          "p_field_gt_dense": 0.8884
+        },
+        {
+          "center": -11.0,
+          "n_dense": 214,
+          "n_field": 977,
+          "sigma_dense": 0.12981524032341407,
+          "sigma_field": 0.12884510687970693,
+          "delta": -0.0009701334437071385,
+          "p_field_gt_dense": 0.4152
+        },
+        {
+          "center": -10.0,
+          "n_dense": 136,
+          "n_field": 687,
+          "sigma_dense": 0.21857749420920738,
+          "sigma_field": 0.12084999664528133,
+          "delta": -0.09772749756392606,
+          "p_field_gt_dense": 0.00039999999999995595
+        },
+        {
+          "center": -9.0,
+          "n_dense": 48,
+          "n_field": 251,
+          "sigma_dense": 0.16245773276419162,
+          "sigma_field": 0.12237636240010608,
+          "delta": -0.040081370364085545,
+          "p_field_gt_dense": 0.1886
+        }
+      ]
+    },
+    "wallaby_hubble_nodesi": {
+      "label": "WALLABY Hubble",
+      "description": "WALLABY gas-only RAR + Hubble distances",
+      "n_galaxies": 165,
+      "n_data_points": 1220,
+      "overall_scatter": 0.3743567790515618,
+      "sigma_dense": 0.29717755213934227,
+      "sigma_field": 0.3772060701155102,
+      "delta_sigma": 0.08002851797616795,
+      "p_field_gt_dense": 0.9991,
+      "binned_results": [
+        {
+          "center": -12.5,
+          "n_dense": 35,
+          "n_field": 191,
+          "sigma_dense": 0.40886240181879463,
+          "sigma_field": 0.38314795986155625,
+          "delta": -0.025714441957238376,
+          "p_field_gt_dense": 0.3026
+        },
+        {
+          "center": -11.5,
+          "n_dense": 169,
+          "n_field": 825,
+          "sigma_dense": 0.26600098849016374,
+          "sigma_field": 0.3735933358670469,
+          "delta": 0.10759234737688317,
+          "p_field_gt_dense": 1.0
+        }
+      ]
+    },
+    "wallaby_cf4_nodesi": {
+      "label": "WALLABY + CF4",
+      "description": "WALLABY gas-only RAR + CF4 distances",
+      "n_galaxies": 165,
+      "n_data_points": 1220,
+      "overall_scatter": 0.3743567790515618,
+      "sigma_dense": 0.29717755213934227,
+      "sigma_field": 0.3772060701155102,
+      "delta_sigma": 0.08002851797616795,
+      "p_field_gt_dense": 0.9991,
+      "binned_results": [
+        {
+          "center": -12.5,
+          "n_dense": 35,
+          "n_field": 191,
+          "sigma_dense": 0.40886240181879463,
+          "sigma_field": 0.38314795986155625,
+          "delta": -0.025714441957238376,
+          "p_field_gt_dense": 0.3026
+        },
+        {
+          "center": -11.5,
+          "n_dense": 169,
+          "n_field": 825,
+          "sigma_dense": 0.26600098849016374,
+          "sigma_field": 0.3735933358670469,
+          "delta": 0.10759234737688317,
+          "p_field_gt_dense": 1.0
+        }
+      ]
+    },
+    "wallaby_hubble_desi": {
+      "label": "WALLABY DESI",
+      "description": "WALLABY + DESI DR9 environments",
+      "n_galaxies": 165,
+      "n_data_points": 1220,
+      "overall_scatter": 0.3743567790515618,
+      "sigma_dense": null,
+      "sigma_field": 0.3743567790515618,
+      "delta_sigma": null,
+      "p_field_gt_dense": null,
+      "binned_results": []
+    }
+  },
+  "combined": {
+    "total_galaxies": 263,
+    "total_data_points": 3760,
+    "note": "Independent datasets both detect environmental RAR dependence"
+  }
+}

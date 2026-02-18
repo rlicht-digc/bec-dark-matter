@@ -1,0 +1,1058 @@
+{
+  "pipeline": "unified_rar",
+  "description": "Unified RAR environmental scatter test combining 8 datasets",
+  "n_galaxies": 2892,
+  "n_data_points": 15745,
+  "n_dense_galaxies": 927,
+  "n_field_galaxies": 1965,
+  "n_dense_points": 197,
+  "n_field_points": 7027,
+  "datasets": {
+    "SPARC": 2784,
+    "deBlok2002": 365,
+    "WALLABY": 1220,
+    "SS2020": 40,
+    "LITTLETHINGS": 11,
+    "LVHIS": 35,
+    "Yu2020": 132,
+    "Swaters2025": 85,
+    "GHASP": 3875,
+    "Noordermeer2005": 47,
+    "Vogt2004": 327,
+    "Catinella2005": 2236,
+    "VirgoRC": 18,
+    "PHANGS": 1212,
+    "Verheijen2001": 82,
+    "MaNGA": 3082,
+    "WALLABY_DR2": 194
+  },
+  "overall": {
+    "sigma_all": 0.3341422312414692,
+    "mean_all": 0.05565796814501977
+  },
+  "environment": {
+    "sigma_dense": 0.46022557584767243,
+    "sigma_field": 0.4125186877851195,
+    "delta_sigma": -0.04770688806255291,
+    "sigma_int_dense": 0.30382637512063365,
+    "sigma_int_field": 0.31284416223768347,
+    "delta_sigma_int": 0.009017787117049814,
+    "mean_err2_dense": 0.006916640172143969,
+    "mean_err2_field": 0.014630370741189534,
+    "p_field_gt_dense": 0.9996,
+    "p_value_onesided": 0.0004,
+    "levene_F": 46.6314439648366,
+    "levene_p": 8.880852454799186e-12,
+    "brown_forsythe_F": 46.6314439648366,
+    "brown_forsythe_p": 8.880852454799186e-12
+  },
+  "binned_results": [
+    {
+      "center": -12.5,
+      "lo": -13.0,
+      "hi": -12.0,
+      "n_dense": 69,
+      "n_field": 408,
+      "sigma_dense": 0.5722069443283027,
+      "sigma_field": 0.478111314039972,
+      "delta": -0.09409563028833068,
+      "p_field_gt_dense": 0.011399999999999966,
+      "levene_stat": 4.270128628366383,
+      "levene_p": 0.03932945485962506
+    },
+    {
+      "center": -11.5,
+      "lo": -12.0,
+      "hi": -11.0,
+      "n_dense": 532,
+      "n_field": 3353,
+      "sigma_dense": 0.33356851319117736,
+      "sigma_field": 0.3171710197243083,
+      "delta": -0.016397493466869084,
+      "p_field_gt_dense": 0.14159999999999995,
+      "levene_stat": 0.2787027495654187,
+      "levene_p": 0.5975829096523314
+    },
+    {
+      "center": -10.5,
+      "lo": -11.0,
+      "hi": -10.0,
+      "n_dense": 1000,
+      "n_field": 4987,
+      "sigma_dense": 0.20999306431872913,
+      "sigma_field": 0.2833161714751468,
+      "delta": 0.07332310715641768,
+      "p_field_gt_dense": 1.0,
+      "levene_stat": 110.91393433576772,
+      "levene_p": 1.0360492482735972e-25
+    },
+    {
+      "center": -9.5,
+      "lo": -10.0,
+      "hi": -9.0,
+      "n_dense": 1327,
+      "n_field": 3734,
+      "sigma_dense": 0.2539865646448769,
+      "sigma_field": 0.32213880048189336,
+      "delta": 0.06815223583701646,
+      "p_field_gt_dense": 1.0,
+      "levene_stat": 58.63630393719636,
+      "levene_p": 2.2580732827786118e-14
+    },
+    {
+      "center": -8.5,
+      "lo": -9.0,
+      "hi": -8.0,
+      "n_dense": 131,
+      "n_field": 177,
+      "sigma_dense": 0.32805830334638214,
+      "sigma_field": 0.28123574697347326,
+      "delta": -0.046822556372908886,
+      "p_field_gt_dense": 0.0514,
+      "levene_stat": 3.142338618509586,
+      "levene_p": 0.07727919226521814
+    }
+  ],
+  "dm_regime_test": {
+    "description": "BEC prediction test: field > dense scatter in DM-dominated regime",
+    "threshold_log_gbar": -10.5,
+    "dm_regime": {
+      "n_dense": 965,
+      "n_field": 6035,
+      "n_dense_gal": 294,
+      "n_field_gal": 954,
+      "sigma_dense": 0.3238144354356855,
+      "sigma_field": 0.3211792201807661,
+      "delta": -0.0026352152549193875,
+      "p_field_gt_dense": 0.39490000000000003
+    },
+    "baryon_regime": {
+      "n_dense": 2100,
+      "n_field": 6645,
+      "sigma_dense": 0.266906697270878,
+      "sigma_field": 0.31702670658126686,
+      "delta": 0.05012000931038885
+    },
+    "per_dataset_dm": {
+      "SPARC": {
+        "n_dense": 280,
+        "n_field": 1304,
+        "sigma_dense": 0.1268111538846831,
+        "sigma_field": 0.1563176962774929,
+        "delta": 0.02950654239280981
+      },
+      "WALLABY": {
+        "n_dense": 204,
+        "n_field": 1016,
+        "sigma_dense": 0.2886782032882042,
+        "sigma_field": 0.37144875903998453,
+        "delta": 0.08277055575178033
+      },
+      "Yu2020": {
+        "n_dense": 39,
+        "n_field": 93,
+        "sigma_dense": 0.3036283774496946,
+        "sigma_field": 0.2169590691465082,
+        "delta": -0.08666930830318642
+      },
+      "deBlok2002": {
+        "n_dense": 0,
+        "n_field": 365,
+        "sigma_dense": null,
+        "sigma_field": 0.32927880654057134,
+        "delta": null
+      },
+      "Swaters2025": {
+        "n_dense": 0,
+        "n_field": 39,
+        "sigma_dense": null,
+        "sigma_field": 0.1289943986636026,
+        "delta": null
+      },
+      "LVHIS": {
+        "n_dense": 7,
+        "n_field": 28,
+        "sigma_dense": 0.3897109218451181,
+        "sigma_field": 0.2470340503160996,
+        "delta": -0.14267687152901848
+      }
+    }
+  },
+  "per_dataset": {
+    "SPARC": {
+      "n_dense_gal": 32,
+      "n_field_gal": 99,
+      "n_dense_pts": 518,
+      "n_field_pts": 2266,
+      "sigma_dense": 0.1619635794979609,
+      "sigma_field": 0.14405786282871783,
+      "delta": -0.017905716669243066,
+      "p_field_gt_dense": 0.09740000000000004
+    },
+    "deBlok2002": {
+      "n_dense_gal": 0,
+      "n_field_gal": 18,
+      "n_dense_pts": 0,
+      "n_field_pts": 365,
+      "sigma_dense": null,
+      "sigma_field": 0.32927880654057134,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "WALLABY": {
+      "n_dense_gal": 32,
+      "n_field_gal": 133,
+      "n_dense_pts": 204,
+      "n_field_pts": 1016,
+      "sigma_dense": 0.2886782032882042,
+      "sigma_field": 0.37144875903998453,
+      "delta": 0.08277055575178033,
+      "p_field_gt_dense": 0.9996
+    },
+    "SS2020": {
+      "n_dense_gal": 5,
+      "n_field_gal": 35,
+      "n_dense_pts": 5,
+      "n_field_pts": 35,
+      "sigma_dense": 0.22634272928517554,
+      "sigma_field": 0.24276654352299984,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "LITTLETHINGS": {
+      "n_dense_gal": 0,
+      "n_field_gal": 11,
+      "n_dense_pts": 0,
+      "n_field_pts": 11,
+      "sigma_dense": null,
+      "sigma_field": 0.3107548129819286,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "LVHIS": {
+      "n_dense_gal": 6,
+      "n_field_gal": 22,
+      "n_dense_pts": 7,
+      "n_field_pts": 28,
+      "sigma_dense": 0.3897109218451181,
+      "sigma_field": 0.2470340503160996,
+      "delta": -0.14267687152901848,
+      "p_field_gt_dense": 0.13660000000000005
+    },
+    "Yu2020": {
+      "n_dense_gal": 39,
+      "n_field_gal": 93,
+      "n_dense_pts": 39,
+      "n_field_pts": 93,
+      "sigma_dense": 0.3036283774496946,
+      "sigma_field": 0.2169590691465082,
+      "delta": -0.08666930830318642,
+      "p_field_gt_dense": 0.06820000000000004
+    },
+    "Swaters2025": {
+      "n_dense_gal": 3,
+      "n_field_gal": 82,
+      "n_dense_pts": 3,
+      "n_field_pts": 82,
+      "sigma_dense": 0.2576524280139198,
+      "sigma_field": 0.15897455850986586,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "GHASP": {
+      "n_dense_gal": 2,
+      "n_field_gal": 67,
+      "n_dense_pts": 76,
+      "n_field_pts": 3799,
+      "sigma_dense": 0.16265120508256317,
+      "sigma_field": 0.3714381455746599,
+      "delta": 0.2087869404920967,
+      "p_field_gt_dense": 1.0
+    },
+    "Noordermeer2005": {
+      "n_dense_gal": 5,
+      "n_field_gal": 42,
+      "n_dense_pts": 5,
+      "n_field_pts": 42,
+      "sigma_dense": 0.489026223475593,
+      "sigma_field": 0.38836396444668947,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "Vogt2004": {
+      "n_dense_gal": 296,
+      "n_field_gal": 31,
+      "n_dense_pts": 296,
+      "n_field_pts": 31,
+      "sigma_dense": 0.20622732305372607,
+      "sigma_field": 0.10403958299233315,
+      "delta": -0.10218774006139292,
+      "p_field_gt_dense": 0.0011999999999999789
+    },
+    "Catinella2005": {
+      "n_dense_gal": 4,
+      "n_field_gal": 318,
+      "n_dense_pts": 20,
+      "n_field_pts": 2216,
+      "sigma_dense": 0.14959901020582447,
+      "sigma_field": 0.19333334019435233,
+      "delta": 0.04373432998852786,
+      "p_field_gt_dense": 0.757
+    },
+    "VirgoRC": {
+      "n_dense_gal": 1,
+      "n_field_gal": 0,
+      "n_dense_pts": 18,
+      "n_field_pts": 0,
+      "sigma_dense": 0.10681358305092656,
+      "sigma_field": null,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "PHANGS": {
+      "n_dense_gal": 19,
+      "n_field_gal": 22,
+      "n_dense_pts": 672,
+      "n_field_pts": 540,
+      "sigma_dense": 0.31334277271029515,
+      "sigma_field": 0.2563011364253498,
+      "delta": -0.05704163628494535,
+      "p_field_gt_dense": 0.0020000000000000018
+    },
+    "Verheijen2001": {
+      "n_dense_gal": 12,
+      "n_field_gal": 0,
+      "n_dense_pts": 82,
+      "n_field_pts": 0,
+      "sigma_dense": 0.23473971348320272,
+      "sigma_field": null,
+      "delta": null,
+      "p_field_gt_dense": null
+    },
+    "MaNGA": {
+      "n_dense_gal": 432,
+      "n_field_gal": 992,
+      "n_dense_pts": 926,
+      "n_field_pts": 2156,
+      "sigma_dense": 0.19644833063458422,
+      "sigma_field": 0.20199399433446058,
+      "delta": 0.0055456636998763575,
+      "p_field_gt_dense": 0.732
+    },
+    "WALLABY_DR2": {
+      "n_dense_gal": 39,
+      "n_field_gal": 0,
+      "n_dense_pts": 194,
+      "n_field_pts": 0,
+      "sigma_dense": 0.14791110419257106,
+      "sigma_field": null,
+      "delta": null,
+      "p_field_gt_dense": null
+    }
+  },
+  "refined_bec_tests": {
+    "description": "Five refined tests to prove/disprove BEC scatter prediction",
+    "z_score_test": {
+      "description": "Within-dataset Z-score normalization eliminates Simpson Paradox",
+      "z_sigma_dense_dm": 0.9903044764755028,
+      "z_sigma_field_dm": 0.950685353192163,
+      "z_delta_dm": -0.03961912328333983,
+      "p_field_gt_dense_dm": 0.1815,
+      "z_sigma_dense_all": 1.034405758727392,
+      "z_sigma_field_all": 0.9900419961691495,
+      "z_delta_all": -0.04436376255824259,
+      "supports_bec": false
+    },
+    "threshold_scan": {
+      "description": "Optimal threshold for BEC signal",
+      "best_threshold": -11.5,
+      "best_z_delta": 0.2605213966634051,
+      "best_p": 0.9986,
+      "all_thresholds": [
+        {
+          "threshold": -12.0,
+          "n_dense": 61,
+          "n_field": 340,
+          "z_sigma_dense": 1.138497103526713,
+          "z_sigma_field": 1.2585743524036113,
+          "z_delta": 0.12007724887689819,
+          "z_p_field_gt_dense": 0.6138
+        },
+        {
+          "threshold": -11.75,
+          "n_dense": 155,
+          "n_field": 843,
+          "z_sigma_dense": 1.0058526872006348,
+          "z_sigma_field": 1.1423542443561565,
+          "z_delta": 0.1365015571555217,
+          "z_p_field_gt_dense": 0.8522000000000001
+        },
+        {
+          "threshold": -11.5,
+          "n_dense": 254,
+          "n_field": 1447,
+          "z_sigma_dense": 0.881943901207178,
+          "z_sigma_field": 1.1424652978705832,
+          "z_delta": 0.2605213966634051,
+          "z_p_field_gt_dense": 0.9986
+        },
+        {
+          "threshold": -11.25,
+          "n_dense": 325,
+          "n_field": 1943,
+          "z_sigma_dense": 0.8722520242540838,
+          "z_sigma_field": 1.0976923493106177,
+          "z_delta": 0.22544032505653389,
+          "z_p_field_gt_dense": 0.9986
+        },
+        {
+          "threshold": -11.0,
+          "n_dense": 382,
+          "n_field": 2358,
+          "z_sigma_dense": 0.8850449673625388,
+          "z_sigma_field": 1.058116883105654,
+          "z_delta": 0.1730719157431152,
+          "z_p_field_gt_dense": 0.9898
+        },
+        {
+          "threshold": -10.75,
+          "n_dense": 461,
+          "n_field": 2622,
+          "z_sigma_dense": 0.8612464651418882,
+          "z_sigma_field": 1.0445091253575272,
+          "z_delta": 0.18326266021563897,
+          "z_p_field_gt_dense": 0.9966
+        },
+        {
+          "threshold": -10.5,
+          "n_dense": 530,
+          "n_field": 2845,
+          "z_sigma_dense": 0.8815452955172759,
+          "z_sigma_field": 1.020463995900804,
+          "z_delta": 0.13891870038352805,
+          "z_p_field_gt_dense": 0.9782
+        },
+        {
+          "threshold": -10.25,
+          "n_dense": 584,
+          "n_field": 3033,
+          "z_sigma_dense": 0.8887935366989297,
+          "z_sigma_field": 0.9969246356432943,
+          "z_delta": 0.10813109894436457,
+          "z_p_field_gt_dense": 0.9438
+        },
+        {
+          "threshold": -10.0,
+          "n_dense": 641,
+          "n_field": 3250,
+          "z_sigma_dense": 0.9042214494805054,
+          "z_sigma_field": 0.9894543713364461,
+          "z_delta": 0.08523292185594067,
+          "z_p_field_gt_dense": 0.899
+        },
+        {
+          "threshold": -9.75,
+          "n_dense": 679,
+          "n_field": 3429,
+          "z_sigma_dense": 0.9629716068635286,
+          "z_sigma_field": 0.9847872679651971,
+          "z_delta": 0.02181566110166855,
+          "z_p_field_gt_dense": 0.613
+        },
+        {
+          "threshold": -9.5,
+          "n_dense": 706,
+          "n_field": 3578,
+          "z_sigma_dense": 1.0203537017927298,
+          "z_sigma_field": 0.983820544656407,
+          "z_delta": -0.03653315713632277,
+          "z_p_field_gt_dense": 0.2692
+        },
+        {
+          "threshold": -9.25,
+          "n_dense": 735,
+          "n_field": 3684,
+          "z_sigma_dense": 1.031835743695646,
+          "z_sigma_field": 0.9749712992049172,
+          "z_delta": -0.056864444490728805,
+          "z_p_field_gt_dense": 0.18679999999999997
+        }
+      ]
+    },
+    "galaxy_level_test": {
+      "description": "One value per galaxy removes point-count bias",
+      "n_dense_gal": 927,
+      "n_field_gal": 1965,
+      "sigma_dense_all": 0.2741154262893931,
+      "sigma_field_all": 0.3225332132269936,
+      "delta_all": 0.04841778693760046,
+      "n_dense_gal_dm": 267,
+      "n_field_gal_dm": 795,
+      "sigma_dense_dm": 0.36865422052331687,
+      "sigma_field_dm": 0.3803116730042553,
+      "delta_dm": 0.011657452480938413,
+      "p_field_gt_dense_dm": 0.7001,
+      "supports_bec": true
+    },
+    "dm_fraction_weighted": {
+      "description": "Points weighted by DM fraction (f_DM = 1 - gbar/gobs)",
+      "f_dm_gt_0p5": {
+        "n_dense": 1315,
+        "n_field": 8122,
+        "w_sigma_dense": 0.2997523590170445,
+        "w_sigma_field": 0.26703950943539867,
+        "delta": -0.03271284958164583,
+        "p_field_gt_dense": 0.0017000000000000348
+      },
+      "f_dm_gt_0p8": {
+        "n_dense": 679,
+        "n_field": 4643,
+        "sigma_dense": 0.3029660091130905,
+        "sigma_field": 0.25044610362193953,
+        "delta": -0.05251990549115099,
+        "p_field_gt_dense": 0.0
+      },
+      "supports_bec": false
+    },
+    "monte_carlo_errors": {
+      "description": "MC error propagation (1000 realizations)",
+      "n_mc": 1000,
+      "overall": {
+        "median_delta": 0.029300615745958353,
+        "ci_68": [
+          0.02479543988375139,
+          0.03661755679135264
+        ],
+        "ci_95": [
+          0.021487687020137466,
+          0.04749633389714879
+        ],
+        "frac_positive": 1.0
+      },
+      "dm_regime": {
+        "median_delta": 0.018221346517068,
+        "ci_68": [
+          0.008285773386576068,
+          0.033611917843652875
+        ],
+        "ci_95": [
+          0.0018369977865752038,
+          0.05536754750935133
+        ],
+        "frac_positive": 0.988
+      },
+      "supports_bec": true
+    },
+    "z_norm_galaxy_level": {
+      "description": "Galaxy-level scatter with Z-score normalization (DM regime)",
+      "n_dense_gal": 267,
+      "n_field_gal": 795,
+      "z_sigma_dense": 1.1526451421516848,
+      "z_sigma_field": 0.9132100898552724,
+      "z_delta": -0.23943505229641238,
+      "p_field_gt_dense": 0.00039999999999995595,
+      "supports_bec": false
+    },
+    "bec_transition_function": {
+      "description": "Tests if Dsigma(gbar) follows Bose-Einstein occupation number",
+      "n_bins": 8,
+      "bin_centers": [
+        -12.75,
+        -12.25,
+        -11.75,
+        -11.25,
+        -10.75,
+        -10.25,
+        -9.75,
+        -9.25
+      ],
+      "bin_delta_z": [
+        -0.36989187767170106,
+        0.03806152813032182,
+        0.19686299451406952,
+        -0.027925296528319765,
+        -0.21184595143356755,
+        0.08826698255136334,
+        0.11274296956118901,
+        -0.03278789475445021
+      ],
+      "bec_fit": {
+        "amplitude_A": 0.0015206776260307205,
+        "offset_C": 0.029620076874092,
+        "reduced_chi2": 6.787636108438789,
+        "aic": 44.72581665063273
+      },
+      "linear_fit": {
+        "reduced_chi2": 6.798506416347803,
+        "aic": 44.79103849808682
+      },
+      "constant_fit": {
+        "reduced_chi2": 16.711281965262923,
+        "aic": 185.82410161789215
+      },
+      "delta_aic_linear_minus_bec": 0.06522184745409021,
+      "delta_aic_constant_minus_bec": 8.116433344489721,
+      "best_model": "BEC",
+      "spearman_r": 0.19047619047619052,
+      "spearman_p": 0.6514014957024813,
+      "supports_bec": true,
+      "robustness": {
+        "bootstrap_daic": {
+          "n_iterations": 1000,
+          "n_valid": 1000,
+          "median_daic": -0.1387704621511574,
+          "ci_68": [
+            -4.021589452394253,
+            2.0070689580495054
+          ],
+          "ci_95": [
+            -11.187096677282964,
+            7.3252096917098894
+          ],
+          "frac_bec_preferred": 0.453,
+          "median_amplitude_A": 0.002879563620687259,
+          "robust": false
+        },
+        "leave_one_out": {
+          "SPARC": {
+            "daic_lin_bec": -4.551443129814331,
+            "bec_A": -0.020818064320407313,
+            "n_bins": 7,
+            "best_model": "Linear"
+          },
+          "deBlok2002": {
+            "daic_lin_bec": 0.007360054446351683,
+            "bec_A": 0.000518066345514101,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "WALLABY": {
+            "daic_lin_bec": -0.7009892968040532,
+            "bec_A": -0.008414865196237947,
+            "n_bins": 8,
+            "best_model": "Linear"
+          },
+          "SS2020": {
+            "daic_lin_bec": 0.06614952037853072,
+            "bec_A": 0.001533337029098157,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "LITTLETHINGS": {
+            "daic_lin_bec": 0.06971518538360044,
+            "bec_A": 0.0015682526201689993,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "LVHIS": {
+            "daic_lin_bec": 1.0344808095558022,
+            "bec_A": 0.007125661074147015,
+            "n_bins": 7,
+            "best_model": "BEC"
+          },
+          "Yu2020": {
+            "daic_lin_bec": 1.8629604946850833,
+            "bec_A": 0.010353002025770486,
+            "n_bins": 7,
+            "best_model": "BEC"
+          },
+          "Swaters2025": {
+            "daic_lin_bec": 0.03923606429222559,
+            "bec_A": 0.0012691214945890206,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "GHASP": {
+            "daic_lin_bec": 0.11508327212784053,
+            "bec_A": 0.005044315129635154,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "Noordermeer2005": {
+            "daic_lin_bec": 0.0653192708830872,
+            "bec_A": 0.001514274346012645,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "Vogt2004": {
+            "daic_lin_bec": -0.8279677808658761,
+            "bec_A": 0.0030432312837844634,
+            "n_bins": 8,
+            "best_model": "Linear"
+          },
+          "Catinella2005": {
+            "daic_lin_bec": 2.2660073123451454,
+            "bec_A": 0.014959033926566095,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "VirgoRC": {
+            "daic_lin_bec": 0.05520447829400155,
+            "bec_A": 0.0014043012607596658,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "PHANGS": {
+            "daic_lin_bec": 0.2550020651935654,
+            "bec_A": 0.003417290307474257,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "Verheijen2001": {
+            "daic_lin_bec": 0.3503948239575436,
+            "bec_A": 0.0040566241891692185,
+            "n_bins": 7,
+            "best_model": "BEC"
+          },
+          "MaNGA": {
+            "daic_lin_bec": 0.5197885932686575,
+            "bec_A": 0.0062064356184502855,
+            "n_bins": 8,
+            "best_model": "BEC"
+          },
+          "WALLABY_DR2": {
+            "daic_lin_bec": 0.019227038754110026,
+            "bec_A": 0.003886588893375361,
+            "n_bins": 8,
+            "best_model": "BEC"
+          }
+        },
+        "test6_diagnostic": {
+          "SPARC": {
+            "delta": -0.27049227997617586,
+            "supports_bec": false,
+            "n_dense": 266,
+            "n_field": 858
+          },
+          "deBlok2002": {
+            "delta": -0.23257584468505232,
+            "supports_bec": false,
+            "n_dense": 294,
+            "n_field": 936
+          },
+          "WALLABY": {
+            "delta": -0.278806539223143,
+            "supports_bec": false,
+            "n_dense": 262,
+            "n_field": 821
+          },
+          "SS2020": {
+            "delta": -0.2435610898470082,
+            "supports_bec": false,
+            "n_dense": 291,
+            "n_field": 929
+          },
+          "LITTLETHINGS": {
+            "delta": -0.2347097318284017,
+            "supports_bec": false,
+            "n_dense": 294,
+            "n_field": 944
+          },
+          "LVHIS": {
+            "delta": -0.22862048568515425,
+            "supports_bec": false,
+            "n_dense": 288,
+            "n_field": 932
+          },
+          "Yu2020": {
+            "delta": -0.2188052222072907,
+            "supports_bec": false,
+            "n_dense": 255,
+            "n_field": 861
+          },
+          "Swaters2025": {
+            "delta": -0.24657226971761825,
+            "supports_bec": false,
+            "n_dense": 294,
+            "n_field": 915
+          },
+          "GHASP": {
+            "delta": -0.23110100724949267,
+            "supports_bec": false,
+            "n_dense": 292,
+            "n_field": 912
+          },
+          "Noordermeer2005": {
+            "delta": -0.23212163319279233,
+            "supports_bec": false,
+            "n_dense": 293,
+            "n_field": 943
+          },
+          "Vogt2004": {
+            "delta": -0.0882656637824345,
+            "supports_bec": false,
+            "n_dense": 202,
+            "n_field": 949
+          },
+          "Catinella2005": {
+            "delta": -0.12281396281826074,
+            "supports_bec": false,
+            "n_dense": 290,
+            "n_field": 656
+          },
+          "VirgoRC": {
+            "delta": -0.23559840603787452,
+            "supports_bec": false,
+            "n_dense": 293,
+            "n_field": 954
+          },
+          "PHANGS": {
+            "delta": -0.23819689875567884,
+            "supports_bec": false,
+            "n_dense": 292,
+            "n_field": 952
+          },
+          "Verheijen2001": {
+            "delta": -0.23787317736083835,
+            "supports_bec": false,
+            "n_dense": 286,
+            "n_field": 954
+          },
+          "MaNGA": {
+            "delta": -0.3560589844222105,
+            "supports_bec": false,
+            "n_dense": 257,
+            "n_field": 794
+          },
+          "WALLABY_DR2": {
+            "delta": -0.23449599076713945,
+            "supports_bec": false,
+            "n_dense": 255,
+            "n_field": 954
+          }
+        }
+      }
+    },
+    "summary": {
+      "n_tests": 13,
+      "n_supporting": 7,
+      "n_primary_tests": 8,
+      "n_primary_supporting": 7,
+      "n_robustness_checks": 3,
+      "n_robustness_supporting": 0,
+      "tests": [
+        {
+          "name": "Z-score (DM regime)",
+          "delta": -0.03961912328333983,
+          "significance": "P=0.181",
+          "supports_bec": "False",
+          "category": "robustness"
+        },
+        {
+          "name": "Threshold scan peak",
+          "delta": 0.2605213966634051,
+          "significance": "P=0.999",
+          "supports_bec": "True",
+          "category": "primary"
+        },
+        {
+          "name": "Galaxy-level (DM regime)",
+          "delta": 0.011657452480938413,
+          "significance": "P=0.700",
+          "supports_bec": true,
+          "category": "primary"
+        },
+        {
+          "name": "DM-weighted f_DM>0.5",
+          "delta": -0.03271284958164583,
+          "significance": "P=0.002",
+          "supports_bec": "False",
+          "category": "robustness"
+        },
+        {
+          "name": "MC error propagation (DM)",
+          "delta": 0.018221346517068,
+          "significance": "99%",
+          "supports_bec": "True",
+          "category": "primary"
+        },
+        {
+          "name": "Z-norm galaxy-level (DM)",
+          "delta": -0.23943505229641238,
+          "significance": "P=0.000",
+          "supports_bec": false,
+          "category": "robustness"
+        },
+        {
+          "name": "BEC transition function",
+          "delta": 0.0015206776260307205,
+          "significance": "\u0394AIC=+0.1",
+          "supports_bec": true,
+          "category": "primary"
+        },
+        {
+          "name": "Boson bunching \u03c3\u00b2\u221dn\u0304(n\u0304+1)",
+          "delta": 9.691951526397759,
+          "significance": "\u0394AIC=+9.7",
+          "supports_bec": "True",
+          "category": "primary"
+        },
+        {
+          "name": "Redshift evolution g\u2020\u221dH(z)",
+          "delta": null,
+          "significance": "N/A",
+          "supports_bec": false,
+          "category": "robustness"
+        },
+        {
+          "name": "ALFALFA+WISE bunching (N~10k)",
+          "delta": 3.028537938842959,
+          "significance": "\u0394AIC=+3.0",
+          "supports_bec": "True",
+          "category": "robustness"
+        },
+        {
+          "name": "MaNGA V/\u03c3 bunching (dispersion channel)",
+          "delta": null,
+          "significance": "N/A",
+          "supports_bec": false,
+          "category": "robustness"
+        },
+        {
+          "name": "HI profile coherence (non-kinematic)",
+          "delta": -0.04770688806255291,
+          "significance": "\u0394\u03c3=-0.0477",
+          "supports_bec": true,
+          "category": "robustness"
+        },
+        {
+          "name": "Yang halo mass scatter bunching (weak lensing)",
+          "delta": -11461.415286483812,
+          "significance": "\u0394AIC=-11461.4",
+          "supports_bec": false,
+          "category": "robustness"
+        }
+      ],
+      "verdict": "STRONG"
+    },
+    "test8_boson_bunching": {
+      "quantum_model": {
+        "A": 0.0008185178758751988,
+        "C": 0.8996791864071719,
+        "chi2_dof": 17.248410922288606,
+        "aic": 176.48410922288605
+      },
+      "classical_model": {
+        "A": 0.004781965368671773,
+        "C": 0.9012973430906456,
+        "chi2_dof": 18.21760607492838,
+        "aic": 186.1760607492838
+      },
+      "constant_model": {
+        "mean_var": 0.9130205119216441,
+        "chi2_dof": 16.711281965262923,
+        "aic": 185.82410161789215
+      },
+      "delta_aic_classical_minus_quantum": 9.691951526397759,
+      "delta_aic_constant_minus_quantum": 9.339992395006107,
+      "correlation_quantum": {
+        "r": 0.173677452760236,
+        "p": 0.5893204021834716
+      },
+      "correlation_classical": {
+        "r": 0.06963426384127876,
+        "p": 0.8297375246838521
+      },
+      "n_bins": 12,
+      "supports_quantum": "True",
+      "bins": [
+        {
+          "log_gbar": -12.8,
+          "N": 45,
+          "var_obs": 1.3598543874403455,
+          "var_err": 0.28992192954160145,
+          "nbar": 27.019365645772343,
+          "nbar_sq_plus_n": 757.0654855457151
+        },
+        {
+          "log_gbar": -12.399999999999999,
+          "N": 149,
+          "var_obs": 1.1972996222209955,
+          "var_err": 0.1391832539520576,
+          "nbar": 16.866434644715145,
+          "nbar_sq_plus_n": 301.34305226916246
+        },
+        {
+          "log_gbar": -12.0,
+          "N": 832,
+          "var_obs": 1.012218419919673,
+          "var_err": 0.04965794259365371,
+          "nbar": 10.462057351492472,
+          "nbar_sq_plus_n": 119.91670137741016
+        },
+        {
+          "log_gbar": -11.599999999999998,
+          "N": 1514,
+          "var_obs": 1.1067615947007807,
+          "var_err": 0.040239225608854415,
+          "nbar": 6.423843894757457,
+          "nbar_sq_plus_n": 47.68961427897011
+        },
+        {
+          "log_gbar": -11.2,
+          "N": 1822,
+          "var_obs": 0.7955574406867267,
+          "var_err": 0.026365230157638583,
+          "nbar": 3.8801373953719525,
+          "nbar_sq_plus_n": 18.935603602335792
+        },
+        {
+          "log_gbar": -10.799999999999997,
+          "N": 2020,
+          "var_obs": 0.7792114783220881,
+          "var_err": 0.024524613950062453,
+          "nbar": 2.281852303706732,
+          "nbar_sq_plus_n": 7.488702239638451
+        },
+        {
+          "log_gbar": -10.399999999999999,
+          "N": 2459,
+          "var_obs": 0.8353955973396353,
+          "var_err": 0.02382957192251105,
+          "nbar": 1.28389873928132,
+          "nbar_sq_plus_n": 2.9322947120094827
+        },
+        {
+          "log_gbar": -9.999999999999996,
+          "N": 3062,
+          "var_obs": 0.9388583933922939,
+          "var_err": 0.023998462910093794,
+          "nbar": 0.6704816646891006,
+          "nbar_sq_plus_n": 1.1200273273733683
+        },
+        {
+          "log_gbar": -9.599999999999998,
+          "N": 2383,
+          "var_obs": 1.155707162410707,
+          "var_err": 0.033488209201738235,
+          "nbar": 0.30773901144890153,
+          "nbar_sq_plus_n": 0.4024423106164487
+        },
+        {
+          "log_gbar": -9.199999999999996,
+          "N": 1124,
+          "var_obs": 0.9950431166585736,
+          "var_err": 0.04199204444879418,
+          "nbar": 0.11229790902375704,
+          "nbar_sq_plus_n": 0.12490872939486505
+        },
+        {
+          "log_gbar": -8.799999999999997,
+          "N": 248,
+          "var_obs": 1.672882860981793,
+          "var_err": 0.15053311649760934,
+          "nbar": 0.027121057367408535,
+          "nbar_sq_plus_n": 0.0278566091201348
+        },
+        {
+          "log_gbar": -8.399999999999995,
+          "N": 52,
+          "var_obs": 1.9032156413319063,
+          "var_err": 0.3768928582039125,
+          "nbar": 0.003161623754728212,
+          "nbar_sq_plus_n": 0.0031716196194946735
+        }
+      ]
+    }
+  }
+}

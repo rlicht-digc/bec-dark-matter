@@ -1,0 +1,15 @@
+
+SDSS7_SFR: (SFR obtained from Brinchmann et al. 2004)
+
+col  1: galaxy ID
+col  2: object ID (not used)
+col  3: z redshift
+col  4: median SFR
+col  5: 16% SFR
+col  6: 84% SFR
+col  7: median SSFR
+col  8: 16% SSFR
+col  9: 84% SSFR
+
+
+
