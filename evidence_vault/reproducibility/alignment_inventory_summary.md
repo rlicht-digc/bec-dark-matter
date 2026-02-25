@@ -5,10 +5,10 @@
 
 ## State Counts
 
-- State 1: 16
+- State 1: 32
 - State 2: 173
-- State 3: 526
-- State 4: 76
+- State 3: 518
+- State 4: 68
 
 ## Type Counts
 
@@ -21,7 +21,7 @@
 
 | root | state1 | state2 | state3 | state4 |
 |---|---:|---:|---:|---:|
-| analysis | 16 | 173 | 184 | 70 |
+| analysis | 32 | 173 | 176 | 62 |
 | outputs | 0 | 0 | 342 | 6 |
 
 ## Notes

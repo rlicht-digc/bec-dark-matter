@@ -1,5 +1,6 @@
 {
   "test_name": "definitive_environmental_scatter",
+  "description": "Definitive test of whether RAR scatter differs between dense and field environments using SPARC distances with Haubner+2025 error model, galaxy-block bootstrap, and permutation null.",
   "n_galaxies": 131,
   "n_dense": 48,
   "n_field": 83,

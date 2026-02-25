@@ -1,5 +1,6 @@
 {
   "test_name": "env_confound_control",
+  "description": "Controls for confounders (morphology, gas fraction, distance method, inclination, UMa correlated distances) that could produce spurious environmental scatter differences independent of physical environment.",
   "n_galaxies": 131,
   "n_field": 83,
   "n_dense": 48,

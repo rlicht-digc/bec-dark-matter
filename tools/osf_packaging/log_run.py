@@ -194,6 +194,10 @@ def build_parser() -> argparse.ArgumentParser:
         "--supersedes",
         help="Optional prior run_id that this log supersedes.",
     )
+    parser.add_argument(
+        "--git-commit",
+        help="Explicit commit SHA to record. If omitted, current HEAD is used.",
+    )
     parser.add_argument("--notes", help="Optional freeform notes.")
     parser.add_argument(
         "--warnings",
@@ -224,7 +228,7 @@ def main() -> int:
         "prompt_sha256": prompt_sha,
         "inputs_scanned": parse_csv(args.inputs),
         "outputs_changed": parse_csv(args.outputs),
-        "git_commit": git_head(REPO_ROOT),
+        "git_commit": args.git_commit.strip() if args.git_commit else git_head(REPO_ROOT),
         "todos_remaining": load_todos(Path(args.todos_file).resolve() if args.todos_file else None),
     }
 

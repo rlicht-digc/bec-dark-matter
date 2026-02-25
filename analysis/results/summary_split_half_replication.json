@@ -1,5 +1,6 @@
 {
   "test_name": "split_half_replication",
+  "description": "Internal replication test: randomly splits the 131-galaxy SPARC sample into halves 1000 times and checks whether both halves independently recover the scatter derivative inversion at g-dagger.",
   "n_galaxies": 131,
   "n_total_points": 2777,
   "baseline": {

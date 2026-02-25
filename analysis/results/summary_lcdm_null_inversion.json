@@ -1,0 +1,63 @@
+{
+  "test_name": "lcdm_null_inversion",
+  "description": "Does the scatter derivative inversion at g\u2020 exist in pure LCDM?",
+  "parameters": {
+    "N_galaxies": 500,
+    "N_radii_per_galaxy": 20,
+    "total_rar_points": 9982,
+    "smhm_scatter_dex": 0.15,
+    "concentration_scatter_dex": 0.11,
+    "disk_size_scatter_dex": 0.2
+  },
+  "sparc_result": {
+    "inversion_log_g": -9.8598685760116,
+    "delta_from_gdagger": 0.06095017794077506,
+    "n_rar_points": 2777
+  },
+  "lcdm_result": {
+    "inversion_log_g": -11.605255012626639,
+    "delta_from_gdagger": 1.684436258674264,
+    "n_rar_points": 9982
+  },
+  "monte_carlo": {
+    "n_realizations": 100,
+    "inversions_found": 100,
+    "near_gdagger_count": 5,
+    "near_gdagger_rate": 0.05,
+    "mean_inversion": -10.98775702645384,
+    "std_inversion": 0.9194327543576616
+  },
+  "scatter_profile_lcdm": {
+    "centers": [
+      -12.844986123388678,
+      -12.544986123388677,
+      -12.244986123388676,
+      -11.944986123388675,
+      -11.644986123388675,
+      -11.344986123388674,
+      -11.044986123388673,
+      -10.744986123388673,
+      -10.444986123388672,
+      -10.144986123388671,
+      -9.84498612338867,
+      -9.54498612338867,
+      -9.244986123388669
+    ],
+    "sigmas": [
+      0.14695153859600868,
+      0.15605033716934982,
+      0.15270582116201376,
+      0.15991880831813624,
+      0.18720186606823883,
+      0.17134536018981014,
+      0.16628775784094912,
+      0.14687332533881411,
+      0.1287227714271885,
+      0.11722272443356065,
+      0.10805781286476866,
+      0.09691793506815327,
+      0.09729527609900902
+    ]
+  },
+  "verdict": "DISCRIMINATING"
+}

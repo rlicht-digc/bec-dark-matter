@@ -1,5 +1,6 @@
 {
   "test_name": "nonparametric_inversion_robustness",
+  "description": "Tests whether the scatter derivative inversion at g-dagger persists when residuals are computed from non-parametric mean relations (LOESS, spline, isotonic) that have no built-in characteristic scale.",
   "n_galaxies": 131,
   "n_points": 2777,
   "n_field_gals": 83,

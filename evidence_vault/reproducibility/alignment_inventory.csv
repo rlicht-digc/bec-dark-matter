@@ -126,8 +126,8 @@ analysis/pipeline/test_eagle_injection_recovery.py,script,3,Mapped summary missi
 analysis/pipeline/test_eagle_rar_inversion.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_eagle_rar_inversion_v2.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_env_cf4_accel_binned.py,script,3,Mapped summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_env_confound_control.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_env_scatter_definitive.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_env_confound_control.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_env_scatter_definitive.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_env_triple_distance.py,script,3,Mapped summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_extended_rar_inversion.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_forward_model_bunching.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
@@ -145,24 +145,24 @@ analysis/pipeline/test_interface_spectral.py,script,3,Mapped summary missing req
 analysis/pipeline/test_inversion_distance_sensitivity.py,script,3,Mapped summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_jackknife_robustness.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_korsaga_ml_sensitivity.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_kurtosis_disambiguation.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_kurtosis_disambiguation.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_kurtosis_mhongoose.py,script,2,Mapped reproducible script with valid summary and verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_kurtosis_phase_transition.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_lcdm_hydro_inversion.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_lcdm_null_inversion.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_lcdm_null_inversion.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_lcdm_phase_diagram.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_lensing_profile_shape.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_mass_split_bunching.py,script,3,Mapped summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_matched_analog_comparison.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_mc_distance_and_inversion.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_ngc3621_single_galaxy.py,script,3,No mapped summary artifact; quarantine until promoted.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_nonparametric_inversion.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_nonparametric_inversion.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_periodic_properties_and_scaling.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_phangs_inner_quantum.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_phase_diagram_model.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_probes_gas_corrected.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_probes_inversion_replication.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_propensity_matched_env.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_probes_inversion_replication.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_propensity_matched_env.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_radial_variance_profile.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_rar_tightness.py,script,3,No mapped summary artifact; quarantine until promoted.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_rar_tightness_probes.py,script,3,No mapped summary artifact; quarantine until promoted.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
@@ -174,7 +174,7 @@ analysis/pipeline/test_scale_parameter_analysis.py,script,3,Mapped summary missi
 analysis/pipeline/test_simulation_coherence.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_soliton_nfw_composite.py,script,2,Mapped reproducible script with valid summary and verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_spectral_slope_alpha.py,script,3,No mapped summary artifact; quarantine until promoted.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/pipeline/test_split_half_replication.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/pipeline/test_split_half_replication.py,script,1,Core script with mapped summary containing required keys + verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_tf_scatter_redshift.py,script,2,Mapped reproducible script with valid summary and verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_tng_coherence.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/pipeline/test_tng_sparc_composition_sweep.py,script,3,Mapped summary missing required keys or unreadable.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
@@ -305,8 +305,8 @@ analysis/results/summary_eagle_injection_recovery.json,summary,4,Summary unreada
 analysis/results/summary_eagle_rar_inversion.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_eagle_rar_inversion_v2.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_env_cf4_accel_binned.json,summary,3,Summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_env_confound_control.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_env_definitive.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_env_confound_control.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_env_definitive.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_env_triple_distance.json,summary,3,Summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_expanded_sample.json,summary,4,Summary unreadable or missing required keys test_name/description.,UNMAPPED
 analysis/results/summary_extended_rar_inversion.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
@@ -326,11 +326,11 @@ analysis/results/summary_interface_spectral_test.json,summary,4,Summary unreadab
 analysis/results/summary_inversion_distance_sensitivity.json,summary,3,Summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_jackknife_robustness.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_korsaga_ml_sensitivity.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_kurtosis_disambiguation.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_kurtosis_disambiguation.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_kurtosis_mhongoose.json,summary,2,"Valid summary, supporting evidence.",analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_kurtosis_phase_transition.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_lcdm_hydro_inversion.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_lcdm_null_inversion.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_lcdm_null_inversion.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_lensing_profile_shape.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_literature_crossref.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_mass_split_bunching.json,summary,3,Summary missing top-level verdict.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
@@ -338,21 +338,21 @@ analysis/results/summary_matched_analog_comparison.json,summary,4,Summary unread
 analysis/results/summary_mc_distance_and_inversion.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_mhongoose_integration.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_mhongoose_sorgho2019.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_nonparametric_inversion.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_nonparametric_inversion.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_pathological_galaxies.json,summary,3,Summary missing top-level verdict.,UNMAPPED
 analysis/results/summary_periodic_properties_and_scaling.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_phangs_inner_quantum.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_phase4_unified_adjudication.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_phase_diagram_model.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_probes_gas_corrected.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_probes_inversion_replication.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
-analysis/results/summary_propensity_matched_env.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_probes_inversion_replication.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_propensity_matched_env.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_radial_variance_profile.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_residual_power_spectrum.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_simulation_coherence.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_soliton_nfw_composite.json,summary,2,"Valid summary, supporting evidence.",analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_sparc_orig_haubner.json,summary,4,Summary unreadable or missing required keys test_name/description.,UNMAPPED
-analysis/results/summary_split_half_replication.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
+analysis/results/summary_split_half_replication.json,summary,1,Core-linked summary with required keys + verdict.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_tf_scatter_redshift.json,summary,2,"Valid summary, supporting evidence.",ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_unified.json,summary,4,Summary unreadable or missing required keys test_name/description.,analysis/results/tests_results_osf.html;docs/osf_tests_results.html
 analysis/results/summary_validate_mhongoose_sparc.json,summary,4,Summary unreadable or missing required keys test_name/description.,ARTIFACTS_INDEX.md;analysis/results/tests_results_osf.html;docs/osf_tests_results.html

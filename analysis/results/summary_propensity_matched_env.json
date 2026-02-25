@@ -1,5 +1,6 @@
 {
   "test_name": "propensity_matched_env",
+  "description": "Propensity-score matching test: matches dense and field galaxies on covariates (distance, inclination, quality, morphology, luminosity) to check whether environmental scatter uniformity survives after removing covariate imbalances.",
   "n_galaxies": 131,
   "n_field": 83,
   "n_dense": 48,

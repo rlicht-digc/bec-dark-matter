@@ -41,9 +41,10 @@ Notes:
 - `tool` must be one of: `codex`, `claude`, `human`.
 
 ## Minimal Logging Workflow
-1. Run:
+1. Commit code or docs changes first (so HEAD points to the change).
+2. Create the run log:
    - `python3 tools/osf_packaging/log_run.py --tool codex --purpose "<purpose>" --inputs "<paths>" --outputs "<paths>"`
-2. Commit code or docs changes.
+   - The tool captures `git HEAD` automatically. To record a specific commit (e.g. retroactive logging), pass `--git-commit <sha>`.
 3. Commit the log file (or use `tools/osf_packaging/commit_log.sh`).
 
 ## Optional Local Hook Setup

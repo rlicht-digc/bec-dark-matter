@@ -1,5 +1,6 @@
 {
   "test_name": "kurtosis_disambiguation",
+  "description": "Disambiguates the kurtosis spike at g-dagger between physical (phase transition), geometric (RAR slope maximum), and cross-calibration (survey M/L offset) origins using single-survey kurtosis, source separation, and predicted instrumental profiles.",
   "g_dagger_log": -9.920818753952375,
   "max_rar_slope_location": -8.5,
   "max_rar_curvature_location": -9.3809,

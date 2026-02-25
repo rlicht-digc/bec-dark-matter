@@ -1,5 +1,6 @@
 {
   "test_name": "probes_inversion_replication",
+  "description": "Independent replication test using the PROBES dataset (~1500 galaxies with resolved rotation curves) to check whether the scatter derivative inversion at g-dagger found in SPARC reproduces in a sample 10x larger from different telescopes and photometry.",
   "n_galaxies": 1506,
   "n_sparc_excluded": 112,
   "n_total_points": 45176,
