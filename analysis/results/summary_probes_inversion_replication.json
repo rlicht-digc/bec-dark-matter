@@ -1,0 +1,160 @@
+{
+  "test_name": "probes_inversion_replication",
+  "n_galaxies": 1506,
+  "n_sparc_excluded": 112,
+  "n_total_points": 45176,
+  "n_gas_matched": 390,
+  "n_yang_matched": 374,
+  "rms_scatter": 0.3242,
+  "mean_offset": 0.4369,
+  "inversion_point": -11.1241,
+  "dist_from_gdagger": -1.2033,
+  "sparc_inversion": -9.86,
+  "replication_status": "NOT_CONFIRMED",
+  "binning_robustness": {
+    "n_configs": 8,
+    "n_within_020": 0,
+    "mean_crossing": -11.2074,
+    "std_crossing": 0.0633,
+    "configs": [
+      {
+        "bin_width": 0.25,
+        "offset": 0.0,
+        "crossing": -11.25573243516277,
+        "dist_gdagger": -1.334913681210395
+      },
+      {
+        "bin_width": 0.25,
+        "offset": 0.1,
+        "crossing": -11.1576973318142,
+        "dist_gdagger": -1.236878577861825
+      },
+      {
+        "bin_width": 0.25,
+        "offset": 0.2,
+        "crossing": -11.20899522808447,
+        "dist_gdagger": -1.2881764741320954
+      },
+      {
+        "bin_width": 0.35,
+        "offset": 0.0,
+        "crossing": -11.124128612319584,
+        "dist_gdagger": -1.2033098583672093
+      },
+      {
+        "bin_width": 0.35,
+        "offset": 0.1,
+        "crossing": -11.249994693106462,
+        "dist_gdagger": -1.3291759391540872
+      },
+      {
+        "bin_width": 0.35,
+        "offset": 0.2,
+        "crossing": -11.2644492557003,
+        "dist_gdagger": -1.343630501747926
+      },
+      {
+        "bin_width": 0.5,
+        "offset": 0.0,
+        "crossing": -11.112152757752254,
+        "dist_gdagger": -1.191334003799879
+      },
+      {
+        "bin_width": 0.5,
+        "offset": 0.1,
+        "crossing": -11.286022829839576,
+        "dist_gdagger": -1.3652040758872008
+      }
+    ]
+  },
+  "environment": {
+    "n_env_galaxies": 374,
+    "n_field": 186,
+    "n_dense": 188,
+    "verdict": "NO_PATTERN",
+    "accel_bins": [
+      {
+        "regime": "very_low",
+        "lo": -13.0,
+        "hi": -11.0,
+        "sigma_field": 0.3528,
+        "sigma_dense": 0.2288,
+        "delta_sigma": -0.124,
+        "levene_p": 0.0,
+        "n_field": 1899,
+        "n_dense": 1542
+      },
+      {
+        "regime": "low",
+        "lo": -11.0,
+        "hi": -10.3,
+        "sigma_field": 0.3172,
+        "sigma_dense": 0.3085,
+        "delta_sigma": -0.0087,
+        "levene_p": 0.5496,
+        "n_field": 4239,
+        "n_dense": 3258
+      },
+      {
+        "regime": "transition",
+        "lo": -10.3,
+        "hi": -9.5,
+        "sigma_field": 0.415,
+        "sigma_dense": 0.3931,
+        "delta_sigma": -0.0219,
+        "levene_p": 0.408,
+        "n_field": 229,
+        "n_dense": 241
+      },
+      {
+        "regime": "high",
+        "lo": -9.5,
+        "hi": -8.0,
+        "sigma_field": null,
+        "sigma_dense": null,
+        "delta_sigma": null,
+        "levene_p": null,
+        "n_field": 0,
+        "n_dense": 0
+      }
+    ]
+  },
+  "corrected_analysis": {
+    "rms_scatter": 0.2292,
+    "inversion_point": -11.0864,
+    "dist_from_gdagger": -1.1656,
+    "env_verdict": "NO_PATTERN",
+    "env_bins": [
+      {
+        "regime": "very_low",
+        "sigma_field": 0.2407,
+        "sigma_dense": 0.1793,
+        "delta_sigma": -0.0613,
+        "levene_p": 0.0
+      },
+      {
+        "regime": "low",
+        "sigma_field": 0.2198,
+        "sigma_dense": 0.2277,
+        "delta_sigma": 0.0079,
+        "levene_p": 0.8728
+      },
+      {
+        "regime": "transition",
+        "sigma_field": 0.2806,
+        "sigma_dense": 0.3168,
+        "delta_sigma": 0.0361,
+        "levene_p": 0.1375
+      },
+      {
+        "regime": "high",
+        "sigma_field": null,
+        "sigma_dense": null,
+        "delta_sigma": null,
+        "levene_p": null
+      }
+    ]
+  },
+  "overall_verdict": "NOT_REPLICATED",
+  "verdict": "NOT_REPLICATED"
+}

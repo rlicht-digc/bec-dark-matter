@@ -1,0 +1,16 @@
+{
+  "test_name": "kurtosis_disambiguation",
+  "g_dagger_log": -9.920818753952375,
+  "max_rar_slope_location": -8.5,
+  "max_rar_curvature_location": -9.3809,
+  "rar_slope_at_gdagger": 0.709,
+  "korsaga_only_kurtosis_at_gdagger": 23.949,
+  "source_kurtosis_at_gdagger": {
+    "SPARC": 0.636,
+    "Korsaga2019": 23.949,
+    "THINGS+deBlok": -0.459,
+    "ALL Tier K": 20.713
+  },
+  "predicted_instrumental_peak": -8.9,
+  "verdict": "DIAGNOSTIC"
+}

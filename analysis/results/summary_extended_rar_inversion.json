@@ -1,0 +1,2489 @@
+{
+  "test_name": "extended_rar_inversion_replication",
+  "description": "Quality-tiered inversion analysis on extended RAR with Bouquin+2018 3.6\u03bcm profile matching + Korsaga+2019 Freeman disk + S\u00e9rsic bulge reconstruction. Key finding: inversion requires SPARC-quality mass decomposition (\u03c3 < 0.2 dex). Adding quality data improves signal; noise degrades it.",
+  "g_dagger_log": -9.920818753952375,
+  "sparc_only": {
+    "label": "SPARC-only (baseline)",
+    "n_galaxies": 126,
+    "n_points": 2740,
+    "bin_statistics": [
+      {
+        "center": -11.833333333333332,
+        "n": 26,
+        "sigma": 0.30009,
+        "skewness": -1.91113,
+        "kurtosis_excess": 3.16394
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 108,
+        "sigma": 0.24236,
+        "skewness": -2.22234,
+        "kurtosis_excess": 8.53822
+      },
+      {
+        "center": -11.3,
+        "n": 292,
+        "sigma": 0.18602,
+        "skewness": -1.15647,
+        "kurtosis_excess": 2.90837
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 356,
+        "sigma": 0.21301,
+        "skewness": -1.7744,
+        "kurtosis_excess": 5.69155
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 336,
+        "sigma": 0.15458,
+        "skewness": -0.38566,
+        "kurtosis_excess": 0.94567
+      },
+      {
+        "center": -10.5,
+        "n": 273,
+        "sigma": 0.13562,
+        "skewness": -0.4425,
+        "kurtosis_excess": 3.08377
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 261,
+        "sigma": 0.14456,
+        "skewness": -0.48852,
+        "kurtosis_excess": 0.90551
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 258,
+        "sigma": 0.12341,
+        "skewness": 0.42341,
+        "kurtosis_excess": 0.63591
+      },
+      {
+        "center": -9.7,
+        "n": 255,
+        "sigma": 0.1745,
+        "skewness": -1.44776,
+        "kurtosis_excess": 7.40575
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 203,
+        "sigma": 0.18615,
+        "skewness": -1.75355,
+        "kurtosis_excess": 4.89158
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 158,
+        "sigma": 0.09329,
+        "skewness": -0.33546,
+        "kurtosis_excess": 1.11548
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 112,
+        "sigma": 0.10971,
+        "skewness": 0.88953,
+        "kurtosis_excess": 3.54099
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 57,
+        "sigma": 0.20776,
+        "skewness": 1.20098,
+        "kurtosis_excess": 14.28971
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        -0.21649,
+        -0.21388,
+        -0.05503,
+        -0.05895,
+        -0.14511,
+        -0.01879,
+        -0.02289,
+        0.05614,
+        0.11764,
+        -0.15227,
+        -0.14332,
+        0.21463,
+        0.36769
+      ],
+      "dskew_dx": [
+        -1.16704,
+        1.41499,
+        0.83989,
+        1.44527,
+        2.49731,
+        -0.19286,
+        1.62358,
+        -1.79857,
+        -4.0818,
+        2.08556,
+        4.95577,
+        2.88082,
+        1.16794
+      ],
+      "dkurt_dx": [
+        20.15355,
+        -0.47919,
+        -5.33751,
+        -3.68006,
+        -4.88959,
+        -0.0753,
+        -4.58974,
+        12.18795,
+        7.97938,
+        -11.79426,
+        -2.53236,
+        24.70168,
+        40.3077
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -10.15608540925267,
+        -9.583774458724093,
+        -9.059893841775358
+      ],
+      "dskew_dx": [
+        -11.712803903912626,
+        -10.519117715390262,
+        -10.471686434000503,
+        -10.106818069747693,
+        -9.52350964451984
+      ],
+      "dkurt_dx": [
+        -11.572859977723516,
+        -10.160383470606423,
+        -9.592390310078255,
+        -9.141870673784599
+      ],
+      "skewness": [
+        -10.090480263470516,
+        -9.906325097844308,
+        -9.093640764414404
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "skew=0",
+        "log_gbar": -9.906,
+        "distance_from_gdagger": 0.014
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.09,
+        "distance_from_gdagger": 0.17
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.107,
+        "distance_from_gdagger": 0.186
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.156,
+        "distance_from_gdagger": 0.235
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.584,
+        "distance_from_gdagger": 0.337
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.524,
+        "distance_from_gdagger": 0.397
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.472,
+        "distance_from_gdagger": 0.551
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.519,
+        "distance_from_gdagger": 0.598
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.094,
+        "distance_from_gdagger": 0.827
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.06,
+        "distance_from_gdagger": 0.861
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.713,
+        "distance_from_gdagger": 1.792
+      }
+    ]
+  },
+  "tier_a_sparc_things": {
+    "label": "Tier A: SPARC + THINGS (gold-standard mass models)",
+    "n_galaxies": 132,
+    "n_points": 3273,
+    "bin_statistics": [
+      {
+        "center": -11.833333333333332,
+        "n": 26,
+        "sigma": 0.30009,
+        "skewness": -1.91113,
+        "kurtosis_excess": 3.16394
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 108,
+        "sigma": 0.24236,
+        "skewness": -2.22234,
+        "kurtosis_excess": 8.53822
+      },
+      {
+        "center": -11.3,
+        "n": 307,
+        "sigma": 0.19031,
+        "skewness": -1.05118,
+        "kurtosis_excess": 2.70593
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 501,
+        "sigma": 0.20082,
+        "skewness": -1.90077,
+        "kurtosis_excess": 6.60052
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 388,
+        "sigma": 0.14812,
+        "skewness": -0.52945,
+        "kurtosis_excess": 1.27048
+      },
+      {
+        "center": -10.5,
+        "n": 303,
+        "sigma": 0.13313,
+        "skewness": -0.51853,
+        "kurtosis_excess": 3.18329
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 324,
+        "sigma": 0.13532,
+        "skewness": -0.50055,
+        "kurtosis_excess": 1.18657
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 339,
+        "sigma": 0.11191,
+        "skewness": 0.28376,
+        "kurtosis_excess": 1.05538
+      },
+      {
+        "center": -9.7,
+        "n": 328,
+        "sigma": 0.18867,
+        "skewness": 0.21844,
+        "kurtosis_excess": 12.9618
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 253,
+        "sigma": 0.2035,
+        "skewness": -0.74667,
+        "kurtosis_excess": 4.94583
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 175,
+        "sigma": 0.10632,
+        "skewness": -0.10172,
+        "kurtosis_excess": 0.34623
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 116,
+        "sigma": 0.11451,
+        "skewness": 0.78656,
+        "kurtosis_excess": 2.52023
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 60,
+        "sigma": 0.20699,
+        "skewness": 1.06042,
+        "kurtosis_excess": 13.50923
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        -0.21649,
+        -0.20584,
+        -0.07789,
+        -0.07911,
+        -0.12692,
+        -0.024,
+        -0.03979,
+        0.10003,
+        0.17173,
+        -0.15441,
+        -0.16686,
+        0.18876,
+        0.3468
+      ],
+      "dskew_dx": [
+        -1.16704,
+        1.61241,
+        0.60294,
+        0.97824,
+        2.5917,
+        0.05419,
+        1.50429,
+        1.34811,
+        -1.93206,
+        -0.6003,
+        2.87481,
+        2.17901,
+        1.02698
+      ],
+      "dkurt_dx": [
+        20.15355,
+        -0.85877,
+        -3.63319,
+        -2.69147,
+        -6.40731,
+        -0.15733,
+        -3.98983,
+        22.07856,
+        7.29459,
+        -23.65419,
+        -4.548,
+        24.68062,
+        41.20875
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -10.157449376424836,
+        -9.5595837645165,
+        -9.041544518260748
+      ],
+      "dskew_dx": [
+        -11.721364886409376,
+        -9.857069962235103,
+        -9.387268554738434
+      ],
+      "dkurt_dx": [
+        -11.577565273466071,
+        -10.192519339755863,
+        -9.637146972235987,
+        -9.125173096579125
+      ],
+      "skewness": [
+        -10.063145524941245,
+        -9.639643494869324,
+        -9.136129748877982
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.857,
+        "distance_from_gdagger": 0.064
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.063,
+        "distance_from_gdagger": 0.142
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.157,
+        "distance_from_gdagger": 0.237
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.64,
+        "distance_from_gdagger": 0.281
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.56,
+        "distance_from_gdagger": 0.361
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.387,
+        "distance_from_gdagger": 0.534
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.136,
+        "distance_from_gdagger": 0.785
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.042,
+        "distance_from_gdagger": 0.879
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.721,
+        "distance_from_gdagger": 1.801
+      }
+    ]
+  },
+  "tier_b_with_deblok": {
+    "label": "Tier B: + de Blok 2002 (direct decomposition)",
+    "n_galaxies": 149,
+    "n_points": 3634,
+    "bin_statistics": [
+      {
+        "center": -12.1,
+        "n": 18,
+        "sigma": 0.33398,
+        "skewness": -1.01524,
+        "kurtosis_excess": 0.973
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 46,
+        "sigma": 0.42978,
+        "skewness": -0.17132,
+        "kurtosis_excess": 0.25589
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 180,
+        "sigma": 0.27342,
+        "skewness": -0.81288,
+        "kurtosis_excess": 3.76882
+      },
+      {
+        "center": -11.3,
+        "n": 427,
+        "sigma": 0.23298,
+        "skewness": -1.292,
+        "kurtosis_excess": 7.52323
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 595,
+        "sigma": 0.20124,
+        "skewness": -1.63585,
+        "kurtosis_excess": 6.2077
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 408,
+        "sigma": 0.1699,
+        "skewness": 0.1205,
+        "kurtosis_excess": 1.32233
+      },
+      {
+        "center": -10.5,
+        "n": 309,
+        "sigma": 0.14011,
+        "skewness": -0.28077,
+        "kurtosis_excess": 2.74676
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 324,
+        "sigma": 0.13532,
+        "skewness": -0.50055,
+        "kurtosis_excess": 1.18657
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 339,
+        "sigma": 0.11191,
+        "skewness": 0.28376,
+        "kurtosis_excess": 1.05538
+      },
+      {
+        "center": -9.7,
+        "n": 328,
+        "sigma": 0.18867,
+        "skewness": 0.21844,
+        "kurtosis_excess": 12.9618
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 253,
+        "sigma": 0.2035,
+        "skewness": -0.74667,
+        "kurtosis_excess": 4.94583
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 175,
+        "sigma": 0.10632,
+        "skewness": -0.10172,
+        "kurtosis_excess": 0.34623
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 116,
+        "sigma": 0.11451,
+        "skewness": 0.78656,
+        "kurtosis_excess": 2.52023
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 60,
+        "sigma": 0.20699,
+        "skewness": 1.06042,
+        "kurtosis_excess": 13.50923
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        0.35925,
+        -0.11355,
+        -0.369,
+        -0.13534,
+        -0.11827,
+        -0.11462,
+        -0.06484,
+        -0.05288,
+        0.10003,
+        0.17173,
+        -0.15441,
+        -0.16686,
+        0.18876,
+        0.3468
+      ],
+      "dskew_dx": [
+        3.1647,
+        0.37942,
+        -2.10128,
+        -1.54307,
+        2.64844,
+        2.54078,
+        -1.16447,
+        1.05849,
+        1.34811,
+        -1.93206,
+        -0.6003,
+        2.87481,
+        2.17901,
+        1.02698
+      ],
+      "dkurt_dx": [
+        -2.68916,
+        5.24216,
+        13.62626,
+        4.5729,
+        -11.62669,
+        -6.48926,
+        -0.25455,
+        -3.17134,
+        22.07856,
+        7.29459,
+        -23.65419,
+        -4.548,
+        24.68062,
+        41.20875
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.897377326565143,
+        -10.141119967300225,
+        -9.5595837645165,
+        -9.041544518260748
+      ],
+      "dskew_dx": [
+        -11.79254645866086,
+        -11.201828847326663,
+        -10.583806902042545,
+        -10.360310284136597,
+        -9.857069962235103,
+        -9.387268554738434
+      ],
+      "dkurt_dx": [
+        -12.009585094545994,
+        -11.22472400917616,
+        -10.199840519130898,
+        -9.637146972235987,
+        -9.125173096579125
+      ],
+      "skewness": [
+        -10.784962184834077,
+        -10.686587584419467,
+        -10.063145524941245,
+        -9.639643494869324,
+        -9.136129748877982
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.857,
+        "distance_from_gdagger": 0.064
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.063,
+        "distance_from_gdagger": 0.142
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.141,
+        "distance_from_gdagger": 0.22
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.64,
+        "distance_from_gdagger": 0.281
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.56,
+        "distance_from_gdagger": 0.361
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.36,
+        "distance_from_gdagger": 0.439
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.387,
+        "distance_from_gdagger": 0.534
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.584,
+        "distance_from_gdagger": 0.663
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.687,
+        "distance_from_gdagger": 0.766
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.136,
+        "distance_from_gdagger": 0.785
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.785,
+        "distance_from_gdagger": 0.864
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.042,
+        "distance_from_gdagger": 0.879
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.202,
+        "distance_from_gdagger": 1.281
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.793,
+        "distance_from_gdagger": 1.872
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.897,
+        "distance_from_gdagger": 1.977
+      }
+    ]
+  },
+  "tier_bplus_with_bouquin": {
+    "label": "Tier B+: + Bouquin (quality RC sources, \u03c3 ~ 0.20-0.32)",
+    "n_galaxies": 152,
+    "n_points": 3701,
+    "bin_statistics": [
+      {
+        "center": -12.1,
+        "n": 18,
+        "sigma": 0.33398,
+        "skewness": -1.01524,
+        "kurtosis_excess": 0.973
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 46,
+        "sigma": 0.42978,
+        "skewness": -0.17132,
+        "kurtosis_excess": 0.25589
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 180,
+        "sigma": 0.27342,
+        "skewness": -0.81288,
+        "kurtosis_excess": 3.76882
+      },
+      {
+        "center": -11.3,
+        "n": 427,
+        "sigma": 0.23298,
+        "skewness": -1.292,
+        "kurtosis_excess": 7.52323
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 595,
+        "sigma": 0.20124,
+        "skewness": -1.63585,
+        "kurtosis_excess": 6.2077
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 422,
+        "sigma": 0.16727,
+        "skewness": 0.14502,
+        "kurtosis_excess": 1.45352
+      },
+      {
+        "center": -10.5,
+        "n": 318,
+        "sigma": 0.13921,
+        "skewness": -0.23345,
+        "kurtosis_excess": 2.72511
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 334,
+        "sigma": 0.13478,
+        "skewness": -0.45326,
+        "kurtosis_excess": 1.11539
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 351,
+        "sigma": 0.11525,
+        "skewness": 0.18073,
+        "kurtosis_excess": 1.02712
+      },
+      {
+        "center": -9.7,
+        "n": 337,
+        "sigma": 0.19082,
+        "skewness": 0.20004,
+        "kurtosis_excess": 12.08062
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 261,
+        "sigma": 0.2121,
+        "skewness": -0.78646,
+        "kurtosis_excess": 4.23704
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 179,
+        "sigma": 0.12459,
+        "skewness": -1.09961,
+        "kurtosis_excess": 4.3673
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 117,
+        "sigma": 0.12769,
+        "skewness": -0.31125,
+        "kurtosis_excess": 5.3634
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 60,
+        "sigma": 0.20699,
+        "skewness": 1.06042,
+        "kurtosis_excess": 13.50923
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        0.35925,
+        -0.11355,
+        -0.369,
+        -0.13534,
+        -0.12321,
+        -0.11631,
+        -0.06092,
+        -0.04492,
+        0.10507,
+        0.18159,
+        -0.12418,
+        -0.15827,
+        0.1545,
+        0.29738
+      ],
+      "dskew_dx": [
+        3.1647,
+        0.37942,
+        -2.10128,
+        -1.54307,
+        2.69441,
+        2.6295,
+        -1.12178,
+        0.77659,
+        1.22494,
+        -1.81348,
+        -2.43684,
+        0.89102,
+        4.05006,
+        5.14376
+      ],
+      "dkurt_dx": [
+        -2.68916,
+        5.24216,
+        13.62626,
+        4.5729,
+        -11.38071,
+        -6.52986,
+        -0.63399,
+        -3.18373,
+        20.55981,
+        6.0186,
+        -14.46248,
+        2.11192,
+        17.14112,
+        30.54686
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.897377326565143,
+        -10.153466666666667,
+        -9.541631918894613,
+        -9.031726715025078
+      ],
+      "dskew_dx": [
+        -11.79254645866086,
+        -11.202893965607517,
+        -10.579743553858355,
+        -10.342422087456953,
+        -9.85916008943797,
+        -9.238065349755287
+      ],
+      "dkurt_dx": [
+        -12.009585094545994,
+        -11.223563363612538,
+        -10.197576445801305,
+        -9.621636925796132,
+        -9.200645573897095
+      ],
+      "skewness": [
+        -10.788381895740097,
+        -10.664486837353907,
+        -10.042684690084492,
+        -9.645926001013684,
+        -8.839489818979782
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.859,
+        "distance_from_gdagger": 0.062
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.043,
+        "distance_from_gdagger": 0.122
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.153,
+        "distance_from_gdagger": 0.233
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.646,
+        "distance_from_gdagger": 0.275
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.542,
+        "distance_from_gdagger": 0.379
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.342,
+        "distance_from_gdagger": 0.422
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.58,
+        "distance_from_gdagger": 0.659
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.238,
+        "distance_from_gdagger": 0.683
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.664,
+        "distance_from_gdagger": 0.744
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.788,
+        "distance_from_gdagger": 0.868
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.032,
+        "distance_from_gdagger": 0.889
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -8.839,
+        "distance_from_gdagger": 1.081
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.203,
+        "distance_from_gdagger": 1.282
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.793,
+        "distance_from_gdagger": 1.872
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.897,
+        "distance_from_gdagger": 1.977
+      }
+    ]
+  },
+  "tier_k_with_korsaga": {
+    "label": "Tier K: + Korsaga2019 (Freeman+S\u00e9rsic from published params)",
+    "n_galaxies": 250,
+    "n_points": 9406,
+    "bin_statistics": [
+      {
+        "center": -12.366666666666667,
+        "n": 27,
+        "sigma": 0.66851,
+        "skewness": -1.95756,
+        "kurtosis_excess": 3.75451
+      },
+      {
+        "center": -12.1,
+        "n": 65,
+        "sigma": 0.3086,
+        "skewness": -1.04369,
+        "kurtosis_excess": 2.22921
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 109,
+        "sigma": 0.45077,
+        "skewness": -1.40099,
+        "kurtosis_excess": 2.10902
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 248,
+        "sigma": 0.34608,
+        "skewness": -0.7957,
+        "kurtosis_excess": 2.89045
+      },
+      {
+        "center": -11.3,
+        "n": 542,
+        "sigma": 0.28848,
+        "skewness": -0.10068,
+        "kurtosis_excess": 3.74412
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 892,
+        "sigma": 0.29833,
+        "skewness": -0.10651,
+        "kurtosis_excess": 1.11866
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 998,
+        "sigma": 0.26195,
+        "skewness": -0.16344,
+        "kurtosis_excess": 1.20423
+      },
+      {
+        "center": -10.5,
+        "n": 1270,
+        "sigma": 0.24507,
+        "skewness": -0.21567,
+        "kurtosis_excess": 2.65604
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 1542,
+        "sigma": 0.29645,
+        "skewness": -0.67803,
+        "kurtosis_excess": 3.17984
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 1255,
+        "sigma": 0.32086,
+        "skewness": -2.53024,
+        "kurtosis_excess": 20.7125
+      },
+      {
+        "center": -9.7,
+        "n": 1014,
+        "sigma": 0.31664,
+        "skewness": -0.80094,
+        "kurtosis_excess": 5.44169
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 752,
+        "sigma": 0.28803,
+        "skewness": -0.04179,
+        "kurtosis_excess": 1.16392
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 344,
+        "sigma": 0.34703,
+        "skewness": -4.94105,
+        "kurtosis_excess": 50.15486
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 186,
+        "sigma": 0.24467,
+        "skewness": -1.50174,
+        "kurtosis_excess": 5.76273
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 82,
+        "sigma": 0.24229,
+        "skewness": -0.25019,
+        "kurtosis_excess": 7.05991
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.367,
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        -1.34966,
+        -0.40826,
+        0.07028,
+        -0.30429,
+        -0.08953,
+        -0.04974,
+        -0.09986,
+        0.06469,
+        0.14211,
+        0.03786,
+        -0.06156,
+        0.05698,
+        -0.0813,
+        -0.19639,
+        -0.00893
+      ],
+      "dskew_dx": [
+        3.42701,
+        1.04357,
+        0.46498,
+        2.43808,
+        1.29223,
+        -0.11767,
+        -0.20468,
+        -0.96486,
+        -4.33982,
+        -0.23046,
+        4.66584,
+        -7.76271,
+        -2.73741,
+        8.79536,
+        4.69331
+      ],
+      "dkurt_dx": [
+        -5.71987,
+        -3.08529,
+        1.23982,
+        3.06581,
+        -3.32211,
+        -4.76229,
+        2.88259,
+        3.70427,
+        33.85586,
+        4.24097,
+        -36.65359,
+        83.83719,
+        8.62277,
+        -80.80303,
+        4.86443
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.872494318627066,
+        -11.783302464500842,
+        -10.604831358249772,
+        -9.865120080472778,
+        -9.56152061583887,
+        -9.323448587570622
+      ],
+      "dskew_dx": [
+        -11.055590132322628,
+        -9.954115352408962,
+        -9.599889769924891,
+        -9.103370938136603
+      ],
+      "dkurt_dx": [
+        -11.909775165132748,
+        -11.438682884781526,
+        -10.867216299141337,
+        -9.939012007863516,
+        -9.618879354099963,
+        -9.1409536733247,
+        -8.648475372758602
+      ],
+      "skewness": []
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.954,
+        "distance_from_gdagger": 0.033
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.865,
+        "distance_from_gdagger": 0.056
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.6,
+        "distance_from_gdagger": 0.321
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.562,
+        "distance_from_gdagger": 0.359
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.323,
+        "distance_from_gdagger": 0.597
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.605,
+        "distance_from_gdagger": 0.684
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.103,
+        "distance_from_gdagger": 0.817
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.056,
+        "distance_from_gdagger": 1.135
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.783,
+        "distance_from_gdagger": 1.862
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.872,
+        "distance_from_gdagger": 1.952
+      }
+    ]
+  },
+  "tier_c_all_sources": {
+    "label": "Tier C: ALL sources (incl. noisy Bouquin+S4G, \u03c3 ~ 0.50+)",
+    "n_galaxies": 374,
+    "n_points": 14053,
+    "bin_statistics": [
+      {
+        "center": -12.366666666666667,
+        "n": 53,
+        "sigma": 0.67497,
+        "skewness": -1.84009,
+        "kurtosis_excess": 3.61302
+      },
+      {
+        "center": -12.1,
+        "n": 78,
+        "sigma": 0.44127,
+        "skewness": -1.37483,
+        "kurtosis_excess": 5.82212
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 119,
+        "sigma": 0.47439,
+        "skewness": -1.11162,
+        "kurtosis_excess": 1.62971
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 268,
+        "sigma": 0.43904,
+        "skewness": 0.65152,
+        "kurtosis_excess": 3.83133
+      },
+      {
+        "center": -11.3,
+        "n": 571,
+        "sigma": 0.34419,
+        "skewness": 0.57571,
+        "kurtosis_excess": 6.01252
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 944,
+        "sigma": 0.35771,
+        "skewness": 0.59235,
+        "kurtosis_excess": 6.68285
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 1231,
+        "sigma": 0.41994,
+        "skewness": 0.15966,
+        "kurtosis_excess": 8.38824
+      },
+      {
+        "center": -10.5,
+        "n": 2141,
+        "sigma": 0.37602,
+        "skewness": -0.02483,
+        "kurtosis_excess": 4.86824
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 2761,
+        "sigma": 0.41072,
+        "skewness": -2.54747,
+        "kurtosis_excess": 20.68516
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 2334,
+        "sigma": 0.43015,
+        "skewness": -1.73372,
+        "kurtosis_excess": 7.91637
+      },
+      {
+        "center": -9.7,
+        "n": 1789,
+        "sigma": 0.42084,
+        "skewness": -2.05471,
+        "kurtosis_excess": 10.3701
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 945,
+        "sigma": 0.30611,
+        "skewness": -0.0094,
+        "kurtosis_excess": 0.77665
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 406,
+        "sigma": 0.36191,
+        "skewness": -3.69493,
+        "kurtosis_excess": 35.29571
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 188,
+        "sigma": 0.24342,
+        "skewness": -1.51457,
+        "kurtosis_excess": 5.86085
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 82,
+        "sigma": 0.24229,
+        "skewness": -0.25019,
+        "kurtosis_excess": 7.05991
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.367,
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        -0.87637,
+        -0.37609,
+        -0.00418,
+        -0.24413,
+        -0.15249,
+        0.14203,
+        0.03433,
+        -0.01729,
+        0.10149,
+        0.01897,
+        -0.23258,
+        -0.11049,
+        -0.11754,
+        -0.22429,
+        -0.00424
+      ],
+      "dskew_dx": [
+        1.74472,
+        1.36588,
+        3.79941,
+        3.16374,
+        -0.11094,
+        -0.78009,
+        -1.15721,
+        -5.07587,
+        -3.20417,
+        0.92392,
+        3.2331,
+        -3.07541,
+        -2.82219,
+        6.45889,
+        4.74143
+      ],
+      "dkurt_dx": [
+        8.28412,
+        -3.71871,
+        -3.73273,
+        8.21777,
+        5.3466,
+        4.45447,
+        -3.40239,
+        23.05673,
+        5.71524,
+        -19.34074,
+        -13.38698,
+        46.73552,
+        9.53287,
+        -52.94212,
+        4.49648
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.161930226636109,
+        -10.589308633006418,
+        -10.461189160747171,
+        -9.946551381435102
+      ],
+      "dskew_dx": [
+        -11.309034449852085,
+        -10.026350388723609,
+        -9.563333868324744,
+        -9.085578593011455
+      ],
+      "dkurt_dx": [
+        -12.182618423882282,
+        -11.750040165683444,
+        -10.882145877134578,
+        -10.732375842071459,
+        -10.17250693883721,
+        -9.64062355405875,
+        -9.125976790716287,
+        -8.654208842137518
+      ],
+      "skewness": [
+        -11.665206015026222,
+        -10.535889930800224
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.947,
+        "distance_from_gdagger": 0.026
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.026,
+        "distance_from_gdagger": 0.106
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.563,
+        "distance_from_gdagger": 0.357
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.461,
+        "distance_from_gdagger": 0.54
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.536,
+        "distance_from_gdagger": 0.615
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.589,
+        "distance_from_gdagger": 0.668
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.086,
+        "distance_from_gdagger": 0.835
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.162,
+        "distance_from_gdagger": 1.241
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.309,
+        "distance_from_gdagger": 1.388
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -11.665,
+        "distance_from_gdagger": 1.744
+      }
+    ]
+  },
+  "non_sparc_only": {
+    "label": "Non-SPARC only (VizieR + S4G/ALFALFA)",
+    "n_galaxies": 248,
+    "n_points": 11313,
+    "bin_statistics": [
+      {
+        "center": -12.366666666666667,
+        "n": 53,
+        "sigma": 0.67497,
+        "skewness": -1.84009,
+        "kurtosis_excess": 3.61302
+      },
+      {
+        "center": -12.1,
+        "n": 74,
+        "sigma": 0.43457,
+        "skewness": -1.61566,
+        "kurtosis_excess": 7.16384
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 93,
+        "sigma": 0.42373,
+        "skewness": -1.90193,
+        "kurtosis_excess": 5.25273
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 160,
+        "sigma": 0.47117,
+        "skewness": 0.39589,
+        "kurtosis_excess": 3.16954
+      },
+      {
+        "center": -11.3,
+        "n": 279,
+        "sigma": 0.38513,
+        "skewness": -0.05814,
+        "kurtosis_excess": 6.76147
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 588,
+        "sigma": 0.35216,
+        "skewness": 0.57875,
+        "kurtosis_excess": 9.54371
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 895,
+        "sigma": 0.44825,
+        "skewness": -0.31327,
+        "kurtosis_excess": 8.90597
+      },
+      {
+        "center": -10.5,
+        "n": 1868,
+        "sigma": 0.38774,
+        "skewness": -0.22289,
+        "kurtosis_excess": 4.93142
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 2500,
+        "sigma": 0.42487,
+        "skewness": -2.64752,
+        "kurtosis_excess": 20.26877
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 2076,
+        "sigma": 0.45239,
+        "skewness": -1.75344,
+        "kurtosis_excess": 7.21956
+      },
+      {
+        "center": -9.7,
+        "n": 1534,
+        "sigma": 0.44471,
+        "skewness": -2.14255,
+        "kurtosis_excess": 9.85598
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 742,
+        "sigma": 0.317,
+        "skewness": -0.15681,
+        "kurtosis_excess": 0.52172
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 248,
+        "sigma": 0.45049,
+        "skewness": -3.43917,
+        "kurtosis_excess": 24.50354
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 76,
+        "sigma": 0.35829,
+        "skewness": -1.33806,
+        "kurtosis_excess": 1.82308
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 25,
+        "sigma": 0.29599,
+        "skewness": -1.04125,
+        "kurtosis_excess": 0.53969
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.367,
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        -0.9015,
+        -0.47107,
+        0.06862,
+        -0.07238,
+        -0.22314,
+        0.11835,
+        0.06671,
+        -0.04384,
+        0.12122,
+        0.0372,
+        -0.25386,
+        0.01084,
+        0.07742,
+        -0.28969,
+        -0.23363
+      ],
+      "dskew_dx": [
+        0.84161,
+        -0.11595,
+        3.77166,
+        3.45711,
+        0.34286,
+        -0.47837,
+        -1.50308,
+        -4.37672,
+        -2.86978,
+        0.94682,
+        2.99368,
+        -2.43116,
+        -2.21484,
+        4.4961,
+        1.11304
+      ],
+      "dkurt_dx": [
+        13.31557,
+        3.07446,
+        -7.48931,
+        2.82889,
+        11.95157,
+        4.02094,
+        -8.64804,
+        21.30525,
+        4.29026,
+        -19.52398,
+        -12.55845,
+        27.46418,
+        2.44005,
+        -44.93222,
+        -4.81271
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.867241059848062,
+        -11.70354609929078,
+        -11.125750837314007,
+        -10.605744007236543,
+        -10.429175659812943,
+        -9.932583907749791,
+        -9.444251611532195,
+        -9.110429541856071
+      ],
+      "dskew_dx": [
+        -12.132290320475164,
+        -12.092046519628884,
+        -11.18866716896124,
+        -10.032821097311743,
+        -9.552840922837639,
+        -9.078657435476195
+      ],
+      "dkurt_dx": [
+        -12.022389914110908,
+        -11.639777286736058,
+        -10.94869748307505,
+        -10.68967530073383,
+        -10.185291916943616,
+        -9.61632432905138,
+        -9.152931204609027
+      ],
+      "skewness": [
+        -11.612610503288623,
+        -11.334147523291414,
+        -11.275656706809654,
+        -10.860317780617773
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.933,
+        "distance_from_gdagger": 0.012
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.033,
+        "distance_from_gdagger": 0.112
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.553,
+        "distance_from_gdagger": 0.368
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.444,
+        "distance_from_gdagger": 0.477
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.429,
+        "distance_from_gdagger": 0.508
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.606,
+        "distance_from_gdagger": 0.685
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.11,
+        "distance_from_gdagger": 0.81
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.079,
+        "distance_from_gdagger": 0.842
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.86,
+        "distance_from_gdagger": 0.939
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.126,
+        "distance_from_gdagger": 1.205
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.189,
+        "distance_from_gdagger": 1.268
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -11.276,
+        "distance_from_gdagger": 1.355
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -11.334,
+        "distance_from_gdagger": 1.413
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -11.613,
+        "distance_from_gdagger": 1.692
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.704,
+        "distance_from_gdagger": 1.783
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.867,
+        "distance_from_gdagger": 1.946
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -12.092,
+        "distance_from_gdagger": 2.171
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -12.132,
+        "distance_from_gdagger": 2.211
+      }
+    ]
+  },
+  "tier_mh_bplus_sorgho": {
+    "label": "Tier MH: Tier B+ + MHONGOOSE Sorgho (NGC3621 + NGC7424)",
+    "n_galaxies": 153,
+    "n_points": 3751,
+    "bin_statistics": [
+      {
+        "center": -12.1,
+        "n": 20,
+        "sigma": 0.32391,
+        "skewness": -0.83246,
+        "kurtosis_excess": 0.81363
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 49,
+        "sigma": 0.4166,
+        "skewness": -0.19692,
+        "kurtosis_excess": 0.46735
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 189,
+        "sigma": 0.26767,
+        "skewness": -0.80769,
+        "kurtosis_excess": 3.9992
+      },
+      {
+        "center": -11.3,
+        "n": 432,
+        "sigma": 0.23217,
+        "skewness": -1.29456,
+        "kurtosis_excess": 7.56475
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 608,
+        "sigma": 0.19945,
+        "skewness": -1.64445,
+        "kurtosis_excess": 6.33934
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 429,
+        "sigma": 0.16597,
+        "skewness": 0.13974,
+        "kurtosis_excess": 1.51809
+      },
+      {
+        "center": -10.5,
+        "n": 325,
+        "sigma": 0.13783,
+        "skewness": -0.24322,
+        "kurtosis_excess": 2.83204
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 338,
+        "sigma": 0.13404,
+        "skewness": -0.46344,
+        "kurtosis_excess": 1.16309
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 351,
+        "sigma": 0.11525,
+        "skewness": 0.18073,
+        "kurtosis_excess": 1.02712
+      },
+      {
+        "center": -9.7,
+        "n": 337,
+        "sigma": 0.19082,
+        "skewness": 0.20004,
+        "kurtosis_excess": 12.08062
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 261,
+        "sigma": 0.2121,
+        "skewness": -0.78646,
+        "kurtosis_excess": 4.23704
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 179,
+        "sigma": 0.12459,
+        "skewness": -1.09961,
+        "kurtosis_excess": 4.3673
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 117,
+        "sigma": 0.12769,
+        "skewness": -0.31125,
+        "kurtosis_excess": 5.3634
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 60,
+        "sigma": 0.20699,
+        "skewness": 1.06042,
+        "kurtosis_excess": 13.50923
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        0.34759,
+        -0.10545,
+        -0.34581,
+        -0.12791,
+        -0.12412,
+        -0.11554,
+        -0.05987,
+        -0.04234,
+        0.10646,
+        0.18159,
+        -0.12418,
+        -0.15827,
+        0.1545,
+        0.29738
+      ],
+      "dskew_dx": [
+        2.38327,
+        0.04644,
+        -2.05808,
+        -1.56893,
+        2.68931,
+        2.62731,
+        -1.13096,
+        0.79491,
+        1.24402,
+        -1.81348,
+        -2.43684,
+        0.89102,
+        4.05006,
+        5.14376
+      ],
+      "dkurt_dx": [
+        -1.29855,
+        5.97294,
+        13.30763,
+        4.38776,
+        -11.33749,
+        -6.57619,
+        -0.66563,
+        -3.38423,
+        20.47037,
+        6.0186,
+        -14.46248,
+        2.11192,
+        17.14112,
+        30.54686
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.895403250282813,
+        -10.157459677419356,
+        -9.541631918894613,
+        -9.031726715025078
+      ],
+      "dskew_dx": [
+        -11.827448377449713,
+        -11.201748082393244,
+        -10.58024705524319,
+        -10.343400543261321,
+        -9.858166479626984,
+        -9.238065349755287
+      ],
+      "dkurt_dx": [
+        -12.052378422934076,
+        -11.225592915851895,
+        -10.195501626390095,
+        -9.621636925796132,
+        -9.200645573897095
+      ],
+      "skewness": [
+        -10.787552334672876,
+        -10.669361465079033,
+        -10.041483355842919,
+        -9.645926001013684,
+        -8.839489818979782
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.858,
+        "distance_from_gdagger": 0.063
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.041,
+        "distance_from_gdagger": 0.121
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.157,
+        "distance_from_gdagger": 0.237
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -9.646,
+        "distance_from_gdagger": 0.275
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.542,
+        "distance_from_gdagger": 0.379
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.343,
+        "distance_from_gdagger": 0.423
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.58,
+        "distance_from_gdagger": 0.659
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.238,
+        "distance_from_gdagger": 0.683
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.669,
+        "distance_from_gdagger": 0.749
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.788,
+        "distance_from_gdagger": 0.867
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.032,
+        "distance_from_gdagger": 0.889
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -8.839,
+        "distance_from_gdagger": 1.081
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.202,
+        "distance_from_gdagger": 1.281
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.827,
+        "distance_from_gdagger": 1.907
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.895,
+        "distance_from_gdagger": 1.975
+      }
+    ]
+  },
+  "tier_c_mh_all_mhongoose": {
+    "label": "Tier C+MH: ALL sources + all MHONGOOSE (incl. Nkomo dwarfs)",
+    "n_galaxies": 376,
+    "n_points": 14135,
+    "bin_statistics": [
+      {
+        "center": -12.366666666666667,
+        "n": 53,
+        "sigma": 0.67497,
+        "skewness": -1.84009,
+        "kurtosis_excess": 3.61302
+      },
+      {
+        "center": -12.1,
+        "n": 84,
+        "sigma": 0.44621,
+        "skewness": -1.10739,
+        "kurtosis_excess": 4.57858
+      },
+      {
+        "center": -11.833333333333332,
+        "n": 133,
+        "sigma": 0.45787,
+        "skewness": -0.96795,
+        "kurtosis_excess": 1.56046
+      },
+      {
+        "center": -11.566666666666666,
+        "n": 291,
+        "sigma": 0.43003,
+        "skewness": 0.73944,
+        "kurtosis_excess": 4.01338
+      },
+      {
+        "center": -11.3,
+        "n": 579,
+        "sigma": 0.34486,
+        "skewness": 0.56028,
+        "kurtosis_excess": 5.91387
+      },
+      {
+        "center": -11.033333333333333,
+        "n": 957,
+        "sigma": 0.35596,
+        "skewness": 0.60993,
+        "kurtosis_excess": 6.75816
+      },
+      {
+        "center": -10.766666666666666,
+        "n": 1238,
+        "sigma": 0.41903,
+        "skewness": 0.16726,
+        "kurtosis_excess": 8.42471
+      },
+      {
+        "center": -10.5,
+        "n": 2148,
+        "sigma": 0.37559,
+        "skewness": -0.02012,
+        "kurtosis_excess": 4.87865
+      },
+      {
+        "center": -10.233333333333334,
+        "n": 2765,
+        "sigma": 0.41046,
+        "skewness": -2.54709,
+        "kurtosis_excess": 20.70514
+      },
+      {
+        "center": -9.966666666666667,
+        "n": 2334,
+        "sigma": 0.43015,
+        "skewness": -1.73372,
+        "kurtosis_excess": 7.91637
+      },
+      {
+        "center": -9.7,
+        "n": 1789,
+        "sigma": 0.42084,
+        "skewness": -2.05471,
+        "kurtosis_excess": 10.3701
+      },
+      {
+        "center": -9.433333333333334,
+        "n": 945,
+        "sigma": 0.30611,
+        "skewness": -0.0094,
+        "kurtosis_excess": 0.77665
+      },
+      {
+        "center": -9.166666666666668,
+        "n": 406,
+        "sigma": 0.36191,
+        "skewness": -3.69493,
+        "kurtosis_excess": 35.29571
+      },
+      {
+        "center": -8.899999999999999,
+        "n": 188,
+        "sigma": 0.24342,
+        "skewness": -1.51457,
+        "kurtosis_excess": 5.86085
+      },
+      {
+        "center": -8.633333333333333,
+        "n": 82,
+        "sigma": 0.24229,
+        "skewness": -0.25019,
+        "kurtosis_excess": 7.05991
+      }
+    ],
+    "derivatives": {
+      "centers": [
+        -12.367,
+        -12.1,
+        -11.833,
+        -11.567,
+        -11.3,
+        -11.033,
+        -10.767,
+        -10.5,
+        -10.233,
+        -9.967,
+        -9.7,
+        -9.433,
+        -9.167,
+        -8.9,
+        -8.633
+      ],
+      "dsigma_dx": [
+        -0.85785,
+        -0.40706,
+        -0.03034,
+        -0.21189,
+        -0.13888,
+        0.13907,
+        0.03681,
+        -0.01607,
+        0.1023,
+        0.01946,
+        -0.23258,
+        -0.11049,
+        -0.11754,
+        -0.22429,
+        -0.00424
+      ],
+      "dskew_dx": [
+        2.74762,
+        1.63526,
+        3.46281,
+        2.86543,
+        -0.24283,
+        -0.73691,
+        -1.18134,
+        -5.08941,
+        -3.213,
+        0.92321,
+        3.2331,
+        -3.07541,
+        -2.82219,
+        6.45889,
+        4.74143
+      ],
+      "dkurt_dx": [
+        3.62085,
+        -3.84855,
+        -1.05975,
+        8.16264,
+        5.14646,
+        4.70782,
+        -3.52408,
+        23.02581,
+        5.69573,
+        -19.3782,
+        -13.38698,
+        46.73552,
+        9.53287,
+        -52.94212,
+        4.49648
+      ]
+    },
+    "zero_crossings": {
+      "dsigma_dx": [
+        -11.166756610901242,
+        -10.581040189125295,
+        -10.463799567030994,
+        -9.946074492883003
+      ],
+      "dskew_dx": [
+        -11.320833182525607,
+        -10.02618730299761,
+        -9.563333868324744,
+        -9.085578593011455
+      ],
+      "dkurt_dx": [
+        -12.237397916834016,
+        -11.802690529777044,
+        -10.880826737427919,
+        -10.731270848134479,
+        -10.172758054433043,
+        -9.64062355405875,
+        -9.125976790716287,
+        -8.654208842137518
+      ],
+      "skewness": [
+        -11.682155219369914,
+        -10.528633436510479
+      ]
+    },
+    "all_inversions_ranked": [
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -9.946,
+        "distance_from_gdagger": 0.025
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -10.026,
+        "distance_from_gdagger": 0.105
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.563,
+        "distance_from_gdagger": 0.357
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.464,
+        "distance_from_gdagger": 0.543
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -10.529,
+        "distance_from_gdagger": 0.608
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -10.581,
+        "distance_from_gdagger": 0.66
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -9.086,
+        "distance_from_gdagger": 0.835
+      },
+      {
+        "type": "d\u03c3/dx=0",
+        "log_gbar": -11.167,
+        "distance_from_gdagger": 1.246
+      },
+      {
+        "type": "d(skew)/dx=0",
+        "log_gbar": -11.321,
+        "distance_from_gdagger": 1.4
+      },
+      {
+        "type": "skew=0",
+        "log_gbar": -11.682,
+        "distance_from_gdagger": 1.761
+      }
+    ]
+  },
+  "bouquin_matching": {
+    "bouquin_matched": 20,
+    "alfalfa_matched": 16,
+    "stellar_only": 4,
+    "quality_filtered_galaxies": 3
+  },
+  "korsaga_matching": {
+    "total_reconstructed": 100,
+    "added_new": 0,
+    "replaced_vrot_only": 98,
+    "skipped_gold": 2,
+    "disk_only": 17,
+    "disk_plus_bulge": 83
+  },
+  "scatter_by_source": {
+    "GHASP_2008b": {
+      "n_pts": 34,
+      "n_gal": 1,
+      "sigma_res": 0.4187,
+      "mean_res": -0.2802
+    },
+    "GomezLopez2019": {
+      "n_pts": 2852,
+      "n_gal": 71,
+      "sigma_res": 0.6065,
+      "mean_res": -0.0906
+    },
+    "Korsaga2019": {
+      "n_pts": 5705,
+      "n_gal": 98,
+      "sigma_res": 0.3335,
+      "mean_res": 0.0986
+    },
+    "PHANGS_Lang2020": {
+      "n_pts": 1745,
+      "n_gal": 50,
+      "sigma_res": 0.4708,
+      "mean_res": 0.1726
+    },
+    "SPARC": {
+      "n_pts": 2740,
+      "n_gal": 126,
+      "sigma_res": 0.1724,
+      "mean_res": -0.1736
+    },
+    "THINGS": {
+      "n_pts": 533,
+      "n_gal": 6,
+      "sigma_res": 0.1304,
+      "mean_res": -0.0606
+    },
+    "Verheijen2001": {
+      "n_pts": 83,
+      "n_gal": 5,
+      "sigma_res": 0.4418,
+      "mean_res": -0.1758
+    },
+    "deBlok2002": {
+      "n_pts": 361,
+      "n_gal": 17,
+      "sigma_res": 0.3323,
+      "mean_res": 0.1003
+    }
+  },
+  "comparison": {
+    "sparc_inversion": -10.156,
+    "tier_a_inversion": -10.157,
+    "tier_b_inversion": -10.141,
+    "tier_bplus_inversion": -10.153,
+    "tier_k_inversion": -9.865,
+    "tier_c_inversion": -9.947,
+    "tier_b_replicated_within_025dex": true,
+    "tier_bplus_replicated_within_025dex": true,
+    "tier_k_replicated_within_025dex": true,
+    "shift_sparc_to_tier_b": 0.015,
+    "shift_sparc_to_tier_bplus": 0.003,
+    "shift_sparc_to_tier_k": 0.291,
+    "shift_sparc_to_tier_c": 0.21,
+    "tier_mh_inversion": -10.157,
+    "tier_c_mh_inversion": -9.946,
+    "tier_mh_replicated_within_025dex": true,
+    "shift_bplus_to_tier_mh": -0.004,
+    "shift_sparc_to_tier_mh": -0.001
+  },
+  "verdict": "REPLICATED"
+}

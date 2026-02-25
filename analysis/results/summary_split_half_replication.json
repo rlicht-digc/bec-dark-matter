@@ -1,0 +1,55 @@
+{
+  "test_name": "split_half_replication",
+  "n_galaxies": 131,
+  "n_total_points": 2777,
+  "baseline": {
+    "rar_crossing": -9.8598685760116,
+    "loess_crossing": -9.857970675047937,
+    "rar_dist_gdagger": 0.06095017794077506,
+    "loess_dist_gdagger": 0.06284807890443744
+  },
+  "random_halves_rar": {
+    "n_splits": 1000,
+    "n_valid": 1000,
+    "mean_crossing": -9.887932636290499,
+    "std_crossing": 0.11155059398441323,
+    "median_crossing": -9.867046262837563,
+    "pct_within_010": 71.15,
+    "pct_within_020": 95.65,
+    "pct_within_030": 97.75,
+    "both_within_020_pct": 91.4,
+    "mean_halfA_halfB_diff": 0.1277331639454248
+  },
+  "random_halves_loess": {
+    "n_valid": 1000,
+    "mean_crossing": -9.884240964245494,
+    "std_crossing": 0.1130687575379837,
+    "pct_within_010": 70.35,
+    "pct_within_020": 95.55,
+    "both_within_020_pct": 91.3,
+    "mean_halfA_halfB_diff": 0.12764185907099518
+  },
+  "stratified_halves": {
+    "n_valid": 1000,
+    "mean_crossing": -9.888277759698031,
+    "std_crossing": 0.10333439990746858,
+    "pct_within_020": 95.85000000000001,
+    "both_within_020_pct": 91.7
+  },
+  "size_balanced_halves": {
+    "n_valid": 1000,
+    "mean_crossing": -9.88437531676572,
+    "std_crossing": 0.09752620649258172,
+    "pct_within_020": 96.6,
+    "both_within_020_pct": 93.2
+  },
+  "random_thirds": {
+    "n_valid": 998,
+    "mean_crossing": -9.896961279729359,
+    "std_crossing": 0.14396504413992342,
+    "pct_within_020": 90.44756179024716,
+    "all_three_within_020_pct": 73.14629258517034
+  },
+  "overall_verdict": "STRONGLY_REPLICATED",
+  "verdict": "STRONGLY_REPLICATED"
+}

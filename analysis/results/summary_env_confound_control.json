@@ -1,0 +1,473 @@
+{
+  "test_name": "env_confound_control",
+  "n_galaxies": 131,
+  "n_field": 83,
+  "n_dense": 48,
+  "n_uma": 26,
+  "n_group": 22,
+  "covariate_profiling": {
+    "T": {
+      "field_mean": 6.349,
+      "field_std": 2.955,
+      "dense_mean": 6.75,
+      "dense_std": 2.854,
+      "mwu_p": 0.445,
+      "imbalanced": false
+    },
+    "D": {
+      "field_mean": 30.235,
+      "field_std": 28.808,
+      "dense_mean": 11.868,
+      "dense_std": 7.622,
+      "mwu_p": 0.0007,
+      "imbalanced": true
+    },
+    "Inc": {
+      "field_mean": 56.964,
+      "field_std": 14.381,
+      "dense_mean": 61.646,
+      "dense_std": 12.904,
+      "mwu_p": 0.0893,
+      "imbalanced": false
+    },
+    "eInc": {
+      "field_mean": 5.386,
+      "field_std": 2.891,
+      "dense_mean": 3.562,
+      "dense_std": 2.188,
+      "mwu_p": 0.0001,
+      "imbalanced": true
+    },
+    "logL36": {
+      "field_mean": 0.892,
+      "field_std": 1.173,
+      "dense_mean": 0.622,
+      "dense_std": 1.145,
+      "mwu_p": 0.2296,
+      "imbalanced": false
+    },
+    "logMHI": {
+      "field_mean": 0.348,
+      "field_std": 0.732,
+      "dense_mean": 0.073,
+      "dense_std": 0.618,
+      "mwu_p": 0.0426,
+      "imbalanced": true
+    },
+    "gas_frac": {
+      "field_mean": 1.361,
+      "field_std": 1.96,
+      "dense_mean": 1.552,
+      "dense_std": 2.508,
+      "mwu_p": 0.8354,
+      "imbalanced": false
+    },
+    "Vflat": {
+      "field_mean": 117.641,
+      "field_std": 93.022,
+      "dense_mean": 103.215,
+      "dense_std": 67.145,
+      "mwu_p": 0.565,
+      "imbalanced": false
+    },
+    "Q": {
+      "field_mean": 1.325,
+      "field_std": 0.468,
+      "dense_mean": 1.521,
+      "dense_std": 0.5,
+      "mwu_p": 0.0283,
+      "imbalanced": true
+    },
+    "n_pts": {
+      "field_mean": 22.735,
+      "field_std": 18.452,
+      "dense_mean": 18.542,
+      "dense_std": 15.003,
+      "mwu_p": 0.1123,
+      "imbalanced": false
+    },
+    "SBeff": {
+      "field_mean": 494.384,
+      "field_std": 703.539,
+      "dense_mean": 349.816,
+      "dense_std": 490.606,
+      "mwu_p": 0.922,
+      "imbalanced": false
+    },
+    "fD": {
+      "field_mean": 1.229,
+      "field_std": 0.627,
+      "dense_mean": 2.917,
+      "dense_std": 1.115,
+      "mwu_p": 0.0,
+      "imbalanced": true
+    }
+  },
+  "original_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1749,
+      "sigma_dense": 0.1733,
+      "delta_sigma": -0.0016,
+      "levene_p": 0.8366,
+      "n_field": 1129,
+      "n_dense": 628
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1735,
+      "sigma_dense": 0.1472,
+      "delta_sigma": -0.0263,
+      "levene_p": 0.0228,
+      "n_field": 454,
+      "n_dense": 225
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1447,
+      "sigma_dense": 0.0944,
+      "delta_sigma": -0.0503,
+      "levene_p": 0.2008,
+      "n_field": 304,
+      "n_dense": 37
+    }
+  ],
+  "uma_free_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1749,
+      "sigma_dense": 0.1926,
+      "delta_sigma": 0.0177,
+      "levene_p": 0.0127,
+      "n_field": 1129,
+      "n_dense": 392
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1735,
+      "sigma_dense": 0.1579,
+      "delta_sigma": -0.0156,
+      "levene_p": 0.0045,
+      "n_field": 454,
+      "n_dense": 92
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1447,
+      "sigma_dense": 0.0201,
+      "delta_sigma": -0.1246,
+      "levene_p": 0.161,
+      "n_field": 304,
+      "n_dense": 5
+    }
+  ],
+  "group_free_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1749,
+      "sigma_dense": 0.1285,
+      "delta_sigma": -0.0463,
+      "levene_p": 0.0007,
+      "n_field": 1129,
+      "n_dense": 236
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1735,
+      "sigma_dense": 0.1369,
+      "delta_sigma": -0.0365,
+      "levene_p": 0.1507,
+      "n_field": 454,
+      "n_dense": 133
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1447,
+      "sigma_dense": 0.0962,
+      "delta_sigma": -0.0486,
+      "levene_p": 0.1901,
+      "n_field": 304,
+      "n_dense": 32
+    }
+  ],
+  "no_fd4_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1749,
+      "sigma_dense": 0.1928,
+      "delta_sigma": 0.0179,
+      "levene_p": 0.0084,
+      "n_field": 1129,
+      "n_dense": 449
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1735,
+      "sigma_dense": 0.145,
+      "delta_sigma": -0.0284,
+      "levene_p": 0.0026,
+      "n_field": 454,
+      "n_dense": 147
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1447,
+      "sigma_dense": 0.0967,
+      "delta_sigma": -0.048,
+      "levene_p": 0.2429,
+      "n_field": 304,
+      "n_dense": 35
+    }
+  ],
+  "late_type_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1942,
+      "sigma_dense": 0.1798,
+      "delta_sigma": -0.0144,
+      "levene_p": 0.2357,
+      "n_field": 807,
+      "n_dense": 521
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.2011,
+      "sigma_dense": 0.1696,
+      "delta_sigma": -0.0315,
+      "levene_p": 0.0616,
+      "n_field": 104,
+      "n_dense": 111
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": null,
+      "sigma_dense": null,
+      "delta_sigma": null,
+      "levene_p": null,
+      "n_field": 15,
+      "n_dense": 1
+    }
+  ],
+  "early_type_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1027,
+      "sigma_dense": 0.1234,
+      "delta_sigma": 0.0207,
+      "levene_p": 0.0021,
+      "n_field": 322,
+      "n_dense": 107
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1611,
+      "sigma_dense": 0.1113,
+      "delta_sigma": -0.0497,
+      "levene_p": 0.0486,
+      "n_field": 350,
+      "n_dense": 114
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1457,
+      "sigma_dense": 0.0954,
+      "delta_sigma": -0.0503,
+      "levene_p": 0.2452,
+      "n_field": 289,
+      "n_dense": 36
+    }
+  ],
+  "matched_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1792,
+      "sigma_dense": 0.1733,
+      "delta_sigma": -0.0059,
+      "levene_p": 0.557,
+      "n_field": 719,
+      "n_dense": 628
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1854,
+      "sigma_dense": 0.1472,
+      "delta_sigma": -0.0381,
+      "levene_p": 0.0081,
+      "n_field": 223,
+      "n_dense": 225
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1366,
+      "sigma_dense": 0.0944,
+      "delta_sigma": -0.0422,
+      "levene_p": 0.0006,
+      "n_field": 111,
+      "n_dense": 37
+    }
+  ],
+  "gas_rich_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1885,
+      "sigma_dense": 0.1918,
+      "delta_sigma": 0.0033,
+      "levene_p": 0.5944,
+      "n_field": 571,
+      "n_dense": 412
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1808,
+      "sigma_dense": 0.1773,
+      "delta_sigma": -0.0034,
+      "levene_p": 0.0333,
+      "n_field": 31,
+      "n_dense": 37
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": null,
+      "sigma_dense": null,
+      "delta_sigma": null,
+      "levene_p": null,
+      "n_field": 9,
+      "n_dense": 0
+    }
+  ],
+  "gas_poor_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1567,
+      "sigma_dense": 0.1279,
+      "delta_sigma": -0.0288,
+      "levene_p": 0.1808,
+      "n_field": 558,
+      "n_dense": 216
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.1623,
+      "sigma_dense": 0.1405,
+      "delta_sigma": -0.0217,
+      "levene_p": 0.3622,
+      "n_field": 423,
+      "n_dense": 188
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1413,
+      "sigma_dense": 0.0944,
+      "delta_sigma": -0.0469,
+      "levene_p": 0.2657,
+      "n_field": 295,
+      "n_dense": 37
+    }
+  ],
+  "hi_inc_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.179,
+      "sigma_dense": 0.1792,
+      "delta_sigma": 0.0001,
+      "levene_p": 0.7715,
+      "n_field": 623,
+      "n_dense": 381
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.2069,
+      "sigma_dense": 0.1232,
+      "delta_sigma": -0.0837,
+      "levene_p": 0.0,
+      "n_field": 268,
+      "n_dense": 155
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1648,
+      "sigma_dense": 0.0986,
+      "delta_sigma": -0.0662,
+      "levene_p": 0.1337,
+      "n_field": 95,
+      "n_dense": 30
+    }
+  ],
+  "lo_inc_scatter": [
+    {
+      "regime": "low_accel",
+      "sigma_field": 0.1693,
+      "sigma_dense": 0.1485,
+      "delta_sigma": -0.0207,
+      "levene_p": 0.4644,
+      "n_field": 506,
+      "n_dense": 247
+    },
+    {
+      "regime": "transition",
+      "sigma_field": 0.107,
+      "sigma_dense": 0.1786,
+      "delta_sigma": 0.0716,
+      "levene_p": 0.1501,
+      "n_field": 186,
+      "n_dense": 70
+    },
+    {
+      "regime": "high_accel",
+      "sigma_field": 0.1292,
+      "sigma_dense": 0.0269,
+      "delta_sigma": -0.1022,
+      "levene_p": 0.1321,
+      "n_field": 209,
+      "n_dense": 7
+    }
+  ],
+  "permutation": {
+    "n_perm": 10000,
+    "obs_delta": 0.0016,
+    "perm_mean": 0.0203,
+    "p_value": 0.9515,
+    "verdict": "NOT_SIGNIFICANT",
+    "p_uniform": 0.0485,
+    "uniform_verdict": "UNUSUALLY_UNIFORM"
+  },
+  "inversion_by_subsample": {
+    "All galaxies": {
+      "n_gals": 131,
+      "crossing": -9.9712,
+      "dist_gdagger": -0.0504
+    },
+    "Field only": {
+      "n_gals": 83,
+      "crossing": -9.9622,
+      "dist_gdagger": -0.0413
+    },
+    "Dense only": {
+      "n_gals": 48,
+      "crossing": -9.9996,
+      "dist_gdagger": -0.0788
+    },
+    "UMa-free dense": {
+      "n_gals": 22,
+      "crossing": -10.3302,
+      "dist_gdagger": -0.4094
+    },
+    "Late-type (T\u22655)": {
+      "n_gals": 92,
+      "crossing": -10.385,
+      "dist_gdagger": -0.4642
+    },
+    "Early-type (T<5)": {
+      "n_gals": 39,
+      "crossing": -9.921,
+      "dist_gdagger": -0.0002
+    },
+    "Luminosity-matched": {
+      "n_gals": 96,
+      "crossing": -9.8002,
+      "dist_gdagger": 0.1206
+    }
+  },
+  "overall_verdict": "INVERSION_FRAGILE",
+  "verdict": "INVERSION_FRAGILE"
+}

@@ -1,0 +1,133 @@
+{
+  "test_name": "propensity_matched_env",
+  "n_galaxies": 131,
+  "n_field": 83,
+  "n_dense": 48,
+  "n_uma": 26,
+  "n_group": 22,
+  "propensity_matched": {
+    "n_pairs": 29,
+    "scatter": [
+      {
+        "regime": "low_accel",
+        "sigma_field": 0.18395402850273268,
+        "sigma_dense": 0.19182187846901444,
+        "delta_sigma": 0.00786784996628176,
+        "levene_p": 0.12245229490056245,
+        "n_field": 446,
+        "n_dense": 454
+      },
+      {
+        "regime": "transition",
+        "sigma_field": 0.1479324207517499,
+        "sigma_dense": 0.14072037707400162,
+        "delta_sigma": -0.0072120436777482755,
+        "levene_p": 0.16656856353964036,
+        "n_field": 172,
+        "n_dense": 162
+      },
+      {
+        "regime": "high_accel",
+        "sigma_field": 0.15531951127230884,
+        "sigma_dense": 0.09539916967632624,
+        "delta_sigma": -0.0599203415959826,
+        "levene_p": 0.38196129218805397,
+        "n_field": 187,
+        "n_dense": 36
+      }
+    ]
+  },
+  "uma_free_matched": {
+    "n_pairs": 22,
+    "scatter": [
+      {
+        "regime": "low_accel",
+        "sigma_field": 0.1858487344459664,
+        "sigma_dense": 0.19255799944006147,
+        "delta_sigma": 0.006709264994095077,
+        "levene_p": 0.1883746735383065,
+        "n_field": 352,
+        "n_dense": 392
+      },
+      {
+        "regime": "transition",
+        "sigma_field": 0.13971111896207677,
+        "sigma_dense": 0.15791607664083804,
+        "delta_sigma": 0.018204957678761263,
+        "levene_p": 0.1652705532328481,
+        "n_field": 157,
+        "n_dense": 92
+      },
+      {
+        "regime": "high_accel",
+        "sigma_field": null,
+        "sigma_dense": null,
+        "delta_sigma": null,
+        "levene_p": null,
+        "n_field": 187,
+        "n_dense": 5
+      }
+    ]
+  },
+  "mahalanobis_matched": {
+    "n_pairs": 48,
+    "scatter": [
+      {
+        "regime": "low_accel",
+        "sigma_field": 0.1810461776447053,
+        "sigma_dense": 0.17331618155526332,
+        "delta_sigma": -0.007729996089441971,
+        "levene_p": 0.8533767261979995,
+        "n_field": 666,
+        "n_dense": 628
+      },
+      {
+        "regime": "transition",
+        "sigma_field": 0.17339573230911173,
+        "sigma_dense": 0.1472131842097503,
+        "delta_sigma": -0.026182548099361436,
+        "levene_p": 0.0630632749685137,
+        "n_field": 263,
+        "n_dense": 225
+      },
+      {
+        "regime": "high_accel",
+        "sigma_field": 0.16467452278492103,
+        "sigma_dense": 0.09439471549739008,
+        "delta_sigma": -0.07027980728753096,
+        "levene_p": 0.27710796367171264,
+        "n_field": 183,
+        "n_dense": 37
+      }
+    ]
+  },
+  "inversion_results": {
+    "propensity_all": {
+      "n_gals": 58,
+      "crossing": -10.878248130664076,
+      "dist_gdagger": -0.9574293767117013
+    },
+    "uma_free_matched": {
+      "n_gals": 44,
+      "crossing": -10.672394358085489,
+      "dist_gdagger": -0.7515756041331141
+    },
+    "mahalanobis": {
+      "n_gals": 96,
+      "crossing": -9.84072461658586,
+      "dist_gdagger": 0.08009413736651538
+    },
+    "matched_field": {
+      "n_gals": 29,
+      "crossing": -11.390758569560518,
+      "dist_gdagger": -1.469939815608143
+    },
+    "matched_dense": {
+      "n_gals": 29,
+      "crossing": -10.666302778638793,
+      "dist_gdagger": -0.7454840246864176
+    }
+  },
+  "overall_verdict": "INCONCLUSIVE",
+  "verdict": "INCONCLUSIVE"
+}

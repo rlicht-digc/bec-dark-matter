@@ -1,0 +1,456 @@
+{
+  "test_name": "nonparametric_inversion_robustness",
+  "n_galaxies": 131,
+  "n_points": 2777,
+  "n_field_gals": 83,
+  "n_dense_gals": 48,
+  "part1_inversion_by_method": {
+    "RAR (parametric)": {
+      "crossing": -9.9712,
+      "dist_gdagger": -0.0504,
+      "all_crossings": [
+        -10.5901,
+        -9.9712,
+        -9.3087
+      ]
+    },
+    "LOESS": {
+      "crossing": -9.9713,
+      "dist_gdagger": -0.0505,
+      "all_crossings": [
+        -10.5896,
+        -9.9713,
+        -9.3089
+      ]
+    },
+    "Cubic spline": {
+      "crossing": -9.9727,
+      "dist_gdagger": -0.0518,
+      "all_crossings": [
+        -10.5916,
+        -9.9727,
+        -9.3099
+      ]
+    },
+    "Isotonic": {
+      "crossing": -9.9663,
+      "dist_gdagger": -0.0455,
+      "all_crossings": [
+        -10.5722,
+        -9.9663,
+        -9.3073
+      ]
+    }
+  },
+  "part1_verdict": "ALL_MATCH",
+  "part1_binning_robustness": {
+    "RAR (parametric)": {
+      "n_configs": 9,
+      "n_within_020": 9,
+      "crossings": [
+        {
+          "bw": 0.25,
+          "off": 0.0,
+          "crossing": -9.8828,
+          "dist": 0.038
+        },
+        {
+          "bw": 0.25,
+          "off": 0.08,
+          "crossing": -9.895,
+          "dist": 0.0258
+        },
+        {
+          "bw": 0.25,
+          "off": 0.15,
+          "crossing": -9.8463,
+          "dist": 0.0746
+        },
+        {
+          "bw": 0.3,
+          "off": 0.0,
+          "crossing": -9.9712,
+          "dist": -0.0504
+        },
+        {
+          "bw": 0.3,
+          "off": 0.08,
+          "crossing": -9.9016,
+          "dist": 0.0193
+        },
+        {
+          "bw": 0.3,
+          "off": 0.15,
+          "crossing": -9.8573,
+          "dist": 0.0635
+        },
+        {
+          "bw": 0.4,
+          "off": 0.0,
+          "crossing": -10.0155,
+          "dist": -0.0946
+        },
+        {
+          "bw": 0.4,
+          "off": 0.08,
+          "crossing": -9.988,
+          "dist": -0.0671
+        },
+        {
+          "bw": 0.4,
+          "off": 0.15,
+          "crossing": -9.9807,
+          "dist": -0.0599
+        }
+      ]
+    },
+    "LOESS": {
+      "n_configs": 9,
+      "n_within_020": 9,
+      "crossings": [
+        {
+          "bw": 0.25,
+          "off": 0.0,
+          "crossing": -9.8831,
+          "dist": 0.0377
+        },
+        {
+          "bw": 0.25,
+          "off": 0.08,
+          "crossing": -9.8952,
+          "dist": 0.0256
+        },
+        {
+          "bw": 0.25,
+          "off": 0.15,
+          "crossing": -9.846,
+          "dist": 0.0748
+        },
+        {
+          "bw": 0.3,
+          "off": 0.0,
+          "crossing": -9.9713,
+          "dist": -0.0505
+        },
+        {
+          "bw": 0.3,
+          "off": 0.08,
+          "crossing": -9.9021,
+          "dist": 0.0187
+        },
+        {
+          "bw": 0.3,
+          "off": 0.15,
+          "crossing": -9.8572,
+          "dist": 0.0636
+        },
+        {
+          "bw": 0.4,
+          "off": 0.0,
+          "crossing": -10.0149,
+          "dist": -0.094
+        },
+        {
+          "bw": 0.4,
+          "off": 0.08,
+          "crossing": -9.9884,
+          "dist": -0.0676
+        },
+        {
+          "bw": 0.4,
+          "off": 0.15,
+          "crossing": -9.9813,
+          "dist": -0.0605
+        }
+      ]
+    },
+    "Cubic spline": {
+      "n_configs": 9,
+      "n_within_020": 9,
+      "crossings": [
+        {
+          "bw": 0.25,
+          "off": 0.0,
+          "crossing": -9.8856,
+          "dist": 0.0352
+        },
+        {
+          "bw": 0.25,
+          "off": 0.08,
+          "crossing": -9.8962,
+          "dist": 0.0246
+        },
+        {
+          "bw": 0.25,
+          "off": 0.15,
+          "crossing": -9.8456,
+          "dist": 0.0752
+        },
+        {
+          "bw": 0.3,
+          "off": 0.0,
+          "crossing": -9.9727,
+          "dist": -0.0518
+        },
+        {
+          "bw": 0.3,
+          "off": 0.08,
+          "crossing": -9.9038,
+          "dist": 0.017
+        },
+        {
+          "bw": 0.3,
+          "off": 0.15,
+          "crossing": -9.8575,
+          "dist": 0.0634
+        },
+        {
+          "bw": 0.4,
+          "off": 0.0,
+          "crossing": -10.0146,
+          "dist": -0.0938
+        },
+        {
+          "bw": 0.4,
+          "off": 0.08,
+          "crossing": -9.9884,
+          "dist": -0.0676
+        },
+        {
+          "bw": 0.4,
+          "off": 0.15,
+          "crossing": -9.9828,
+          "dist": -0.062
+        }
+      ]
+    },
+    "Isotonic": {
+      "n_configs": 9,
+      "n_within_020": 9,
+      "crossings": [
+        {
+          "bw": 0.25,
+          "off": 0.0,
+          "crossing": -9.8911,
+          "dist": 0.0298
+        },
+        {
+          "bw": 0.25,
+          "off": 0.08,
+          "crossing": -9.8927,
+          "dist": 0.0282
+        },
+        {
+          "bw": 0.25,
+          "off": 0.15,
+          "crossing": -9.844,
+          "dist": 0.0768
+        },
+        {
+          "bw": 0.3,
+          "off": 0.0,
+          "crossing": -9.9663,
+          "dist": -0.0455
+        },
+        {
+          "bw": 0.3,
+          "off": 0.08,
+          "crossing": -9.8979,
+          "dist": 0.0229
+        },
+        {
+          "bw": 0.3,
+          "off": 0.15,
+          "crossing": -9.8567,
+          "dist": 0.0641
+        },
+        {
+          "bw": 0.4,
+          "off": 0.0,
+          "crossing": -10.0093,
+          "dist": -0.0885
+        },
+        {
+          "bw": 0.4,
+          "off": 0.08,
+          "crossing": -9.9943,
+          "dist": -0.0735
+        },
+        {
+          "bw": 0.4,
+          "off": 0.15,
+          "crossing": -9.9831,
+          "dist": -0.0623
+        }
+      ]
+    }
+  },
+  "part2_env_scatter": {
+    "LOESS (shared mean)": {
+      "bins": [
+        {
+          "regime": "very_low",
+          "sigma_field": 0.1877,
+          "sigma_dense": 0.186,
+          "delta_sigma": -0.0017,
+          "levene_p": 0.7284,
+          "n_field": 608,
+          "n_dense": 368
+        },
+        {
+          "regime": "low",
+          "sigma_field": 0.1528,
+          "sigma_dense": 0.1506,
+          "delta_sigma": -0.0022,
+          "levene_p": 0.8024,
+          "n_field": 521,
+          "n_dense": 260
+        },
+        {
+          "regime": "transition",
+          "sigma_field": 0.1736,
+          "sigma_dense": 0.1472,
+          "delta_sigma": -0.0264,
+          "levene_p": 0.0194,
+          "n_field": 454,
+          "n_dense": 225
+        },
+        {
+          "regime": "high",
+          "sigma_field": 0.1449,
+          "sigma_dense": 0.0947,
+          "delta_sigma": -0.0501,
+          "levene_p": 0.208,
+          "n_field": 304,
+          "n_dense": 37
+        }
+      ],
+      "verdict": "OTHER"
+    },
+    "Spline (shared mean)": {
+      "bins": [
+        {
+          "regime": "very_low",
+          "sigma_field": 0.1881,
+          "sigma_dense": 0.1881,
+          "delta_sigma": 0.0,
+          "levene_p": 0.8813,
+          "n_field": 608,
+          "n_dense": 368
+        },
+        {
+          "regime": "low",
+          "sigma_field": 0.1528,
+          "sigma_dense": 0.1509,
+          "delta_sigma": -0.0019,
+          "levene_p": 0.8064,
+          "n_field": 521,
+          "n_dense": 260
+        },
+        {
+          "regime": "transition",
+          "sigma_field": 0.1751,
+          "sigma_dense": 0.1479,
+          "delta_sigma": -0.0272,
+          "levene_p": 0.0061,
+          "n_field": 454,
+          "n_dense": 225
+        },
+        {
+          "regime": "high",
+          "sigma_field": 0.147,
+          "sigma_dense": 0.1035,
+          "delta_sigma": -0.0436,
+          "levene_p": 0.334,
+          "n_field": 304,
+          "n_dense": 37
+        }
+      ],
+      "verdict": "OTHER"
+    },
+    "LOESS (env-specific)": {
+      "bins": [
+        {
+          "regime": "very_low",
+          "sigma_field": 0.1873,
+          "sigma_dense": 0.1859,
+          "delta_sigma": -0.0013,
+          "levene_p": 0.6966,
+          "n_field": 608,
+          "n_dense": 368
+        },
+        {
+          "regime": "low",
+          "sigma_field": 0.1528,
+          "sigma_dense": 0.1505,
+          "delta_sigma": -0.0023,
+          "levene_p": 0.8374,
+          "n_field": 521,
+          "n_dense": 260
+        },
+        {
+          "regime": "transition",
+          "sigma_field": 0.1736,
+          "sigma_dense": 0.1473,
+          "delta_sigma": -0.0263,
+          "levene_p": 0.0272,
+          "n_field": 454,
+          "n_dense": 225
+        },
+        {
+          "regime": "high",
+          "sigma_field": 0.1448,
+          "sigma_dense": 0.0932,
+          "delta_sigma": -0.0516,
+          "levene_p": 0.1827,
+          "n_field": 304,
+          "n_dense": 37
+        }
+      ],
+      "verdict": "OTHER"
+    },
+    "Spline (env-specific)": {
+      "bins": [
+        {
+          "regime": "very_low",
+          "sigma_field": 0.1887,
+          "sigma_dense": 0.1868,
+          "delta_sigma": -0.0019,
+          "levene_p": 0.6745,
+          "n_field": 608,
+          "n_dense": 368
+        },
+        {
+          "regime": "low",
+          "sigma_field": 0.1527,
+          "sigma_dense": 0.1506,
+          "delta_sigma": -0.0021,
+          "levene_p": 0.8859,
+          "n_field": 521,
+          "n_dense": 260
+        },
+        {
+          "regime": "transition",
+          "sigma_field": 0.175,
+          "sigma_dense": 0.1473,
+          "delta_sigma": -0.0277,
+          "levene_p": 0.0219,
+          "n_field": 454,
+          "n_dense": 225
+        },
+        {
+          "regime": "high",
+          "sigma_field": 0.1457,
+          "sigma_dense": 0.0969,
+          "delta_sigma": -0.0488,
+          "levene_p": 0.223,
+          "n_field": 304,
+          "n_dense": 37
+        }
+      ],
+      "verdict": "OTHER"
+    }
+  },
+  "part2_env_profile": [],
+  "verdict": "ALL_MATCH"
+}

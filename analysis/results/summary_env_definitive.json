@@ -16,9 +16,9 @@
     "ks_p": 0.536519
   },
   "test_C_error_corrected": {
-    "dense_intrinsic": 0.0593,
-    "field_intrinsic": 0.0741,
-    "levene_p": 0.274169
+    "dense_intrinsic": 0.0509,
+    "field_intrinsic": 0.0589,
+    "levene_p": 0.446994
   },
   "test_E_bootstrap": {
     "observed_delta": 0.0137,
@@ -39,9 +39,47 @@
     "field_sigma": 0.1633,
     "levene_p": 0.111083
   },
+  "test_E2_block_permutation": {
+    "description": "Galaxy-block permutation null (corrects pseudoreplication)",
+    "n_permutations": 10000,
+    "overall": {
+      "observed_delta": 0.0067,
+      "null_mean": 0.0007,
+      "null_std": 0.02,
+      "p_two_sided": 0.7388,
+      "p_field_gt_dense": 0.3843
+    },
+    "per_bin": {
+      "Deep DM (gbar < 10^-11.5)": {
+        "obs_delta": -0.0326,
+        "p_two_sided": 0.5431,
+        "p_field_gt_dense": 0.7677
+      },
+      "Transition (10^-11.5 < gbar < 10^-10.5)": {
+        "obs_delta": 0.0048,
+        "p_two_sided": 0.8652,
+        "p_field_gt_dense": 0.4536
+      },
+      "Baryon-dom (10^-10.5 < gbar < 10^-9.5)": {
+        "obs_delta": 0.0308,
+        "p_two_sided": 0.3235,
+        "p_field_gt_dense": 0.1786
+      },
+      "High gbar (gbar > 10^-9.5)": {
+        "obs_delta": 0.0503,
+        "p_two_sided": 0.2493,
+        "p_field_gt_dense": 0.1306
+      }
+    }
+  },
   "tests_passed": 4,
   "tests_failed": 0,
   "overall": "BEC-CONSISTENT",
   "distances_used": "SPARC",
-  "error_model": "Haubner+2025"
+  "error_model": "Haubner+2025",
+  "audit_fixes": [
+    "Galaxy-block permutation added (fixes pseudoreplication in point-level tests)",
+    "Distance-error quadrature subtraction removed (common-mode, not per-point broadening)"
+  ],
+  "verdict": "BEC-CONSISTENT"
 }

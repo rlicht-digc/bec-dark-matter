@@ -1,0 +1,53 @@
+{
+  "test_name": "kurtosis_mhongoose_augmentation",
+  "description": "Tests whether adding 82 MHONGOOSE RAR points to Tier K data affects the kurtosis spike at g\u2020. MHONGOOSE provides deep HI rotation curves from Nkomo+2025 and Sorgho+2019.",
+  "g_dagger_log": -9.920818753952375,
+  "baseline": {
+    "n_galaxies": 250,
+    "n_points": 9406,
+    "kurtosis_at_gdagger": 20.713,
+    "derivative_peak": -9.939
+  },
+  "mhongoose": {
+    "n_galaxies": 4,
+    "n_points": 82,
+    "galaxies": [
+      "ESO444-G084",
+      "KKS2000-23",
+      "NGC3621",
+      "NGC7424"
+    ],
+    "log_gbar_range": [
+      -12.202,
+      -10.252
+    ],
+    "overlap_with_tier_k": [
+      "ESO444-G084",
+      "NGC3621"
+    ]
+  },
+  "combined": {
+    "n_galaxies": 252,
+    "n_points": 9488,
+    "kurtosis_at_gdagger": 20.713,
+    "derivative_peak": -9.939
+  },
+  "comparison": {
+    "delta_kurtosis_at_gdagger": 0.0,
+    "pct_change": 0.0,
+    "derivative_peak_shift": -0.0001,
+    "spike_verdict": "UNCHANGED \u2014 spike persists at same strength (\u03ba\u2084 = 20.7 still strongly leptokurtic)"
+  },
+  "bootstrap": {
+    "n_iterations": 10000,
+    "baseline_ci": [
+      5.11,
+      29.04
+    ],
+    "combined_ci": [
+      5.45,
+      29.08
+    ]
+  },
+  "verdict": "UNCHANGED \u2014 spike persists at same strength (\u03ba\u2084 = 20.7 still strongly leptokurtic)"
+}

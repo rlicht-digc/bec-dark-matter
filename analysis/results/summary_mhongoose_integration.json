@@ -1,0 +1,51 @@
+{
+  "test_name": "mhongoose_integration",
+  "source": "Nkomo+2025 (A&A 699, A372)",
+  "survey": "MHONGOOSE (MeerKAT)",
+  "galaxies": {
+    "ESO444-G084": {
+      "distance_Mpc": 4.6,
+      "M_star": 4900000.0,
+      "M_HI": 110000000.0,
+      "ML_value": 0.2,
+      "ML_band": "3.4um",
+      "n_rar_points": 16,
+      "log_gbar_range": [
+        -11.994,
+        -11.335
+      ],
+      "log_gobs_range": [
+        -11.431,
+        -10.584
+      ],
+      "rar_scatter": 0.3149,
+      "mean_residual": -0.042
+    },
+    "KKS2000-23": {
+      "distance_Mpc": 13.9,
+      "M_star": 32000000.0,
+      "M_HI": 610000000.0,
+      "ML_value": 0.18,
+      "ML_band": "3.4um",
+      "n_rar_points": 16,
+      "log_gbar_range": [
+        -12.131,
+        -11.456
+      ],
+      "log_gobs_range": [
+        -11.205,
+        -10.9
+      ],
+      "rar_scatter": 0.1749,
+      "mean_residual": -0.1641
+    }
+  },
+  "combined": {
+    "n_galaxies": 2,
+    "n_rar_points": 32,
+    "scatter": 0.2619,
+    "mean_residual": -0.1031,
+    "frac_below_gdagger": 1.0
+  },
+  "verdict": "Data quality suitable for integration"
+}
