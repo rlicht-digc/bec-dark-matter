@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it and the referenced data sources."
+title: "RAR ↔ BEC Analysis and Reproducibility Package"
+type: software
+authors:
+  - family-names: Licht
+    given-names: Russell
+date-released: 2026-02-25
+license: MIT
+url: "TODO: insert OSF project URL"
+repository-code: "TODO: insert GitHub repository URL"
+keywords:
+  - radial acceleration relation
+  - dark matter
+  - BEC
+  - galaxy dynamics
+references:
+  - type: article
+    authors:
+      - family-names: Duey
+        given-names: L.
+      - family-names: Schombert
+        given-names: J. M.
+      - family-names: McGaugh
+        given-names: S. S.
+      - family-names: Lelli
+        given-names: F.
+    title: "BTFR II: Stellar Mass Models"
+    year: 2025
+    doi: 10.3847/1538-3881/adaf21
+    url: https://arxiv.org/abs/2501.10919
