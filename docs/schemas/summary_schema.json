@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bec-dark-matter.local/schemas/summary_schema.json",
+  "title": "Analysis Summary JSON",
+  "type": "object",
+  "required": ["test_name", "description"],
+  "additionalProperties": true,
+  "$comment": "verdict is strongly recommended for downstream reporting, but not a hard requirement.",
+  "x-recommended": ["verdict"],
+  "properties": {
+    "test_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verdict": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "figures": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tables": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "files": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

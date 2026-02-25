@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bec-dark-matter.local/schemas/run_log_schema.json",
+  "title": "Append-Only Run Log",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "timestamp_utc",
+    "tool",
+    "purpose",
+    "prompt_sha256",
+    "inputs_scanned",
+    "outputs_changed",
+    "git_commit",
+    "todos_remaining"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 8,
+      "pattern": "^[a-zA-Z0-9._:-]+$"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^.*Z$"
+    },
+    "tool": {
+      "type": "string",
+      "enum": ["codex", "claude", "human"]
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 3
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "inputs_scanned": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "outputs_changed": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "git_commit": {
+      "type": "string",
+      "pattern": "^([0-9a-f]{7,40}|UNKNOWN)$"
+    },
+    "todos_remaining": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "correction_of": {
+      "type": "string",
+      "minLength": 8
+    },
+    "supersedes": {
+      "type": "string",
+      "minLength": 8
+    },
+    "notes": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
