@@ -1,0 +1,22 @@
+{
+  "run_id": "20260226T045749Z_claude_fix-3-issues-from-codex-review-r_e10381aa",
+  "timestamp_utc": "2026-02-26T04:57:49Z",
+  "tool": "claude",
+  "purpose": "Fix 3 issues from Codex review: role swap, short SHAs, stale acceptance text",
+  "prompt_sha256": "798c2a6f56ca2d6dde98e05238f2e4faf2d04a5399ede156e53845e9c1d98e1a",
+  "inputs_scanned": [
+    "AGENTS.md",
+    "mailbox/PROTOCOL.md",
+    "mailbox/queue/M0001_claude_step3-move-plan-osf-regen.md",
+    "mailbox/queue/M0002_claude_review-mailbox-system.md"
+  ],
+  "outputs_changed": [
+    "AGENTS.md",
+    "mailbox/queue/M0001_claude_step3-move-plan-osf-regen.md",
+    "mailbox/queue/M0002_claude_review-mailbox-system.md"
+  ],
+  "git_commit": "86216bf",
+  "todos_remaining": [],
+  "notes": "Codex review (M0002) found 3 issues: (1) role-based challenge expectations swapped between AGENTS.md and PROTOCOL.md, (2) M0001/M0002 used short/placeholder SHAs instead of 40-char per template spec, (3) M0002 acceptance text referenced 1 message but queue had 2.",
+  "task_id": "T001"
+}
