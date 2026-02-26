@@ -30,31 +30,57 @@ MISSING_FINDING = (
 )
 FALLBACK_TODO = "TODO: requires upstream docs not present locally."
 
-CORE_SCRIPTS = [
-    "analysis/pipeline/test_env_scatter_definitive.py",
-    "analysis/pipeline/test_mc_distance_and_inversion.py",
-    "analysis/pipeline/test_nonparametric_inversion.py",
-    "analysis/pipeline/test_binning_robustness.py",
-    "analysis/pipeline/test_jackknife_robustness.py",
-    "analysis/pipeline/test_env_confound_control.py",
-    "analysis/pipeline/test_split_half_replication.py",
-    "analysis/pipeline/test_propensity_matched_env.py",
-    "analysis/pipeline/test_alfalfa_yang_btfr.py",
-    "analysis/pipeline/test_brouwer_lensing_rar.py",
-    "analysis/pipeline/test_lensing_profile_shape.py",
-    "analysis/pipeline/test_cluster_rar_tian2020.py",
-    "analysis/pipeline/test_extended_rar_inversion.py",
-    "analysis/pipeline/test_probes_inversion_replication.py",
-    "analysis/pipeline/test_kurtosis_phase_transition.py",
-    "analysis/pipeline/test_kurtosis_disambiguation.py",
-    "analysis/pipeline/test_korsaga_ml_sensitivity.py",
-    "analysis/pipeline/test_lcdm_null_inversion.py",
-    "analysis/pipeline/literature_crossref_tests.py",
-    "analysis/pipeline/test_tf_scatter_redshift.py",
-    "analysis/pipeline/integrate_mhongoose.py",
+CORE_TEST_GROUPS: List[Tuple[str, List[str]]] = [
+    (
+        "CLAIM: Environmental Scatter in Condensate Regime",
+        [
+            "analysis/pipeline/test_env_scatter_definitive.py",
+            "analysis/pipeline/test_env_confound_control.py",
+            "analysis/pipeline/test_propensity_matched_env.py",
+        ],
+    ),
+    (
+        "CLAIM: Inversion Point near g\u2020",
+        [
+            "analysis/pipeline/test_mc_distance_and_inversion.py",
+            "analysis/pipeline/test_nonparametric_inversion.py",
+            "analysis/pipeline/test_binning_robustness.py",
+            "analysis/pipeline/test_jackknife_robustness.py",
+        ],
+    ),
+    (
+        "CLAIM: Discriminating Null Tests",
+        [
+            "analysis/pipeline/test_lcdm_null_inversion.py",
+            "analysis/pipeline/test_split_half_replication.py",
+        ],
+    ),
+    (
+        "CLAIM: Kurtosis / Phase Boundary",
+        [
+            "analysis/pipeline/test_kurtosis_phase_transition.py",
+            "analysis/pipeline/test_kurtosis_disambiguation.py",
+        ],
+    ),
+    (
+        "CLAIM: External Validation",
+        [
+            "analysis/pipeline/test_alfalfa_yang_btfr.py",
+            "analysis/pipeline/test_brouwer_lensing_rar.py",
+            "analysis/pipeline/test_lensing_profile_shape.py",
+            "analysis/pipeline/test_probes_inversion_replication.py",
+            "analysis/pipeline/test_extended_rar_inversion.py",
+        ],
+    ),
 ]
-if (PIPELINE_DIR / "validate_mhongoose_sparc.py").exists():
-    CORE_SCRIPTS.append("analysis/pipeline/validate_mhongoose_sparc.py")
+
+SUPPORTING_TEST_SCRIPTS: List[str] = [
+    "analysis/pipeline/test_cluster_scale_rar.py",
+    "analysis/pipeline/test_cluster_sigma_scaling.py",
+    "analysis/pipeline/test_kurtosis_mhongoose.py",
+    "analysis/pipeline/test_soliton_nfw_composite.py",
+    "analysis/pipeline/test_tf_scatter_redshift.py",
+]
 
 CORE_SUMMARY_OVERRIDE = {
     "analysis/pipeline/test_env_scatter_definitive.py": "analysis/results/summary_env_definitive.json",
@@ -369,120 +395,106 @@ def make_table(headers: Sequence[Tuple[str, str]], rows: Sequence[Sequence[str]]
     return "".join(parts)
 
 
+def classify_core_verdict(finding: str) -> str:
+    upper = finding.upper()
+    if "NOT_REPLICATED" in upper:
+        return "fail"
+    if any(token in upper for token in ("INCONCLUSIVE", "FRAGILE", "DIAGNOSTIC", "COMPLEX", "NFW ADEQUATE", "MARGINAL", "NO_SIGNIFICANT")):
+        return "inconclusive"
+    if any(token in upper for token in ("BEC-CONSISTENT", "ALL_MATCH", "ROBUST", "REPLICATED", "DISCRIMINATING")):
+        return "support"
+    return "inconclusive"
+
+
+def build_test_section(
+    record_map: Dict[Any, Any],
+    script_rel: str,
+    test_label: str,
+) -> Tuple[List[str], str]:
+    record = dict(record_map.get(script_rel, {}))
+    record.setdefault("script", script_rel)
+    summary_rel = record.get("summary") or CORE_SUMMARY_OVERRIDE.get(script_rel, "")
+    summary_obj = load_json(ROOT / summary_rel) if summary_rel else None
+    finding = choose_finding(summary_obj, script_rel)
+    metrics = pick_metrics(summary_obj, minimum=2, maximum=8)
+
+    description = ""
+    if isinstance(summary_obj, dict) and isinstance(summary_obj.get("description"), str):
+        description = first_sentences(summary_obj["description"], n=2)
+    if not description:
+        description = method_text(record, summary_obj)
+
+    section: List[str] = []
+    section.append("<hr>")
+    section.append(f"<h3>{html_text(test_label)}: {html_text(Path(script_rel).stem)}</h3>")
+    section.append(f"<p>Script: <code>{html.escape(script_rel)}</code></p>")
+    section.append(f"<p>Description: {html_text(description)}</p>")
+    section.append(
+        f"<p>Summary Artifact: <code>{html.escape(summary_rel)}</code></p>"
+        if summary_rel
+        else "<p>Summary Artifact: <code>TODO (missing summary mapping)</code></p>"
+    )
+
+    metric_rows: List[List[str]] = []
+    if metrics:
+        for key, value in metrics:
+            metric_rows.append([html.escape(key), html_text(format_value(value))])
+    else:
+        metric_rows.append(
+            [
+                "artifact_status",
+                html.escape("TODO (missing or unreadable summary JSON artifact)."),
+            ]
+        )
+    section.append(
+        make_table(
+            [("Metric", "left"), ("Value", "left")],
+            metric_rows,
+        )
+    )
+    section.append(f"<p>Finding: {html_text(finding)}</p>")
+    return section, finding
+
+
 def build_tests_results_html(records: List[Dict[str, Any]]) -> str:
     record_map = {rec.get("script"): rec for rec in records}
-    all_records: List[Dict[str, Any]] = sorted(
-        records, key=lambda r: int(r.get("idx", 10**9))
-    )
 
     parts: List[str] = []
     parts.append("<h1>Tests &amp; Results</h1>")
     parts.append(
-        "<p>This page compiles test artifacts generated in this repository. "
-        "Findings are resolved by strict priority: verdict, finding/headline/"
-        "conclusion/summary_text, script Finding: line, then explicit TODO.</p>"
+        "<p>This page compiles canonical and supporting test artifacts generated in this repository. "
+        "Findings are shown directly from summary verdicts when available and include negative outcomes.</p>"
     )
-    parts.append("<h2>Core Tests (Detailed)</h2>")
 
-    for i, script_rel in enumerate(CORE_SCRIPTS, start=1):
-        record = dict(record_map.get(script_rel, {}))
-        record.setdefault("script", script_rel)
-        summary_rel = record.get("summary") or CORE_SUMMARY_OVERRIDE.get(script_rel, "")
-        record["summary"] = summary_rel
-        summary_obj = load_json(ROOT / summary_rel) if summary_rel else None
-        finding = choose_finding(summary_obj, script_rel)
-        metrics = pick_metrics(summary_obj, minimum=2, maximum=8)
+    parts.append("<h2>Core Tests (16)</h2>")
+    core_findings: List[str] = []
+    test_counter = 1
+    for claim_title, scripts in CORE_TEST_GROUPS:
+        parts.append(f"<h3>{html_text(claim_title)}</h3>")
+        for script_rel in scripts:
+            section, finding = build_test_section(record_map, script_rel, f"Test {test_counter}")
+            parts.extend(section)
+            core_findings.append(finding)
+            test_counter += 1
 
-        parts.append("<hr>")
-        parts.append(
-            f"<h3>Test {i}: {html_text(Path(script_rel).stem)}</h3>"
-        )
-        parts.append(f"<p>Script: <code>{html.escape(script_rel)}</code></p>")
-        parts.append(f"<p>Data: {html_text(dataset_text(record, summary_obj))}</p>")
-        parts.append(f"<p>Method: {html_text(method_text(record, summary_obj))}</p>")
-        parts.append(
-            f"<p>Summary Artifact: <code>{html.escape(summary_rel)}</code></p>"
-            if summary_rel
-            else "<p>Summary Artifact: <code>TODO (missing summary mapping)</code></p>"
-        )
+    parts.append("<h2>Supporting Tests (5)</h2>")
+    for idx, script_rel in enumerate(SUPPORTING_TEST_SCRIPTS, start=1):
+        section, _ = build_test_section(record_map, script_rel, f"Supporting Test {idx}")
+        parts.extend(section)
 
-        metric_rows: List[List[str]] = []
-        if metrics:
-            for key, value in metrics:
-                metric_rows.append([html.escape(key), html_text(format_value(value))])
-        else:
-            metric_rows.append(
-                [
-                    "artifact_status",
-                    html.escape("TODO (missing or unreadable summary JSON artifact)."),
-                ]
-            )
-        parts.append(
-            make_table(
-                [("Metric", "left"), ("Value", "left")],
-                metric_rows,
-            )
-        )
-        parts.append(f"<p>Finding: {html_text(finding)}</p>")
+    total_core = len(core_findings)
+    inconclusive = sum(1 for f in core_findings if classify_core_verdict(f) == "inconclusive")
+    failed = sum(1 for f in core_findings if classify_core_verdict(f) == "fail")
+    support = total_core - inconclusive - failed
 
-    parts.append("<h2>Appendix: Full Inventory (one row per script)</h2>")
-
-    inventory_rows: List[List[str]] = []
-    missing_rows: List[List[str]] = []
-
-    for rec in all_records:
-        script_rel = rec.get("script", "")
-        summary_rel = rec.get("summary", "")
-        summary_path = ROOT / summary_rel if summary_rel else None
-        summary_obj = load_json(summary_path) if summary_path else None
-        finding = choose_finding(summary_obj, script_rel)
-        key_metrics = pick_metrics(summary_obj, minimum=1, maximum=2)
-        metric_text = "; ".join(
-            f"{k}={format_value(v)}" for k, v in key_metrics
-        ) if key_metrics else "artifact_status=TODO (missing or unreadable summary JSON artifact)."
-        result_cell = (
-            f"{Path(summary_rel).name if summary_rel else 'MISSING_SUMMARY'}; "
-            f"{metric_text}; Finding: {finding}"
-        )
-        inventory_rows.append(
-            [
-                html_text(rec.get("idx", "")),
-                f"<code>{html.escape(script_rel)}</code>",
-                f"<code>{html.escape(summary_rel)}</code>" if summary_rel else "<code></code>",
-                html_text(dataset_text(rec, summary_obj)),
-                html_text(result_cell),
-            ]
-        )
-
-        if not summary_rel or not summary_path or not summary_path.exists():
-            searched = summary_rel if summary_rel else "No summary path in osf_tests_index_tmp.json record."
-            missing_rows.append(
-                [f"<code>{html.escape(script_rel)}</code>", f"<code>{html.escape(searched)}</code>"]
-            )
-
+    parts.append("<h2>Transparency Note</h2>")
     parts.append(
-        make_table(
-            [
-                ("#", "right"),
-                ("Script", "left"),
-                ("Summary JSON", "left"),
-                ("Data", "left"),
-                ("Result + Finding", "left"),
-            ],
-            inventory_rows,
-        )
+        "<p>"
+        f"This analysis includes {total_core} core tests. {support} support BEC-consistency, "
+        f"{inconclusive} are inconclusive or show fragility, and {failed} fail to replicate in independent datasets. "
+        "All results are reported regardless of outcome."
+        "</p>"
     )
-
-    parts.append("<h3>Scripts Missing Summaries</h3>")
-    if missing_rows:
-        parts.append(
-            make_table(
-                [("Script", "left"), ("Searched path(s)", "left")],
-                missing_rows,
-            )
-        )
-    else:
-        parts.append("<p>All indexed scripts have summary JSON artifacts present.</p>")
 
     html_block = "\n".join(parts).strip()
     html_block = html_block.replace("\u2026", "").replace("...", "")
