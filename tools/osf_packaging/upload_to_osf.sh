@@ -15,6 +15,18 @@ if [ -z "${OSF_PROJECT:-}" ]; then
   exit 1
 fi
 
+if [ -z "${OSF_TOKEN:-}" ]; then
+  # Try loading from macOS Keychain
+  if command -v security &>/dev/null; then
+    OSF_TOKEN="$(security find-generic-password -s "osf-token" -w 2>/dev/null || true)"
+  fi
+  if [ -z "$OSF_TOKEN" ]; then
+    echo "ERROR: Set OSF_TOKEN or store it in macOS Keychain under 'osf-token'" >&2
+    exit 1
+  fi
+  export OSF_TOKEN
+fi
+
 if ! command -v osf &>/dev/null; then
   echo "osfclient not found. Install it with:"
   echo "  pip3 install osfclient"
