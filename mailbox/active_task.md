@@ -2,9 +2,9 @@
 task_id: T001
 title: "OSF Package Alignment"
 status: IN_PROGRESS
-owner: codex
+owner: human
 created_utc: "2026-02-25T21:00:00Z"
-updated_utc: "2026-02-26T03:00:00Z"
+updated_utc: "2026-02-26T05:30:00Z"
 ---
 
 ## Objective
@@ -16,5 +16,5 @@ Align the bec-dark-matter repository's analysis outputs with the OSF package str
 3. [x] Build Step 1 alignment inventory (codex)
 4. [x] Fix 8 core summary JSONs for schema conformance (claude)
 5. [x] Step 3: move plan + OSF page regeneration + upload list (codex)
-6. [ ] Review Step 3 outputs and validate completeness (claude)
+6. [x] Review Step 3 outputs and validate completeness (claude)
 7. [ ] Final OSF upload preparation (human)
