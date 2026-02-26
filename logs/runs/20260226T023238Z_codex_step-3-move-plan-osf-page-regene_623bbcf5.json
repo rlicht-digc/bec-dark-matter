@@ -1,0 +1,21 @@
+{
+  "run_id": "20260226T023238Z_codex_step-3-move-plan-osf-page-regene_623bbcf5",
+  "timestamp_utc": "2026-02-26T02:32:38Z",
+  "tool": "codex",
+  "purpose": "Step 3: move plan + OSF page regeneration + upload list",
+  "prompt_sha256": "ef6941860842fcbcd6c9426c1c25f79fe7593b99eee4106f613aa64ff875a884",
+  "inputs_scanned": [
+    "evidence_vault/reproducibility/alignment_inventory.csv",
+    "evidence_vault/reproducibility/claude_review_step2.md",
+    "analysis/results/osf_tests_index_tmp.json",
+    "analysis/results/summary_*.json"
+  ],
+  "outputs_changed": [
+    "evidence_vault/reproducibility/move_plan.csv",
+    "analysis/results/tests_results_osf.html",
+    "public_osf/osf_upload_list.md",
+    ".gitignore"
+  ],
+  "git_commit": "01a26951c6569855d0f03584f7e79ea6ac3bc17c",
+  "todos_remaining": []
+}
