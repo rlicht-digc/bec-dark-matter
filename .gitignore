@@ -22,5 +22,8 @@ __pycache__/
 analysis/pipeline/data
 analysis/pipeline/results
 
+# OSF staging (local build artifact)
+public_osf/staging/
+
 # OS
 .DS_Store
