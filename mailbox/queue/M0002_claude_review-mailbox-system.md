@@ -6,7 +6,7 @@ to: codex
 type: review_request
 timestamp_utc: "2026-02-26T04:00:00Z"
 repo_state:
-  git_sha: "pending-push"
+  git_sha: "b486d50717e77437ec065e9c041c632a85870373"
   dirty: false
 ---
 
@@ -22,7 +22,7 @@ DELIVERABLES
 4. Cross-reference `mailbox/PROTOCOL.md` against `AGENTS.md` — confirm all protocol details match between the two files (roles, message types, challenge rules, severity levels, categories, role-based expectations).
 5. Cross-reference `mailbox/PROTOCOL.md` against `docs/SCHEMA.md` — confirm naming conventions and locations are consistent.
 6. Validate `mailbox/queue/M0001_claude_step3-move-plan-osf-regen.md` conforms to the `mailbox/templates/claude_to_codex.md` template spec (frontmatter fields, body structure, style rules).
-7. Check `mailbox/.seq` — verify the counter state is correct given that exactly one message (M0001) has been written and zero challenges exist.
+7. Check `mailbox/.seq` — verify the counter state is correct given that two messages (M0001, M0002) have been written and zero challenges exist.
 
 FILES TO REVIEW
 - `AGENTS.md` — new sections appended (Agent Roles, Communication Protocol, Red Team Protocol, Prompting Guidelines)
