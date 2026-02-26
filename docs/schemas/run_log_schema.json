@@ -68,6 +68,10 @@
     "warnings": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^T[0-9]{3,}$"
     }
   }
 }

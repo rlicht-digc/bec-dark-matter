@@ -52,3 +52,22 @@ Hooks are optional and local only. To enable project hooks locally:
 - `git config core.hooksPath .githooks`
 
 Do not rely on hooks for policy enforcement. CI or manual review remains authoritative.
+
+## Mailbox Contract
+
+Bidirectional agent communication uses structured messages in the `mailbox/` directory.
+
+- **Message queue**: `mailbox/queue/*.md`
+- **Archive**: `mailbox/archive/*.md`
+- **Challenges**: `mailbox/challenges/*.md`
+- **Active task**: `mailbox/active_task.md`
+- **Sequence counter**: `mailbox/.seq`
+
+### Naming Conventions
+- Messages: `M{NNNN}_{from}_{slug}.md` (e.g., `M0001_claude_step3-move-plan-osf-regen.md`)
+- Challenges: `C{NNN}_{from}_{slug}.md` (e.g., `C001_codex_schema-validation-gap.md`)
+
+### Run Log Linkage
+Run logs may include an optional `task_id` field (pattern: `^T[0-9]{3,}$`) linking to the active mailbox task. This field is defined in `docs/schemas/run_log_schema.json`.
+
+See `mailbox/PROTOCOL.md` for the full communication protocol specification.

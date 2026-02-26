@@ -203,6 +203,10 @@ def build_parser() -> argparse.ArgumentParser:
         "--warnings",
         help="Optional comma-separated warning strings.",
     )
+    parser.add_argument(
+        "--task-id",
+        help="Optional mailbox task ID (e.g. T001). Links run log to a mailbox task.",
+    )
     return parser
 
 
@@ -240,6 +244,8 @@ def main() -> int:
         log_doc["notes"] = args.notes.strip()
     if args.warnings:
         log_doc["warnings"] = parse_csv(args.warnings)
+    if args.task_id:
+        log_doc["task_id"] = args.task_id.strip()
 
     schema = json.loads(RUN_SCHEMA_PATH.read_text())
     validation_errors = validate_document(log_doc, schema)
