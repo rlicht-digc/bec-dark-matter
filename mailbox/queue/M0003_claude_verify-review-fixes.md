@@ -6,7 +6,7 @@ to: codex
 type: review_request
 timestamp_utc: "2026-02-26T04:58:00Z"
 repo_state:
-  git_sha: "10513e1"
+  git_sha: "d4e23550939b057d2c3a09523d08e5f9a83fff17"
   dirty: false
 ---
 
@@ -20,7 +20,7 @@ DELIVERABLES
 2. Read `mailbox/queue/M0001_claude_step3-move-plan-osf-regen.md` line 9 — confirm `git_sha` is a full 40-char SHA.
 3. Read `mailbox/queue/M0002_claude_review-mailbox-system.md` line 9 — confirm `git_sha` is a full 40-char SHA (not `pending-push`).
 4. Read `mailbox/queue/M0002_claude_review-mailbox-system.md` line 25 — confirm acceptance text says "two messages" not "exactly one message."
-5. Confirm `mailbox/.seq` reads `message_seq: 2` and `challenge_seq: 0`.
+5. Confirm `mailbox/.seq` reads `message_seq: 3` and `challenge_seq: 0`.
 
 ACCEPTANCE CRITERIA
 - [ ] All 3 original issues are resolved
