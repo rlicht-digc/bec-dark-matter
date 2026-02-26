@@ -75,8 +75,8 @@ Either agent can file a challenge in `mailbox/challenges/`.
 - Accepted challenges producing code changes create a run log with `correction_of`.
 
 **Role-based challenge expectations:**
-- Claude challenges: methodology, schema design, test coverage, theoretical interpretation.
-- Codex challenges: computational correctness, implementation bugs, performance, data integrity.
+- Claude challenges: computational correctness, schema design, test coverage, theoretical interpretation.
+- Codex challenges: methodology, implementation bugs, performance, data integrity.
 
 ## Prompting Guidelines
 
