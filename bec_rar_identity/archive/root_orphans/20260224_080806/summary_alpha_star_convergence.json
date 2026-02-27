@@ -1,0 +1,149 @@
+{
+  "status": "OK",
+  "test": "alpha_star_convergence",
+  "conditions": {
+    "Full": {
+      "SPARC": {
+        "status": "OK",
+        "n_gal": 131,
+        "alpha_star": 0.12795857232281466,
+        "alpha_ci95": [
+          0.024193444031738644,
+          0.21863759157605292
+        ],
+        "scatter_z": 0.5954027794588286
+      },
+      "TNG_3k": {
+        "status": "OK",
+        "n_gal": 3000,
+        "alpha_star": -0.08398810436962573,
+        "alpha_ci95": [
+          -0.1347860398936139,
+          -0.035786688855693916
+        ],
+        "scatter_z": 0.6203200332498152
+      },
+      "TNG_48k": {
+        "status": "OK",
+        "n_gal": 48060,
+        "alpha_star": 0.38126245577827983,
+        "alpha_ci95": [
+          0.37346684657759566,
+          0.3888578178153062
+        ],
+        "scatter_z": 0.6561487381943919
+      },
+      "delta_alpha_max": 0.46525056014790556
+    },
+    "Mass-matched": {
+      "SPARC": {
+        "status": "OK",
+        "n_gal": 96,
+        "alpha_star": 0.1036354838278592,
+        "alpha_ci95": [
+          -0.06449623430254091,
+          0.2764655304581515
+        ],
+        "scatter_z": 0.5972211010626602
+      },
+      "TNG_3k": {
+        "status": "OK",
+        "n_gal": 2896,
+        "alpha_star": 0.03852881907383545,
+        "alpha_ci95": [
+          -0.019377977411564145,
+          0.10575060218767973
+        ],
+        "scatter_z": 0.6217126032564226
+      },
+      "TNG_48k": {
+        "status": "OK",
+        "n_gal": 27950,
+        "alpha_star": 0.5106007525524728,
+        "alpha_ci95": [
+          0.4973328647616159,
+          0.5270549732789043
+        ],
+        "scatter_z": 0.6443706024012915
+      },
+      "delta_alpha_max": 0.4720719334786374
+    },
+    "Resolution-matched": {
+      "SPARC": {
+        "status": "OK",
+        "n_gal": 8,
+        "alpha_star": -0.22413087975455903,
+        "alpha_ci95": [
+          -0.9443560422561111,
+          0.8468463214565274
+        ],
+        "scatter_z": 0.5556490655221591
+      },
+      "TNG_3k": {
+        "status": "OK",
+        "n_gal": 3000,
+        "alpha_star": -0.08398810436962573,
+        "alpha_ci95": [
+          -0.1366751593438123,
+          -0.030710000763394904
+        ],
+        "scatter_z": 0.6203200332498152
+      },
+      "TNG_48k": {
+        "status": "OK",
+        "n_gal": 48032,
+        "alpha_star": 0.38040596945697985,
+        "alpha_ci95": [
+          0.37234964988074115,
+          0.3882788768698498
+        ],
+        "scatter_z": 0.6560355797258988
+      },
+      "delta_alpha_max": 0.6045368492115388
+    },
+    "Mass+Resolution": {
+      "SPARC": {
+        "status": "OK",
+        "n_gal": 8,
+        "alpha_star": -0.22413087975455903,
+        "alpha_ci95": [
+          -1.1492944816934134,
+          0.8665931743835624
+        ],
+        "scatter_z": 0.5556490655221591
+      },
+      "TNG_3k": {
+        "status": "OK",
+        "n_gal": 2896,
+        "alpha_star": 0.03852881907383545,
+        "alpha_ci95": [
+          -0.023129357676699693,
+          0.10780673753769497
+        ],
+        "scatter_z": 0.6217126032564226
+      },
+      "TNG_48k": {
+        "status": "OK",
+        "n_gal": 27947,
+        "alpha_star": 0.5105438820086295,
+        "alpha_ci95": [
+          0.4971431905684424,
+          0.5258758562927567
+        ],
+        "scatter_z": 0.6443419432599027
+      },
+      "delta_alpha_max": 0.7346747617631886
+    }
+  },
+  "delta_alpha_max": {
+    "Full": 0.46525056014790556,
+    "Mass-matched": 0.4720719334786374,
+    "Resolution-matched": 0.6045368492115388,
+    "Mass+Resolution": 0.7346747617631886
+  },
+  "verdict": "alpha* differences persist under matching (definition/physics differences remain plausible).",
+  "tng_status": {
+    "TNG_3k": "OK",
+    "TNG_48k": "OK"
+  }
+}

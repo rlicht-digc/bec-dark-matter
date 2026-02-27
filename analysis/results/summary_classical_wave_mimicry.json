@@ -1,0 +1,54 @@
+{
+  "analysis": "classical_wave_mimicry",
+  "description": "Tests whether n-bar(n-bar+1) can be distinguished from n-bar^2",
+  "models": {
+    "quantum_bec": {
+      "formula": "sigma^2 = A * [n-bar^2 + n-bar] + C",
+      "A": 0.0008185178609990531,
+      "C": 0.8996791866977492,
+      "chi2": 172.48410922288608,
+      "aic": 176.48410922288608
+    },
+    "classical_wave": {
+      "formula": "sigma^2 = A * n-bar^2 + C",
+      "A": 0.0008981713960794185,
+      "C": 0.9005827853809574,
+      "chi2": 171.69010782895484,
+      "aic": 175.69010782895484
+    },
+    "poisson": {
+      "formula": "sigma^2 = A * n-bar + C",
+      "A": 0.004781966237654348,
+      "C": 0.9012973405906455,
+      "chi2": 182.17606074928378,
+      "aic": 186.17606074928378
+    },
+    "constant": {
+      "formula": "sigma^2 = const",
+      "mean": 0.9130205119216442,
+      "chi2": 183.82410161789218,
+      "aic": 185.82410161789218
+    }
+  },
+  "delta_aic": {
+    "poisson_minus_quantum": 9.691951526397702,
+    "classwave_minus_quantum": -0.7940013939312394,
+    "poisson_minus_classwave": 10.485952920328941,
+    "constant_minus_quantum": 9.339992395006107,
+    "constant_minus_classwave": 10.133993788937346
+  },
+  "decomposition": {
+    "total_daic_poisson_vs_quantum": 9.691951526397702,
+    "from_nbar_squared_term": 10.485952920328941,
+    "from_quantum_correction": -0.7940013939312394,
+    "pct_from_nbar_squared": 108.19237892150657,
+    "pct_from_quantum_correction": 8.192378921506567
+  },
+  "quantum_correction_detectability": {
+    "max_snr": 0.17244735399262068,
+    "best_bin_log_gbar": -12.0,
+    "best_bin_nbar": 10.462057351492472,
+    "data_factor_needed_for_3sigma": 302.64216802591704
+  },
+  "conclusion": "The DAIC = +9.7 (unified) and +23.5 (SPARC) are driven entirely by the n-bar^2 term, which is predicted by BOTH quantum BEC and classical wave interference. The +n-bar quantum correction contributes DAIC = -0.8, meaning it is statistically undetectable. The quantum and classical wave models are indistinguishable with current data. Approximately 300x more data points per bin would be needed for a 3-sigma distinction. Furthermore, the n-bar(n-bar+1) formula describes a thermal state with a valid classical P-representation, meaning it does not require quantum mechanics even in principle."
+}

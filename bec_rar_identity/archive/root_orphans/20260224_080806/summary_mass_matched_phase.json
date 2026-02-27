@@ -1,0 +1,41 @@
+{
+  "status": "OK",
+  "test": "mass_matched_phase",
+  "tng_file_used": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/rar_points.parquet",
+  "N_matched": 131,
+  "mass_range": [
+    7.464236919970836,
+    11.55135424305585
+  ],
+  "ks_pvalue_mass": 0.9999999999999999,
+  "sparc": {
+    "n_points": 2784,
+    "n_galaxies": 131,
+    "mu_peak": -9.80214248219586,
+    "mu_peak_ci95": [
+      -11.99985577121984,
+      -8.092340997781703
+    ],
+    "daic": -144.86432490372366,
+    "daic_ci95": [
+      -388.1290832180873,
+      -35.34948483910407
+    ],
+    "fit_model": "M2b_edge"
+  },
+  "tng": {
+    "n_points": 6439,
+    "n_galaxies": 131,
+    "mu_peak": -11.508498587092845,
+    "mu_peak_ci95": [
+      -11.999997023985653,
+      -8.0
+    ],
+    "daic": -228.04217550409456,
+    "daic_ci95": [
+      -1454.5703785604749,
+      -133.22088652853637
+    ],
+    "fit_model": "M2b_edge"
+  }
+}

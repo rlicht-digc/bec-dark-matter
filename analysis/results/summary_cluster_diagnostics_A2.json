@@ -1,0 +1,119 @@
+{
+  "test_name": "cluster_sigma_diagnostics_and_A2",
+  "check1_dynamic_range": {
+    "sigma_min": 725.0,
+    "sigma_max": 1840.0,
+    "log_sigma2_range_dex": 0.8089596328770856,
+    "median_sigma_uncertainty_pct": 9.986506746626686,
+    "spectroscopic_only": {
+      "n": 8,
+      "B_slope": -0.3041351516900949,
+      "B_stderr": 0.21436843579920015,
+      "pearson_r": -0.50120137590381,
+      "pearson_p": 0.2057662040376938
+    }
+  },
+  "check2_gdagger_variation": {
+    "n_clusters": 20,
+    "mean_log_gdagger": -8.751092049007141,
+    "std_log_gdagger": 0.1624726815685246,
+    "range_dex": 0.7058761374810381,
+    "obs_variance": 0.02639737225606719,
+    "meas_variance": 0.0016360528248445638,
+    "intrinsic_variance": 0.024761319431222627,
+    "intrinsic_sigma": 0.15735729862711367,
+    "intrinsic_fraction": 0.9380221330754416,
+    "verdict": "REAL VARIATION dominates \u2014 g\u2021 genuinely varies across clusters"
+  },
+  "test_A2_predictors": [
+    {
+      "predictor": "BCG aperture total mass",
+      "n": 20,
+      "slope": 0.5414660464216726,
+      "slope_err": 0.1802775239338742,
+      "intercept": -15.691895646970785,
+      "pearson_r": 0.5778008369800951,
+      "pearson_p": 0.007626903244296263,
+      "spearman_rho": 0.5759398496240601,
+      "spearman_p": 0.007870940177445083
+    },
+    {
+      "predictor": "c_200 (NFW concentration)",
+      "n": 9,
+      "slope": 0.43642077315212574,
+      "slope_err": 0.31101880144886296,
+      "intercept": -9.003594890642141,
+      "pearson_r": 0.46854106047524124,
+      "pearson_p": 0.2033257200967629,
+      "spearman_rho": 0.401677156202747,
+      "spearman_p": 0.2838999763379956
+    },
+    {
+      "predictor": "BCG stellar mass M*",
+      "n": 20,
+      "slope": 0.31221925726225175,
+      "slope_err": 0.15706866920874787,
+      "intercept": -12.729670770932064,
+      "pearson_r": 0.42426770811858233,
+      "pearson_p": 0.06226472506090941,
+      "spearman_rho": 0.38496240601503756,
+      "spearman_p": 0.09372546338767997
+    },
+    {
+      "predictor": "g_200 = GM200/R200\u00b2",
+      "n": 10,
+      "slope": 1.0639861365438785,
+      "slope_err": 0.8488900062604116,
+      "intercept": 2.2618834762679185,
+      "pearson_r": 0.40514125780350907,
+      "pearson_p": 0.24545516053890803,
+      "spearman_rho": 0.406060606060606,
+      "spearman_p": 0.24428229408662652
+    },
+    {
+      "predictor": "Cluster virial mass M200",
+      "n": 10,
+      "slope": 0.32274704079630673,
+      "slope_err": 0.4311318975286672,
+      "intercept": -13.620572661719622,
+      "pearson_r": 0.25586146639840207,
+      "pearson_p": 0.4755268782303364,
+      "spearman_rho": 0.32218993815043423,
+      "spearman_p": 0.3639270759675107
+    },
+    {
+      "predictor": "Redshift z",
+      "n": 20,
+      "slope": 0.28346119023844374,
+      "slope_err": 0.2895325036747838,
+      "intercept": -8.860989952462585,
+      "pearson_r": 0.22485072015331314,
+      "pearson_p": 0.3405409883487126,
+      "spearman_rho": 0.2646616541353383,
+      "spearman_p": 0.2594693699285377
+    },
+    {
+      "predictor": "BCG baryon fraction",
+      "n": 13,
+      "slope": -0.23189056907874456,
+      "slope_err": 0.39992642019068914,
+      "intercept": -8.749668664871926,
+      "pearson_r": -0.17221426334625195,
+      "pearson_p": 0.5737114930947843,
+      "spearman_rho": -0.34615384615384615,
+      "spearman_p": 0.24662526251007164
+    },
+    {
+      "predictor": "Velocity dispersion \u03c3\u00b2",
+      "n": 14,
+      "slope": 0.014169310785289145,
+      "slope_err": 0.2294868307235146,
+      "intercept": -8.830254543859247,
+      "pearson_r": 0.01782097088590867,
+      "pearson_p": 0.9517836001912467,
+      "spearman_rho": 0.006593406593406593,
+      "spearman_p": 0.9821527354577906
+    }
+  ],
+  "best_predictor": "BCG aperture total mass"
+}

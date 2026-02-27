@@ -1,0 +1,354 @@
+{
+  "test1_squeezed_alpha": {
+    "free_alpha": {
+      "A": 8.973699237381226e-06,
+      "A_err": 0.033060624381028685,
+      "alpha": 99.99428210406907,
+      "alpha_err": 368617.85843020526,
+      "C": 0.900572595367853,
+      "C_err": 0.0719502350274248,
+      "chi2": 171.69853569769128,
+      "aic": 177.69853569769128,
+      "k": 3,
+      "chi2_dof": 19.077615077521255
+    },
+    "interpretation": "CONSISTENT WITH THERMAL (\u03b1 = 1 within 0.0\u03c3)",
+    "thermal_alpha1": {
+      "params": [
+        0.0008185178609990531,
+        0.8996791866977492
+      ],
+      "chi2": 172.48410922288608,
+      "aic": 176.48410922288608,
+      "k": 2
+    },
+    "classical_wave": {
+      "params": [
+        0.0008981713960794185,
+        0.9005827853809574
+      ],
+      "chi2": 171.69010782895484,
+      "aic": 175.69010782895484,
+      "k": 2
+    },
+    "poisson": {
+      "params": [
+        0.004781963812772784,
+        0.9012973436794888
+      ],
+      "chi2": 182.17606074928435,
+      "aic": 186.17606074928435,
+      "k": 2
+    },
+    "daic_thermal_alpha1_vs_free": -1.214426474805208,
+    "daic_classical_wave_vs_free": -2.0084278687364474,
+    "daic_poisson_vs_free": 8.477525051593062,
+    "bootstrap_alpha": {
+      "n_valid": 500,
+      "median": 99.99999510272114,
+      "mean": 81.7557133126331,
+      "std": 38.905954428192395,
+      "ci_68": [
+        0.37536243769643124,
+        99.99999999984605
+      ],
+      "ci_95": [
+        -9.999999851599835,
+        99.99999999999973
+      ],
+      "frac_gt_1": 0.83,
+      "frac_gt_2": 0.83,
+      "frac_lt_0": 0.076
+    }
+  },
+  "test2_interpolation": {
+    "BE_distribution": {
+      "best_scale": 1.3473202514648436e-10,
+      "chi2": 150480.85712153628,
+      "aic": 150482.85712153628,
+      "bic": 150488.79449623244,
+      "rms_dex": 0.18371937812054448,
+      "mean_resid": -0.04443927152798123,
+      "n_points": 2800,
+      "rms_dm_regime": 0.18371937812054448,
+      "rms_bar_regime": NaN
+    },
+    "Milgrom_deSitter": {
+      "best_scale": 1.309249877929688e-10,
+      "chi2": 149258.89720664272,
+      "aic": 149260.89720664272,
+      "bic": 149266.8345813389,
+      "rms_dex": 0.1830225577225542,
+      "mean_resid": -0.04529115444858896,
+      "n_points": 2800,
+      "rms_dm_regime": 0.1830225577225542,
+      "rms_bar_regime": NaN
+    },
+    "Simple_MOND": {
+      "best_scale": 1.309249877929688e-10,
+      "chi2": 149258.89720664275,
+      "aic": 149260.89720664275,
+      "bic": 149266.83458133892,
+      "rms_dex": 0.1830225577225542,
+      "mean_resid": -0.04529115444858896,
+      "n_points": 2800,
+      "rms_dm_regime": 0.1830225577225542,
+      "rms_bar_regime": NaN
+    },
+    "daic_Milgrom_deSitter_vs_BE": -1221.9599148935522,
+    "daic_Simple_MOND_vs_BE": -1221.959914893523,
+    "daic_Milgrom_vs_Simple": -2.9103830456733704e-11,
+    "bin_comparison": [
+      {
+        "bin_center": -12.25,
+        "n_points": 11,
+        "rms_BE": 0.44325775265256706,
+        "mean_BE": -0.23597664654890835,
+        "rms_Milgrom": 0.4401654752465144,
+        "mean_Milgrom": -0.23008729068339145,
+        "rms_Simple": 0.4401654752465144,
+        "mean_Simple": -0.23008729068339145
+      },
+      {
+        "bin_center": -11.75,
+        "n_points": 206,
+        "rms_BE": 0.23952227056992983,
+        "mean_BE": -0.08125836338654,
+        "rms_Milgrom": 0.2377160340934959,
+        "mean_Milgrom": -0.07573603869086822,
+        "rms_Simple": 0.2377160340934959,
+        "mean_Simple": -0.07573603869086823
+      },
+      {
+        "bin_center": -11.25,
+        "n_points": 772,
+        "rms_BE": 0.2051444162921099,
+        "mean_BE": -0.08339373086862985,
+        "rms_Milgrom": 0.20318029947400879,
+        "mean_Milgrom": -0.07855735802368566,
+        "rms_Simple": 0.20318029947400876,
+        "mean_Simple": -0.07855735802368567
+      },
+      {
+        "bin_center": -10.75,
+        "n_points": 577,
+        "rms_BE": 0.17008402616113155,
+        "mean_BE": -0.04242723883262248,
+        "rms_Milgrom": 0.16935036062767891,
+        "mean_Milgrom": -0.039298672367037484,
+        "rms_Simple": 0.16935036062767891,
+        "mean_Simple": -0.039298672367037484
+      },
+      {
+        "bin_center": -10.25,
+        "n_points": 527,
+        "rms_BE": 0.1519695628494386,
+        "mean_BE": -0.01665473520204918,
+        "rms_Milgrom": 0.1521016811086057,
+        "mean_Milgrom": -0.017704405340317978,
+        "rms_Simple": 0.1521016811086057,
+        "mean_Simple": -0.01770440534031799
+      },
+      {
+        "bin_center": -9.75,
+        "n_points": 365,
+        "rms_BE": 0.18339234240985325,
+        "mean_BE": -0.020792137137687204,
+        "rms_Milgrom": 0.18431689186030595,
+        "mean_Milgrom": -0.02910014834108405,
+        "rms_Simple": 0.18431689186030595,
+        "mean_Simple": -0.029100148341084056
+      },
+      {
+        "bin_center": -9.25,
+        "n_points": 235,
+        "rms_BE": 0.09549816003207491,
+        "mean_BE": -0.006600327573075419,
+        "rms_Milgrom": 0.09806502059358817,
+        "mean_Milgrom": -0.02291610106910834,
+        "rms_Simple": 0.09806502059358817,
+        "mean_Simple": -0.022916101069108324
+      },
+      {
+        "bin_center": -8.75,
+        "n_points": 89,
+        "rms_BE": 0.20665461296938,
+        "mean_BE": 0.0050040737706920305,
+        "rms_Milgrom": 0.20700432420735473,
+        "mean_Milgrom": -0.01214896364539755,
+        "rms_Simple": 0.20700432420735473,
+        "mean_Simple": -0.01214896364539755
+      }
+    ]
+  },
+  "test3_higher_order": {
+    "bins": [
+      {
+        "bin_center": -11.75,
+        "n_points": 206,
+        "nbar": 7.724821420494817,
+        "skewness": -1.4372195172735025,
+        "skewness_se": 0.1706640371965723,
+        "excess_kurtosis": 4.940147718484141,
+        "kurtosis_se": 0.3413280743931446,
+        "poisson_skew_pred": 0.35979554021720334,
+        "poisson_kurt_pred": 0.1294528307601892,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 4.9973433926322306e-17
+      },
+      {
+        "bin_center": -11.25,
+        "n_points": 772,
+        "nbar": 4.1374793241623635,
+        "skewness": -1.278048235815635,
+        "skewness_se": 0.088159064907635,
+        "excess_kurtosis": 4.769474078393552,
+        "kurtosis_se": 0.17631812981527,
+        "poisson_skew_pred": 0.4916228744518462,
+        "poisson_kurt_pred": 0.24169305068429578,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 4.393416369851877e-49
+      },
+      {
+        "bin_center": -10.75,
+        "n_points": 577,
+        "nbar": 2.1297103290716675,
+        "skewness": -1.9491652315295742,
+        "skewness_se": 0.10197359225896464,
+        "excess_kurtosis": 15.856891908811775,
+        "kurtosis_se": 0.2039471845179293,
+        "poisson_skew_pred": 0.6852353059534009,
+        "poisson_kurt_pred": 0.4695474245250509,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 4.018330300702075e-69
+      },
+      {
+        "bin_center": -10.25,
+        "n_points": 527,
+        "nbar": 1.01740528844919,
+        "skewness": -0.7443978124777237,
+        "skewness_se": 0.1067014491044368,
+        "excess_kurtosis": 6.638595715453786,
+        "kurtosis_se": 0.2134028982088736,
+        "poisson_skew_pred": 0.991409336748963,
+        "poisson_kurt_pred": 0.9828924729930189,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 4.755315115166299e-27
+      },
+      {
+        "bin_center": -9.75,
+        "n_points": 365,
+        "nbar": 0.4204920993574704,
+        "skewness": -1.9083782712214064,
+        "skewness_se": 0.12821215295120647,
+        "excess_kurtosis": 5.564961971950428,
+        "kurtosis_se": 0.25642430590241294,
+        "poisson_skew_pred": 1.5421303339210586,
+        "poisson_kurt_pred": 2.378165966799476,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 1.3560866444864543e-35
+      },
+      {
+        "bin_center": -9.25,
+        "n_points": 235,
+        "nbar": 0.12965973981081352,
+        "skewness": 0.15361603700783408,
+        "skewness_se": 0.15978709238739222,
+        "excess_kurtosis": 2.7715679520399137,
+        "kurtosis_se": 0.31957418477478444,
+        "poisson_skew_pred": 2.7771377832893345,
+        "poisson_kurt_pred": 7.7124942673732,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 2.663444612917087e-05
+      },
+      {
+        "bin_center": -8.75,
+        "n_points": 89,
+        "nbar": 0.021752524150821025,
+        "skewness": -0.18652519276056104,
+        "skewness_se": 0.2596453934447493,
+        "excess_kurtosis": 13.462467111810458,
+        "kurtosis_se": 0.5192907868894986,
+        "poisson_skew_pred": 6.7802416142328505,
+        "poisson_kurt_pred": 45.97167634737489,
+        "thermal_skew_pred": 2.0,
+        "thermal_kurt_pred": 6.0,
+        "dagostino_p": 4.973322405260643e-08
+      }
+    ],
+    "predictions": {
+      "thermal_bosonic": {
+        "skewness": 2.0,
+        "excess_kurtosis": 6.0
+      },
+      "classical_wave": {
+        "skewness": 2.0,
+        "excess_kurtosis": 6.0
+      },
+      "gaussian": {
+        "skewness": 0.0,
+        "excess_kurtosis": 0.0
+      },
+      "note": "Thermal and classical wave have identical 3rd/4th moments. Distinction requires different observable (not higher-order stats of density)."
+    },
+    "trends": {
+      "skewness_vs_nbar": {
+        "spearman_r": -0.5714285714285715,
+        "spearman_p": 0.18020198891152753,
+        "interpretation": "Poisson predicts negative correlation (skew decreases with n\u0304)"
+      },
+      "kurtosis_vs_nbar": {
+        "spearman_r": -0.14285714285714288,
+        "spearman_p": 0.7599453002180928,
+        "interpretation": "Poisson predicts negative correlation (kurt decreases with n\u0304)"
+      }
+    },
+    "overall": {
+      "skewness": -1.4683852252432206,
+      "excess_kurtosis": 8.21652092777368,
+      "normaltest_p": 3.8164605345571265e-221,
+      "is_gaussian": false
+    }
+  },
+  "coarse_graining": {
+    "description": "The macroscopic n\u0304 in the RAR counts gravitational modes, not individual bosons. Within one healing length \u03be = \u221a(GM/g\u2020), all bosons occupy a single collective mode (the soliton ground state). The number of independent modes scales as (R/\u03be)\u00b3. The gravitational n\u0304 is NOT N_occ (which counts bosons per de Broglie volume), but rather the ratio of actual DM density to the critical density for one boson per mode at the gravitational coarse-graining scale. This is why n\u0304 ~ 1-30 rather than ~10\u2079\u00b3.",
+    "key_relation": "n\u0304_grav \u2248 \u03c1_DM(r) \u00d7 \u03be\u00b3 / M_mode, where M_mode = \u03c1_crit \u00d7 \u03be\u00b3",
+    "healing_lengths": [
+      {
+        "type": "Dwarf",
+        "logMs": 8.0,
+        "xi_kpc": 0.34081911781189395,
+        "N_modes_10kpc": 25259.6981266428,
+        "nbar_outer": 10.462057351492472
+      },
+      {
+        "type": "Low-mass spiral",
+        "logMs": 9.0,
+        "xi_kpc": 1.0777646824148472,
+        "N_modes_10kpc": 798.7817908847957,
+        "nbar_outer": 10.462057351492472
+      },
+      {
+        "type": "MW-like",
+        "logMs": 10.0,
+        "xi_kpc": 3.40819117811894,
+        "N_modes_10kpc": 25.259698126642792,
+        "nbar_outer": 10.462057351492472
+      },
+      {
+        "type": "Massive",
+        "logMs": 11.0,
+        "xi_kpc": 10.777646824148473,
+        "N_modes_10kpc": 1.0,
+        "nbar_outer": 10.462057351492472
+      }
+    ],
+    "physical_picture": "At radius r in a galaxy, the baryonic gravitational field defines an energy scale \u03b5 = \u221a(g_bar/g\u2020). The BEC has N_occ ~ 10\u2079\u00b3 microscopic bosons per coherence volume, but they all occupy the same ground state mode \u2014 they act collectively. The macroscopic occupation n\u0304 = 1/(e^\u03b5 - 1) counts how many independent gravitational modes are macroscopically occupied at that radius. When n\u0304 >> 1 (low g_bar), many modes are occupied \u2192 DM-dominated, coherent condensate. When n\u0304 << 1 (high g_bar), modes are thermally emptied \u2192 Newtonian."
+  }
+}

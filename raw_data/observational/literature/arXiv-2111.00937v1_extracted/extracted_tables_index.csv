@@ -1,0 +1,5 @@
+label,caption,rows,cols,csv
+tab:VERTICO-sample,The VERTICO target sample.,51,6,/Users/russelllicht/bec-dark-matter/data/literature/arXiv-2111.00937v1_extracted/tab_VERTICO-sample.csv
+tab:co_props,Global CO($2-1$) line properties for the 51 VERTICO galaxies.,51,10,/Users/russelllicht/bec-dark-matter/data/literature/arXiv-2111.00937v1_extracted/tab_co_props.csv
+tab:co_radii,Molecular gas disk radii estimates.,49,4,/Users/russelllicht/bec-dark-matter/data/literature/arXiv-2111.00937v1_extracted/tab_co_radii.csv
+tab:mass-size_bestfit,"Molecular gas size--mass relation best fit parameters for the VERTICO, HERACLES, and combined samples.",6,8,/Users/russelllicht/bec-dark-matter/data/literature/arXiv-2111.00937v1_extracted/tab_mass-size_bestfit.csv

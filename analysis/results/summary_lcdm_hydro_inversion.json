@@ -1,0 +1,50 @@
+{
+  "test": "lcdm_hydro_inversion",
+  "description": "EAGLE+TNG galaxy properties from Marasco+2020, scatter derivative test",
+  "data_source": "CDS J/A+A/640/A70",
+  "n_eagle": 46,
+  "n_tng": 130,
+  "n_total": 176,
+  "n_rar_points": 4400,
+  "mass_range": "M* > 5e10 M_sun (massive spirals)",
+  "combined_result": {
+    "inversion_log_g": -9.697756710059114,
+    "delta_from_gdagger": 0.22306204389326112
+  },
+  "eagle_result": {
+    "inversion_log_g": -9.70667439066504
+  },
+  "tng_result": {
+    "inversion_log_g": -10.177930709427287
+  },
+  "sparc_result": {
+    "inversion_log_g": -9.8598685760116,
+    "delta_from_gdagger": 0.06095017794077506
+  },
+  "no_noise_result": {
+    "inversion_log_g": null
+  },
+  "scatter_profile": {
+    "centers": [
+      -11.439481143775627,
+      -11.139481143775626,
+      -10.839481143775625,
+      -10.539481143775625,
+      -10.239481143775624,
+      -9.939481143775623,
+      -9.639481143775622,
+      -9.339481143775622
+    ],
+    "sigmas": [
+      0.11636906308966037,
+      0.10405007248356278,
+      0.10419934466001299,
+      0.0954816003141594,
+      0.092917136590018,
+      0.09247681683103716,
+      0.0975498648604845,
+      0.0860306664494909
+    ]
+  },
+  "verdict": "DISCRIMINATING"
+}

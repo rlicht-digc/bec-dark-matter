@@ -1,0 +1,119 @@
+{
+  "test_name": "distance_catalog_builder",
+  "description": "Three distance catalogs for 175 SPARC galaxies",
+  "n_galaxies": 175,
+  "catalogs": {
+    "sparc": {
+      "description": "All SPARC original distances",
+      "n_galaxies": 175
+    },
+    "hybrid": {
+      "description": "SPARC for gold-standard & UMa; NED TRGB or CF4 for Hubble flow",
+      "n_galaxies": 175,
+      "n_ned_upgrades": 5,
+      "ned_upgraded_galaxies": [
+        "DDO161",
+        "NGC4559",
+        "UGC05721",
+        "UGC07323",
+        "UGC09992"
+      ]
+    },
+    "cf4": {
+      "description": "CF4 flow model for all (pathological for cluster members)",
+      "n_galaxies": 175,
+      "n_cf4_available": 171,
+      "n_sparc_fallback": 4
+    }
+  },
+  "inter_catalog_ratios": {
+    "hybrid_vs_sparc": {
+      "mean": 1.0975,
+      "std": 0.7008,
+      "median": 1.0,
+      "n_change_gt_10pct": 75,
+      "n_change_gt_20pct": 61,
+      "n_change_gt_50pct": 19
+    },
+    "cf4_vs_sparc": {
+      "mean": 1.071,
+      "std": 0.8261,
+      "median": 0.9002,
+      "n_change_gt_10pct": 128,
+      "n_change_gt_20pct": 111,
+      "n_change_gt_50pct": 34
+    }
+  },
+  "top_10_most_changed_cf4_vs_sparc": [
+    {
+      "galaxy": "UGC06628",
+      "D_sparc": 15.1,
+      "D_cf4": 85.61,
+      "ratio": 5.67,
+      "fD": 1
+    },
+    {
+      "galaxy": "NGC3109",
+      "D_sparc": 1.33,
+      "D_cf4": 7.31,
+      "ratio": 5.496,
+      "fD": 2
+    },
+    {
+      "galaxy": "UGC00191",
+      "D_sparc": 17.1,
+      "D_cf4": 92.67,
+      "ratio": 5.419,
+      "fD": 1
+    },
+    {
+      "galaxy": "UGC11820",
+      "D_sparc": 18.1,
+      "D_cf4": 86.8,
+      "ratio": 4.796,
+      "fD": 1
+    },
+    {
+      "galaxy": "UGC02455",
+      "D_sparc": 6.92,
+      "D_cf4": 28.55,
+      "ratio": 4.126,
+      "fD": 1
+    },
+    {
+      "galaxy": "UGC00634",
+      "D_sparc": 30.9,
+      "D_cf4": 97.59,
+      "ratio": 3.158,
+      "fD": 1
+    },
+    {
+      "galaxy": "ESO079-G014",
+      "D_sparc": 28.7,
+      "D_cf4": 70.14,
+      "ratio": 2.444,
+      "fD": 1
+    },
+    {
+      "galaxy": "UGC03546",
+      "D_sparc": 28.7,
+      "D_cf4": 68.69,
+      "ratio": 2.393,
+      "fD": 1
+    },
+    {
+      "galaxy": "PGC51017",
+      "D_sparc": 13.6,
+      "D_cf4": 30.32,
+      "ratio": 2.229,
+      "fD": 2
+    },
+    {
+      "galaxy": "UGC05986",
+      "D_sparc": 8.63,
+      "D_cf4": 18.65,
+      "ratio": 2.161,
+      "fD": 1
+    }
+  ]
+}

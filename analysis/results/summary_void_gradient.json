@@ -1,0 +1,145 @@
+{
+  "test_name": "void_field_dense_gradient",
+  "description": "Three-tier environmental RAR scatter gradient: void \u2192 field \u2192 dense",
+  "void_catalog": "Douglass+2023 VAST VoidFinder, SDSS DR7, Planck2018 cosmology",
+  "void_catalog_url": "https://zenodo.org/records/11043278",
+  "dense_catalog": "Verheijen+2001 (UMa), Tully+2013 (NED groups)",
+  "n_galaxies_total": 131,
+  "n_void": 10,
+  "n_field": 73,
+  "n_dense": 48,
+  "void_galaxies": {
+    "F565-V2": {
+      "D_Mpc": 51.8,
+      "n_points": 7,
+      "mean_res": 0.04223684368199976,
+      "std_res": 0.1054238834182911,
+      "void_id": 760
+    },
+    "F568-V1": {
+      "D_Mpc": 80.6,
+      "n_points": 15,
+      "mean_res": 0.23209142810207056,
+      "std_res": 0.13035192149545655,
+      "void_id": 369
+    },
+    "F571-8": {
+      "D_Mpc": 53.3,
+      "n_points": 13,
+      "mean_res": -0.11883548985042772,
+      "std_res": 0.35098859962293283,
+      "void_id": 369
+    },
+    "F571-V1": {
+      "D_Mpc": 80.1,
+      "n_points": 7,
+      "mean_res": -0.08014626609436297,
+      "std_res": 0.06706348568205286,
+      "void_id": 369
+    },
+    "F583-1": {
+      "D_Mpc": 35.4,
+      "n_points": 25,
+      "mean_res": 0.02741612035381358,
+      "std_res": 0.22495836887479367,
+      "void_id": 568
+    },
+    "F583-4": {
+      "D_Mpc": 53.3,
+      "n_points": 12,
+      "mean_res": -0.07262224760093927,
+      "std_res": 0.030803897515987222,
+      "void_id": 568
+    },
+    "NGC2998": {
+      "D_Mpc": 68.1,
+      "n_points": 13,
+      "mean_res": 0.10802074311468737,
+      "std_res": 0.21874500941947397,
+      "void_id": 287
+    },
+    "NGC6195": {
+      "D_Mpc": 127.8,
+      "n_points": 23,
+      "mean_res": -0.10301258825017318,
+      "std_res": 0.04196981168016774,
+      "void_id": 207
+    },
+    "UGC05005": {
+      "D_Mpc": 53.7,
+      "n_points": 11,
+      "mean_res": -0.20839170217543537,
+      "std_res": 0.11873295157748612,
+      "void_id": 760
+    },
+    "UGC05750": {
+      "D_Mpc": 58.7,
+      "n_points": 10,
+      "mean_res": -0.2391748677736695,
+      "std_res": 0.15016492662034567,
+      "void_id": 369
+    }
+  },
+  "point_level_scatter": {
+    "void_sigma": 0.2225,
+    "field_sigma": 0.1667,
+    "dense_sigma": 0.1646
+  },
+  "galaxy_level_scatter": {
+    "void_sigma": 0.1372,
+    "field_sigma": 0.1666,
+    "dense_sigma": 0.1497
+  },
+  "bootstrap_field_vs_dense": {
+    "observed_delta": 0.0169,
+    "ci_95": [
+      -0.0506,
+      0.0852
+    ]
+  },
+  "sparc_void_overlap": {
+    "sparc_distance_range_Mpc": [
+      1.0,
+      127.8
+    ],
+    "voidfinder_coverage_Mpc": [
+      30.0,
+      497.0
+    ],
+    "n_sparc_in_voidfinder_volume": 28,
+    "pct_in_range": 21.4
+  },
+  "quality_cuts": "Q <= 2, 30\u00b0 < Inc < 85\u00b0, N_points \u2265 5",
+  "error_model": "Haubner+2025",
+  "distances_used": "SPARC",
+  "bootstrap_void_vs_dense": {
+    "observed_delta": -0.0125,
+    "ci_95": [
+      -0.0932,
+      0.0522
+    ]
+  },
+  "bootstrap_void_vs_field": {
+    "observed_delta": -0.0294,
+    "ci_95": [
+      -0.106,
+      0.0296
+    ]
+  },
+  "gradient_result": "NON_MONOTONIC",
+  "interpretation": "Scatter does not follow void \u2192 field \u2192 dense gradient, environment may not correlate simply with BEC coherence",
+  "kourkchi_isolation_test": {
+    "n_isolated": 83,
+    "n_group": 44,
+    "point_level": {
+      "isolated_sigma": 0.1684,
+      "group_sigma": 0.1702,
+      "levene_p": 0.490536
+    },
+    "galaxy_level": {
+      "isolated_sigma": 0.1457,
+      "group_sigma": 0.1821,
+      "levene_p": 0.828492
+    }
+  }
+}

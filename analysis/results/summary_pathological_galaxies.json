@@ -1,0 +1,319 @@
+{
+  "test_name": "pathological_galaxy_analysis",
+  "description": "Deep dive into UGC06786, UGC06446, UGC06787 \u2014 galaxies causing pathological behavior in environmental scatter analysis due to SPARC vs CF4 distance discrepancies",
+  "target_galaxies": [
+    "UGC06786",
+    "UGC06446",
+    "UGC06787"
+  ],
+  "baseline": {
+    "n_galaxies": 131,
+    "n_dense": 48,
+    "n_field": 83,
+    "levene_p_overall": 0.640446,
+    "delta_sigma_overall": 0.0067,
+    "levene_p_low_accel": 0.487786,
+    "delta_sigma_low_accel": -0.0035
+  },
+  "per_galaxy": {
+    "UGC06786": {
+      "properties": {
+        "D_sparc_Mpc": 29.3,
+        "D_cf4_Mpc": 9.88,
+        "D_uma_Mpc": 18.6,
+        "V_helio": 772,
+        "fD": 1,
+        "Inc": 64.0,
+        "Q": 1,
+        "T": 0,
+        "Vflat": 219.4
+      },
+      "rar_under_3_distances": {
+        "SPARC": {
+          "D_Mpc": 29.3,
+          "n_points": 45,
+          "mean_res": 0.1273,
+          "std_res": 0.0631,
+          "min_log_gbar": -11.2317,
+          "max_log_gbar": -8.6169
+        },
+        "UMa_18.6": {
+          "D_Mpc": 18.6,
+          "n_points": 45,
+          "mean_res": 0.3247,
+          "std_res": 0.0631,
+          "min_log_gbar": -11.2317,
+          "max_log_gbar": -8.6169
+        },
+        "CF4": {
+          "D_Mpc": 9.88,
+          "n_points": 45,
+          "mean_res": 0.5994,
+          "std_res": 0.0631,
+          "min_log_gbar": -11.2317,
+          "max_log_gbar": -8.6169
+        }
+      },
+      "acceleration_contribution": {
+        "Deep DM": {
+          "n_points": 0
+        },
+        "Transition": {
+          "n_points": 10,
+          "mean_res": 0.17549296534196,
+          "std_res": 0.01086464978738714
+        },
+        "Baryon-dom": {
+          "n_points": 28,
+          "mean_res": 0.12095956237481939,
+          "std_res": 0.022810761336764886
+        },
+        "High gbar": {
+          "n_points": 7,
+          "mean_res": 0.08388578738542359,
+          "std_res": 0.13406279870955082
+        }
+      },
+      "jackknife": {
+        "overall": {
+          "p_with": 0.640446,
+          "p_without": 0.447225,
+          "delta_p": -0.193221,
+          "delta_sigma_with": 0.0067,
+          "delta_sigma_without": 0.0075
+        },
+        "low_accel": {
+          "p_with": 0.487786,
+          "p_without": 0.606808,
+          "delta_p": 0.119022,
+          "delta_sigma_with": -0.0035,
+          "delta_sigma_without": -0.0027
+        }
+      },
+      "membership_check": {
+        "RA": 177.289,
+        "Dec": 27.022,
+        "angular_sep_deg": 22.11,
+        "dec_offset_deg": -21.98,
+        "flag": "QUESTIONABLE \u2014 far from UMa declination",
+        "V_helio": 772,
+        "V_offset_kms": -178.0,
+        "v_flag": "consistent"
+      },
+      "virgo_infall": {
+        "D_hubble_pure": 10.58,
+        "D_cf4": 9.88,
+        "D_sparc": 29.3,
+        "cf4_vs_hubble_ratio": 0.934,
+        "cf4_correcting": false,
+        "V_expected_at_sparc_D": 2139.0,
+        "V_peculiar_implied": -1367.0,
+        "interpretation": "far-side Virgo infall"
+      },
+      "root_cause": {
+        "hyp_a_cf4_fails": "SUPPORTED",
+        "hyp_b_sparc_wrong": "POSSIBLE",
+        "hyp_c_not_uma": "SUPPORTED",
+        "most_likely": "Galaxy may not be a true UMa member"
+      }
+    },
+    "UGC06446": {
+      "properties": {
+        "D_sparc_Mpc": 12.0,
+        "D_cf4_Mpc": 9.73,
+        "D_uma_Mpc": 18.6,
+        "V_helio": 646,
+        "fD": 1,
+        "Inc": 51.0,
+        "Q": 1,
+        "T": 7,
+        "Vflat": 82.2
+      },
+      "rar_under_3_distances": {
+        "SPARC": {
+          "D_Mpc": 12.0,
+          "n_points": 17,
+          "mean_res": 0.0896,
+          "std_res": 0.1031,
+          "min_log_gbar": -11.3756,
+          "max_log_gbar": -10.8951
+        },
+        "UMa_18.6": {
+          "D_Mpc": 18.6,
+          "n_points": 17,
+          "mean_res": -0.1007,
+          "std_res": 0.1031,
+          "min_log_gbar": -11.3756,
+          "max_log_gbar": -10.8951
+        },
+        "CF4": {
+          "D_Mpc": 9.73,
+          "n_points": 17,
+          "mean_res": 0.1807,
+          "std_res": 0.1031,
+          "min_log_gbar": -11.3756,
+          "max_log_gbar": -10.8951
+        }
+      },
+      "acceleration_contribution": {
+        "Deep DM": {
+          "n_points": 0
+        },
+        "Transition": {
+          "n_points": 17,
+          "mean_res": 0.08961555790765661,
+          "std_res": 0.1030526548506145
+        },
+        "Baryon-dom": {
+          "n_points": 0
+        },
+        "High gbar": {
+          "n_points": 0
+        }
+      },
+      "jackknife": {
+        "overall": {
+          "p_with": 0.640446,
+          "p_without": 0.64712,
+          "delta_p": 0.006674,
+          "delta_sigma_with": 0.0067,
+          "delta_sigma_without": 0.0067
+        },
+        "low_accel": {
+          "p_with": 0.487786,
+          "p_without": 0.455993,
+          "delta_p": -0.031792,
+          "delta_sigma_with": -0.0035,
+          "delta_sigma_without": -0.0038
+        }
+      },
+      "membership_check": {
+        "RA": 171.669,
+        "Dec": 53.747,
+        "angular_sep_deg": 6.84,
+        "dec_offset_deg": 4.75,
+        "flag": "consistent",
+        "V_helio": 646,
+        "V_offset_kms": -304.0,
+        "v_flag": "consistent"
+      },
+      "virgo_infall": {
+        "D_hubble_pure": 8.85,
+        "D_cf4": 9.73,
+        "D_sparc": 12.0,
+        "cf4_vs_hubble_ratio": 1.1,
+        "cf4_correcting": false,
+        "V_expected_at_sparc_D": 876.0,
+        "V_peculiar_implied": -230.0,
+        "interpretation": "moderate peculiar velocity"
+      },
+      "root_cause": {
+        "hyp_a_cf4_fails": "SUPPORTED",
+        "hyp_b_sparc_wrong": "POSSIBLE",
+        "hyp_c_not_uma": "UNLIKELY",
+        "most_likely": "CF4 flow model fails in Virgo infall region"
+      }
+    },
+    "UGC06787": {
+      "properties": {
+        "D_sparc_Mpc": 21.3,
+        "D_cf4_Mpc": 11.34,
+        "D_uma_Mpc": 18.6,
+        "V_helio": 769,
+        "fD": 1,
+        "Inc": 66.0,
+        "Q": 2,
+        "T": 2,
+        "Vflat": 248.1
+      },
+      "rar_under_3_distances": {
+        "SPARC": {
+          "D_Mpc": 21.3,
+          "n_points": 71,
+          "mean_res": 0.0646,
+          "std_res": 0.0956,
+          "min_log_gbar": -11.1479,
+          "max_log_gbar": -8.1343
+        },
+        "UMa_18.6": {
+          "D_Mpc": 18.6,
+          "n_points": 71,
+          "mean_res": 0.1235,
+          "std_res": 0.0956,
+          "min_log_gbar": -11.1479,
+          "max_log_gbar": -8.1343
+        },
+        "CF4": {
+          "D_Mpc": 11.34,
+          "n_points": 71,
+          "mean_res": 0.3384,
+          "std_res": 0.0956,
+          "min_log_gbar": -11.1479,
+          "max_log_gbar": -8.1343
+        }
+      },
+      "acceleration_contribution": {
+        "Deep DM": {
+          "n_points": 0
+        },
+        "Transition": {
+          "n_points": 17,
+          "mean_res": 0.1754059223679827,
+          "std_res": 0.041160826255888294
+        },
+        "Baryon-dom": {
+          "n_points": 31,
+          "mean_res": 0.08449463801271567,
+          "std_res": 0.03976841069409671
+        },
+        "High gbar": {
+          "n_points": 23,
+          "mean_res": -0.044142667021420376,
+          "std_res": 0.05822018500339627
+        }
+      },
+      "jackknife": {
+        "overall": {
+          "p_with": 0.640446,
+          "p_without": 0.7916,
+          "delta_p": 0.151154,
+          "delta_sigma_with": 0.0067,
+          "delta_sigma_without": 0.0049
+        },
+        "low_accel": {
+          "p_with": 0.487786,
+          "p_without": 0.705611,
+          "delta_p": 0.217825,
+          "delta_sigma_with": -0.0035,
+          "delta_sigma_without": -0.0019
+        }
+      },
+      "membership_check": {
+        "RA": 177.314,
+        "Dec": 56.084,
+        "angular_sep_deg": 7.24,
+        "dec_offset_deg": 7.08,
+        "flag": "consistent",
+        "V_helio": 769,
+        "V_offset_kms": -181.0,
+        "v_flag": "consistent"
+      },
+      "virgo_infall": {
+        "D_hubble_pure": 10.53,
+        "D_cf4": 11.34,
+        "D_sparc": 21.3,
+        "cf4_vs_hubble_ratio": 1.076,
+        "cf4_correcting": false,
+        "V_expected_at_sparc_D": 1555.0,
+        "V_peculiar_implied": -786.0,
+        "interpretation": "far-side Virgo infall"
+      },
+      "root_cause": {
+        "hyp_a_cf4_fails": "SUPPORTED",
+        "hyp_b_sparc_wrong": "POSSIBLE",
+        "hyp_c_not_uma": "UNLIKELY",
+        "most_likely": "CF4 flow model fails in Virgo infall region"
+      }
+    }
+  }
+}

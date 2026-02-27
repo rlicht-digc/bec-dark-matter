@@ -1,0 +1,2596 @@
+{
+  "status": "OK",
+  "timestamp": "2026-02-24T10:34:06",
+  "removed_generated_clutter": [
+    "/Users/russelllicht/bec-dark-matter/__pycache__",
+    "/Users/russelllicht/bec-dark-matter/analysis/pipeline/__pycache__"
+  ],
+  "actions_logged": [
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/sparc_unified/rar_points_unified.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_unified.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/sparc_unified/galaxy_results_unified.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points_CLEAN.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_3000x50_verified/rar_points_CLEAN.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_3000x50_verified/rar_points.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/meta/master_catalog.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_3000x50_verified/master_catalog.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/rar_points.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_48133x50_big_base/rar_points.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/meta/master_catalog.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_48133x50_big_base/master_catalog.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/referee_battery/rerun_outputs",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/legacy_outputs/20260223_192210",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/universality_audit/universality_audit",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/universality_audit/tng_sparc_composition_sweep",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/run_all_referee_tests.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/run_all_referee_tests.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/common_rar.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/common_rar.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/run_referee_required_tests.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/run_referee_required_tests.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/run_universality_audit.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/run_universality_audit.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/tng_dataset_lineage.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/tng_dataset_lineage.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_sparc_composition_sweep.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/test_tng_sparc_composition_sweep.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_sparc_fairness_gap.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/core/scripts/test_tng_sparc_fairness_gap.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_13b_composite.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_13b_composite.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_13b_diagnostics.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_13b_diagnostics.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_13b_standalone.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_13b_standalone.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_alfalfa_yang_btfr.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_alfalfa_yang_btfr.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_alpha_with_mtotal.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_alpha_with_mtotal.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_baryon_wiggle_vs_coherence.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_baryon_wiggle_vs_coherence.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_binning_robustness.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_binning_robustness.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_brouwer_lensing_rar.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_brouwer_lensing_rar.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cf4_distance_grading.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cf4_distance_grading.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_gcore_no_rxj2248.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cluster_gcore_no_rxj2248.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_gcore_scaling.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cluster_gcore_scaling.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_rar_tian2020.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cluster_rar_tian2020.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_scale_rar.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cluster_scale_rar.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_sigma_diagnostics.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cluster_sigma_diagnostics.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_sigma_scaling.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_cluster_sigma_scaling.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_eagle_injection_recovery.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_eagle_injection_recovery.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_eagle_rar_inversion.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_eagle_rar_inversion.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_eagle_rar_inversion_v2.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_eagle_rar_inversion_v2.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_cf4_accel_binned.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_env_cf4_accel_binned.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_confound_control.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_env_confound_control.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_scatter_definitive.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_env_scatter_definitive.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_triple_distance.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_env_triple_distance.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_extended_rar_inversion.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_extended_rar_inversion.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_forward_model_bunching.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_forward_model_bunching.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_gpp_inversion_cs2.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_gpp_inversion_cs2.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_gpp_universality.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_gpp_universality.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_gpp_universality_codex.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_gpp_universality_codex.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_healing_length_distance_diag.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_healing_length_distance_diag.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_healing_length_kstar.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_healing_length_kstar.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_healing_length_scaling.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_healing_length_scaling.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_hierarchical_healing_length.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_hierarchical_healing_length.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_injection_recovery.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_injection_recovery.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_interface_oscillation.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_interface_oscillation.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_interface_oscillation_controls.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_interface_oscillation_controls.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_interface_spectral.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_interface_spectral.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_inversion_distance_sensitivity.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_inversion_distance_sensitivity.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_jackknife_robustness.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_jackknife_robustness.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_korsaga_ml_sensitivity.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_korsaga_ml_sensitivity.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_kurtosis_disambiguation.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_kurtosis_disambiguation.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_kurtosis_mhongoose.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_kurtosis_mhongoose.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_kurtosis_phase_transition.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_kurtosis_phase_transition.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lcdm_hydro_inversion.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_lcdm_hydro_inversion.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lcdm_null_inversion.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_lcdm_null_inversion.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lcdm_phase_diagram.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_lcdm_phase_diagram.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lensing_profile_shape.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_lensing_profile_shape.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_mass_split_bunching.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_mass_split_bunching.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_matched_analog_comparison.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_matched_analog_comparison.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_mc_distance_and_inversion.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_mc_distance_and_inversion.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_ngc3621_single_galaxy.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_ngc3621_single_galaxy.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_nonparametric_inversion.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_nonparametric_inversion.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_periodic_properties_and_scaling.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_periodic_properties_and_scaling.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_phangs_inner_quantum.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_phangs_inner_quantum.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_phase_diagram_model.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_phase_diagram_model.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_probes_gas_corrected.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_probes_gas_corrected.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_probes_inversion_replication.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_probes_inversion_replication.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_propensity_matched_env.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_propensity_matched_env.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_radial_variance_profile.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_radial_variance_profile.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_rar_tightness.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_rar_tightness.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_rar_tightness_probes.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_rar_tightness_probes.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_residual_power_spectrum.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_residual_power_spectrum.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_residualized_bec_signal_analysis.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_residualized_bec_signal_analysis.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_scale_hierarchy_map.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_scale_hierarchy_map.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_scale_hierarchy_rs_discriminator.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_scale_hierarchy_rs_discriminator.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_scale_parameter_analysis.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_scale_parameter_analysis.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_simulation_coherence.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_simulation_coherence.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_soliton_nfw_composite.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_soliton_nfw_composite.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_spectral_slope_alpha.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_spectral_slope_alpha.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_split_half_replication.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_split_half_replication.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tf_scatter_redshift.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_tf_scatter_redshift.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_coherence.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_tng_coherence.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_sparc_composition_sweep.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_tng_sparc_composition_sweep.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_sparc_fairness_gap.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_tng_sparc_fairness_gap.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_unified_model_adjudication.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_unified_model_adjudication.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_void_gradient.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_void_gradient.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_window_matching.py",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/tests/extended/scripts/test_window_matching.py",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/summary_lcdm_phase_diagram.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/lcdm_phase_diagram/summary_lcdm_phase_diagram.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram_r0p5_5/summary_lcdm_phase_diagram.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/lcdm_phase_diagram_r0p5_5/summary_lcdm_phase_diagram.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/summary_residualization.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/residualization/summary_residualization.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_alfalfa_yang_btfr.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_alfalfa_yang_btfr.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_alpha_mdyn.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_alpha_mdyn.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_alpha_mtotal.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_alpha_mtotal.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_baryon_wiggle_vs_coherence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_baryon_wiggle_vs_coherence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_binning_robustness.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_binning_robustness.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_brouwer_lensing_rar.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_brouwer_lensing_rar.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cf4_distance_grading.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cf4_distance_grading.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cf4_haubner.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cf4_haubner.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_classical_wave_mimicry.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_classical_wave_mimicry.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cluster_diagnostics_A2.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cluster_diagnostics_A2.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cluster_gcore_A3.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cluster_gcore_A3.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cluster_gcore_standardized.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cluster_gcore_standardized.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cluster_rar_tian2020.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cluster_rar_tian2020.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cluster_scale_rar.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cluster_scale_rar.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_cluster_sigma_scaling.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_cluster_sigma_scaling.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_distance_catalogs.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_distance_catalogs.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_eagle_injection_recovery.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_eagle_injection_recovery.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_eagle_rar_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_eagle_rar_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_eagle_rar_inversion_v2.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_eagle_rar_inversion_v2.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_env_cf4_accel_binned.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_env_cf4_accel_binned.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_env_confound_control.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_env_confound_control.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_env_definitive.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_env_definitive.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_env_triple_distance.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_env_triple_distance.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_expanded_sample.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_expanded_sample.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_extended_rar_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_extended_rar_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_forward_model_bunching.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_forward_model_bunching.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_gpp_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_gpp_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_gpp_universality.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_gpp_universality.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_acf.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_healing_length_acf.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_distance_diag.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_healing_length_distance_diag.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_kstar.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_healing_length_kstar.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_scaling.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_healing_length_scaling.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_hierarchical_healing_length.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_hierarchical_healing_length.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_injection_recovery.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_injection_recovery.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_interface_oscillation.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_interface_oscillation.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_interface_oscillation_controls.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_interface_oscillation_controls.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_interface_oscillation_demeaned.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_interface_oscillation_demeaned.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_interface_spectral_test.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_interface_spectral_test.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_inversion_distance_sensitivity.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_inversion_distance_sensitivity.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_jackknife_robustness.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_jackknife_robustness.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_korsaga_ml_sensitivity.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_korsaga_ml_sensitivity.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_kurtosis_disambiguation.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_kurtosis_disambiguation.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_kurtosis_mhongoose.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_kurtosis_mhongoose.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_kurtosis_phase_transition.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_kurtosis_phase_transition.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_lcdm_hydro_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_lcdm_hydro_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_lcdm_null_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_lcdm_null_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_lensing_profile_shape.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_lensing_profile_shape.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_literature_crossref.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_literature_crossref.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_mass_split_bunching.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_mass_split_bunching.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_matched_analog_comparison.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_matched_analog_comparison.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_mc_distance_and_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_mc_distance_and_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_mhongoose_integration.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_mhongoose_integration.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_mhongoose_sorgho2019.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_mhongoose_sorgho2019.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_nonparametric_inversion.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_nonparametric_inversion.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_pathological_galaxies.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_pathological_galaxies.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_periodic_properties_and_scaling.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_periodic_properties_and_scaling.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_phangs_inner_quantum.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_phangs_inner_quantum.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_phase4_unified_adjudication.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_phase4_unified_adjudication.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_phase_diagram_model.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_phase_diagram_model.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_probes_gas_corrected.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_probes_gas_corrected.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_probes_inversion_replication.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_probes_inversion_replication.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_propensity_matched_env.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_propensity_matched_env.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_radial_variance_profile.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_radial_variance_profile.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_residual_power_spectrum.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_residual_power_spectrum.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_simulation_coherence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_simulation_coherence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_soliton_nfw_composite.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_soliton_nfw_composite.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_sparc_orig_haubner.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_sparc_orig_haubner.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_split_half_replication.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_split_half_replication.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_tf_scatter_redshift.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_tf_scatter_redshift.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_unified.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_unified.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_validate_mhongoose_sparc.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_validate_mhongoose_sparc.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_void_gradient.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_void_gradient.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_wallaby_cf4_nodesi.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_wallaby_cf4_nodesi.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_wallaby_hubble_desi.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_wallaby_hubble_desi.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_wallaby_hubble_nodesi.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_wallaby_hubble_nodesi.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_window_matching.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/summary_window_matching.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p05/summary_fairness_gap_vs_threshold.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/tng_sparc_composition_sweep/caliper_0p05/summary_fairness_gap_vs_threshold.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p10/summary_fairness_gap_vs_threshold.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/tng_sparc_composition_sweep/caliper_0p10/summary_fairness_gap_vs_threshold.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p20/summary_fairness_gap_vs_threshold.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/tng_sparc_composition_sweep/caliper_0p20/summary_fairness_gap_vs_threshold.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p30/summary_fairness_gap_vs_threshold.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/tng_sparc_composition_sweep/caliper_0p30/summary_fairness_gap_vs_threshold.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/summary_fairness_gap_vs_threshold.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/tng_sparc_composition_sweep/summary_fairness_gap_vs_threshold.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/summary_tng_sparc_composition_sweep.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results/tng_sparc_composition_sweep/summary_tng_sparc_composition_sweep.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_baryon_wiggle_vs_coherence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_baryon_wiggle_vs_coherence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_healing_length_acf.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_healing_length_acf.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_healing_length_distance_diag.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_healing_length_distance_diag.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_healing_length_scaling.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_healing_length_scaling.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_interface_oscillation_controls.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_interface_oscillation_controls.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_interface_oscillation_demeaned.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_interface_oscillation_demeaned.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results_vm/summary_interface_spectral_test.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/analysis/results_vm/summary_interface_spectral_test.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_all.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/outputs/20260223_192210/summary_all.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_alpha_star_convergence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/outputs/20260223_192210/summary_alpha_star_convergence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_dataset_lineage.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/outputs/20260223_192210/summary_dataset_lineage.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_mass_matched_phase.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/outputs/20260223_192210/summary_mass_matched_phase.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_phase_peak_null.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/outputs/20260223_192210/summary_phase_peak_null.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_xi_organizing.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/outputs/20260223_192210/summary_xi_organizing.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_alpha_star_convergence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_alpha_star_convergence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_consistency_checks.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_consistency_checks.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_dataset_lineage.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_dataset_lineage.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_input_validation.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_input_validation.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_mass_matched_phase.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_mass_matched_phase.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_phase_peak_null.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_phase_peak_null.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/summary_xi_organizing.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190215/summary_xi_organizing.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_alpha_star_convergence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_alpha_star_convergence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_consistency_checks.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_consistency_checks.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_dataset_lineage.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_dataset_lineage.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_input_validation.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_input_validation.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_mass_matched_phase.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_mass_matched_phase.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_phase_peak_null.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_phase_peak_null.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/summary_xi_organizing.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_190934/summary_xi_organizing.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/summary_dataset_lineage.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_191129/summary_dataset_lineage.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/summary_input_validation.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_191129/summary_input_validation.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/summary_mass_matched_phase.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_191129/summary_mass_matched_phase.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/summary_phase_peak_null.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_191129/summary_phase_peak_null.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/summary_xi_organizing.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_191129/summary_xi_organizing.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_alpha_star_convergence.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_alpha_star_convergence.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_consistency_checks.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_consistency_checks.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_dataset_lineage.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_dataset_lineage.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_input_validation.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_input_validation.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_mass_matched_phase.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_mass_matched_phase.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_phase_peak_null.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_phase_peak_null.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_xi_organizing.json",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/summaries/rerun_outputs/20260223_203407/summary_xi_organizing.json",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/alpha_mdyn_vflat.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/alpha_mdyn_vflat.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/alpha_mstar_vs_mtotal.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/alpha_mstar_vs_mtotal.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/cluster_gcore_analysis.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/cluster_gcore_analysis.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/cluster_gcore_standardized.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/cluster_gcore_standardized.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/cluster_sigma_diagnostics.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/cluster_sigma_diagnostics.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/cluster_sigma_vs_gdagger.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/cluster_sigma_vs_gdagger.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_corrected/plot_A_cs2_profiles.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/gpp_corrected/plot_A_cs2_profiles.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_corrected/plot_B_universality.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/gpp_corrected/plot_B_universality.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_corrected/plot_C_cs2_distribution.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/gpp_corrected/plot_C_cs2_distribution.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_corrected/plot_D_tf_validity.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/gpp_corrected/plot_D_tf_validity.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_corrected/plot_E_subsample_comparison.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/gpp_corrected/plot_E_subsample_comparison.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_universality/gpp_universality_3phase.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/gpp_universality/gpp_universality_3phase.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/injection_recovery_power.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/injection_recovery_power.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/plot_a_variance_vs_gbar.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/lcdm_phase_diagram/plot_a_variance_vs_gbar.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/plot_b_window_sweep_stability.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/lcdm_phase_diagram/plot_b_window_sweep_stability.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/plot_c_permutation_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/lcdm_phase_diagram/plot_c_permutation_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram_r0p5_5/plot_a_variance_vs_gbar.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/lcdm_phase_diagram_r0p5_5/plot_a_variance_vs_gbar.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram_r0p5_5/plot_b_window_sweep_stability.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/lcdm_phase_diagram_r0p5_5/plot_b_window_sweep_stability.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram_r0p5_5/plot_c_permutation_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/lcdm_phase_diagram_r0p5_5/plot_c_permutation_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/radial_variance_profile.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/radial_variance_profile.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/radial_variance_rescaled.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/radial_variance_rescaled.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_A_raw_vs_residualized_targets.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/residualization/plot_A_raw_vs_residualized_targets.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_B_confound_r2_bar_chart.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/residualization/plot_B_confound_r2_bar_chart.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_C_signal_recovery_delta_R2.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/residualization/plot_C_signal_recovery_delta_R2.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_D_acf_lag1_env_histograms.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/residualization/plot_D_acf_lag1_env_histograms.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/fig_scale_map.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/scale_hierarchy/fig_scale_map.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/self_consistent_mass.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/self_consistent_mass.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_acf.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/simulation_coherence_acf.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_periodicity.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/simulation_coherence_periodicity.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_summary.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/simulation_coherence_summary.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/test7_transition_function.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/test7_transition_function.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/test8_boson_bunching.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/test8_boson_bunching.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/test9_kross_redshift_evolution.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/test9_kross_redshift_evolution.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_score_heatmaps_by_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_score_heatmaps_by_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_score_heatmaps_by_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_score_heatmaps_by_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_score_heatmaps_by_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_score_heatmaps_by_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_score_heatmaps_by_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_score_heatmaps_by_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_score_heatmaps_by_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_score_heatmaps_by_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/fairness_best_effect_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/fairness_best_effect_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/fairness_best_ratio_vs_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/fairness_best_ratio_vs_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/fairness_score_heatmaps_by_threshold.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/analysis/results/tng_sparc_composition_sweep/fairness_score_heatmaps_by_threshold.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/figures/fig_alpha_star.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/20260223_192210/figures/fig_alpha_star.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/figures/fig_mass_matched_phase.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/20260223_192210/figures/fig_mass_matched_phase.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/figures/fig_phase_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/20260223_192210/figures/fig_phase_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/figures/fig_xi_organizing.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/20260223_192210/figures/fig_xi_organizing.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_alpha_beta_sweeps.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_alpha_beta_sweeps.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_comparison_compact.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_comparison_compact.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_pca_explained_variance.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_pca_explained_variance.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_pca_pc1_shape.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_pca_pc1_shape.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_shuffle_null_SPARC.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_shuffle_null_SPARC.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_shuffle_null_TNG_BIG48133.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_shuffle_null_TNG_BIG48133.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_shuffle_null_TNG_DEV3000.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_shuffle_null_TNG_DEV3000.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_split_half_SPARC.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_split_half_SPARC.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_split_half_TNG_BIG48133.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_split_half_TNG_BIG48133.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/plot_split_half_TNG_DEV3000.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/outputs/universality_audit/plot_split_half_TNG_DEV3000.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/fig_alpha_star.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190215/fig_alpha_star.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/fig_mass_matched_phase.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190215/fig_mass_matched_phase.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/fig_phase_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190215/fig_phase_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/fig_xi_organizing.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190215/fig_xi_organizing.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/fig_alpha_star.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190934/fig_alpha_star.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/fig_mass_matched_phase.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190934/fig_mass_matched_phase.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/fig_phase_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190934/fig_phase_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/fig_xi_organizing.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_190934/fig_xi_organizing.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/fig_mass_matched_phase.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_191129/fig_mass_matched_phase.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/fig_phase_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_191129/fig_phase_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/fig_xi_organizing.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_191129/fig_xi_organizing.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/fig_alpha_star.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_203407/fig_alpha_star.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/fig_mass_matched_phase.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_203407/fig_mass_matched_phase.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/fig_phase_null.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_203407/fig_phase_null.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/fig_xi_organizing.png",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/figures/rerun_outputs/20260223_203407/fig_xi_organizing.png",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/composite_per_galaxy.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/composite_per_galaxy.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/dataset_lineage_audit.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/dataset_lineage_audit.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/dataset_lineage_audit_post_verified.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/dataset_lineage_audit_post_verified.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/eagle_matched_analogs.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/eagle_matched_analogs.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_cf4_haubner.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/galaxy_results_cf4_haubner.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_sparc_orig_haubner.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/galaxy_results_sparc_orig_haubner.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_unified.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/galaxy_results_unified.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_wallaby_cf4_nodesi.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/galaxy_results_wallaby_cf4_nodesi.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_wallaby_hubble_desi.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/galaxy_results_wallaby_hubble_desi.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_wallaby_hubble_nodesi.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/galaxy_results_wallaby_hubble_nodesi.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_corrected/galaxy_gpp_results.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/gpp_corrected/galaxy_gpp_results.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_galaxy_cs2_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/gpp_galaxy_cs2_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/gpp_pointwise_inversion.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/gpp_pointwise_inversion.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/quality_subsample_results.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/quality_subsample_results.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/rar_points_unified.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_wallaby_cf4_nodesi.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/rar_points_wallaby_cf4_nodesi.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_wallaby_hubble_desi.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/rar_points_wallaby_hubble_desi.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_wallaby_hubble_nodesi.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/rar_points_wallaby_hubble_nodesi.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/galaxy_residuals.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/residualization/galaxy_residuals.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/direction_sanity_pairs.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/direction_sanity_pairs.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/direction_sanity_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/direction_sanity_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/galaxy_scale_table.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/galaxy_scale_table.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/horse_race_sigma_dm_robust.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/horse_race_sigma_dm_robust.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/point_scale_table.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/point_scale_table.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/results_scale_hierarchy.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/results_scale_hierarchy.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/rs_split_pairs_primary.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/rs_split_pairs_primary.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/rs_vs_xi_split_by_caliper.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/rs_vs_xi_split_by_caliper.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/xi_split_pairs_primary.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/scale_hierarchy/xi_split_pairs_primary.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/cleanup_executed.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/cleanup_executed.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/cleanup_plan.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/cleanup_plan.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_20260223_131820.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_20260223_131820.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_20260223_132540.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_20260223_132540.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_20260223_134245.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_20260223_134245.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_20260223_191411.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_20260223_191411.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_dryrun_20260223_131411.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_dryrun_20260223_131411.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_dryrun_20260223_131820.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_dryrun_20260223_131820.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/organize_remaining_tng_dryrun_20260223_191411.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/organize_remaining_tng_dryrun_20260223_191411.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/quality_cut_reconstruction.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/quality_cut_reconstruction.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/registry_runs.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/registry_runs.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/selected_ids_catalog.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/session_recovery/selected_ids_catalog.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_matched_analogs.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_matched_analogs.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/dataset_lineage_audit.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/dataset_lineage_audit.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_gap_vs_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_gap_vs_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_top10_by_mm_score.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/fairness_top10_by_mm_score.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/bootstrap_ci_best_configs.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/bootstrap_ci_best_configs.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_gap_vs_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_gap_vs_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_gap_vs_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_gap_vs_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_gap_vs_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_gap_vs_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_gap_vs_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_gap_vs_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_best_per_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_best_per_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_rows.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_rows.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/composition_ranking.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/composition_ranking.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/fairness_gap_vs_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/fairness_gap_vs_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/pairfloor30_best_by_caliper.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/pairfloor30_best_by_caliper.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/pairfloor30_best_per_threshold.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/pairfloor30_best_per_threshold.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/pairfloor30_ranking.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/tng_sparc_composition_sweep/pairfloor30_ranking.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/trgb_cepheid_subsample.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/analysis/results/trgb_cepheid_subsample.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_alpha_star_convergence_table.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/20260223_192210/summary_alpha_star_convergence_table.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/alpha_sweep.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/alpha_sweep.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/alpha_sweep_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/alpha_sweep_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/alpha_sweep_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/alpha_sweep_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/alpha_sweep_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/alpha_sweep_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/beta_sweep.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/beta_sweep.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/beta_sweep_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/beta_sweep_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/beta_sweep_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/beta_sweep_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/beta_sweep_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/beta_sweep_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/boundary_model_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/boundary_model_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/comparison_compact_table.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/comparison_compact_table.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_duplication.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_duplication.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_duplication_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_duplication_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_duplication_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_duplication_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_duplication_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_duplication_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_env_swap.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_env_swap.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_env_swap_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_env_swap_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_env_swap_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_env_swap_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_env_swap_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_env_swap_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_shuffle_null.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_shuffle_null.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_shuffle_null_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_shuffle_null_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_shuffle_null_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_shuffle_null_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_shuffle_null_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_shuffle_null_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_split_half.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_split_half.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_split_half_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_split_half_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_split_half_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_split_half_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_split_half_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_split_half_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_synthetic_injection.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_synthetic_injection.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_synthetic_injection_SPARC.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_synthetic_injection_SPARC.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_synthetic_injection_TNG_BIG48133.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_synthetic_injection_TNG_BIG48133.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/controls_synthetic_injection_TNG_DEV3000.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/controls_synthetic_injection_TNG_DEV3000.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/df_gal.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/df_gal.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/df_resid.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/df_resid.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/invariant_sweep_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/invariant_sweep_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/pca_loadings.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/pca_loadings.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/pca_pc1_shape.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/pca_pc1_shape.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/pca_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/pca_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/ratio_regression_summary.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/ratio_regression_summary.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/ratio_residuals.parquet",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/ratio_residuals.parquet",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/boundary_model_summary_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/boundary_model_summary_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/controls_duplication_TNG_BIG48133_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/controls_duplication_TNG_BIG48133_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/controls_env_swap_TNG_BIG48133_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/controls_env_swap_TNG_BIG48133_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/controls_shuffle_null_TNG_BIG48133_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/controls_shuffle_null_TNG_BIG48133_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/controls_split_half_TNG_BIG48133_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/controls_split_half_TNG_BIG48133_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/controls_synthetic_injection_TNG_BIG48133_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/controls_synthetic_injection_TNG_BIG48133_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/invariant_sweep_summary_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/invariant_sweep_summary_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/pca_summary_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/pca_summary_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/step1_full_big_backup/ratio_regression_summary_big_full.csv",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/tables/outputs/universality_audit/step1_full_big_backup/ratio_regression_summary_big_full.csv",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/report_phase4_unified_adjudication.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/report_phase4_unified_adjudication.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/scale_map_report.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/scale_hierarchy/scale_map_report.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/FINAL_STATUS.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/session_recovery/FINAL_STATUS.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/missing_vs_present.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/session_recovery/missing_vs_present.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_dataset_versioning_plan.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_dataset_versioning_plan.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_one_page_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/outputs/tng_sparc_composition_sweep/fairness_one_page_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_one_page_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/caliper_0p05/fairness_one_page_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_one_page_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/caliper_0p10/fairness_one_page_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_one_page_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/caliper_0p20/fairness_one_page_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_one_page_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/caliper_0p30/fairness_one_page_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/caliper_sensitivity_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/fairness_one_page_summary.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/analysis/results/tng_sparc_composition_sweep/fairness_one_page_summary.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/docs/reports/summary_rar_tng.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/docs/reports/summary_rar_tng.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/dataset_lineage.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/outputs/20260223_192210/dataset_lineage.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210/summary_all.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/outputs/20260223_192210/summary_all.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/comparison_compact.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/outputs/universality_audit/comparison_compact.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/project_map.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/outputs/universality_audit/project_map.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/report.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/outputs/universality_audit/report.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit/report_unified_full_controls.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/outputs/universality_audit/report_unified_full_controls.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190215/dataset_lineage.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/rerun_outputs/20260223_190215/dataset_lineage.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_190934/dataset_lineage.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/rerun_outputs/20260223_190934/dataset_lineage.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_191129/dataset_lineage.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/rerun_outputs/20260223_191129/dataset_lineage.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/dataset_lineage.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/rerun_outputs/20260223_203407/dataset_lineage.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "symlink",
+      "source": "/Users/russelllicht/bec-dark-matter/rerun_outputs/20260223_203407/summary_rar_tng.md",
+      "target": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/artifacts/markdown/rerun_outputs/20260223_203407/summary_rar_tng.md",
+      "note": "linked into canonical hub"
+    },
+    {
+      "kind": "remove",
+      "source": "/Users/russelllicht/bec-dark-matter/__pycache__",
+      "target": null,
+      "note": "removed generated __pycache__ directory"
+    },
+    {
+      "kind": "remove",
+      "source": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/__pycache__",
+      "target": null,
+      "note": "removed generated __pycache__ directory"
+    }
+  ]
+}

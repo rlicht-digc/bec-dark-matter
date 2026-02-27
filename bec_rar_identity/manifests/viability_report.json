@@ -1,0 +1,20 @@
+{
+  "status": "OK",
+  "timestamp": "2026-02-24T10:34:06",
+  "scope": "BEC=RAR identity audit (BH/singularity excluded)",
+  "counts": {
+    "test_scripts_total": 82,
+    "test_scripts_syntax_ok": 82,
+    "test_scripts_syntax_fail": 0,
+    "summary_json_total": 124,
+    "summary_json_valid": 124,
+    "summary_json_invalid": 0
+  },
+  "invalid_tests": [],
+  "invalid_summary_json": [],
+  "notes": [
+    "Out-of-place root artifacts were moved into archive/root_orphans and indexed.",
+    "Generated clutter (__pycache__, .DS_Store) was removed.",
+    "No BH/singularity outputs were linked into this hub."
+  ]
+}

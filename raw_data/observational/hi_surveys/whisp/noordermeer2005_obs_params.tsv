@@ -1,0 +1,114 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-16T15:57:34 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-16T15:57:34	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A+A/442/137/table2&-out.max=unlimited&-out.all	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_34420137
+#Name: J/A+A/442/137
+#Title: HI observations of WHISP disk galaxies (Noordermeer+, 2005)
+#INFO	ivoid=ivo://cds.vizier/j/a+a/442/137	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/a+a/442/137	    IVOID of underlying data collection
+#INFO	creator=Noordermeer E.	    First author or institution
+#INFO	cites=bibcode:2005A&A...442..137N	    Article or Data origin sources
+#INFO	journal=A&A	    Journal name
+#INFO	original_date=2005	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/442/137	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.34420137	    Dataset identifier that can be used for citation
+#INFO	publication_date=2017-06-21	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_A_A_442_137_table2:
+#Name: J/A+A/442/137/table2
+#Title: Observational parameters
+#Column	recno	(I8)	Record number assigned by the VizieR team. Should Not be used for identification.	[ucd=meta.record]
+#Column	UGC	(I5)	UGC (<VII/26>) number	[ucd=meta.id;meta.main]
+#Column	ObsDate	(A10)	Observation date	[ucd=time.epoch;obs]
+#Column	n_ObsDate	(A1)	[+] +: Observed before the upgrade of the WSRT	[ucd=meta.note]
+#Column	rRA	(F4.1)	Spatial resolution of the unsmoothed data	[ucd=pos.angResolution]
+#Column	rDE	(F4.1)	Spatial resolution of the unsmoothed data	[ucd=pos.angResolution]
+#Column	rVel	(F5.2)	Velocity resolution before Hanning smoothing	[ucd=phys.veloc]
+#Column	rmsch	(F5.2)	rms noise level in the unsmoothed channel maps, in mJy/beam	[ucd=instr.det.noise]
+#Column	rmsmap	(F5.2)	1 sigma column density in the maps shown in the atlas, in 10^19^atoms/cm^2^	[ucd=stat.stdev;phys.columnDensity]
+#Column	Prev	(a13)	Previous 21 cm synthesis observations, in previous.dat file	[ucd=meta.bib]
+#Column	Rem	(a23)	Remarks	[ucd=meta.note]
+#Column	Fig	(a10)	Figure name	[ucd=meta.bib.fig]
+recno	UGC	ObsDate	n_ObsDate	rRA	rDE	rVel	rmsch	rmsmap	Prev	Rem	Fig
+ 	 	"Y:M:D"	 	arcsec	arcsec	km/s	mJy	10-19cm-2	 	 	
+--------	-----	----------	-	----	----	-----	-----	-----	-------------	-----------------------	----------
+       1	   89	2000-09-01	 	16.1	37.9	10.03	 0.64	 3.25	O93          	1 pointing with No 94  	img106.gif
+       2	   94	2000-09-01	 	16.1	37.9	10.03	 0.64	 2.86	O93          	1 pointing with No 89  	img106.gif
+       3	  232	2000-07-01	 	15.7	29.9	10.04	 0.78	 4.97	             	                       	img107.gif
+       4	  499	2000-08-01	 	11.1	19.4	10.04	 0.69	 2.56	H82, S87     	1 pointing with No 508 	img108.gif
+       5	  508	2000-08-01	 	11.1	19.4	10.04	 0.69	 2.82	             	1 pointing with No 499 	img109.gif
+       6	  624	2000-07-01	 	10.7	24.2	10.04	 0.61	11.30	             	                       	img110.gif
+       7	  798	2000-08-01	 	12.6	23.2	10.04	 0.73	 3.13	             	                       	img111.gif
+       8	 1310	2000-06-01	 	12.0	31.8	 9.98	 0.90	 3.66	VM88         	                       	img112.gif
+       9	 1541	2000-08-01	 	16.1	27.0	10.07	 0.79	 7.06	             	                       	img113.gif
+      10	 2045	2000-08-01	 	15.9	34.0	 9.94	 0.67	 2.75	H03          	                       	img114.gif
+      11	 2141	1994-01-01	+	 8.3	19.4	 4.98	 3.51	71.80	             	                       	img115.gif
+      12	 2154	1997-07-01	+	10.1	18.0	19.80	 1.20	 2.88	A79, S84     	                       	img116.gif
+      13	 2183	2000-04-01	 	10.6	26.0	 9.94	 0.79	 6.52	             	                       	img117.gif
+      14	 2487	2000-12-01	 	11.8	22.2	10.06	 0.87	 1.29	             	                       	img118.gif
+      15	 2916	2000-04-01	 	10.8	13.2	10.03	 0.59	16.80	             	                       	img119.gif
+      16	 2941	2000-07-01	 	10.7	32.3	 5.06	 1.31	 6.47	             	                       	img120.gif
+      17	 2953	2001-09-01	 	10.7	14.4	 9.91	 0.60	 1.39	             	                       	img121.gif
+      18	 3205	2000-12-01	 	10.6	24.5	10.01	 0.61	15.50	             	                       	img122.gif
+      19	 3354	2000-11-01	 	16.9	21.1	 9.98	 0.57	 5.93	             	                       	img123.gif
+      20	 3382	2000-12-01	 	12.2	14.1	 5.04	 0.75	 1.20	             	                       	img124.gif
+      21	 3407	2000-12-01	 	12.7	17.8	10.01	 0.71	 2.38	             	                       	img125.gif
+      22	 3426	2002-01-01	 	12.3	13.0	 5.03	 0.54	 1.20	             	                       	img126.gif
+      23	 3546	2000-12-01	 	12.2	14.9	 9.95	 0.63	 1.13	VW83, VD91   	                       	img127.gif
+      24	 3580	1994-01-01	+	 9.1	10.2	 4.98	 2.50	 5.45	B94          	                       	img128.gif
+      25	 3642	2000-05-01	 	12.6	13.4	10.03	 0.75	 3.69	             	                       	img129.gif
+      26	 3965	2000-04-01	 	11.7	21.4	 2.51	 1.84	 1.95	             	                       	img130.gif
+      27	 3993	2000-07-01	 	12.2	12.3	 5.03	 0.82	 1.32	             	                       	img131.gif
+      28	 4458	2002-07-01	 	15.5	43.6	10.04	 0.74	 3.14	             	                       	img132.gif
+      29	 4605	2000-04-01	 	12.8	13.7	 9.94	 0.69	18.40	W88          	                       	img133.gif
+      30	 4637	2002-07-01	 	12.6	12.4	 9.94	 0.68	 0.74	             	                       	img134.gif
+      31	 4666	2000-08-01	 	11.8	15.6	 9.91	 0.69	 2.95	S80          	                       	img135.gif
+      32	 4862	2000-07-01	 	15.5	24.8	 5.00	 0.99	 6.07	S94          	                       	img136.gif
+      33	 5060	2000-07-01	 	15.6	33.2	 4.99	 0.88	 2.04	             	                       	img137.gif
+      34	 5253	1993-08-01	+	11.6	12.4	19.92	 1.82	 3.64	O93          	                       	img138.gif
+      35	 5351	2000-08-01	 	14.0	20.8	 9.94	 0.75	 4.11	C89, C92     	                       	img139.gif
+      36	 5559	1996-06-01	+	 9.8	26.3	19.92	 1.98	31.10	W91          	                       	img140.gif
+      37	 5906	2000-08-01	 	34.6	15.8	 4.99	 1.05	 2.04	             	                       	img141.gif
+      38	 5960	2000-04-01	 	21.7	11.6	 4.97	 1.40	 6.45	             	                       	img142.gif
+      39	 6001	2000-08-01	 	21.4	11.7	 4.99	 0.97	 5.07	             	                       	img143.gif
+      40	 6118	2000-07-01	 	35.2	15.7	 9.94	 0.78	 4.35	VM83b        	                       	img144.gif
+      41	 6283	1996-04-01	+	18.7	12.5	 4.97	 3.11	28.90	GR02         	                       	img145.gif
+      42	 6621	2002-07-01	 	31.2	15.9	 9.97	 0.59	 3.70	O93          	1 pointing with No 6623	img146.gif
+      43	 6623	2002-07-01	 	31.2	15.9	 9.97	 0.59	 3.70	O93          	1 pointing with No 6621	img147.gif
+      44	 6742	2000-04-01	 	14.1	12.8	 4.97	 0.81	 1.84	             	                       	img148.gif
+      45	 6786	2000-08-01	 	15.5	36.0	 9.95	 0.74	 1.48	VD89, H00    	                       	img149.gif
+      46	 6787	2000-04-01	 	12.6	13.8	 9.92	 0.65	 2.14	VD94         	                       	img150.gif
+      47	 7166	1997-06-01	+	20.8	12.9	 4.98	 2.98	 1.73	B77, P92, M99	                       	img151.gif
+      48	 7256	2000-07-01	 	30.7	15.3	 4.98	 1.76	 2.29	VD88         	                       	img152.gif
+      49	 7489	1997-08-01	+	18.2	11.4	 4.98	 4.30	 5.18	             	                       	img153.gif
+      50	 7506	2000-08-01	 	13.0	10.3	 5.00	 0.93	13.10	             	                       	img154.gif
+      51	 7704	2000-08-01	 	21.3	10.0	 4.98	 0.93	 4.69	             	                       	img155.gif
+      52	 7989	1994-10-01	+	 8.0	13.2	19.80	 1.13	 9.73	W84          	                       	img156.gif
+      53	 8271	2000-07-01	 	10.2	19.9	 4.98	 0.91	 0.98	             	                       	img157.gif
+      54	 8699	2000-08-01	 	16.9	10.7	 9.97	 0.68	12.40	VM83a        	                       	img158.gif
+      55	 8805	1997-07-01	+	19.5	10.6	 5.00	 4.41	 2.49	             	                       	img159.gif
+      56	 8863	2000-08-01	 	15.8	22.4	 9.95	 0.66	 2.11	             	                       	img160.gif
+      57	 9133	2000-07-01	 	15.8	28.8	10.02	 0.70	 2.44	B92, B94     	                       	img161.gif
+      58	 9644	2000-07-01	 	10.5	25.6	 5.08	 1.08	 9.41	             	                       	img162.gif
+      59	10448	2000-07-01	 	10.6	32.1	 5.15	 1.10	 5.26	             	                       	img163.gif
+      60	11269	2000-07-01	 	12.2	14.4	 9.97	 0.59	 1.78	             	                       	img164.gif
+      61	11670	2000-05-01	 	11.3	25.0	 9.91	 0.73	 2.37	K84          	                       	img165.gif
+      62	11852	2000-07-01	 	16.1	35.7	10.08	 0.78	 4.12	             	                       	img166.gif
+      63	11914	2000-09-01	 	10.5	23.5	 9.92	 0.68	 2.25	VM95         	                       	img167.gif
+      64	11951	1994-01-01	+	10.1	14.1	 4.98	 3.04	54.50	             	                       	img168.gif
+      65	12043	2000-04-01	 	 9.9	25.9	 4.98	 1.22	 9.50	             	                       	img169.gif
+      66	12276	2002-07-01	 	10.4	19.3	 5.05	 0.84	 9.45	             	                       	img170.gif
+      67	12713	2000-06-01	 	11.6	22.0	 4.97	 0.95	 1.78	VD91b        	                       	img171.gif
+      68	12815	2000-08-01	 	10.4	33.4	10.03	 0.70	 9.62	             	                       	img172.gif
+

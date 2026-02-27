@@ -1,0 +1,181 @@
+{
+  "test": "simulation_coherence",
+  "description": "Comparison of radial coherence (ACF, Lomb-Scargle periodicity) in RAR residuals between EAGLE \u039bCDM simulation and SPARC observations.",
+  "parameters": {
+    "g_dagger": 1.2e-10,
+    "min_pts_eagle": 8,
+    "min_pts_sparc": 15,
+    "min_mbar": 1000000000.0,
+    "n_surrogates": 200,
+    "n_bootstrap": 10000,
+    "n_permutations": 2000,
+    "eagle_aperture_radii_kpc": [
+      1.0,
+      3.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      70.0,
+      100.0
+    ]
+  },
+  "sample": {
+    "eagle_n_galaxies": 8837,
+    "sparc_n_galaxies": 67,
+    "sparc_subsampled_n": 67
+  },
+  "eagle_acf": {
+    "mean": 0.5998,
+    "se": 0.0015,
+    "median": 0.6134,
+    "std": 0.1452,
+    "ci_95": [
+      0.5967,
+      0.6026
+    ],
+    "ci_excludes_zero": true,
+    "t_stat": 388.205,
+    "p_one_sided": 0.0,
+    "frac_positive": 0.999,
+    "n_positive": 8831,
+    "n_total": 8837,
+    "binom_p": 0.0
+  },
+  "sparc_acf": {
+    "mean": 0.6997,
+    "se": 0.0226,
+    "median": 0.7356,
+    "std": 0.1847,
+    "ci_95": [
+      0.6546,
+      0.7424
+    ],
+    "ci_excludes_zero": true,
+    "t_stat": 31.008,
+    "p_one_sided": 2.287357401227732e-41,
+    "frac_positive": 1.0,
+    "n_positive": 67,
+    "n_total": 67,
+    "binom_p": 6.776263578034403e-21
+  },
+  "sparc_subsampled_acf": {
+    "mean": 0.3297,
+    "se": 0.0404,
+    "median": 0.293,
+    "std": 0.3308,
+    "ci_95": [
+      0.2492,
+      0.4068
+    ],
+    "ci_excludes_zero": true,
+    "t_stat": 8.156,
+    "p_one_sided": 6.961954190974491e-12,
+    "frac_positive": 0.821,
+    "n_positive": 55,
+    "n_total": 67,
+    "binom_p": 5.136597721770502e-08
+  },
+  "comparison_eagle_vs_sparc_full": {
+    "EAGLE_mean": 0.5998,
+    "EAGLE_se": 0.0015,
+    "EAGLE_median": 0.6134,
+    "EAGLE_N": 8837,
+    "SPARC_full_mean": 0.6997,
+    "SPARC_full_se": 0.0226,
+    "SPARC_full_median": 0.7356,
+    "SPARC_full_N": 67,
+    "welch_t": -4.42,
+    "welch_p": 3.722835287806154e-05,
+    "mwu_p": 2.0850376783616252e-07,
+    "ks_stat": 0.3424,
+    "ks_p": 1.8275499085980386e-07,
+    "cohens_d": -0.602
+  },
+  "comparison_eagle_vs_sparc_10pt": {
+    "EAGLE_mean": 0.5998,
+    "EAGLE_se": 0.0015,
+    "EAGLE_median": 0.6134,
+    "EAGLE_N": 8837,
+    "SPARC_10pt_mean": 0.3297,
+    "SPARC_10pt_se": 0.0404,
+    "SPARC_10pt_median": 0.293,
+    "SPARC_10pt_N": 67,
+    "welch_t": 6.678,
+    "welch_p": 5.970718873741415e-09,
+    "mwu_p": 1.4466674791770085e-12,
+    "ks_stat": 0.4918,
+    "ks_p": 2.351286383926391e-15,
+    "cohens_d": 1.057
+  },
+  "eagle_permutation_null": {
+    "n_sig_005": 8061,
+    "n_total": 8837,
+    "frac_sig": 0.9122,
+    "fisher_combined_p": 0.0
+  },
+  "periodicity": {
+    "eagle_n_sig": 251,
+    "eagle_n_total": 8837,
+    "eagle_frac": 0.0284,
+    "sparc_n_sig": 25,
+    "sparc_n_total": 67,
+    "sparc_frac": 0.3731,
+    "fisher_p": 3.3988569870346586e-21
+  },
+  "wavelength_eagle_sig": {
+    "n": 251,
+    "median_kpc": 48.28,
+    "q25_kpc": 48.28,
+    "q75_kpc": 48.28
+  },
+  "wavelength_sparc_sig": {
+    "n": 25,
+    "median_kpc": 7.1,
+    "q25_kpc": 3.59,
+    "q75_kpc": 17.59
+  },
+  "psd_slopes_eagle": {
+    "n": 8837,
+    "mean": -0.437,
+    "se": 0.01,
+    "median": -0.375
+  },
+  "verdicts": {
+    "acf": "EAGLE_LOWER_ACF",
+    "periodicity": "SPARC_MORE_PERIODIC",
+    "overall": "POTENTIALLY_DISCRIMINATING \u2014 SPARC shows MORE coherence/periodicity than \u039bCDM. This could support a quantum coherence interpretation, but resolution effects need investigation."
+  },
+  "tng_requirements": {
+    "status": "INSUFFICIENT_DATA",
+    "available_radii": 4,
+    "radii_kpc": [
+      5,
+      10,
+      30,
+      100
+    ],
+    "minimum_needed": 8,
+    "extraction_requirements": {
+      "method": "TNG API particle data download",
+      "description": "Download particle data for each subhalo and compute enclosed mass profiles at ~15 logarithmically spaced radii from 0.5\u00d7R_half to 5\u00d7R_half",
+      "api_endpoint": "https://www.tng-project.org/api/TNG100-1/snapshots/99/subhalos/<id>/",
+      "data_needed": [
+        "PartType0 (gas) coordinates + masses",
+        "PartType1 (DM) coordinates + masses",
+        "PartType4 (stars) coordinates + masses"
+      ],
+      "n_galaxies": "~20,000 (after mass cut)",
+      "estimated_download": "~50-100 GB of particle data",
+      "estimated_compute": "~2-4 hours on cloud with 8+ cores",
+      "alternative": "Use TNG JupyterLab (https://www.tng-project.org/data/lab/) to run batch extraction script server-side, avoiding download"
+    }
+  },
+  "figures": {
+    "acf_comparison": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_acf.png",
+    "periodicity_comparison": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_periodicity.png",
+    "summary": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_summary.png"
+  }
+}

@@ -1,0 +1,25 @@
+# MHONGOOSE: ESO444-G084 rotation curve from Nkomo+2025 (A&A 699, A372)
+# Derived from MeerKAT MHONGOOSE survey, mid-resolution TiRiFiC model
+# Distance: 4.6 Mpc, Inclination: 49.0 deg, PA: 90.0 deg
+# M_HI: 1.1e8 Msun, M_star: 4.9e6 Msun
+# (M/L)_3.4um: 0.20 (WISE-derived, Cluver+2014)
+# ISO halo: rho_0 = 16.05e-3 Msun/pc^3, r_c = 3.48 kpc (for M/L=0.20)
+# Vc = asymmetric drift corrected circular velocity
+# R_kpc	Vrot_kms	Vc_kms	eVc_kms
+0.00	0.00	0.00	0.00
+0.09	2.17	3.21	0.17
+0.23	5.46	7.11	0.44
+0.42	10.07	11.71	0.80
+0.61	14.29	15.40	0.72
+0.81	18.02	19.13	0.55
+1.00	21.48	22.62	0.52
+1.19	24.14	25.88	0.60
+1.39	26.79	29.06	0.73
+1.59	29.45	32.61	0.46
+1.78	32.11	35.87	0.69
+1.97	34.77	37.10	0.58
+2.36	37.68	40.99	0.61
+2.75	40.59	45.33	0.80
+2.94	44.01	48.64	3.03
+3.40	48.04	50.97	3.41
+3.87	48.69	51.90	3.36

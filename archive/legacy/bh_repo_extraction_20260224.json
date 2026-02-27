@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-24",
+  "action": "extract_bh_subproject_to_standalone_local_repo",
+  "source": "/Users/russelllicht/bec-dark-matter/subprojects/bh_singularity",
+  "destination": "/Users/russelllicht/bh-singularity",
+  "destination_repo_initialized": true,
+  "source_now_symlink": "../../bh-singularity",
+  "compatibility_symlinks_retained": [
+    "outputs_bh",
+    "outputs_bh3",
+    "run_bh_viability.py",
+    "run_bh_viability_modes.py"
+  ]
+}

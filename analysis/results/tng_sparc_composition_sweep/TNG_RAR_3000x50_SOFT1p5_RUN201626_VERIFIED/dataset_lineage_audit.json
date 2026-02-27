@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-02-23T03:11:17.001595+00:00",
+  "results_root": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED",
+  "known_dataset_ids": [
+    "TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED"
+  ],
+  "n_files_scanned": 3,
+  "n_missing_dataset_id": 0,
+  "strict_failed": false,
+  "outputs": {
+    "csv": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/dataset_lineage_audit.csv",
+    "json": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/dataset_lineage_audit.json"
+  }
+}

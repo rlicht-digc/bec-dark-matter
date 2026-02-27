@@ -1,0 +1,18 @@
+Table 2 
+Surface Brightness Profile Columns
+
+
+Column	Units	Description	
+(1)	(2)	(3)	
+R	arcsec	Isophote semimajor axis length (= a)	
+SB	mag arcsec^-2	Median SB along the isophote	
+SB_e	mag arcsec^-2	Uncertainty on the SB estimate	
+totmag	mag	Total magnitude enclosed within the isophote, computed by integrating the SB profile	
+totmag_e	mag	Uncertainty in totmag estimate propagated through the integral	
+ellip	cdots	Ellipticity of the isophote (= 1 - b/a, where b = isophote semiminor axis length)	
+ellip_e	cdots	Uncertainty in ellipticity estimate determined by the local variability	
+pa	deg	Position angle of the isophote relative to the positive y-axis (increasing counter-clockwise) in the image	
+pa_e	deg	Uncertainty in PA estimate determined by the local variability	
+pixels	count	Number of unmasked pixels sampled along the isophote or within the band	
+maskedpixels	count	Number of masked pixels rejected along the isophote or within the band	
+totmag_direct	mag	Total magnitude enclosed in the current isophote by direct pixel flux summation	

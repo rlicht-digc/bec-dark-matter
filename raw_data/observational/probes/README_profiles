@@ -1,0 +1,45 @@
+Author: Connor Stone
+Contact: connor.stone@queensu.ca
+
+Layout
+--------------------
+
+Files in this directory contain rotation curves and surface brightness
+profiles for the PROBES compendium. Each .prof file has one commented
+row with the units for each column, then a row with the column
+headers, then the data in a csv format. Columns are described in Stone
+et al. 2022a however we provide column descriptions here as well for
+completeness.
+
+
+Rotation Curves
+--------------------
+
+R: (arcsec) radius of velocity measurements relative the kinematic center as fit by the C97 model.
+V: (km s^-1) velocity measurements with global recessional velocity subtracted by the C97 model.
+V_e: (km s^-1) velocity measurement errors as reported in the original survey, or by measuring scatter relative to the C97 model if errors were not available.
+
+
+Photometry
+--------------------
+
+.prof files:
+R: (arcsec) Isophote semimajor axis length
+SB: (mag arcsec^-2) Median SB along isophote
+SB_e: (mag arcsec^-2) Uncertainty on SB estimate
+totmag: (mag) Total magnitude enclosed in isophote, computed by integrating SB profile
+totmag_e: (mag) Uncertainty in totmag estimate propagated through integral
+ellip: (unitless) Ellipticity of isophote ($1-b/a$)
+ellip_e: (unitless) Uncertainty in ellipticity estimate determined by local variability
+pa: (deg) PA of isophote relative to positive $y$-axis (increasing counter-clockwise) on the image
+pa_e: (deg) Uncertainty in PA estimate determined by local variability
+pixels: (count) Number of unmasked pixels sampled along isophote or within band
+maskedpixels: (count) Number of masked pixels rejected along isophote or within band
+totmag_direct: (mag) Total magnitude enclosed in current isophote by direct pixel flux summation
+
+.aux files:
+auxiliarry file with information about fitting proceedure including
+any AutoProf options used so fit can be reproduced. Some global values
+are included in these files as well. See the r-band aux file for
+fitting state (fit checks), all other aux files report forced
+photometry.

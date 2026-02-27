@@ -1,0 +1,588 @@
+{
+  "test_name": "acceleration_binned_environmental_scatter",
+  "description": "Letter-ready: acceleration-dependent environmental RAR scatter with clean CF4 reanalysis",
+  "pathological_galaxies": [
+    "UGC06786",
+    "UGC06446",
+    "UGC06787"
+  ],
+  "pathological_reason": "UMa cluster members with fD=1 in SPARC; CF4 replaces cluster distance with flow-model distance",
+  "runs": {
+    "sparc_full": {
+      "label": "SPARC distances, full sample",
+      "n_galaxies": 131,
+      "n_dense": 48,
+      "n_field": 83,
+      "overall": {
+        "sigma_dense": 0.16461,
+        "sigma_field": 0.17134,
+        "delta": 0.00673,
+        "levene_p": 0.64044602
+      },
+      "galaxy_level": {
+        "sigma_dense": 0.14965,
+        "sigma_field": 0.16333,
+        "levene_p": 0.76453813
+      },
+      "intrinsic": {
+        "mean_dense": 0.0696,
+        "mean_field": 0.0556,
+        "levene_p": 0.28574818
+      },
+      "binned_results": [
+        {
+          "regime": "condensate",
+          "label": "Deep DM (g < g\u2020)",
+          "gbar_range": [
+            -13.0,
+            -11.5
+          ],
+          "n_dense_pts": 92,
+          "n_field_pts": 119,
+          "sigma_dense": 0.22691,
+          "sigma_field": 0.1943,
+          "delta_sigma": -0.03261,
+          "levene_p": 0.06082688,
+          "boot_p_field_gt_dense": 0.349,
+          "boot_ci_95": [
+            -0.12066,
+            0.10149
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "boundary",
+          "label": "Transition (g ~ g\u2020)",
+          "gbar_range": [
+            -11.5,
+            -10.5
+          ],
+          "n_dense_pts": 477,
+          "n_field_pts": 856,
+          "sigma_dense": 0.16633,
+          "sigma_field": 0.17112,
+          "delta_sigma": 0.00479,
+          "levene_p": 0.62810064,
+          "boot_p_field_gt_dense": 0.5816,
+          "boot_ci_95": [
+            -0.04527,
+            0.05369
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "interior",
+          "label": "Baryon-dominated",
+          "gbar_range": [
+            -10.5,
+            -9.5
+          ],
+          "n_dense_pts": 284,
+          "n_field_pts": 608,
+          "sigma_dense": 0.14238,
+          "sigma_field": 0.17313,
+          "delta_sigma": 0.03076,
+          "levene_p": 0.00794043,
+          "boot_p_field_gt_dense": 0.878,
+          "boot_ci_95": [
+            -0.02383,
+            0.08257
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "newtonian",
+          "label": "High acceleration",
+          "gbar_range": [
+            -9.5,
+            -8.0
+          ],
+          "n_dense_pts": 37,
+          "n_field_pts": 304,
+          "sigma_dense": 0.09439,
+          "sigma_field": 0.14473,
+          "delta_sigma": 0.05033,
+          "levene_p": 0.20078615,
+          "boot_p_field_gt_dense": 0.9138,
+          "boot_ci_95": [
+            -0.01793,
+            0.1314
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "low_accel",
+          "label": "LOW: g < 10^{-10.5} (condensate regime)",
+          "gbar_range": [
+            -13.0,
+            -10.5
+          ],
+          "n_dense_pts": 569,
+          "n_field_pts": 975,
+          "sigma_dense": 0.17762,
+          "sigma_field": 0.17412,
+          "delta_sigma": -0.0035,
+          "levene_p": 0.48778585,
+          "boot_p_field_gt_dense": 0.4818,
+          "boot_ci_95": [
+            -0.05399,
+            0.04816
+          ],
+          "bin_set": "2-bin (Letter)"
+        },
+        {
+          "regime": "high_accel",
+          "label": "HIGH: g > 10^{-10.5} (baryon regime)",
+          "gbar_range": [
+            -10.5,
+            -8.0
+          ],
+          "n_dense_pts": 321,
+          "n_field_pts": 912,
+          "sigma_dense": 0.13772,
+          "sigma_field": 0.16422,
+          "delta_sigma": 0.0265,
+          "levene_p": 0.04955314,
+          "boot_p_field_gt_dense": 0.8714,
+          "boot_ci_95": [
+            -0.02055,
+            0.07428
+          ],
+          "bin_set": "2-bin (Letter)"
+        }
+      ]
+    },
+    "cf4_full": {
+      "label": "CF4 distances, full sample",
+      "n_galaxies": 131,
+      "n_dense": 48,
+      "n_field": 83,
+      "overall": {
+        "sigma_dense": 0.23409,
+        "sigma_field": 0.22928,
+        "delta": -0.00481,
+        "levene_p": 0.10720862
+      },
+      "galaxy_level": {
+        "sigma_dense": 0.1863,
+        "sigma_field": 0.23999,
+        "levene_p": 0.02856223
+      },
+      "intrinsic": {
+        "mean_dense": 0.06869,
+        "mean_field": 0.0606,
+        "levene_p": 0.21607902
+      },
+      "binned_results": [
+        {
+          "regime": "condensate",
+          "label": "Deep DM (g < g\u2020)",
+          "gbar_range": [
+            -13.0,
+            -11.5
+          ],
+          "n_dense_pts": 92,
+          "n_field_pts": 119,
+          "sigma_dense": 0.22691,
+          "sigma_field": 0.23568,
+          "delta_sigma": 0.00878,
+          "levene_p": 0.86844715,
+          "boot_p_field_gt_dense": 0.6643,
+          "boot_ci_95": [
+            -0.08171,
+            0.14964
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "boundary",
+          "label": "Transition (g ~ g\u2020)",
+          "gbar_range": [
+            -11.5,
+            -10.5
+          ],
+          "n_dense_pts": 477,
+          "n_field_pts": 856,
+          "sigma_dense": 0.20993,
+          "sigma_field": 0.23271,
+          "delta_sigma": 0.02278,
+          "levene_p": 3.327e-05,
+          "boot_p_field_gt_dense": 0.7494,
+          "boot_ci_95": [
+            -0.04648,
+            0.09427
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "interior",
+          "label": "Baryon-dominated",
+          "gbar_range": [
+            -10.5,
+            -9.5
+          ],
+          "n_dense_pts": 284,
+          "n_field_pts": 608,
+          "sigma_dense": 0.25355,
+          "sigma_field": 0.20902,
+          "delta_sigma": -0.04454,
+          "levene_p": 0.0930242,
+          "boot_p_field_gt_dense": 0.2869,
+          "boot_ci_95": [
+            -0.13214,
+            0.09154
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "newtonian",
+          "label": "High acceleration",
+          "gbar_range": [
+            -9.5,
+            -8.0
+          ],
+          "n_dense_pts": 37,
+          "n_field_pts": 304,
+          "sigma_dense": 0.21253,
+          "sigma_field": 0.24998,
+          "delta_sigma": 0.03745,
+          "levene_p": 0.44208376,
+          "boot_p_field_gt_dense": 0.6921,
+          "boot_ci_95": [
+            -0.14207,
+            0.23602
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "low_accel",
+          "label": "LOW: g < 10^{-10.5} (condensate regime)",
+          "gbar_range": [
+            -13.0,
+            -10.5
+          ],
+          "n_dense_pts": 569,
+          "n_field_pts": 975,
+          "sigma_dense": 0.21324,
+          "sigma_field": 0.23395,
+          "delta_sigma": 0.02071,
+          "levene_p": 5.791e-05,
+          "boot_p_field_gt_dense": 0.7518,
+          "boot_ci_95": [
+            -0.04426,
+            0.08875
+          ],
+          "bin_set": "2-bin (Letter)"
+        },
+        {
+          "regime": "high_accel",
+          "label": "HIGH: g > 10^{-10.5} (baryon regime)",
+          "gbar_range": [
+            -10.5,
+            -8.0
+          ],
+          "n_dense_pts": 321,
+          "n_field_pts": 912,
+          "sigma_dense": 0.25547,
+          "sigma_field": 0.22412,
+          "delta_sigma": -0.03135,
+          "levene_p": 0.05424057,
+          "boot_p_field_gt_dense": 0.3509,
+          "boot_ci_95": [
+            -0.12389,
+            0.10926
+          ],
+          "bin_set": "2-bin (Letter)"
+        }
+      ]
+    },
+    "sparc_clean": {
+      "label": "SPARC distances, clean sample",
+      "n_galaxies": 128,
+      "n_dense": 45,
+      "n_field": 83,
+      "overall": {
+        "sigma_dense": 0.16491,
+        "sigma_field": 0.17134,
+        "delta": 0.00643,
+        "levene_p": 0.46375403
+      },
+      "galaxy_level": {
+        "sigma_dense": 0.14762,
+        "sigma_field": 0.16333,
+        "levene_p": 0.68470135
+      },
+      "intrinsic": {
+        "mean_dense": 0.07327,
+        "mean_field": 0.0556,
+        "levene_p": 0.30175407
+      },
+      "binned_results": [
+        {
+          "regime": "condensate",
+          "label": "Deep DM (g < g\u2020)",
+          "gbar_range": [
+            -13.0,
+            -11.5
+          ],
+          "n_dense_pts": 92,
+          "n_field_pts": 119,
+          "sigma_dense": 0.22691,
+          "sigma_field": 0.1943,
+          "delta_sigma": -0.03261,
+          "levene_p": 0.06082688,
+          "boot_p_field_gt_dense": 0.3391,
+          "boot_ci_95": [
+            -0.11756,
+            0.10137
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "boundary",
+          "label": "Transition (g ~ g\u2020)",
+          "gbar_range": [
+            -11.5,
+            -10.5
+          ],
+          "n_dense_pts": 433,
+          "n_field_pts": 856,
+          "sigma_dense": 0.16159,
+          "sigma_field": 0.17112,
+          "delta_sigma": 0.00953,
+          "levene_p": 0.21430353,
+          "boot_p_field_gt_dense": 0.6477,
+          "boot_ci_95": [
+            -0.04217,
+            0.05956
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "interior",
+          "label": "Baryon-dominated",
+          "gbar_range": [
+            -10.5,
+            -9.5
+          ],
+          "n_dense_pts": 225,
+          "n_field_pts": 608,
+          "sigma_dense": 0.14187,
+          "sigma_field": 0.17313,
+          "delta_sigma": 0.03126,
+          "levene_p": 0.00223998,
+          "boot_p_field_gt_dense": 0.8605,
+          "boot_ci_95": [
+            -0.02668,
+            0.0876
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "newtonian",
+          "label": "High acceleration",
+          "gbar_range": [
+            -9.5,
+            -8.0
+          ],
+          "n_dense_pts": 7,
+          "n_field_pts": 304,
+          "sigma_dense": 0.02691,
+          "sigma_field": 0.14473,
+          "delta_sigma": 0.11781,
+          "levene_p": 0.1308323,
+          "boot_p_field_gt_dense": 1.0,
+          "boot_ci_95": [
+            0.07915,
+            0.16151
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "low_accel",
+          "label": "LOW: g < 10^{-10.5} (condensate regime)",
+          "gbar_range": [
+            -13.0,
+            -10.5
+          ],
+          "n_dense_pts": 525,
+          "n_field_pts": 975,
+          "sigma_dense": 0.17481,
+          "sigma_field": 0.17412,
+          "delta_sigma": -0.00069,
+          "levene_p": 0.86746589,
+          "boot_p_field_gt_dense": 0.5258,
+          "boot_ci_95": [
+            -0.05308,
+            0.05297
+          ],
+          "bin_set": "2-bin (Letter)"
+        },
+        {
+          "regime": "high_accel",
+          "label": "HIGH: g > 10^{-10.5} (baryon regime)",
+          "gbar_range": [
+            -10.5,
+            -8.0
+          ],
+          "n_dense_pts": 232,
+          "n_field_pts": 912,
+          "sigma_dense": 0.13993,
+          "sigma_field": 0.16422,
+          "delta_sigma": 0.02429,
+          "levene_p": 0.03583563,
+          "boot_p_field_gt_dense": 0.8345,
+          "boot_ci_95": [
+            -0.02783,
+            0.07537
+          ],
+          "bin_set": "2-bin (Letter)"
+        }
+      ]
+    },
+    "cf4_clean": {
+      "label": "CF4 distances, clean sample",
+      "n_galaxies": 128,
+      "n_dense": 45,
+      "n_field": 83,
+      "overall": {
+        "sigma_dense": 0.16491,
+        "sigma_field": 0.22928,
+        "delta": 0.06437,
+        "levene_p": 0.0
+      },
+      "galaxy_level": {
+        "sigma_dense": 0.14762,
+        "sigma_field": 0.23999,
+        "levene_p": 0.00256579
+      },
+      "intrinsic": {
+        "mean_dense": 0.07327,
+        "mean_field": 0.0606,
+        "levene_p": 0.19733425
+      },
+      "binned_results": [
+        {
+          "regime": "condensate",
+          "label": "Deep DM (g < g\u2020)",
+          "gbar_range": [
+            -13.0,
+            -11.5
+          ],
+          "n_dense_pts": 92,
+          "n_field_pts": 119,
+          "sigma_dense": 0.22691,
+          "sigma_field": 0.23568,
+          "delta_sigma": 0.00878,
+          "levene_p": 0.86844715,
+          "boot_p_field_gt_dense": 0.658,
+          "boot_ci_95": [
+            -0.07649,
+            0.14457
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "boundary",
+          "label": "Transition (g ~ g\u2020)",
+          "gbar_range": [
+            -11.5,
+            -10.5
+          ],
+          "n_dense_pts": 433,
+          "n_field_pts": 856,
+          "sigma_dense": 0.16159,
+          "sigma_field": 0.23271,
+          "delta_sigma": 0.07112,
+          "levene_p": 0.0,
+          "boot_p_field_gt_dense": 0.9934,
+          "boot_ci_95": [
+            0.0148,
+            0.12515
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "interior",
+          "label": "Baryon-dominated",
+          "gbar_range": [
+            -10.5,
+            -9.5
+          ],
+          "n_dense_pts": 225,
+          "n_field_pts": 608,
+          "sigma_dense": 0.14187,
+          "sigma_field": 0.20902,
+          "delta_sigma": 0.06714,
+          "levene_p": 0.0,
+          "boot_p_field_gt_dense": 0.9863,
+          "boot_ci_95": [
+            0.00794,
+            0.12322
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "newtonian",
+          "label": "High acceleration",
+          "gbar_range": [
+            -9.5,
+            -8.0
+          ],
+          "n_dense_pts": 7,
+          "n_field_pts": 304,
+          "sigma_dense": 0.02691,
+          "sigma_field": 0.24998,
+          "delta_sigma": 0.22307,
+          "levene_p": 0.02531244,
+          "boot_p_field_gt_dense": 1.0,
+          "boot_ci_95": [
+            0.12274,
+            0.29537
+          ],
+          "bin_set": "4-bin"
+        },
+        {
+          "regime": "low_accel",
+          "label": "LOW: g < 10^{-10.5} (condensate regime)",
+          "gbar_range": [
+            -13.0,
+            -10.5
+          ],
+          "n_dense_pts": 525,
+          "n_field_pts": 975,
+          "sigma_dense": 0.17481,
+          "sigma_field": 0.23395,
+          "delta_sigma": 0.05913,
+          "levene_p": 0.0,
+          "boot_p_field_gt_dense": 0.9804,
+          "boot_ci_95": [
+            0.00291,
+            0.11615
+          ],
+          "bin_set": "2-bin (Letter)"
+        },
+        {
+          "regime": "high_accel",
+          "label": "HIGH: g > 10^{-10.5} (baryon regime)",
+          "gbar_range": [
+            -10.5,
+            -8.0
+          ],
+          "n_dense_pts": 232,
+          "n_field_pts": 912,
+          "sigma_dense": 0.13993,
+          "sigma_field": 0.22412,
+          "delta_sigma": 0.08419,
+          "levene_p": 0.0,
+          "boot_p_field_gt_dense": 0.9927,
+          "boot_ci_95": [
+            0.01761,
+            0.14492
+          ],
+          "bin_set": "2-bin (Letter)"
+        }
+      ]
+    }
+  }
+}

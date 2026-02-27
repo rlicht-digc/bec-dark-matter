@@ -1,0 +1,61 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-21T04:07:46 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-21T04:07:46	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/ApJ/816/L14&-out.max=10	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_18169014
+#Name: J/ApJ/816/L14
+#Title: Tully-Fisher relation in disk galaxies from SPARC (Lelli+, 2016)
+#INFO	ivoid=ivo://cds.vizier/j/apj/816/l14	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/apj/816/l14	    IVOID of underlying data collection
+#INFO	creator=Lelli F.	    First author or institution
+#INFO	cites=bibcode:2016ApJ...816L..14L	    Article or Data origin sources
+#INFO	journal=ApJ	    Journal name
+#INFO	original_date=2016	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/ApJ/816/L14	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.18169014	    Dataset identifier that can be used for citation
+#INFO	publication_date=2017-06-19	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_ApJ_816_L14_figure2:
+#Name: J/ApJ/816/L14/figure2
+#Title: *Data behind Figure 2
+#Column	Name	(a11)	Galaxy name	[ucd=meta.id;meta.main]
+#Column	Dist	(F6.2)	[0.98/127.8] Galaxy distance	[ucd=pos.distance;pos.heliocentric]
+#Column	e_Dist	(F5.2)	[0.05/12.8] Mean error on Dist	[ucd=stat.error]
+#Column	f_Dist	(I1)	[1/5] Method flag on Dist (1)	[ucd=meta.code]
+#Column	logMb	(F5.2)	[7.98/11.43] Log of the baryonic mass (M_b_) (2)	[ucd=phys.mass]
+#Column	e_logMb	(F5.2)	[0.06/0.28] Mean error on logMb	[ucd=stat.error]
+#Column	logVf	(F5.2)	[1.53/2.52] Log of rotation velocity (V_f_) (3)	[ucd=phys.veloc.rotat]
+#Column	e_logVf	(F5.2)	[0.01/0.11] Mean error on logVf	[ucd=stat.error]
+#Column	Fg	(F5.2)	[0.02/0.95] Gas fraction (f_g_=M_g_/M_b_) (4)	[ucd=phys.mass;arith.ratio]
+#Column	SBeff	(F7.2)	[3.8/1659] Effective stellar surface brightness (4)	[ucd=phot.flux.sb]
+#Column	Reff	(F5.2)	[0.32/13.61] Effective stellar radius	[ucd=phys.size.radius]
+#Column	SPARC	(I3)	Number of data from SPARC (Spitzer Photometry and Accurate Rotation Curves) main paper (Lelli et al. 2016, Cat. J/AJ/152/157)	[ucd=meta.number]
+#Column	L16	(I3)	Indicates a galaxy in the SPARC paper of Lelli et al. 2016 (Cat. J/ApJ/827/L19)	[ucd=meta.number]
+#Column	SimbadName	(a13)	Simbad column added by the CDS	[ucd=meta.id]
+#Column	NEDname	(a13)	Simbad column added by the CDS	[ucd=meta.id]
+#Column	_RA	(F9.5)	Position from SIMBAD astronomical database (right ascension part)	[ucd=pos.eq.ra;meta.main]
+#Column	_DE	(F9.5)	Position from SIMBAD astronomical database (declination part)	[ucd=pos.eq.dec;meta.main]
+Name	Dist	e_Dist	f_Dist	logMb	e_logMb	logVf	e_logVf	Fg	SBeff	Reff	SPARC	L16	SimbadName	NEDname	_RA	_DE
+ 	Mpc	Mpc	 	[Msun]	[Msun]	[km/s]	[km/s]	 	Msun/pc2	kpc	 	 	 	 	deg	deg
+-----------	------	-----	-	-----	-----	-----	-----	-----	-------	-----	---	---	-------------	-------------	---------	---------
+D631-7     	  7.72	 0.39	2	 8.68	 0.06	 1.76	 0.02	 0.80	  10.46	 1.22	 17	  1	ESDO 631-7   	ESDO 631-7   	119.25428	+14.39657
+DDO154     	  4.04	 0.20	2	 8.59	 0.06	 1.67	 0.01	 0.93	   9.99	 0.65	 13	  1	DDO154       	DDO154       	193.52187	+27.14963
+DDO161     	  7.50	 2.25	1	 9.32	 0.26	 1.82	 0.03	 0.87	  10.37	 2.04	 32	  1	DDO161       	DDO161       	195.81973	-17.42303
+DDO168     	  4.25	 0.21	2	 8.81	 0.06	 1.73	 0.03	 0.85	   9.12	 1.29	 11	  1	DDO168       	DDO168       	198.61666	+45.91976
+DDO170     	 15.40	 4.62	1	 9.10	 0.26	 1.78	 0.03	 0.78	   4.70	 3.03	  9	  1	DDO170       	DDO170       	198.97408	+25.43615
+ESO079-G014	 28.70	 7.17	1	10.47	 0.24	 2.24	 0.01	 0.14	  80.87	 7.08	 16	  1	ESO079-G014  	ESO079-G014  	015.71436	-65.60999
+ESO116-G012	 13.00	 3.90	1	 9.55	 0.27	 2.04	 0.01	 0.41	  51.02	 2.55	 16	  1	ESO116-G012  	ESO116-G012  	048.26977	-57.35725
+ESO563-G021	 60.80	 9.10	1	11.27	 0.16	 2.50	 0.02	 0.17	 214.69	10.59	 31	  1	ESO563-G021  	ESO563-G021  	131.82075	-20.03566
+F568-V1    	 80.60	 8.06	1	 9.72	 0.10	 2.05	 0.11	 0.63	  15.70	 4.40	 16	  1	VLSB F568-V01	VLSB F568-V01	161.25860	+22.05432
+F571-8     	 53.30	10.70	1	 9.87	 0.19	 2.15	 0.01	 0.32	 412.86	 1.40	 14	  1	LSB F571-8   	LSB F571-8   	173.47625	+19.35500
+

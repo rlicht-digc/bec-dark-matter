@@ -1,0 +1,92 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-16T17:48:17 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-16T17:48:18	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A+A/390/863/tablea6&-out.max=unlimited	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_33900863
+#Name: J/A+A/390/863
+#Title: CCD R Photometry of WHISP Dwarf Galaxies (Swaters, 2002)
+#INFO	ivoid=ivo://cds.vizier/j/a+a/390/863	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/a+a/390/863	    IVOID of underlying data collection
+#INFO	creator=Swaters R.A.	    First author or institution
+#INFO	cites=bibcode:2002A&A...390..863S	    Article or Data origin sources
+#INFO	journal=A&A	    Journal name
+#INFO	original_date=2002	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/390/863	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.33900863	    Dataset identifier that can be used for citation
+#INFO	publication_date=2018-01-10	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_A_A_390_863_tablea6:
+#Name: J/A+A/390/863/tablea6
+#Title: B-band photometric and isophotal parameters
+#Column	UGC	(I5)	UGC number and comments	[ucd=meta.id;meta.main]
+#Column	m_UGC	(A2)	[ab ] Multiplicity index on UGC	[ucd=meta.code.multip]
+#Column	ell	(F6.3)	Ellipticity	[ucd=src.ellipticity]
+#Column	PA	(I3)	Position angle	[ucd=pos.posAng]
+#Column	mag25	(F5.2)	Magnitude within 25mag/arcsec isophote	[ucd=phot.mag;em.opt.R]
+#Column	maglim	(F5.2)	Magnitude within limiting isophote	[ucd=phot.mag;em.opt.R]
+#Column	magext	(F5.2)	Extrapolated magnitude	[ucd=phot.mag;em.opt.R]
+#Column	SuBrlim	(F5.2)	Limiting surface brightness	[ucd=phot.mag.sb;stat.max]
+#Column	SuBrc	(F5.2)	Central surface brightness	[ucd=phot.mag.sb;em.opt.R]
+#Column	SuBr0	(F5.2)	Extrapolated central disk surface brightness	[ucd=phot.mag.sb;em.opt.R]
+#Column	RMAG	(F6.2)	Absolute magnitude	[ucd=phys.magAbs;em.opt]
+#Column	e_mag	(F5.2)	Estimated photometric uncertainty	[ucd=stat.error]
+UGC	m_UGC	ell	PA	mag25	maglim	magext	SuBrlim	SuBrc	SuBr0	RMAG	e_mag
+ 	 	 	deg	mag	mag	mag	mag/arcsec2	mag/arcsec2	mag/arcsec2	mag	mag
+-----	--	------	---	-----	-----	-----	-----	-----	-----	------	-----
+  731	  	 0.506	 73	15.12	14.43	14.14	25.78	22.98	23.27	-15.78	 0.03
+ 1281	  	 0.872	 40	13.63	13.50	13.49	26.92	21.74	21.10	-15.29	 0.09
+ 1501	  	 0.774	  1	12.49	12.37	12.36	27.19	21.99	21.29	-16.54	 0.09
+ 2800	  	 0.604	106	15.61	15.08	15.06	28.35	21.97	22.16	-17.28	 0.03
+ 3060	  	 0.789	 24	12.19	11.98	11.97	27.96	21.76	21.45	-16.34	 0.09
+ 3137	b 	 0.765	 74	15.10	14.70	14.70	27.00	22.70	22.10	-16.90	 0.45
+ 3144	  	 0.516	113	15.32	14.87	14.84	27.19	22.35	22.36	-16.93	 0.03
+ 3273	ab	 0.720	 42	15.00	14.68	14.64	27.00	22.00	22.74	-15.79	 0.12
+ 3317	  	 0.355	 18	16.71	15.57	15.37	27.26	23.59	23.55	-16.34	 0.03
+ 3371	  	 0.378	130	16.10	14.50	14.15	26.54	23.89	23.98	-16.66	 0.09
+ 3384	b 	 0.000	135	16.41	15.53	15.27	26.60	22.44	23.37	-16.48	 0.12
+ 3390	ab	 0.357	 41	15.51	14.99	14.95	27.91	21.58	22.62	-16.88	 0.12
+ 3475	  	 0.421	 73	18.67	16.45	16.37	28.23	23.23	23.11	-14.13	 0.12
+ 3647	b 	 0.000	 34	15.04	13.95	13.94	28.21	22.84	22.82	-17.46	 0.12
+ 3698	b 	 0.294	179	15.74	15.35	15.33	26.53	22.97	21.72	-14.55	 0.12
+ 3851	  	 0.642	 28	11.74	11.59	11.54	26.07	22.54	22.07	-16.21	 0.12
+ 3860	b 	 0.482	 24	15.56	15.15	15.09	27.07	23.05	22.48	-14.20	 0.12
+ 4274	b 	 0.075	158	12.49	12.42	12.38	26.27	20.95	21.90	-16.80	 0.12
+ 4278	  	 0.900	172	12.07	12.07	12.06	25.14	19.73	19.87	-18.12	 0.02
+ 4305	  	 0.246	 30	11.86	11.67	11.55	26.70	22.94	22.28	-16.16	 0.04
+ 4325	  	 0.356	 56	13.14	12.98	12.87	27.37	22.27	22.16	-17.25	 0.03
+ 4660	  	 0.000	 90	16.11	15.38	15.25	27.56	22.55	23.41	-17.36	 0.03
+ 5040	  	 0.000	 90	15.23	14.73	14.42	27.57	21.95	23.49	-19.40	 0.12
+ 5336	  	 0.399	 60	15.82	14.40	14.24	27.14	24.19	23.94	-13.62	 0.03
+ 5829	b 	 0.000	 58	13.10	12.70	12.60	26.80	22.40	22.70	-17.20	 0.45
+ 6151	b 	 0.000	 90	15.50	14.88	14.79	28.14	23.18	23.11	-16.39	 0.12
+ 6713	b 	 0.179	121	14.30	14.20	14.10	26.80	21.90	22.00	-17.00	 0.45
+ 6912	b 	 0.315	143	14.20	13.80	13.80	27.60	21.70	21.20	-18.10	 0.45
+ 7199	  	 0.345	 12	13.78	13.60	13.58	27.27	21.34	21.82	-14.14	 0.09
+ 7232	  	 0.178	 65	13.36	13.23	13.22	27.37	21.51	20.58	-14.50	 0.09
+ 7356	  	 0.330	159	16.46	15.75	15.66	27.36	23.71	23.21	-12.06	 0.09
+ 7399	  	 0.410	126	13.42	13.28	13.28	28.49	20.34	20.93	-16.34	 0.05
+ 7534	  	 0.000	 36	14.47	14.16	13.67	25.60	22.36	23.41	-15.98	 0.01
+ 7577	  	 0.577	127	13.25	12.92	12.90	27.63	22.85	22.21	-14.82	 0.02
+ 7861	  	 0.000	 90	13.10	12.89	12.85	28.17	20.61	24.02	-16.92	 0.03
+ 7872	  	 0.324	177	16.03	15.48	15.32	26.52	22.83	23.35	-17.14	 0.05
+ 8303	  	 0.000	 90	14.27	13.87	13.82	27.89	22.93	22.23	-17.36	 0.09
+ 8441	  	 0.209	 70	15.31	14.61	14.48	27.90	23.35	23.40	-17.03	 0.05
+ 8489	  	 0.622	104	14.83	14.66	14.64	27.71	21.42	21.92	-16.87	 0.05
+ 8508	  	 0.458	119	14.16	14.06	13.99	25.94	22.18	21.52	-13.85	 0.09
+ 8565	  	 0.304	179	14.09	13.83	13.81	27.52	21.39	22.08	-14.77	 0.05
+ 9128	  	 0.258	 19	14.92	14.56	14.55	28.67	23.28	22.10	-13.67	 0.09
+ 9219	  	 0.496	 99	14.09	13.93	13.89	27.71	21.72	21.93	-16.51	 0.05
+ 9992	  	 0.319	148	15.53	15.11	15.07	27.42	22.62	22.57	-15.94	 0.05
+12554	  	 0.790	168	11.79	11.68	11.67	26.76	20.54	21.10	-18.39	 0.03
+12632	  	 0.441	 20	15.27	13.39	13.25	28.64	22.82	24.03	-16.23	 0.03
+

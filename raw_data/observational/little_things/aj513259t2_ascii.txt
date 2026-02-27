@@ -1,0 +1,348 @@
+Table 2
+Mass Modeling Results of the LITTLE THINGS Sample Galaxies
+
+Name	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+ H I
+
+
+
+
+
+
+ 	z_0	c	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+ 	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+	(kpc)	(kpc)	(km s^-1)	(km s^-1)		(kpc)		(km s^-1)	(kpc)	(10^-3 
+
+
+
+
+
+)			(
+
+
+
+
+
+)	(
+
+
+
+
+
+)	(
+
+
+
+
+
+)	(
+
+
+
+
+
+)	(
+
+
+
+
+
+)	
+	(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)	(13)	(14)	(15)	(16)	(17)	
+CVnIdwA	2.59	2.27	23.5	23.7	13.5	0.24	-0.4 (11.0)	478.5 (16.1 +or- 1.6)	2.01 +or- 0.52	8.19 +or- 1.62	-1.25 +or- 0.21	+0.03 +or- 0.27	2.91	0.41	0.49	8.529	9.138	
+DDO 43	4.19	4.19	33.2	38.5	13.7	 ... 	5.6 +or- 2.6 (10.2)	39.8 +or- 14.9 (31.4 +or- 1.8)	0.94 +or- 0.18	33.22 +or- 8.78	-0.15 +or- 0.13	
+
+
+
+
+
+
+
+^a
+
+
+
+
+
+
+
+	23.26	 ... 	 ... 	9.159	10.317	
+DDO 46	2.92	2.04	66.1	77.4	15.7	 ... 	18.7 +or- 3.5 (9.0)	61.2 +or- 9.7 (136.7 +or- 6.1)	0.51 +or- 0.04	517.82 +or- 65.46	-0.41 +or- 0.01	
+
+
+
+
+
+
+
+^a
+
+
+
+
+
+
+
+	22.08	 ... 	 ... 	9.609	11.925	
+DDO 47	7.71	1.55	64.7	68.9	29.3	 ... 	-0.4 (9.2)	1359.0 (51.3 +or- 2.5)	3.72 +or- 0.48	12.15 +or- 1.49	-1.24 +or- 0.20	
+
+
+
+
+
+
+
+^a
+
+
+
+
+
+
+
+	46.80	 ... 	 ... 	9.930	10.648	
+DDO 50	9.81	1.67	35.7	35.7	84.4	0.28	22.2 (10.3)	15.4 (28.8 +or- 0.2)	0.15 +or- 0.08	379.64 +or- 381.14	-0.41 +or- 0.41	+0.10 +or- 0.41	132.52	9.79	10.60	9.463	9.895	
+DDO 52	5.43	5.43	60.2	60.5	15.9	0.26	6.1 +or- 1.1 (9.4)	71.9 +or- 11.8 (57.8 +or- 1.3)	1.33 +or- 0.07	48.81 +or- 3.63	-0.55 +or- 0.04	-0.49 +or- 0.02	33.43	7.20	5.31	9.664	10.803	
+DDO 53	1.45	0.62	28.6	33.1	13.1	0.14	0.0 +or- 4.4 (10.4)	425.8 +or- 2531.9 (27.8 +or- 3.2)	2.22 +or- 1.95	25.10 +or- 5.63	-0.27 +or- 0.48	+0.14 +or- 0.80	7.00	0.96	0.97	8.567	9.849	
+DDO 70	2.00	0.55	43.9	35.5	22.9	0.11	0.0 +or- 10.2 (10.3)	866.1 +or- 11717.4 (38.6 +or- 1.8)	0.51 +or- 0.11	119.95 +or- 34.69	-0.43 +or- 0.02	-0.48 +or- 0.03	3.80	1.24	1.96	8.768	10.277	
+DDO 87	7.39	4.13	56.6	56.2	26.1	0.48	0.0 +or- 0.2 (9.5)	511.4 +or- 143.8 (40.7 +or- 1.6)	2.46 +or- 0.11	13.91 +or- 0.77	-0.01 +or- 0.44	-0.01 +or- 0.47	29.12	6.18	3.27	9.734	10.346	
+DDO 101	1.95	1.05	64.5	63.6	7.5	0.13	25.0 +or- 1.3 (9.4)	
+
+
+
+
+
+
+ (115.7 +or- 6.4)	0.32 +or- 0.01	849.14 +or- 77.23	-1.00 +or- 0.15	-1.02 +or- 0.12	3.48	5.79	6.54	9.279	510.18	
+DDO 126	3.99	2.88	37.2	40.5	24.3	0.23	-0.2 +or- 44.4 (10.1)	626.6 +or- 48442.1 (31.4 +or- 1.2)	1.33 +or- 0.10	21.59 +or- 2.00	-0.41 +or- 0.15	-0.39 +or- 0.15	16.36	2.27	1.62	9.182	10.008	
+DDO 133	3.48	3.48	46.1	47.5	16.5	0.22	4.9 +or- 2.3 (9.8)	74.5 +or- 36.7 (46.6 +or- 1.6)	0.83 +or- 0.06	73.69 +or- 7.61	-0.11 +or- 0.14	-0.11 +or- 0.15	12.85	2.62	3.04	9.261	10.522	
+DDO 154	7.32	2.59	47.8	49.2	51.3	0.14	6.4 +or- 0.5 (9.8)	48.7 +or- 2.9 (41.1 +or- 0.6)	0.95 +or- 0.03	53.21 +or- 3.19	-0.39 +or- 0.11	-0.41 +or- 0.13	35.27	1.31	0.83	9.614	10.359	
+DDO 168	3.14	3.14	60.3	67.4	19.2	0.22	-0.3 +or- 1171.6 (9.2)	
+
+
+
+
+
+
+ (63.9 +or- 4.0)	2.81 +or- 0.83	39.81 +or- 6.37	-0.28 +or- 0.28	+0.97 +or- 0.18	25.94	5.13	5.85	9.520	10.934	
+DDO 210	0.31	0.31	12.0	11.3	6.0	0.10	0.0 +or- 202.3 (12.2)	
+
+
+
+
+
+
+ (12.4 +or- 1.0)	0.20 +or- 0.05	116.43 +or- 23.05	-0.30 +or- 0.07	-0.70 +or- 0.02	0.14	0.04	0.06	6.964	8.797	
+DDO 216	1.12	0.48	18.9	15.7	13.0	0.27	13.2 +or- 2.7 (11.7)	8.8 +or- 1.0 (14.7 +or- 0.4)	0.15 +or- 0.03	127.02 +or- 43.35	-0.17 +or- 0.47	-0.30 +or- 0.62	0.49	1.60	1.51	7.807	9.019	
+F564-V3	3.71	1.83	28.8	34.2	7.0	 ... 	10.8 +or- 4.5 (10.4)	26.2 +or- 7.1 (29.6 +or- 2.1)	0.55 +or- 0.20	74.24 +or- 40.17	
+
+
+
+
+
+
+
+^a
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+^a
+
+
+
+
+
+
+
+	4.37	 ... 	 ... 	9.003	9.931	
+IC 10	0.54	0.20	36.5	36.1	27.0	0.07	0.2 +or- 951.3 (18.6)	
+
+
+
+
+
+
+ (36.8 +or- 2.2)	0.27 +or- 0.12	190.4 +or- 76.4	-1.19 +or- 0.01	-0.25 +or- 0.32	1.65	11.81	 ... 	8.213	10.215	
+IC 1613	2.71	0.36	16.9	21.1	103.8	0.15	
+
+
+
+
+
+
+ (11.2)	
+
+
+
+
+
+
+ (12.5 +or- 0.4)	0.20 +or- 0.04	19.25 +or- 3.45	+1.16 +or- 1.22	-0.10 +or- 0.92	5.93	1.94	2.88	8.448	8.808	
+NGC 1569	3.05	2.81	29.1	46.9	31.5	0.19	-0.3 +or- 179.2 (9.8)	
+
+
+
+
+
+
+ (40.9 +or- 2.2)	2.71 +or- 0.81	15.23 +or- 2.45	-0.77 +or- 0.17	-0.23 +or- 0.67	20.24	20.69	36.29	9.193	10.352	
+NGC 2366	8.08	2.75	58.2	60.8	70.7	0.29	5.2 +or- 0.6 (9.4)	66.0 +or- 6.1 (52.6 +or- 0.8)	1.21 +or- 0.04	43.89 +or- 2.51	-0.52 +or- 0.13	-0.53 +or- 0.12	108.24	10.81	6.94	9.841	10.680	
+NGC 3738	1.75	1.10	125.5	130.2	11.7	0.12	12.4 +or- 15.4 (8.1)	310.4 +or- 536.2 (598.2 +or- 30.4)	0.45 +or- 0.04	2132.36 +or- 277.75	-0.42 +or- 0.03	-0.44 +or- 0.02	12.58	12.48	46.62	9.838	13.848	
+UGC 8508	1.86	0.46	46.0	43.5	25.0	0.09	7.8 +or- 1.4 (10.0)	54.7 +or- 7.4 (44.2 +or- 2.2)	1.95 +or- 0.21	45.29 +or- 2.38	-0.31 +or- 0.17	-0.38 +or- 0.16	1.19	0.30	0.77	8.913	10.453	
+WLM	3.04	1.60	37.3	37.7	82.9	0.17	3.0 +or- 0.8 (10.2)	90.8 +or- 26.1 (33.3 +or- 0.5)	0.74 +or- 0.01	57.46 +or- 1.57	+0.03 +or- 0.01	-0.02 +or- 0.01	7.96	1.23	1.62	9.002	10.085	
+Haro 29	5.03	0.64	30.5	35.0	25.7	 ... 	19.5 +or- 1.9 (10.4)	23.4 +or- 0.9(32.7 +or- 0.9)	0.23 +or- 0.04	414.68 +or- 137.20	-0.50 +or- 0.12	
+
+
+
+
+
+
+
+^a
+
+
+
+
+
+
+
+	9.35	 ... 	1.43	9.156	10.061	
+Haro 36	3.16	3.16	58.2	52.6	10.0	0.13	-0.4 +or- 1503.4 (9.7)	
+
+
+
+
+
+
+ (47.9 +or- 3.5)	8.40 +or- 12.17	16.99 +or- 2.78	-0.48 +or- 0.06	-0.50 +or- 0.01	11.16	5.81	 ... 	9.308	10.558	
+
+Note. (1): The radius where the outermost part of the rotation curve is measured; (2): the radius where the logarithmic slope of the total rotation curve (DM + baryons) dlog} V/dlog R=0.3. See Section 4.1; (3): the rotation velocity (asymmetric drift corrected) at Rmax; (4): the rotation velocity of the best fitted pseudo-isothermal halo model at Rmax; (5): the ratio of Rmax to H i beam size; (6): the vertical scale height of the stellar disk; (7)(8): concentration parameter c and rotation velocity V200 for a NFW halo model (Navarro et al. 1995, 1996b); c values in brackets are derived using an empirical relationship between c-V200 as given by McGaugh et al. (2007). The corresponding V200 values are fitted after fixing c to the ones in brackets assuming a "minimum disk." See Section 3.4 for a detailed description. " ... " indicates that the uncertainty is unphysically large; (9), (10): core radius and core density of a pseudo-isothermal halo model (Begeman et al. 1991); (11): the logarithmic inner slope alphamin of the total matter (DM halo + baryons) density profiles measured in Section 4.2. (12): The logarithmic inner slope alphaYsstarf3.6 of the DM density profiles measured in Section 4.2. (13): The gas mass derived in Section 3.2; (14): the stellar mass derived from the kinematic analysis in Section 3.3; (15): the stellar mass derived using a spectral energy distribution (SED) fitting technique in Zhang et al. (2012); (16): the dynamical mass measured using VISO(Rmax and Rmax; (17): CDM halo mass M200 estimated from the V200 in brackets of column (5) and using Equation 3 given in Oh et al. (2011a). See Section 3.4 for more details.
+a The dynamical contribution by the stellar component is included in the DM density profile as no Spitzer  3.6 mum image is available for this galaxy.

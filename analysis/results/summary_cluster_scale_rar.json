@@ -1,0 +1,41 @@
+{
+  "test_name": "cluster_scale_rar",
+  "description": "Multi-scale RAR analysis: Amram cluster galaxy rotation curves + published cluster-scale RAR results (Tian+2020, Chan & Del Popolo)",
+  "level1_amram": {
+    "n_galaxies": 8,
+    "galaxy_list": [
+      "DC2",
+      "DC8",
+      "DC10",
+      "DC12",
+      "D24",
+      "D39",
+      "D47",
+      "WR42"
+    ],
+    "n_total_points": 85,
+    "assumed_distance_Mpc": 80.0,
+    "log_gobs_range": [
+      -11.026,
+      -8.715
+    ],
+    "limitation": "No baryonic decomposition \u2014 cannot compute g_bar or construct full RAR"
+  },
+  "level2_literature": {
+    "tian2020_a0_cluster": 2e-09,
+    "ratio_to_gdagger": 16.7,
+    "implied_mass_scaling_alpha": 0.407,
+    "cluster_rar_scatter_dex": "0.10-0.15",
+    "galaxy_rar_scatter_dex": "0.06-0.08"
+  },
+  "level3_interpretation": {
+    "gdagger_universal": false,
+    "cluster_scale_ratio": 16.7,
+    "interpretations": [
+      "Mass-dependent BEC coherence length",
+      "Distinct cluster physics (not condensation)",
+      "Baryonic mass systematics at cluster scale"
+    ]
+  },
+  "verdict": "INCONCLUSIVE but informative. Amram cluster galaxy data lacks baryonic decomposition for direct RAR construction. Published cluster-scale RAR shows a different acceleration scale (~17\u00d7 g\u2020), which either indicates mass-dependent condensation or distinct cluster physics. This is an open question that does NOT undermine the galaxy-scale result but does constrain the theory. The Letter should note this as a testable prediction: if g\u2020 is truly universal, improved cluster baryonic mass measurements should bring a0_cluster closer to g\u2020."
+}

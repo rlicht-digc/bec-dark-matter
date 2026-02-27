@@ -1,0 +1,295 @@
+{
+  "sparc_reference": {
+    "mu_peak": -9.922,
+    "delta_gdagger": 0.0015,
+    "daic_edge_vs_M1": -224.9,
+    "w_peak": 0.378,
+    "perm_p": 0.0,
+    "cv_edge_wins": 0.55
+  },
+  "sparc_recomputed": {
+    "n_galaxies": 131,
+    "n_points": 2774,
+    "mu_peak": -9.97073321419483,
+    "delta_gdagger": -0.04991446024245505,
+    "daic_edge_vs_M1": -181.17249444580557,
+    "daic_edge_vs_M2b": -44.392378994451065,
+    "w_peak": 0.316473778551518,
+    "Ap": 0.719645194621863,
+    "perm_p": 0.0625,
+    "cv_edge_wins": 0.4,
+    "window_sweep_stable": true,
+    "window_sweep_informative": true,
+    "window_sweep_shift_dex": 0.03692531221696882,
+    "window_sweep": [
+      {
+        "cutoff": -8.8,
+        "n_points": 2713,
+        "mu_peak": -9.97010709955371,
+        "daic_edge_vs_M1": -162.29344452060104
+      },
+      {
+        "cutoff": -9.0,
+        "n_points": 2671,
+        "mu_peak": -9.970310449183815,
+        "daic_edge_vs_M1": -159.3583010330549
+      },
+      {
+        "cutoff": -9.2,
+        "n_points": 2594,
+        "mu_peak": -9.969805670976601,
+        "daic_edge_vs_M1": -144.486405920813
+      },
+      {
+        "cutoff": -9.4,
+        "n_points": 2497,
+        "mu_peak": -9.955396419264751,
+        "daic_edge_vs_M1": -108.32721757554646
+      },
+      {
+        "cutoff": -9.6,
+        "n_points": 2372,
+        "mu_peak": -9.933385136966846,
+        "daic_edge_vs_M1": -94.3173926766176
+      }
+    ],
+    "verdict": "SPARC_REFERENCE"
+  },
+  "eagle": {
+    "n_galaxies": 46,
+    "n_points": 552,
+    "mu_peak": -10.54211714898865,
+    "delta_gdagger": -0.6212983950362752,
+    "daic_edge_vs_M1": -0.8298081387122238,
+    "daic_edge_vs_M2b": 5.999999930543254,
+    "w_peak": 0.06919883820232402,
+    "Ap": 0.3106722745072739,
+    "perm_p": 0.1375,
+    "cv_edge_wins": 0.6,
+    "window_sweep_stable": false,
+    "window_sweep_informative": false,
+    "window_sweep_shift_dex": NaN,
+    "window_sweep": [
+      {
+        "cutoff": -8.8,
+        "n_points": 552,
+        "mu_peak": -10.54209793538183,
+        "daic_edge_vs_M1": -0.8298086533693549
+      },
+      {
+        "cutoff": -9.0,
+        "n_points": 552,
+        "mu_peak": -10.54209793538183,
+        "daic_edge_vs_M1": -0.8298086533693549
+      },
+      {
+        "cutoff": -9.2,
+        "n_points": 552,
+        "mu_peak": -10.54209793538183,
+        "daic_edge_vs_M1": -0.8298086533693549
+      },
+      {
+        "cutoff": -9.4,
+        "n_points": 552,
+        "mu_peak": -10.54209793538183,
+        "daic_edge_vs_M1": -0.8298086533693549
+      },
+      {
+        "cutoff": -9.6,
+        "n_points": 552,
+        "mu_peak": -10.54209793538183,
+        "daic_edge_vs_M1": -0.8298086533693549
+      }
+    ],
+    "verdict": "LCDM_NO_PEAK"
+  },
+  "tng": {
+    "n_galaxies": 130,
+    "n_points": 1560,
+    "mu_peak": -11.279787318129792,
+    "delta_gdagger": -1.3589685641774167,
+    "daic_edge_vs_M1": 7.743934414099385,
+    "daic_edge_vs_M2b": 5.999999462344022,
+    "w_peak": 0.44194499595366815,
+    "Ap": 0.3146826307313557,
+    "perm_p": 0.1,
+    "cv_edge_wins": 0.8,
+    "window_sweep_stable": false,
+    "window_sweep_informative": false,
+    "window_sweep_shift_dex": NaN,
+    "window_sweep": [
+      {
+        "cutoff": -8.8,
+        "n_points": 1560,
+        "mu_peak": -11.279785653549276,
+        "daic_edge_vs_M1": 7.7439260573937645
+      },
+      {
+        "cutoff": -9.0,
+        "n_points": 1560,
+        "mu_peak": -11.279785653549276,
+        "daic_edge_vs_M1": 7.7439260573937645
+      },
+      {
+        "cutoff": -9.2,
+        "n_points": 1560,
+        "mu_peak": -11.279785653549276,
+        "daic_edge_vs_M1": 7.7439260573937645
+      },
+      {
+        "cutoff": -9.4,
+        "n_points": 1560,
+        "mu_peak": -11.279785653549276,
+        "daic_edge_vs_M1": 7.7439260573937645
+      },
+      {
+        "cutoff": -9.6,
+        "n_points": 1560,
+        "mu_peak": -11.279785653549276,
+        "daic_edge_vs_M1": 7.7439260573937645
+      }
+    ],
+    "verdict": "LCDM_NO_PEAK"
+  },
+  "discriminating": true,
+  "interpretation": "LCDM lacks a strong correctly-located peak in EAGLE, TNG; SPARC phase structure remains discriminating.",
+  "method": {
+    "bin_width_dex": 0.25,
+    "bin_range": [
+      -13.0,
+      -8.0
+    ],
+    "min_points_per_bin": 10,
+    "window_cutoffs": [
+      -8.8,
+      -9.0,
+      -9.2,
+      -9.4,
+      -9.6
+    ],
+    "n_perm": 80,
+    "cv_folds": 5,
+    "simulation_adapted_radii": "2x to 5x stellar half-mass radius (Reff)",
+    "adapted_rmin_factor": 2.0,
+    "adapted_rmax_factor": 5.0,
+    "fast_mode": true
+  },
+  "paths": {
+    "output_dir": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram",
+    "plot_a": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/plot_a_variance_vs_gbar.png",
+    "plot_b": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/plot_b_window_sweep_stability.png",
+    "plot_c": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/plot_c_permutation_null.png"
+  },
+  "data_source_notes": [
+    "EAGLE synthesized from Marasco tablea1e.dat with adapted radii 2-5*Reff",
+    "TNG synthesized from Marasco tablea1t.dat with adapted radii 2-5*Reff"
+  ],
+  "adapted_radii_sensitivity": {
+    "configs": {
+      "baseline": {
+        "label": "2-5 Reff",
+        "adapted_rmin_factor": 2.0,
+        "adapted_rmax_factor": 5.0,
+        "summary_path": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram/summary_lcdm_phase_diagram.json",
+        "eagle": {
+          "n_galaxies": 46,
+          "n_points": 552,
+          "mu_peak": -10.54211714898865,
+          "delta_gdagger": -0.6212983950362752,
+          "daic_edge_vs_M1": -0.8298081387122238,
+          "daic_edge_vs_M2b": 5.999999930543254,
+          "w_peak": 0.06919883820232402,
+          "Ap": 0.3106722745072739,
+          "perm_p": 0.1375,
+          "cv_edge_wins": 0.6,
+          "window_sweep_stable": false,
+          "window_sweep_informative": false,
+          "window_sweep_shift_dex": NaN,
+          "verdict": "LCDM_NO_PEAK"
+        },
+        "tng": {
+          "n_galaxies": 130,
+          "n_points": 1560,
+          "mu_peak": -11.279787318129792,
+          "delta_gdagger": -1.3589685641774167,
+          "daic_edge_vs_M1": 7.743934414099385,
+          "daic_edge_vs_M2b": 5.999999462344022,
+          "w_peak": 0.44194499595366815,
+          "Ap": 0.3146826307313557,
+          "perm_p": 0.1,
+          "cv_edge_wins": 0.8,
+          "window_sweep_stable": false,
+          "window_sweep_informative": false,
+          "window_sweep_shift_dex": NaN,
+          "verdict": "LCDM_NO_PEAK"
+        },
+        "discriminating": true
+      },
+      "alternate": {
+        "label": "0.5-5 Reff",
+        "adapted_rmin_factor": 0.5,
+        "adapted_rmax_factor": 5.0,
+        "summary_path": "/Users/russelllicht/bec-dark-matter/analysis/results/lcdm_phase_diagram_r0p5_5/summary_lcdm_phase_diagram.json",
+        "eagle": {
+          "n_galaxies": 46,
+          "n_points": 552,
+          "mu_peak": -9.99855486490499,
+          "delta_gdagger": -0.07773611095261579,
+          "daic_edge_vs_M1": -5.670218340919973,
+          "daic_edge_vs_M2b": 4.380776205693792,
+          "w_peak": 0.28212599678103417,
+          "Ap": 60.8540011257536,
+          "perm_p": 0.016,
+          "cv_edge_wins": 0.6,
+          "window_sweep_stable": false,
+          "window_sweep_informative": null,
+          "window_sweep_shift_dex": 0.4775861761876108,
+          "verdict": "LCDM_NO_PEAK"
+        },
+        "tng": {
+          "n_galaxies": 130,
+          "n_points": 1560,
+          "mu_peak": -10.204730098478606,
+          "delta_gdagger": -0.28391134452623135,
+          "daic_edge_vs_M1": 10.14820112326015,
+          "daic_edge_vs_M2b": 5.996785634504704,
+          "w_peak": 0.08549230839009396,
+          "Ap": 0.2085933269116166,
+          "perm_p": 0.366,
+          "cv_edge_wins": 0.6,
+          "window_sweep_stable": true,
+          "window_sweep_informative": null,
+          "window_sweep_shift_dex": 0.2482930877231091,
+          "verdict": "LCDM_NO_PEAK"
+        },
+        "discriminating": true
+      }
+    },
+    "delta_alternate_minus_baseline": {
+      "eagle": {
+        "delta_mu_peak": 0.5435622840836594,
+        "delta_abs_mu_peak_to_gdagger": -0.5435622840836594,
+        "delta_daic_edge_vs_M1": -4.8404102022077495,
+        "delta_perm_p": -0.12150000000000001,
+        "delta_cv_edge_wins": 0.0,
+        "delta_w_peak": 0.21292715857871014,
+        "verdict_change": "LCDM_NO_PEAK -> LCDM_NO_PEAK"
+      },
+      "tng": {
+        "delta_mu_peak": 1.0750572196511854,
+        "delta_abs_mu_peak_to_gdagger": -1.0750572196511854,
+        "delta_daic_edge_vs_M1": 2.4042667091607655,
+        "delta_perm_p": 0.266,
+        "delta_cv_edge_wins": -0.20000000000000007,
+        "delta_w_peak": -0.3564526875635742,
+        "verdict_change": "LCDM_NO_PEAK -> LCDM_NO_PEAK"
+      }
+    },
+    "overall_stability": {
+      "baseline_discriminating": true,
+      "alternate_discriminating": true,
+      "stable": true
+    },
+    "interpretation": "EAGLE shifted from -10.542 to -9.999 in mu_peak, but still lacks strong edge preference (\u0394AIC edge vs M1 = -5.7). TNG shifted from -11.280 to -10.205 in mu_peak, and still does not prefer edge model (\u0394AIC edge vs M1 = 10.1). Overall discriminating conclusion is unchanged across adapted-radii settings."
+  }
+}

@@ -1,0 +1,46 @@
+# MHONGOOSE/MeerKAT: NGC3621 rotation curve from Sorgho+2019 (MNRAS 482, 1248)
+# 3D BAROLO fit to MeerKAT HI commissioning data
+# Distance: 6.6 Mpc (Freedman+2001), Inclination: 64.0 deg (3D BAROLO avg)
+# PA: 345.2 deg, Vsys: 730.1 km/s
+# M_HI: 9.33e9 Msun (Table 4), M_star: from Spitzer 3.6um, (M/L)_3.6 = 0.50
+# L_3.6 from de Blok+2008: log(M_star) ~ 10.0 (est from M/L=0.50 × L)
+# ISO halo (M/L fixed=0.50): rho_0 = 14.9e-3 Msun/pc^3, r_c = 4.8 kpc, chi2_red = 2.0
+# NFW (M/L fixed=0.50): r200 = 162.7 kpc, c = 5.3, chi2_red = 2.4
+# Digitized from Figure 13 (left panel, 3D BAROLO) and Figure 16 (ISO model top panel)
+# Note: ring width ~2 kpc, data extends to ~50 kpc
+# R_kpc	Vrot_kms	eVrot_kms
+1.0	25	8
+2.0	55	6
+3.0	80	5
+4.0	100	4
+5.0	112	4
+6.0	118	4
+7.0	122	4
+8.0	128	3
+9.0	130	3
+10.0	132	3
+11.0	133	4
+12.0	134	4
+13.0	134	4
+14.0	134	5
+15.0	134	5
+16.0	132	5
+17.0	130	5
+18.0	128	5
+19.0	128	6
+20.0	130	5
+22.0	135	5
+24.0	140	5
+26.0	143	5
+28.0	145	5
+30.0	144	5
+32.0	143	6
+34.0	140	6
+36.0	138	7
+38.0	136	7
+40.0	138	8
+42.0	140	10
+44.0	142	12
+46.0	145	12
+48.0	140	15
+50.0	130	18

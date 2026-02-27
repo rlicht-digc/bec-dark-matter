@@ -1,0 +1,18 @@
+source_path,action,reason,target_path,priority
+/home/tnguser/big_base_complete,QUARANTINE,Empty directory,/home/tnguser/_quarantine_session_recovery/big_base_complete,LOW
+/home/tnguser/rar_profiles/Untitled.ipynb,QUARANTINE,Accidental notebook in data dir,/home/tnguser/_quarantine_session_recovery/rar_profiles_Untitled.ipynb,LOW
+/home/tnguser/rar_profiles/.ipynb_checkpoints,QUARANTINE,Checkpoint in data dir,/home/tnguser/_quarantine_session_recovery/rar_profiles_ipynb_checkpoints,LOW
+/home/tnguser/rar_profiles/20260222_201626/.ipynb_checkpoints,QUARANTINE,Checkpoint in data dir,/home/tnguser/_quarantine_session_recovery/20260222_201626_ipynb_checkpoints,LOW
+/home/tnguser/rar_profiles/20260222_201626/meta/.ipynb_checkpoints,QUARANTINE,Checkpoint in data dir,/home/tnguser/_quarantine_session_recovery/meta_ipynb_checkpoints,LOW
+/home/tnguser/rar_profiles/20260223_034826_big_base/profiles/.ipynb_checkpoints,QUARANTINE,Checkpoint in data dir,/home/tnguser/_quarantine_session_recovery/profiles_ipynb_checkpoints,LOW
+/home/tnguser/rar_profiles/20260222_201626/rar_points.parquet,KEEP_FLAGGED,CONTAMINATED 20899x15 mixed. Use CLEAN instead.,,INFO
+/home/tnguser/phase1_inventory.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase1_inventory.py,LOW
+/home/tnguser/phase2_validate.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase2_validate.py,LOW
+/home/tnguser/phase3_generate_outputs.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase3_generate_outputs.py,LOW
+/home/tnguser/phase3b_outputs.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase3b_outputs.py,LOW
+/home/tnguser/phase3c_final_outputs.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase3c_final_outputs.py,LOW
+/home/tnguser/phase3d_cleanup_status.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase3d_cleanup_status.py,LOW
+/home/tnguser/phase3d_v2.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase3d_v2.py,LOW
+/home/tnguser/phase3d_final.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase3d_final.py,LOW
+/home/tnguser/phase2_results.json,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/phase2_results.json,LOW
+/home/tnguser/compute_big_base_qc.py,QUARANTINE,Temp session script,/home/tnguser/_quarantine_session_recovery/compute_big_base_qc.py,LOW

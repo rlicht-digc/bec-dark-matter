@@ -56,8 +56,8 @@ raw_data/observational/eagle_rar/eagle_aperture_masses.json
 # Ephemeral outputs / logs / runtime artifacts
 # ============================================================
 outputs/
-outputs_bh/
-outputs_bh3/
+outputs_bh
+outputs_bh3
 rerun_outputs/
 logs/
 *.log

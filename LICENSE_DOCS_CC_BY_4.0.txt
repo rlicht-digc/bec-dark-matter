@@ -1,0 +1,15 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+This file applies to project-authored documentation text (for example wiki
+pages, runbooks, and narrative method descriptions) unless noted otherwise.
+
+License summary:
+- You may share and adapt the material for any purpose, including commercial use.
+- You must provide appropriate attribution, indicate if changes were made, and
+  link to the license.
+
+Full legal code:
+https://creativecommons.org/licenses/by/4.0/
+
+Third-party text, figures, and data remain under their original terms and are
+not re-licensed by this file.

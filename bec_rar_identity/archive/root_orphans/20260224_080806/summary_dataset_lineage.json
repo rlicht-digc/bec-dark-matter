@@ -1,0 +1,646 @@
+{
+  "test": "dataset_lineage_audit",
+  "points_file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+  "galaxy_file": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_unified.csv",
+  "per_source_points": {
+    "Catinella2005": {
+      "n_galaxies": 322,
+      "n_points": 2236,
+      "points_per_galaxy": {
+        "min": 5,
+        "median": 5.0,
+        "max": 20
+      },
+      "log_gbar_range": [
+        -12.786483,
+        -9.335911
+      ],
+      "env_dense_breakdown": {
+        "n_field": 2216,
+        "n_dense": 20,
+        "n_missing": 0
+      }
+    },
+    "GHASP": {
+      "n_galaxies": 69,
+      "n_points": 3875,
+      "points_per_galaxy": {
+        "min": 3,
+        "median": 37.0,
+        "max": 274
+      },
+      "log_gbar_range": [
+        -11.834792,
+        -8.98425
+      ],
+      "env_dense_breakdown": {
+        "n_field": 3799,
+        "n_dense": 76,
+        "n_missing": 0
+      }
+    },
+    "LITTLETHINGS": {
+      "n_galaxies": 11,
+      "n_points": 11,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -12.35395,
+        -10.191426
+      ],
+      "env_dense_breakdown": {
+        "n_field": 11,
+        "n_dense": 0,
+        "n_missing": 0
+      }
+    },
+    "LVHIS": {
+      "n_galaxies": 28,
+      "n_points": 35,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 2
+      },
+      "log_gbar_range": [
+        -12.632224,
+        -11.608208
+      ],
+      "env_dense_breakdown": {
+        "n_field": 28,
+        "n_dense": 7,
+        "n_missing": 0
+      }
+    },
+    "MaNGA": {
+      "n_galaxies": 1424,
+      "n_points": 3082,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 2.0,
+        "max": 3
+      },
+      "log_gbar_range": [
+        -13.125658,
+        -8.472327
+      ],
+      "env_dense_breakdown": {
+        "n_field": 2156,
+        "n_dense": 926,
+        "n_missing": 0
+      }
+    },
+    "Noordermeer2005": {
+      "n_galaxies": 47,
+      "n_points": 47,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -18.249994,
+        -9.389183
+      ],
+      "env_dense_breakdown": {
+        "n_field": 42,
+        "n_dense": 5,
+        "n_missing": 0
+      }
+    },
+    "PHANGS": {
+      "n_galaxies": 41,
+      "n_points": 1212,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 27.0,
+        "max": 77
+      },
+      "log_gbar_range": [
+        -10.603199,
+        -7.990523
+      ],
+      "env_dense_breakdown": {
+        "n_field": 540,
+        "n_dense": 672,
+        "n_missing": 0
+      }
+    },
+    "SPARC": {
+      "n_galaxies": 131,
+      "n_points": 2784,
+      "points_per_galaxy": {
+        "min": 5,
+        "median": 15.0,
+        "max": 115
+      },
+      "log_gbar_range": [
+        -13.653897,
+        -7.803199
+      ],
+      "env_dense_breakdown": {
+        "n_field": 2266,
+        "n_dense": 518,
+        "n_missing": 0
+      }
+    },
+    "SS20_A": {
+      "n_galaxies": 2,
+      "n_points": 2,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -11.247569,
+        -10.929591
+      ],
+      "env_dense_breakdown": {
+        "n_field": 2,
+        "n_dense": 0,
+        "n_missing": 0
+      }
+    },
+    "SS20_LT": {
+      "n_galaxies": 11,
+      "n_points": 11,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -11.970478,
+        -10.767699
+      ],
+      "env_dense_breakdown": {
+        "n_field": 11,
+        "n_dense": 0,
+        "n_missing": 0
+      }
+    },
+    "SS20_R": {
+      "n_galaxies": 3,
+      "n_points": 3,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -10.950029,
+        -10.227439
+      ],
+      "env_dense_breakdown": {
+        "n_field": 2,
+        "n_dense": 1,
+        "n_missing": 0
+      }
+    },
+    "SS20_S": {
+      "n_galaxies": 22,
+      "n_points": 22,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -11.350651,
+        -8.784097
+      ],
+      "env_dense_breakdown": {
+        "n_field": 18,
+        "n_dense": 4,
+        "n_missing": 0
+      }
+    },
+    "SS20_TH": {
+      "n_galaxies": 2,
+      "n_points": 2,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -10.717297,
+        -10.15019
+      ],
+      "env_dense_breakdown": {
+        "n_field": 2,
+        "n_dense": 0,
+        "n_missing": 0
+      }
+    },
+    "Swaters2025": {
+      "n_galaxies": 85,
+      "n_points": 85,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -11.340818,
+        -8.231396
+      ],
+      "env_dense_breakdown": {
+        "n_field": 82,
+        "n_dense": 3,
+        "n_missing": 0
+      }
+    },
+    "Verheijen2001": {
+      "n_galaxies": 12,
+      "n_points": 82,
+      "points_per_galaxy": {
+        "min": 3,
+        "median": 6.5,
+        "max": 11
+      },
+      "log_gbar_range": [
+        -12.589136,
+        -9.483445
+      ],
+      "env_dense_breakdown": {
+        "n_field": 0,
+        "n_dense": 82,
+        "n_missing": 0
+      }
+    },
+    "VirgoRC": {
+      "n_galaxies": 1,
+      "n_points": 18,
+      "points_per_galaxy": {
+        "min": 18,
+        "median": 18.0,
+        "max": 18
+      },
+      "log_gbar_range": [
+        -10.517793,
+        -10.068897
+      ],
+      "env_dense_breakdown": {
+        "n_field": 0,
+        "n_dense": 18,
+        "n_missing": 0
+      }
+    },
+    "Vogt2004": {
+      "n_galaxies": 327,
+      "n_points": 327,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -11.884977,
+        -9.687204
+      ],
+      "env_dense_breakdown": {
+        "n_field": 31,
+        "n_dense": 296,
+        "n_missing": 0
+      }
+    },
+    "WALLABY": {
+      "n_galaxies": 165,
+      "n_points": 1220,
+      "points_per_galaxy": {
+        "min": 4,
+        "median": 6.0,
+        "max": 46
+      },
+      "log_gbar_range": [
+        -12.496353,
+        -11.184146
+      ],
+      "env_dense_breakdown": {
+        "n_field": 1016,
+        "n_dense": 204,
+        "n_missing": 0
+      }
+    },
+    "WALLABY_DR2": {
+      "n_galaxies": 39,
+      "n_points": 194,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 4.0,
+        "max": 25
+      },
+      "log_gbar_range": [
+        -12.23992,
+        -10.047457
+      ],
+      "env_dense_breakdown": {
+        "n_field": 0,
+        "n_dense": 194,
+        "n_missing": 0
+      }
+    },
+    "Yu2020": {
+      "n_galaxies": 132,
+      "n_points": 132,
+      "points_per_galaxy": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1
+      },
+      "log_gbar_range": [
+        -13.351981,
+        -10.939095
+      ],
+      "env_dense_breakdown": {
+        "n_field": 93,
+        "n_dense": 39,
+        "n_missing": 0
+      }
+    },
+    "deBlok2002": {
+      "n_galaxies": 18,
+      "n_points": 365,
+      "points_per_galaxy": {
+        "min": 4,
+        "median": 15.0,
+        "max": 59
+      },
+      "log_gbar_range": [
+        -14.393121,
+        -10.674436
+      ],
+      "env_dense_breakdown": {
+        "n_field": 365,
+        "n_dense": 0,
+        "n_missing": 0
+      }
+    }
+  },
+  "per_source_galaxy": {
+    "Catinella2005": {
+      "n_galaxies": 322,
+      "n_rows": 322,
+      "sigma_res_median": 0.0986885,
+      "sigma_res_IQR": 0.05813750000000001,
+      "logMh_range": [
+        11.0,
+        13.5
+      ]
+    },
+    "GHASP": {
+      "n_galaxies": 69,
+      "n_rows": 69,
+      "sigma_res_median": 0.128277,
+      "sigma_res_IQR": 0.07392900000000001,
+      "logMh_range": [
+        11.0,
+        14.9
+      ]
+    },
+    "LITTLETHINGS": {
+      "n_galaxies": 11,
+      "n_rows": 11,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        12.447
+      ]
+    },
+    "LVHIS": {
+      "n_galaxies": 28,
+      "n_rows": 28,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.00101025,
+      "logMh_range": [
+        11.0,
+        13.246
+      ]
+    },
+    "MaNGA": {
+      "n_galaxies": 1424,
+      "n_rows": 1424,
+      "sigma_res_median": 0.0345535,
+      "sigma_res_IQR": 0.049666749999999996,
+      "logMh_range": [
+        4.895358,
+        15.001074
+      ]
+    },
+    "Noordermeer2005": {
+      "n_galaxies": 47,
+      "n_rows": 47,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        13.294
+      ]
+    },
+    "PHANGS": {
+      "n_galaxies": 41,
+      "n_rows": 41,
+      "sigma_res_median": 0.150774,
+      "sigma_res_IQR": 0.136365,
+      "logMh_range": [
+        11.0,
+        14.867
+      ]
+    },
+    "SPARC": {
+      "n_galaxies": 131,
+      "n_rows": 131,
+      "sigma_res_median": 0.072374,
+      "sigma_res_IQR": 0.08405749999999998,
+      "logMh_range": [
+        0.0,
+        13.2
+      ]
+    },
+    "SS20_A": {
+      "n_galaxies": 2,
+      "n_rows": 2,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        11.0
+      ]
+    },
+    "SS20_LT": {
+      "n_galaxies": 11,
+      "n_rows": 11,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        12.348
+      ]
+    },
+    "SS20_R": {
+      "n_galaxies": 3,
+      "n_rows": 3,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        14.867
+      ]
+    },
+    "SS20_S": {
+      "n_galaxies": 22,
+      "n_rows": 22,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        12.893
+      ]
+    },
+    "SS20_TH": {
+      "n_galaxies": 2,
+      "n_rows": 2,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        12.34
+      ]
+    },
+    "Swaters2025": {
+      "n_galaxies": 85,
+      "n_rows": 85,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        14.9
+      ]
+    },
+    "Verheijen2001": {
+      "n_galaxies": 12,
+      "n_rows": 12,
+      "sigma_res_median": 0.0609175,
+      "sigma_res_IQR": 0.16609124999999997,
+      "logMh_range": [
+        12.8,
+        12.8
+      ]
+    },
+    "VirgoRC": {
+      "n_galaxies": 1,
+      "n_rows": 1,
+      "sigma_res_median": 0.106814,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        14.2,
+        14.2
+      ]
+    },
+    "Vogt2004": {
+      "n_galaxies": 327,
+      "n_rows": 327,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        15.0
+      ]
+    },
+    "WALLABY": {
+      "n_galaxies": 165,
+      "n_rows": 165,
+      "sigma_res_median": 0.140051,
+      "sigma_res_IQR": 0.114764,
+      "logMh_range": [
+        11.0,
+        15.0
+      ]
+    },
+    "WALLABY_DR2": {
+      "n_galaxies": 39,
+      "n_rows": 39,
+      "sigma_res_median": 0.048086,
+      "sigma_res_IQR": 0.04960199999999999,
+      "logMh_range": [
+        12.5,
+        15.0
+      ]
+    },
+    "Yu2020": {
+      "n_galaxies": 132,
+      "n_rows": 132,
+      "sigma_res_median": 0.0,
+      "sigma_res_IQR": 0.0,
+      "logMh_range": [
+        11.0,
+        14.9
+      ]
+    },
+    "deBlok2002": {
+      "n_galaxies": 18,
+      "n_rows": 18,
+      "sigma_res_median": 0.173595,
+      "sigma_res_IQR": 0.12763625,
+      "logMh_range": [
+        11.0,
+        11.0
+      ]
+    }
+  },
+  "tng_datasets": {
+    "verified_clean_3000x50": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points_CLEAN.parquet",
+      "status": "present",
+      "n_points": 150000,
+      "n_galaxies": 3000,
+      "points_per_galaxy": {
+        "min": 50,
+        "median": 50.0,
+        "max": 50
+      }
+    },
+    "verified_clean_48133x50": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/rar_points.parquet",
+      "status": "present",
+      "n_points": 2402467,
+      "n_galaxies": 48060,
+      "points_per_galaxy": {
+        "min": 11,
+        "median": 50.0,
+        "max": 50
+      }
+    },
+    "contaminated_20899x15": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/quarantine_contaminated/rar_points_20899x15_CONTAMINATED.parquet",
+      "status": "present",
+      "n_points": 313485,
+      "n_galaxies": 20899,
+      "points_per_galaxy": {
+        "min": 15,
+        "median": 15.0,
+        "max": 15
+      }
+    }
+  },
+  "contamination_note": {
+    "text": [
+      "A mixed TNG dataset was initially used for SPARC-vs-TNG scatter comparisons.",
+      "That mixed set reported TNG scatter substantially higher than SPARC (historical ratio near 4.13 in archived fairness sweeps).",
+      "After verification/cleanup, clean TNG datasets reverse the direction (mass-matched median sigma ratio is near 0.5 in current clean-base checks).",
+      "All current analyses use verified clean datasets only (3000x50 and/or 48133x50).",
+      "Affected earlier outputs include TNG-vs-SPARC composition/fairness sweeps based on 20899x15 mixed extraction outputs."
+    ],
+    "historical_ratio_contaminated": 4.128387912780127,
+    "current_ratio_clean_massmatched": 0.5174768252973118,
+    "known_contaminated_file": "/Users/russelllicht/bec-dark-matter/datasets/quarantine_contaminated/rar_points_20899x15_CONTAMINATED.parquet",
+    "known_issue": "mixed extraction passes produced 20899 galaxies x 15 points (non-uniform provenance); quarantined in datasets/quarantine_contaminated",
+    "unknowns": []
+  }
+}

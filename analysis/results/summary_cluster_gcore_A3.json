@@ -1,0 +1,259 @@
+{
+  "test_name": "cluster_gcore_scaling_A3",
+  "gcore_analysis": {
+    "description": "g_core = G M_tot(Rad) / Rad\u00b2, where Rad is the BCG aperture radius from Tian+2020",
+    "n_clusters": 20,
+    "gcore_range": [
+      9.397980379688536e-10,
+      7.15556142676349e-09
+    ],
+    "log_gcore_range_dex": 0.8816091802590318,
+    "fit_B": 0.13818309320989158,
+    "fit_B_err": 0.17211042329125023,
+    "fit_A": -7.579897699378416,
+    "pearson_r": 0.18593926619621803,
+    "pearson_p": 0.4325213157428183,
+    "spearman_rho": 0.38345864661654133,
+    "spearman_p": 0.09512441358281754,
+    "bootstrap_B_95ci": [
+      -0.19551138546377475,
+      0.5709665221015242
+    ],
+    "B1_in_ci": false,
+    "gdagger_over_gcore_mean": 0.6313111926272812,
+    "gdagger_over_gcore_median": 0.50234692324135,
+    "gdagger_over_gcore_std": 0.40928777960224544,
+    "verdict": "Not significant (p=4.325e-01)",
+    "linear_verdict": "No clear scaling"
+  },
+  "multivariate": {
+    "n_clusters": 9,
+    "cluster_names": [
+      "A209",
+      "A383",
+      "MACS0329",
+      "MACS1115",
+      "MACS1206",
+      "MACS1931",
+      "MS2137",
+      "RXJ2129",
+      "RXJ2248"
+    ],
+    "coefficients": {
+      "intercept": {
+        "value": 33.30330178005584,
+        "stderr": 13.550032487540157,
+        "p_value": 0.057383354488974136
+      },
+      "log M_core (via g_core)": {
+        "value": 1.2222726954719552,
+        "stderr": 0.39012362115867594,
+        "p_value": 0.025868573719719512
+      },
+      "log c_200": {
+        "value": -0.7386461330987912,
+        "stderr": 0.4217627058913283,
+        "p_value": 0.14028153995209736
+      },
+      "log g_200": {
+        "value": 3.0255679512685125,
+        "stderr": 1.0323552736642079,
+        "p_value": 0.03260464135779828
+      }
+    },
+    "R2": 0.7488570495478908,
+    "R2_adj": 0.5981712792766253
+  },
+  "sigma_anti_correlation": {
+    "clean_spectroscopic_N": 5,
+    "B_slope": -1.513292422524861,
+    "B_stderr": 0.40628827990792143,
+    "pearson_r": -0.906754331854161,
+    "pearson_p": 0.03369824754518543,
+    "partial_r_gd_sigma_given_gcore": 0.10072154036673195,
+    "partial_p": 0.7318980122370391,
+    "sigma_vs_gcore_r": -0.16452382875659272
+  },
+  "per_cluster_gcore": [
+    {
+      "name": "A209",
+      "log_gcore": -8.578731967922261,
+      "gcore": 2.6379589438645643e-09,
+      "log_gdagger": -8.891743081846673,
+      "gdagger_over_gcore": 0.48639475832228524,
+      "Mtot_1e12": 3.87,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "A2261",
+      "log_gcore": -8.79270899659145,
+      "gcore": 1.6117252262256686e-09,
+      "log_gdagger": -8.662041219856937,
+      "gdagger_over_gcore": 1.3510386605874465,
+      "Mtot_1e12": 6.44,
+      "Rad_kpc": 23.6
+    },
+    {
+      "name": "A383",
+      "log_gcore": -8.288495981311986,
+      "gcore": 5.146405691518723e-09,
+      "log_gdagger": -8.59173077806707,
+      "gdagger_over_gcore": 0.49746806137507543,
+      "Mtot_1e12": 7.55,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "A611",
+      "log_gcore": -8.753292217229903,
+      "gcore": 1.7648499329250662e-09,
+      "log_gdagger": -8.608223018641713,
+      "gdagger_over_gcore": 1.3965908700254355,
+      "Mtot_1e12": 6.24,
+      "Rad_kpc": 22.2
+    },
+    {
+      "name": "MACS0329",
+      "log_gcore": -8.14535628573651,
+      "gcore": 7.15556142676349e-09,
+      "log_gdagger": -8.440154962697779,
+      "gdagger_over_gcore": 0.5072257851076246,
+      "Mtot_1e12": 25.3,
+      "Rad_kpc": 22.2
+    },
+    {
+      "name": "MACS0416",
+      "log_gcore": -8.541130481979499,
+      "gcore": 2.876534042146889e-09,
+      "log_gdagger": -8.702831003770726,
+      "gdagger_over_gcore": 0.6891273368726313,
+      "Mtot_1e12": 4.22,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MACS0429",
+      "log_gcore": -8.327697210538776,
+      "gcore": 4.702218323037271e-09,
+      "log_gdagger": -8.783716988881043,
+      "gdagger_over_gcore": 0.34992923042778895,
+      "Mtot_1e12": 9.98,
+      "Rad_kpc": 17.2
+    },
+    {
+      "name": "MACS0647",
+      "log_gcore": -8.279388554890216,
+      "gcore": 5.255468593590643e-09,
+      "log_gdagger": -8.545104230779959,
+      "gdagger_over_gcore": 0.5423558439706154,
+      "Mtot_1e12": 7.71,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MACS0717",
+      "log_gcore": -8.556848523715953,
+      "gcore": 2.7742875714544644e-09,
+      "log_gdagger": -8.81194482452666,
+      "gdagger_over_gcore": 0.5557810042750733,
+      "Mtot_1e12": 4.07,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MACS0744",
+      "log_gcore": -8.282781497787555,
+      "gcore": 5.214570005313674e-09,
+      "log_gdagger": -8.694720822683012,
+      "gdagger_over_gcore": 0.38731175230846543,
+      "Mtot_1e12": 7.65,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MACS1115",
+      "log_gcore": -8.478920869752237,
+      "gcore": 3.3195493560264537e-09,
+      "log_gdagger": -8.83102146266637,
+      "gdagger_over_gcore": 0.44452829223620965,
+      "Mtot_1e12": 6.25,
+      "Rad_kpc": 16.2
+    },
+    {
+      "name": "MACS1149",
+      "log_gcore": -8.50938708008407,
+      "gcore": 3.094659846290729e-09,
+      "log_gdagger": -8.769740747242531,
+      "gdagger_over_gcore": 0.5490935381149554,
+      "Mtot_1e12": 4.54,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MACS1206",
+      "log_gcore": -8.327593842203918,
+      "gcore": 4.703337651851549e-09,
+      "log_gdagger": -8.594949400623863,
+      "gdagger_over_gcore": 0.5403117866570334,
+      "Mtot_1e12": 6.9,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MACS1720",
+      "log_gcore": -8.76717416026973,
+      "gcore": 1.7093297042113842e-09,
+      "log_gdagger": -8.648353584561391,
+      "gdagger_over_gcore": 1.314681572829286,
+      "Mtot_1e12": 6.83,
+      "Rad_kpc": 23.6
+    },
+    {
+      "name": "MACS1931",
+      "log_gcore": -8.308507668221743,
+      "gcore": 4.914647024615894e-09,
+      "log_gdagger": -8.771836150099938,
+      "gdagger_over_gcore": 0.3440895775912747,
+      "Mtot_1e12": 7.21,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "MS2137",
+      "log_gcore": -8.566559860867486,
+      "gcore": 2.7129396890390093e-09,
+      "log_gdagger": -9.146031100178817,
+      "gdagger_over_gcore": 0.26334723367965185,
+      "Mtot_1e12": 3.98,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "RXJ1347",
+      "log_gcore": -8.304311553628136,
+      "gcore": 4.962362044272359e-09,
+      "log_gdagger": -8.794034333628469,
+      "gdagger_over_gcore": 0.3238002800256746,
+      "Mtot_1e12": 7.28,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "RXJ1532",
+      "log_gcore": -8.333934020234937,
+      "gcore": 4.6351733380565985e-09,
+      "log_gdagger": -9.047013880990315,
+      "gdagger_over_gcore": 0.19360659154366028,
+      "Mtot_1e12": 6.8,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "RXJ2129",
+      "log_gcore": -8.343621287638069,
+      "gcore": 4.5329268673641736e-09,
+      "log_gdagger": -8.859650992391101,
+      "gdagger_over_gcore": 0.30476865276844906,
+      "Mtot_1e12": 6.65,
+      "Rad_kpc": 14.3
+    },
+    {
+      "name": "RXJ2248",
+      "log_gcore": -9.026965465995541,
+      "gcore": 9.397980379688536e-10,
+      "log_gdagger": -8.82699839600846,
+      "gdagger_over_gcore": 1.5847730238269873,
+      "Mtot_1e12": 6.19,
+      "Rad_kpc": 30.3
+    }
+  ]
+}

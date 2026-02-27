@@ -1,0 +1,370 @@
+{
+  "test_name": "hierarchical_healing_length",
+  "description": "Tests whether the cluster-scale g\u2020_eff follows a mass-scaling relation through the BEC healing length \u03be = sqrt(GM/g\u2020). Spans from dwarf galaxies (~10^8 M\u2609) to massive clusters (~10^15 M\u2609).",
+  "constants": {
+    "g_dagger": 1.2e-10,
+    "log_g_dagger": -9.920818753952375,
+    "G_SI": 6.674e-11,
+    "prefactor_kpc": 3.408e-05
+  },
+  "data": {
+    "n_galaxies": 67,
+    "n_clusters": 20,
+    "n_clusters_with_M200": 6,
+    "galaxy_M_range": [
+      95110000.0,
+      268868290000.0
+    ],
+    "galaxy_xi_range_kpc": [
+      0.332,
+      17.671
+    ],
+    "cluster_Mtot_range": [
+      3870000000000.0,
+      25300000000000.0
+    ],
+    "cluster_xi_core_range_kpc": [
+      67.0,
+      171.4
+    ]
+  },
+  "test_3a_mass_scaling": {
+    "combined_fit": {
+      "alpha": 0.3166,
+      "alpha_err": 0.023,
+      "intercept": -3.1564,
+      "pearson_r": 0.8312,
+      "pearson_p": 2.2238486158373725e-23,
+      "M_ref_Msun": 9302010406.3,
+      "log_M_ref": 9.969
+    },
+    "cluster_only_fit": {
+      "alpha": 0.5415,
+      "alpha_err": 0.1803,
+      "pearson_r": 0.578,
+      "pearson_p": 0.0076
+    },
+    "naive_alpha": 0.4693,
+    "m200_fit": {
+      "n_clusters": 6,
+      "slope": 0.9071,
+      "slope_err": 0.6086,
+      "pearson_r": 0.598,
+      "pearson_p": 0.2104,
+      "combined_slope": 0.175,
+      "combined_slope_err": 0.0129,
+      "combined_M_ref": 12133612829.55
+    },
+    "verdict": "SIGNIFICANT \u2014 g\u2020_eff scales with Mtot within clusters"
+  },
+  "test_3b_core_size": {
+    "xi_core_over_Rad_median": 5.7,
+    "xi_eff_over_Rad_median": 1.41,
+    "xi_core_vs_Rad_pearson_r": 0.283,
+    "xi_core_vs_Rad_pearson_p": 0.226,
+    "xi_eff_vs_Rad_pearson_r": 0.037,
+    "xi_eff_vs_Rad_pearson_p": 0.878,
+    "galaxy_xi_over_Rdisk_median": 1.68,
+    "galaxy_xi_vs_Rdisk_r": 0.755,
+    "m200": {
+      "xi_200_median_kpc": 1059.1,
+      "R200_median_kpc": 1850.0,
+      "xi_200_over_R200_median": 0.584,
+      "xi_200_eff_median_kpc": 305.6,
+      "xi_200_eff_over_R200_median": 0.162
+    },
+    "verdict": "SUGGESTIVE \u2014 \u03be_eff \u2248 1.4\u00d7 Rad (same order of magnitude)"
+  },
+  "test_3c_hierarchical": {
+    "combined_slope": 0.5,
+    "combined_slope_err": 6.303209650227706e-06,
+    "expected_slope": 0.5,
+    "deviation_sigma": 0.0,
+    "pearson_r": 1.0,
+    "pearson_p": 0.0,
+    "verdict": "CONSISTENT \u2014 slope = 0.500 \u00b1 6.30e-06, within 2\u03c3 of 0.5"
+  },
+  "test_3d_potential_well": {
+    "gdagger_eff_vs_gcore": {
+      "slope": 0.1382,
+      "slope_err": 0.1721,
+      "pearson_r": 0.186,
+      "pearson_p": 0.4325,
+      "spearman_rho": 0.383,
+      "spearman_p": 0.0951
+    },
+    "gdagger_eff_vs_Mtot": {
+      "slope": 0.5415,
+      "slope_err": 0.1803,
+      "pearson_r": 0.578,
+      "pearson_p": 0.0076,
+      "spearman_rho": 0.576,
+      "spearman_p": 0.0079
+    },
+    "gdagger_eff_vs_g200": {
+      "slope": 1.0754,
+      "slope_err": 1.112,
+      "pearson_r": 0.435,
+      "pearson_p": 0.3883,
+      "spearman_rho": 0.371,
+      "spearman_p": 0.4685
+    },
+    "previous_E5_multivariate_R2": 0.749,
+    "verdict": "SIGNIFICANT \u2014 g\u2020_eff correlates with Mtot (p = 0.008)"
+  },
+  "step4_scatter_profile": {
+    "scatter_minimum_kpc": 200.0,
+    "scatter_minimum_sigma": 0.0717,
+    "xi_core_median_kpc": 88.4,
+    "xi_eff_median_kpc": 21.8,
+    "xi_200_eff_median_kpc": 305.6,
+    "sigma_at_xi_eff": 0.1388,
+    "closest_scale_to_scatter_min": "\u03be_200_eff",
+    "closest_scale_value_kpc": 305.6,
+    "closest_scale_factor": 1.528,
+    "inner_scatter": 0.1506,
+    "outer_scatter": 0.0912
+  },
+  "per_cluster": {
+    "A209": {
+      "Mtot_1e12": 3.87,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 10.692,
+      "log_gdagger_eff": -8.8917,
+      "xi_core_kpc": 67.05,
+      "xi_eff_kpc": 20.5,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "A2261": {
+      "Mtot_1e12": 6.44,
+      "Rad_kpc": 23.6,
+      "gdagger_eff_over_gd": 18.146,
+      "log_gdagger_eff": -8.662,
+      "xi_core_kpc": 86.49,
+      "xi_eff_kpc": 20.3,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "A383": {
+      "Mtot_1e12": 7.55,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 21.335,
+      "log_gdagger_eff": -8.5917,
+      "xi_core_kpc": 93.65,
+      "xi_eff_kpc": 20.27,
+      "M200": 840000000000000.0,
+      "R200_kpc": 1830.0,
+      "xi_200_kpc": 987.8,
+      "xi_200_eff_kpc": 213.9
+    },
+    "A611": {
+      "Mtot_1e12": 6.24,
+      "Rad_kpc": 22.2,
+      "gdagger_eff_over_gd": 20.54,
+      "log_gdagger_eff": -8.6082,
+      "xi_core_kpc": 85.14,
+      "xi_eff_kpc": 18.79,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS0329": {
+      "Mtot_1e12": 25.3,
+      "Rad_kpc": 22.2,
+      "gdagger_eff_over_gd": 30.246,
+      "log_gdagger_eff": -8.4402,
+      "xi_core_kpc": 171.43,
+      "xi_eff_kpc": 31.17,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS0416": {
+      "Mtot_1e12": 4.22,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 16.519,
+      "log_gdagger_eff": -8.7028,
+      "xi_core_kpc": 70.01,
+      "xi_eff_kpc": 17.23,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS0429": {
+      "Mtot_1e12": 9.98,
+      "Rad_kpc": 17.2,
+      "gdagger_eff_over_gd": 13.712,
+      "log_gdagger_eff": -8.7837,
+      "xi_core_kpc": 107.67,
+      "xi_eff_kpc": 29.08,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS0647": {
+      "Mtot_1e12": 7.71,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 23.753,
+      "log_gdagger_eff": -8.5451,
+      "xi_core_kpc": 94.63,
+      "xi_eff_kpc": 19.42,
+      "M200": 1800000000000000.0,
+      "R200_kpc": 2060.0,
+      "xi_200_kpc": 1446.0,
+      "xi_200_eff_kpc": 296.7
+    },
+    "MACS0717": {
+      "Mtot_1e12": 4.07,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 12.849,
+      "log_gdagger_eff": -8.8119,
+      "xi_core_kpc": 68.76,
+      "xi_eff_kpc": 19.18,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS0744": {
+      "Mtot_1e12": 7.65,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 16.831,
+      "log_gdagger_eff": -8.6947,
+      "xi_core_kpc": 94.27,
+      "xi_eff_kpc": 22.98,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS1115": {
+      "Mtot_1e12": 6.25,
+      "Rad_kpc": 16.2,
+      "gdagger_eff_over_gd": 12.297,
+      "log_gdagger_eff": -8.831,
+      "xi_core_kpc": 85.2,
+      "xi_eff_kpc": 24.3,
+      "M200": 1100000000000000.0,
+      "R200_kpc": 1870.0,
+      "xi_200_kpc": 1130.4,
+      "xi_200_eff_kpc": 322.3
+    },
+    "MACS1149": {
+      "Mtot_1e12": 4.54,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 14.16,
+      "log_gdagger_eff": -8.7697,
+      "xi_core_kpc": 72.62,
+      "xi_eff_kpc": 19.3,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS1206": {
+      "Mtot_1e12": 6.9,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 21.177,
+      "log_gdagger_eff": -8.5949,
+      "xi_core_kpc": 89.53,
+      "xi_eff_kpc": 19.45,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS1720": {
+      "Mtot_1e12": 6.83,
+      "Rad_kpc": 23.6,
+      "gdagger_eff_over_gd": 18.727,
+      "log_gdagger_eff": -8.6484,
+      "xi_core_kpc": 89.07,
+      "xi_eff_kpc": 20.58,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "MACS1931": {
+      "Mtot_1e12": 7.21,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 14.092,
+      "log_gdagger_eff": -8.7718,
+      "xi_core_kpc": 91.51,
+      "xi_eff_kpc": 24.38,
+      "M200": 1200000000000000.0,
+      "R200_kpc": 1910.0,
+      "xi_200_kpc": 1180.6,
+      "xi_200_eff_kpc": 314.5
+    },
+    "MS2137": {
+      "Mtot_1e12": 3.98,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 5.954,
+      "log_gdagger_eff": -9.146,
+      "xi_core_kpc": 67.99,
+      "xi_eff_kpc": 27.87,
+      "M200": 790000000000000.0,
+      "R200_kpc": 1700.0,
+      "xi_200_kpc": 957.9,
+      "xi_200_eff_kpc": 392.6
+    },
+    "RXJ1347": {
+      "Mtot_1e12": 7.28,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 13.39,
+      "log_gdagger_eff": -8.794,
+      "xi_core_kpc": 91.96,
+      "xi_eff_kpc": 25.13,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "RXJ1532": {
+      "Mtot_1e12": 6.8,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 7.478,
+      "log_gdagger_eff": -9.047,
+      "xi_core_kpc": 88.87,
+      "xi_eff_kpc": 32.5,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    },
+    "RXJ2129": {
+      "Mtot_1e12": 6.65,
+      "Rad_kpc": 14.3,
+      "gdagger_eff_over_gd": 11.512,
+      "log_gdagger_eff": -8.8597,
+      "xi_core_kpc": 87.89,
+      "xi_eff_kpc": 25.9,
+      "M200": 770000000000000.0,
+      "R200_kpc": 1750.0,
+      "xi_200_kpc": 945.7,
+      "xi_200_eff_kpc": 278.7
+    },
+    "RXJ2248": {
+      "Mtot_1e12": 6.19,
+      "Rad_kpc": 30.3,
+      "gdagger_eff_over_gd": 12.411,
+      "log_gdagger_eff": -8.827,
+      "xi_core_kpc": 84.79,
+      "xi_eff_kpc": 24.07,
+      "M200": null,
+      "R200_kpc": null,
+      "xi_200_kpc": null,
+      "xi_200_eff_kpc": null
+    }
+  }
+}

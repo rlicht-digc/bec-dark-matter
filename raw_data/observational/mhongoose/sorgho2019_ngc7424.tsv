@@ -1,0 +1,26 @@
+# MHONGOOSE/KAT-7: NGC7424 rotation curve from Sorgho+2019 (MNRAS 482, 1248)
+# 3D BAROLO fit to KAT-7 HI data cube
+# Distance: 9.55 Mpc (Meurer+2006), Inclination: 29.0 deg (3D BAROLO avg)
+# PA: 236.9 deg, Vsys: 936.2 km/s
+# M_HI: 1.26e10 Msun (log=10.1), M_star: 2.51e9 Msun (log=9.4, WISE W1-W2)
+# (M/L)_W1 = 0.25 (Cluver+2014)
+# ISO halo (M/L fixed=0.25): rho_0 = 107.9e-3 Msun/pc^3, r_c = 1.9 kpc, chi2_red = 1.8
+# NFW (M/L fixed=0.25): r200 = 92.7 kpc, c = 6.5, chi2_red = 4.8
+# Digitized from Figure 9 (left panel, 3D BAROLO points) and Figure 15 (ISO model top panel)
+# Note: ring width ~4 kpc (2 rings per beamwidth)
+# R_kpc	Vrot_kms	eVrot_kms
+2.0	57	12
+4.0	82	8
+6.0	87	10
+8.0	92	8
+10.0	100	8
+14.0	130	7
+18.0	145	5
+22.0	150	8
+26.0	138	5
+30.0	140	5
+34.0	148	6
+38.0	150	5
+42.0	148	8
+46.0	142	12
+50.0	135	15

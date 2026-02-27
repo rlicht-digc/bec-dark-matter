@@ -1,0 +1,39 @@
+{
+  "test_name": "validate_mhongoose_sparc",
+  "galaxy": "ESO444-G084",
+  "sparc": {
+    "distance_Mpc": 4.83,
+    "inclination_deg": 32.0,
+    "n_points": 7,
+    "ml_disk": 0.5,
+    "rar_scatter": 0.0554,
+    "mean_residual": 0.1741
+  },
+  "mhongoose": {
+    "distance_Mpc": 4.6,
+    "inclination_deg": 49.0,
+    "n_points": 17,
+    "ml_34um": 0.2,
+    "rar_scatter": 0.3149,
+    "mean_residual": -0.042
+  },
+  "comparison": {
+    "rotation_curve": {
+      "mean_Vmh_over_Vsparc": 0.619,
+      "std_ratio": 0.125,
+      "mean_diff_kms": -15.7,
+      "rms_diff_kms": 16.0
+    },
+    "systematic_budget": {
+      "distance_shift_log_gbar": -0.0424,
+      "inclination_shift_log_gobs": -0.3071,
+      "ml_shift_log_gbar": -0.3979
+    },
+    "quality_assessment": {
+      "sparc_passes_025_threshold": true,
+      "mhongoose_passes_025_threshold": false,
+      "inclination_concern": "SPARC i=32\u00b0 is near Q-cut boundary; MH i=49\u00b0 from kinematics is likely more reliable"
+    }
+  },
+  "verdict": "MHONGOOSE data quality suitable for RAR pipeline integration"
+}

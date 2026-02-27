@@ -1,0 +1,629 @@
+{
+  "test": "interface_oscillation",
+  "description": "Lag autocorrelation of RAR residuals ordered by galactocentric radius",
+  "parameters": {
+    "min_points_per_galaxy": 15,
+    "n_bootstrap": 10000
+  },
+  "sample": {
+    "n_galaxies": 67,
+    "n_rejected": 68,
+    "n_valid_r1": 67,
+    "n_valid_r2": 67
+  },
+  "aggregate_lag1": {
+    "mean": 0.6997,
+    "se": 0.0226,
+    "median": 0.7356,
+    "std": 0.1847,
+    "ci_95_lower": 0.6556,
+    "ci_95_upper": 0.7429,
+    "ttest_t": 31.008,
+    "ttest_p_one_sided": 2.287357401227732e-41,
+    "frac_positive": 1.0,
+    "binom_p": 6.776263578034403e-21
+  },
+  "aggregate_lag2": {
+    "mean": 0.4994,
+    "se": 0.0301,
+    "median": 0.5051,
+    "std": 0.2462,
+    "ci_95_lower": 0.4389,
+    "ci_95_upper": 0.558,
+    "ttest_t": 16.603,
+    "ttest_p_one_sided": 1.4835735984434356e-25,
+    "frac_positive": 0.955,
+    "binom_p": 3.4006001140007847e-16
+  },
+  "environment_split": {
+    "lag1": {
+      "field_mean": 0.696,
+      "dense_mean": 0.7079,
+      "welch_p": 0.8097,
+      "mwu_p": 0.9407,
+      "n_field": 46,
+      "n_dense": 21
+    },
+    "lag2": {
+      "field_mean": 0.4895,
+      "dense_mean": 0.5212,
+      "welch_p": 0.641,
+      "mwu_p": 0.5749,
+      "n_field": 46,
+      "n_dense": 21
+    }
+  },
+  "mass_split": {
+    "lag1": {
+      "low_mean": 0.7286,
+      "high_mean": 0.6717,
+      "welch_p": 0.2096,
+      "mwu_p": 0.1943,
+      "n_low": 33,
+      "n_high": 34
+    },
+    "lag2": {
+      "low_mean": 0.5534,
+      "high_mean": 0.4471,
+      "welch_p": 0.077,
+      "mwu_p": 0.0416,
+      "n_low": 33,
+      "n_high": 34
+    }
+  },
+  "correlations": {
+    "r1_vs_npts": {
+      "spearman_rho": -0.034,
+      "p_value": 0.7848
+    },
+    "r1_vs_vflat": {
+      "spearman_rho": -0.085,
+      "p_value": 0.492
+    },
+    "r1_vs_med_log_gbar": {
+      "spearman_rho": -0.177,
+      "p_value": 0.153
+    }
+  },
+  "per_galaxy": [
+    {
+      "name": "D631-7",
+      "n_pts": 16,
+      "r1": 0.7356,
+      "r2": 0.5797,
+      "env": "field",
+      "Vflat": 57.7
+    },
+    {
+      "name": "DDO161",
+      "n_pts": 31,
+      "r1": 0.9548,
+      "r2": 0.8781,
+      "env": "field",
+      "Vflat": 66.3
+    },
+    {
+      "name": "ESO079-G014",
+      "n_pts": 15,
+      "r1": 0.8158,
+      "r2": 0.4137,
+      "env": "field",
+      "Vflat": 175.0
+    },
+    {
+      "name": "ESO116-G012",
+      "n_pts": 15,
+      "r1": 0.7741,
+      "r2": 0.5614,
+      "env": "field",
+      "Vflat": 109.1
+    },
+    {
+      "name": "ESO563-G021",
+      "n_pts": 30,
+      "r1": 0.6345,
+      "r2": 0.4635,
+      "env": "field",
+      "Vflat": 314.6
+    },
+    {
+      "name": "F568-3",
+      "n_pts": 18,
+      "r1": 0.7407,
+      "r2": 0.4852,
+      "env": "field",
+      "Vflat": 0.0
+    },
+    {
+      "name": "F568-V1",
+      "n_pts": 15,
+      "r1": 0.6066,
+      "r2": 0.2196,
+      "env": "field",
+      "Vflat": 112.3
+    },
+    {
+      "name": "F583-1",
+      "n_pts": 25,
+      "r1": 0.7033,
+      "r2": 0.368,
+      "env": "field",
+      "Vflat": 85.8
+    },
+    {
+      "name": "IC2574",
+      "n_pts": 34,
+      "r1": 0.7642,
+      "r2": 0.6297,
+      "env": "dense",
+      "Vflat": 66.4
+    },
+    {
+      "name": "NGC0024",
+      "n_pts": 29,
+      "r1": 0.5624,
+      "r2": 0.4034,
+      "env": "field",
+      "Vflat": 106.3
+    },
+    {
+      "name": "NGC0055",
+      "n_pts": 21,
+      "r1": 0.7983,
+      "r2": 0.629,
+      "env": "dense",
+      "Vflat": 85.6
+    },
+    {
+      "name": "NGC0247",
+      "n_pts": 26,
+      "r1": 0.9402,
+      "r2": 0.7553,
+      "env": "dense",
+      "Vflat": 104.9
+    },
+    {
+      "name": "NGC0289",
+      "n_pts": 28,
+      "r1": 0.7409,
+      "r2": 0.4448,
+      "env": "field",
+      "Vflat": 163.0
+    },
+    {
+      "name": "NGC0300",
+      "n_pts": 25,
+      "r1": 0.5274,
+      "r2": 0.2802,
+      "env": "dense",
+      "Vflat": 93.3
+    },
+    {
+      "name": "NGC1003",
+      "n_pts": 36,
+      "r1": 0.851,
+      "r2": 0.6922,
+      "env": "field",
+      "Vflat": 109.8
+    },
+    {
+      "name": "NGC1090",
+      "n_pts": 24,
+      "r1": 0.4257,
+      "r2": 0.1944,
+      "env": "field",
+      "Vflat": 164.4
+    },
+    {
+      "name": "NGC2403",
+      "n_pts": 73,
+      "r1": 0.9476,
+      "r2": 0.8634,
+      "env": "dense",
+      "Vflat": 131.2
+    },
+    {
+      "name": "NGC2841",
+      "n_pts": 50,
+      "r1": 0.8813,
+      "r2": 0.7506,
+      "env": "field",
+      "Vflat": 284.8
+    },
+    {
+      "name": "NGC2903",
+      "n_pts": 34,
+      "r1": 0.5668,
+      "r2": 0.1535,
+      "env": "field",
+      "Vflat": 184.6
+    },
+    {
+      "name": "NGC2915",
+      "n_pts": 30,
+      "r1": 0.6299,
+      "r2": 0.4858,
+      "env": "dense",
+      "Vflat": 83.5
+    },
+    {
+      "name": "NGC2955",
+      "n_pts": 24,
+      "r1": 0.4798,
+      "r2": 0.2607,
+      "env": "field",
+      "Vflat": 0.0
+    },
+    {
+      "name": "NGC2976",
+      "n_pts": 27,
+      "r1": 0.7603,
+      "r2": 0.4628,
+      "env": "dense",
+      "Vflat": 85.4
+    },
+    {
+      "name": "NGC3109",
+      "n_pts": 25,
+      "r1": 0.8496,
+      "r2": 0.8069,
+      "env": "dense",
+      "Vflat": 66.2
+    },
+    {
+      "name": "NGC3198",
+      "n_pts": 43,
+      "r1": 0.6383,
+      "r2": 0.5562,
+      "env": "field",
+      "Vflat": 150.1
+    },
+    {
+      "name": "NGC3521",
+      "n_pts": 41,
+      "r1": 0.8267,
+      "r2": 0.7269,
+      "env": "field",
+      "Vflat": 213.7
+    },
+    {
+      "name": "NGC3741",
+      "n_pts": 21,
+      "r1": 0.7328,
+      "r2": 0.402,
+      "env": "dense",
+      "Vflat": 50.1
+    },
+    {
+      "name": "NGC3917",
+      "n_pts": 17,
+      "r1": 0.3138,
+      "r2": -0.0513,
+      "env": "dense",
+      "Vflat": 135.9
+    },
+    {
+      "name": "NGC4100",
+      "n_pts": 24,
+      "r1": 0.8237,
+      "r2": 0.5051,
+      "env": "dense",
+      "Vflat": 158.2
+    },
+    {
+      "name": "NGC4157",
+      "n_pts": 17,
+      "r1": 0.4048,
+      "r2": -0.0712,
+      "env": "dense",
+      "Vflat": 184.7
+    },
+    {
+      "name": "NGC4183",
+      "n_pts": 23,
+      "r1": 0.9543,
+      "r2": 0.8588,
+      "env": "dense",
+      "Vflat": 110.6
+    },
+    {
+      "name": "NGC4559",
+      "n_pts": 32,
+      "r1": 0.5812,
+      "r2": 0.517,
+      "env": "field",
+      "Vflat": 121.2
+    },
+    {
+      "name": "NGC5005",
+      "n_pts": 18,
+      "r1": 0.6843,
+      "r2": 0.408,
+      "env": "field",
+      "Vflat": 262.2
+    },
+    {
+      "name": "NGC5033",
+      "n_pts": 22,
+      "r1": 0.8111,
+      "r2": 0.5203,
+      "env": "field",
+      "Vflat": 194.2
+    },
+    {
+      "name": "NGC5055",
+      "n_pts": 28,
+      "r1": 0.6512,
+      "r2": 0.4767,
+      "env": "dense",
+      "Vflat": 179.0
+    },
+    {
+      "name": "NGC5371",
+      "n_pts": 19,
+      "r1": 0.8907,
+      "r2": 0.7413,
+      "env": "field",
+      "Vflat": 209.5
+    },
+    {
+      "name": "NGC5585",
+      "n_pts": 24,
+      "r1": 0.8724,
+      "r2": 0.7232,
+      "env": "field",
+      "Vflat": 90.3
+    },
+    {
+      "name": "NGC5985",
+      "n_pts": 33,
+      "r1": 0.9712,
+      "r2": 0.9267,
+      "env": "field",
+      "Vflat": 293.6
+    },
+    {
+      "name": "NGC6015",
+      "n_pts": 44,
+      "r1": 0.8326,
+      "r2": 0.6468,
+      "env": "field",
+      "Vflat": 154.1
+    },
+    {
+      "name": "NGC6195",
+      "n_pts": 23,
+      "r1": 0.5256,
+      "r2": 0.2377,
+      "env": "field",
+      "Vflat": 251.7
+    },
+    {
+      "name": "NGC6503",
+      "n_pts": 31,
+      "r1": 0.0787,
+      "r2": -0.3489,
+      "env": "field",
+      "Vflat": 116.3
+    },
+    {
+      "name": "NGC6674",
+      "n_pts": 15,
+      "r1": 0.8039,
+      "r2": 0.5057,
+      "env": "field",
+      "Vflat": 241.3
+    },
+    {
+      "name": "NGC6946",
+      "n_pts": 58,
+      "r1": 0.5827,
+      "r2": 0.2965,
+      "env": "field",
+      "Vflat": 158.9
+    },
+    {
+      "name": "NGC7331",
+      "n_pts": 36,
+      "r1": 0.8902,
+      "r2": 0.7873,
+      "env": "field",
+      "Vflat": 239.0
+    },
+    {
+      "name": "NGC7793",
+      "n_pts": 46,
+      "r1": 0.5825,
+      "r2": 0.4766,
+      "env": "dense",
+      "Vflat": 0.0
+    },
+    {
+      "name": "UGC00128",
+      "n_pts": 22,
+      "r1": 0.7443,
+      "r2": 0.5619,
+      "env": "field",
+      "Vflat": 129.3
+    },
+    {
+      "name": "UGC02487",
+      "n_pts": 17,
+      "r1": 0.8545,
+      "r2": 0.564,
+      "env": "field",
+      "Vflat": 332.0
+    },
+    {
+      "name": "UGC02885",
+      "n_pts": 19,
+      "r1": 0.2319,
+      "r2": 0.0679,
+      "env": "field",
+      "Vflat": 289.5
+    },
+    {
+      "name": "UGC02916",
+      "n_pts": 43,
+      "r1": 0.5914,
+      "r2": 0.4138,
+      "env": "field",
+      "Vflat": 182.7
+    },
+    {
+      "name": "UGC02953",
+      "n_pts": 115,
+      "r1": 0.5369,
+      "r2": 0.335,
+      "env": "field",
+      "Vflat": 264.9
+    },
+    {
+      "name": "UGC03205",
+      "n_pts": 48,
+      "r1": 0.693,
+      "r2": 0.5285,
+      "env": "field",
+      "Vflat": 219.6
+    },
+    {
+      "name": "UGC03546",
+      "n_pts": 30,
+      "r1": 0.8904,
+      "r2": 0.7597,
+      "env": "field",
+      "Vflat": 196.9
+    },
+    {
+      "name": "UGC03580",
+      "n_pts": 47,
+      "r1": 0.8341,
+      "r2": 0.758,
+      "env": "field",
+      "Vflat": 126.2
+    },
+    {
+      "name": "UGC05253",
+      "n_pts": 73,
+      "r1": 0.4474,
+      "r2": 0.2256,
+      "env": "field",
+      "Vflat": 213.7
+    },
+    {
+      "name": "UGC05721",
+      "n_pts": 23,
+      "r1": 0.6873,
+      "r2": 0.6004,
+      "env": "field",
+      "Vflat": 79.7
+    },
+    {
+      "name": "UGC06446",
+      "n_pts": 17,
+      "r1": 0.8147,
+      "r2": 0.6386,
+      "env": "dense",
+      "Vflat": 82.2
+    },
+    {
+      "name": "UGC06786",
+      "n_pts": 45,
+      "r1": 0.5109,
+      "r2": 0.3112,
+      "env": "dense",
+      "Vflat": 219.4
+    },
+    {
+      "name": "UGC06787",
+      "n_pts": 71,
+      "r1": 0.9439,
+      "r2": 0.8612,
+      "env": "dense",
+      "Vflat": 248.1
+    },
+    {
+      "name": "UGC06983",
+      "n_pts": 17,
+      "r1": 0.5683,
+      "r2": 0.4133,
+      "env": "dense",
+      "Vflat": 109.0
+    },
+    {
+      "name": "UGC07524",
+      "n_pts": 31,
+      "r1": 0.5535,
+      "r2": 0.4791,
+      "env": "dense",
+      "Vflat": 79.5
+    },
+    {
+      "name": "UGC08490",
+      "n_pts": 30,
+      "r1": 0.7932,
+      "r2": 0.732,
+      "env": "dense",
+      "Vflat": 78.6
+    },
+    {
+      "name": "UGC08699",
+      "n_pts": 41,
+      "r1": 0.6808,
+      "r2": 0.4038,
+      "env": "field",
+      "Vflat": 182.4
+    },
+    {
+      "name": "UGC09037",
+      "n_pts": 22,
+      "r1": 0.5229,
+      "r2": 0.2554,
+      "env": "field",
+      "Vflat": 152.3
+    },
+    {
+      "name": "UGC09133",
+      "n_pts": 68,
+      "r1": 0.5007,
+      "r2": 0.3619,
+      "env": "field",
+      "Vflat": 226.8
+    },
+    {
+      "name": "UGC11914",
+      "n_pts": 65,
+      "r1": 0.7183,
+      "r2": 0.4791,
+      "env": "field",
+      "Vflat": 288.1
+    },
+    {
+      "name": "UGC12632",
+      "n_pts": 15,
+      "r1": 0.892,
+      "r2": 0.7391,
+      "env": "field",
+      "Vflat": 71.7
+    },
+    {
+      "name": "UGC12732",
+      "n_pts": 16,
+      "r1": 0.9195,
+      "r2": 0.783,
+      "env": "field",
+      "Vflat": 0.0
+    },
+    {
+      "name": "UGCA444",
+      "n_pts": 36,
+      "r1": 0.8096,
+      "r2": 0.5654,
+      "env": "field",
+      "Vflat": 37.0
+    }
+  ],
+  "verdict": "STRONG_POSITIVE_AUTOCORRELATION",
+  "env_verdict": "NO_DIFFERENCE",
+  "mass_verdict": "NO_DIFFERENCE"
+}

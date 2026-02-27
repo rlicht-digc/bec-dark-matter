@@ -1,0 +1,227 @@
+{
+  "test_name": "cluster_sigma_scaling",
+  "description": "Test A: Does per-cluster g\u2021 scale with velocity dispersion as g\u2021 \u221d \u03c3\u00b2?",
+  "bec_prediction": "B \u2248 1 in log(g\u2021) = A + B \u00d7 log(\u03c3\u00b2)",
+  "n_clusters_matched": 14,
+  "n_clusters_clean": 11,
+  "sigma_galaxy_kms": 136.0,
+  "g_dagger_galaxy": 1.2e-10,
+  "full_sample": {
+    "B_slope": 0.014169310785289145,
+    "B_stderr": 0.2294868307235146,
+    "A_intercept": -8.830254543859247,
+    "pearson_r": 0.01782097088590867,
+    "pearson_p": 0.9517836001912467,
+    "spearman_rho": 0.006593406593406593,
+    "spearman_p": 0.9821527354577906,
+    "rms_scatter": 0.16919823278486973
+  },
+  "clean_sample": {
+    "B_slope": 0.1634908685914125,
+    "B_stderr": 0.3867443580578906,
+    "A_intercept": -9.736898688120695,
+    "pearson_r": 0.1395335956391029,
+    "pearson_p": 0.6824086903084625,
+    "spearman_rho": 0.09090909090909091,
+    "spearman_p": 0.7903727377532904
+  },
+  "bootstrap": {
+    "n_iterations": 10000,
+    "B_mean": 0.04125713001424058,
+    "B_std": 0.23681958676511294,
+    "B_95ci": [
+      -0.3310972133960915,
+      0.6013956750752851
+    ],
+    "B1_in_ci": false
+  },
+  "scaling_ratio": {
+    "description": "g\u2021 / [g\u2020 \u00d7 (\u03c3/\u03c3_gal)\u00b2] \u2014 should be ~1 if BEC",
+    "mean": 0.3099351828724019,
+    "median": 0.303711786183371,
+    "std": 0.17205837903065016
+  },
+  "clusters": [
+    {
+      "name": "A209",
+      "sigma_kms": 1325,
+      "e_sigma": 75,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Mercurio+2003",
+      "log_gdagger": -8.891743081846673,
+      "gdagger_over_gdagger_gal": 10.692411691375963,
+      "sigma_over_sigma_gal_sq": 94.91917171280276,
+      "flag": null
+    },
+    {
+      "name": "A2261",
+      "sigma_kms": 725,
+      "e_sigma": 66,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Rines+, dynamical",
+      "log_gdagger": -8.662041219856937,
+      "gdagger_over_gdagger_gal": 18.145859090624388,
+      "sigma_over_sigma_gal_sq": 28.418306660899656,
+      "flag": "possibly biased low"
+    },
+    {
+      "name": "A383",
+      "sigma_kms": 811.3,
+      "e_sigma": 121.7,
+      "sigma_method": "virial",
+      "sigma_source": "Pizzardo+2025 (virial: M200=8.4e+14, r200=1.83 Mpc)",
+      "log_gdagger": -8.59173077806707,
+      "gdagger_over_gdagger_gal": 21.334770520078948,
+      "sigma_over_sigma_gal_sq": 35.58648842993079,
+      "flag": null
+    },
+    {
+      "name": "MACS0329",
+      "sigma_kms": 1018,
+      "e_sigma": 44,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Girardi+2024 (within R200)",
+      "log_gdagger": -8.440154962697779,
+      "gdagger_over_gdagger_gal": 30.245710521466215,
+      "sigma_over_sigma_gal_sq": 56.02962802768166,
+      "flag": null
+    },
+    {
+      "name": "MACS0416",
+      "sigma_kms": 1000,
+      "e_sigma": 50,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Balestra+2016",
+      "log_gdagger": -8.702831003770726,
+      "gdagger_over_gdagger_gal": 16.51915203240126,
+      "sigma_over_sigma_gal_sq": 54.06574394463667,
+      "flag": "active merger, bimodal velocity"
+    },
+    {
+      "name": "MACS0647",
+      "sigma_kms": 1122.5,
+      "e_sigma": 168.4,
+      "sigma_method": "virial",
+      "sigma_source": "Adam+2022 (virial: M200=1.8e+15, r200=2.06 Mpc)",
+      "log_gdagger": -8.545104230779959,
+      "gdagger_over_gdagger_gal": 23.752784204482637,
+      "sigma_over_sigma_gal_sq": 68.12317528114187,
+      "flag": null
+    },
+    {
+      "name": "MACS1115",
+      "sigma_kms": 905.8,
+      "e_sigma": 135.9,
+      "sigma_method": "virial",
+      "sigma_source": "Pizzardo+2025 (virial: M200=1.1e+15, r200=1.87 Mpc)",
+      "log_gdagger": -8.83102146266637,
+      "gdagger_over_gdagger_gal": 12.29694671856874,
+      "sigma_over_sigma_gal_sq": 44.35951773356401,
+      "flag": null
+    },
+    {
+      "name": "MACS1149",
+      "sigma_kms": 1840,
+      "e_sigma": 200,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Smith+2009 (68 redshifts)",
+      "log_gdagger": -8.769740747242531,
+      "gdagger_over_gdagger_gal": 14.160481035517172,
+      "sigma_over_sigma_gal_sq": 183.04498269896195,
+      "flag": "triple merger, likely biased high"
+    },
+    {
+      "name": "MACS1206",
+      "sigma_kms": 1087,
+      "e_sigma": 29,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Biviano+2013",
+      "log_gdagger": -8.594949400623863,
+      "gdagger_over_gdagger_gal": 21.177239749360055,
+      "sigma_over_sigma_gal_sq": 63.88240700692041,
+      "flag": null
+    },
+    {
+      "name": "MACS1931",
+      "sigma_kms": 929.2,
+      "e_sigma": 139.4,
+      "sigma_method": "virial",
+      "sigma_source": "Pizzardo+2025 (virial: M200=1.2e+15, r200=1.91 Mpc)",
+      "log_gdagger": -8.771836150099938,
+      "gdagger_over_gdagger_gal": 14.092323489252482,
+      "sigma_over_sigma_gal_sq": 46.681046712802775,
+      "flag": null
+    },
+    {
+      "name": "MS2137",
+      "sigma_kms": 816.3,
+      "e_sigma": 122.4,
+      "sigma_method": "virial",
+      "sigma_source": "Pizzardo+2025 (virial: M200=7.9e+14, r200=1.70 Mpc)",
+      "log_gdagger": -9.146031100178817,
+      "gdagger_over_gdagger_gal": 5.953709685401317,
+      "sigma_over_sigma_gal_sq": 36.02647545415225,
+      "flag": null
+    },
+    {
+      "name": "RXJ1347",
+      "sigma_kms": 1163,
+      "e_sigma": 97,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Lu+2010",
+      "log_gdagger": -8.794034333628469,
+      "gdagger_over_gdagger_gal": 13.39011849603474,
+      "sigma_over_sigma_gal_sq": 73.12764922145328,
+      "flag": null
+    },
+    {
+      "name": "RXJ2129",
+      "sigma_kms": 794.3,
+      "e_sigma": 119.1,
+      "sigma_method": "virial",
+      "sigma_source": "Pizzardo+2025 (virial: M200=7.7e+14, r200=1.75 Mpc)",
+      "log_gdagger": -8.859650992391101,
+      "gdagger_over_gdagger_gal": 11.512450120537377,
+      "sigma_over_sigma_gal_sq": 34.11075313581314,
+      "flag": null
+    },
+    {
+      "name": "RXJ2248",
+      "sigma_kms": 1380,
+      "e_sigma": 29,
+      "sigma_method": "spectroscopic",
+      "sigma_source": "Mercurio+2021",
+      "log_gdagger": -8.82699839600846,
+      "gdagger_over_gdagger_gal": 12.411388153488083,
+      "sigma_over_sigma_gal_sq": 102.96280276816609,
+      "flag": null
+    }
+  ],
+  "missing_clusters": [
+    "A611",
+    "MACS0429",
+    "MACS0717",
+    "MACS0744",
+    "MACS1720",
+    "RXJ1532"
+  ],
+  "verdict": "NO_SIGNIFICANT_CORRELATION",
+  "verdict_text": "No significant correlation (p=9.518e-01), B=0.014\u00b10.229",
+  "data_sources": {
+    "gdagger": "Per-cluster RAR fits from Tian+2020 CLASH data (our E2 analysis)",
+    "sigma_spectroscopic": [
+      "Mercurio+2003 (A209)",
+      "Girardi+2024 (MACS0329)",
+      "Balestra+2016 (MACS0416)",
+      "Biviano+2013 (MACS1206)",
+      "Lu+2010 (RXJ1347)",
+      "Mercurio+2021 (RXJ2248/AS1063)",
+      "Smith+2009 (MACS1149, flagged: triple merger)",
+      "Rines+ (A2261, flagged: possibly biased low)"
+    ],
+    "sigma_virial": [
+      "Pizzardo+2025 MAMPOSSt (A383, MACS1115, MACS1931, MS2137, RXJ2129)",
+      "Adam+2022 (MACS0647)"
+    ]
+  }
+}

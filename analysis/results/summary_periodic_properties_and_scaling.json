@@ -1,0 +1,602 @@
+{
+  "test": "periodic_properties_and_scaling",
+  "description": "Three discriminating tests: property comparison, lambda-xi scaling, bump sharpening.",
+  "sample": {
+    "n_total": 67,
+    "n_periodic": 25,
+    "n_nonperiodic": 42
+  },
+  "part1_property_comparison": {
+    "raw_results": [
+      {
+        "property": "V_flat [km/s]",
+        "key": "Vflat",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 182.7,
+        "nper_median": 110.7,
+        "MW_p": 0.00817002169073595,
+        "KS_p": 0.03860993679245018,
+        "r_biserial": -0.39,
+        "MW_p_adjusted": 0.0327,
+        "significant_FDR": true
+      },
+      {
+        "property": "M_bar [M_sun]",
+        "key": "M_bar_solar",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 10.6807,
+        "nper_median": 9.9335,
+        "MW_p": 0.06853810646561594,
+        "KS_p": 0.022008686762344427,
+        "r_biserial": -0.269,
+        "MW_p_adjusted": 0.1218,
+        "significant_FDR": false
+      },
+      {
+        "property": "M_star [M_sun]",
+        "key": "M_star_solar",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 10.6276,
+        "nper_median": 9.6997,
+        "MW_p": 0.04803921617199743,
+        "KS_p": 0.09142154260038031,
+        "r_biserial": -0.291,
+        "MW_p_adjusted": 0.0961,
+        "significant_FDR": false
+      },
+      {
+        "property": "Gas fraction",
+        "key": "f_gas",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 0.1847,
+        "nper_median": 0.4344,
+        "MW_p": 0.010455033144398428,
+        "KS_p": 0.03586959807650375,
+        "r_biserial": 0.377,
+        "MW_p_adjusted": 0.0335,
+        "significant_FDR": true
+      },
+      {
+        "property": "Hubble type T",
+        "key": "T",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 4.0,
+        "nper_median": 6.5,
+        "MW_p": 0.0070148298893192434,
+        "KS_p": 0.004830113003427326,
+        "r_biserial": 0.394,
+        "MW_p_adjusted": 0.0327,
+        "significant_FDR": true
+      },
+      {
+        "property": "SB_eff [L/pc^2]",
+        "key": "SBeff",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 2.7488,
+        "nper_median": 2.2608,
+        "MW_p": 0.015890795210065454,
+        "KS_p": 0.02764698222045332,
+        "r_biserial": -0.355,
+        "MW_p_adjusted": 0.0424,
+        "significant_FDR": true
+      },
+      {
+        "property": "R_eff [kpc]",
+        "key": "Reff",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 3.12,
+        "nper_median": 3.88,
+        "MW_p": 0.943155945196686,
+        "KS_p": 0.728044124746453,
+        "r_biserial": 0.011,
+        "MW_p_adjusted": 0.9432,
+        "significant_FDR": false
+      },
+      {
+        "property": "Healing length [kpc]",
+        "key": "xi_kpc",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 15.714,
+        "nper_median": 8.52,
+        "MW_p": 0.04659254037913082,
+        "KS_p": 0.018432293818093748,
+        "r_biserial": -0.293,
+        "MW_p_adjusted": 0.0961,
+        "significant_FDR": false
+      },
+      {
+        "property": "Median log g_bar",
+        "key": "med_log_gbar",
+        "category": "physical",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": -10.2558,
+        "nper_median": -10.8203,
+        "MW_p": 0.005209944317304048,
+        "KS_p": 0.0007191182551458555,
+        "r_biserial": -0.411,
+        "MW_p_adjusted": 0.0327,
+        "significant_FDR": true
+      },
+      {
+        "property": "N points",
+        "key": "n_pts",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 36.0,
+        "nper_median": 24.0,
+        "MW_p": 0.0005185755473556033,
+        "KS_p": 0.002110887178026206,
+        "r_biserial": -0.51,
+        "MW_p_adjusted": 0.0083,
+        "significant_FDR": true
+      },
+      {
+        "property": "R extent [kpc]",
+        "key": "R_extent",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 28.89,
+        "nper_median": 16.13,
+        "MW_p": 0.10101443633625802,
+        "KS_p": 0.047637482578162256,
+        "r_biserial": -0.242,
+        "MW_p_adjusted": 0.1469,
+        "significant_FDR": false
+      },
+      {
+        "property": "Median errV [km/s]",
+        "key": "median_errV",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 5.0,
+        "nper_median": 4.5275,
+        "MW_p": 0.7507156183747525,
+        "KS_p": 0.9641554510479435,
+        "r_biserial": -0.048,
+        "MW_p_adjusted": 0.8968,
+        "significant_FDR": false
+      },
+      {
+        "property": "Inclination [deg]",
+        "key": "Inc",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 66.0,
+        "nper_median": 60.0,
+        "MW_p": 0.17733562246797963,
+        "KS_p": 0.1937418737709367,
+        "r_biserial": -0.199,
+        "MW_p_adjusted": 0.2364,
+        "significant_FDR": false
+      },
+      {
+        "property": "Distance [Mpc]",
+        "key": "D",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 16.9,
+        "nper_median": 14.85,
+        "MW_p": 0.8204815597054502,
+        "KS_p": 0.6095158967880769,
+        "r_biserial": -0.034,
+        "MW_p_adjusted": 0.8968,
+        "significant_FDR": false
+      },
+      {
+        "property": "f_min [1/kpc]",
+        "key": "f_min",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": -1.4607,
+        "nper_median": -1.2076,
+        "MW_p": 0.10101103414352706,
+        "KS_p": 0.047637482578162256,
+        "r_biserial": 0.242,
+        "MW_p_adjusted": 0.1469,
+        "significant_FDR": false
+      },
+      {
+        "property": "f_max [1/kpc]",
+        "key": "f_max",
+        "category": "quality",
+        "n_per": 25,
+        "n_nper": 42,
+        "per_median": 0.6036,
+        "nper_median": 0.7219,
+        "MW_p": 0.84074302359886,
+        "KS_p": 0.728044124746453,
+        "r_biserial": -0.03,
+        "MW_p_adjusted": 0.8968,
+        "significant_FDR": false
+      }
+    ],
+    "matched_results": [
+      {
+        "property": "V_flat [km/s]",
+        "key": "Vflat",
+        "per_median": 182.7,
+        "matched_nper_median": 152.3,
+        "MW_p": 0.09711108879070102,
+        "r_biserial": -0.275,
+        "MW_p_adjusted": 0.2913,
+        "significant_FDR": false
+      },
+      {
+        "property": "M_bar [M_sun]",
+        "key": "M_bar_solar",
+        "per_median": 10.6807,
+        "matched_nper_median": 10.4789,
+        "MW_p": 0.46093488585479814,
+        "r_biserial": -0.123,
+        "MW_p_adjusted": 0.5032,
+        "significant_FDR": false
+      },
+      {
+        "property": "M_star [M_sun]",
+        "key": "M_star_solar",
+        "per_median": 10.6276,
+        "matched_nper_median": 10.4127,
+        "MW_p": 0.4040992479205485,
+        "r_biserial": -0.139,
+        "MW_p_adjusted": 0.5032,
+        "significant_FDR": false
+      },
+      {
+        "property": "Gas fraction",
+        "key": "f_gas",
+        "per_median": 0.1847,
+        "matched_nper_median": 0.2452,
+        "MW_p": 0.07745301640549514,
+        "r_biserial": 0.293,
+        "MW_p_adjusted": 0.2913,
+        "significant_FDR": false
+      },
+      {
+        "property": "Hubble type T",
+        "key": "T",
+        "per_median": 4.0,
+        "matched_nper_median": 5.0,
+        "MW_p": 0.14506824413631703,
+        "r_biserial": 0.24,
+        "MW_p_adjusted": 0.3264,
+        "significant_FDR": false
+      },
+      {
+        "property": "SB_eff [L/pc^2]",
+        "key": "SBeff",
+        "per_median": 2.7488,
+        "matched_nper_median": 2.5408,
+        "MW_p": 0.2858779217949048,
+        "r_biserial": -0.178,
+        "MW_p_adjusted": 0.5032,
+        "significant_FDR": false
+      },
+      {
+        "property": "R_eff [kpc]",
+        "key": "Reff",
+        "per_median": 3.12,
+        "matched_nper_median": 4.28,
+        "MW_p": 0.5032311698362579,
+        "r_biserial": 0.112,
+        "MW_p_adjusted": 0.5032,
+        "significant_FDR": false
+      },
+      {
+        "property": "Healing length [kpc]",
+        "key": "xi_kpc",
+        "per_median": 15.714,
+        "matched_nper_median": 14.4226,
+        "MW_p": 0.4040992479205485,
+        "r_biserial": -0.139,
+        "MW_p_adjusted": 0.5032,
+        "significant_FDR": false
+      },
+      {
+        "property": "Median log g_bar",
+        "key": "med_log_gbar",
+        "per_median": -10.2558,
+        "matched_nper_median": -10.5625,
+        "MW_p": 0.07115843333450315,
+        "r_biserial": -0.299,
+        "MW_p_adjusted": 0.2913,
+        "significant_FDR": false
+      }
+    ],
+    "n_significant_raw_FDR": 6,
+    "n_significant_physical": 5,
+    "n_significant_quality": 1,
+    "n_significant_matched": 0,
+    "logistic_quality_R2": 0.3276,
+    "logistic_full_R2": 0.4214,
+    "logistic_LR_p": 0.0402,
+    "partial_rho_Vflat": 0.2572,
+    "partial_p_Vflat": 0.0356
+  },
+  "part2_lambda_xi_scaling": {
+    "spearman_rho": 0.6192,
+    "spearman_p": 0.001,
+    "ols_slope": 0.9124,
+    "ols_slope_err": 0.1892,
+    "ols_intercept": -0.2144,
+    "ols_r2": 0.5027,
+    "bootstrap_slope_95CI": [
+      0.457,
+      1.3176
+    ],
+    "z_vs_slope1": 0.46,
+    "lambda_over_xi_median": 0.537,
+    "lambda_over_xi_scatter_dex": 0.341,
+    "partial_rho_controlling_R_Npts": -0.0038,
+    "partial_p_controlling_R_Npts": 0.9854,
+    "control_nonperiodic_rho": 0.565,
+    "control_nonperiodic_p": 0.0001,
+    "per_galaxy": [
+      {
+        "name": "DDO161",
+        "lambda_peak_kpc": 7.1,
+        "xi_kpc": 3.97,
+        "lambda_over_xi": 1.788,
+        "Vflat": 66.3,
+        "M_bar_solar": 2106740000.0
+      },
+      {
+        "name": "ESO563-G021",
+        "lambda_peak_kpc": 23.99,
+        "xi_kpc": 33.39,
+        "lambda_over_xi": 0.718,
+        "Vflat": 314.6,
+        "M_bar_solar": 187904840000.0
+      },
+      {
+        "name": "NGC0024",
+        "lambda_peak_kpc": 2.29,
+        "xi_kpc": 6.07,
+        "lambda_over_xi": 0.377,
+        "Vflat": 106.3,
+        "M_bar_solar": 2843580000.0
+      },
+      {
+        "name": "NGC1003",
+        "lambda_peak_kpc": 16.49,
+        "xi_kpc": 10.39,
+        "lambda_over_xi": 1.587,
+        "Vflat": 109.8,
+        "M_bar_solar": 11230400000.0
+      },
+      {
+        "name": "NGC2403",
+        "lambda_peak_kpc": 2.67,
+        "xi_kpc": 10.06,
+        "lambda_over_xi": 0.265,
+        "Vflat": 131.2,
+        "M_bar_solar": 9275170000.0
+      },
+      {
+        "name": "NGC2841",
+        "lambda_peak_kpc": 21.29,
+        "xi_kpc": 38.54,
+        "lambda_over_xi": 0.552,
+        "Vflat": 284.8,
+        "M_bar_solar": 107061250000.0
+      },
+      {
+        "name": "NGC2976",
+        "lambda_peak_kpc": 0.43,
+        "xi_kpc": 2.11,
+        "lambda_over_xi": 0.205,
+        "Vflat": 85.4,
+        "M_bar_solar": 1914260000.0
+      },
+      {
+        "name": "NGC3198",
+        "lambda_peak_kpc": 8.73,
+        "xi_kpc": 16.26,
+        "lambda_over_xi": 0.537,
+        "Vflat": 150.1,
+        "M_bar_solar": 33595270000.0
+      },
+      {
+        "name": "NGC3521",
+        "lambda_peak_kpc": 4.11,
+        "xi_kpc": 14.26,
+        "lambda_over_xi": 0.288,
+        "Vflat": 213.7,
+        "M_bar_solar": 47942820000.0
+      },
+      {
+        "name": "NGC4100",
+        "lambda_peak_kpc": 6.46,
+        "xi_kpc": 12.47,
+        "lambda_over_xi": 0.519,
+        "Vflat": 158.2,
+        "M_bar_solar": 33822660000.0
+      },
+      {
+        "name": "NGC4183",
+        "lambda_peak_kpc": 11.62,
+        "xi_kpc": 8.51,
+        "lambda_over_xi": 1.365,
+        "Vflat": 110.6,
+        "M_bar_solar": 10081980000.0
+      },
+      {
+        "name": "NGC5033",
+        "lambda_peak_kpc": 19.24,
+        "xi_kpc": 21.51,
+        "lambda_over_xi": 0.894,
+        "Vflat": 194.2,
+        "M_bar_solar": 70302120000.0
+      },
+      {
+        "name": "NGC5371",
+        "lambda_peak_kpc": 25.38,
+        "xi_kpc": 23.8,
+        "lambda_over_xi": 1.066,
+        "Vflat": 209.5,
+        "M_bar_solar": 185065900000.0
+      },
+      {
+        "name": "NGC5985",
+        "lambda_peak_kpc": 16.45,
+        "xi_kpc": 27.6,
+        "lambda_over_xi": 0.596,
+        "Vflat": 293.6,
+        "M_bar_solar": 119773380000.0
+      },
+      {
+        "name": "NGC6015",
+        "lambda_peak_kpc": 6.36,
+        "xi_kpc": 13.5,
+        "lambda_over_xi": 0.471,
+        "Vflat": 154.1,
+        "M_bar_solar": 23823720000.0
+      },
+      {
+        "name": "NGC6946",
+        "lambda_peak_kpc": 6.23,
+        "xi_kpc": 11.43,
+        "lambda_over_xi": 0.545,
+        "Vflat": 158.9,
+        "M_bar_solar": 40627600000.0
+      },
+      {
+        "name": "NGC7331",
+        "lambda_peak_kpc": 18.64,
+        "xi_kpc": 23.57,
+        "lambda_over_xi": 0.791,
+        "Vflat": 239.0,
+        "M_bar_solar": 140034610000.0
+      },
+      {
+        "name": "UGC02487",
+        "lambda_peak_kpc": 34.86,
+        "xi_kpc": 49.06,
+        "lambda_over_xi": 0.711,
+        "Vflat": 332.0,
+        "M_bar_solar": 268868290000.0
+      },
+      {
+        "name": "UGC02916",
+        "lambda_peak_kpc": 9.38,
+        "xi_kpc": 18.34,
+        "lambda_over_xi": 0.512,
+        "Vflat": 182.7,
+        "M_bar_solar": 93029590000.0
+      },
+      {
+        "name": "UGC03205",
+        "lambda_peak_kpc": 5.96,
+        "xi_kpc": 22.88,
+        "lambda_over_xi": 0.261,
+        "Vflat": 219.6,
+        "M_bar_solar": 69691410000.0
+      },
+      {
+        "name": "UGC03546",
+        "lambda_peak_kpc": 5.97,
+        "xi_kpc": 17.15,
+        "lambda_over_xi": 0.348,
+        "Vflat": 196.9,
+        "M_bar_solar": 54225750000.0
+      },
+      {
+        "name": "UGC03580",
+        "lambda_peak_kpc": 2.9,
+        "xi_kpc": 10.6,
+        "lambda_over_xi": 0.273,
+        "Vflat": 126.2,
+        "M_bar_solar": 12445100000.0
+      },
+      {
+        "name": "UGC06787",
+        "lambda_peak_kpc": 1.1,
+        "xi_kpc": 25.55,
+        "lambda_over_xi": 0.043,
+        "Vflat": 248.1,
+        "M_bar_solar": 55817900000.0
+      },
+      {
+        "name": "UGC11914",
+        "lambda_peak_kpc": 2.53,
+        "xi_kpc": 15.71,
+        "lambda_over_xi": 0.161,
+        "Vflat": 288.1,
+        "M_bar_solar": 76195040000.0
+      },
+      {
+        "name": "UGCA444",
+        "lambda_peak_kpc": 0.84,
+        "xi_kpc": 1.02,
+        "lambda_over_xi": 0.821,
+        "Vflat": 37.0,
+        "M_bar_solar": 95110000.0
+      }
+    ]
+  },
+  "part3_bump_sharpening": {
+    "periodic_physical": {
+      "beta": 0.18797413301918597,
+      "bump_detected": true,
+      "k_peak": 0.04365350165557384,
+      "wl_peak": 22.90766976473046,
+      "peak_excess_dex": 0.3202095334708135,
+      "fwhm_log_k": 1.4981130778423537,
+      "second_moment_log_k": 0.404517915126842
+    },
+    "periodic_dimensionless": {
+      "beta": 0.23436742805176797,
+      "bump_detected": true,
+      "k_peak": 2.0867557704458384,
+      "wl_peak": 0.47921276373724775,
+      "peak_excess_dex": 0.47454921248008297,
+      "fwhm_log_k": 0.4730181290419455,
+      "second_moment_log_k": 0.17292838227505714
+    },
+    "nonperiodic_physical_control": {
+      "beta": -0.05216032652361546,
+      "bump_detected": true,
+      "k_peak": 0.17880780657704629,
+      "wl_peak": 5.592596985239071,
+      "peak_excess_dex": 0.2857278138518694,
+      "fwhm_log_k": 1.2028645150559043,
+      "second_moment_log_k": 0.27647605608191195
+    },
+    "nonperiodic_dimensionless_control": {
+      "beta": -0.009770840414941806,
+      "bump_detected": true,
+      "k_peak": 0.8831536294735355,
+      "wl_peak": 1.1323058261065164,
+      "peak_excess_dex": 0.3608588436546287,
+      "fwhm_log_k": 1.033171176591618,
+      "second_moment_log_k": 0.22710391972711866
+    }
+  },
+  "figures": [
+    "periodic_property_comparison.png",
+    "lambda_xi_scaling.png",
+    "bump_sharpening.png"
+  ]
+}
