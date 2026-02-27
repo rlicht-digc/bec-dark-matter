@@ -1,29 +1,91 @@
+# ============================================================
+# Legacy data/ paths (pre-migration)
+# ============================================================
 # Yang catalogs — entire directory is large binaries (17GB+)
-# Only track the readme files
 data/yang_catalogs/*
 !data/yang_catalogs/readme_*
-
 # S4G stellar mass FITS images (134MB)
 data/s4g/*.fits
-
 # Tempel SDSS group/galaxy catalogs (250MB+ TSVs)
 data/tempel/
-
 # PROBES individual galaxy profiles (25K files, 181MB)
 data/probes/profiles/
 
+# ============================================================
+# raw_data/ — heavy payload excluded, metadata tracked
+# ============================================================
+# Yang catalogs (17GB+ FITS, tarballs, binary tables)
+raw_data/observational/yang_catalogs/*
+!raw_data/observational/yang_catalogs/README.md
+!raw_data/observational/yang_catalogs/TERMS_OF_USE.md
+!raw_data/observational/yang_catalogs/CITATION.md
+!raw_data/observational/yang_catalogs/manifest.csv
+!raw_data/observational/yang_catalogs/checksums.sha256
+!raw_data/observational/yang_catalogs/data_dictionary.md
+!raw_data/observational/yang_catalogs/download_instructions.md
+!raw_data/observational/yang_catalogs/readme_*
+
+# S4G FITS images
+raw_data/observational/s4g/*.fits
+
+# Tempel SDSS catalogs (250MB+ TSVs)
+raw_data/observational/tempel/*.tsv
+
+# PROBES profiles archive + large CSVs
+raw_data/observational/probes/profiles/
+raw_data/observational/probes/profiles.zip
+raw_data/observational/probes/structural_parameters.csv
+
+# Global heavy payload patterns in raw_data/
+raw_data/**/*.fits
+raw_data/**/*.parquet
+raw_data/**/*.tar.gz
+raw_data/**/*.zip
+raw_data/**/*.npz
+
+# TNG simulation data (large parquet/csv/archives)
+raw_data/tng/**/*.parquet
+raw_data/tng/**/*.csv
+raw_data/tng/**/*.tgz
+
+# Large observational data files
+raw_data/observational/misc/hyperleda_inclinations.tsv
+raw_data/observational/eagle_rar/eagle_aperture_masses.json
+
+# ============================================================
+# Ephemeral outputs / logs / runtime artifacts
+# ============================================================
+outputs/
+outputs_bh/
+outputs_bh3/
+rerun_outputs/
+logs/
+*.log
+
+# Top-level build artifacts
+rar_points.parquet
+arxiv_submission.zip
+
+# ============================================================
 # Python
+# ============================================================
 __pycache__/
 *.pyc
 *.pyo
 .ipynb_checkpoints/
 
-# Symlinks (scripts use these to find data/results at old relative paths)
+# ============================================================
+# Symlinks (legacy compatibility)
+# ============================================================
 analysis/pipeline/data
 analysis/pipeline/results
 
+# ============================================================
 # OSF staging (local build artifact)
+# ============================================================
 public_osf/staging/
 
+# ============================================================
 # OS
+# ============================================================
 .DS_Store
