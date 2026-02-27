@@ -18,15 +18,15 @@ BEC prediction: ΔAIC should be more positive for massive galaxies (X ~ R/ξ < 1
 deep quantum regime) than for dwarfs (X >> 1, classical regime).
 """
 import os
-import sys
 import json
 import numpy as np
-from scipy.optimize import minimize, differential_evolution
+from scipy.optimize import differential_evolution
 from scipy.stats import spearmanr, wilcoxon
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
-RESULTS_DIR = os.path.join(SCRIPT_DIR, 'results')
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data', 'sparc')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'analysis', 'results')
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # Physical constants
@@ -55,18 +55,15 @@ _du = _u_table[1] - _u_table[0]
 # Integrand: x² / (1 + 0.091 x²)⁸
 _x = _u_table
 _integrand = _x**2 / (1.0 + 0.091 * _x**2)**8
-# Cumulative integral via trapezoidal rule
-_m_tilde = np.cumsum(_integrand) * _du  # approximate ∫₀ᵘ
-_m_tilde[0] = 0.0
-# Correct trapezoidal: subtract half of first and last elements
+# Cumulative integral via trapezoidal rule.
 _m_tilde = np.zeros(_N_SOL + 1)
 for i in range(1, _N_SOL + 1):
     _m_tilde[i] = _m_tilde[i-1] + 0.5 * (_integrand[i-1] + _integrand[i]) * _du
 
-# Total soliton mass: M_sol = 4π × 3.883 × ρ_c × r_c³ (from memory)
-# 3.883 = m̃(∞) = ∫₀^∞ x² / (1 + 0.091 x²)⁸ dx
+# Total soliton mass coefficient from this profile:
+# M_sol = 4π * m_tilde_inf * rho_c * r_c^3, with m_tilde_inf ≈ 0.922.
 M_TILDE_INF = _m_tilde[-1]
-print(f"Soliton m̃(∞) = {M_TILDE_INF:.4f} (expected ~3.883)")
+print(f"Soliton m̃(∞) = {M_TILDE_INF:.4f} (expected ~0.922)")
 
 def soliton_v_circ(r_kpc, rho_c, r_c_kpc):
     """
@@ -352,6 +349,10 @@ for name in galaxy_names:
 
 print(f"\n  Fitted: {n_fit} galaxies")
 print(f"  Skipped: {n_skip} galaxies (quality/data cuts)")
+if len(results) == 0:
+    raise RuntimeError(
+        "No galaxies passed fitting/quality cuts. Check SPARC paths and selection thresholds."
+    )
 
 # ============================================================
 # RESULTS TABLE
@@ -401,6 +402,7 @@ all_daic = np.array([r['daic'] for r in results])
 all_logMs = np.array([r['logMs'] for r in results])
 all_xi = np.array([r['xi_kpc'] for r in results])
 all_Xmed = np.array([r['X_med'] for r in results])
+p_w = None
 
 print(f"\n  Total galaxies fitted: {len(results)}")
 print(f"  BEC preferred (ΔAIC > +2):    {n_bec_better} ({100*n_bec_better/len(results):.0f}%)")
@@ -587,7 +589,7 @@ summary = {
     'mean_daic': round(float(np.mean(all_daic)), 3),
     'median_daic': round(float(np.median(all_daic)), 3),
     'sum_daic': round(float(np.sum(all_daic)), 1),
-    'wilcoxon_p': round(float(p_w), 6) if 'p_w' in dir() and p_w < 1 else None,
+    'wilcoxon_p': round(float(p_w), 6) if p_w is not None and p_w < 1 else None,
     'spearman_logMs': {'rho': round(float(rho_Ms), 4), 'p': round(float(p_Ms), 4)},
     'spearman_Xmed': {'rho': round(float(rho_X), 4), 'p': round(float(p_X), 4)},
     'mass_trend': mass_verdict,

@@ -19,12 +19,16 @@ Prediction:
 """
 import os
 import sys
+import json
 import numpy as np
 from scipy.optimize import curve_fit
 from scipy.stats import pearsonr, spearmanr
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'analysis', 'results')
+os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # Physical constants
 G_conv = 4.302e-3  # pc (km/s)^2 / Msun
@@ -57,6 +61,25 @@ print("\n[1] Loading SPARC rotation curves...")
 
 table2_path = os.path.join(DATA_DIR, 'SPARC_table2_rotmods.dat')
 mrt_path = os.path.join(DATA_DIR, 'SPARC_Lelli2016c.mrt')
+
+if not os.path.exists(table2_path) or not os.path.exists(mrt_path):
+    # Fallbacks for the standard repository layout (data/sparc/*).
+    alt_table2 = [
+        os.path.join(DATA_DIR, 'sparc', 'SPARC_table2_rotmods.dat'),
+        os.path.join(PROJECT_ROOT, 'data', 'sparc', 'SPARC_table2_rotmods.dat'),
+    ]
+    alt_mrt = [
+        os.path.join(DATA_DIR, 'sparc', 'SPARC_Lelli2016c.mrt'),
+        os.path.join(PROJECT_ROOT, 'data', 'sparc', 'SPARC_Lelli2016c.mrt'),
+    ]
+    for p in alt_table2:
+        if os.path.exists(p):
+            table2_path = p
+            break
+    for p in alt_mrt:
+        if os.path.exists(p):
+            mrt_path = p
+            break
 
 # Parse rotation curves
 galaxies = {}
@@ -146,13 +169,8 @@ for name, gdata in galaxies.items():
 
     # Compute gbar from baryonic components (disk Υ* = 0.5, bulge Υ* = 0.7)
     Vbar_sq = 0.5 * Vdisk**2 + Vgas * np.abs(Vgas) + 0.7 * Vbul * np.abs(Vbul)
-    gbar = np.where(R > 0, Vbar_sq / (R * kpc_m / 1000.0), 0)  # wrong units
-    # Proper: gbar = Vbar² / R, but need consistent units
     # V in km/s, R in kpc: gbar_SI = (V*1000)² / (R * 3.086e19)
-    # log10(gbar) in m/s²
-    gbar_SI = np.where(R > 0,
-                        (np.sqrt(np.abs(Vbar_sq)) * 1e3)**2 / (R * kpc_m),
-                        1e-15)
+    gbar_SI = np.where(R > 0, np.abs(Vbar_sq) * 1e6 / (R * kpc_m), 1e-15)
     gobs_SI = np.where(R > 0, (Vobs * 1e3)**2 / (R * kpc_m), 1e-15)
 
     valid = (gbar_SI > 1e-15) & (gobs_SI > 1e-15) & (R > 0) & (Vobs > 0)
@@ -337,6 +355,11 @@ for logMs_lo, logMs_hi, label in mass_bins:
 # ================================================================
 # STEP 5: Correlation of ΔAIC with X
 # ================================================================
+rho_X = None
+p_X = None
+rho_M = None
+p_M = None
+mass_trend_verdict = "INSUFFICIENT_BINS"
 if len(results_by_mass) >= 2:
     print("\n" + "=" * 72)
     print("MASS-DEPENDENT BUNCHING RESULTS")
@@ -366,11 +389,14 @@ if len(results_by_mass) >= 2:
         print(f"    Spearman ρ(X, ΔAIC) = {rho_X:+.3f} (p = {p_X:.3f})")
         print(f"    Spearman ρ(logM*, ΔAIC) = {rho_M:+.3f} (p = {p_M:.3f})")
         if rho_X < 0 and rho_M > 0:
+            mass_trend_verdict = "CONSISTENT_WITH_BEC_TRANSITION"
             print(f"    ✓ ΔAIC increases with M* and decreases with X!")
             print(f"      Consistent with quantum→classical transition at ξ")
         elif rho_M > 0:
+            mass_trend_verdict = "PARTIAL_MASS_TREND"
             print(f"    ~ ΔAIC increases with M* but X correlation unclear")
         else:
+            mass_trend_verdict = "NO_EXPECTED_MASS_TREND"
             print(f"    ✗ No trend: ΔAIC does not increase with M*")
 
     # More detailed: show the X trend
@@ -419,6 +445,8 @@ print(f"  Outer (R > 3ξ): {len(outer_points)} points")
 
 result_inner = run_bunching_test(inner_points, "Inner (R<ξ)")
 result_outer = run_bunching_test(outer_points, "Outer (R>3ξ)")
+inner_minus_outer_daic = None
+radial_verdict = "INSUFFICIENT_DATA"
 
 if result_inner:
     print(f"\n  Inner bunching: {result_inner['n_bins']} bins, "
@@ -435,14 +463,74 @@ else:
     print(f"  Outer: insufficient data")
 
 if result_inner and result_outer:
-    print(f"\n  Inner ΔAIC − Outer ΔAIC = "
-          f"{result_inner['delta_aic'] - result_outer['delta_aic']:+.2f}")
+    inner_minus_outer_daic = result_inner['delta_aic'] - result_outer['delta_aic']
+    print(f"\n  Inner ΔAIC − Outer ΔAIC = {inner_minus_outer_daic:+.2f}")
     if result_inner['delta_aic'] > result_outer['delta_aic']:
+        radial_verdict = "INNER_STRONGER_THAN_OUTER"
         print(f"  ✓ INNER shows STRONGER bunching than OUTER!")
         print(f"    Consistent with quantum coherence at R < ξ")
     else:
+        radial_verdict = "NO_EXPECTED_RADIAL_TREND"
         print(f"  ✗ No radial trend in bunching strength")
 
+
+# ================================================================
+# STEP 7: Save summary JSON
+# ================================================================
+overall_verdict = "INCONCLUSIVE"
+if mass_trend_verdict == "CONSISTENT_WITH_BEC_TRANSITION" and radial_verdict == "INNER_STRONGER_THAN_OUTER":
+    overall_verdict = "SUPPORTS_BEC_TRANSITION"
+elif mass_trend_verdict in {"NO_EXPECTED_MASS_TREND"} or radial_verdict == "NO_EXPECTED_RADIAL_TREND":
+    overall_verdict = "CONTRADICTS_BEC_TRANSITION"
+
+summary = {
+    'test_name': 'mass_split_bunching',
+    'description': ('Mass-binned bunching test using X=R/xi to assess whether quantum '
+                    'bunching strengthens with stellar mass and at radii inside the healing length.'),
+    'n_total_points': int(len(all_points)),
+    'n_total_galaxies': int(len(set(p['galaxy'] for p in all_points))),
+    'global_zscore': {
+        'mu': float(mu),
+        'sigma': float(std),
+    },
+    'all_sparc': result_all,
+    'mass_bin_results': [
+        {
+            'label': r['label'],
+            'logMs_range': [r['logMs_lo'], r['logMs_hi']],
+            'logMs_median': float(r['logMs_med']),
+            'xi_kpc': float(r['xi_kpc']),
+            'R_median_kpc': float(r['R_median']),
+            'X_median': float(r['X_median']),
+            'n_galaxies': int(r['n_galaxies']),
+            'n_points': int(r['n_points']),
+            'delta_aic_classical_minus_quantum': float(r['delta_aic']),
+            'fit': r['result'],
+        }
+        for r in results_by_mass
+    ],
+    'mass_trend': {
+        'spearman_rho_X_vs_daic': float(rho_X) if rho_X is not None else None,
+        'spearman_p_X_vs_daic': float(p_X) if p_X is not None else None,
+        'spearman_rho_logMs_vs_daic': float(rho_M) if rho_M is not None else None,
+        'spearman_p_logMs_vs_daic': float(p_M) if p_M is not None else None,
+        'verdict': mass_trend_verdict,
+    },
+    'radial_inner_outer_test': {
+        'n_inner_points': int(len(inner_points)),
+        'n_outer_points': int(len(outer_points)),
+        'inner_fit': result_inner,
+        'outer_fit': result_outer,
+        'inner_minus_outer_delta_aic': float(inner_minus_outer_daic) if inner_minus_outer_daic is not None else None,
+        'verdict': radial_verdict,
+    },
+    'overall_verdict': overall_verdict,
+}
+
+outpath = os.path.join(RESULTS_DIR, 'summary_mass_split_bunching.json')
+with open(outpath, 'w') as f:
+    json.dump(summary, f, indent=2)
+print(f"\nSaved: {outpath}")
 
 print(f"\n{'=' * 72}")
 print("Done.")

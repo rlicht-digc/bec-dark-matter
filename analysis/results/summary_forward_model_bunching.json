@@ -20,6 +20,7 @@
   "overall_verdict": "NFW-FAVORED",
   "comparison_test8_pipeline": "\u0394AIC = +9.7",
   "comparison_test8_sparc": "\u0394AIC = -40",
+  "caveat": "Soliton-only model lacks NFW-like envelope; absolute \u0394AIC biased toward NFW. Key diagnostic is mass trend (none found).",
   "per_galaxy": [
     {
       "name": "UGC03580",

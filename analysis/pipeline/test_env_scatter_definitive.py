@@ -34,7 +34,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
+PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data', 'sparc')
 
 # Physics
 g_dagger = 1.20e-10
@@ -303,21 +304,20 @@ else:
 print("\n" + "=" * 72)
 print("TEST C: Distance-error-corrected scatter")
 print("=" * 72)
-print("  Subtracting distance error contribution in quadrature:")
-print("  sigma_intrinsic^2 = sigma_observed^2 - sigma_distance^2")
+print("  NOTE: Distance error is common-mode per galaxy (shifts all points together).")
+print("  It does NOT broaden within-galaxy scatter, so no quadrature subtraction.")
+print("  Reporting raw per-galaxy scatter directly.")
 
 dense_gals = [(r['std_res'], r['sigma_D_dex']) for r in results.values() if r['env'] == 'dense']
 field_gals = [(r['std_res'], r['sigma_D_dex']) for r in results.values() if r['env'] == 'field']
 
 dense_intrinsic = []
-for obs, dist_err in dense_gals:
-    intr_sq = obs**2 - dist_err**2
-    dense_intrinsic.append(np.sqrt(max(intr_sq, 0)))
+for obs, _ in dense_gals:
+    dense_intrinsic.append(obs)
 
 field_intrinsic = []
-for obs, dist_err in field_gals:
-    intr_sq = obs**2 - dist_err**2
-    field_intrinsic.append(np.sqrt(max(intr_sq, 0)))
+for obs, _ in field_gals:
+    field_intrinsic.append(obs)
 
 dense_intr = np.array(dense_intrinsic)
 field_intr = np.array(field_intrinsic)
@@ -413,6 +413,93 @@ elif ci_95[1] < 0:
     print(f"\n  -> Field scatter is SMALLER than dense (supports BEC)")
 elif ci_95[0] > 0:
     print(f"\n  -> Field scatter is LARGER than dense (opposes BEC)")
+
+# ================================================================
+# STEP 7b: Galaxy-block permutation null (CORRECT for pseudoreplication)
+# ================================================================
+print("\n" + "=" * 72)
+print("TEST E2: Galaxy-block permutation (corrects pseudoreplication)")
+print("=" * 72)
+print("  Shuffles galaxy ENV labels, keeping N_dense/N_field fixed.")
+print("  Then pools points from each group to compute sigma_field - sigma_dense.")
+print("  This is the CORRECT null for point-level scatter comparisons.")
+
+rng_blk = np.random.default_rng(99)
+n_perm_block = 10000
+all_gal_names = list(results.keys())
+n_total = len(all_gal_names)
+env_labels = np.array([results[n]['env'] for n in all_gal_names])
+n_dense_orig = int(np.sum(env_labels == 'dense'))
+
+# Precompute per-galaxy residual arrays for fast lookup
+gal_residuals = {n: results[n]['log_res'] for n in all_gal_names}
+
+# Observed point-level delta
+obs_delta_pts = sigma_field - sigma_dense
+
+# Also compute per-bin observed deltas
+obs_delta_bins = {}
+for gbar_lo, gbar_hi, label in gbar_bins:
+    d_pts_b = np.concatenate([results[n]['log_res'][(results[n]['log_gbar'] >= gbar_lo) & (results[n]['log_gbar'] < gbar_hi)]
+                               for n in all_gal_names if results[n]['env'] == 'dense'])
+    f_pts_b = np.concatenate([results[n]['log_res'][(results[n]['log_gbar'] >= gbar_lo) & (results[n]['log_gbar'] < gbar_hi)]
+                               for n in all_gal_names if results[n]['env'] == 'field'])
+    if len(d_pts_b) >= 5 and len(f_pts_b) >= 5:
+        obs_delta_bins[label] = float(np.std(f_pts_b) - np.std(d_pts_b))
+
+# Permutation loop
+perm_deltas = np.zeros(n_perm_block)
+perm_deltas_bins = {label: np.zeros(n_perm_block) for label in obs_delta_bins}
+
+for p in range(n_perm_block):
+    # Shuffle galaxy labels
+    perm_idx = rng_blk.permutation(n_total)
+    perm_dense_names = [all_gal_names[i] for i in perm_idx[:n_dense_orig]]
+    perm_field_names = [all_gal_names[i] for i in perm_idx[n_dense_orig:]]
+
+    # Overall point-level
+    d_res = np.concatenate([gal_residuals[n] for n in perm_dense_names])
+    f_res = np.concatenate([gal_residuals[n] for n in perm_field_names])
+    perm_deltas[p] = np.std(f_res) - np.std(d_res)
+
+    # Per acceleration bin
+    for gbar_lo, gbar_hi, label in gbar_bins:
+        if label not in obs_delta_bins:
+            continue
+        d_b = np.concatenate([results[n]['log_res'][(results[n]['log_gbar'] >= gbar_lo) & (results[n]['log_gbar'] < gbar_hi)]
+                               for n in perm_dense_names
+                               if np.any((results[n]['log_gbar'] >= gbar_lo) & (results[n]['log_gbar'] < gbar_hi))] or [np.array([])])
+        f_b = np.concatenate([results[n]['log_res'][(results[n]['log_gbar'] >= gbar_lo) & (results[n]['log_gbar'] < gbar_hi)]
+                               for n in perm_field_names
+                               if np.any((results[n]['log_gbar'] >= gbar_lo) & (results[n]['log_gbar'] < gbar_hi))] or [np.array([])])
+        if len(d_b) >= 5 and len(f_b) >= 5:
+            perm_deltas_bins[label][p] = np.std(f_b) - np.std(d_b)
+
+# Overall p-value (two-sided)
+p_block_two = float(np.mean(np.abs(perm_deltas) >= abs(obs_delta_pts)))
+# One-sided: P(perm delta >= observed) — tests if field is looser
+p_block_one = float(np.mean(perm_deltas >= obs_delta_pts))
+
+print(f"\n  Overall point-level:")
+print(f"    Observed Δσ (field-dense): {obs_delta_pts:+.4f} dex")
+print(f"    Null mean: {np.mean(perm_deltas):+.4f} ± {np.std(perm_deltas):.4f}")
+print(f"    Block-perm p (two-sided):  {p_block_two:.4f}")
+print(f"    Block-perm p (field > dense): {p_block_one:.4f}")
+
+print(f"\n  Per acceleration bin:")
+print(f"    {'Regime':40s} {'Obs Δσ':>8s} {'p(2s)':>8s} {'p(f>d)':>8s}")
+print(f"    {'-'*60}")
+block_bin_results = {}
+for gbar_lo, gbar_hi, label in gbar_bins:
+    if label not in obs_delta_bins:
+        continue
+    obs_d = obs_delta_bins[label]
+    null_d = perm_deltas_bins[label]
+    p2 = float(np.mean(np.abs(null_d) >= abs(obs_d)))
+    p1 = float(np.mean(null_d >= obs_d))
+    sig = '*' if p2 < 0.05 else ''
+    print(f"    {label:40s} {obs_d:+8.4f} {p2:8.4f} {p1:8.4f} {sig}")
+    block_bin_results[label] = {'obs_delta': round(obs_d, 4), 'p_two_sided': p2, 'p_field_gt_dense': p1}
 
 # ================================================================
 # STEP 8: Robustness — drop top 3 outlier galaxies
@@ -579,14 +666,32 @@ summary = {
         "field_sigma": round(float(np.std(field_means_all)), 4),
         "levene_p": round(float(levene(uma_means, field_means_all)[1]), 6) if len(uma_means) >= 5 else None,
     },
+    "test_E2_block_permutation": {
+        "description": "Galaxy-block permutation null (corrects pseudoreplication)",
+        "n_permutations": n_perm_block,
+        "overall": {
+            "observed_delta": round(float(obs_delta_pts), 4),
+            "null_mean": round(float(np.mean(perm_deltas)), 4),
+            "null_std": round(float(np.std(perm_deltas)), 4),
+            "p_two_sided": p_block_two,
+            "p_field_gt_dense": p_block_one,
+        },
+        "per_bin": block_bin_results,
+    },
     "tests_passed": len(tests_passed),
     "tests_failed": len(tests_failed),
     "overall": overall,
     "distances_used": "SPARC",
     "error_model": "Haubner+2025",
+    "audit_fixes": [
+        "Galaxy-block permutation added (fixes pseudoreplication in point-level tests)",
+        "Distance-error quadrature subtraction removed (common-mode, not per-point broadening)",
+    ],
 }
 
-outpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results', 'summary_env_definitive.json')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'analysis', 'results')
+os.makedirs(RESULTS_DIR, exist_ok=True)
+outpath = os.path.join(RESULTS_DIR, 'summary_env_definitive.json')
 with open(outpath, 'w') as f:
     json.dump(summary, f, indent=2)
 print(f"\nResults saved to: {outpath}")
