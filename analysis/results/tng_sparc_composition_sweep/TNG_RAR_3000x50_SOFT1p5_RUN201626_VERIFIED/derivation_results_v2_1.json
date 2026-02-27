@@ -1,0 +1,24 @@
+{
+  "version": "v2.1_battle_hardened",
+  "notes": {
+    "audit": "No fitting. Toy models flagged. Radiation toggle affects chi(z) and xi numbers.",
+    "labels_required": "DERIVED/ASSUMED/EMPIRICAL/SPECULATIVE"
+  },
+  "values": {
+    "T1_f_c_required": 1.6494897959183674e-09,
+    "T2_H_target": 4.00266844563042e-19,
+    "T2_H_inf": 1.807581633011356e-18,
+    "T2_alpha_prefactor_gdag_over_gL": 0.22159740815957324,
+    "T6_chi_ls_Mpc": 13868.367554208487,
+    "T6_xi_l2_Mpc": 22980.762350125744,
+    "T6_xi_l3_Mpc": 21570.184721715723,
+    "T6_xi_geomean_Mpc": 22264.30526511129,
+    "T6_f_abs_S8_proxy": 0.0005070327918688389,
+    "T8_delta_req_p05": 49569928893.80622,
+    "T8_rho_char": 2.700508744862247e-23,
+    "T7_harmonic_n_10nHz": 9157509157.509157,
+    "T7_xi_needed_pc_for_10nHz": 0.00012424037273286334
+  },
+  "dataset_id": "TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED",
+  "source_manifest": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/meta/dataset_manifest.json"
+}

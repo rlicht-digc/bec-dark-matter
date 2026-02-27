@@ -1,0 +1,2756 @@
+[
+  {
+    "idx": 1,
+    "script": "analysis/pipeline/integrate_mhongoose.py",
+    "method": "integrate_mhongoose.py \u2014 Integrate MHONGOOSE rotation curves into RAR pipeline ================================================================================ Loads published mass-decomposed rotation curves from MHONGOOSE papers and computes RAR (g_bar, g_obs) points for integration into the extended dataset. Currentl",
+    "datasets": [
+      "SPARC",
+      "MHONGOOSE"
+    ],
+    "summary": "analysis/results/summary_mhongoose_integration.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "combined.mean_residual",
+        -0.1031
+      ],
+      [
+        "combined.frac_below_gdagger",
+        1.0
+      ],
+      [
+        "combined.n_galaxies",
+        2
+      ],
+      [
+        "combined.n_rar_points",
+        32
+      ],
+      [
+        "combined.scatter",
+        0.2619
+      ]
+    ]
+  },
+  {
+    "idx": 2,
+    "script": "analysis/pipeline/integrate_mhongoose_sorgho.py",
+    "method": "integrate_mhongoose_sorgho.py \u2014 Integrate Sorgho+2019 NGC7424 & NGC3621 into RAR ================================================================================== Adds NGC7424 (KAT-7) and NGC3621 (MeerKAT commissioning) from Sorgho+2019 (MNRAS 482, 1248) to the MHONGOOSE RAR dataset. These are much larger galaxies tha",
+    "datasets": [
+      "THINGS",
+      "MHONGOOSE"
+    ],
+    "summary": "analysis/results/summary_mhongoose_sorgho2019.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "combined_sorgho.mean_residual",
+        -0.0862
+      ],
+      [
+        "full_mhongoose.mean_residual",
+        -0.0928
+      ],
+      [
+        "full_mhongoose.frac_below_gdagger",
+        1.0
+      ],
+      [
+        "combined_sorgho.n_galaxies",
+        2
+      ],
+      [
+        "combined_sorgho.n_rar_points",
+        50
+      ],
+      [
+        "full_mhongoose.n_galaxies",
+        4
+      ]
+    ]
+  },
+  {
+    "idx": 3,
+    "script": "analysis/pipeline/literature_crossref_tests.py",
+    "method": "Literature Cross-Reference Tests ================================= Three new analyses motivated by the literature survey: 1. SQUEEZED STATE \u03b1-PARAMETER TEST Fit \u03c3\u00b2 = A \u00d7 [\u03b1\u00b7n\u0304\u00b2 + n\u0304] + C with \u03b1 free. Thermal: \u03b1=1, Classical wave: \u03b1\u2192\u221e (no +n\u0304), Coherent: \u03b1=0, Squeezed: \u03b1>1. 2. MILGROM vs BOSE-EINSTEIN INTERPOLATION FUNC",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_literature_crossref.json",
+    "map": "exact",
+    "finding": "CONSISTENT WITH THERMAL (\u03b1 = 1 within 0.0\u03c3)",
+    "metrics": [
+      [
+        "test1_squeezed_alpha.daic_poisson_vs_free",
+        8.477525051593062
+      ],
+      [
+        "test1_squeezed_alpha.daic_classical_wave_vs_free",
+        -2.0084278687364474
+      ],
+      [
+        "test1_squeezed_alpha.daic_thermal_alpha1_vs_free",
+        -1.214426474805208
+      ],
+      [
+        "test2_interpolation.daic_Milgrom_deSitter_vs_BE",
+        -1221.9599148935522
+      ],
+      [
+        "test2_interpolation.daic_Milgrom_vs_Simple",
+        -2.9103830456733704e-11
+      ],
+      [
+        "test2_interpolation.daic_Simple_MOND_vs_BE",
+        -1221.959914893523
+      ]
+    ]
+  },
+  {
+    "idx": 4,
+    "script": "analysis/pipeline/test_13b_composite.py",
+    "method": "Test 13b COMPOSITE: SPARC inner + Brouwer outer lensing profiles. Stitches SPARC rotation curves (R = 1-30 kpc) with Brouwer+2021 KiDS-1000 lensing ESD profiles (R = 35-2600 kpc) to create composite mass profiles spanning the full soliton + envelope range. The soliton core lives at R < 3\u03be \u2248 5-30 kpc (SPARC range). The ",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "ALFALFA\u00d7Yang",
+      "Brouwer/KiDS-1000",
+      "WALLABY",
+      "PHANGS",
+      "KiDS",
+      "Yang catalog",
+      "LVHIS"
+    ],
+    "summary": "analysis/results/summary_unified.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "environment.mean_err2_dense",
+        0.006916640172143969
+      ],
+      [
+        "environment.mean_err2_field",
+        0.014630370741189534
+      ],
+      [
+        "overall.mean_all",
+        0.05565796814501977
+      ],
+      [
+        "environment.brown_forsythe_F",
+        46.6314439648366
+      ],
+      [
+        "environment.brown_forsythe_p",
+        8.880852454799186e-12
+      ],
+      [
+        "n_data_points",
+        15745
+      ]
+    ]
+  },
+  {
+    "idx": 5,
+    "script": "analysis/pipeline/test_13b_diagnostics.py",
+    "method": "Test 13b DIAGNOSTICS: Honest analysis of composite SPARC+Brouwer results. Checks for: 1. Stitch boundary systematics \u2014 is there a jump at 30 kpc? 2. Split-sample test \u2014 does \u0394AIC come from inner (SPARC) or outer (Brouwer) data? 3. BEC model freedom \u2014 do extra params just absorb the stitch discontinuity? 4. Core radius ",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "ALFALFA\u00d7Yang",
+      "Brouwer/KiDS-1000",
+      "WALLABY",
+      "PHANGS",
+      "Yang catalog",
+      "LVHIS"
+    ],
+    "summary": "analysis/results/summary_unified.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "environment.mean_err2_dense",
+        0.006916640172143969
+      ],
+      [
+        "environment.mean_err2_field",
+        0.014630370741189534
+      ],
+      [
+        "overall.mean_all",
+        0.05565796814501977
+      ],
+      [
+        "environment.brown_forsythe_F",
+        46.6314439648366
+      ],
+      [
+        "environment.brown_forsythe_p",
+        8.880852454799186e-12
+      ],
+      [
+        "n_data_points",
+        15745
+      ]
+    ]
+  },
+  {
+    "idx": 6,
+    "script": "analysis/pipeline/test_13b_standalone.py",
+    "method": "Standalone Test 13b: Lensing Profile Shape \u2014 Solitonic Core vs NFW Tests whether Brouwer+2021 KiDS-1000 isolated galaxy ESD profiles prefer a BEC soliton + NFW envelope model over pure NFW. Uses precomputed lookup tables for the soliton projected profile to avoid nested numerical integration inside the optimizer.",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "ALFALFA\u00d7Yang",
+      "Brouwer/KiDS-1000",
+      "WALLABY",
+      "PHANGS",
+      "KiDS",
+      "Yang catalog",
+      "LVHIS"
+    ],
+    "summary": "analysis/results/summary_unified.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "environment.mean_err2_dense",
+        0.006916640172143969
+      ],
+      [
+        "environment.mean_err2_field",
+        0.014630370741189534
+      ],
+      [
+        "overall.mean_all",
+        0.05565796814501977
+      ],
+      [
+        "environment.brown_forsythe_F",
+        46.6314439648366
+      ],
+      [
+        "environment.brown_forsythe_p",
+        8.880852454799186e-12
+      ],
+      [
+        "n_data_points",
+        15745
+      ]
+    ]
+  },
+  {
+    "idx": 7,
+    "script": "analysis/pipeline/test_alfalfa_yang_btfr.py",
+    "method": "ALFALFA \u00d7 Yang+2007 BTFR Environmental Scatter Test ===================================================== THE IRONCLAD REPLICATION TEST. Cross-match ALFALFA \u03b1.100 (31,500 HI-selected galaxies) with Yang DR7 group catalog (639,359 galaxies with halo masses). Compute BTFR scatter as a function of velocity width (accelera",
+    "datasets": [
+      "ALFALFA\u00d7Yang",
+      "Yang catalog"
+    ],
+    "summary": "analysis/results/summary_alfalfa_yang_btfr.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_alfalfa",
+        25255
+      ],
+      [
+        "n_dense",
+        356
+      ],
+      [
+        "n_field",
+        1917
+      ],
+      [
+        "n_matched",
+        2273
+      ],
+      [
+        "btfr_fit.intercept",
+        7.9541
+      ],
+      [
+        "btfr_fit.overall_scatter",
+        0.31904
+      ]
+    ]
+  },
+  {
+    "idx": 8,
+    "script": "analysis/pipeline/test_alpha_with_mtotal.py",
+    "method": "Alpha Rescaling Test with M_total vs M_star The radial variance profile test found that the variance peaks at X = R/\u03be_eff where \u03be_eff = \u03b1 \u00d7 \u221a(GM*/g\u2020) with \u03b1 \u2248 3.5. This implies the true coherence length is set by ~12\u00d7 the stellar mass (since \u03be \u221d \u221aM, 3.5\u00b2 \u2248 12). The stellar-to-halo mass ratio M*/M_halo \u2248 0.01-0.1, so M_",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_alpha_mtotal.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "method_counts.K17",
+        0
+      ],
+      [
+        "method_counts.abundance_matching",
+        135
+      ],
+      [
+        "method_counts.structure",
+        40
+      ],
+      [
+        "median_log_ms_over_mh",
+        -2.203809187973283
+      ],
+      [
+        "n_galaxies",
+        135
+      ],
+      [
+        "n_points",
+        2739
+      ]
+    ]
+  },
+  {
+    "idx": 9,
+    "script": "analysis/pipeline/test_baryon_wiggle_vs_coherence.py",
+    "method": "Baryon Wiggle Index vs Residual Coherence (Step 29) ==================================================== Test whether RAR residual autocorrelation is driven by baryonic structure (bumps in gbar(r)) or by something else (\"interface physics\"). A) Compute per-galaxy \"wiggle index\" from gbar(r): - W1: RMS of 2nd derivative",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results_vm/summary_baryon_wiggle_vs_coherence.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "sample.n_galaxies",
+        67
+      ],
+      [
+        "sample.n_ls_significant",
+        25
+      ],
+      [
+        "primary_diagnostic.p",
+        0.21592752755378558
+      ],
+      [
+        "primary_diagnostic.rho",
+        0.1532
+      ],
+      [
+        "wiggle_stats.W1_median",
+        0.008099
+      ],
+      [
+        "wiggle_stats.W2_median",
+        0.101793
+      ]
+    ]
+  },
+  {
+    "idx": 10,
+    "script": "analysis/pipeline/test_binning_robustness.py",
+    "method": "Binning Robustness Test for Inversion Point ============================================= The derivative analysis (test_mc_distance_and_inversion.py) found d\u03c3/d(log g_bar) = 0 at log g_bar = -9.86, just 0.065 dex from g\u2020 = -9.92. A reviewer could ask: is that a binning artifact? If you shift your bins by half a width, ",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_binning_robustness.json",
+    "map": "exact",
+    "finding": "mean=-9.8898; median=-9.8847; std=0.1797",
+    "metrics": [
+      [
+        "summary.mean_distance_from_gdagger",
+        0.1279
+      ],
+      [
+        "n_configurations",
+        25
+      ],
+      [
+        "n_offsets_per_width",
+        5
+      ],
+      [
+        "n_with_crossings",
+        25
+      ],
+      [
+        "summary.mean",
+        -9.8898
+      ],
+      [
+        "summary.std",
+        0.1797
+      ]
+    ]
+  },
+  {
+    "idx": 11,
+    "script": "analysis/pipeline/test_brouwer_lensing_rar.py",
+    "method": "Brouwer+2021 Weak Lensing RAR Scatter Analysis ================================================= Different physical effect (gravitational lensing), same prediction. The Brouwer+2021 KiDS-1000 data provides the lensing RAR: gbar vs g_obs measured through weak gravitational lensing of ~1,000 sq degrees. We have: - Isolat",
+    "datasets": [
+      "SPARC",
+      "Brouwer/KiDS-1000",
+      "GAMA",
+      "KiDS"
+    ],
+    "summary": "analysis/results/summary_brouwer_lensing_rar.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "datasets_loaded.isolated_color2",
+        15
+      ],
+      [
+        "datasets_loaded.all_mass1",
+        15
+      ],
+      [
+        "datasets_loaded.all_mass2",
+        15
+      ],
+      [
+        "datasets_loaded.all_mass3",
+        15
+      ],
+      [
+        "datasets_loaded.all_mass4",
+        15
+      ],
+      [
+        "datasets_loaded.gama_isolated",
+        15
+      ]
+    ]
+  },
+  {
+    "idx": 12,
+    "script": "analysis/pipeline/test_cf4_distance_grading.py",
+    "method": "CF4 DISTANCE GRADING \u2014 Phase 1 ================================ Grade Cosmicflows-4 flow-model distances against the 40-galaxy TRGB/Cepheid subsample with independently measured distances. For each matched galaxy: delta_D_frac = (D_cf4 - D_trgb) / D_trgb Statistics grouped by distance method (TRGB, Cepheid, NED-upgrade",
+    "datasets": [
+      "SPARC",
+      "CF4"
+    ],
+    "summary": "analysis/results/summary_cf4_distance_grading.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "overall.mean_delta",
+        0.145
+      ],
+      [
+        "overall.median_delta",
+        -0.1329
+      ],
+      [
+        "n_cf4_matched",
+        36
+      ],
+      [
+        "n_subsample",
+        40
+      ],
+      [
+        "n_unmatched",
+        4
+      ],
+      [
+        "overall.n_outliers",
+        25
+      ]
+    ]
+  },
+  {
+    "idx": 13,
+    "script": "analysis/pipeline/test_cluster_gcore_no_rxj2248.py",
+    "method": "Test A3b: g_core analysis with RXJ2248 excluded (anomalous Rad=30.3 kpc) + standardized-aperture variant (Rad=14.3 kpc subsample) + multivariate re-check without RXJ2248 Russell Licht -- Primordial Fluid DM Project, Feb 2026",
+    "datasets": [
+      "Tian/CLASH"
+    ],
+    "summary": "analysis/results/summary_cluster_gcore_A3.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "gcore_analysis.n_clusters",
+        20
+      ],
+      [
+        "gcore_analysis.pearson_p",
+        0.4325213157428183
+      ],
+      [
+        "gcore_analysis.pearson_r",
+        0.18593926619621803
+      ],
+      [
+        "gcore_analysis.spearman_p",
+        0.09512441358281754
+      ],
+      [
+        "gcore_analysis.spearman_rho",
+        0.38345864661654133
+      ],
+      [
+        "multivariate.n_clusters",
+        9
+      ]
+    ]
+  },
+  {
+    "idx": 14,
+    "script": "analysis/pipeline/test_cluster_gcore_scaling.py",
+    "method": "Test A3: Core-Acceleration Proxy & Multivariate Regression ============================================================ 1. g_core = G M_tot(Rad) / Rad\u00b2 \u2014 direct core acceleration vs g\u2021 2. Multivariate: log g\u2021 = a + b log M_core + c log c_200 + d log g_200 3. Deeper probe of the \u03c3 anti-correlation in clean spectroscopic",
+    "datasets": [
+      "Tian/CLASH"
+    ],
+    "summary": "analysis/results/summary_cluster_gcore_standardized.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "multivariate_all.bivar_gc_g200_R2",
+        0.5947979003330607
+      ],
+      [
+        "multivariate_all.bivar_gc_g200_R2_adj",
+        0.45973053377741424
+      ],
+      [
+        "multivariate_all.full_R2",
+        0.7488570495478908
+      ],
+      [
+        "multivariate_all.full_R2_adj",
+        0.5981712792766253
+      ],
+      [
+        "multivariate_all.univar_g200_R2",
+        0.0752154206550929
+      ],
+      [
+        "multivariate_all.univar_gcore_R2",
+        0.3049143111794833
+      ]
+    ]
+  },
+  {
+    "idx": 15,
+    "script": "analysis/pipeline/test_cluster_rar_tian2020.py",
+    "method": "Cluster-Scale RAR from Tian et al. 2020 (CLASH) ================================================= Uses pre-computed g_bar(r) and g_obs(r) for 20 CLASH clusters from Tian et al. 2020 (ApJ 896, 70), downloaded from VizieR. Tests: 1. What is the cluster-scale acceleration scale a\u2080? 2. Is it related to the galaxy-scale g\u2020 ",
+    "datasets": [
+      "Tian/CLASH",
+      "CLASH"
+    ],
+    "summary": "analysis/results/summary_cluster_rar_tian2020.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "galaxy_gdagger_comparison.mean_offset",
+        0.49365059466519656
+      ],
+      [
+        "per_cluster_stats.mean_log_a0",
+        -8.751092049007141
+      ],
+      [
+        "n_clusters",
+        20
+      ],
+      [
+        "n_points",
+        84
+      ],
+      [
+        "per_cluster_stats.std_log_a0",
+        0.1624726815685246
+      ],
+      [
+        "galaxy_gdagger_comparison.delta_chi2",
+        3435.666650845686
+      ]
+    ]
+  },
+  {
+    "idx": 16,
+    "script": "analysis/pipeline/test_cluster_scale_rar.py",
+    "method": "Cluster-Scale RAR Analysis ============================ Three levels of cluster analysis: LEVEL 1 \u2014 Amram+1996 cluster galaxy rotation curves. These are rotation curves of individual galaxies IN clusters, not cluster- scale mass profiles. Without baryonic decomposition, we can only compute g_obs = V\u00b2/R. We test: do clu",
+    "datasets": [
+      "SPARC",
+      "Tian/CLASH"
+    ],
+    "summary": "analysis/results/summary_cluster_scale_rar.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "level1_amram.n_galaxies",
+        8
+      ],
+      [
+        "level1_amram.n_total_points",
+        85
+      ],
+      [
+        "level1_amram.assumed_distance_Mpc",
+        80.0
+      ],
+      [
+        "level2_literature.implied_mass_scaling_alpha",
+        0.407
+      ],
+      [
+        "level2_literature.ratio_to_gdagger",
+        16.7
+      ],
+      [
+        "level2_literature.tian2020_a0_cluster",
+        2e-09
+      ]
+    ]
+  },
+  {
+    "idx": 17,
+    "script": "analysis/pipeline/test_cluster_sigma_diagnostics.py",
+    "method": "Test A Diagnostics + Test A2: Alternative Cluster-Scale Predictors =================================================================== Check 1: Dynamic range in \u03c3 and heterogeneous systematics Check 2: Is per-cluster g\u2021 actually varying? (intrinsic vs measurement scatter) Test A2: Alternative predictors \u2014 g_200, c_200,",
+    "datasets": [
+      "Tian/CLASH"
+    ],
+    "summary": "analysis/results/summary_cluster_diagnostics_A2.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "check2_gdagger_variation.intrinsic_fraction",
+        0.9380221330754416
+      ],
+      [
+        "check2_gdagger_variation.mean_log_gdagger",
+        -8.751092049007141
+      ],
+      [
+        "check1_dynamic_range.median_sigma_uncertainty_pct",
+        9.986506746626686
+      ],
+      [
+        "check2_gdagger_variation.n_clusters",
+        20
+      ],
+      [
+        "check2_gdagger_variation.std_log_gdagger",
+        0.1624726815685246
+      ],
+      [
+        "check1_dynamic_range.sigma_max",
+        1840.0
+      ]
+    ]
+  },
+  {
+    "idx": 18,
+    "script": "analysis/pipeline/test_cluster_sigma_scaling.py",
+    "method": "Test A: Cluster velocity dispersion vs acceleration scale ========================================================== Tests BEC prediction: if g\u2020 is a condensation temperature with T \u221d \u03c3\u00b2, then per-cluster g\u2021 should scale as: log(g\u2021) = A + B \u00d7 log(\u03c3\u00b2) with B \u2248 1. Uses per-cluster g\u2021 from our E2 analysis (Tian+2020 CLASH",
+    "datasets": [
+      "Tian/CLASH",
+      "CLASH"
+    ],
+    "summary": "analysis/results/summary_cluster_sigma_scaling.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "clean_sample.B_stderr",
+        0.3867443580578906
+      ],
+      [
+        "bootstrap.n_iterations",
+        10000
+      ],
+      [
+        "clean_sample.A_intercept",
+        -9.736898688120695
+      ],
+      [
+        "clean_sample.B_slope",
+        0.1634908685914125
+      ],
+      [
+        "clean_sample.pearson_p",
+        0.6824086903084625
+      ],
+      [
+        "clean_sample.pearson_r",
+        0.1395335956391029
+      ]
+    ]
+  },
+  {
+    "idx": 19,
+    "script": "analysis/pipeline/test_eagle_injection_recovery.py",
+    "method": "TEST C: SPARC \u2192 EAGLE Sampling Injection\u2013Recovery =================================================== Goal: Can EAGLE's 10 fixed radii detect a ~7 kpc periodic signal if present? C1 \u2014 Core injection-recovery: 1. Take 25 periodic + 42 non-periodic SPARC galaxies 2. Resample each residual series onto EAGLE's fixed radii ",
+    "datasets": [
+      "SPARC",
+      "EAGLE"
+    ],
+    "summary": "analysis/results/summary_eagle_injection_recovery.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "parameters.min_eagle_pts",
+        5
+      ],
+      [
+        "parameters.n_noise_realizations",
+        500
+      ],
+      [
+        "parameters.n_surrogates_per_ls",
+        50
+      ],
+      [
+        "sample.n_insufficient_coverage",
+        34
+      ],
+      [
+        "sample.n_nonperiodic",
+        42
+      ],
+      [
+        "sample.n_periodic",
+        25
+      ]
+    ]
+  },
+  {
+    "idx": 20,
+    "script": "analysis/pipeline/test_eagle_rar_inversion.py",
+    "method": "EAGLE Simulation RAR & Scatter Derivative Inversion Test ========================================================= Uses the EAGLE public SQL database (McAlpine+ 2016) to extract enclosed stellar, gas, and DM masses at multiple aperture radii for late-type galaxies in the Ref-L100N1504 simulation (z=0). Then computes th",
+    "datasets": [
+      "SPARC",
+      "EAGLE"
+    ],
+    "summary": "analysis/results/summary_eagle_rar_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "eagle_result.inversion_log_g",
+        -4.785954566001536
+      ],
+      [
+        "n_galaxies",
+        29716
+      ],
+      [
+        "n_rar_points",
+        294694
+      ],
+      [
+        "robustness_offsets.n_found",
+        10
+      ],
+      [
+        "sparc_result.inversion_log_g",
+        -9.8598685760116
+      ],
+      [
+        "robustness_offsets.mean",
+        -4.461431125146268
+      ]
+    ]
+  },
+  {
+    "idx": 21,
+    "script": "analysis/pipeline/test_eagle_rar_inversion_v2.py",
+    "method": "EAGLE Simulation RAR & Scatter Derivative Inversion Test \u2014 v2 ================================================================ Corrected version with: A) Restriction to SPARC acceleration range only B) Galaxy-level scatter derivative with bootstrap CIs (no pseudoreplication) C) Mock-observed rotation curves bridge test",
+    "datasets": [
+      "SPARC",
+      "EAGLE"
+    ],
+    "summary": "analysis/results/summary_eagle_rar_inversion_v2.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_eagle_galaxies_total",
+        29716
+      ],
+      [
+        "n_eagle_in_sparc_range",
+        12294
+      ],
+      [
+        "n_eagle_rar_points_sparc_range",
+        56105
+      ],
+      [
+        "n_sparc_galaxies",
+        131
+      ],
+      [
+        "n_sparc_rar_points",
+        2777
+      ],
+      [
+        "part_b_galaxy_level.n_eagle_galaxies",
+        10126
+      ]
+    ]
+  },
+  {
+    "idx": 22,
+    "script": "analysis/pipeline/test_env_cf4_accel_binned.py",
+    "method": "Acceleration-Binned Environmental RAR Scatter Test ==================================================== Letter-ready analysis: does the environmental scatter difference live where the BEC condensate dominates? Core argument: The RAR scatter difference between dense and field environments is concentrated at LOW accelera",
+    "datasets": [
+      "SPARC",
+      "CF4"
+    ],
+    "summary": "analysis/results/summary_env_cf4_accel_binned.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 23,
+    "script": "analysis/pipeline/test_env_confound_control.py",
+    "method": "Environment Confound Control Test ==================================== CRITICAL QUESTION: Is \"environment\" really environment, or a proxy for morphology, gas fraction, distance method, inclination, or RC quality? Dense galaxies (UMa cluster, group members) might systematically differ from field galaxies in ways that cr",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_env_confound_control.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_dense",
+        48
+      ],
+      [
+        "n_field",
+        83
+      ],
+      [
+        "n_galaxies",
+        131
+      ],
+      [
+        "n_group",
+        22
+      ],
+      [
+        "n_uma",
+        26
+      ],
+      [
+        "permutation.n_perm",
+        10000
+      ]
+    ]
+  },
+  {
+    "idx": 24,
+    "script": "analysis/pipeline/test_env_scatter_definitive.py",
+    "method": "DEFINITIVE Environmental RAR Scatter Test ========================================== The critical test: does RAR scatter differ between dense and field environments? BEC prediction: Field galaxies retain superfluid coherence \u2192 TIGHTER scatter. Dense (cluster/group) galaxies have disrupted condensate \u2192 LOOSER scatter. C",
+    "datasets": [
+      "SPARC",
+      "CF4"
+    ],
+    "summary": "analysis/results/summary_env_definitive.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_dense",
+        48
+      ],
+      [
+        "n_field",
+        83
+      ],
+      [
+        "n_galaxies",
+        131
+      ],
+      [
+        "test_E2_block_permutation.n_permutations",
+        10000
+      ],
+      [
+        "test_A_point_level.delta",
+        0.0067
+      ],
+      [
+        "test_E_bootstrap.observed_delta",
+        0.0137
+      ]
+    ]
+  },
+  {
+    "idx": 25,
+    "script": "analysis/pipeline/test_env_triple_distance.py",
+    "method": "ENVIRONMENTAL BATTERY x3 DISTANCE CATALOGS \u2014 Phase 3 ===================================================== Runs the full environmental scatter test battery under three different distance catalogs (SPARC, Hybrid, Full CF4), then cross-compares results. Battery per catalog: Test A: Point-level Levene (dense vs field scat",
+    "datasets": [
+      "SPARC",
+      "CF4"
+    ],
+    "summary": "analysis/results/summary_env_triple_distance.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "intersection_sample.n_galaxies",
+        131
+      ]
+    ]
+  },
+  {
+    "idx": 26,
+    "script": "analysis/pipeline/test_extended_rar_inversion.py",
+    "method": "Extended RAR Inversion Point Analysis ====================================== Replicate the inversion point analysis from test_mc_distance_and_inversion.py using the extended 256-galaxy RAR dataset (SPARC + VizieR + S4G/ALFALFA matching). Key question: Does the inversion point at g\u2020 persist when we more than double the ",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "Korsaga/GHASP",
+      "PROBES",
+      "ALFALFA\u00d7Yang",
+      "MHONGOOSE",
+      "PHANGS"
+    ],
+    "summary": "analysis/results/summary_extended_rar_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "bouquin_matching.alfalfa_matched",
+        16
+      ],
+      [
+        "bouquin_matching.bouquin_matched",
+        20
+      ],
+      [
+        "bouquin_matching.quality_filtered_galaxies",
+        3
+      ],
+      [
+        "bouquin_matching.stellar_only",
+        4
+      ],
+      [
+        "non_sparc_only.n_galaxies",
+        248
+      ],
+      [
+        "non_sparc_only.n_points",
+        11313
+      ]
+    ]
+  },
+  {
+    "idx": 27,
+    "script": "analysis/pipeline/test_forward_model_bunching.py",
+    "method": "Forward-Model Bunching Validation: BEC vs NFW Per-Galaxy Rotation Curve Fits Instead of comparing variance models on binned RAR residuals (Test 8), this test directly fits each SPARC rotation curve with two dark matter models: Model A (BEC/Soliton): V\u00b2_DM(r) from soliton \u03c1(r) = \u03c1_c [1 + 0.091(r/r_c)\u00b2]\u207b\u2078 Model B (NFW): ",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_forward_model_bunching.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "mean_daic",
+        -20.301
+      ],
+      [
+        "median_daic",
+        -4.11
+      ],
+      [
+        "n_bec_preferred",
+        38
+      ],
+      [
+        "n_galaxies",
+        113
+      ],
+      [
+        "n_indistinguishable",
+        15
+      ],
+      [
+        "n_nfw_preferred",
+        60
+      ]
+    ]
+  },
+  {
+    "idx": 28,
+    "script": "analysis/pipeline/test_gpp_inversion_cs2.py",
+    "method": "GPP (Gross-Pitaevskii-Poisson) Inversion of the RAR ==================================================== Direct extraction of effective condensate parameters from observed RAR data. Pipeline: 1. g_DM(r) = g_obs - g_bar 2. Spherical Poisson inversion -> rho_DM(r) 3. Hydrostatic TF closure -> c_s^2(r) 4. Universality tes",
+    "datasets": [
+      "SPARC",
+      "WALLABY"
+    ],
+    "summary": "analysis/results/summary_gpp_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "TF_regime_fraction",
+        0.7637368966708904
+      ],
+      [
+        "frac_negative_gDM",
+        0.17865989202921562
+      ],
+      [
+        "TF_median_X",
+        1.4137744273668627
+      ],
+      [
+        "TF_restricted_X3.n_gal",
+        50
+      ],
+      [
+        "boson_mass_eV",
+        3.952472396406296e-24
+      ],
+      [
+        "morphology_spearman_p",
+        9.767268230174804e-19
+      ]
+    ]
+  },
+  {
+    "idx": 29,
+    "script": "analysis/pipeline/test_gpp_universality.py",
+    "method": "test_gpp_universality.py \u2014 GPP Universality Re-test ==================================================== Three-phase test of whether c_s\u00b2 = g_int\u00b7n\u0304/m is a universal constant: Phase A: SPARC high-quality stabilized inversion (spline-smoothed derivatives) Phase B: Forward-model comparison (Model U: universal c_s\u00b2 vs Mod",
+    "datasets": [
+      "SPARC",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/summary_gpp_universality.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "phase_C_TNG_null.mean_TF_fraction",
+        0.9978
+      ],
+      [
+        "phase_B_forward.cs2_proxy_mean_log10",
+        9.7105
+      ],
+      [
+        "phase_C_TNG_null.cs2_mean_log10",
+        9.6259
+      ],
+      [
+        "phase_B_forward.delta_AIC_U_minus_L",
+        3.43
+      ],
+      [
+        "phase_C_TNG_null.delta_AIC",
+        49113.85
+      ],
+      [
+        "phase_B_forward.n_galaxies",
+        98
+      ]
+    ]
+  },
+  {
+    "idx": 30,
+    "script": "analysis/pipeline/test_gpp_universality_codex.py",
+    "method": "test_gpp_universality.py \u2014 GPP Universality Re-test (Codex-portable) ===================================================================== Three-phase test of whether c_s\u00b2 = g_int\u00b7n\u0304/m is a universal constant: Phase A: SPARC high-quality stabilized inversion (spline-smoothed derivatives) Phase B: Forward-model comparis",
+    "datasets": [
+      "SPARC",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/summary_gpp_universality.json",
+    "map": "fuzzy(2)",
+    "finding": null,
+    "metrics": [
+      [
+        "phase_C_TNG_null.mean_TF_fraction",
+        0.9978
+      ],
+      [
+        "phase_B_forward.cs2_proxy_mean_log10",
+        9.7105
+      ],
+      [
+        "phase_C_TNG_null.cs2_mean_log10",
+        9.6259
+      ],
+      [
+        "phase_B_forward.delta_AIC_U_minus_L",
+        3.43
+      ],
+      [
+        "phase_C_TNG_null.delta_AIC",
+        49113.85
+      ],
+      [
+        "phase_B_forward.n_galaxies",
+        98
+      ]
+    ]
+  },
+  {
+    "idx": 31,
+    "script": "analysis/pipeline/test_healing_length_distance_diag.py",
+    "method": "Healing-Length Distance Diagnostics (Step 28f) =============================================== Tests whether \u03be/R_ext signal in r1 is real or a distance-quality proxy. 1) Clean subset test (Q==1, Q<=2, eD cuts) 2) Distance-residualized rank correlation 3) Stratified permutation null (shuffle \u03be/R within eD bins) 4) Monte",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results_vm/summary_healing_length_distance_diag.json",
+    "map": "exact",
+    "finding": "EDD_ARTIFACT",
+    "metrics": [
+      [
+        "test3_stratified_perm.null_mean_strat",
+        -0.0025
+      ],
+      [
+        "sample.median_eD",
+        2.93
+      ],
+      [
+        "sample.n_galaxies",
+        67
+      ],
+      [
+        "test3_stratified_perm.n_bins",
+        6
+      ],
+      [
+        "test4_mc_distance.n_mc",
+        2000
+      ],
+      [
+        "test4_mc_distance.mc_rho_mean",
+        0.2429
+      ]
+    ]
+  },
+  {
+    "idx": 32,
+    "script": "analysis/pipeline/test_healing_length_kstar.py",
+    "method": "Healing-Length Scaling \u2014 continuous ACF (Step 28e) =================================================== Metrics: r1, AR1, AR1_grid (resampled to 0.5 kpc common grid). Controls: dR/R_ext, N_pts, Inc, eD (distance uncertainty). Detrend sweep. BH-FDR across partials. Verdict keyed on \u03be/R_ext partial. Russell Licht -- Primo",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_healing_length_kstar.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "parameters.min_pts",
+        15
+      ],
+      [
+        "parameters.n_boot",
+        2000
+      ],
+      [
+        "parameters.n_perm",
+        5000
+      ],
+      [
+        "regression_kstar_xi.intercept",
+        0.0582
+      ],
+      [
+        "regression_kstar_xi.p",
+        0.07949179033904334
+      ],
+      [
+        "regression_kstar_xi.r_sq",
+        0.0466
+      ]
+    ]
+  },
+  {
+    "idx": 33,
+    "script": "analysis/pipeline/test_healing_length_scaling.py",
+    "method": "Healing-Length Scaling Test (Step 28) \u2014 \u03be vs Coherence Length ============================================================= Tests whether the short-range coherence scale of detrended RAR residuals scales with the BEC healing length \u03be = sqrt(G*M_b/g\u2020). 1) Per-galaxy ACF coherence length Lc_acf (detrended residuals) 2) P",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results_vm/summary_healing_length_scaling.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "shuffle_null.shuffled_mean_rho",
+        0.4841
+      ],
+      [
+        "parameters.min_points",
+        15
+      ],
+      [
+        "regression_simple.p_value",
+        1.0755255350255957e-06
+      ],
+      [
+        "parameters.n_boot",
+        2000
+      ],
+      [
+        "parameters.n_perm",
+        5000
+      ],
+      [
+        "parameters.n_shuffle",
+        500
+      ]
+    ]
+  },
+  {
+    "idx": 34,
+    "script": "analysis/pipeline/test_hierarchical_healing_length.py",
+    "method": "Hierarchical Healing Length & Cluster g\u2020_eff Mass Scaling Test ============================================================== Tests whether the cluster-scale acceleration parameter g\u2020_eff follows a predictable mass-scaling relation through the BEC healing length \u03be = sqrt(GM/g\u2020). Key questions: 1. Does g\u2020_eff scale with",
+    "datasets": [
+      "SPARC",
+      "Tian/CLASH",
+      "CLASH"
+    ],
+    "summary": "analysis/results/summary_hierarchical_healing_length.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "data.n_clusters",
+        20
+      ],
+      [
+        "data.n_clusters_with_M200",
+        6
+      ],
+      [
+        "data.n_galaxies",
+        67
+      ],
+      [
+        "step4_scatter_profile.xi_200_eff_median_kpc",
+        305.6
+      ],
+      [
+        "step4_scatter_profile.xi_core_median_kpc",
+        88.4
+      ],
+      [
+        "step4_scatter_profile.xi_eff_median_kpc",
+        21.8
+      ]
+    ]
+  },
+  {
+    "idx": 35,
+    "script": "analysis/pipeline/test_injection_recovery.py",
+    "method": "Injection-Recovery Test (C1) \u2014 Can EAGLE's 10 Fixed Radii Detect SPARC Periodicity? ==================================================================================== Context: SPARC shows 37.3% periodicity at ~7 kpc vs EAGLE 2.8%. But EAGLE has only 10 fixed radii at {1, 3, 5, 10, 20, 30, 40, 50, 70, 100} kpc. This t",
+    "datasets": [
+      "SPARC",
+      "EAGLE"
+    ],
+    "summary": "analysis/results/summary_injection_recovery.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "noisy.mean_detection_rate",
+        0.0224
+      ],
+      [
+        "parameters.min_pts_ls",
+        5
+      ],
+      [
+        "noise_free.detection_power",
+        0.0
+      ],
+      [
+        "noise_free.n_detected",
+        0
+      ],
+      [
+        "noise_free.n_total",
+        25
+      ],
+      [
+        "noisy.median_detection_rate",
+        0.0
+      ]
+    ]
+  },
+  {
+    "idx": 36,
+    "script": "analysis/pipeline/test_interface_oscillation.py",
+    "method": "Interface Oscillation Test (Step 25) \u2014 with Demeaning Control ============================================================== For each galaxy with N >= 15 rotation curve points, compute RAR residuals r(R) ordered by galactocentric radius, then measure lag-1 and lag-2 autocorrelation within each galaxy. CRITICAL CONTROL:",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_interface_oscillation.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "sample.n_valid_r2",
+        67
+      ],
+      [
+        "aggregate_lag1.frac_positive",
+        1.0
+      ],
+      [
+        "aggregate_lag2.frac_positive",
+        0.955
+      ],
+      [
+        "parameters.min_points_per_galaxy",
+        15
+      ],
+      [
+        "parameters.n_bootstrap",
+        10000
+      ],
+      [
+        "sample.n_galaxies",
+        67
+      ]
+    ]
+  },
+  {
+    "idx": 37,
+    "script": "analysis/pipeline/test_interface_oscillation_controls.py",
+    "method": "Interface Oscillation Controls (Step 26) \u2014 Detrending + Permutation Nulls ========================================================================= Three controls to determine whether the positive autocorrelation in RAR residuals reflects oscillatory radial structure vs smooth drift: A) First-difference control d = np.",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results_vm/summary_interface_oscillation_controls.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "permutation_null_summary.frac_sig_005_lag1",
+        0.985
+      ],
+      [
+        "permutation_null_summary.frac_sig_005_lag2",
+        0.851
+      ],
+      [
+        "permutation_null_summary.null_mean_r1",
+        -0.0405
+      ],
+      [
+        "permutation_null_summary.observed_mean_r1",
+        0.6997
+      ],
+      [
+        "permutation_null_summary.null_std_r1",
+        0.0219
+      ],
+      [
+        "permutation_null_summary.z_score",
+        33.83
+      ]
+    ]
+  },
+  {
+    "idx": 38,
+    "script": "analysis/pipeline/test_interface_spectral.py",
+    "method": "Interface Spectral Test (Step 27) \u2014 Lomb-Scargle on Detrended RAR Residuals ============================================================================ A) Per-galaxy Lomb-Scargle periodogram on spline-detrended residuals - frequency grid: 1 to N/2 cycles across radial extent - peak power + FAP via radius-order permuta",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results_vm/summary_interface_spectral_test.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "peak_power.mean_null",
+        0.2869
+      ],
+      [
+        "peak_power.mean_observed",
+        0.4008
+      ],
+      [
+        "significance.frac_significant",
+        0.373
+      ],
+      [
+        "parameters.min_points",
+        15
+      ],
+      [
+        "parameters.n_surrogates",
+        200
+      ],
+      [
+        "peak_power.median_observed",
+        0.369
+      ]
+    ]
+  },
+  {
+    "idx": 39,
+    "script": "analysis/pipeline/test_inversion_distance_sensitivity.py",
+    "method": "INVERSION POINT DISTANCE SENSITIVITY \u2014 Phase 5 ================================================= Tests whether the RAR scatter inversion survives SYSTEMATIC distance shifts, filling the gap left by test_mc_distance_and_inversion.py which only tested random Gaussian perturbations. 12 scenarios: 1. Baseline (SPARC distan",
+    "datasets": [
+      "SPARC",
+      "CF4"
+    ],
+    "summary": "analysis/results/summary_inversion_distance_sensitivity.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_scenarios",
+        12
+      ],
+      [
+        "g_dagger_log",
+        -9.920818753952375
+      ],
+      [
+        "key_findings.baseline_inversion",
+        -9.856
+      ],
+      [
+        "key_findings.cf4_full_inversion",
+        -9.834
+      ],
+      [
+        "key_findings.hybrid_inversion",
+        -10.027
+      ],
+      [
+        "key_findings.uma_cf4_shift",
+        0.009000000000000341
+      ]
+    ]
+  },
+  {
+    "idx": 40,
+    "script": "analysis/pipeline/test_jackknife_robustness.py",
+    "method": "Jackknife Robustness Test for Environmental Signal ==================================================== Two questions: 1. Does any single galaxy drive the low-acceleration environmental result (uniform scatter, \u0394\u03c3 \u2248 0 at g < 10^-10.5)? If removing one galaxy flips the Levene p from >0.05 to <0.01, that galaxy dominates",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_jackknife_robustness.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "baseline.inversion_point",
+        -9.8555
+      ],
+      [
+        "n_dense",
+        48
+      ],
+      [
+        "n_field",
+        83
+      ],
+      [
+        "n_galaxies",
+        131
+      ],
+      [
+        "baseline.delta_sigma",
+        -0.0035
+      ],
+      [
+        "baseline.inv_distance_from_gdagger",
+        0.0653
+      ]
+    ]
+  },
+  {
+    "idx": 41,
+    "script": "analysis/pipeline/test_korsaga_ml_sensitivity.py",
+    "method": "test_korsaga_ml_sensitivity.py \u2014 Korsaga M/L sensitivity test for kurtosis spike ================================================================================== The kurtosis spike at g\u2020 (\u03ba\u2084 \u2248 24) is internal to Korsaga (\u00a78.27b). But Korsaga uses B-band M/L from BFM fitting, which is noisier than SPARC's 3.6\u03bcm (\u03c3 \u2248 0",
+    "datasets": [
+      "SPARC",
+      "Korsaga/GHASP"
+    ],
+    "summary": "analysis/results/summary_korsaga_ml_sensitivity.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "log_g_dagger",
+        -9.920818753952375
+      ]
+    ]
+  },
+  {
+    "idx": 42,
+    "script": "analysis/pipeline/test_kurtosis_disambiguation.py",
+    "method": "Kurtosis Disambiguation: Physical vs Geometric vs Cross-Calibration ==================================================================== Three critical tests to determine whether the kurtosis spike at g\u2020 is: (a) Physical: genuine phase transition fluctuations (b) Cross-calibration: SPARC \u00d7 Korsaga M/L offset inflated a",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "Korsaga/GHASP",
+      "PHANGS"
+    ],
+    "summary": "analysis/results/summary_kurtosis_disambiguation.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "max_rar_curvature_location",
+        -9.3809
+      ],
+      [
+        "max_rar_slope_location",
+        -8.5
+      ],
+      [
+        "g_dagger_log",
+        -9.920818753952375
+      ],
+      [
+        "korsaga_only_kurtosis_at_gdagger",
+        23.949
+      ],
+      [
+        "predicted_instrumental_peak",
+        -8.9
+      ],
+      [
+        "rar_slope_at_gdagger",
+        0.709
+      ]
+    ]
+  },
+  {
+    "idx": 43,
+    "script": "analysis/pipeline/test_kurtosis_mhongoose.py",
+    "method": "MHONGOOSE Kurtosis Augmentation Test ===================================== Adds 82 MHONGOOSE RAR points (4 galaxies from Nkomo+2025 & Sorgho+2019) to the existing Tier K extended RAR dataset, recomputes the kurtosis profile \u03ba\u2084(g_bar), and checks whether: 1. The kurtosis spike at g\u2020 persists or strengthens 2. The deriva",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "Korsaga/GHASP",
+      "MHONGOOSE",
+      "PHANGS"
+    ],
+    "summary": "analysis/results/summary_kurtosis_mhongoose.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "baseline.n_galaxies",
+        250
+      ],
+      [
+        "baseline.n_points",
+        9406
+      ],
+      [
+        "bootstrap.n_iterations",
+        10000
+      ],
+      [
+        "combined.n_galaxies",
+        252
+      ],
+      [
+        "combined.n_points",
+        9488
+      ],
+      [
+        "mhongoose.n_galaxies",
+        4
+      ]
+    ]
+  },
+  {
+    "idx": 44,
+    "script": "analysis/pipeline/test_kurtosis_phase_transition.py",
+    "method": "Kurtosis Phase Transition Test (\u00a78.27) ======================================= Tests whether the excess kurtosis of RAR residuals peaks at g\u2020 \u2014 the predicted signature of a continuous phase transition in the BEC framework. At a phase boundary, intermittent switching between condensed and thermal states produces heavy-t",
+    "datasets": [
+      "SPARC",
+      "THINGS",
+      "de Blok 2002",
+      "Korsaga/GHASP",
+      "PHANGS"
+    ],
+    "summary": "analysis/results/summary_kurtosis_phase_transition.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "comparison.lcdm_mean_kurtosis_at_gdagger",
+        0.009
+      ],
+      [
+        "environment_split.n_dense_galaxies",
+        51
+      ],
+      [
+        "environment_split.n_field_galaxies",
+        101
+      ],
+      [
+        "environment_split.n_unclassified_galaxies",
+        98
+      ],
+      [
+        "lcdm_mock.n_galaxies_per",
+        500
+      ],
+      [
+        "lcdm_mock.n_realizations",
+        5
+      ]
+    ]
+  },
+  {
+    "idx": 45,
+    "script": "analysis/pipeline/test_lcdm_hydro_inversion.py",
+    "method": "\u039bCDM Hydrodynamic Simulation Test: Scatter Derivative Inversion ================================================================= Uses ACTUAL galaxy properties from EAGLE (46 galaxies) and IllustrisTNG (130 galaxies) from Marasco+2020 (A&A 640, A70) to test whether \u039bCDM hydrodynamic simulations produce a scatter deriva",
+    "datasets": [
+      "SPARC",
+      "PROBES",
+      "EAGLE",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/summary_lcdm_hydro_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "combined_result.inversion_log_g",
+        -9.697756710059114
+      ],
+      [
+        "eagle_result.inversion_log_g",
+        -9.70667439066504
+      ],
+      [
+        "n_eagle",
+        46
+      ],
+      [
+        "n_rar_points",
+        4400
+      ],
+      [
+        "n_tng",
+        130
+      ],
+      [
+        "n_total",
+        176
+      ]
+    ]
+  },
+  {
+    "idx": 46,
+    "script": "analysis/pipeline/test_lcdm_null_inversion.py",
+    "method": "\u039bCDM Null Test: Does the Inversion Point Exist in Pure \u039bCDM? =============================================================== THE CRITICAL DISCRIMINATION TEST: We generate a synthetic \u039bCDM galaxy population using: - NFW dark matter halos with the c(M) relation from Dutton & Macci\u00f2 2014 - Stellar-mass-halo-mass (SMHM) re",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_lcdm_null_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "monte_carlo.mean_inversion",
+        -10.98775702645384
+      ],
+      [
+        "monte_carlo.near_gdagger_count",
+        5
+      ],
+      [
+        "lcdm_result.inversion_log_g",
+        -11.605255012626639
+      ],
+      [
+        "lcdm_result.n_rar_points",
+        9982
+      ],
+      [
+        "monte_carlo.n_realizations",
+        100
+      ],
+      [
+        "parameters.N_galaxies",
+        500
+      ]
+    ]
+  },
+  {
+    "idx": 47,
+    "script": "analysis/pipeline/test_lcdm_phase_diagram.py",
+    "method": "LCDM Phase Diagram Null Test ============================ Tests whether EAGLE and/or TNG100-1 LCDM simulations reproduce the SPARC phase-transition signature in RAR residual variance. Outputs (saved under analysis/results/lcdm_phase_diagram/): - summary_lcdm_phase_diagram.json - plot_a_variance_vs_gbar.png - plot_b_win",
+    "datasets": [
+      "SPARC",
+      "EAGLE",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/lcdm_phase_diagram_r0p5_5/summary_lcdm_phase_diagram.json",
+    "map": "exact",
+    "finding": "LCDM lacks a strong correctly-located peak in EAGLE, TNG; SPARC phase structure remains discriminating.",
+    "metrics": [
+      [
+        "method.adapted_rmin_factor",
+        0.5
+      ],
+      [
+        "method.min_points_per_bin",
+        10
+      ],
+      [
+        "eagle.n_galaxies",
+        46
+      ],
+      [
+        "eagle.n_points",
+        552
+      ],
+      [
+        "method.bin_width_dex",
+        0.25
+      ],
+      [
+        "method.n_perm",
+        500
+      ]
+    ]
+  },
+  {
+    "idx": 48,
+    "script": "analysis/pipeline/test_lensing_profile_shape.py",
+    "method": "test_lensing_profile_shape.py \u2014 Weak lensing ESD profile shape test ===================================================================== BEC predicts distinct density profiles depending on environment: - Isolated galaxies: solitonic core \u2192 \u03c1(r) \u221d [1 + (r/\u03be)\u00b2]\u207b\u2078 This produces an ESD profile with a characteristic flatte",
+    "datasets": [
+      "PROBES",
+      "Brouwer/KiDS-1000",
+      "KiDS"
+    ],
+    "summary": "analysis/results/summary_lensing_profile_shape.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 49,
+    "script": "analysis/pipeline/test_mass_split_bunching.py",
+    "method": "Mass-Split Bunching Test: X = R/\u03be Prediction The BEC framework predicts that bunching (\u03c3\u00b2 \u221d n\u0304(n\u0304+1)) should be STRONGER for massive galaxies (large \u03be \u2192 small X = R/\u03be \u2192 inside coherence length) and WEAKER for dwarfs (small \u03be \u2192 large X \u2192 outside coherence length). This test splits the SPARC+multi-survey data by stellar ",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_mass_split_bunching.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "mass_trend.spearman_p_X_vs_daic",
+        0.6666666666666666
+      ],
+      [
+        "mass_trend.spearman_p_logMs_vs_daic",
+        0.6666666666666666
+      ],
+      [
+        "mass_trend.spearman_rho_X_vs_daic",
+        0.5
+      ],
+      [
+        "mass_trend.spearman_rho_logMs_vs_daic",
+        -0.5
+      ],
+      [
+        "radial_inner_outer_test.inner_minus_outer_delta_aic",
+        -30.001574524635743
+      ],
+      [
+        "all_sparc.delta_aic",
+        -39.53442451241381
+      ]
+    ]
+  },
+  {
+    "idx": 50,
+    "script": "analysis/pipeline/test_matched_analog_comparison.py",
+    "method": "SPARC-Matched Analog Analysis in EAGLE & TNG ============================================== For each of 131 quality SPARC galaxies, find 5 closest analogs in EAGLE and TNG simulations (matched on stellar mass and size), then run identical RAR analyses on all three samples and compare feature-by-feature. This controls f",
+    "datasets": [
+      "SPARC",
+      "EAGLE",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/summary_matched_analog_comparison.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "resolution_matched.eagle_matched_acf_mean",
+        0.6053088711969687
+      ],
+      [
+        "resolution_matched.sparc_10pt_acf_mean",
+        0.3814185205455873
+      ],
+      [
+        "resolution_matched.sparc_full_acf_mean",
+        0.503598323574132
+      ],
+      [
+        "test5_per_galaxy_scatter.EAGLE_mean_sigma",
+        0.08961762447943482
+      ],
+      [
+        "test5_per_galaxy_scatter.SPARC_mean_sigma",
+        0.09551456025442759
+      ],
+      [
+        "parameters.bin_width_dex",
+        0.3
+      ]
+    ]
+  },
+  {
+    "idx": 51,
+    "script": "analysis/pipeline/test_mc_distance_and_inversion.py",
+    "method": "Monte Carlo Distance Error Injection & Empirical Inversion Point Analysis ========================================================================== Two analyses critical for the Letter: PART 1 \u2014 Monte Carlo Distance Error Injection: Inject known Gaussian distance errors (5%, 10%, 15%, 20%) into ALL galaxies, recompute",
+    "datasets": [
+      "SPARC",
+      "CF4"
+    ],
+    "summary": "analysis/results/summary_mc_distance_and_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "part1_mc_injection.n_dense",
+        48
+      ],
+      [
+        "part1_mc_injection.n_field",
+        83
+      ],
+      [
+        "part1_mc_injection.n_galaxies",
+        131
+      ],
+      [
+        "part1_mc_injection.n_mc_iterations",
+        1000
+      ],
+      [
+        "part2_inversion_points.g_dagger_log",
+        -9.920818753952375
+      ]
+    ]
+  },
+  {
+    "idx": 52,
+    "script": "analysis/pipeline/test_ngc3621_single_galaxy.py",
+    "method": "test_ngc3621_single_galaxy.py \u2014 Can a SINGLE galaxy localize g\u2020? NGC3621 from MHONGOOSE/Sorgho+2019: 35 radial points, independent telescope (MeerKAT), log_gbar from -12.2 to -10.3. This test checks whether one galaxy's RAR residual profile carries a detectable signature of g\u2020. Tests: 1. Load NGC3621 RAR points from mh",
+    "datasets": [
+      "SPARC",
+      "MHONGOOSE"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 53,
+    "script": "analysis/pipeline/test_nonparametric_inversion.py",
+    "method": "Non-Parametric Mean Relation Inversion Robustness Test ======================================================== CRITICAL ROBUSTNESS CHECK: Is the scatter derivative inversion point at g\u2020 an artifact of assuming the RAR interpolating function? A skeptic could argue: \"You computed residuals from g_obs = g_bar/(1-exp(-\u221a(g",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_nonparametric_inversion.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_dense_gals",
+        48
+      ],
+      [
+        "n_field_gals",
+        83
+      ],
+      [
+        "n_galaxies",
+        131
+      ],
+      [
+        "n_points",
+        2777
+      ]
+    ]
+  },
+  {
+    "idx": 54,
+    "script": "analysis/pipeline/test_periodic_properties_and_scaling.py",
+    "method": "TESTS B.1\u2013B.3: Periodic Galaxy Properties, \u03bb-\u03be Scaling, and Bump Sharpening ============================================================================= Three discriminating tests following TEST B (residual power spectrum): PART 1: Periodic vs Non-Periodic Property Comparison (with controls) - Raw MW/KS tests for ~12 ",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_periodic_properties_and_scaling.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "part1_property_comparison.n_significant_matched",
+        0
+      ],
+      [
+        "part1_property_comparison.n_significant_physical",
+        5
+      ],
+      [
+        "part1_property_comparison.n_significant_quality",
+        1
+      ],
+      [
+        "part1_property_comparison.n_significant_raw_FDR",
+        6
+      ],
+      [
+        "part2_lambda_xi_scaling.spearman_p",
+        0.001
+      ],
+      [
+        "part2_lambda_xi_scaling.spearman_rho",
+        0.6192
+      ]
+    ]
+  },
+  {
+    "idx": 55,
+    "script": "analysis/pipeline/test_phangs_inner_quantum.py",
+    "method": "PHANGS Inner Quantum Regime Test (X < 1) ========================================== Uses PHANGS-ALMA CO rotation curves (Lang+2020) to probe the deep quantum regime X = R/\u03be < 1, where \u03be = sqrt(GM*/g\u2020) is the BEC healing length. For massive spirals (M* > 10^10), \u03be ~ 3-10 kpc. PHANGS data starts at R = 0.125 kpc, giving ",
+    "datasets": [
+      "PHANGS"
+    ],
+    "summary": "analysis/results/summary_phangs_inner_quantum.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "inner_mean_res",
+        -0.1811
+      ],
+      [
+        "outer_mean_res",
+        -0.0027
+      ],
+      [
+        "mann_whitney_p",
+        0.0
+      ],
+      [
+        "n_galaxies",
+        56
+      ],
+      [
+        "n_inner_pts",
+        1547
+      ],
+      [
+        "n_outer_pts",
+        551
+      ]
+    ]
+  },
+  {
+    "idx": 56,
+    "script": "analysis/pipeline/test_phase_diagram_model.py",
+    "method": "Phase Diagram Model: Two-Feature (Peak+Dip) Variance Structure in RAR Residuals ================================================================================= Tests whether the RAR residual scatter has BOTH a localized PEAK and a DIP near g\u2020, and whether these features are absent in \u039bCDM mocks. Model hierarchy (all ",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_phase_diagram_model.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "coherence_score.null_exceedance_fraction",
+        0.0
+      ],
+      [
+        "mechanism_score.mean_excess",
+        1.6605683965016298
+      ],
+      [
+        "changepoint_test.bootstrap_mean_sup_lr",
+        6.009254381652145
+      ],
+      [
+        "changepoint_test.perm_mean_sup_lr",
+        49.09974269233889
+      ],
+      [
+        "bayesian_changepoint.tau_mean",
+        -9.414367854965235
+      ],
+      [
+        "permutation_test.null_mean",
+        0.21768608548090396
+      ]
+    ]
+  },
+  {
+    "idx": 57,
+    "script": "analysis/pipeline/test_probes_gas_corrected.py",
+    "method": "PROBES \u00d7 ALFALFA Gas-Corrected RAR Tightness Test =================================================== Cross-matches PROBES rotation curves with ALFALFA alpha.100 (Haynes+2018) HI masses to correct for missing gas in the RAR, then re-tests property dependence and scatter uniformity. The PROBES-only test (test_rar_tightn",
+    "datasets": [
+      "SPARC",
+      "PROBES",
+      "ALFALFA\u00d7Yang"
+    ],
+    "summary": "analysis/results/summary_probes_gas_corrected.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_gas_corrected",
+        37
+      ],
+      [
+        "n_stars_only",
+        131
+      ],
+      [
+        "n_total",
+        168
+      ],
+      [
+        "alfalfa_matched",
+        454
+      ],
+      [
+        "alfalfa_out_of_footprint",
+        2299
+      ],
+      [
+        "alfalfa_unmatched",
+        296
+      ]
+    ]
+  },
+  {
+    "idx": 58,
+    "script": "analysis/pipeline/test_probes_inversion_replication.py",
+    "method": "PROBES Inversion Point Replication Test ========================================= THE DECISIVE TEST: Does the scatter derivative inversion point appear at g\u2020 in an independent dataset of ~3,000 galaxies with resolved rotation curves? SPARC result: d\u03c3/d(log g_bar) = 0 at log g_bar = -9.86 (0.07 dex from g\u2020) SPARC: N = 1",
+    "datasets": [
+      "SPARC",
+      "PROBES",
+      "ALFALFA\u00d7Yang",
+      "Yang catalog"
+    ],
+    "summary": "analysis/results/summary_probes_inversion_replication.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "binning_robustness.mean_crossing",
+        -11.2074
+      ],
+      [
+        "mean_offset",
+        0.4369
+      ],
+      [
+        "binning_robustness.n_configs",
+        8
+      ],
+      [
+        "binning_robustness.n_within_020",
+        0
+      ],
+      [
+        "corrected_analysis.inversion_point",
+        -11.0864
+      ],
+      [
+        "environment.n_dense",
+        188
+      ]
+    ]
+  },
+  {
+    "idx": 59,
+    "script": "analysis/pipeline/test_propensity_matched_env.py",
+    "method": "Propensity-Score Matched Environment Test ========================================== The UMa cancellation problem: low-accel scatter uniformity between field and dense is partly a cancellation (UMa suppresses scatter, groups enhance). This test addresses this by propensity-score matching. Method: 1. Compute propensity ",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_propensity_matched_env.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "mahalanobis_matched.n_pairs",
+        48
+      ],
+      [
+        "n_dense",
+        48
+      ],
+      [
+        "n_field",
+        83
+      ],
+      [
+        "n_galaxies",
+        131
+      ],
+      [
+        "n_group",
+        22
+      ],
+      [
+        "n_uma",
+        26
+      ]
+    ]
+  },
+  {
+    "idx": 60,
+    "script": "analysis/pipeline/test_radial_variance_profile.py",
+    "method": "Radial Variance Profile Test: \u03c3\u00b2(n\u0304) Continuous Shape The unified BEC/shadow framework predicts that the variance of RAR residuals as a function of occupation number n\u0304 should follow an INVERTED-U shape: - At n\u0304 >> 1 (deep inner, saturated projection): \u03c3\u00b2 ~ constant (the condensate is fully formed, stable) Looks CLASSI",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_radial_variance_profile.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "test_c.pearson_p_nbar_plus1",
+        0.4394894789190377
+      ],
+      [
+        "bootstrap.n_iterations",
+        1000
+      ],
+      [
+        "test_a.n_bins",
+        9
+      ],
+      [
+        "test_a.n_points",
+        2707
+      ],
+      [
+        "test_b.n_bins",
+        9
+      ],
+      [
+        "test_c.pearson_r_nbar_plus1",
+        -0.29588527875140913
+      ]
+    ]
+  },
+  {
+    "idx": 61,
+    "script": "analysis/pipeline/test_rar_tightness.py",
+    "method": "RAR Tightness as a Discriminant: The Dog That Didn't Bark The central argument: - CDM particles collapse into halos with DIVERSE concentration-mass relations, merger histories, spin parameters. Each halo is different. RAR residuals should correlate with galaxy properties that trace formation history: morphology, gas fr",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 62,
+    "script": "analysis/pipeline/test_rar_tightness_probes.py",
+    "method": "RAR Tightness Test \u2014 Expanded with PROBES (Stone & Courteau 2022) Extends the SPARC-only RAR tightness test from 175 \u2192 ~1,600+ galaxies using the PROBES compendium of 3,163 rotation curves with matched multiband photometry. PROBES doesn't have mass decomposition (Vgas, Vdisk, Vbul), so we compute gbar from the total st",
+    "datasets": [
+      "SPARC",
+      "PROBES"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 63,
+    "script": "analysis/pipeline/test_residual_power_spectrum.py",
+    "method": "TEST B: Power Spectrum Shape of RAR Residuals \u2014 Turbulence vs Oscillation ========================================================================= Extends D3 (test_interface_spectral.py) by analyzing the FULL spectral shape of RAR residuals, not just peak significance. Diagnostic: - Power-law decay P(k) ~ k^(-beta) =>",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_residual_power_spectrum.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "parameters.min_points",
+        15
+      ],
+      [
+        "parameters.n_freq_common",
+        200
+      ],
+      [
+        "parameters.n_surrogates",
+        200
+      ],
+      [
+        "sample.healing_length_median_kpc",
+        11.94
+      ],
+      [
+        "sample.n_galaxies",
+        67
+      ],
+      [
+        "sample.n_nonperiodic",
+        42
+      ]
+    ]
+  },
+  {
+    "idx": 64,
+    "script": "analysis/pipeline/test_residualized_bec_signal_analysis.py",
+    "method": "Residualized BEC Signal Analysis ================================ Tests whether BEC/RAR-related signals strengthen after removing confounds. Outputs: - summary_residualization.json - galaxy_residuals.csv - Plot A/B/C/D in output directory",
+    "datasets": [
+      "SPARC",
+      "WALLABY"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 65,
+    "script": "analysis/pipeline/test_scale_hierarchy_map.py",
+    "method": "Scale Hierarchy Map for RAR Residual Structure ============================================== Builds a canonical galaxy-scale table from existing summary JSONs and pipeline tables, then evaluates: 1) Within-galaxy coherence peak in R/xi space + xi-permutation null 2) Between-galaxy matched high-xi vs low-xi effect on L",
+    "datasets": [
+      "SPARC",
+      "IllustrisTNG"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 66,
+    "script": "analysis/pipeline/test_scale_hierarchy_rs_discriminator.py",
+    "method": "r_s vs xi discriminating test for scale-hierarchy outputs. Runs two analyses on the SPARC structured subset: 1) Matched split test (high vs low) using r_s as splitter and Lc_over_xi as outcome. Also reruns xi split for a direct head-to-head comparison. 2) Horse-race OLS model for per-galaxy scatter: log_sigma_dm_robust",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 67,
+    "script": "analysis/pipeline/test_scale_parameter_analysis.py",
+    "method": "Scale Parameter Meta-Analysis: X = R/\u03be Framework Maps all 13 BEC tests onto a unified dimensionless scale X = R/\u03be, where R is the characteristic radius probed by each test and \u03be = \u221a(GM*/g\u2020) is the BEC healing length. The BEC prediction: X \u226a 1: Deep in the coherent core \u2192 maximum quantum signatures X ~ 1: Transition zon",
+    "datasets": [
+      "SPARC",
+      "PROBES",
+      "ALFALFA\u00d7Yang",
+      "Brouwer/KiDS-1000",
+      "KROSS",
+      "Yang catalog"
+    ],
+    "summary": "analysis/results/summary_alpha_mdyn.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "median_Mdyn_over_Ms",
+        10.084940980809465
+      ],
+      [
+        "n_galaxies",
+        135
+      ],
+      [
+        "n_points",
+        2739
+      ],
+      [
+        "alpha_cross_mdyn",
+        0.2799492142256078
+      ],
+      [
+        "alpha_cross_mstar",
+        0.28321097906190573
+      ]
+    ]
+  },
+  {
+    "idx": 68,
+    "script": "analysis/pipeline/test_simulation_coherence.py",
+    "method": "Simulation Coherence Test \u2014 EAGLE vs SPARC Radial Autocorrelation & Periodicity ================================================================================ Critical discriminator: do \u039bCDM simulations produce the same radial coherence in RAR residuals as observed in SPARC? SPARC reference (67 galaxies, \u226515 points e",
+    "datasets": [
+      "SPARC",
+      "EAGLE",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/summary_simulation_coherence.json",
+    "map": "exact",
+    "finding": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_summary.png",
+    "metrics": [
+      [
+        "eagle_permutation_null.frac_sig",
+        0.9122
+      ],
+      [
+        "comparison_eagle_vs_sparc_10pt.EAGLE_mean",
+        0.5998
+      ],
+      [
+        "comparison_eagle_vs_sparc_10pt.SPARC_10pt_mean",
+        0.3297
+      ],
+      [
+        "comparison_eagle_vs_sparc_full.EAGLE_mean",
+        0.5998
+      ],
+      [
+        "comparison_eagle_vs_sparc_full.SPARC_full_mean",
+        0.6997
+      ],
+      [
+        "eagle_acf.frac_positive",
+        0.999
+      ]
+    ]
+  },
+  {
+    "idx": 69,
+    "script": "analysis/pipeline/test_soliton_nfw_composite.py",
+    "method": "SOLITON + NFW COMPOSITE DARK MATTER PROFILE TEST ================================================== Extends test C1 (forward_model_bunching) by fitting the physically correct BEC dark matter model: a soliton core + NFW-like envelope. In lab BECs (Cornell & Wieman 1995), the condensate density peak (ground state) is sur",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_soliton_nfw_composite.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "c2_rehabilitation.inner_mean_res_burkert",
+        -0.0032
+      ],
+      [
+        "c2_rehabilitation.inner_mean_res_composite",
+        -0.0125
+      ],
+      [
+        "c2_rehabilitation.inner_mean_res_nfw",
+        -0.0194
+      ],
+      [
+        "c2_rehabilitation.inner_mean_res_soliton",
+        0.0106
+      ],
+      [
+        "mean_rchi2.burkert",
+        0.865
+      ],
+      [
+        "mean_rchi2.composite",
+        0.656
+      ]
+    ]
+  },
+  {
+    "idx": 70,
+    "script": "analysis/pipeline/test_spectral_slope_alpha.py",
+    "method": "Spectral Slope \u03b1 Test (Step 30) ================================ Estimate per-galaxy power-spectrum slope \u03b1 from Lomb\u2013Scargle periodogram of detrended RAR residuals vs radius. For each galaxy (N>=20): 1) LS power P(k) on log-spaced frequency grid 2) Fit log P = -\u03b1 log k + C via Theil\u2013Sen robust regression 3) Per-galaxy",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 71,
+    "script": "analysis/pipeline/test_split_half_replication.py",
+    "method": "Split-Half Internal Replication of Inversion Point ==================================================== THE STRONGEST INTERNAL REPLICATION TEST: If the scatter derivative zero-crossing at g\u2020 is a population-level property, it should appear independently in random halves of the SPARC sample. Method: 1. Randomly split 13",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_split_half_replication.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "random_halves_loess.mean_crossing",
+        -9.884240964245494
+      ],
+      [
+        "random_halves_loess.mean_halfA_halfB_diff",
+        0.12764185907099518
+      ],
+      [
+        "random_halves_rar.mean_crossing",
+        -9.887932636290499
+      ],
+      [
+        "random_halves_rar.mean_halfA_halfB_diff",
+        0.1277331639454248
+      ],
+      [
+        "random_thirds.mean_crossing",
+        -9.896961279729359
+      ],
+      [
+        "size_balanced_halves.mean_crossing",
+        -9.88437531676572
+      ]
+    ]
+  },
+  {
+    "idx": 72,
+    "script": "analysis/pipeline/test_tf_scatter_redshift.py",
+    "method": "test_tf_scatter_redshift.py \u2014 Tully-Fisher scatter across redshift ==================================================================== BEC prediction: if g\u2020 = constant (set by \u039b, not cH(z)), then: 1. The TF relation slope and zero-point evolve with redshift (because baryon content evolves), BUT 2. The TF SCATTER shoul",
+    "datasets": [
+      "SPARC",
+      "KROSS"
+    ],
+    "summary": "analysis/results/summary_tf_scatter_redshift.json",
+    "map": "exact",
+    "finding": "g_dagger = constant, not proportional to cH(z)",
+    "metrics": [
+      [
+        "sparc_btfr.n_galaxies",
+        124
+      ],
+      [
+        "sparc_btfr.intercept",
+        0.701
+      ],
+      [
+        "sparc_btfr.scatter_dex",
+        0.0911
+      ],
+      [
+        "sparc_btfr.slope",
+        0.737
+      ]
+    ]
+  },
+  {
+    "idx": 73,
+    "script": "analysis/pipeline/test_tng_coherence.py",
+    "method": "TNG Coherence Analysis \u2014 Run LOCALLY on Extracted Profiles =========================================================== Companion to tng_extract_profiles.py. After downloading tng_mass_profiles.npz from the TNG JupyterLab, this script computes: - Per-galaxy RAR residuals at 15 radial points - Lag-1 ACF (demeaned) - Lomb",
+    "datasets": [
+      "SPARC",
+      "EAGLE",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/summary_simulation_coherence.json",
+    "map": "exact",
+    "finding": "/Users/russelllicht/bec-dark-matter/analysis/results/simulation_coherence_summary.png",
+    "metrics": [
+      [
+        "eagle_permutation_null.frac_sig",
+        0.9122
+      ],
+      [
+        "comparison_eagle_vs_sparc_10pt.EAGLE_mean",
+        0.5998
+      ],
+      [
+        "comparison_eagle_vs_sparc_10pt.SPARC_10pt_mean",
+        0.3297
+      ],
+      [
+        "comparison_eagle_vs_sparc_full.EAGLE_mean",
+        0.5998
+      ],
+      [
+        "comparison_eagle_vs_sparc_full.SPARC_full_mean",
+        0.6997
+      ],
+      [
+        "eagle_acf.frac_positive",
+        0.999
+      ]
+    ]
+  },
+  {
+    "idx": 74,
+    "script": "analysis/pipeline/test_tng_sparc_composition_sweep.py",
+    "method": "TNG vs SPARC Composition Sweep (Discrimination Search) ====================================================== Systematically searches over composition choices (cuts + aggregation style) to find which setups best discriminate TNG from SPARC. Outputs: - analysis/results/tng_sparc_composition_sweep/composition_ranking.csv",
+    "datasets": [
+      "SPARC",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/tng_sparc_composition_sweep/summary_tng_sparc_composition_sweep.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_compositions_evaluated",
+        672
+      ],
+      [
+        "n_valid",
+        504
+      ],
+      [
+        "inputs.bootstrap",
+        400
+      ],
+      [
+        "inputs.sparc_base_galaxies",
+        135
+      ],
+      [
+        "inputs.sparc_base_points",
+        2797
+      ],
+      [
+        "inputs.tng_base_galaxies",
+        20899
+      ]
+    ]
+  },
+  {
+    "idx": 75,
+    "script": "analysis/pipeline/test_tng_sparc_fairness_gap.py",
+    "method": "Mass-Matched Fairness Sweep: TNG vs SPARC ========================================= Re-runs the \"fairness gap vs threshold\" analysis using per-galaxy DM-dominated robust residual scatter, then compares: 1) unmatched distributions 2) 1:1 stellar-mass-matched distributions Outputs: - analysis/results/tng_sparc_compositio",
+    "datasets": [
+      "SPARC",
+      "IllustrisTNG"
+    ],
+    "summary": "analysis/results/tng_sparc_composition_sweep/summary_tng_sparc_composition_sweep.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "n_compositions_evaluated",
+        672
+      ],
+      [
+        "n_valid",
+        504
+      ],
+      [
+        "inputs.bootstrap",
+        400
+      ],
+      [
+        "inputs.sparc_base_galaxies",
+        135
+      ],
+      [
+        "inputs.sparc_base_points",
+        2797
+      ],
+      [
+        "inputs.tng_base_galaxies",
+        20899
+      ]
+    ]
+  },
+  {
+    "idx": 76,
+    "script": "analysis/pipeline/test_unified_model_adjudication.py",
+    "method": "Phase 4: Unified Model Adjudication =================================== Builds a single decision report across key diagnostics: 1) Mass-split bunching trend (X = R/xi prediction) 2) Forward-model per-galaxy fits (BEC vs NFW) 3) Healing-length scaling (raw vs controlled) 4) Phase-diagram discrimination around g_dagger 5",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_phase4_unified_adjudication.json",
+    "map": "fuzzy(2)",
+    "finding": null,
+    "metrics": [
+      [
+        "status_counts.missing",
+        0
+      ],
+      [
+        "status_counts.rejected",
+        2
+      ],
+      [
+        "status_counts.supported",
+        1
+      ],
+      [
+        "status_counts.weak",
+        2
+      ]
+    ]
+  },
+  {
+    "idx": 77,
+    "script": "analysis/pipeline/test_void_gradient.py",
+    "method": "Void-Field-Dense RAR Scatter Gradient Test =========================================== Three-tier environmental test: does RAR scatter differ across void \u2192 field \u2192 dense environments? BEC prediction: - Void galaxies: maximal isolation, pristine condensate \u2192 LOWEST scatter - Field galaxies: moderate environment \u2192 interm",
+    "datasets": [
+      "SPARC"
+    ],
+    "summary": "analysis/results/summary_void_gradient.json",
+    "map": "exact",
+    "finding": "Scatter does not follow void \u2192 field \u2192 dense gradient, environment may not correlate simply with BEC coherence",
+    "metrics": [
+      [
+        "kourkchi_isolation_test.n_group",
+        44
+      ],
+      [
+        "kourkchi_isolation_test.n_isolated",
+        83
+      ],
+      [
+        "n_dense",
+        48
+      ],
+      [
+        "n_field",
+        73
+      ],
+      [
+        "n_galaxies_total",
+        131
+      ],
+      [
+        "n_void",
+        10
+      ]
+    ]
+  },
+  {
+    "idx": 78,
+    "script": "analysis/pipeline/test_window_matching.py",
+    "method": "TASK 2: Window Matching (C2) \u2014 Galaxy-Adapted 10-Point Sampling ================================================================ For each of the 67 SPARC galaxies (\u226515 points, Q\u22642, Inc 30\u00b0\u201385\u00b0): 1. Compute RAR residuals at full resolution (same as D3 baseline) 2. Determine R_half from SPARC catalog 3. Create 10 log-spa",
+    "datasets": [
+      "SPARC",
+      "EAGLE"
+    ],
+    "summary": "analysis/results/summary_window_matching.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "parameters.min_resamp_pts",
+        5
+      ],
+      [
+        "parameters.min_sparc_pts",
+        15
+      ],
+      [
+        "parameters.n_surrogates",
+        200
+      ],
+      [
+        "parameters.n_window_pts",
+        10
+      ],
+      [
+        "recovery_analysis.n_false_positives",
+        5
+      ],
+      [
+        "recovery_analysis.n_orig_nonperiodic_in_valid",
+        42
+      ]
+    ]
+  },
+  {
+    "idx": 79,
+    "script": "analysis/pipeline/validate_mhongoose_sparc.py",
+    "method": "validate_mhongoose_sparc.py \u2014 SPARC vs MHONGOOSE direct comparison ==================================================================== ESO444-G084 exists in both SPARC (Lelli+2016) and MHONGOOSE (Nkomo+2025). This is our built-in calibration: compare the rotation curves and RAR points from both surveys to assess MHONG",
+    "datasets": [
+      "SPARC",
+      "PROBES",
+      "MHONGOOSE"
+    ],
+    "summary": "analysis/results/summary_validate_mhongoose_sparc.json",
+    "map": "exact",
+    "finding": null,
+    "metrics": [
+      [
+        "mhongoose.mean_residual",
+        -0.042
+      ],
+      [
+        "sparc.mean_residual",
+        0.1741
+      ],
+      [
+        "mhongoose.inclination_deg",
+        49.0
+      ],
+      [
+        "mhongoose.n_points",
+        17
+      ],
+      [
+        "sparc.inclination_deg",
+        32.0
+      ],
+      [
+        "sparc.n_points",
+        7
+      ]
+    ]
+  },
+  {
+    "idx": 80,
+    "script": "analysis/tests/test_gdagger_hunt_pilot.py",
+    "method": "test_gdagger_hunt_pilot.py \u2014 Pilot end-to-end test for the g\u2020 Hunt module. Runs three experiments: 1. SYNTHETIC SANITY: Generate data from known BE kernel + known g\u2020, verify recovery of kernel identity and scale within \u00b10.05 dex, verify shuffles destroy the signal. 2. RAR CONTROL: Use SPARC rotation curve data to confi",
+    "datasets": [
+      "SPARC",
+      "Tian/CLASH",
+      "CLASH"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  },
+  {
+    "idx": 81,
+    "script": "analysis/tests/test_gdagger_hunt_refereeproof.py",
+    "method": "test_gdagger_hunt_refereeproof.py \u2014 Adversarial validation suite for g\u2020 Hunt. Runs a comprehensive battery of tests designed to withstand hostile referee scrutiny. All results written to a single timestamped \"refereeproof\" folder. Validation Suites: A) Shuffle nulls (global + within-bin + within-galaxy circular shift) ",
+    "datasets": [
+      "SPARC",
+      "Tian/CLASH",
+      "CLASH"
+    ],
+    "summary": null,
+    "map": "none",
+    "finding": null,
+    "metrics": []
+  }
+]

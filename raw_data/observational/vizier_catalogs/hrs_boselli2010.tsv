@@ -1,0 +1,363 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-21T04:14:57 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-21T04:14:57	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/PASP/122/261/table1&-out=HRS,NGC,m_NGC,UGC,IC,SimbadName&-out.max=500	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_61220261
+#Name: J/PASP/122/261
+#Title: Herschel Reference Survey Sample (Boselli+, 2010)
+#INFO	ivoid=ivo://cds.vizier/j/pasp/122/261	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/pasp/122/261	    IVOID of underlying data collection
+#INFO	creator=Boselli A.	    First author or institution
+#INFO	cites=bibcode:2010PASP..122..261B	    Article or Data origin sources
+#INFO	journal=PASP	    Journal name
+#INFO	original_date=2010	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/PASP/122/261	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.61220261	    Dataset identifier that can be used for citation
+#INFO	publication_date=2025-09-09	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_PASP_122_261_table1:
+#Name: J/PASP/122/261/table1
+#Title: The Herschel Reference Sample
+#Column	HRS	(I3)	[1/323] Herschel Reference Sample number	[ucd=meta.id;meta.main]
+#Column	NGC	(I4)	? NGC (Cat. VII/118) number	[ucd=meta.id]
+#Column	m_NGC	(A1)	[A] Multiplicity index on NGC	[ucd=meta.code.multip]
+#Column	UGC	(I4)	? UGC (Cat. VII/26) number	[ucd=meta.id]
+#Column	IC	(I4)	? IC (Cat. VII/118) number	[ucd=meta.id]
+#Column	SimbadName	(a20)	Simbad column added by the CDS	[ucd=meta.id]
+HRS	NGC	m_NGC	UGC	IC	SimbadName
+ 	 	 	 	 	
+---	----	-	----	----	--------------------
+  1	    	 	    	    	Z 123-35
+  2	    	 	5588	    	UGC 5588
+  3	3226	 	5617	    	UGC 5617
+  4	3227	 	5620	    	UGC 5620
+  5	    	 	    	 610	IC   610
+  6	3245	A	5662	    	UGC 5662
+  7	3245	 	5663	    	UGC 5663
+  8	3254	 	5685	    	UGC 5685
+  9	3277	 	5731	    	UGC 5731
+ 10	    	 	5738	    	UGC 5738
+ 11	3287	 	5742	    	UGC 5742
+ 12	    	 	    	    	Z 124-41
+ 13	3294	 	5753	    	UGC 5753
+ 14	3301	 	5767	    	UGC 5767
+ 15	3338	 	5826	    	UGC 5826
+ 16	3346	 	5842	    	UGC 5842
+ 17	3370	 	5887	    	UGC 5887
+ 18	3380	 	5906	    	UGC 5906
+ 19	3381	 	5909	    	UGC 5909
+ 20	3395	 	5931	2613	UGC 5931
+ 21	    	 	5958	    	UGC 5958
+ 22	3414	 	5959	    	UGC 5959
+ 23	3424	 	5972	    	UGC 5972
+ 24	3430	 	5982	    	UGC 5982
+ 25	3437	 	5995	    	UGC 5995
+ 26	    	 	5990	    	UGC 5990
+ 27	3442	 	6001	    	UGC 6001
+ 28	3451	 	6023	    	UGC 6023
+ 29	3454	 	6026	    	UGC 6026
+ 30	3455	 	6028	    	UGC 6028
+ 31	3448	 	6024	    	UGC 6024
+ 32	3457	 	6030	    	UGC 6030
+ 33	3485	 	6077	    	UGC 6077
+ 34	3501	 	6116	    	UGC 6116
+ 35	3499	 	6115	    	UGC 6115
+ 36	3504	 	6118	    	UGC 6118
+ 37	3512	 	6128	    	UGC 6128
+ 38	3526	 	6167	    	UGC 6167
+ 39	    	 	6169	    	UGC 6169
+ 40	3547	 	6209	    	UGC 6209
+ 41	3592	 	6267	    	UGC 6267
+ 42	3596	 	6277	    	UGC 6277
+ 43	3608	 	6299	    	UGC 6299
+ 44	    	 	6320	    	UGC 6320
+ 45	3619	 	6330	    	UGC 6330
+ 46	3626	 	6343	    	UGC 6343
+ 47	3629	 	6352	    	UGC 6352
+ 48	3631	 	6360	    	UGC 6360
+ 49	3640	 	6368	    	UGC 6368
+ 50	3655	 	6396	    	UGC 6396
+ 51	3659	 	6405	    	UGC 6405
+ 52	3657	 	6406	    	UGC 6406
+ 53	3666	 	6420	    	UGC 6420
+ 54	3681	 	6445	    	UGC 6445
+ 55	3684	 	6453	    	UGC 6453
+ 56	3683	 	6458	    	UGC 6458
+ 57	3686	 	6460	    	UGC 6460
+ 58	3691	 	6464	    	UGC 6464
+ 59	3692	 	6474	    	UGC 6474
+ 60	3729	 	6547	    	UGC 6547
+ 61	    	 	6575	    	UGC 6575
+ 62	3755	 	6577	    	UGC 6577
+ 63	3756	 	6579	    	UGC 6579
+ 64	3795	 	6629	    	UGC 6629
+ 65	3794	 	6640	    	UGC 6640
+ 66	3813	 	6651	    	UGC 6651
+ 67	    	 	6706	    	UGC 6706
+ 68	    	 	    	    	Z 186-45
+ 69	3898	 	6787	    	UGC 6787
+ 70	    	 	    	2969	IC  2969
+ 71	3945	 	6860	    	UGC 6860
+ 72	3952	 	    	2972	NGC 3952
+ 73	3953	 	6870	    	UGC 6870
+ 74	3982	 	6918	    	UGC 6918
+ 75	    	 	6919	    	UGC 6919
+ 76	    	 	6923	    	UGC 6923
+ 77	4030	 	6993	    	UGC 6993
+ 78	4032	 	6995	    	UGC 6995
+ 79	4019	 	7001	 755	UGC 7001
+ 80	4037	 	7002	    	UGC 7002
+ 81	4045	 	7021	    	UGC 7021
+ 82	    	 	    	    	Z 98-37
+ 83	    	 	7035	    	UGC 7035
+ 84	4067	 	7048	    	UGC 7048
+ 85	4100	 	7095	    	UGC 7095
+ 86	4116	 	7111	    	UGC 7111
+ 87	4124	 	7117	    	UGC 7117
+ 88	4123	 	7116	    	UGC 7116
+ 89	4178	 	7215	    	UGC 7215
+ 90	4179	 	7214	    	UGC 7214
+ 91	4192	 	7231	    	UGC 7231
+ 92	    	 	7255	3061	UGC 7255
+ 93	4203	 	7256	    	UGC 7256
+ 94	4206	 	7260	    	UGC 7260
+ 95	4207	 	7268	    	UGC 7268
+ 96	4212	 	7275	    	UGC 7275
+ 97	4216	 	7284	    	UGC 7284
+ 98	4222	 	7291	    	UGC 7291
+ 99	    	 	7305	3094	UGC 7305
+100	4237	 	7315	    	UGC 7315
+101	4251	 	7338	    	UGC 7338
+102	4254	 	7345	    	UGC 7345
+103	4260	 	7361	    	UGC 7361
+104	    	 	7366	    	UGC 7366
+105	4262	 	7365	    	UGC 7365
+106	4276	 	7385	    	UGC 7385
+107	    	 	7387	    	UGC 7387
+108	4287	 	    	    	NGC 4287
+109	4289	 	7403	    	UGC 7403
+110	4294	 	7407	    	UGC 7407
+111	4298	 	7412	    	UGC 7412
+112	4300	 	7413	    	UGC 7413
+113	4302	 	7418	    	UGC 7418
+114	4303	 	7420	    	UGC 7420
+115	    	 	7422	    	UGC 7422
+116	4305	 	7432	    	UGC 7432
+117	4307	 	7431	    	UGC 7431
+118	    	 	7439	    	UGC 7439
+119	4312	 	7442	    	UGC 7442
+120	4313	 	7445	    	UGC 7445
+121	4316	 	7447	    	UGC 7447
+122	4321	 	7450	    	UGC 7450
+123	4324	 	7451	    	UGC 7451
+124	4330	 	7456	    	UGC 7456
+125	4339	 	7461	    	UGC 7461
+126	4340	 	7467	    	UGC 7467
+127	4343	 	7465	    	UGC 7465
+128	    	 	7469	3259	UGC 7469
+129	4350	 	7473	    	UGC 7473
+130	4351	 	7476	    	UGC 7476
+131	    	 	7474	3267	UGC 7474
+132	    	 	7477	3268	UGC 7477
+133	4359	 	7483	    	UGC 7483
+134	4356	 	7482	    	UGC 7482
+135	4365	 	7488	    	UGC 7488
+136	4370	 	7492	    	UGC 7492
+137	4371	 	7493	    	UGC 7493
+138	4374	 	7494	    	UGC 7494
+139	4376	 	7498	    	UGC 7498
+140	4378	 	7497	    	UGC 7497
+141	4380	 	7503	    	UGC 7503
+142	4383	 	7507	    	UGC 7507
+143	    	 	7513	    	UGC 7513
+144	4388	 	7520	    	UGC 7520
+145	4390	 	7519	    	UGC 7519
+146	    	 	7518	3322	UGC 7518
+147	    	 	7522	    	UGC 7522
+148	4396	 	7526	    	UGC 7526
+149	4402	 	7528	    	UGC 7528
+150	4406	 	7532	    	UGC 7532
+151	4413	 	7538	    	UGC 7538
+152	4412	 	7536	    	UGC 7536
+153	4416	 	7541	    	UGC 7541
+154	    	 	7546	    	UGC 7546
+155	4417	 	7542	    	UGC 7542
+156	4419	 	7551	    	UGC 7551
+157	4420	 	7549	    	UGC 7549
+158	4423	 	7556	    	UGC 7556
+159	4424	 	7561	    	UGC 7561
+160	4430	 	7566	    	UGC 7566
+161	4429	 	7568	    	UGC 7568
+162	4435	 	7575	    	UGC 7575
+163	4438	 	7574	    	UGC 7574
+164	4440	 	7581	    	UGC 7581
+165	    	 	7579	    	UGC 7579
+166	4442	 	7583	    	UGC 7583
+167	4445	 	7587	    	UGC 7587
+168	    	 	7590	    	UGC 7590
+169	    	 	7595	3391	UGC 7595
+170	4450	 	7594	    	UGC 7594
+171	4451	 	7600	    	UGC 7600
+172	    	 	7602	3392	UGC 7602
+173	4457	 	7609	    	UGC 7609
+174	4459	 	7614	    	UGC 7614
+175	4461	 	7613	    	UGC 7613
+176	4469	 	7622	    	UGC 7622
+177	4470	 	7627	    	UGC 7627
+178	4472	 	7629	    	UGC 7629
+179	4473	 	7631	    	UGC 7631
+180	4477	 	7638	    	UGC 7638
+181	4478	 	7645	    	UGC 7645
+182	4480	 	7647	    	UGC 7647
+183	4486	 	7654	    	UGC 7654
+184	4491	 	7657	    	UGC 7657
+185	4492	 	7656	    	UGC 7656
+186	4494	 	7662	    	UGC 7662
+187	4505	 	7668	    	UGC 7668
+188	4498	 	7669	    	UGC 7669
+189	    	 	7676	 797	UGC 7676
+190	4501	 	7675	    	UGC 7675
+191	4502	 	7677	    	UGC 7677
+192	4506	 	7682	    	UGC 7682
+193	    	 	7695	3476	UGC 7695
+194	4517	 	7694	    	UGC 7694
+195	4516	 	7703	    	UGC 7703
+196	4519	 	7709	    	UGC 7709
+197	4522	 	7711	    	UGC 7711
+198	4525	 	7714	    	UGC 7714
+199	    	 	7716	 800	UGC 7716
+200	4526	 	7718	    	UGC 7718
+201	4527	 	7721	    	UGC 7721
+202	    	 	7728	3510	UGC 7728
+203	4532	 	7726	    	UGC 7726
+204	4535	 	7727	    	UGC 7727
+205	4536	 	7732	    	UGC 7732
+206	    	 	7736	3521	UGC 7736
+207	4540	 	7742	    	UGC 7742
+208	4548	 	7753	    	UGC 7753
+209	4546	 	    	    	NGC 4546
+210	4550	 	7757	    	UGC 7757
+211	4552	 	7760	    	UGC 7760
+212	4561	 	7768	    	UGC 7768
+213	4565	 	7772	    	UGC 7772
+214	4564	 	7773	    	UGC 7773
+215	4567	 	7777	    	UGC 7777
+216	4568	 	7776	    	UGC 7776
+217	4569	 	7786	    	UGC 7786
+218	4570	 	7785	    	UGC 7785
+219	4578	 	7793	    	UGC 7793
+220	4579	 	7796	    	UGC 7796
+221	4580	 	7794	    	UGC 7794
+222	4584	 	7803	    	UGC 7803
+223	    	 	7802	    	UGC 7802
+224	4586	 	7804	    	UGC 7804
+225	    	 	7817	3611	UGC 7817
+226	4591	 	7821	    	UGC 7821
+227	4592	 	7819	    	UGC 7819
+228	    	 	    	    	LCRSB123647.4-052325
+229	    	 	7825	3631	UGC 7825
+230	4595	 	7826	    	UGC 7826
+231	4596	 	7828	    	UGC 7828
+232	4606	 	7839	    	UGC 7839
+233	4607	 	7843	    	UGC 7843
+234	4608	 	7842	    	UGC 7842
+235	4612	 	7850	    	UGC 7850
+236	4621	 	7858	    	UGC 7858
+237	4630	 	7871	    	UGC 7871
+238	4629	 	7869	    	UGC 7869
+239	4634	 	7875	    	UGC 7875
+240	4638	 	7880	    	UGC 7880
+241	4636	 	7878	    	UGC 7878
+242	4639	 	7884	    	UGC 7884
+243	4643	 	7895	    	UGC 7895
+244	4647	 	7896	    	UGC 7896
+245	4649	 	7898	    	UGC 7898
+246	4651	 	7901	    	UGC 7901
+247	4654	 	7902	    	UGC 7902
+248	4660	 	7914	    	UGC 7914
+249	    	 	7920	3718	UGC 7920
+250	4665	 	7924	    	UGC 7924
+251	4666	 	7926	    	UGC 7926
+252	4668	 	7931	    	UGC 7931
+253	4684	 	7951	    	UGC 7951
+254	4689	 	7965	    	UGC 7965
+255	4688	 	7961	    	UGC 7961
+256	4691	 	    	    	NGC 4691
+257	4698	 	7970	    	UGC 7970
+258	4697	 	    	    	NGC 4697
+259	4701	 	7975	    	UGC 7975
+260	4710	 	7980	    	UGC 7980
+261	    	 	7982	    	UGC 7982
+262	4713	 	7985	    	UGC 7985
+263	4725	 	7989	    	UGC 7989
+264	    	 	7991	    	UGC 7991
+265	4720	 	    	    	NGC 4720
+266	4731	 	    	    	NGC 4731
+267	4747	 	8005	    	UGC 8005
+268	4746	 	8007	    	UGC 8007
+269	4754	 	8010	    	UGC 8010
+270	4753	 	8009	    	UGC 8009
+271	4758	 	8014	    	UGC 8014
+272	4762	 	8016	    	UGC 8016
+273	4771	 	8020	    	UGC 8020
+274	4772	 	8021	    	UGC 8021
+275	4775	 	    	    	NGC 4775
+276	4779	 	8022	    	UGC 8022
+277	4791	 	    	    	NGC 4791
+278	    	 	8032	    	UGC 8032
+279	    	 	8041	    	UGC 8041
+280	4799	 	8043	    	UGC 8043
+281	    	 	8045	    	UGC 8045
+282	4803	 	    	    	NGC 4803
+283	4808	 	8054	    	UGC 8054
+284	    	 	    	3908	IC  3908
+285	4845	 	8078	    	UGC 8078
+286	4866	 	8102	    	UGC 8102
+287	4904	 	8121	    	UGC 8121
+288	4941	 	    	    	NGC 4941
+289	4981	 	    	    	NGC 4981
+290	5014	 	8271	    	UGC 8271
+291	5103	 	8388	    	UGC 8388
+292	5145	 	8439	    	UGC 8439
+293	5147	 	8443	    	UGC 8443
+294	    	 	8593	 902	UGC 8593
+295	5248	 	8616	    	UGC 8616
+296	5273	 	8675	    	UGC 8675
+297	5301	 	8711	    	UGC 8711
+298	5303	 	8725	    	UGC 8725
+299	5300	 	8727	    	UGC 8727
+300	    	 	8756	    	UGC 8756
+301	5334	 	8790	4338	UGC 8790
+302	5348	 	8821	    	UGC 8821
+303	5372	 	8843	    	UGC 8843
+304	5356	 	8831	    	UGC 8831
+305	5360	 	8838	 958	UGC 8838
+306	5363	 	8847	    	UGC 8847
+307	5364	 	8853	    	UGC 8853
+308	    	 	8857	    	UGC 8857
+309	5486	 	9036	    	UGC 9036
+310	5560	 	9172	    	UGC 9172
+311	5566	 	9175	    	UGC 9175
+312	5576	 	9183	    	UGC 9183
+313	5577	 	9187	    	UGC 9187
+314	    	 	9215	    	UGC 9215
+315	    	 	9242	    	UGC 9242
+316	5638	 	9308	    	UGC 9308
+317	    	 	9311	1022	UGC 9311
+318	5645	 	9328	    	UGC 9328
+319	5669	 	9353	    	UGC 9353
+320	5668	 	9363	    	UGC 9363
+321	5692	 	9427	    	UGC 9427
+322	5701	 	9436	    	UGC 9436
+323	    	 	9483	1048	UGC 9483
+

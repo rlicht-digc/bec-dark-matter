@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "TNG_RAR_20899x15_SOFT1p5_RUN20260222_1933_CONTAMINATED",
+  "created_utc": "2026-02-23T03:11:45.918749+00:00",
+  "run_tag": "20260222_221145",
+  "dataset_root": "/Users/russelllicht/bec-dark-matter/datasets/quarantine_contaminated",
+  "intended_use": "quarantined contaminated run",
+  "notes": "Do not use for fairness/comparison analyses",
+  "counts": {
+    "n_galaxies": 20899,
+    "n_points": 313485,
+    "n_radii_mode": 15,
+    "n_radii_median": 15.0,
+    "n_radii_min": 15,
+    "n_radii_max": 15,
+    "declared_n_radii": 15
+  },
+  "radii_grid": {
+    "declared_n_radii": 15,
+    "soft_kpc": 1.5,
+    "r_min_factor": null,
+    "r_max_factor": null
+  },
+  "selection_criteria": {
+    "note": "contaminated mix identified from 201626 extraction mismatch"
+  },
+  "files": {
+    "rar_points": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/quarantine_contaminated/rar_points_20899x15_CONTAMINATED.parquet",
+      "size_bytes": 11311547,
+      "md5": "f8ea61924d07a9daa9f915e662bd66ac",
+      "mtime_utc": "2026-02-23T00:33:19.331512+00:00"
+    },
+    "tng_mass_profiles_npz": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/quarantine_contaminated/tng_mass_profiles_CONTAMINATED_20899_session.npz",
+      "size_bytes": 8315331,
+      "md5": "9d29fd501b67bc4c5b471278a6da68fa",
+      "mtime_utc": "2026-02-23T00:32:47.716159+00:00"
+    }
+  },
+  "compatibility_checks": {},
+  "warnings": [],
+  "git_hash": "4c3f23fec7c78e4375a221719a68c437228d8807"
+}

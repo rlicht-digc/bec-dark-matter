@@ -1,0 +1,1767 @@
+{
+  "test_name": "inversion_distance_sensitivity",
+  "description": "12-scenario systematic distance shift test for RAR scatter inversion stability",
+  "g_dagger_log": -9.920818753952375,
+  "n_scenarios": 12,
+  "scenarios": {
+    "baseline": {
+      "description": "Baseline (SPARC distances)",
+      "scenario_number": 1,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.16938,
+      "overall_mean": -0.02413,
+      "inversion_point": -9.856,
+      "inversion_offset_from_gdagger": 0.065,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.856,
+          "dist_from_gdagger": 0.065
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.172,
+          "dist_from_gdagger": 0.251
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.309,
+          "dist_from_gdagger": 0.389
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.187,
+          "dist_from_gdagger": 0.734
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.748,
+          "dist_from_gdagger": 0.827
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.789,
+          "dist_from_gdagger": 1.132
+        }
+      ],
+      "dsigma_crossings": [
+        -10.748,
+        -9.856
+      ],
+      "skew_sign_crossings": [
+        -10.309,
+        -10.172,
+        -9.187,
+        -8.789
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2218,
+          "skewness": -1.0441,
+          "kurtosis": 2.0365,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21231,
+          "skewness": -1.0293,
+          "kurtosis": 1.5452,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17727,
+          "skewness": -1.1026,
+          "kurtosis": 4.5788,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.16499,
+          "skewness": -0.5998,
+          "kurtosis": 1.9532,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.1405,
+          "skewness": -0.4297,
+          "kurtosis": 1.9915,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.16646,
+          "skewness": -1.0691,
+          "kurtosis": 3.8726,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.12129,
+          "skewness": 0.4266,
+          "kurtosis": 0.8578,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.18867,
+          "skewness": -1.4278,
+          "kurtosis": 6.2303,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.18102,
+          "skewness": -1.9607,
+          "kurtosis": 5.49,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10507,
+          "skewness": -1.2147,
+          "kurtosis": 3.2366,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.08274,
+          "skewness": 0.098,
+          "kurtosis": 0.0511,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19515,
+          "skewness": 1.6934,
+          "kurtosis": 13.814,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.20984,
+          "skewness": -2.3648,
+          "kurtosis": 11.9529,
+          "n": 39
+        }
+      ]
+    },
+    "all_plus_10": {
+      "description": "All +10%",
+      "scenario_number": 2,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.16938,
+      "overall_mean": -0.06552,
+      "inversion_point": -9.856,
+      "inversion_offset_from_gdagger": 0.065,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.856,
+          "dist_from_gdagger": 0.065
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.172,
+          "dist_from_gdagger": 0.251
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.309,
+          "dist_from_gdagger": 0.389
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.187,
+          "dist_from_gdagger": 0.734
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.748,
+          "dist_from_gdagger": 0.827
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.789,
+          "dist_from_gdagger": 1.132
+        }
+      ],
+      "dsigma_crossings": [
+        -10.748,
+        -9.856
+      ],
+      "skew_sign_crossings": [
+        -10.309,
+        -10.172,
+        -9.187,
+        -8.789
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2218,
+          "skewness": -1.0441,
+          "kurtosis": 2.0365,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21231,
+          "skewness": -1.0293,
+          "kurtosis": 1.5452,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17727,
+          "skewness": -1.1026,
+          "kurtosis": 4.5788,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.16499,
+          "skewness": -0.5998,
+          "kurtosis": 1.9532,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.1405,
+          "skewness": -0.4297,
+          "kurtosis": 1.9915,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.16646,
+          "skewness": -1.0691,
+          "kurtosis": 3.8726,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.12129,
+          "skewness": 0.4266,
+          "kurtosis": 0.8578,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.18867,
+          "skewness": -1.4278,
+          "kurtosis": 6.2303,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.18102,
+          "skewness": -1.9607,
+          "kurtosis": 5.49,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10507,
+          "skewness": -1.2147,
+          "kurtosis": 3.2366,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.08274,
+          "skewness": 0.098,
+          "kurtosis": 0.0511,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19515,
+          "skewness": 1.6934,
+          "kurtosis": 13.814,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.20984,
+          "skewness": -2.3648,
+          "kurtosis": 11.9529,
+          "n": 39
+        }
+      ]
+    },
+    "all_plus_20": {
+      "description": "All +20%",
+      "scenario_number": 3,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.16938,
+      "overall_mean": -0.10331,
+      "inversion_point": -9.856,
+      "inversion_offset_from_gdagger": 0.065,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.856,
+          "dist_from_gdagger": 0.065
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.172,
+          "dist_from_gdagger": 0.251
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.309,
+          "dist_from_gdagger": 0.389
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.187,
+          "dist_from_gdagger": 0.734
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.748,
+          "dist_from_gdagger": 0.827
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.789,
+          "dist_from_gdagger": 1.132
+        }
+      ],
+      "dsigma_crossings": [
+        -10.748,
+        -9.856
+      ],
+      "skew_sign_crossings": [
+        -10.309,
+        -10.172,
+        -9.187,
+        -8.789
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2218,
+          "skewness": -1.0441,
+          "kurtosis": 2.0365,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21231,
+          "skewness": -1.0293,
+          "kurtosis": 1.5452,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17727,
+          "skewness": -1.1026,
+          "kurtosis": 4.5788,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.16499,
+          "skewness": -0.5998,
+          "kurtosis": 1.9532,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.1405,
+          "skewness": -0.4297,
+          "kurtosis": 1.9915,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.16646,
+          "skewness": -1.0691,
+          "kurtosis": 3.8726,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.12129,
+          "skewness": 0.4266,
+          "kurtosis": 0.8578,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.18867,
+          "skewness": -1.4278,
+          "kurtosis": 6.2303,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.18102,
+          "skewness": -1.9607,
+          "kurtosis": 5.49,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10507,
+          "skewness": -1.2147,
+          "kurtosis": 3.2366,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.08274,
+          "skewness": 0.098,
+          "kurtosis": 0.0511,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19515,
+          "skewness": 1.6934,
+          "kurtosis": 13.814,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.20984,
+          "skewness": -2.3648,
+          "kurtosis": 11.9529,
+          "n": 39
+        }
+      ]
+    },
+    "all_minus_10": {
+      "description": "All -10%",
+      "scenario_number": 4,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.16938,
+      "overall_mean": 0.02163,
+      "inversion_point": -9.856,
+      "inversion_offset_from_gdagger": 0.065,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.856,
+          "dist_from_gdagger": 0.065
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.172,
+          "dist_from_gdagger": 0.251
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.309,
+          "dist_from_gdagger": 0.389
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.187,
+          "dist_from_gdagger": 0.734
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.748,
+          "dist_from_gdagger": 0.827
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.789,
+          "dist_from_gdagger": 1.132
+        }
+      ],
+      "dsigma_crossings": [
+        -10.748,
+        -9.856
+      ],
+      "skew_sign_crossings": [
+        -10.309,
+        -10.172,
+        -9.187,
+        -8.789
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2218,
+          "skewness": -1.0441,
+          "kurtosis": 2.0365,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21231,
+          "skewness": -1.0293,
+          "kurtosis": 1.5452,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17727,
+          "skewness": -1.1026,
+          "kurtosis": 4.5788,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.16499,
+          "skewness": -0.5998,
+          "kurtosis": 1.9532,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.1405,
+          "skewness": -0.4297,
+          "kurtosis": 1.9915,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.16646,
+          "skewness": -1.0691,
+          "kurtosis": 3.8726,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.12129,
+          "skewness": 0.4266,
+          "kurtosis": 0.8578,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.18867,
+          "skewness": -1.4278,
+          "kurtosis": 6.2303,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.18102,
+          "skewness": -1.9607,
+          "kurtosis": 5.49,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10507,
+          "skewness": -1.2147,
+          "kurtosis": 3.2366,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.08274,
+          "skewness": 0.098,
+          "kurtosis": 0.0511,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19515,
+          "skewness": 1.6934,
+          "kurtosis": 13.814,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.20984,
+          "skewness": -2.3648,
+          "kurtosis": 11.9529,
+          "n": 39
+        }
+      ]
+    },
+    "all_minus_20": {
+      "description": "All -20%",
+      "scenario_number": 5,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.16938,
+      "overall_mean": 0.07278,
+      "inversion_point": -9.856,
+      "inversion_offset_from_gdagger": 0.065,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.856,
+          "dist_from_gdagger": 0.065
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.172,
+          "dist_from_gdagger": 0.251
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.309,
+          "dist_from_gdagger": 0.389
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.187,
+          "dist_from_gdagger": 0.734
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.748,
+          "dist_from_gdagger": 0.827
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.789,
+          "dist_from_gdagger": 1.132
+        }
+      ],
+      "dsigma_crossings": [
+        -10.748,
+        -9.856
+      ],
+      "skew_sign_crossings": [
+        -10.309,
+        -10.172,
+        -9.187,
+        -8.789
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2218,
+          "skewness": -1.0441,
+          "kurtosis": 2.0365,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21231,
+          "skewness": -1.0293,
+          "kurtosis": 1.5452,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17727,
+          "skewness": -1.1026,
+          "kurtosis": 4.5788,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.16499,
+          "skewness": -0.5998,
+          "kurtosis": 1.9532,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.1405,
+          "skewness": -0.4297,
+          "kurtosis": 1.9915,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.16646,
+          "skewness": -1.0691,
+          "kurtosis": 3.8726,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.12129,
+          "skewness": 0.4266,
+          "kurtosis": 0.8578,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.18867,
+          "skewness": -1.4278,
+          "kurtosis": 6.2303,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.18102,
+          "skewness": -1.9607,
+          "kurtosis": 5.49,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10507,
+          "skewness": -1.2147,
+          "kurtosis": 3.2366,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.08274,
+          "skewness": 0.098,
+          "kurtosis": 0.0511,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19515,
+          "skewness": 1.6934,
+          "kurtosis": 13.814,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.20984,
+          "skewness": -2.3648,
+          "kurtosis": 11.9529,
+          "n": 39
+        }
+      ]
+    },
+    "fd1_plus_20": {
+      "description": "fD=1 only +20%",
+      "scenario_number": 6,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.16868,
+      "overall_mean": -0.07177,
+      "inversion_point": -9.851,
+      "inversion_offset_from_gdagger": 0.07,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.851,
+          "dist_from_gdagger": 0.07
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.224,
+          "dist_from_gdagger": 0.303
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.248,
+          "dist_from_gdagger": 0.327
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.202,
+          "dist_from_gdagger": 0.719
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.679,
+          "dist_from_gdagger": 0.758
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.791,
+          "dist_from_gdagger": 1.13
+        }
+      ],
+      "dsigma_crossings": [
+        -10.679,
+        -9.851
+      ],
+      "skew_sign_crossings": [
+        -10.248,
+        -10.224,
+        -9.202,
+        -8.791
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.22209,
+          "skewness": -1.078,
+          "kurtosis": 1.7029,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21097,
+          "skewness": -0.8629,
+          "kurtosis": 1.2314,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17675,
+          "skewness": -0.9954,
+          "kurtosis": 3.7251,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.16349,
+          "skewness": -0.6024,
+          "kurtosis": 1.5674,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.1402,
+          "skewness": -0.4662,
+          "kurtosis": 1.1661,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.1748,
+          "skewness": -0.9433,
+          "kurtosis": 3.6417,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.11712,
+          "skewness": 0.0555,
+          "kurtosis": 0.9589,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.18871,
+          "skewness": -1.5225,
+          "kurtosis": 5.7967,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.17928,
+          "skewness": -1.9315,
+          "kurtosis": 5.9235,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10802,
+          "skewness": -1.0061,
+          "kurtosis": 3.7997,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.07856,
+          "skewness": 0.155,
+          "kurtosis": 0.5929,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19368,
+          "skewness": 1.6835,
+          "kurtosis": 14.1868,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.20964,
+          "skewness": -2.4265,
+          "kurtosis": 12.195,
+          "n": 39
+        }
+      ]
+    },
+    "fd1_minus_20": {
+      "description": "fD=1 only -20%",
+      "scenario_number": 7,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.18184,
+      "overall_mean": 0.03418,
+      "inversion_point": -9.87,
+      "inversion_offset_from_gdagger": 0.051,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.87,
+          "dist_from_gdagger": 0.051
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.146,
+          "dist_from_gdagger": 0.225
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.328,
+          "dist_from_gdagger": 0.407
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.119,
+          "dist_from_gdagger": 0.801
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.788,
+          "dist_from_gdagger": 1.133
+        }
+      ],
+      "dsigma_crossings": [
+        -9.87
+      ],
+      "skew_sign_crossings": [
+        -10.328,
+        -10.146,
+        -9.119,
+        -8.788
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2308,
+          "skewness": -0.8812,
+          "kurtosis": 2.0682,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.2236,
+          "skewness": -1.0661,
+          "kurtosis": 1.5462,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.18937,
+          "skewness": -1.032,
+          "kurtosis": 4.3491,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.17893,
+          "skewness": -0.4998,
+          "kurtosis": 1.7514,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.15493,
+          "skewness": -0.3148,
+          "kurtosis": 1.9551,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.16862,
+          "skewness": -0.9926,
+          "kurtosis": 2.9928,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.14209,
+          "skewness": 0.5449,
+          "kurtosis": 0.2581,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.19942,
+          "skewness": -1.1201,
+          "kurtosis": 5.3641,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.19265,
+          "skewness": -1.751,
+          "kurtosis": 4.1186,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.11107,
+          "skewness": -1.1953,
+          "kurtosis": 1.8549,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.09721,
+          "skewness": -0.3488,
+          "kurtosis": 0.0618,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19892,
+          "skewness": 1.6205,
+          "kurtosis": 12.7847,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.21205,
+          "skewness": -2.2398,
+          "kurtosis": 11.1421,
+          "n": 39
+        }
+      ]
+    },
+    "cf4_for_fd1": {
+      "description": "CF4 for fD=1 only",
+      "scenario_number": 8,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.23204,
+      "overall_mean": -0.02205,
+      "inversion_point": -10.027,
+      "inversion_offset_from_gdagger": -0.106,
+      "all_crossings": [
+        {
+          "type": "skew=0",
+          "log_gbar": -10.027,
+          "dist_from_gdagger": 0.106
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.802,
+          "dist_from_gdagger": 0.118
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.795,
+          "dist_from_gdagger": 0.125
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.864,
+          "dist_from_gdagger": 0.943
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.923,
+          "dist_from_gdagger": 0.998
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -11.59,
+          "dist_from_gdagger": 1.669
+        }
+      ],
+      "dsigma_crossings": [
+        -11.59,
+        -9.795
+      ],
+      "skew_sign_crossings": [
+        -10.864,
+        -10.027,
+        -9.802,
+        -8.923
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2358,
+          "skewness": -0.4611,
+          "kurtosis": 2.1332,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.24352,
+          "skewness": -0.9822,
+          "kurtosis": 0.8747,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.2343,
+          "skewness": -0.7198,
+          "kurtosis": 2.0128,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.2274,
+          "skewness": -0.1144,
+          "kurtosis": 1.0943,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.21101,
+          "skewness": 0.0653,
+          "kurtosis": 1.9816,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.20799,
+          "skewness": 0.168,
+          "kurtosis": 1.319,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.17996,
+          "skewness": 0.8524,
+          "kurtosis": 1.1495,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.24903,
+          "skewness": -0.2504,
+          "kurtosis": 2.1319,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.26562,
+          "skewness": 0.1562,
+          "kurtosis": 0.7436,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.20138,
+          "skewness": 0.5144,
+          "kurtosis": -0.6399,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.22039,
+          "skewness": 0.6075,
+          "kurtosis": 0.1562,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.31406,
+          "skewness": -0.0582,
+          "kurtosis": 1.0997,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.3802,
+          "skewness": -0.8033,
+          "kurtosis": 2.3432,
+          "n": 39
+        }
+      ]
+    },
+    "full_cf4": {
+      "description": "Full CF4 (all galaxies)",
+      "scenario_number": 9,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.26549,
+      "overall_mean": 0.01005,
+      "inversion_point": -9.834,
+      "inversion_offset_from_gdagger": 0.087,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.834,
+          "dist_from_gdagger": 0.087
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.089,
+          "dist_from_gdagger": 0.168
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.722,
+          "dist_from_gdagger": 0.199
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.665,
+          "dist_from_gdagger": 0.745
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.84,
+          "dist_from_gdagger": 0.919
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.932,
+          "dist_from_gdagger": 0.989
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -11.737,
+          "dist_from_gdagger": 1.817
+        }
+      ],
+      "dsigma_crossings": [
+        -11.737,
+        -10.665,
+        -9.834
+      ],
+      "skew_sign_crossings": [
+        -10.84,
+        -10.089,
+        -9.722,
+        -8.932
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2795,
+          "skewness": -0.6392,
+          "kurtosis": 2.0172,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.28674,
+          "skewness": -0.6644,
+          "kurtosis": -0.2708,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.25368,
+          "skewness": -0.6497,
+          "kurtosis": 0.4547,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.23866,
+          "skewness": -0.5948,
+          "kurtosis": 1.5105,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.25204,
+          "skewness": 0.2266,
+          "kurtosis": 0.8539,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.25714,
+          "skewness": 0.2149,
+          "kurtosis": 0.4559,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.22187,
+          "skewness": 0.5373,
+          "kurtosis": 0.7699,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.28154,
+          "skewness": -0.4555,
+          "kurtosis": 2.096,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.28501,
+          "skewness": 0.04,
+          "kurtosis": 0.3593,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.21772,
+          "skewness": 0.5635,
+          "kurtosis": -0.227,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.23141,
+          "skewness": 0.5078,
+          "kurtosis": 0.1111,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.32225,
+          "skewness": -0.0681,
+          "kurtosis": 0.8877,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.38007,
+          "skewness": -0.8168,
+          "kurtosis": 2.3644,
+          "n": 39
+        }
+      ]
+    },
+    "hybrid": {
+      "description": "Hybrid catalog",
+      "scenario_number": 10,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.23024,
+      "overall_mean": -0.01918,
+      "inversion_point": -10.027,
+      "inversion_offset_from_gdagger": -0.106,
+      "all_crossings": [
+        {
+          "type": "skew=0",
+          "log_gbar": -10.027,
+          "dist_from_gdagger": 0.106
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.802,
+          "dist_from_gdagger": 0.119
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.794,
+          "dist_from_gdagger": 0.127
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.729,
+          "dist_from_gdagger": 0.808
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.923,
+          "dist_from_gdagger": 0.998
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -11.65,
+          "dist_from_gdagger": 1.73
+        }
+      ],
+      "dsigma_crossings": [
+        -11.65,
+        -9.794
+      ],
+      "skew_sign_crossings": [
+        -10.729,
+        -10.027,
+        -9.802,
+        -8.923
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.2358,
+          "skewness": -0.4611,
+          "kurtosis": 2.1332,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.24261,
+          "skewness": -1.0193,
+          "kurtosis": 0.9716,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.22957,
+          "skewness": -0.7388,
+          "kurtosis": 2.2766,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.22273,
+          "skewness": -0.1044,
+          "kurtosis": 1.3095,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.21057,
+          "skewness": -0.0246,
+          "kurtosis": 2.0173,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.2073,
+          "skewness": 0.1483,
+          "kurtosis": 1.3649,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.17846,
+          "skewness": 0.8587,
+          "kurtosis": 1.2204,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.24885,
+          "skewness": -0.2512,
+          "kurtosis": 2.1448,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.26562,
+          "skewness": 0.1562,
+          "kurtosis": 0.7436,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.20138,
+          "skewness": 0.5144,
+          "kurtosis": -0.6399,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.22039,
+          "skewness": 0.6075,
+          "kurtosis": 0.1562,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.31406,
+          "skewness": -0.0582,
+          "kurtosis": 1.0997,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.3802,
+          "skewness": -0.8033,
+          "kurtosis": 2.3432,
+          "n": 39
+        }
+      ]
+    },
+    "uma_18.6": {
+      "description": "UMa \u2192 18.6 Mpc (Verheijen)",
+      "scenario_number": 11,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.17548,
+      "overall_mean": -0.02158,
+      "inversion_point": -9.851,
+      "inversion_offset_from_gdagger": 0.069,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.851,
+          "dist_from_gdagger": 0.069
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.151,
+          "dist_from_gdagger": 0.23
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.336,
+          "dist_from_gdagger": 0.415
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.215,
+          "dist_from_gdagger": 0.706
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.702,
+          "dist_from_gdagger": 0.781
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.77,
+          "dist_from_gdagger": 1.151
+        }
+      ],
+      "dsigma_crossings": [
+        -10.702,
+        -9.851
+      ],
+      "skew_sign_crossings": [
+        -10.336,
+        -10.151,
+        -9.215,
+        -8.77
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.22197,
+          "skewness": -1.0397,
+          "kurtosis": 2.0171,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21232,
+          "skewness": -1.0273,
+          "kurtosis": 1.5415,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.17872,
+          "skewness": -0.9609,
+          "kurtosis": 4.3791,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.1676,
+          "skewness": -0.4765,
+          "kurtosis": 1.8905,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.14802,
+          "skewness": -0.1721,
+          "kurtosis": 1.7915,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.17378,
+          "skewness": -0.8386,
+          "kurtosis": 3.264,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.12884,
+          "skewness": 0.5266,
+          "kurtosis": 0.7254,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.19913,
+          "skewness": -1.1844,
+          "kurtosis": 4.8782,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.19955,
+          "skewness": -1.4442,
+          "kurtosis": 3.7647,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.10636,
+          "skewness": -1.226,
+          "kurtosis": 3.0669,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.08879,
+          "skewness": 0.2721,
+          "kurtosis": 0.0228,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.19405,
+          "skewness": 1.6227,
+          "kurtosis": 13.8821,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.22885,
+          "skewness": -1.7049,
+          "kurtosis": 9.2774,
+          "n": 39
+        }
+      ]
+    },
+    "uma_cf4": {
+      "description": "UMa \u2192 CF4 (pathological)",
+      "scenario_number": 12,
+      "n_points": 2777,
+      "n_bins_valid": 13,
+      "overall_sigma": 0.19379,
+      "overall_mean": 0.00032,
+      "inversion_point": -9.842,
+      "inversion_offset_from_gdagger": 0.079,
+      "all_crossings": [
+        {
+          "type": "dsigma=0",
+          "log_gbar": -9.842,
+          "dist_from_gdagger": 0.079
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.047,
+          "dist_from_gdagger": 0.126
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.454,
+          "dist_from_gdagger": 0.533
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -9.375,
+          "dist_from_gdagger": 0.546
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -10.571,
+          "dist_from_gdagger": 0.651
+        },
+        {
+          "type": "dsigma=0",
+          "log_gbar": -10.69,
+          "dist_from_gdagger": 0.769
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -11.006,
+          "dist_from_gdagger": 1.085
+        },
+        {
+          "type": "skew=0",
+          "log_gbar": -8.718,
+          "dist_from_gdagger": 1.203
+        }
+      ],
+      "dsigma_crossings": [
+        -10.69,
+        -9.842
+      ],
+      "skew_sign_crossings": [
+        -11.006,
+        -10.571,
+        -10.454,
+        -10.047,
+        -9.375,
+        -8.718
+      ],
+      "bin_profile": [
+        {
+          "center": -11.833,
+          "sigma": 0.22111,
+          "skewness": -1.1016,
+          "kurtosis": 2.1732,
+          "n": 55
+        },
+        {
+          "center": -11.567,
+          "sigma": 0.21313,
+          "skewness": -1.0376,
+          "kurtosis": 1.5202,
+          "n": 223
+        },
+        {
+          "center": -11.3,
+          "sigma": 0.18699,
+          "skewness": -0.7656,
+          "kurtosis": 4.3541,
+          "n": 410
+        },
+        {
+          "center": -11.033,
+          "sigma": 0.1813,
+          "skewness": -0.0759,
+          "kurtosis": 2.5034,
+          "n": 407
+        },
+        {
+          "center": -10.767,
+          "sigma": 0.17047,
+          "skewness": 0.6685,
+          "kurtosis": 2.5906,
+          "n": 301
+        },
+        {
+          "center": -10.5,
+          "sigma": 0.19239,
+          "skewness": -0.2447,
+          "kurtosis": 3.4393,
+          "n": 284
+        },
+        {
+          "center": -10.233,
+          "sigma": 0.14317,
+          "skewness": 1.1618,
+          "kurtosis": 3.1358,
+          "n": 266
+        },
+        {
+          "center": -9.967,
+          "sigma": 0.2283,
+          "skewness": -0.4997,
+          "kurtosis": 3.4323,
+          "n": 248
+        },
+        {
+          "center": -9.7,
+          "sigma": 0.23714,
+          "skewness": -0.3434,
+          "kurtosis": 2.6278,
+          "n": 187
+        },
+        {
+          "center": -9.433,
+          "sigma": 0.12106,
+          "skewness": -0.4759,
+          "kurtosis": 2.1948,
+          "n": 156
+        },
+        {
+          "center": -9.167,
+          "sigma": 0.11568,
+          "skewness": 1.7114,
+          "kurtosis": 5.321,
+          "n": 110
+        },
+        {
+          "center": -8.9,
+          "sigma": 0.20434,
+          "skewness": 1.2486,
+          "kurtosis": 10.4636,
+          "n": 62
+        },
+        {
+          "center": -8.633,
+          "sigma": 0.27917,
+          "skewness": -0.5775,
+          "kurtosis": 5.2287,
+          "n": 39
+        }
+      ]
+    }
+  },
+  "key_findings": {
+    "baseline_inversion": -9.856,
+    "uniform_shifts_stable": true,
+    "cf4_full_inversion": -9.834,
+    "hybrid_inversion": -10.027,
+    "uma_cf4_shift": 0.009000000000000341
+  }
+}

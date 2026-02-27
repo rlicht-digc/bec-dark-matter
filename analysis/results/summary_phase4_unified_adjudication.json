@@ -1,0 +1,168 @@
+{
+  "test_name": "phase4_unified_model_adjudication",
+  "generated_utc": "2026-02-22T04:10:09.639199+00:00",
+  "overall_conclusion": "NOT_SUPPORTED_BY_COMBINED_TESTS",
+  "status_counts": {
+    "supported": 1,
+    "weak": 2,
+    "rejected": 2,
+    "missing": 0
+  },
+  "claims": [
+    {
+      "claim": "Mass-dependent bunching should strengthen toward high mass / low X",
+      "status": "rejected",
+      "criteria": {
+        "rho_logMs_vs_daic": "> 0",
+        "rho_X_vs_daic": "< 0",
+        "trend_p_max": 0.05,
+        "inner_minus_outer_daic": "> 0"
+      },
+      "metrics": {
+        "rho_logMs_vs_daic": -0.5,
+        "p_logMs_vs_daic": 0.6666666666666666,
+        "rho_X_vs_daic": 0.5,
+        "p_X_vs_daic": 0.6666666666666666,
+        "inner_minus_outer_daic": -30.001574524635743,
+        "n_total_points": 2800,
+        "n_total_galaxies": 135
+      },
+      "rationale": [
+        "rho(logMs,\u0394AIC)=-0.5, p=0.6666666666666666",
+        "rho(X,\u0394AIC)=0.5, p=0.6666666666666666",
+        "inner_minus_outer_\u0394AIC=-30.001574524635743",
+        "script_overall=CONTRADICTS_BEC_TRANSITION"
+      ]
+    },
+    {
+      "claim": "Forward-model preference should become more BEC-like at higher stellar mass",
+      "status": "rejected",
+      "criteria": {
+        "rho_logMs_vs_daic": "> 0",
+        "rho_Xmed_vs_daic": "< 0",
+        "trend_p_max": 0.05
+      },
+      "metrics": {
+        "rho_logMs_vs_daic": -0.0518,
+        "p_logMs_vs_daic": 0.5857,
+        "rho_Xmed_vs_daic": -0.1454,
+        "p_Xmed_vs_daic": 0.1243,
+        "mean_daic": -20.301,
+        "median_daic": -4.11,
+        "sum_daic": -2294.0,
+        "n_galaxies": 113
+      },
+      "rationale": [
+        "rho(logMs,\u0394AIC)=-0.0518, p=0.5857",
+        "rho(X_med,\u0394AIC)=-0.1454, p=0.1243",
+        "overall_verdict=NFW-FAVORED",
+        "mass_trend=INCONCLUSIVE \u2014 no significant mass trend"
+      ]
+    },
+    {
+      "claim": "Lc\u2013xi scaling should remain significant after size controls",
+      "status": "weak",
+      "criteria": {
+        "raw_Lc_vs_xi_p_max": 0.01,
+        "multiple_regression_log_xi_p_max": 0.05,
+        "normalized_Lc_over_Rext_vs_xi_over_Rext_p_max": 0.05,
+        "all_effects_positive": true
+      },
+      "metrics": {
+        "raw_rho": 0.5513,
+        "raw_p": 1.3349800418972305e-06,
+        "normalized_rho": 0.1471,
+        "normalized_p": 0.23475600964504617,
+        "simple_slope": 0.6022,
+        "controlled_log_xi_beta": 0.1434,
+        "controlled_log_xi_p": 0.0812,
+        "n_valid_Lc": 67
+      },
+      "rationale": [
+        "raw: rho=0.5513, p=1.3349800418972305e-06",
+        "normalized: rho=0.1471, p=0.23475600964504617",
+        "simple slope=0.6022",
+        "controlled log_xi beta=0.1434, p=0.0812",
+        "script verdict=CONFOUNDED_BY_SIZE"
+      ]
+    },
+    {
+      "claim": "Phase-diagram peak near g_dagger should discriminate from null/LCDM and hold up in validation",
+      "status": "weak",
+      "criteria": {
+        "verdict_contains": "DISCRIMINATING",
+        "permutation_p_max": 0.05,
+        "cv_delta_mean_min": 0.0,
+        "edge_wins_frac_min": 0.5,
+        "holdout_delta_mean_min": 0.0
+      },
+      "metrics": {
+        "verdict": "DISCRIMINATING \u2014 scatter peak at g\u2020 in SPARC (\u03bcp=-9.922, \u0394=-0.002), absent in \u039bCDM (\u03bcp=-9.270)",
+        "perm_p": 0.0,
+        "cv_delta_mean": 0.006093343637157511,
+        "cv_edge_wins_frac": 0.6,
+        "holdout_delta_mean": -0.022970656734546596,
+        "boolean_suite_pass": true
+      },
+      "rationale": [
+        "verdict=DISCRIMINATING \u2014 scatter peak at g\u2020 in SPARC (\u03bcp=-9.922, \u0394=-0.002), absent in \u039bCDM (\u03bcp=-9.270)",
+        "perm_p=0.0",
+        "cv_delta_mean=0.006093343637157511, edge_wins_frac=0.6",
+        "holdout_delta_mean=-0.022970656734546596",
+        "boolean_suite_pass=True"
+      ]
+    },
+    {
+      "claim": "Galaxy-to-cluster scaling should be internally consistent with xi~sqrt(M) and g_dagger,eff mass trend",
+      "status": "supported",
+      "criteria": {
+        "mass_scaling_alpha_p_max": 0.05,
+        "hierarchical_dev_sigma_max": 2.0,
+        "scatter_min_scale_factor_max": 2.0
+      },
+      "metrics": {
+        "alpha": 0.3166,
+        "alpha_p": 2.2238486158373725e-23,
+        "hierarchical_dev_sigma": 0.0,
+        "closest_scale_to_scatter_min": "\u03be_200_eff",
+        "closest_scale_factor": 1.528
+      },
+      "rationale": [
+        "alpha=0.3166, p=2.2238486158373725e-23",
+        "hierarchical_dev_sigma=0.0",
+        "closest_scale=\u03be_200_eff, factor=1.528",
+        "test_3c_verdict=CONSISTENT \u2014 slope = 0.500 \u00b1 6.30e-06, within 2\u03c3 of 0.5"
+      ]
+    }
+  ],
+  "sources": {
+    "mass_split_bunching": {
+      "path": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_mass_split_bunching.json",
+      "exists": true,
+      "mtime_utc": "2026-02-22T04:08:26.436357+00:00"
+    },
+    "forward_model_bunching": {
+      "path": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_forward_model_bunching.json",
+      "exists": true,
+      "mtime_utc": "2026-02-22T03:45:06.455184+00:00"
+    },
+    "healing_length_scaling": {
+      "path": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_scaling.json",
+      "exists": true,
+      "mtime_utc": "2026-02-22T03:45:11.343327+00:00"
+    },
+    "hierarchical_healing_length": {
+      "path": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_hierarchical_healing_length.json",
+      "exists": true,
+      "mtime_utc": "2026-02-22T03:45:06.107762+00:00"
+    },
+    "phase_diagram_model": {
+      "path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/results/summary_phase_diagram_model.json",
+      "exists": true,
+      "mtime_utc": "2026-02-20T00:23:04.158412+00:00"
+    }
+  },
+  "notes": [
+    "Phase-diagram summary is read from analysis/pipeline/results; if a new long-running phase-diagram job is active, rerun this script after it completes."
+  ]
+}

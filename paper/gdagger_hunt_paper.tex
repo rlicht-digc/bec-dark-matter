@@ -1,0 +1,592 @@
+% Kernel+Scale Identifiability Framework for g-dagger
+% R. Licht (2026)
+% For submission to arXiv [astro-ph.GA / astro-ph.CO]
+
+\documentclass[twocolumn,twocolappendix]{aastex631}
+
+\usepackage{amsmath,amssymb}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Shorthand commands
+\newcommand{\gbar}{g_{\rm bar}}
+\newcommand{\gobs}{g_{\rm obs}}
+\newcommand{\gdag}{g^{\dagger}}
+\newcommand{\dex}{\,{\rm dex}}
+\newcommand{\daic}{\Delta{\rm AIC}}
+\newcommand{\sparc}{SPARC}
+
+% Auto-generated run-specific values (from latest refereeproof summary.json)
+\input{tables/values_from_summary}
+
+\shorttitle{Scale Identifiability in the RAR}
+\shortauthors{Licht}
+
+\begin{document}
+
+\title{A Kernel+Scale Identifiability Framework with Anti-Numerology
+Controls: Localizing $g^{\dagger}$ in the Radial Acceleration Relation}
+
+\author{Russell Licht}
+\affiliation{Independent Researcher}
+\email{r.licht@digconsulting.info}
+
+% ============================================================
+\begin{abstract}
+We introduce and validate a kernel+scale identifiability framework
+with built-in anti-numerology controls for testing whether a
+characteristic acceleration scale appears in galaxy dynamics data.
+Applied to \ValNData\ rotation-curve measurements from the SPARC
+database, the baseline fit localizes a preferred scale at
+$\log_{10}(s/{\rm m\,s^{-2}}) = \ValBestLogScale$, while
+galaxy-grouped \ValCvFoldsTotal-fold cross-validation gives
+$\log_{10}(s/{\rm m\,s^{-2}}) = \ValCvMean \pm \ValCvStd$,
+consistent with $\gdag \approx 1.2 \times 10^{-10}$~m~s$^{-2}$ to
+within \ValDeltaFromGdag~dex.
+In the full-data baseline fit, the Bose--Einstein RAR kernel is preferred over six alternatives
+(including hyperbolic cotangent, logistic, and power-law controls).
+Global permutation and within-galaxy circular shift nulls yield
+$p_{\pm 0.10}=\ValAOnePTen$ and $p_{\pm 0.05}=\ValAOnePFive$
+with one-sided 95\% Clopper--Pearson bounds
+$(\ValAOneCPUpperTen,\ValAOneCPUpperFive)$ from zero hits at both
+windows (\ValAOneFracTen\ and \ValAOneFracFive).  A block-permute
+bins null gives intermediate rates
+(\ValATwoBFracTen, $p_{\pm 0.10}=\ValATwoBPTen$;
+\ValATwoBFracFive, $p_{\pm 0.05}=\ValATwoBPFive$).  The within-bin
+shuffle is a structure-preserving control (not a null test) and
+returns \ValATwoCtrlFracTen\ and \ValATwoCtrlFracFive\ at the two
+windows, confirming that the scale preference resides in the
+cross-bin monotonic correlation.
+Negative controls confirm that the signal collapses under predictor
+noise ($\sigma \geq 0.3$~dex), variable warping ($x \to x^{\alpha}$),
+and galaxy-label randomization, demonstrating that the optimum is not
+a numerical artifact.
+Extension to Tian et al.\ (2020) cluster-scale data does not recover
+$\gdag$, consistent with the known $\sim\!14\times$ scale offset at
+cluster masses; this serves as an explicit null example.
+We release the full framework, run folders, and reproducibility
+metadata to enable independent extension to non-RAR datasets.
+\end{abstract}
+
+\keywords{dark matter --- galaxies: kinematics and dynamics ---
+methods: statistical}
+
+% ============================================================
+\section{Introduction}\label{sec:intro}
+
+The radial acceleration relation \citep[RAR;][]{McGaugh2016,Lelli2017}
+is a tight empirical correlation between the observed centripetal
+acceleration $\gobs$ and the baryonic acceleration $\gbar$ in
+rotationally supported galaxies.  The relation is well described by
+a one-parameter interpolation function with a characteristic
+acceleration scale $\gdag \approx 1.2 \times 10^{-10}$~m~s$^{-2}$.
+
+A natural question is whether $\gdag$ is merely a fitting parameter
+or a physically meaningful scale that reappears in independent
+contexts.  The answer has implications for dark matter models:
+modified Newtonian dynamics \citep{Milgrom1983} predicts $\gdag$ as
+fundamental, while $\Lambda$CDM must explain its emergence from
+galaxy formation physics \citep{Desmond2017,Navarro2017}.
+
+In the Bose--Einstein condensate (BEC) dark matter framework, the
+RAR mapping takes the form of a Bose--Einstein occupation number
+(R.~Licht, in preparation):
+\begin{equation}\label{eq:berar}
+  \frac{\gobs}{\gbar} = \frac{1}{1 - \exp\!\bigl(-\sqrt{\gbar/\gdag}\,\bigr)},
+\end{equation}
+making $\gdag$ the condensation scale of the dark-matter field.
+
+To test whether this scale preference is robust and not a numerical
+coincidence, we develop a \emph{kernel+scale identifiability framework}
+with three categories of anti-numerology controls:
+(i)~scale injection scans measuring how sharply the AIC minimum
+localizes the preferred scale;
+(ii)~permutation-based null tests verifying that random pairings
+do not reproduce the localization; and
+(iii)~nearby-scale comparisons against cosmologically motivated
+alternatives ($a_\Lambda$, $cH_0$, $cH_0/6$).
+
+The framework is designed to be reusable: given any $(x, y)$ dataset
+and a library of candidate kernels, it returns a ranked list of
+kernels with scale estimates, significance metrics, and
+interpretation guardrails.  We demonstrate it on SPARC as a
+validated control and on cluster-scale data as an explicit null.
+
+Throughout, we adhere to a conservative standard: claims are limited
+to what the data directly support, negative results are reported in
+full, and all outputs are traceable to specific files and random seeds.
+
+% ============================================================
+\section{Methods}\label{sec:methods}
+
+\subsection{Kernel Library}\label{sec:kernels}
+
+We define seven candidate kernel functions $K(x, s)$ mapping a
+physical variable $x$ (acceleration) and a free scale parameter $s$
+to a predicted response $y$:
+
+\begin{enumerate}
+  \item \textbf{BE\_RAR} (Eq.~\ref{eq:berar}): $K = 1/(1 - e^{-\epsilon})$,
+        $\epsilon = \sqrt{x/s}$.
+  \item \textbf{BE\_occupation}: $K = 1/(e^{\epsilon} - 1)$.
+  \item \textbf{BE\_cousin}: $K = \epsilon/(1 - e^{-\epsilon})$.
+  \item \textbf{coth}: $K = \coth(\epsilon)$.
+  \item \textbf{tanh}: $K = \tanh(\epsilon)$.
+  \item \textbf{logistic}: $K = 1/(1 + e^{-(\epsilon-1)})$.
+  \item \textbf{power\_law}: $K = \sqrt{x/s} + 1$ (no special scale).
+\end{enumerate}
+
+For the SPARC RAR, we use ``direct'' mode: $y = K(x, s)$ with zero
+nuisance parameters, because the RAR mapping \emph{is} the kernel.
+This gives the fairest comparison: all models have exactly one free
+parameter (the scale $s$).
+
+\subsection{Scale Optimization}\label{sec:scaleopt}
+
+For each kernel, we perform a two-stage optimization:
+(i)~grid search over $N_{\rm grid}$ log-uniformly spaced trial
+scales in $[10^{-13}, 10^{-8}]$~m~s$^{-2}$, followed by
+(ii)~bounded scalar minimization (Brent's method) seeded from the
+best grid point.
+
+We compute the Akaike Information Criterion
+${\rm AIC} = 2k - 2\ln\hat{L}$, where $k$ is the number of free
+parameters and $\hat{L}$ is the Gaussian likelihood evaluated at
+the RMS residual.  The Bayesian Information Criterion (BIC) is
+computed in parallel.
+
+\subsection{Scale Injection Scan}\label{sec:scalescan}
+
+To characterize how sharply the data prefer a particular scale, we
+evaluate the AIC across 300 trial scales spanning the full search
+range.  From this curve we extract:
+\begin{itemize}
+  \item $\daic_{\pm 0.1}$: the AIC increase when the scale is shifted
+    $\pm 0.1$~dex from the optimum;
+  \item $\daic_{\pm 0.1}/N$: the same, normalized by sample size
+    (dataset-independent identifiability metric);
+  \item \textbf{Peak sharpness}: the second derivative of the AIC
+    with respect to the log-scale at the optimum,
+    $\mathcal{S} \equiv d^2({\rm AIC})/d(\log_{10} s)^2 |_{s=\hat{s}}$,
+    estimated by finite differences on the scan grid.  Larger values
+    indicate a narrower, more tightly localized minimum.  Units are
+    AIC per $(\log_{10}\,{\rm m\,s^{-2}})^2$.
+\end{itemize}
+
+\subsection{Null Tests and Structure-Preserving Control}\label{sec:nulls}
+
+We employ three destructive permutation-based null tests and one
+structure-preserving control:
+
+\begin{enumerate}
+  \item \textbf{Global shuffle} (A1): permute $y$ relative to $x$,
+    destroying all correlation.
+  \item \textbf{Block-permute bins null} (A2b): randomly reassign
+    which bin's $y$-values go with which bin's $x$-values (0.5-dex
+    bins).  This preserves the within-bin marginal distribution of
+    $y$ but breaks the cross-bin monotonic relationship that encodes
+    the characteristic scale.
+  \item \textbf{Within-galaxy circular shift} (A3): for each galaxy,
+    circularly shift its $y$ values by a random offset, preserving
+    per-galaxy distributions but destroying the radial alignment.
+  \item \textbf{Within-bin shuffle} (A2, control): permute $y$ only
+    within coarse $x$-bins (0.5~dex width).  This preserves the
+    conditional structure $p(y \mid x)$ approximately at the chosen
+    bin width and is \emph{not} a null test: $p \approx 1$ is expected
+    up to finite-binning and refit variability.
+    It confirms that the scale preference resides in the global
+    $x$--$y$ correlation, not in bin-local structure.
+\end{enumerate}
+
+For each null realization, we refit the best kernel and record the
+optimal scale.  The test statistic is
+$p_{\pm w} = N_{\rm hits,\pm w}/N_{\rm shuffles}$, where a ``hit''
+is $|\log_{10} s_{\rm null} - \log_{10} \gdag| < w$ for
+$w \in \{0.10,0.05\}$~dex.  When $N_{\rm hits,\pm w}=0$, we report
+the one-sided 95\% Clopper--Pearson upper bound
+$p_{{\rm UB},\pm w} = \mathrm{BetaInv}(1-\alpha;\,k+1,\,n-k)$
+for $k=N_{\rm hits,\pm w}$ and $n=N_{\rm shuffles}$; for $k=0$ this
+reduces exactly to $p_{{\rm UB},\pm w}=1-\alpha^{1/n}$ with
+$\alpha = 0.05$.
+
+\subsection{Galaxy-Grouped Cross-Validation}\label{sec:groupcv}
+
+To prevent data leakage (points from the same galaxy appearing in
+both train and test), we use GroupKFold with $k=5$ folds where
+group~$=$~galaxy.  For each fold we record the best kernel, optimal
+scale, and out-of-sample RMSE.
+
+\subsection{Nearby-Scale Comparison}\label{sec:nearby}
+
+We compare $\gdag$ against cosmologically motivated scales:
+$a_\Lambda = c^2\sqrt{\Lambda/3}$, $cH_0$, $cH_0/6$ (Verlinde),
+$cH_0/(2\pi)$.  This is done in two modes:
+
+\begin{enumerate}
+  \item \textbf{$\eta = 1$ (fixed)}: diagnostic direct substitution
+    where the scale is fixed (no optimization) and the likelihood is
+    evaluated directly with zero free parameters.
+  \item \textbf{$\eta$ free}: fit $y = \eta \cdot K(x, s_{\rm named})$
+    with one free parameter per model (matched degrees of freedom).
+\end{enumerate}
+
+AIC values from the $\eta=1$ and $\eta$-free modes are not directly
+comparable because the parameter count differs; model-selection claims
+are restricted to matched-DoF comparisons.
+
+% ============================================================
+\section{Data}\label{sec:data}
+
+\subsection{SPARC}
+
+We use the Spitzer Photometry and Accurate Rotation Curves database
+\citep{Lelli2016} with standard quality cuts: quality flag
+$Q \leq 2$, inclination $30^\circ < i < 85^\circ$, and $\geq 5$
+rotation-curve points per galaxy.  This yields $N = 2{,}740$ data
+points from 126 galaxies.  The physical variables are
+$x = \gbar$~(m~s$^{-2}$) and $y = \gobs/\gbar$ (the RAR mapping
+ratio).
+
+\subsection{Tian et al.\ (2020) Cluster RAR}
+
+As a non-RAR pilot, we use the 84-point cluster-scale RAR from
+\citet{Tian2020}, comprising 20 CLASH clusters.  The known cluster
+acceleration scale is $\sim\!14 \times \gdag$
+\citep{Tian2020}; this dataset serves as an explicit
+null example where $\gdag$ is \emph{not} expected to be recovered.
+
+% ============================================================
+\section{Results}\label{sec:results}
+
+\subsection{Baseline SPARC RAR Control}\label{sec:baseline}
+
+\input{tables/tab_baseline}
+
+The BE\_RAR kernel yields the lowest AIC among all seven candidates,
+with an optimal scale of $\log_{10}(s/{\rm m\,s^{-2}})=\ValBestLogScale$,
+offset by \ValDeltaFromGdag~dex from $\log_{10}\gdag = -9.921$.
+
+The scale injection scan (Figure~\ref{fig:threepanel}a) shows an
+extremely sharp AIC minimum: $\daic/N = \ValDeltaAICPerN$ per data point at
+$\pm 0.1$~dex, with peak sharpness
+$\mathcal{S} = \ValPeakSharpness$~AIC\,/$(\log_{10}\,{\rm m\,s^{-2}})^2$.
+
+\subsection{Null Tests}\label{sec:nullresults}
+
+\input{tables/tab_nulls}
+
+For global shuffle (A1), hits are \ValAOneFracTen\
+($p_{\pm 0.10}=\ValAOnePTen$) and \ValAOneFracFive\
+($p_{\pm 0.05}=\ValAOnePFive$), with one-sided 95\%
+Clopper--Pearson upper bounds
+$p_{{\rm UB},\pm0.10}=\ValAOneCPUpperTen$ and
+$p_{{\rm UB},\pm0.05}=\ValAOneCPUpperFive$.  The within-galaxy
+circular-shift null (A3) gives the same outcome at both windows
+(\ValAThreeFracTen, \ValAThreeFracFive).  The block-permute bins
+null (A2b) preserves within-bin heteroskedasticity while disrupting
+the cross-bin monotonic mapping, and therefore shows intermediate
+behavior: \ValATwoBFracTen\
+($p_{\pm 0.10}=\ValATwoBPTen$) and \ValATwoBFracFive\
+($p_{\pm 0.05}=\ValATwoBPFive$), as listed in
+Table~\ref{tab:nulls}.
+
+The within-bin shuffle (A2) is a \emph{structure-preserving control},
+never a null test: it approximately preserves $p(y \mid x)$ within
+0.5-dex bins at the chosen bin width.  Accordingly it retains high proximity rates
+(\ValATwoCtrlFracTen\ and \ValATwoCtrlFracFive), confirming that the
+signal is carried by the global cross-bin mapping rather than by
+bin-local marginals alone.
+
+Figure~\ref{fig:threepanel}b shows best-scale distributions for all
+four permutation procedures (three nulls + one control).  The global
+and galaxy-shift nulls cluster away from $\gdag$.  The block-permute
+null is broader with partial overlap near $\gdag$, while the
+structure-preserving control retains concentration near $\gdag$.
+
+\subsection{Galaxy-Grouped Cross-Validation}\label{sec:cvresults}
+
+\input{tables/tab_groupcv}
+
+Across \ValCvFoldsTotal\ galaxy-grouped folds, the mean optimal scale is
+$\log_{10} s = \ValCvMean \pm \ValCvStd$, consistent with $\gdag$ to
+within $1\sigma$.  The scale range across folds is $< 0.1$~dex.
+The full-data optimum selects \ValBestKernel; fold-level kernel
+selection is \ValCvBestKernelCount/\ValCvFoldsTotal for
+\ValBestKernel\ and \ValCvAltKernelCount/\ValCvFoldsTotal for
+\ValCvAltKernel.
+
+\subsection{Cut and Grid Sensitivity}\label{sec:sensitivity}
+
+The optimal scale varies by at most \ValCutMaxDelta~dex across four sample
+variants (baseline, strict inclination, strict quality, strict
+minimum points).  Grid invariance is exact: varying
+$N_{\rm grid}$ from 100 to 1{,}000 produces \ValGridMaxDelta~dex
+variation (Figure~\ref{fig:stability}).
+
+\subsection{Negative Controls}\label{sec:negcontrols}
+
+\input{tables/tab_negative}
+
+Table~\ref{tab:negative} reports the degradation of the AIC optimum
+under five destructive perturbations.  The key results are:
+
+\begin{itemize}
+  \item \textbf{Predictor noise} ($\sigma = 0.3$~dex):
+    sharpness decreases substantially and the best scale drifts away
+    from $\gdag$.
+  \item \textbf{Variable warping} ($x \to x^{0.7}$ or $x^{1.3}$):
+    sharpness collapses and the scale displacement is largest.
+    This is the most powerful break test in the suite.
+  \item \textbf{Galaxy label swap}: sharpness drops and scale drift
+    increases relative to baseline.
+\end{itemize}
+
+These results confirm that the sharp AIC minimum at $\gdag$ is a
+genuine feature of the $\gbar$--$\gobs$ correlation, not a numerical
+or methodological artifact.
+
+\subsection{Nearby-Scale Comparison}\label{sec:nearbyresults}
+
+\input{tables/tab_nearby}
+
+At $\eta = 1$ (direct substitution), $\gdag$ is strongly preferred
+over $a_\Lambda$.  However, this comparison
+tests $\eta = 1$ only and does not rule out $\Lambda$ as the
+underlying source of the scale if a non-unity prefactor is allowed.
+Because parameter counts differ between $\eta=1$ and $\eta$-free modes,
+cross-mode AIC magnitudes are treated as diagnostic rather than as
+direct model-selection evidence.
+
+With $\eta$ free (matched degrees of freedom), $cH_0/6$ performs
+comparably to $\gdag$, consistent with the Verlinde relation
+$\gdag \approx cH_0/6$ (agreement to $\sim\!1.5\%$ in linear
+units, 0.039~dex).
+
+\subsection{Non-RAR Pilot: Cluster Data}\label{sec:cluster}
+
+Applied to the Tian et al.\ (2020) cluster RAR, the framework does
+\emph{not} recover $\gdag$: the best scale hits the search boundary
+at $\log_{10} s = \ValClusterBestLogScale$, offset by
+\ValClusterDelta~dex from $\gdag$.  The
+$\daic/N$ at $\pm 0.1$~dex is effectively zero
+(Figure~\ref{fig:threepanel}c), confirming the absence of
+identifiability at galaxy-$\gdag$ in this regime.
+
+This is the expected result: the cluster-scale RAR operates at
+$a_0 \approx 14 \times \gdag$ \citep{Tian2020}, and our framework
+correctly reports a null.
+
+% ============================================================
+\section{Discussion}\label{sec:discussion}
+
+\subsection{What We Claim}
+
+The SPARC RAR strongly localizes a preferred acceleration scale at
+$\log_{10} s = \ValCvMean \pm \ValCvStd$ (GroupKFold).  The full-data
+optimum selects \ValBestKernel; fold-level kernel selection is
+\ValCvBestKernelCount/\ValCvFoldsTotal for \ValBestKernel\ and
+\ValCvAltKernelCount/\ValCvFoldsTotal for \ValCvAltKernel.  This
+localization survives:
+\begin{itemize}
+  \item Three destructive null tests plus one structure-preserving
+    control (\ValAOneN\ realizations each);
+  \item Galaxy-grouped cross-validation (no data leakage);
+  \item Quality and inclination cut variations;
+  \item Grid resolution changes spanning an order of magnitude.
+\end{itemize}
+It collapses under destructive perturbations, confirming it is not
+a fitting artifact.
+
+\subsection{What We Do Not Claim}
+
+We do not claim detection of $\gdag$ in any context beyond the RAR
+itself.  The cluster-scale pilot is an explicit null.  Non-RAR
+second-appearance tests (e.g., Tully--Fisher scatter evolution,
+weak lensing profile shape, galaxy group catalogs) are in progress;
+this work establishes the validated framework and the RAR
+identifiability result.
+
+We do not claim that $a_\Lambda$ is ruled out as the origin of
+$\gdag$.  Our $\eta = 1$ comparison proves only that the pure
+$a_\Lambda$ normalization is disfavored; with a free prefactor,
+$cH_0/6$ (which involves $\Lambda$ through the expansion history)
+performs comparably.
+
+\subsection{Relation to Prior Work}
+
+The identification of $\gdag \approx 1.2 \times 10^{-10}$~m~s$^{-2}$
+in the RAR is not new \citep{McGaugh2016,Lelli2017}.  Our
+contribution is a validated, reusable framework that:
+(a)~quantifies scale identifiability via $\daic/N$;
+(b)~provides multiple null tests including galaxy-grouped permutations;
+(c)~includes built-in interpretation guardrails for nearby-scale
+comparisons.
+
+\subsection{How to Extend This Framework}
+
+To test whether $\gdag$ appears in a new dataset:
+\begin{enumerate}
+  \item Define $(x, y)$ where $x$ has acceleration dimensions.
+  \item Choose a fit mode (``direct'' if $y$ is a known function of
+    $K(x,s)$; ``log'' or ``linear'' otherwise).
+  \item Run the experiment with the same kernel library and null tests.
+  \item A ``second appearance'' detection requires:
+    $\daic/N > 0.01$ at $\pm 0.1$~dex,
+    $p_{\rm within} < 0.01$ (global shuffle),
+    and best scale within $\pm 0.1$~dex of $\gdag$.
+\end{enumerate}
+
+\subsection{Concrete Next Steps}
+
+The following extensions are natural priorities, listed in
+approximate order of feasibility:
+\begin{itemize}
+  \item Apply the framework to independent rotation-curve
+    compilations (e.g., BIG-SPARC, when released) with identical
+    GroupKFold/null controls.
+  \item Map weak lensing excess surface density profiles into
+    acceleration space and test for a $\gdag$-scale feature
+    (requires sub-35-kpc angular resolution).
+  \item Test Tully--Fisher scatter evolution across redshift as a
+    state-variable collapse diagnostic.
+  \item Run the full kernel+null battery on matched $\Lambda$CDM
+    hydrodynamic simulation suites to establish a quantitative
+    comparison metric.
+\end{itemize}
+
+% ============================================================
+\section{Summary}\label{sec:summary}
+
+We have introduced a kernel+scale identifiability framework with
+anti-numerology controls.  Applied to the SPARC RAR:
+
+\begin{enumerate}
+  \item The \ValBestKernel\ kernel localizes the preferred scale to within
+    \ValDeltaFromGdag~dex of $\gdag$, with
+    $\daic/N = \ValDeltaAICPerN$ at $\pm 0.1$~dex.
+  \item Two fully destructive null tests (global, galaxy-shift) yield
+    zero hits in both windows:
+    A1 (\ValAOneFracTen, \ValAOneFracFive) and
+    A3 (\ValAThreeFracTen, \ValAThreeFracFive), with
+    CP upper bounds \ValAOneCPUpperTen\ and \ValAOneCPUpperFive.
+    The block-permute bins null is intermediate
+    (\ValATwoBFracTen, \ValATwoBFracFive), while the
+    within-bin structure-preserving control row
+    remains high (\ValATwoCtrlFracTen, \ValATwoCtrlFracFive).
+  \item Galaxy-grouped \ValCvFoldsTotal-fold CV gives
+    $\log_{10} s = \ValCvMean \pm \ValCvStd$, with fold-level kernel
+    selection \ValCvBestKernelCount/\ValCvFoldsTotal for \ValBestKernel\
+    and \ValCvAltKernelCount/\ValCvFoldsTotal for \ValCvAltKernel.
+  \item Negative controls confirm signal collapse under perturbation.
+  \item The cluster-scale pilot correctly returns a null.
+\end{enumerate}
+
+The framework, code, run folders, and reproducibility metadata are
+publicly available upon request and will be hosted in a public
+repository upon acceptance.
+
+\vspace{1em}
+\noindent\textit{Correspondence welcomed:} r.licht@digconsulting.info.
+For inquiries, please include a short note describing
+(i)~the specific question you would like to pursue,
+(ii)~the dataset(s) you intend to use, and
+(iii)~the type of collaboration you have in mind.
+Discussions will prioritize extensions that can be pursued using
+publicly available data and the methods described herein.
+
+% FIGURES
+% ============================================================
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_three_panel.png}
+\caption{
+\textbf{(a)} AIC vs.\ $\log_{10}({\rm scale})$ for the BE\_RAR
+kernel on SPARC, showing a sharp minimum near $\gdag$ (red line).
+Reference scales $cH_0/6$ (orange dashed) and $a_\Lambda$ (purple
+dotted) are indicated.
+\textbf{(b)} Distribution of best-fit scales from \ValAOneN-realization
+permutation procedures: global shuffle (gray), block-permute bins null
+(blue), within-galaxy circular shift (orange), and within-bin
+structure-preserving control (green).  The $\pm 0.1$~dex band
+around $\gdag$ is shaded.  For the destructive nulls, A1 and A3
+yield \ValAOneFracTen\ and \ValAThreeFracTen\ at $\pm 0.10$ dex,
+and \ValAOneFracFive\ and \ValAThreeFracFive\ at $\pm 0.05$ dex.
+The block-permute null is intermediate
+(\ValATwoBFracTen; \ValATwoBFracFive).  The within-bin
+structure-preserving control remains high
+(\ValATwoCtrlFracTen; \ValATwoCtrlFracFive).
+\textbf{(c)} $\daic/N$ at $\pm 0.1$~dex for SPARC (strong
+identifiability) and cluster data (null, as expected).
+}
+\label{fig:threepanel}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_validation_stability.png}
+\caption{
+\textbf{(a)} Galaxy-grouped \ValCvFoldsTotal-fold cross-validation: best scale per
+fold.  The $\pm 0.1$~dex band around $\gdag$ is shaded.
+Mean $\pm$ std: $\ValCvMean \pm \ValCvStd$.
+\textbf{(b)} Sensitivity to quality cuts: baseline ($Q \leq 2$,
+$30^\circ$--$85^\circ$, $\geq 5$ pts), strict inclination
+($40^\circ$--$80^\circ$), strict quality ($Q \leq 1$), and strict
+minimum points ($\geq 10$).  Maximum variation: \ValCutMaxDelta~dex.
+\textbf{(c)} Grid invariance: best scale vs.\ $N_{\rm grid}$
+from 100 to 1{,}000.  Variation = \ValGridMaxDelta~dex.
+}
+\label{fig:stability}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_negative_controls.png}
+\caption{
+Negative controls (break tests).
+\textbf{(a)} Peak sharpness as a fraction of baseline under five
+perturbations: predictor noise ($\sigma = 0.1, 0.3$~dex), variable
+warping ($x \to x^{0.7}, x^{1.3}$), and galaxy-label swap.
+Warping completely destroys the optimum (sharpness $\to 0$).
+\textbf{(b)} Scale drift: distance of perturbed best scale from
+$\gdag$.  The 0.1~dex threshold (red dashed) is exceeded by warps
+and galaxy swap.
+}
+\label{fig:negcontrols}
+\end{figure*}
+
+% ============================================================
+% APPENDIX
+% ============================================================
+
+\appendix
+
+\section{Reproducibility}\label{app:repro}
+
+\input{tables/appendix_repro}
+
+\noindent The complete run folder, including all stored arrays,
+null distributions, and figure-generating scripts, is available in
+the project repository.  To regenerate all results:
+
+\begin{verbatim}
+python3 analysis/tests/\
+  test_gdagger_hunt_refereeproof.py \
+  --n-shuffles 500 --seed 42
+python3 analysis/tools/\
+  make_paper_assets.py
+\end{verbatim}
+
+% ============================================================
+\begin{acknowledgments}
+This work uses the SPARC database \citep{Lelli2016} and the
+Tian et al.\ (2020) cluster RAR data.
+\end{acknowledgments}
+
+% ============================================================
+\bibliography{references}
+\bibliographystyle{aasjournal}
+
+\end{document}

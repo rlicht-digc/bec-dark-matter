@@ -1,0 +1,90 @@
+{
+  "test": "GPP_universality_3phase",
+  "timestamp": "2026-02-22 19:40:09",
+  "runtime_s": 4.8,
+  "prior_run_reference": {
+    "scatter_dex": 0.623,
+    "mass_slope": 0.0291,
+    "mass_slope_p": 0.032,
+    "boson_mass_eV": 3.95e-24,
+    "n_galaxies": 627
+  },
+  "phase_A_inversion": {
+    "HQ": {
+      "n_galaxies": 43,
+      "n_points_total": 1058,
+      "cs2_median": 2710473000.0,
+      "cs2_mean_log10": 9.5785,
+      "cs2_std_dex": 0.4663,
+      "mass_slope": 0.05587,
+      "mass_slope_se": 0.03858,
+      "mass_slope_p": 0.15517,
+      "mean_TF_fraction": 0.7972,
+      "env_split": {
+        "field_n": 39,
+        "dense_n": 4,
+        "note": "Too few dense galaxies for env test"
+      }
+    },
+    "relaxed": {
+      "n_galaxies": 96,
+      "n_points_total": 2362,
+      "cs2_median": 4289599000.0,
+      "cs2_mean_log10": 9.6158,
+      "cs2_std_dex": 0.4602,
+      "mass_slope": 0.05039,
+      "mass_slope_se": 0.03121,
+      "mass_slope_p": 0.10979,
+      "mean_TF_fraction": 0.7894,
+      "env_split": {
+        "field_n": 75,
+        "dense_n": 21,
+        "field_mean": 9.5825,
+        "dense_mean": 9.7349,
+        "field_std": 0.4819,
+        "dense_std": 0.3476,
+        "mann_whitney_p": 0.1389,
+        "levene_p": 0.0654
+      }
+    }
+  },
+  "phase_B_forward": {
+    "n_galaxies": 98,
+    "n_points": 2443,
+    "cs2_proxy_median": 5715335000.0,
+    "cs2_proxy_mean_log10": 9.7105,
+    "cs2_proxy_std_dex": 0.5212,
+    "mass_slope": 0.05974,
+    "mass_slope_se": 0.02768,
+    "mass_slope_p": 0.033383,
+    "AIC_universal": 155.19,
+    "AIC_linear_mass": 151.77,
+    "BIC_universal": 160.36,
+    "BIC_linear_mass": 159.52,
+    "delta_AIC_U_minus_L": 3.43,
+    "akaike_weight_universal": 0.5
+  },
+  "phase_C_TNG_null": {
+    "n_galaxies": 20861,
+    "cs2_median": 3761581000.0,
+    "cs2_mean_log10": 9.6259,
+    "cs2_std_dex": 0.3172,
+    "mass_slope_halo": 0.62055,
+    "mass_slope_halo_se": 0.00141,
+    "mass_slope_halo_p": 0.0,
+    "mass_slope_star": 0.48292,
+    "mass_slope_star_p": 0.0,
+    "AIC_universal": 11825.39,
+    "AIC_linear_mass": -37288.46,
+    "delta_AIC": 49113.85,
+    "mean_TF_fraction": 0.9978
+  },
+  "discrimination": {
+    "sparc_scatter": 0.4663,
+    "tng_scatter": 0.3172,
+    "scatter_ratio": 1.47,
+    "sparc_mass_slope_p": 0.15517,
+    "tng_mass_slope_p": 0.0
+  },
+  "verdict": "INCONCLUSIVE \u2014 need more data or better method"
+}

@@ -1,0 +1,43 @@
+{
+  "test": "GPP_inversion_cs2_universality",
+  "n_galaxies": 627,
+  "n_points_total": 15745,
+  "n_points_valid_cs2": 6821,
+  "n_points_TF_regime": 6630,
+  "n_points_quantum_regime": 2051,
+  "frac_negative_gDM": 0.17865989202921562,
+  "cs2_median": 5883150446.164567,
+  "cs2_std_dex": 0.6228975327892325,
+  "cs2_mass_slope": 0.029117766580709747,
+  "cs2_mass_slope_err": 0.04569494930039503,
+  "cs2_mass_slope_pvalue": 0.032297142643824155,
+  "cs2_universality": "REJECTED",
+  "boson_mass_eV": 3.952472396406296e-24,
+  "boson_mass_CI95": [
+    6.167098630063243e-25,
+    1.1787307296662345e-22
+  ],
+  "lyman_alpha_compatible": false,
+  "TF_regime_fraction": 0.7637368966708904,
+  "TF_median_X": 1.4137744273668627,
+  "TF_restricted_X3": {
+    "n_gal": 50,
+    "cs2_median": 568037140.6090072,
+    "cs2_std_dex": 0.9220250933084433
+  },
+  "morphology_spearman_rho": -0.7498616693770629,
+  "morphology_spearman_p": 9.767268230174804e-19,
+  "sparc_systematics": {
+    "n_galaxies": 128,
+    "median_log_cs2": 9.446444890155604,
+    "std_log_cs2": 0.47806178242415126,
+    "median_cs2": 2795455596.590479
+  },
+  "wallaby_systematics": {
+    "n_galaxies": 117,
+    "median_log_cs2": 9.834495405738352,
+    "std_log_cs2": 0.8493523337836729,
+    "median_cs2": 6831174914.6082735
+  },
+  "verdict": "c_s^2 varies strongly across galaxies; either TF assumptions fail broadly or coupling is not universal in this form."
+}

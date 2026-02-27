@@ -1,0 +1,233 @@
+{
+  "description": "SPARC-matched analog analysis in EAGLE & TNG",
+  "date": "2026-02-21",
+  "parameters": {
+    "n_analogs": 5,
+    "matching_metric": "Euclidean in (log M_star / \u03c3_M, log R_half / \u03c3_R)",
+    "sigma_Mstar": 1.0976538941710468,
+    "sigma_R": 0.34266707771114047,
+    "max_match_distance": 5.0,
+    "bin_width_dex": 0.3,
+    "n_bootstrap": 1000,
+    "rdisk_to_rhalf_factor": 1.678,
+    "mass_to_light_disk": 0.5
+  },
+  "sample_sizes": {
+    "SPARC_quality": 98,
+    "SPARC_with_RAR": 98,
+    "EAGLE_total": 29716,
+    "EAGLE_matched_galaxies": 98,
+    "EAGLE_matched_unique_analogs": 454,
+    "EAGLE_total_RAR_points": 4899,
+    "TNG_available": true,
+    "TNG_total": 49574,
+    "TNG_matched_galaxies": 98,
+    "TNG_total_RAR_points": 1960
+  },
+  "match_quality": {
+    "eagle": {
+      "log_Mstar_KS": {
+        "stat": 0.04285714285714286,
+        "p": 0.9974081928419419
+      },
+      "log_Rhalf_KS": {
+        "stat": 0.036734693877551024,
+        "p": 0.9998053521386266
+      },
+      "Vflat_KS": {
+        "stat": 0.12235405790223065,
+        "p": 0.2038661882400517
+      },
+      "n_matched": 98,
+      "n_unmatched": 0,
+      "median_distance": 0.027415187546692872
+    },
+    "tng": {
+      "log_Mstar_KS": {
+        "stat": 0.09183673469387756,
+        "p": 0.4783369464882682
+      },
+      "log_Rhalf_KS": {
+        "stat": 0.25510204081632654,
+        "p": 3.885781746126996e-05
+      },
+      "n_matched": 98,
+      "n_unmatched": 0,
+      "median_distance": 0.11065278025132391
+    }
+  },
+  "test1_scatter_inversion": {
+    "SPARC_inversion": -9.862976445539806,
+    "EAGLE_matched_inversion": -11.115183281797156,
+    "TNG_matched_inversion": -11.164454902589108,
+    "SPARC_overall_sigma": 0.1582472350525681,
+    "EAGLE_matched_overall_sigma": 0.1505076481017049,
+    "TNG_matched_overall_sigma": 0.2532714834628169,
+    "robustness_offsets": {
+      "SPARC": [
+        -9.862976445539806,
+        -9.915651827884588,
+        -9.908985077409822,
+        -9.920193264762007,
+        -9.919572811337611,
+        -9.909476702606959,
+        -9.92776845982587,
+        -9.89667011910621,
+        -9.872471115201614,
+        -9.862156834922283
+      ],
+      "EAGLE": [
+        -11.115183281797156,
+        -13.253951435749693,
+        -13.323375312683662,
+        -13.386774228524045,
+        -11.029303049151947,
+        -13.167612534590074,
+        -13.26706543562422,
+        -13.248487420487544,
+        -13.182183266223163,
+        -13.14894047204687
+      ],
+      "TNG": [
+        -11.164454902589108,
+        -11.141044109971656,
+        -11.065140848312067,
+        -11.07273667189992,
+        -11.07389018712696,
+        -11.039120598949543,
+        -11.886558181089878,
+        -11.920580268360709,
+        -11.88901422461461,
+        -11.264295931098555
+      ]
+    }
+  },
+  "test2_inversion_proximity": {
+    "SPARC": {
+      "inversion": -9.862976445539806,
+      "delta_gdagger": 0.05784230841256921
+    },
+    "EAGLE_matched": {
+      "inversion": -11.115183281797156,
+      "delta_gdagger": 1.1943645278447814
+    },
+    "TNG_matched": {
+      "inversion": -11.164454902589108,
+      "delta_gdagger": 1.2436361486367336
+    }
+  },
+  "test3_acf": {
+    "SPARC_full": {
+      "N": 98,
+      "mean": 0.503598323574132,
+      "median": 0.5648542732830741,
+      "std": 0.3161061560576316,
+      "frac_positive": 0.9285714285714286
+    },
+    "SPARC_10pt": {
+      "N": 98,
+      "mean": 0.3814185205455873,
+      "median": 0.444302013748475
+    },
+    "EAGLE_matched": {
+      "N": 454,
+      "mean": 0.6053088711969687,
+      "median": 0.638514263524878,
+      "std": 0.16347543534496323,
+      "frac_positive": 0.9933920704845814
+    },
+    "KS_SPARC_full_vs_EAGLE": {
+      "stat": 0.268677515058887,
+      "p": 1.257152003450327e-05
+    },
+    "KS_SPARC_10pt_vs_EAGLE": {
+      "stat": 0.39112649465072374,
+      "p": 1.4188588392131489e-11
+    }
+  },
+  "test4_scatter_shape": {
+    "shape_correlation_SPARC_vs_EAGLE": -0.06794247750702884,
+    "shape_correlation_p": 0.8338226570662517
+  },
+  "test5_per_galaxy_scatter": {
+    "n_paired": 98,
+    "SPARC_mean_sigma": 0.09551456025442759,
+    "EAGLE_mean_sigma": 0.08961762447943482,
+    "wilcoxon_stat": 2425.0,
+    "wilcoxon_p": 0.9985863180555432
+  },
+  "test6_environmental": {
+    "status": "NOT_FEASIBLE",
+    "reason": "No environment metadata in available simulation catalogs",
+    "reference": "test_env_scatter_definitive.py (SPARC: 99.8% confidence)"
+  },
+  "resolution_matched": {
+    "sparc_full_inversion": -9.862976445539806,
+    "sparc_10pt_inversion": -9.860892484797198,
+    "eagle_matched_inversion": -11.115183281797156,
+    "sparc_full_sigma": 0.1582472350525681,
+    "sparc_10pt_sigma": 0.18632061361324162,
+    "eagle_matched_sigma": 0.1505076481017049,
+    "sparc_full_acf_mean": 0.503598323574132,
+    "sparc_10pt_acf_mean": 0.3814185205455873,
+    "eagle_matched_acf_mean": 0.6053088711969687
+  },
+  "feature_summary": [
+    {
+      "feature": "Inversion exists",
+      "SPARC": "Yes",
+      "EAGLE_matched": "Yes",
+      "TNG_matched": "Yes",
+      "same": "YES"
+    },
+    {
+      "feature": "Inversion location",
+      "SPARC": "-9.863",
+      "EAGLE_matched": "-11.115",
+      "TNG_matched": "-11.164",
+      "same": "NO"
+    },
+    {
+      "feature": "Overall \u03c3 (dex)",
+      "SPARC": "0.1582",
+      "EAGLE_matched": "0.1505",
+      "TNG_matched": "0.2533",
+      "same": "YES"
+    },
+    {
+      "feature": "ACF mean",
+      "SPARC": "0.504",
+      "EAGLE_matched": "0.605",
+      "TNG_matched": "-0.008",
+      "same": "NO"
+    },
+    {
+      "feature": "ACF KS p-value",
+      "SPARC": "ref",
+      "EAGLE_matched": "0.0000",
+      "TNG_matched": "N/A",
+      "same": "NO"
+    },
+    {
+      "feature": "Per-galaxy \u03c3 (Wilcoxon p)",
+      "SPARC": "0.0955",
+      "EAGLE_matched": "0.0896",
+      "TNG_matched": "N/A",
+      "same": "YES"
+    },
+    {
+      "feature": "Scatter shape r",
+      "SPARC": "ref",
+      "EAGLE_matched": "-0.068",
+      "TNG_matched": "N/A",
+      "same": "NO"
+    }
+  ],
+  "limitations": [
+    "TNG only 4 apertures: no ACF/periodicity tests possible",
+    "TNG g_bar stellar-only (no gas mass in HDF5)",
+    "EAGLE R_half derived from 10-aperture interpolation",
+    "R_disk to R_half conversion assumes pure exponential disk",
+    "No environment metadata in simulation catalogs"
+  ]
+}

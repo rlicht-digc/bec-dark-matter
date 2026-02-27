@@ -1,0 +1,110 @@
+{
+  "test_name": "lensing_profile_shape",
+  "description": "Fit NFW and cored profiles to Brouwer+2021 lensing ESD data. BEC predicts solitonic cores for isolated galaxies.",
+  "mass_bins": {
+    "1": {
+      "label": "Dwarf (8.5-10.3)",
+      "n_points": 15,
+      "nfw": {
+        "log_M200": 11.264,
+        "c": 1.0,
+        "chi2_dof": 2.295
+      },
+      "iso": {
+        "r_core_kpc": 720.1,
+        "chi2_dof": 14.881
+      },
+      "delta_aic": 163.6,
+      "preferred": "NFW",
+      "inner_excess_frac": -0.045,
+      "outer_deficit_frac": 0.468,
+      "R_gdagger_Mpc": 0.0017,
+      "R_gdagger_kpc": 2.0,
+      "R_gdagger_in_data_range": false,
+      "V_inner": 141.6,
+      "V_outer": 132.6,
+      "V_ratio": 0.936,
+      "flat": "YES"
+    },
+    "2": {
+      "label": "Intermediate-low (10.3-10.6)",
+      "n_points": 15,
+      "nfw": {
+        "log_M200": 11.659,
+        "c": 1.0,
+        "chi2_dof": 3.138
+      },
+      "iso": {
+        "r_core_kpc": 865.7,
+        "chi2_dof": 28.599
+      },
+      "delta_aic": 331.0,
+      "preferred": "NFW",
+      "inner_excess_frac": -0.378,
+      "outer_deficit_frac": 0.23,
+      "R_gdagger_Mpc": 0.0057,
+      "R_gdagger_kpc": 6.0,
+      "R_gdagger_in_data_range": false,
+      "V_inner": 162.5,
+      "V_outer": 164.1,
+      "V_ratio": 1.01,
+      "flat": "YES"
+    },
+    "3": {
+      "label": "Intermediate-high (10.6-10.8)",
+      "n_points": 15,
+      "nfw": {
+        "log_M200": 11.789,
+        "c": 1.0,
+        "chi2_dof": 5.281
+      },
+      "iso": {
+        "r_core_kpc": 1338.0,
+        "chi2_dof": 36.714
+      },
+      "delta_aic": 408.6,
+      "preferred": "NFW",
+      "inner_excess_frac": -0.345,
+      "outer_deficit_frac": 0.405,
+      "R_gdagger_Mpc": 0.0076,
+      "R_gdagger_kpc": 8.0,
+      "R_gdagger_in_data_range": false,
+      "V_inner": 184.1,
+      "V_outer": 214.6,
+      "V_ratio": 1.166,
+      "flat": "YES"
+    },
+    "4": {
+      "label": "Massive (10.8-11.0)",
+      "n_points": 15,
+      "nfw": {
+        "log_M200": 11.931,
+        "c": 1.0,
+        "chi2_dof": 3.954
+      },
+      "iso": {
+        "r_core_kpc": 1379.3,
+        "chi2_dof": 57.087
+      },
+      "delta_aic": 690.7,
+      "preferred": "NFW",
+      "inner_excess_frac": -0.271,
+      "outer_deficit_frac": 0.302,
+      "R_gdagger_Mpc": 0.0096,
+      "R_gdagger_kpc": 10.0,
+      "R_gdagger_in_data_range": false,
+      "V_inner": 199.6,
+      "V_outer": 227.9,
+      "V_ratio": 1.142,
+      "flat": "YES"
+    }
+  },
+  "verdict": "NFW ADEQUATE: NFW fits as well or better than cored profiles at all masses. No evidence for solitonic cores at the stacked lensing resolution. Does not rule out BEC \u2014 cores may be too small to resolve.",
+  "caveats": [
+    "Stacked lensing averages over many galaxies \u2014 core signatures may wash out",
+    "Brouwer data has 15 radial bins per mass bin \u2014 limited radial resolution",
+    "Inner radius (35 kpc) may not resolve the BEC soliton core (\u03be ~ 1-10 kpc)",
+    "Both NFW and ISO are parametric \u2014 actual BEC profile (soliton+condensate) is more complex",
+    "The lensing signal probes the TOTAL mass, not just DM"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-02-23T02:36:15.518931+00:00",
+  "results_root": "/Users/russelllicht/bec-dark-matter/analysis/results",
+  "known_dataset_ids": [
+    "TNG_RAR_20899x15_SOFT1p5_RUN20260222_1933",
+    "TNG_RAR_3000x50_SOFT1p5_RUN201626"
+  ],
+  "n_files_scanned": 139,
+  "n_missing_dataset_id": 139,
+  "strict_failed": false,
+  "outputs": {
+    "csv": "/Users/russelllicht/bec-dark-matter/analysis/results/dataset_lineage_audit.csv",
+    "json": "/Users/russelllicht/bec-dark-matter/analysis/results/dataset_lineage_audit.json"
+  }
+}

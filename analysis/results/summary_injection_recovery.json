@@ -1,0 +1,608 @@
+{
+  "test": "injection_recovery_C1",
+  "description": "Injection-recovery test: can EAGLE 10 fixed radii detect the Lomb-Scargle periodicity observed in SPARC? Tests 25 galaxies with significant periodicity by resampling onto EAGLE radii.",
+  "parameters": {
+    "eagle_radii_kpc": [
+      1.0,
+      3.0,
+      5.0,
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      70.0,
+      100.0
+    ],
+    "n_surrogates": 200,
+    "n_mc_noise_trials": 100,
+    "significance_threshold": 0.05,
+    "min_pts_ls": 5
+  },
+  "sample": {
+    "n_significant_sparc": 25,
+    "n_with_profiles": 25,
+    "n_testable": 17,
+    "n_too_few_radii": 8
+  },
+  "noise_free": {
+    "n_detected": 0,
+    "n_total": 25,
+    "detection_power": 0.0,
+    "per_galaxy": [
+      {
+        "name": "DDO161",
+        "n_eagle_radii": 4,
+        "true_wl": 7.1,
+        "detected": false,
+        "reason": "too_few_radii (4 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "ESO563-G021",
+        "n_eagle_radii": 7,
+        "R_range": [
+          1.0,
+          40.0
+        ],
+        "true_wl": 23.99,
+        "detected": false,
+        "recovered_wl": 11.1429,
+        "power_peak": 0.632,
+        "perm_p": 0.595,
+        "R_min_gal": 0.45,
+        "R_max_gal": 42.41,
+        "n_pts_orig": 30
+      },
+      {
+        "name": "NGC0024",
+        "n_eagle_radii": 4,
+        "true_wl": 2.29,
+        "detected": false,
+        "reason": "too_few_radii (4 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "NGC1003",
+        "n_eagle_radii": 5,
+        "R_range": [
+          3.0,
+          30.0
+        ],
+        "true_wl": 16.49,
+        "detected": false,
+        "recovered_wl": 10.8,
+        "power_peak": 0.8022,
+        "perm_p": 0.525,
+        "R_min_gal": 1.25,
+        "R_max_gal": 30.24,
+        "n_pts_orig": 36
+      },
+      {
+        "name": "NGC2403",
+        "n_eagle_radii": 5,
+        "R_range": [
+          1.0,
+          20.0
+        ],
+        "true_wl": 2.67,
+        "detected": false,
+        "recovered_wl": 7.6,
+        "power_peak": 0.4884,
+        "perm_p": 0.915,
+        "R_min_gal": 0.16,
+        "R_max_gal": 20.87,
+        "n_pts_orig": 73
+      },
+      {
+        "name": "NGC2841",
+        "n_eagle_radii": 6,
+        "R_range": [
+          5.0,
+          50.0
+        ],
+        "true_wl": 21.29,
+        "detected": false,
+        "recovered_wl": 27.9474,
+        "power_peak": 0.943,
+        "perm_p": 0.065,
+        "R_min_gal": 3.44,
+        "R_max_gal": 63.64,
+        "n_pts_orig": 50
+      },
+      {
+        "name": "NGC2976",
+        "n_eagle_radii": 1,
+        "true_wl": 0.43,
+        "detected": false,
+        "reason": "too_few_radii (1 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "NGC3198",
+        "n_eagle_radii": 7,
+        "R_range": [
+          1.0,
+          40.0
+        ],
+        "true_wl": 8.73,
+        "detected": false,
+        "recovered_wl": 11.1429,
+        "power_peak": 0.4445,
+        "perm_p": 0.855,
+        "R_min_gal": 0.32,
+        "R_max_gal": 44.08,
+        "n_pts_orig": 43
+      },
+      {
+        "name": "NGC3521",
+        "n_eagle_radii": 4,
+        "true_wl": 4.11,
+        "detected": false,
+        "reason": "too_few_radii (4 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "NGC4100",
+        "n_eagle_radii": 4,
+        "true_wl": 6.46,
+        "detected": false,
+        "reason": "too_few_radii (4 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "NGC4183",
+        "n_eagle_radii": 5,
+        "R_range": [
+          1.0,
+          20.0
+        ],
+        "true_wl": 11.62,
+        "detected": false,
+        "recovered_wl": 7.6,
+        "power_peak": 0.4884,
+        "perm_p": 0.94,
+        "R_min_gal": 0.87,
+        "R_max_gal": 21.02,
+        "n_pts_orig": 23
+      },
+      {
+        "name": "NGC5033",
+        "n_eagle_radii": 7,
+        "R_range": [
+          1.0,
+          40.0
+        ],
+        "true_wl": 19.24,
+        "detected": false,
+        "recovered_wl": 23.6053,
+        "power_peak": 0.5793,
+        "perm_p": 0.83,
+        "R_min_gal": 0.76,
+        "R_max_gal": 44.59,
+        "n_pts_orig": 22
+      },
+      {
+        "name": "NGC5371",
+        "n_eagle_radii": 6,
+        "R_range": [
+          3.0,
+          40.0
+        ],
+        "true_wl": 25.38,
+        "detected": false,
+        "recovered_wl": 18.6581,
+        "power_peak": 0.4638,
+        "perm_p": 0.935,
+        "R_min_gal": 1.45,
+        "R_max_gal": 46.24,
+        "n_pts_orig": 19
+      },
+      {
+        "name": "NGC5985",
+        "n_eagle_radii": 4,
+        "true_wl": 16.45,
+        "detected": false,
+        "reason": "too_few_radii (4 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "NGC6015",
+        "n_eagle_radii": 5,
+        "R_range": [
+          1.0,
+          20.0
+        ],
+        "true_wl": 6.36,
+        "detected": false,
+        "recovered_wl": 7.6,
+        "power_peak": 0.4884,
+        "perm_p": 0.96,
+        "R_min_gal": 0.34,
+        "R_max_gal": 29.23,
+        "n_pts_orig": 44
+      },
+      {
+        "name": "NGC6946",
+        "n_eagle_radii": 5,
+        "R_range": [
+          1.0,
+          20.0
+        ],
+        "true_wl": 6.23,
+        "detected": false,
+        "recovered_wl": 7.6,
+        "power_peak": 0.4884,
+        "perm_p": 0.94,
+        "R_min_gal": 0.19,
+        "R_max_gal": 20.4,
+        "n_pts_orig": 58
+      },
+      {
+        "name": "NGC7331",
+        "n_eagle_radii": 5,
+        "R_range": [
+          3.0,
+          30.0
+        ],
+        "true_wl": 18.64,
+        "detected": false,
+        "recovered_wl": 10.8,
+        "power_peak": 0.8022,
+        "perm_p": 0.52,
+        "R_min_gal": 2.67,
+        "R_max_gal": 36.31,
+        "n_pts_orig": 36
+      },
+      {
+        "name": "UGC02487",
+        "n_eagle_radii": 6,
+        "R_range": [
+          10.0,
+          70.0
+        ],
+        "true_wl": 34.86,
+        "detected": false,
+        "recovered_wl": 29.2562,
+        "power_peak": 0.9312,
+        "perm_p": 0.12,
+        "R_min_gal": 9.93,
+        "R_max_gal": 80.38,
+        "n_pts_orig": 17
+      },
+      {
+        "name": "UGC02916",
+        "n_eagle_radii": 6,
+        "R_range": [
+          1.0,
+          30.0
+        ],
+        "true_wl": 9.38,
+        "detected": false,
+        "recovered_wl": 9.6667,
+        "power_peak": 0.6176,
+        "perm_p": 0.66,
+        "R_min_gal": 0.37,
+        "R_max_gal": 38.0,
+        "n_pts_orig": 43
+      },
+      {
+        "name": "UGC03205",
+        "n_eagle_radii": 7,
+        "R_range": [
+          1.0,
+          40.0
+        ],
+        "true_wl": 5.96,
+        "detected": false,
+        "recovered_wl": 11.1429,
+        "power_peak": 0.6399,
+        "perm_p": 0.6,
+        "R_min_gal": 0.28,
+        "R_max_gal": 40.04,
+        "n_pts_orig": 48
+      },
+      {
+        "name": "UGC03546",
+        "n_eagle_radii": 5,
+        "R_range": [
+          1.0,
+          20.0
+        ],
+        "true_wl": 5.97,
+        "detected": false,
+        "recovered_wl": 7.6,
+        "power_peak": 0.4884,
+        "perm_p": 0.945,
+        "R_min_gal": 0.63,
+        "R_max_gal": 29.23,
+        "n_pts_orig": 30
+      },
+      {
+        "name": "UGC03580",
+        "n_eagle_radii": 5,
+        "R_range": [
+          1.0,
+          20.0
+        ],
+        "true_wl": 2.9,
+        "detected": false,
+        "recovered_wl": 7.6,
+        "power_peak": 0.4884,
+        "perm_p": 0.91,
+        "R_min_gal": 0.11,
+        "R_max_gal": 27.06,
+        "n_pts_orig": 47
+      },
+      {
+        "name": "UGC06787",
+        "n_eagle_radii": 6,
+        "R_range": [
+          1.0,
+          30.0
+        ],
+        "true_wl": 1.1,
+        "detected": false,
+        "recovered_wl": 9.6667,
+        "power_peak": 0.5404,
+        "perm_p": 0.815,
+        "R_min_gal": 0.12,
+        "R_max_gal": 37.19,
+        "n_pts_orig": 71
+      },
+      {
+        "name": "UGC11914",
+        "n_eagle_radii": 3,
+        "true_wl": 2.53,
+        "detected": false,
+        "reason": "too_few_radii (3 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      },
+      {
+        "name": "UGCA444",
+        "n_eagle_radii": 1,
+        "true_wl": 0.84,
+        "detected": false,
+        "reason": "too_few_radii (1 < 5)",
+        "recovered_wl": NaN,
+        "perm_p": NaN
+      }
+    ]
+  },
+  "noisy": {
+    "mean_detection_rate": 0.0224,
+    "median_detection_rate": 0.0,
+    "n_mc_trials": 100,
+    "per_galaxy": [
+      {
+        "name": "DDO161",
+        "n_eagle_radii": 4,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "ESO563-G021",
+        "n_eagle_radii": 7,
+        "true_wl": 23.99,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC0024",
+        "n_eagle_radii": 4,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "NGC1003",
+        "n_eagle_radii": 5,
+        "true_wl": 16.49,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC2403",
+        "n_eagle_radii": 5,
+        "true_wl": 2.67,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC2841",
+        "n_eagle_radii": 6,
+        "true_wl": 21.29,
+        "detection_rate": 0.3,
+        "n_detected": 30,
+        "n_trials": 100,
+        "median_recovered_wl": 27.9474
+      },
+      {
+        "name": "NGC2976",
+        "n_eagle_radii": 1,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "NGC3198",
+        "n_eagle_radii": 7,
+        "true_wl": 8.73,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC3521",
+        "n_eagle_radii": 4,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "NGC4100",
+        "n_eagle_radii": 4,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "NGC4183",
+        "n_eagle_radii": 5,
+        "true_wl": 11.62,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC5033",
+        "n_eagle_radii": 7,
+        "true_wl": 19.24,
+        "detection_rate": 0.02,
+        "n_detected": 2,
+        "n_trials": 100,
+        "median_recovered_wl": 23.8699
+      },
+      {
+        "name": "NGC5371",
+        "n_eagle_radii": 6,
+        "true_wl": 25.38,
+        "detection_rate": 0.06,
+        "n_detected": 6,
+        "n_trials": 100,
+        "median_recovered_wl": 22.9789
+      },
+      {
+        "name": "NGC5985",
+        "n_eagle_radii": 4,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "NGC6015",
+        "n_eagle_radii": 5,
+        "true_wl": 6.36,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC6946",
+        "n_eagle_radii": 5,
+        "true_wl": 6.23,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "NGC7331",
+        "n_eagle_radii": 5,
+        "true_wl": 18.64,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC02487",
+        "n_eagle_radii": 6,
+        "true_wl": 34.86,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC02916",
+        "n_eagle_radii": 6,
+        "true_wl": 9.38,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC03205",
+        "n_eagle_radii": 7,
+        "true_wl": 5.96,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC03546",
+        "n_eagle_radii": 5,
+        "true_wl": 5.97,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC03580",
+        "n_eagle_radii": 5,
+        "true_wl": 2.9,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC06787",
+        "n_eagle_radii": 6,
+        "true_wl": 1.1,
+        "detection_rate": 0.0,
+        "n_detected": 0,
+        "n_trials": 100,
+        "median_recovered_wl": NaN
+      },
+      {
+        "name": "UGC11914",
+        "n_eagle_radii": 3,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      },
+      {
+        "name": "UGCA444",
+        "n_eagle_radii": 1,
+        "detection_rate": 0.0,
+        "reason": "too_few_radii"
+      }
+    ]
+  },
+  "wavelength_recovery": {
+    "n_detected": 0,
+    "mean_log_ratio": null,
+    "std_log_ratio": null,
+    "spearman_rho": null,
+    "spearman_p": null
+  },
+  "nyquist_analysis": {
+    "nyquist_limit_kpc": 4.0,
+    "practical_limit_kpc": 30.0,
+    "n_below_nyquist": 7,
+    "n_below_practical": 24,
+    "sparc_wl_median": 6.46,
+    "sparc_wl_q25": 2.9,
+    "sparc_wl_q75": 16.49
+  },
+  "verdict": "UNINFORMATIVE",
+  "verdict_text": "EAGLE's 10 fixed radii have <10% detection power. The 2.8% periodicity rate in EAGLE is UNINFORMATIVE \u2014 the sampling cannot detect ~7 kpc signals even when present.",
+  "figures": {
+    "injection_recovery": "/Users/russelllicht/bec-dark-matter/analysis/results/injection_recovery_power.png"
+  }
+}

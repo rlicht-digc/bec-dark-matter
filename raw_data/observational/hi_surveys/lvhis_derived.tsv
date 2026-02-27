@@ -1,0 +1,121 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-16T17:45:17 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-16T17:45:17	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/MNRAS/478/1611/table8&-out.max=unlimited	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_74781611
+#Name: J/MNRAS/478/1611
+#Title: Local Volume H I Survey (LVHIS) (Koribalski+, 2018)
+#INFO	ivoid=ivo://cds.vizier/j/mnras/478/1611	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/mnras/478/1611	    IVOID of underlying data collection
+#INFO	creator=Koribalski B.S.	    First author or institution
+#INFO	cites=bibcode:2018MNRAS.478.1611K	    Article or Data origin sources
+#INFO	journal=MNRA	    Journal name
+#INFO	original_date=2018	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/478/1611	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.74781611	    Dataset identifier that can be used for citation
+#INFO	publication_date=2024-08-18	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_MNRAS_478_1611_table8:
+#Name: J/MNRAS/478/1611/table8
+#Title: Derived properties of the LVHIS galaxies
+#Column	HIPASS	(A15)	HIPASS name (HIPASS JHHMM+DD)	[ucd=meta.id;meta.main]
+#Column	OName	(a12)	Optical galaxy name	[ucd=meta.id]
+#Column	vrot	(I3)	? Rotational velocity	[ucd=phys.veloc.rotat]
+#Column	logMdyn	(F5.2)	? Dynamical mass	[ucd=phys.mass]
+#Column	logMHI/Mdyn	(F5.2)	? HI to dynamical mass ratio	[ucd=phys.mass.loss]
+HIPASS	OName	vrot	logMdyn	logMHI/Mdyn
+ 	 	km/s	[Msun]	[-]
+---------------	------------	---	-----	-----
+HIPASS J0008-34	ESO349-G031 	 51	 8.82	-1.75
+               	ESO294-G010 	   	     	
+HIPASS J0015-32	ESO410-G005 	   	     	
+HIPASS J0015-39	NGC 55      	 97	10.39	-1.06
+HIPASS J0047-20	NGC 247     	109	10.87	-1.56
+HIPASS J0047-25	NGC 253     	217	11.19	-1.75
+HIPASS J0054-37	NGC 300     	104	10.54	-1.26
+HIPASS J0135-41	NGC 625     	 46	 9.14	-1.20
+HIPASS J0145-43	ESO245-G005 	 52	 9.52	-0.94
+HIPASS J0150-44	ESO245-G007 	   	     	
+HIPASS J0237-61	ESO115-G021 	 66	 9.91	-1.10
+HIPASS J0256-54	ESO154-G023 	 66	 9.98	-0.98
+HIPASS J0258-49	ESO199-G007 	 32	 8.46	-1.25
+HIPASS J0317-66	NGC 1313    	116	10.52	-1.24
+HIPASS J0320-52	NGC 1311    	 47	 9.15	-1.21
+HIPASS J0321-66	AM0319-662  	   	     	
+HIPASS J0333-50	IC 1959     	 74	 9.76	-1.41
+HIPASS J0454-53	NGC 1705    	105	 9.79	-1.91
+HIPASS J0457-42	ESO252-IG001	 58	 9.36	-1.28
+HIPASS J0605-33	ESO364-G?029	 56	 9.58	-1.10
+HIPASS J0607-34	AM0605-341  	133	10.12	-2.04
+HIPASS J0610-34	NGC 2188    	 82	 9.92	-1.28
+HIPASS J0615-57	ESO121-G020 	 75	 9.43	-1.63
+HIPASS J0639-40	ESO308-G022 	 48	 9.13	-1.34
+HIPASS J0705-58	AM0704-582  	 47	 9.36	-1.09
+HIPASS J0731-68	ESO059-G001 	 59	 9.39	-1.47
+HIPASS J0926-76	NGC 2915    	 89	10.02	-1.45
+HIPASS J1043-37	ESO376-G016 	 31	 8.86	-0.78
+HIPASS J1047-38	ESO318-G013 	   	     	
+HIPASS J1057-48	ESO215-G?009	 82	10.10	-1.25
+HIPASS J1118-32	NGC 3621    	143	11.19	-1.23
+HIPASS J1131-31	new         	   	     	
+HIPASS J1132-32	new         	   	     	
+HIPASS J1137-39	ESO320-G014 	 39	 8.71	-1.47
+HIPASS J1154-33	ESO379-G007 	 27	 8.52	-1.03
+HIPASS J1204-35	ESO379-G024 	 33	 8.48	-1.32
+HIPASS J1214-38	ESO321-G014 	 18	 7.94	-0.85
+HIPASS J1219-79	IC 3104     	 38	 8.49	-1.50
+HIPASS J1244-35	ESO381-G018 	 29	 8.42	-1.18
+HIPASS J1246-33	ESO381-G020 	 48	 9.38	-1.02
+HIPASS J1247-77	new         	 20	 7.94	-0.95
+HIPASS J1305-40	CEN06       	 18	 8.15	-0.61
+HIPASS J1305-49	NGC 4945    	197	11.02	-1.88
+HIPASS J1310-46	ESO269-G058 	 46	 8.78	-1.51
+HIPASS J1321-31	new         	 24	 8.39	-0.87
+HIPASS J1321-36	NGC 5102    	110	10.18	-1.82
+HIPASS J1324-30	AM1321-304  	 35	 8.39	-1.46
+HIPASS J1324-42	NGC 5128    	   	     	
+HIPASS J1326-30	IC 4247     	 18	 7.99	-0.71
+HIPASS J1327-41	ESO324-G024 	 53	 9.40	-1.17
+HIPASS J1334-45	ESO270-G017 	 72	10.28	-0.87
+HIPASS J1336-29	UGCA 365    	   	     	
+HIPASS J1337-29	NGC 5236    	174	11.31	-1.40
+HIPASS J1337-39	new         	 26	 8.45	-0.89
+HIPASS J1337-42	NGC 5237    	 47	 8.67	-1.20
+HIPASS J1337-28	ESO444-G084 	 36	 8.88	-0.97
+HIPASS J1339-31	NGC 5253    	 66	 9.40	-1.45
+HIPASS J1340-28	IC 4316     	 30	 8.36	-1.29
+HIPASS J1341-29	NGC 5264    	 39	 8.90	-1.20
+HIPASS J1345-41	ESO325-G?011	 39	 8.91	-1.05
+HIPASS J1348-37	new         	   	     	
+HIPASS J1348-53	ESO174-G?001	 62	 9.53	-1.33
+HIPASS J1349-36	ESO383-G087 	 23	 8.53	-0.68
+HIPASS J1351-47	new         	 28	 8.53	-1.10
+HIPASS J1403-41	NGC 5408    	 57	 9.60	-1.17
+HIPASS J1413-65	Circinus    	183	11.36	-1.53
+HIPASS J1428-46	UKS1424-460 	 30	 8.66	-0.96
+HIPASS J1434-49	ESO222-G010 	 27	 8.59	-0.89
+HIPASS J1441-62	new         	 31	 8.42	-1.11
+HIPASS J1443-44	ESO272-G025 	 36	 8.57	-1.45
+HIPASS J1501-48	ESO223-G009 	 55	 9.79	-0.81
+HIPASS J1514-46	ESO274-G001 	 85	 9.96	-1.47
+HIPASS J1526-51	new         	 39	 8.85	-1.26
+HIPASS J1620-60	ESO137-G018 	 85	 9.91	-1.29
+HIPASS J1747-64	IC 4662     	102	 9.94	-1.77
+HIPASS J2003-31	ESO461-G036 	 51	 9.28	-1.25
+HIPASS J2052-69	IC 5052     	 99	10.27	-1.39
+HIPASS J2202-51	IC 5152     	 58	 9.31	-1.36
+HIPASS J2326-32	UGCA 438    	   	     	
+HIPASS J2343-31	UGCA 442    	 52	 9.42	-1.07
+HIPASS J2352-52	ESO149-G003 	 27	 8.44	-0.67
+HIPASS J2357-32	NGC 7793    	107	10.69	-1.67
+

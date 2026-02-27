@@ -1,0 +1,274 @@
+{
+  "generated_on": "2026-02-25",
+  "status": {
+    "raw_data/observational/alfalfa": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/brouwer2021": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/by_system": {
+      "CITATION.md": "created",
+      "README.md": "existing",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/cf4": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/cluster_rar": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/eagle_rar": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/environment": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/hi_surveys": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/literature": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/little_things": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/littlethings": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/mhongoose": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/misc": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/phangs": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/probes": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/s4g": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/sofue": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/sparc": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/tempel": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/things": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/vizier_catalogs": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/voids": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/wallaby": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/observational/yang_catalogs": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/tng/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/tng/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/tng/ingestion_staging": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/tng/quarantine_contaminated": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    },
+    "raw_data/tng/raw_archives": {
+      "CITATION.md": "created",
+      "README.md": "created",
+      "TERMS_OF_USE.md": "created",
+      "checksums.sha256": "created",
+      "data_dictionary.md": "created",
+      "download_instructions.md": "created",
+      "manifest.csv": "created"
+    }
+  },
+  "project_level": {
+    "LICENSE_CODE_MIT.txt": "created",
+    "LICENSE_DOCS_CC_BY_4.0.txt": "created",
+    "THIRD_PARTY_DATA_NOTICE.md": "created",
+    "CITATION.cff": "created",
+    "DATASETS_INDEX.md": "created",
+    "ARTIFACTS_INDEX.md": "created"
+  }
+}

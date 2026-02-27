@@ -1,0 +1,179 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-16T19:43:05 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-16T19:43:05	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/MNRAS/482/154/tablea1&-out.max=unlimited	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_74820154
+#Name: J/MNRAS/482/154
+#Title: GHASP. spiral galaxies dark matter distribution (Korsaga+, 2019)
+#INFO	ivoid=ivo://cds.vizier/j/mnras/482/154	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/mnras/482/154	    IVOID of underlying data collection
+#INFO	creator=Korsaga M.	    First author or institution
+#INFO	cites=bibcode:2019MNRAS.482..154K	    Article or Data origin sources
+#INFO	journal=MNRA	    Journal name
+#INFO	original_date=2019	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/482/154	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.74820154	    Dataset identifier that can be used for citation
+#INFO	publication_date=2024-08-19	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Coosys	J2000_2000.000:	eq_FK5 J2000
+#Table	J_MNRAS_482_154_tablea1:
+#Name: J/MNRAS/482/154/tablea1
+#Title: Global properties
+#Column	param	(A1)	indicates parameters of mass models in tables A2-A4	[ucd=meta.ref.url]
+#Column	ID	(A9)	Name of the galaxy in the UGC catalogue (UGC NNNNN)	[ucd=meta.id;meta.main]
+#Column	f_B-V	(A1)	[*] * for galaxies with no B-V colour available in the RC3 catalogue, the value has been computed (1)	[ucd=meta.code]
+#Column	Type	(a12)	Morphological type taken from the RC3 catalogue (Third Reference Cat. of Bright Galaxies (RC3) de Vaucouleurs et al. 1991rc3..book.....D, Cat. VII/155) (2)	[ucd=src.morph.type]
+#Column	BMAG	(F4.1)	Absolute B magnitude from Epinat et al. (2008MNRAS.388..500E, Cat. J/MNRAS/388/500)	[ucd=phys.magAbs]
+#Column	B-V	(F5.2)	(B-V) colours corrected for galactic and internal extinction from RC3 catalogue when available	[ucd=phot.color;em.opt.B;em.opt.V]
+#Column	mu0obs	(F4.1)	Central surface brightness from the observed data	[ucd=phot.mag.sb]
+#Column	R25/h	(F4.1)	Isophotal radius at the limiting surface brightness of 25mag/arcsec^2^ normalized by the disc scale length	[ucd=phys.angSize;src]
+#Column	Rlast/h	(F4.1)	The last radius of the RC normalized by the disc scale length	[ucd=src.morph.scLength;arith.ratio]
+#Column	mu0	(F4.1)	Central surface brightness of the disc	[ucd=phot.mag.sb]
+#Column	h	(F4.1)	Disc scale length of the disc component	[ucd=src.morph.scLength;phys.size]
+#Column	LD	(F6.1)	Luminosity of the disc calculated at the isophotal radius	[ucd=phys.luminosity]
+#Column	mue	(F5.2)	? Surface brightness of the bulge at the effective radius	[ucd=phot.mag.sb]
+#Column	re	(F5.2)	? Effective radius of the bulge	[ucd=phys.size.radius]
+#Column	n	(F5.2)	? Sersic index of the bulge	[ucd=stat.fit.param]
+#Column	LB	(F6.2)	? Luminosity of the bulge derived at the isophotal radius	[ucd=phys.luminosity;em.opt.B]
+#Column	f_ID	(I1)	[1/3] Classification flag of the inner galaxy rotation curves (RCs) (3)	[ucd=meta.code]
+#Column	Simbad	(a6)	Simbad column added by the CDS	[ucd=meta.ref.url]
+#Column	_RA	(F9.5)	Right Ascension (J2000) from SIMBAD (not part of the original data)	[ucd=pos.eq.ra;meta.main]
+#Column	_DE	(F9.5)	Declination (J2000) from SIMBAD (not part of the original data)	[ucd=pos.eq.dec;meta.main]
+param	ID	f_B-V	Type	BMAG	B-V	mu0obs	R25/h	Rlast/h	mu0	h	LD	mue	re	n	LB	f_ID	Simbad	_RA	_DE
+ 	 	 	 	mag	mag	mag/arcsec2	 	 	mag/arcsec2	kpc	10+8Lsun	mag/arcsec2	kpc	 	10+8Lsun	 	 	deg	deg
+-	---------	-	------------	----	-----	----	----	----	----	----	------	-----	-----	-----	------	-	------	---------	---------
+*	UGC 00089	 	SBa         	21.5	 0.69	16.4	 2.4	 1.6	19.6	 6.0	 547.3	16.73	 0.71	 1.00	331.80	1	Simbad	002.47255	+25.92374
+*	UGC 00094	*	SAab        	20.4	 0.64	18.7	 2.6	 2.8	19.7	 4.0	 232.7	18.69	 0.26	 1.57	 10.20	1	Simbad	002.60783	+25.83192
+*	UGC 00508	 	SB(r)ab     	21.8	 0.82	16.6	 3.5	 3.0	19.4	 7.5	1378.5	17.75	 0.60	 2.16	235.13	1	Simbad	012.44923	+32.27772
+*	UGC 00528	 	SABb        	19.6	 0.45	16.2	 4.2	 2.0	18.0	 1.0	  90.3	20.13	 0.71	 3.22	 12.88	1	Simbad	013.01810	+47.55047
+*	UGC 00763	 	SABm        	18.9	 0.43	19.6	 3.4	 6.0	19.9	 1.5	  33.4	24.62	 0.77	 3.79	  3.55	1	Simbad	018.23212	+00.98158
+ 	UGC 01256	 	SBcd        	18.9	 0.45	19.4	 5.3	 6.1	19.4	 1.4	   4.9	     	     	     	      	3	Simbad	026.97699	+27.43278
+*	UGC 01317	 	SAB(r)c     	21.5	 0.59	18.1	 4.3	 4.5	18.1	 5.4	1023.7	     	     	     	      	1	Simbad	027.82320	+22.35797
+*	UGC 01437	 	SABbc       	21.8	 0.54	17.6	 2.7	 5.0	19.3	 5.2	 578.7	20.59	 1.79	 3.24	100.34	1	Simbad	029.42585	+35.91604
+ 	UGC 01655	 	Sa pec      	21.6	 0.79	16.2	 5.1	 1.2	17.4	 6.0	6181.2	18.44	 3.05	 1.53	221.40	3	Simbad	032.53978	+39.19034
+*	UGC 01736	 	SABc        	20.1	 0.48	17.9	 3.9	 3.5	19.5	 2.5	 131.2	25.38	 0.69	 5.82	  2.42	2	Simbad	033.86517	+06.00262
+*	UGC 01886	*	SABbc       	20.8	 0.58	17.4	 0.7	 4.1	19.9	 7.9	 136.0	19.73	 1.38	 0.20	 81.22	2	Simbad	036.50205	+39.47094
+*	UGC 01913	 	SABd        	20.1	 0.50	19.1	 4.9	 3.0	19.9	 3.0	 142.9	21.23	 0.42	 0.86	  1.98	2	Simbad	036.82047	+33.57888
+*	UGC 02045	 	Sab         	20.5	 0.64	17.3	 5.4	 2.2	18.1	 2.3	 450.4	16.81	 0.14	 0.06	  7.39	1	Simbad	038.55566	+29.31128
+*	UGC 02080	 	SABcd       	19.2	 0.63	19.5	 2.8	 3.0	20.2	 3.0	  92.9	22.94	 0.42	 2.33	  0.51	1	Simbad	039.11594	+38.96919
+ 	UGC 02141	*	S0 a        	18.1	 0.70	18.7	 3.1	 4.2	19.3	 1.2	  34.4	20.32	 0.58	 0.61	  6.21	3	Simbad	039.81235	+30.15167
+*	UGC 02183	*	Sa          	19.0	 0.67	17.1	 2.2	 1.1	20.7	 2.3	  26.7	19.05	 0.64	 2.35	 44.83	2	Simbad	040.70121	+28.57407
+*	UGC 02193	 	SAc         	18.7	 0.55	17.7	 2.8	 3.5	19.8	 1.3	  23.9	20.99	 0.24	 0.05	  0.90	2	Simbad	040.87511	+37.34133
+*	UGC 02503	 	SAB(r)b     	21.6	 0.64	17.0	 3.8	 3.5	19.1	 4.3	 568.0	18.14	 1.39	 0.68	 90.86	2	Simbad	045.89467	+46.38634
+*	UGC 02800	*	Im          	18.6	 0.39	19.8	 2.7	 2.2	20.1	 2.6	   7.1	     	     	     	      	1	Simbad	055.01023	+71.40591
+*	UGC 02855	*	SABc        	21.4	 0.54	17.2	 3.6	 5.1	17.9	 2.5	 572.6	18.44	 0.25	 1.07	  9.35	1	Simbad	057.08638	+70.13288
+*	UGC 03013	 	SBb         	21.3	 0.55	17.6	 1.2	 3.1	20.1	 7.7	 298.4	21.50	 4.78	 3.11	216.89	1	Simbad	065.86292	+75.29557
+ 	UGC 03273	*	Sm          	18.3	 0.42	19.6	 2.7	 4.3	19.9	 1.7	  37.3	20.87	 0.13	 0.06	  0.14	3	Simbad	079.43455	+53.55138
+*	UGC 03334	 	SABc        	22.8	 0.57	17.5	 4.1	 3.7	19.2	 8.7	2275.6	21.24	 4.82	 0.35	 98.31	1	Simbad	085.51930	+69.37845
+*	UGC 03382	*	SBa         	20.4	 0.67	17.2	 3.5	 4.1	19.3	 3.3	 292.2	18.34	 0.52	 2.34	 56.19	2	Simbad	089.94888	+62.15801
+*	UGC 03463	*	SABbc       	20.7	 0.58	18.7	 2.8	 3.9	19.9	 4.5	 276.7	19.71	 0.32	 1.00	 11.73	1	Simbad	096.73179	+59.08011
+*	UGC 03521	*	Sc          	19.8	 0.55	19.0	 2.7	 2.1	20.1	 4.0	 154.4	20.84	 0.69	 1.04	  6.77	1	Simbad	103.75047	+84.04181
+*	UGC 03528	*	SBab        	20.1	 0.64	17.2	 4.3	 2.5	19.1	 2.9	 277.5	18.83	 0.56	 1.10	 29.72	2	Simbad	104.04391	+84.07896
+*	UGC 03708	*	Sbc pec     	20.7	 0.56	17.5	 3.6	 1.4	17.6	 2.3	 360.3	     	     	     	      	2	Simbad	107.29955	+20.60284
+ 	UGC 03740	 	SABc        	19.8	 0.45	18.6	 2.8	 4.6	19.6	 2.0	  69.8	19.08	 0.25	 0.69	  3.89	3	Simbad	111.81035	+85.75450
+*	UGC 03809	 	SAB(r)bc    	22.0	 0.49	17.0	 4.2	 4.4	18.9	 5.6	1225.3	19.87	 1.11	 1.32	 24.00	1	Simbad	111.76687	+80.17807
+*	UGC 03876	*	SAd         	17.4	 0.48	20.3	 2.1	 2.6	20.8	 1.9	  16.6	22.44	 0.58	 1.06	  0.74	1	Simbad	112.32289	+27.90049
+*	UGC 03915	*	SBc         	21.4	 0.56	18.3	 3.9	 3.3	19.2	 2.7	 225.3	17.01	 0.10	 1.17	  7.16	2	Simbad	113.73216	+31.27616
+*	UGC 04026	*	Sab         	20.8	 0.64	17.4	 4.1	 2.7	18.7	 3.3	 523.1	19.71	 1.31	 2.62	 31.74	2	Simbad	116.83458	+26.93016
+*	UGC 04165	 	SBd         	18.2	 0.54	19.6	 2.6	 3.4	20.0	 1.5	  25.1	20.35	 0.09	 0.06	  0.11	2	Simbad	120.47155	+50.73711
+ 	UGC 04256	 	SABc        	21.6	 0.51	18.4	 3.3	 3.5	19.9	 5.3	 412.1	30.00	 0.35	 8.42	 32.00	3	Simbad	122.56328	+33.95660
+*	UGC 04273	*	SBb         	20.7	 0.61	16.9	 3.9	 4.9	19.3	 2.8	 225.9	17.85	 0.22	 0.66	 10.90	1	Simbad	123.24148	+36.25451
+ 	UGC 04274	 	SBm pec     	17.7	 0.59	19.5	 3.4	 2.0	19.4	 0.6	   0.9	     	     	     	      	3	Simbad	123.31101	+45.98979
+*	UGC 04284	 	SAcd        	18.4	 0.37	19.7	 2.4	 3.3	20.6	 1.8	  19.6	27.49	 2.26	 4.04	  4.37	1	Simbad	123.66715	+49.06167
+*	UGC 04325	 	SAm         	18.2	 0.39	21.0	 2.2	 1.9	21.1	 2.2	  16.3	     	     	     	  0.10	1	Simbad	124.83556	+50.00961
+ 	UGC 04393	*	SBc         	19.3	 0.56	18.7	 3.6	 5.6	19.2	 1.8	 100.4	18.68	 0.10	 0.37	  0.94	3	Simbad	126.51829	+45.96760
+*	UGC 04456	 	SAc         	20.8	 0.53	19.6	 2.4	 3.5	20.4	 4.7	 157.9	20.52	 0.35	 2.28	  4.67	2	Simbad	128.01458	+24.01089
+*	UGC 04499	*	SABdm       	17.0	 0.45	20.4	 3.3	 3.6	20.5	 1.0	   0.8	     	     	     	      	2	Simbad	129.42287	+51.65238
+*	UGC 04555	*	SABbc       	20.9	 0.58	19.5	 2.7	 2.6	20.3	 4.6	 183.3	18.84	 0.46	 0.08	  8.35	1	Simbad	131.03444	+34.71728
+*	UGC 04820	 	SA(r)ab     	20.3	 0.83	15.3	 3.8	 2.2	19.0	 2.7	 270.4	19.23	 0.87	 2.53	 80.60	2	Simbad	137.58389	+07.03802
+*	UGC 04936	 	SABd        	20.6	 0.44	19.2	 2.8	 4.3	20.7	 4.5	 126.5	21.52	 0.98	 0.96	  3.32	1	Simbad	140.08495	+64.10298
+*	UGC 05045	*	SAB(r)c     	21.2	 0.54	17.3	 2.3	 2.2	20.5	 7.6	 389.2	21.29	 2.17	 2.78	 74.31	2	Simbad	142.04181	+44.66476
+*	UGC 05228	*	SBc         	19.9	 0.54	19.8	 2.8	 2.9	19.6	 3.0	  15.4	     	     	     	      	1	Simbad	146.51521	+01.66832
+*	UGC 05251	 	Sbc         	20.5	 0.21	18.8	 3.4	 3.0	20.3	 4.3	 189.9	20.71	 1.02	 0.20	 10.96	1	Simbad	147.14825	+33.42162
+*	UGC 05253	 	SAab        	20.7	 0.68	16.4	 1.9	 1.5	20.8	 5.9	 142.1	19.72	 1.83	 1.89	201.86	1	Simbad	147.59264	+72.27865
+ 	UGC 05316	 	SBd         	19.9	 0.40	19.9	 2.0	 3.2	21.4	 4.2	  45.9	21.37	 1.21	 0.68	 10.76	3	Simbad	148.91930	+72.20357
+*	UGC 05414	*	IABm        	16.6	 0.42	21.5	 3.0	 3.7	21.1	 1.5	   1.0	     	     	     	      	1	Simbad	150.98827	+40.76151
+*	UGC 05510	 	SABbc       	19.3	 0.52	16.8	 3.2	 4.1	19.6	 1.8	  60.0	18.84	 0.16	 1.63	  3.46	1	Simbad	153.38164	+22.73754
+ 	UGC 05721	 	SABd        	16.5	 0.36	19.2	 1.5	 2.1	21.9	 1.0	   1.2	22.39	 0.15	 2.02	  2.55	3	Simbad	158.07177	+27.66866
+ 	UGC 05786	 	SAB(r)bc pec	19.6	 0.31	16.3	 3.1	 5.2	18.3	 1.2	  86.4	20.35	 1.29	 0.87	 38.02	3	Simbad	159.69107	+53.50330
+ 	UGC 05789	 	SBcd        	19.6	 0.37	19.3	 2.9	 5.4	19.9	 2.6	  90.1	     	     	     	  0.16	3	Simbad	159.78972	+41.68687
+ 	UGC 05829	 	Im          	16.2	 0.20	22.3	 3.5	 3.9	22.1	 1.7	   0.5	     	     	     	      	3	Simbad	160.67828	+34.44928
+*	UGC 05840	 	SAB(r)bc    	18.9	 0.57	15.3	 8.2	 7.2	17.8	 0.8	  81.1	27.48	 0.39	 6.56	  1.71	2	Simbad	160.87979	+24.92222
+*	UGC 05842	*	SBcd        	18.8	 0.51	19.8	 2.9	 2.9	20.4	 2.0	  35.5	21.44	 0.28	 1.07	  0.65	1	Simbad	160.91221	+14.87179
+*	UGC 05931	 	SABcd pec   	19.8	 0.28	18.4	 3.6	 5.6	19.0	 1.5	  77.7	18.43	 0.11	 0.36	  1.19	1	Simbad	162.45882	+32.98289
+*	UGC 05982	 	SABc        	20.0	 0.57	18.5	 5.0	 4.2	19.6	 2.4	 127.3	19.51	 0.17	 2.97	  6.32	1	Simbad	163.04747	+32.95043
+*	UGC 06118	 	SABab       	20.0	 0.64	15.8	 4.8	 4.1	18.1	 1.5	 188.3	16.77	 0.21	 0.64	 24.97	1	Simbad	165.79663	+27.97244
+*	UGC 06277	*	SABc        	19.5	 0.54	16.5	 5.4	 2.9	19.2	 1.6	  74.3	18.51	 0.13	 1.62	  3.32	2	Simbad	168.77587	+14.78702
+ 	UGC 06419	 	SBm pec     	18.6	 0.35	20.4	 2.0	 4.2	20.2	 2.1	   3.1	     	     	     	      	3	Simbad	171.10107	+03.32499
+*	UGC 06521	 	SAbc pec    	21.2	 0.50	18.1	 3.3	 3.1	20.0	 5.8	 401.8	19.83	 0.66	 1.15	 17.55	1	Simbad	173.05608	+00.81931
+ 	UGC 06523	 	SAa         	21.0	 0.68	18.2	 4.4	 1.8	19.0	 2.8	 301.1	20.20	 2.13	 0.05	 41.23	3	Simbad	173.08998	+00.80403
+*	UGC 06537	 	SAB(r)c     	20.5	 0.44	17.4	 3.1	 3.0	20.0	 3.6	 163.0	19.04	 0.13	 2.71	 10.16	1	Simbad	173.33807	+47.02924
+*	UGC 06702	 	Sa          	20.6	 0.60	18.0	 2.2	 2.6	20.9	 5.3	 121.5	17.98	 0.64	 1.40	137.77	1	Simbad	175.99568	+20.07703
+*	UGC 06778	*	SABc        	20.7	 0.54	17.1	 3.0	 3.8	19.0	 2.0	 131.7	21.49	 1.15	 3.74	 18.68	1	Simbad	177.15920	+48.71079
+*	UGC 07021	 	SAB(r)a     	19.7	 0.74	16.4	 3.5	 2.2	19.7	 2.8	 150.2	18.55	 0.39	 1.43	 22.90	1	Simbad	180.67604	+01.97677
+*	UGC 07045	 	SAc         	19.2	 0.66	18.4	 3.1	 3.2	19.6	 2.2	  88.5	22.94	 1.53	 3.31	  6.43	1	Simbad	181.01587	+31.89569
+*	UGC 07154	 	SABd        	20.0	 0.50	18.2	 2.5	 3.7	20.9	 4.4	  91.6	21.06	 0.60	 0.27	 11.08	2	Simbad	182.50619	+39.88397
+*	UGC 07323	 	SABdm       	18.3	 0.54	20.9	 2.3	 2.7	20.9	 2.0	  20.7	     	     	     	      	1	Simbad	184.37576	+45.61931
+*	UGC 07766	 	SABcd       	21.0	 0.37	17.9	 4.8	 3.5	19.5	 4.1	 367.7	20.69	 0.39	 1.62	  4.63	1	Simbad	188.99017	+27.95996
+*	UGC 07831	 	SBc pec     	18.5	 0.45	19.0	 5.1	 2.9	18.5	 0.9	   4.5	     	     	     	      	1	Simbad	189.99702	+61.60912
+ 	UGC 07853	 	SBm         	18.9	 0.44	19.4	 3.5	 5.4	19.3	 1.3	   4.4	     	     	     	      	3	Simbad	190.38707	+41.15088
+*	UGC 07861	 	SABm pec    	17.3	 0.57	18.6	 2.1	 2.1	20.7	 1.0	   4.7	20.64	 0.40	 0.41	  3.50	2	Simbad	190.46963	+41.27392
+*	UGC 07876	*	SABd        	17.9	 0.48	20.0	 2.3	 2.0	21.2	 1.8	  11.1	22.88	 0.87	 1.70	  3.37	1	Simbad	190.66350	+19.94529
+*	UGC 07901	 	SAc         	20.6	 0.51	17.0	 3.8	 4.4	19.2	 3.0	 270.3	20.27	 2.10	 0.19	 47.01	1	Simbad	190.92766	+16.39333
+*	UGC 07985	 	SABd        	18.7	 0.47	18.4	 2.0	 3.1	20.1	 1.7	  25.7	21.76	 0.65	 1.97	  3.39	2	Simbad	192.49117	+05.31137
+*	UGC 08334	 	SAbc        	21.1	 0.64	16.2	 5.2	 3.3	18.6	 3.3	 605.6	19.08	 0.50	 0.33	 28.05	1	Simbad	198.95531	+42.02937
+*	UGC 08403	 	SBcd        	19.2	 0.43	19.8	 3.7	 5.1	19.7	 2.3	   9.2	     	     	     	      	1	Simbad	200.48519	+38.73447
+*	UGC 08490	 	SAm         	17.1	 0.41	19.9	 4.2	 3.7	20.0	 0.7	   7.5	21.42	 0.08	 0.06	  0.03	1	Simbad	202.40212	+58.41873
+*	UGC 08709	 	SABc        	21.4	 0.43	17.9	 3.1	 3.8	20.0	 6.1	 468.6	22.85	 6.57	 3.42	104.69	1	Simbad	206.59872	+43.87204
+*	UGC 08852	*	SAB(r)b     	20.0	 0.61	17.8	 5.0	 2.8	19.0	 2.3	 178.3	18.90	 0.46	 0.50	 13.81	1	Simbad	208.81682	+59.50664
+*	UGC 08900	 	SAb pec     	21.7	 0.61	18.0	 2.5	 1.7	19.9	 7.2	 630.0	21.70	 3.23	 3.55	111.92	2	Simbad	209.65817	+37.42449
+*	UGC 08937	*	SBb         	21.1	 0.61	17.0	 4.5	 4.0	19.0	 3.6	 481.4	17.10	 0.37	 0.56	 54.26	1	Simbad	210.19092	+59.32865
+ 	UGC 09013	 	SAcdpec     	18.2	 0.48	19.4	 1.5	 3.1	21.0	 1.7	   7.8	21.00	 0.54	 0.89	  2.25	3	Simbad	211.25670	+53.66221
+*	UGC 09179	 	SABd        	17.8	 0.46	19.1	 2.2	 3.0	21.0	 1.6	  10.0	21.62	 0.41	 1.38	  1.29	1	Simbad	214.95085	+56.72905
+*	UGC 09248	*	Sb          	20.2	 0.61	18.8	 2.8	 2.4	20.0	 3.9	 177.1	21.15	 1.11	 1.30	 14.59	1	Simbad	216.55081	+48.56397
+*	UGC 09358	*	SABb        	20.8	 0.61	17.1	 4.4	 3.6	18.9	 3.0	 372.0	19.98	 0.74	 1.78	 22.99	1	Simbad	218.02321	+57.92143
+*	UGC 09363	 	SAd         	19.8	 0.65	19.0	 1.8	 3.6	21.0	 3.3	  39.7	22.30	 3.30	 2.11	 28.56	1	Simbad	218.35142	+04.45046
+*	UGC 09366	 	SAbc        	21.7	 0.55	17.1	 4.1	 3.4	19.2	 4.8	 711.9	19.70	 0.96	 1.60	124.70	1	Simbad	218.19522	+49.45781
+*	UGC 09465	*	SABdm       	18.0	 0.45	20.3	 1.5	 4.1	20.4	 2.0	   1.8	     	     	     	      	1	Simbad	220.10877	+33.98910
+*	UGC 09576	 	SABd        	19.6	 0.56	19.8	 1.9	 4.1	20.8	 3.7	  58.0	21.17	 1.04	 0.55	  8.64	1	Simbad	223.42693	+03.58249
+*	UGC 09649	*	SBb         	16.5	 0.61	19.6	 2.2	 3.9	19.7	 1.0	   6.9	     	     	     	      	1	Simbad	224.44125	+71.68153
+*	UGC 09736	 	SABc        	20.6	 0.60	19.4	 2.4	 2.1	20.7	 6.6	 214.0	20.93	 0.72	 0.80	  6.14	1	Simbad	226.96591	+54.75280
+*	UGC 09753	 	SAbc        	19.1	 0.47	17.1	 5.5	 5.0	18.4	 1.3	 101.3	19.38	 0.81	 0.48	  5.50	1	Simbad	227.44470	+57.00015
+*	UGC 09858	*	SABbc       	20.4	 0.58	18.6	 4.7	 5.7	19.4	 4.6	 548.7	18.65	 0.23	 0.25	  4.53	2	Simbad	231.67280	+40.56463
+*	UGC 09866	*	SA(r)bc     	17.2	 0.58	18.6	 3.2	 2.8	19.2	 0.6	   9.9	23.45	 0.05	 4.13	  0.07	1	Simbad	232.00279	+64.76317
+*	UGC 09943	 	SB(r)c      	20.7	 0.64	17.3	 5.4	 5.3	18.3	 2.1	 315.1	19.39	 0.33	 1.06	  6.37	1	Simbad	234.62478	+12.18658
+*	UGC 09969	 	SAB(r)b     	21.4	 0.65	17.7	 2.6	 2.7	20.4	 8.1	 533.4	20.89	 2.07	 2.12	100.18	1	Simbad	234.90439	+59.33200
+*	UGC 10075	 	SAcd        	19.9	 0.50	18.7	 4.5	 3.5	18.7	 2.8	 105.8	     	     	     	      	1	Simbad	237.85516	+62.31006
+*	UGC 10359	 	SBcd pec    	19.0	 0.48	19.4	 2.3	 6.4	19.6	 2.1	  68.7	     	     	     	      	1	Simbad	245.24234	+65.39055
+ 	UGC 10445	*	Scd         	17.6	 0.51	20.2	 2.9	 4.1	21.0	 1.6	  12.8	21.94	 0.60	 1.10	  0.99	3	Simbad	248.44658	+28.98376
+*	UGC 10521	 	SAc         	20.2	 0.42	18.6	 5.5	 3.6	18.9	 1.7	 111.5	20.50	 0.19	 0.42	  0.53	1	Simbad	250.76562	+36.83242
+*	UGC 10652	*	S(r)bc      	17.7	 0.58	19.1	 3.3	 3.1	19.7	 0.9	  13.0	21.05	 0.36	 0.81	  1.61	1	Simbad	254.86070	+49.92214
+*	UGC 10757	*	Scd         	17.7	 0.51	20.2	 2.4	 2.4	21.1	 1.4	   8.1	22.45	 0.47	 1.08	  3.34	1	Simbad	257.55512	+72.41074
+*	UGC 10897	 	SAc         	19.5	 0.46	18.8	 3.4	 3.0	19.7	 1.9	  63.9	20.70	 0.69	 0.24	  1.58	1	Simbad	262.40634	+75.70433
+*	UGC 11283	 	SBdm        	19.3	 0.50	21.3	 2.1	 3.3	21.0	 2.9	  33.5	20.71	 0.50	 0.65	  3.39	1	Simbad	278.46905	+49.27857
+*	UGC 11300	 	Sd          	17.8	 0.59	19.5	 3.0	 3.2	20.0	 1.4	  23.5	21.82	 0.34	 1.22	  0.72	1	Simbad	278.70935	+70.52389
+ 	UGC 11470	 	SAb         	21.3	 0.54	16.4	 3.5	 1.1	19.1	 5.0	 787.3	18.47	 1.30	 1.76	384.52	3	Simbad	295.91988	+56.10945
+ 	UGC 11557	*	SABdm       	18.4	 0.45	20.4	 3.4	 3.9	20.3	 1.6	   2.2	     	     	     	      	3	Simbad	306.00285	+60.19484
+*	UGC 11597	 	SABcd       	20.6	 0.40	16.5	 3.4	 2.0	19.1	 2.8	 227.4	20.18	 0.37	 0.37	  7.30	1	Simbad	308.71805	+60.15368
+*	UGC 11670	 	SA(r)0/a    	19.4	 0.71	15.8	 3.8	 3.7	18.8	 2.1	 173.2	18.05	 0.35	 1.91	 32.52	2	Simbad	315.88987	+29.89748
+*	UGC 11707	*	SAdm        	16.6	 0.45	20.6	 0.4	 2.2	22.1	 5.7	   4.3	21.87	 0.77	 0.65	  2.72	1	Simbad	318.63229	+26.73458
+*	UGC 11852	*	SBa         	20.2	 0.67	17.9	 2.9	 2.1	19.6	 3.8	 254.3	18.36	 0.45	 1.58	 37.35	2	Simbad	328.99729	+27.89835
+*	UGC 11861	*	SABdm       	20.2	 0.45	18.7	 1.0	 2.2	18.7	 6.5	 121.6	     	     	     	      	1	Simbad	329.10062	+73.26092
+*	UGC 11914	 	SA(r)ab     	20.3	 0.77	15.2	 4.3	 3.3	17.8	 2.3	 595.0	17.28	 0.59	 1.49	314.29	1	Simbad	331.96833	+31.35934
+ 	UGC 11951	*	SBa         	19.3	 0.67	18.2	 3.6	 4.5	18.8	 1.2	  55.7	19.59	 0.61	 0.36	  7.55	3	Simbad	333.12549	+45.32845
+*	UGC 12060	*	IBm         	16.5	 0.42	21.0	 1.2	 3.9	20.9	 2.0	   1.0	     	     	     	      	2	Simbad	337.64042	+33.82083
+ 	UGC 12101	 	SAd         	18.5	 0.51	19.4	 3.5	 2.0	20.3	 1.6	  27.0	21.16	 0.42	 0.54	  1.13	3	Simbad	339.01419	+33.94823
+ 	UGC 12276	 	SB(r)a      	20.7	 0.73	20.6	 8.9	10.6	20.8	 1.4	  15.8	18.20	 0.00	 2.77	  0.72	3	Simbad	344.63563	+35.80243
+ 	UGC 12343	 	SBc         	21.1	 0.66	17.5	 3.7	 4.4	19.0	 3.8	 511.1	21.92	 0.01	 4.04	 49.32	3	Simbad	346.23601	+12.32288
+*	UGC 12754	 	SBcd        	18.6	 0.46	19.1	 3.9	 4.6	19.1	 1.2	  38.3	     	     	     	      	2	Simbad	355.97656	+26.07557
+

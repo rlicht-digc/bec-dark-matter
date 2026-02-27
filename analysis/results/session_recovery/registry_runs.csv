@@ -1,0 +1,13 @@
+run_path,has_master_catalog,has_parquet,parquet_path,n_rows,n_galaxies,min_pts_per_gal,median_pts_per_gal,max_pts_per_gal,likely_status,notes
+/home/tnguser/rar_profiles/20260222_184405,False,False,,0,0,0,0.0,0,UNKNOWN,No parquet found
+/home/tnguser/rar_profiles/20260222_185729,True,False,,0,0,0,0.0,0,UNKNOWN,No parquet found
+/home/tnguser/rar_profiles/20260222_195026,True,False,,0,0,0,0.0,0,UNKNOWN,No parquet found
+/home/tnguser/rar_profiles/20260222_201626,True,True,/home/tnguser/rar_profiles/20260222_201626/rar_points.parquet,313485,20899,15,15.0,15,CONTAMINATED,Mixed run: 20899 gal x 15 pts from multiple extraction passes
+/home/tnguser/rar_profiles/20260222_201626,True,True,/home/tnguser/rar_profiles/20260222_201626/rar_points_CLEAN.parquet,150000,3000,50,50.0,50,CLEAN_DEV,Verified clean 3000x50 dev set
+/home/tnguser/rar_profiles/20260223_033629_big29122,False,False,,0,0,0,0.0,0,UNKNOWN,No parquet found
+/home/tnguser/rar_profiles/20260223_034826_big_base,False,False,,0,0,0,0.0,0,UNKNOWN,No parquet found
+/home/tnguser/rar_profiles/20260223_061026_big_base,True,True,/home/tnguser/rar_profiles/20260223_061026_big_base/rar_points.parquet,2406650,48133,50,50.0,50,CLEAN_BIG_BASE,Full 48133x50 big base extraction
+/home/tnguser/rar_profiles/20260223_big_base_clean,False,False,,0,0,0,0.0,0,UNKNOWN,No parquet found
+/home/tnguser/rar_profiles/LATEST_GOOD,True,True,/home/tnguser/rar_profiles/LATEST_GOOD/rar_points.parquet,313485,20899,15,15.0,15,CONTAMINATED,Mixed run: 20899 gal x 15 pts from multiple extraction passes
+/home/tnguser/rar_profiles/LATEST_GOOD,True,True,/home/tnguser/rar_profiles/LATEST_GOOD/rar_points_CLEAN.parquet,150000,3000,50,50.0,50,CLEAN_DEV,Verified clean 3000x50 dev set
+/home/tnguser/rar_profiles/Untitled Folder,False,False,,0,0,0,0.0,0,UNKNOWN,No parquet found

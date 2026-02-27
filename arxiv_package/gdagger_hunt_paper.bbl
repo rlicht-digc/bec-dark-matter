@@ -1,0 +1,39 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+\providecommand{\dodoi}[1]{doi:~\href{http://doi.org/#1}{\nolinkurl{#1}}}
+\providecommand{\doeprint}[1]{\href{http://ascl.net/#1}{\nolinkurl{http://ascl.net/#1}}}
+\providecommand{\doarXiv}[1]{\href{https://arxiv.org/abs/#1}{\nolinkurl{https://arxiv.org/abs/#1}}}
+
+\bibitem[{{Desmond}(2017)}]{Desmond2017}
+{Desmond}, H. 2017, Monthly Notices of the Royal Astronomical Society, 464,
+  4160, \dodoi{10.1093/mnras/stw2571}
+
+\bibitem[{{Lelli} {et~al.}(2016){Lelli}, {McGaugh}, \& {Schombert}}]{Lelli2016}
+{Lelli}, F., {McGaugh}, S.~S., \& {Schombert}, J.~M. 2016, The Astronomical
+  Journal, 152, 157, \dodoi{10.3847/0004-6256/152/6/157}
+
+\bibitem[{{Lelli} {et~al.}(2017){Lelli}, {McGaugh}, {Schombert}, \&
+  {Pawlowski}}]{Lelli2017}
+{Lelli}, F., {McGaugh}, S.~S., {Schombert}, J.~M., \& {Pawlowski}, M.~S. 2017,
+  The Astrophysical Journal, 836, 152, \dodoi{10.3847/1538-4357/836/2/152}
+
+\bibitem[{{McGaugh} {et~al.}(2016){McGaugh}, {Lelli}, \&
+  {Schombert}}]{McGaugh2016}
+{McGaugh}, S.~S., {Lelli}, F., \& {Schombert}, J.~M. 2016, Physical Review
+  Letters, 117, 201101, \dodoi{10.1103/PhysRevLett.117.201101}
+
+\bibitem[{{Milgrom}(1983)}]{Milgrom1983}
+{Milgrom}, M. 1983, The Astrophysical Journal, 270, 365, \dodoi{10.1086/161130}
+
+\bibitem[{{Navarro} {et~al.}(2017){Navarro}, {Ben{\'\i}tez-Llambay}, {Fattahi},
+  {Frenk}, {Ludlow}, {Oman}, {Schaller}, \& {Theuns}}]{Navarro2017}
+{Navarro}, J.~F., {Ben{\'\i}tez-Llambay}, A., {Fattahi}, A., {et~al.} 2017,
+  MNRAS, 471, 1841, \dodoi{10.1093/mnras/stx1705}
+
+\bibitem[{{Tian} {et~al.}(2020){Tian}, {Umetsu}, {Ko}, {Donahue}, \&
+  {Morandi}}]{Tian2020}
+{Tian}, Y., {Umetsu}, K., {Ko}, C.-M., {Donahue}, M., \& {Morandi}, A. 2020,
+  The Astrophysical Journal, 896, 70, \dodoi{10.3847/1538-4357/ab8e3d}
+
+\end{thebibliography}

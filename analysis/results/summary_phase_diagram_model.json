@@ -1,0 +1,877 @@
+{
+  "test": "phase_diagram_two_feature",
+  "description": "Two-feature (peak+dip) variance model with edge term and window sweep",
+  "data": {
+    "n_galaxies": 131,
+    "n_points": 2777,
+    "n_field": 83,
+    "n_dense": 48
+  },
+  "sparc": {
+    "M0": {
+      "k": 2,
+      "aic": -1977.0220930031437
+    },
+    "M1": {
+      "k": 3,
+      "aic": -2000.6376733193692,
+      "s0": -2.6314367658154016,
+      "s1": -0.08083775569890747
+    },
+    "M2_single_bump": {
+      "k": 6,
+      "aic": -2090.9314551696316,
+      "c": -0.8059362585090548,
+      "mu0": -9.264775960355344,
+      "w": 0.16019122321291251,
+      "delta_from_gdagger": 0.656042793597031
+    },
+    "M2b_peak_dip": {
+      "k": 9,
+      "aic": -2182.5767126497385,
+      "bic": -2129.2145742639773,
+      "Ap": 2.403110732489349,
+      "mu_peak": -9.053130650419462,
+      "w_peak": 0.553914380026587,
+      "Ad": -2.261643009112619,
+      "mu_dip": -9.212273991620348,
+      "w_dip": 0.29458239254837876,
+      "peak_delta_gdagger": 0.8676881035329131
+    },
+    "M2b_edge_final": {
+      "k": 12,
+      "aic": -2225.4967568342117,
+      "bic": -2154.34723898653,
+      "Ap": 0.8599530405641864,
+      "mu_peak": -9.922329884330109,
+      "w_peak": 0.37787192431111327,
+      "Ad": -0.6600327063291149,
+      "mu_dip": -10.218656723912039,
+      "w_dip": 0.09919464516842799,
+      "edge_E": 1.5302006590676112,
+      "edge_xe": -9.02851979849707,
+      "edge_de": 0.06255342316370403,
+      "peak_delta_gdagger": -0.0015111303777342044,
+      "daic_vs_M1": -224.8590835148425,
+      "daic_vs_M2b": -42.92004418447323
+    },
+    "comparisons": {
+      "daic_M2_vs_M1": -90.29378185026235,
+      "daic_M2b_vs_M1": -181.93903933036927,
+      "daic_M2b_vs_M2": -91.64525748010692,
+      "daic_edge_vs_M1": -224.8590835148425,
+      "daic_edge_vs_M2b": -42.92004418447323
+    }
+  },
+  "window_sweep": [
+    {
+      "cutoff": -8.8,
+      "n_points": 2713,
+      "mu_peak": -9.860813147820727,
+      "w_peak": 0.15372739267498053,
+      "Ap": 0.5265705214639125,
+      "mu_dip": -10.26761979826037,
+      "w_dip": 0.05102513393739674,
+      "Ad": -0.44047499298757153,
+      "daic_vs_M1": -123.19280687358969,
+      "delta_peak_gdagger": 0.06000560613164829
+    },
+    {
+      "cutoff": -9.0,
+      "n_points": 2671,
+      "mu_peak": -9.983056391399026,
+      "w_peak": 0.29718744229529315,
+      "Ap": 0.6715018753389927,
+      "mu_dip": -10.211439108766527,
+      "w_dip": 0.10481756068148812,
+      "Ad": -0.6871966943679897,
+      "daic_vs_M1": -146.90249468311504,
+      "delta_peak_gdagger": -0.06223763744665156
+    },
+    {
+      "cutoff": -9.2,
+      "n_points": 2594,
+      "mu_peak": -9.914316573319429,
+      "w_peak": 0.3878790293918074,
+      "Ap": 0.8712130289797307,
+      "mu_dip": -10.220607993118632,
+      "w_dip": 0.09753889747146612,
+      "Ad": -0.6539577185227666,
+      "daic_vs_M1": -155.72324463421864,
+      "delta_peak_gdagger": 0.006502180632946164
+    },
+    {
+      "cutoff": -9.4,
+      "n_points": 2497,
+      "mu_peak": -9.92564575972098,
+      "w_peak": 0.37028244059497145,
+      "Ap": 0.8075147103669807,
+      "mu_dip": -10.220473805812395,
+      "w_dip": 0.09732971742588511,
+      "Ad": -0.6518800929897023,
+      "daic_vs_M1": -115.8884373737601,
+      "delta_peak_gdagger": -0.00482700576860573
+    }
+  ],
+  "lcdm_mock_full": {
+    "n_galaxies": 500,
+    "n_points": 10000,
+    "M2b_peak_location": -10.435123521844405,
+    "M2b_dip_location": -12.444575760910222,
+    "daic_M2b_vs_M1": -164.94677992201468,
+    "daic_M2b_vs_M2": 3.741049911335722,
+    "peak_delta_gdagger": -0.5143047678920301
+  },
+  "lcdm_mock_optionC": {
+    "n_points_window": 9999,
+    "M2b_peak_location": -10.386252310197934,
+    "M2b_dip_location": -12.461825025980527,
+    "daic_M2b_vs_M1": -166.35730153936674,
+    "peak_delta_gdagger": -0.46543355624555893
+  },
+  "bootstrap": {
+    "n_successful": 300,
+    "peak_location_median": -9.078956792379309,
+    "peak_location_ci95": [
+      -9.341748629098142,
+      -6.181384752906815
+    ],
+    "dip_location_median": -9.202648337678625,
+    "dip_location_ci95": [
+      -9.362277721352255,
+      -9.080128532704135
+    ],
+    "peak_amplitude_median": 7.544487206971785,
+    "peak_amplitude_ci95": [
+      1.075984295678389,
+      109.70384944014903
+    ],
+    "dip_amplitude_median": -4.416359918757008,
+    "dip_amplitude_ci95": [
+      -98.31587540304095,
+      -0.7672573595229589
+    ],
+    "frac_peak_near_gdagger_0p30": 0.016666666666666666,
+    "frac_peak_near_gdagger_0p50": 0.023333333333333334
+  },
+  "cross_validation": {
+    "n_folds": 20,
+    "nll_per_pt_M1_mean": -0.3635414890211529,
+    "nll_per_pt_edge_mean": -0.36029805972801887,
+    "delta_mean": -0.0032434292931339953,
+    "delta_std": 0.0361652443473564,
+    "edge_wins_frac": 0.55,
+    "cv_mup_mean": -9.935666800213841,
+    "cv_mup_std": 0.07159598656468641,
+    "cv_mup_range": [
+      -10.061561864830391,
+      -9.801455030617399
+    ]
+  },
+  "permutation_test": {
+    "n_permutations": 200,
+    "real_delta_gdagger": 0.0015111303777342044,
+    "null_mean": 0.21768608548090396,
+    "null_median": 0.11891213622486507,
+    "null_5pct": 0.015164213251148431,
+    "null_min": 0.0016371462681643578,
+    "p_value": 0.0
+  },
+  "hard_mode_nulls": {
+    "null_A_heteroskedastic": {
+      "n_realizations": 100,
+      "null_mean": 0.3878278035061327,
+      "null_median": 0.25544797220095994,
+      "null_min": 0.00215526158823387,
+      "p_value": 0.0
+    },
+    "null_B_selection_function": {
+      "n_realizations": 100,
+      "null_mean": 0.37201345971329614,
+      "null_median": 0.23653355587315605,
+      "null_min": 0.00036076707045396006,
+      "p_value": 0.01
+    }
+  },
+  "hierarchical_model": {
+    "k": 13,
+    "aic": -2552.600778966844,
+    "daic_vs_edge": -327.10402213263205,
+    "ap0": 1.2804493843091806,
+    "ap_env": -0.07673397657201449,
+    "ap_L": -0.14541732994719342,
+    "Ap_field_mid": 3.5982563622461,
+    "Ap_dense_mid": 3.3324754551163003,
+    "mu_dip": -10.730452289241418,
+    "w_dip": 0.5959691400111343,
+    "dip_env_test": {
+      "mud0": -10.764830940020662,
+      "beta_dip_env": 0.143575716174384,
+      "daic": -12.804352660118639,
+      "universal": false
+    }
+  },
+  "bec_prediction": {
+    "bec_inflection": null,
+    "classical_inflection": null,
+    "location_discriminating": false,
+    "observed_peak": -9.922329884330109,
+    "theory_preferred": true,
+    "daic_fixed_vs_free": -327.10402213263205
+  },
+  "mechanism_score": {
+    "n_galaxies": 53,
+    "mean_excess": 1.6605683965016298,
+    "frac_positive": 0.6415094339622641,
+    "correlations": {
+      "logL (mass)": 0.1296752855536056,
+      "T (morph)": 0.05310404873651444,
+      "Vflat": 0.17850569436538005,
+      "env (dense)": NaN
+    }
+  },
+  "boolean_suite": {
+    "tests": {
+      "T1: Peak at g\u2020 (|\u0394| < 0.10)": {
+        "pass": true,
+        "detail": "|\u0394| = 0.0015"
+      },
+      "T2: Dip in predicted range": {
+        "pass": true,
+        "detail": "\u03bcd = -10.219, Ad = -0.660"
+      },
+      "T3: Hard-mode nulls reject": {
+        "pass": true,
+        "detail": "pA=0.0, pB=0.01"
+      },
+      "T4: \u039bCDM fails M2b": {
+        "pass": true,
+        "detail": "\u0394AIC = +3.7"
+      }
+    },
+    "n_pass": 4,
+    "n_total": 4,
+    "suite_pass": true
+  },
+  "coherence_score": {
+    "components": {
+      "Anchoring precision": 0.8255814140414702,
+      "Amplitude ratio (SPARC/\u039bCDM)": 1.3181523331511817,
+      "\u0394AIC strength": 22.485908351484248,
+      "Window sweep stability": 2.9184157503556563,
+      "CV consistency": 3.0,
+      "Dip separation": 4.451838073996367
+    },
+    "composite_rms_z": 9.533897396176789,
+    "fisher_chi2": 545.3711973649592,
+    "fisher_df": 6,
+    "null_composite_mean": 1.0341292760901686,
+    "null_composite_std": 0.4140621452123999,
+    "null_exceedance_fraction": 0.0,
+    "bayes_factor_log10": 106.98233091872112,
+    "bayes_factor_vs_edge_log10": 69.74224245230874,
+    "jeffreys_scale": "DECISIVE"
+  },
+  "multi_dataset": {
+    "n_subsamples": 7,
+    "mu_global": -10.117983839985794,
+    "tau": 0.21626105367113344,
+    "delta_global_gdagger": -0.19716508603341865,
+    "universal": true,
+    "subsamples": [
+      {
+        "label": "Late-type (T>=7)",
+        "mu_peak": -9.97634045035991,
+        "delta_gdagger": -0.055521696407534904
+      },
+      {
+        "label": "Early-type (T<=5)",
+        "mu_peak": -10.141540080410111,
+        "delta_gdagger": -0.22072132645773657
+      },
+      {
+        "label": "Quality Q=1",
+        "mu_peak": -9.89006230750399,
+        "delta_gdagger": 0.030756446448384267
+      },
+      {
+        "label": "Quality Q=2",
+        "mu_peak": -10.047090679490564,
+        "delta_gdagger": -0.12627192553818922
+      },
+      {
+        "label": "Low-mass (L<med)",
+        "mu_peak": -10.074254369422551,
+        "delta_gdagger": -0.15343561547017615
+      },
+      {
+        "label": "High-mass (L>=med)",
+        "mu_peak": -10.082040954570468,
+        "delta_gdagger": -0.16122220061809323
+      },
+      {
+        "label": "Sofue 2016",
+        "mu_peak": -10.614558038142954,
+        "delta_gdagger": -0.6937392841905794
+      }
+    ],
+    "sofue": {
+      "label": "Sofue 2016",
+      "n_points": 3681,
+      "mu_peak": -10.614558038142954,
+      "delta_gdagger": -0.6937392841905794,
+      "Ap": 0.28395224963216437,
+      "daic_vs_M1": -65.34907950595152
+    }
+  },
+  "joint_discriminant_S": {
+    "S_sparc": 16.409660509583077,
+    "S_lcdm": 3.121853585569305,
+    "S_null_mean": 8.151761404505827,
+    "S_null_std": 3.545947639534495,
+    "S_null_max": 17.37655422494951,
+    "p_value": 0.005,
+    "sparc_components": {
+      "label": "SPARC",
+      "n_points": 2671,
+      "S": 16.409660509583077,
+      "S1_anchoring": 3.8796597919959828,
+      "S2_width": 1.7234699752427216,
+      "S3_daic_per_pt": 5.0,
+      "S4_topology": 1.9268709503483912,
+      "mu_peak": -10.005382235658546,
+      "Ap": 0.6379763707919183,
+      "mu_dip": -10.208881247876143,
+      "Ad": -0.7102094248937029,
+      "wp": 0.2765300247572784,
+      "daic": -143.355916925173,
+      "daic_per_pt": -0.05367125306071621
+    },
+    "lcdm_components": {
+      "label": "\u039bCDM mock",
+      "n_points": 9999,
+      "S": 3.121853585569305,
+      "S1_anchoring": 0.19291587729269832,
+      "S2_width": 1.0734340972556757,
+      "S3_daic_per_pt": 1.6357250323539227,
+      "S4_topology": 0.02686270137430952,
+      "mu_peak": -11.00579840944557,
+      "Ap": 0.20969844259874476,
+      "mu_dip": -12.343845096873121,
+      "Ad": -0.30986285508094724,
+      "wp": 0.9265659027443242,
+      "daic": -163.55614598506872,
+      "daic_per_pt": -0.016357250323539227
+    }
+  },
+  "quality_causal": {
+    "q1_delta_window": 0.030756446448384267,
+    "q2_delta_window": 0.12627192553818922,
+    "q1_delta_edge": 0.031333467630595635,
+    "q2_delta_edge": 1.141505424759874,
+    "q1_daic_per_pt": -0.06530266764314821,
+    "q2_daic_per_pt": -0.03293787490202672,
+    "q1_tighter": true,
+    "q1_stronger_per_pt": true,
+    "causal": true,
+    "S_q1": 15.980356691834483,
+    "S_q2": 13.659741986137027
+  },
+  "changepoint_test": {
+    "sup_lr": 90.31497474735988,
+    "best_tau": -9.348811908395056,
+    "tau_delta_gdagger": 0.5720068455573184,
+    "regime1": {
+      "a": -3.1037591848742627,
+      "b": -0.1245368017181611
+    },
+    "regime2": {
+      "a": 12.296682819171185,
+      "b": 1.5937863460349913
+    },
+    "sigma_ratio_at_tau": 1.9422321455443847,
+    "p_boot": 0.0,
+    "p_perm": 0.07,
+    "bootstrap_n": 200,
+    "bootstrap_mean_sup_lr": 6.009254381652145,
+    "bootstrap_max_sup_lr": 15.742685102078212,
+    "perm_mean_sup_lr": 49.09974269233889,
+    "perm_max_sup_lr": 192.6230475766115
+  },
+  "holdout_prediction": {
+    "n_folds": 50,
+    "delta_nll_per_pt_mean": -0.019968648985500038,
+    "delta_nll_per_pt_se": 0.006404082609428999,
+    "frac_h1_wins": 0.38,
+    "tau_mean": -9.68800009242417,
+    "tau_std": 0.4300381060503366,
+    "tau_range": [
+      -11.428269571128608,
+      -9.33636006610324
+    ]
+  },
+  "bayesian_changepoint": {
+    "tau_map": -9.348811908395056,
+    "tau_mean": -9.414367854965235,
+    "tau_std": 0.057374834396087114,
+    "ci68": [
+      -9.460878489021416,
+      -9.348811908395056
+    ],
+    "ci95": [
+      -9.49823401589687,
+      -9.33636006610324
+    ],
+    "p_near_gdagger": {
+      "0.05": 5.7501916728502e-17,
+      "0.1": 5.535983823082061e-13,
+      "0.2": 3.0172064829575717e-05,
+      "0.5": 0.5584811561578468
+    },
+    "separation": {
+      "delta_log_sigma_mean": 0.6638379021401022,
+      "delta_log_sigma_std": 0.0865492182392177,
+      "z_separation": 7.670062371970681,
+      "P_sigma_left_gt_right": 0.9999999999999915,
+      "p_value_equal_regimes": 1.709743457922741e-14,
+      "P_params_equal": 1.709743457922741e-14
+    }
+  },
+  "nonparametric_tests": {
+    "w0.3": {
+      "n_left": 177,
+      "n_right": 131,
+      "median_abs_r_left": 0.09216988513949786,
+      "median_abs_r_right": 0.04659591034378785,
+      "U": 13577.0,
+      "p_mw": 0.010278219126691801,
+      "rank_biserial": -0.1710872471643594,
+      "boot_U_ci95": [
+        4735.8,
+        30676.975
+      ]
+    },
+    "w0.5": {
+      "n_left": 333,
+      "n_right": 181,
+      "median_abs_r_left": 0.09362843087152584,
+      "median_abs_r_right": 0.04958535026813493,
+      "U": 35820.0,
+      "p_mw": 0.0004101192562318478,
+      "rank_biserial": -0.188591906823951,
+      "boot_U_ci95": [
+        14673.7,
+        71530.84999999998
+      ]
+    },
+    "w1.0": {
+      "n_left": 810,
+      "n_right": 248,
+      "median_abs_r_left": 0.08025292596362021,
+      "median_abs_r_right": 0.05106008823479247,
+      "U": 118349.0,
+      "p_mw": 2.105740680043166e-05,
+      "rank_biserial": -0.17830545599362813,
+      "boot_U_ci95": [
+        49493.950000000004,
+        226552.12499999994
+      ]
+    },
+    "energy_distance": {
+      "e_dist": 0.015047868164994704,
+      "p_perm": 0.0,
+      "n_sub": 254
+    }
+  },
+  "invariance_matrix": {
+    "tau_mean": -9.956845201104306,
+    "tau_std": 0.6623830037444646,
+    "tau_range": 2.0759547918537784,
+    "all_within_0.5_dex": false,
+    "invariant": false,
+    "splits": [
+      {
+        "label": "Late-type (T>=7)",
+        "n_points": 973,
+        "n_galaxies": 69,
+        "n_dm_dominated": 907,
+        "n_transition": 66,
+        "tau": -11.429596037006723,
+        "delta_gdagger": -1.5087772830543482,
+        "sup_lr": 13.039505045118858
+      },
+      {
+        "label": "Early-type (T<=5)",
+        "n_points": 1451,
+        "n_galaxies": 52,
+        "n_dm_dominated": 415,
+        "n_transition": 811,
+        "tau": -9.500383593769387,
+        "delta_gdagger": 0.4204351601829881,
+        "sup_lr": 96.0288405800593
+      },
+      {
+        "label": "Quality Q=1",
+        "n_points": 1787,
+        "n_galaxies": 79,
+        "n_dm_dominated": 982,
+        "n_transition": 686,
+        "tau": -9.55233583145912,
+        "delta_gdagger": 0.3684829224932553,
+        "sup_lr": 70.17745146092147
+      },
+      {
+        "label": "Quality Q=2",
+        "n_points": 990,
+        "n_galaxies": 52,
+        "n_dm_dominated": 562,
+        "n_transition": 319,
+        "tau": -9.353641245152945,
+        "delta_gdagger": 0.5671775087994302,
+        "sup_lr": 48.800370958571875
+      },
+      {
+        "label": "Low-mass",
+        "n_points": 900,
+        "n_galaxies": 65,
+        "n_dm_dominated": 831,
+        "n_transition": 69,
+        "tau": -11.251770281200551,
+        "delta_gdagger": -1.3309515272481764,
+        "sup_lr": 15.83884042388604
+      },
+      {
+        "label": "High-mass",
+        "n_points": 1877,
+        "n_galaxies": 66,
+        "n_dm_dominated": 713,
+        "n_transition": 936,
+        "tau": -9.531414400224254,
+        "delta_gdagger": 0.3894043537281213,
+        "sup_lr": 107.01618996308935
+      },
+      {
+        "label": "Field",
+        "n_points": 1887,
+        "n_galaxies": 83,
+        "n_dm_dominated": 975,
+        "n_transition": 713,
+        "tau": -9.444181774299228,
+        "delta_gdagger": 0.4766369796531471,
+        "sup_lr": 89.50253501362567
+      },
+      {
+        "label": "Dense",
+        "n_points": 890,
+        "n_galaxies": 48,
+        "n_dm_dominated": 569,
+        "n_transition": 292,
+        "tau": -10.0292065043083,
+        "delta_gdagger": -0.1083877503559254,
+        "sup_lr": 75.92690131132258
+      },
+      {
+        "label": "Low-incl",
+        "n_points": 1338,
+        "n_galaxies": 68,
+        "n_dm_dominated": 752,
+        "n_transition": 436,
+        "tau": -9.83162610862827,
+        "delta_gdagger": 0.08919264532410409,
+        "sup_lr": 109.7056919570532
+      },
+      {
+        "label": "High-incl",
+        "n_points": 1439,
+        "n_galaxies": 63,
+        "n_dm_dominated": 792,
+        "n_transition": 569,
+        "tau": -10.041415121420416,
+        "delta_gdagger": -0.12059636746804081,
+        "sup_lr": 102.11247410351643
+      },
+      {
+        "label": "Near (D<med)",
+        "n_points": 1297,
+        "n_galaxies": 65,
+        "n_dm_dominated": 914,
+        "n_transition": 352,
+        "tau": -10.015787197946175,
+        "delta_gdagger": -0.09496844399379967,
+        "sup_lr": 66.73546015050351
+      },
+      {
+        "label": "Far (D>=med)",
+        "n_points": 1480,
+        "n_galaxies": 66,
+        "n_dm_dominated": 630,
+        "n_transition": 653,
+        "tau": -9.500784317836304,
+        "delta_gdagger": 0.4200344361160706,
+        "sup_lr": 72.1774489482741
+      }
+    ]
+  },
+  "predictive_holdout_step20": {
+    "M2b": {
+      "delta_nll_per_pt_mean": -0.013227198597707211,
+      "delta_nll_per_pt_se": 0.009075614344655432,
+      "pct_wins": 50.0,
+      "n_valid_folds": 50
+    },
+    "M2b_window": {
+      "delta_nll_per_pt_mean": -0.012524956163684738,
+      "delta_nll_per_pt_se": 0.008070053872534408,
+      "pct_wins": 48.0,
+      "n_valid_folds": 50
+    },
+    "spline": {
+      "delta_nll_per_pt_mean": -0.012525035444994172,
+      "delta_nll_per_pt_se": 0.00695072436945621,
+      "pct_wins": 52.0,
+      "n_valid_folds": 50
+    },
+    "changepoint": {
+      "delta_nll_per_pt_mean": -0.02930234092543925,
+      "delta_nll_per_pt_se": 0.008505647301555008,
+      "pct_wins": 28.000000000000004,
+      "n_valid_folds": 50
+    },
+    "m2b_mu_peak_mean": -9.435688104037753,
+    "m2b_mu_peak_std": 0.38166714582269234,
+    "m2b_window_mu_peak_mean": -9.916922206105111,
+    "m2b_window_mu_peak_std": 0.20140074664213997,
+    "cp_tau_mean": -9.724857545607954,
+    "cp_tau_std": 0.3121813695720572,
+    "spline_lambda": 0.1,
+    "best_model": "M1"
+  },
+  "model_selection_step21": {
+    "full_data": {
+      "M1": {
+        "k": 3,
+        "aic": -2000.6376733193692,
+        "bic": -1982.8502938574488
+      },
+      "M2b": {
+        "k": 9,
+        "aic": -2182.5767126497385,
+        "bic": -2129.2145742639773
+      },
+      "spline": {
+        "k": 9,
+        "aic": -2129.794260394263,
+        "bic": -2076.4321220085017,
+        "lambda": 0.1
+      },
+      "changepoint": {
+        "k": 5,
+        "aic": -2086.952648066729,
+        "bic": -2057.307015630195
+      }
+    },
+    "param_stability": {
+      "m2b_mu_peak_mean": -9.435688104037753,
+      "m2b_mu_peak_std": 0.38166714582269234,
+      "cp_tau_mean": -9.724857545607954,
+      "cp_tau_std": 0.3121813695720572
+    }
+  },
+  "interface_model": {
+    "p1": {
+      "k": 6,
+      "aic": -1994.6376733205334,
+      "bic": -1959.0629143966926,
+      "mu_dag": -8.859274476076902,
+      "w": 2.0,
+      "A": 0.0,
+      "nll": -1003.3188366602667
+    },
+    "p2": {
+      "k": 6,
+      "aic": -2055.12690174834,
+      "bic": -2019.5521428244992,
+      "mu_dag": -8.626333586780817,
+      "w": 0.17413469186056496,
+      "A": 0.4004333640480854,
+      "nll": -1033.56345087417
+    },
+    "best_p": 2,
+    "best_aic": -2055.12690174834,
+    "best_bic": -2019.5521428244992,
+    "best_mu_dag": -8.626333586780817,
+    "best_w": 0.17413469186056496,
+    "best_A": 0.4004333640480854,
+    "daic_vs_M1": -54.48922842897082,
+    "daic_vs_M2b": 127.44981090139845,
+    "daic_vs_spline": 74.66735864592283,
+    "mu_dag_near_gdagger": false,
+    "delta_gdagger": 1.2944851671715583
+  },
+  "interface_holdout": {
+    "model": "interface_p2",
+    "n_folds": 50,
+    "n_valid": 50,
+    "delta_nll_per_pt_mean": -0.00343681268339943,
+    "delta_nll_per_pt_se": 0.002861121234927965,
+    "pct_wins": 50.0,
+    "mu_dag_fold_mean": -9.051271545883909,
+    "mu_dag_fold_std": 0.9361100740975224
+  },
+  "interface_invariance": {
+    "n_splits": 8,
+    "mu_dag_mean": -9.573132187759205,
+    "mu_dag_std": 0.6136844744317477,
+    "mu_dag_range": 1.7057150157006866,
+    "w_mean": 0.3588469039261492,
+    "w_std": 0.4616940490399058,
+    "w_range": 1.4025178379731513,
+    "pct_near_gdagger": 75.0,
+    "stable": false,
+    "splits": [
+      {
+        "label": "Field",
+        "n_points": 1887,
+        "n_galaxies": 83,
+        "mu_dag": -10.205715015700687,
+        "delta_gdagger": -0.28489626174831173,
+        "w": 1.4525178379731514,
+        "A": 0.0,
+        "daic_vs_M1": 5.99999999848842
+      },
+      {
+        "label": "Dense",
+        "n_points": 890,
+        "n_galaxies": 48,
+        "mu_dag": -9.860635693563955,
+        "delta_gdagger": 0.06018306038841992,
+        "w": 0.12256433245150966,
+        "A": 0.14457188928916964,
+        "daic_vs_M1": -28.663330272808707
+      },
+      {
+        "label": "Q=1",
+        "n_points": 1787,
+        "n_galaxies": 79,
+        "mu_dag": -8.5,
+        "delta_gdagger": 1.420818753952375,
+        "w": 0.7274083404332541,
+        "A": 1.1709180718269956,
+        "daic_vs_M1": 4.475794721872262
+      },
+      {
+        "label": "Q=2",
+        "n_points": 990,
+        "n_galaxies": 52,
+        "mu_dag": -8.559803941207232,
+        "delta_gdagger": 1.3610148127451431,
+        "w": 0.20335767727612533,
+        "A": 0.6461390718911159,
+        "daic_vs_M1": -31.30264300206545
+      },
+      {
+        "label": "Low-mass",
+        "n_points": 900,
+        "n_galaxies": 65,
+        "mu_dag": -9.775755093361544,
+        "delta_gdagger": 0.14506366059083042,
+        "w": 0.05,
+        "A": 50.0,
+        "daic_vs_M1": -8.61187145875192
+      },
+      {
+        "label": "High-mass",
+        "n_points": 1877,
+        "n_galaxies": 66,
+        "mu_dag": -9.883536045204872,
+        "delta_gdagger": 0.037282708747502724,
+        "w": 0.12701053978238713,
+        "A": 0.13922144205764736,
+        "daic_vs_M1": -87.37246223221064
+      },
+      {
+        "label": "Late-type",
+        "n_points": 973,
+        "n_galaxies": 69,
+        "mu_dag": -9.919363172732146,
+        "delta_gdagger": 0.0014555812202292628,
+        "w": 0.05,
+        "A": 0.0880435161492306,
+        "daic_vs_M1": -13.117285285090475
+      },
+      {
+        "label": "Early-type",
+        "n_points": 1451,
+        "n_galaxies": 52,
+        "mu_dag": -9.8802485403032,
+        "delta_gdagger": 0.04057021364917546,
+        "w": 0.13791650349276607,
+        "A": 0.14804517929830624,
+        "daic_vs_M1": -62.19205158202476
+      }
+    ]
+  },
+  "scatter_profile_sparc": {
+    "centers": [
+      -11.930577496635003,
+      -11.630577496635002,
+      -11.330577496635001,
+      -11.030577496635,
+      -10.730577496635,
+      -10.430577496635,
+      -10.130577496634999,
+      -9.830577496634998,
+      -9.530577496634997,
+      -9.230577496634996,
+      -8.930577496634996,
+      -8.630577496634995
+    ],
+    "sigmas": [
+      0.21608264937971264,
+      0.19976594195383587,
+      0.1889191612531768,
+      0.16707751967000933,
+      0.1382790786462624,
+      0.1562445711095515,
+      0.14677906982605718,
+      0.20377630610074915,
+      0.11911731022541089,
+      0.08534204755696688,
+      0.13689044808243356,
+      0.26061796628161177
+    ]
+  },
+  "scatter_profile_lcdm": {
+    "centers": [
+      -12.844104658659703,
+      -12.544104658659702,
+      -12.244104658659701,
+      -11.9441046586597,
+      -11.6441046586597,
+      -11.344104658659699,
+      -11.044104658659698,
+      -10.744104658659698,
+      -10.444104658659697,
+      -10.144104658659696,
+      -9.844104658659695,
+      -9.544104658659695,
+      -9.244104658659694
+    ],
+    "sigmas": [
+      0.12973588569801225,
+      0.12681651717482975,
+      0.14343344657859824,
+      0.1630300083875491,
+      0.17635516467777057,
+      0.17116108989251,
+      0.16479123115939334,
+      0.14386464118333814,
+      0.13411633685381105,
+      0.1173306842945591,
+      0.10124613406711494,
+      0.09422925771746471,
+      0.09720916922255601
+    ]
+  },
+  "verdict": "PEAK at g\u2020 confirmed (\u03bcp=-9.922) \u2014 check \u039bCDM"
+}

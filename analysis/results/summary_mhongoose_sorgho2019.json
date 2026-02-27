@@ -1,0 +1,71 @@
+{
+  "test_name": "mhongoose_sorgho2019_integration",
+  "source": "Sorgho+2019 (MNRAS 482, 1248)",
+  "galaxies": {
+    "NGC7424": {
+      "distance_Mpc": 9.55,
+      "inclination_deg": 29.0,
+      "telescope": "KAT-7",
+      "M_star": 2510000000.0,
+      "M_HI": 12600000000.0,
+      "ML_value": 0.25,
+      "ML_band": "W1",
+      "iso_rho0": 0.1079,
+      "iso_rc": 1.9,
+      "iso_chi2red": 1.8,
+      "selected_method": "B (direct baryonic)",
+      "n_rar_points": 15,
+      "log_gbar_range": [
+        -11.974,
+        -10.631
+      ],
+      "log_gobs_range": [
+        -10.928,
+        -10.264
+      ],
+      "rar_scatter_selected": 0.0822,
+      "mean_residual_selected": 0.0131,
+      "rar_scatter_iso": 0.7696,
+      "rar_scatter_direct": 0.0822
+    },
+    "NGC3621": {
+      "distance_Mpc": 6.6,
+      "inclination_deg": 64.0,
+      "telescope": "MeerKAT",
+      "M_star": 10000000000.0,
+      "M_HI": 9330000000.0,
+      "ML_value": 0.5,
+      "ML_band": "3.6um",
+      "iso_rho0": 0.0149,
+      "iso_rc": 4.8,
+      "iso_chi2red": 2.0,
+      "selected_method": "A (ISO subtraction)",
+      "n_rar_points": 35,
+      "log_gbar_range": [
+        -12.202,
+        -10.252
+      ],
+      "log_gobs_range": [
+        -10.96,
+        -10.09
+      ],
+      "rar_scatter_selected": 0.0596,
+      "mean_residual_selected": -0.1287,
+      "rar_scatter_iso": 0.0596,
+      "rar_scatter_direct": 0.1763
+    }
+  },
+  "full_mhongoose": {
+    "n_galaxies": 4,
+    "n_rar_points": 82,
+    "scatter": 0.1794,
+    "mean_residual": -0.0928,
+    "frac_below_gdagger": 1.0
+  },
+  "combined_sorgho": {
+    "n_galaxies": 2,
+    "n_rar_points": 50,
+    "scatter": 0.0935,
+    "mean_residual": -0.0862
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "status": "OK",
+  "count": 11,
+  "items": [
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/dataset_lineage.md",
+      "size_bytes": 4681
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/fig_alpha_star.png",
+      "size_bytes": 53330
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/fig_mass_matched_phase.png",
+      "size_bytes": 81208
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/fig_phase_null.png",
+      "size_bytes": 101477
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/fig_xi_organizing.png",
+      "size_bytes": 187448
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/summary_alpha_star_convergence.json",
+      "size_bytes": 3766
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/summary_alpha_star_convergence_table.csv",
+      "size_bytes": 1320
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/summary_dataset_lineage.json",
+      "size_bytes": 13899
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/summary_mass_matched_phase.json",
+      "size_bytes": 938
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/summary_phase_peak_null.json",
+      "size_bytes": 1153
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/root_orphans/20260224_080806/summary_xi_organizing.json",
+      "size_bytes": 54877
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-02-16T15:56:10 [V7.5.4]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-02-16T15:56:10	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/MNRAS/478/1611/table4&-out.max=unlimited&-out.all	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.5.4	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_74781611
+#Name: J/MNRAS/478/1611
+#Title: Local Volume H I Survey (LVHIS) (Koribalski+, 2018)
+#INFO	ivoid=ivo://cds.vizier/j/mnras/478/1611	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/mnras/478/1611	    IVOID of underlying data collection
+#INFO	creator=Koribalski B.S.	    First author or institution
+#INFO	cites=bibcode:2018MNRAS.478.1611K	    Article or Data origin sources
+#INFO	journal=MNRA	    Journal name
+#INFO	original_date=2018	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/478/1611	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.74781611	    Dataset identifier that can be used for citation
+#INFO	publication_date=2024-08-18	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_MNRAS_478_1611_table4:
+#Name: J/MNRAS/478/1611/table4
+#Title: HIPASS properties of the LVHIS galaxies
+#Column	recno	(I8)	Record number assigned by the VizieR team. Should Not be used for identification.	[ucd=meta.record]
+#Column	HIPASS	(A15)	HIPASS name (HIPASS JHHMM+DD)	[ucd=meta.id;meta.main]
+#Column	m_HIPASS	(A1)	[A] Multiliity index on HIPASS	[ucd=meta.code.multip]
+#Column	OName	(a12)	Optical galaxy name	[ucd=meta.id]
+#Column	vLG	(I3)	Local Group velocity	[ucd=phys.veloc;pos.lg]
+#Column	u_vLG	(A1)	[)] Uncertainty flag on vLG	[ucd=meta.code.error]
+#Column	FHI	(F6.1)	? HI flux density	[ucd=phot.flux.density;spect.line]
+#Column	e_FHI	(F5.1)	? HI flux density error	[ucd=stat.error]
+#Column	logMHI	(F5.2)	? HI mass	[ucd=phys.mass]
+#Column	HV	(I3)	? Hi systemic velocity in the optical, heliocentric velocity frame	[ucd=spect.dopplerVeloc.opt]
+#Column	u_HV	(A1)	[)] Uncertainty flag on HV	[ucd=meta.code.error]
+#Column	W50	(I3)	? HI velocity width at 50% of the HI peak flux	[ucd=spect.line.width]
+#Column	u_W50	(A1)	[?] Uncertainty flag on W50	[ucd=meta.code.error]
+#Column	W20	(I3)	? HI velocity width at 20% of the HI peak flux	[ucd=spect.line.width]
+#Column	Cat	(a11)	HIPASS catalogue (1)	[ucd=meta.id;meta.table]
+#Column	Notes	(a9)	Notes (2)	[ucd=meta.note]
+recno	HIPASS	m_HIPASS	OName	vLG	u_vLG	FHI	e_FHI	logMHI	HV	u_HV	W50	u_W50	W20	Cat	Notes
+ 	 	 	 	km/s	 	Jy.km/s	Jy.km/s	[Msun]	km/s	 	km/s	 	km/s	 	
+--------	---------------	-	------------	---	-	------	-----	-----	---	-	---	-	---	-----------	---------
+       1	HIPASS J0008-34	 	ESO349-G031 	212	 	   5.8	  1.6	 7.15	221	 	 30	 	 79	BGC        	
+       2	               	 	ESO294-G010 	106	)	      	     	     	   	 	   	 	   	---        	(ATCA)
+       3	HIPASS J0015-32	 	ESO410-G005 	 36	)	      	     	     	   	 	   	 	   	---        	(ATCA)
+       4	HIPASS J0015-39	 	NGC 55      	 95	 	1990.2	145.1	 9.33	129	 	169	 	197	BGC        	e
+       5	HIPASS J0047-20	 	NGC 247     	187	 	 608.2	 42.1	 9.28	156	 	198	 	224	BGC        	e
+       6	HIPASS J0047-25	 	NGC 253     	254	 	 692.9	 42.2	 9.40	243	 	407	 	431	BGC        	e
+       7	HIPASS J0054-37	 	NGC 300     	 98	 	1972.6	156.1	 9.33	146	 	147	 	166	BGC        	e
+       8	HIPASS J0135-41	 	NGC 625     	309	 	  30.9	  3.6	 8.04	396	 	 75	 	 99	BGC        	
+       9	HIPASS J0145-43	 	ESO245-G005 	290	 	  81.0	  9.1	 8.57	391	 	 60	 	 85	BGC        	
+      10	HIPASS J0150-44	 	ESO245-G007 	-37	)	      	     	     	-23	)	   	 	   	---        	(ATCA)
+      11	HIPASS J0237-61	 	ESO115-G021 	333	 	  97.6	  8.2	 8.76	515	 	121	 	145	BGC        	
+      12	HIPASS J0256-54	 	ESO154-G023 	399	 	 139.2	 11.6	 9.01	574	 	122	 	143	BGC        	
+      13	HIPASS J0258-49	 	ESO199-G007 	479	 	   2.1	  1.5	 7.33	631	 	 55	 	 74	HICAT      	
+      14	HIPASS J0317-66	 	NGC 1313    	262	 	 462.7	 32.6	 9.26	470	 	168	 	196	BGC        	e
+      15	HIPASS J0320-52	 	NGC 1311    	387	 	  14.6	  3.2	 7.97	568	 	 80	 	105	BGC        	
+      16	HIPASS J0321-66	 	AM0319-662  	532	)	      	     	     	   	 	   	 	   	---        	(ATCA)
+      17	HIPASS J0333-50	 	IC 1959     	456	 	  27.2	  3.2	 8.37	640	 	128	 	155	BGC        	
+      18	HIPASS J0454-53	 	NGC 1705    	401	 	  15.4	  2.6	 7.98	632	 	108	 	165	BGC        	
+      19	HIPASS J0457-42	 	ESO252-IG001	440	 	  10.9	  1.9	 8.13	657	 	 58	 	 99	BGC        	
+      20	HIPASS J0605-33	 	ESO364-G?029	549	 	  17.6	  2.5	 8.38	786	 	 75	 	 94	BGC        	
+      21	HIPASS J0607-34	 	AM0605-341  	515	 	   9.0	  2.1	 8.07	766	 	123	 	211	HICAT      	
+      22	HIPASS J0610-34	 	NGC 2188    	505	 	  32.5	  3.9	 8.62	747	 	111	 	149	BGC        	
+      23	HIPASS J0615-57	 	ESO121-G020 	311	 	  14.1	  2.9	 8.09	577	 	 65	 	 96	BGC        	c
+      24	HIPASS J0639-40	 	ESO308-G022 	551	 	   3.8	  1.5	 7.73	822	 	 52	 	 74	HICAT      	
+      25	HIPASS J0705-58	 	AM0704-582  	284	 	  34.8	  4.4	 8.29	564	 	 68	 	 84	BGC        	
+      26	HIPASS J0731-68	 	ESO059-G001 	255	 	  17.7	  2.5	 7.94	530	 	 82	 	104	BGC        	
+      27	HIPASS J0926-76	 	NGC 2915    	204	 	 108.4	 13.9	 8.56	468	 	148	 	164	BGC        	e
+      28	HIPASS J1043-37	 	ESO376-G016 	386	 	  10.3	  1.9	 8.09	668	 	 33	 	 53	BGC        	
+      29	HIPASS J1047-38	 	ESO318-G013 	428	 	   8.6	  3.0	 7.93	711	 	 42	 	 71	BGC        	
+      30	HIPASS J1057-48	 	ESO215-G?009	312	 	 104.4	 11.5	 8.83	598	 	 67	 	 83	BGC        	
+      31	HIPASS J1118-32	 	NGC 3621    	466	 	 884.3	 56.2	 9.97	730	 	271	 	293	BGC        	e
+      32	HIPASS J1131-31	 	new         	465	 	   2.5	  1.8	 7.42	717	 	 29	 	   	-          	
+      33	HIPASS J1132-32	 	new         	424	 	   2.8	  1.8	 7.47	699	 	 59	 	105	HICAT      	uncertain
+      34	HIPASS J1137-39	 	ESO320-G014 	362	 	   2.5	  1.4	 7.34	654	 	 40	 	 61	HICAT      	
+      35	HIPASS J1154-33	 	ESO379-G007 	391	 	   5.2	  1.7	 7.52	641	 	 25	 	 45	BGC        	
+      36	HIPASS J1204-35	 	ESO379-G024 	356	 	   3.4	  1.4	 7.28	631	 	 39	 	 58	HICAT      	
+      37	HIPASS J1214-38	 	ESO321-G014 	361	 	   6.4	  1.6	 7.18	610	 	 30	 	 49	BGC        	
+      38	HIPASS J1219-79	 	IC 3104     	184	 	  10.3	  2.5	 7.10	429	 	 40	 	 63	BGC        	
+      39	HIPASS J1244-35	 	ESO381-G018 	367	 	   3.3	  1.3	 7.34	625	 	 40	 	 62	HICAT      	
+      40	HIPASS J1246-33	 	ESO381-G020 	366	 	  30.9	  3.7	 8.34	589	 	 83	 	100	BGC        	
+      41	HIPASS J1247-77	 	new         	169	 	   4.7	  1.4	 7.04	413	 	 32	 	 46	BGC        	
+      42	HIPASS J1305-40	 	CEN06       	392	 	   5.1	  1.9	 7.60	617	 	 33	 	 46	BGC        	
+      43	HIPASS J1305-49	 	NGC 4945    	325	 	 319.1	 20.7	 9.04	563	 	361	 	386	BGC        	e
+      44	HIPASS J1310-46	A	ESO269-G058 	167	 	   7.2	  2.3	 7.39	400	 	 62	 	 84	B99        	
+      45	HIPASS J1321-31	 	new         	375	 	   5.9	  1.6	 7.58	571	 	 31	 	 47	BGC        	
+      46	HIPASS J1321-36	 	NGC 5102    	260	 	  80.1	  6.0	 8.34	468	 	200	 	222	BGC        	
+      47	HIPASS J1324-30	 	AM1321-304  	264	 	   3.9	  2.5	 7.30	500	 	 34	 	 66	B99        	
+      48	HIPASS J1324-42	 	NGC 5128    	338	 	  91.8	 13.2	 8.48	556	 	477	 	542	BGC        	er
+      49	HIPASS J1326-30	A	IC 4247     	195	 	   3.4	  0.8	 7.30	420	 	 33	 	 49	B99, HIDEEP	
+      50	HIPASS J1327-41	 	ESO324-G024 	302	 	  47.5	  5.5	 8.19	516	 	 81	 	107	BGC        	
+      51	HIPASS J1334-45	 	ESO270-G017 	611	 	 199.4	 15.1	 9.36	828	 	141	 	158	BGC        	
+      52	HIPASS J1336-29	 	UGCA 365    	360	 	   1.2	  1.2	 7.04	572	 	 30	 	 43	HICAT      	
+      53	HIPASS J1337-29	 	NGC 5236    	332	 	1630.3	 95.8	 9.97	513	 	259	 	287	BGC        	ec
+      54	HIPASS J1337-39	 	new         	287	 	   6.6	  1.8	 7.56	492	 	 37	 	 53	BGC        	
+      55	HIPASS J1337-42	 	NGC 5237    	150	 	  12.1	  2.6	 7.52	361	 	 77	 	 96	BGC        	
+      56	HIPASS J1337-28	 	ESO444-G084 	411	 	  21.1	  3.2	 8.02	587	 	 56	 	 75	BGC        	
+      57	HIPASS J1339-31	A	NGC 5253    	223	 	  44.4	  4.7	 8.12	407	 	 67	 	104	BGC        	
+      58	HIPASS J1340-28	 	IC 4316     	382	 	   2.1	  0.2	 6.98	581	 	   	?	 50	HIDEEP     	
+      59	HIPASS J1341-29	 	NGC 5264    	300	 	  12.8	  2.4	 7.79	478	 	 35	 	 55	BGC        	
+      60	HIPASS J1345-41	 	ESO325-G?011	340	 	  26.6	  3.7	 7.86	545	 	 59	 	 75	BGC        	
+      61	HIPASS J1348-37	 	new         	360	 	   2.5	  1.5	 7.29	581	 	 39	 	 60	HICAT      	
+      62	HIPASS J1348-53	 	ESO174-G?001	466	 	  55.1	  5.9	 8.23	688	 	 71	 	103	BGC        	
+      63	HIPASS J1349-36	 	ESO383-G087 	137	 	  27.7	  4.2	 7.89	326	 	 33	 	 52	BGC        	
+      64	HIPASS J1351-47	 	new         	291	 	   3.5	  1.3	 7.43	530	 	 39	 	 59	HICAT      	
+      65	HIPASS J1403-41	 	NGC 5408    	314	 	  61.5	  6.7	 8.53	506	 	 62	 	112	BGC        	
+      66	HIPASS J1413-65	 	Circinus    	209	 	1450.5	 97.9	 9.78	434	 	242	 	284	BGC        	e
+      67	HIPASS J1428-46	 	UKS1424-460 	202	 	  17.3	  2.6	 7.72	390	 	 48	 	 66	BGC        	
+      68	HIPASS J1434-49	 	ESO222-G010 	431	 	   7.0	  2.0	 7.74	622	 	 38	 	 62	BGC        	
+      69	HIPASS J1441-62	 	new         	461	 	   4.7	  2.8	 7.60	672	 	 52	 	 68	BGC        	
+      70	HIPASS J1443-44	 	ESO272-G025 	429	 	   1.7	  1.3	 7.15	627	 	 42	 	 71	HICAT      	
+      71	HIPASS J1501-48	 	ESO223-G009 	414	 	 101.3	 11.3	 9.00	588	 	 61	 	 89	BGC        	
+      72	HIPASS J1514-46	 	ESO274-G001 	360	 	 120.2	 10.3	 8.43	522	 	167	 	181	BGC        	
+      73	HIPASS J1526-51	 	new         	438	 	   6.0	  2.6	 7.66	605	 	 39	 	 60	BGC        	
+      74	HIPASS J1620-60	 	ESO137-G018 	439	 	  37.4	  4.9	 8.56	605	 	139	 	155	BGC        	
+      75	HIPASS J1747-64	 	IC 4662     	153	 	 130.0	 12.0	 8.26	302	 	 86	 	133	BGC        	
+      76	HIPASS J2003-31	 	ESO461-G036 	471	 	   7.5	  1.8	 8.04	427	 	 72	 	105	HICAT      	
+      77	HIPASS J2052-69	 	IC 5052     	445	 	 101.7	  7.6	 8.94	584	 	174	 	203	BGC        	
+      78	HIPASS J2202-51	 	IC 5152     	 69	 	  97.2	  9.5	 7.95	122	 	 84	 	100	BGC        	
+      79	HIPASS J2326-32	 	UGCA 438    	 82	)	      	     	     	   	 	   	 	   	---        	(ATCA)
+      80	HIPASS J2343-31	 	UGCA 442    	282	 	  50.1	  5.3	 8.33	267	 	 94	 	112	BGC        	
+      81	HIPASS J2352-52	 	ESO149-G003 	491	 	   6.9	  1.6	 7.75	576	 	 39	 	 70	BGC        	
+      82	HIPASS J2357-32	 	NGC 7793    	232	 	 278.5	 20.4	 9.00	227	 	172	 	191	BGC        	e
+

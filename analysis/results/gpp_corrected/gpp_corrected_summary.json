@@ -1,0 +1,239 @@
+{
+  "n_galaxies_total": 2892,
+  "n_galaxies_valid": 469,
+  "n_too_few_points": 2372,
+  "n_neg_gDM_rejected": 17,
+  "neg_gDM_fraction_median": 0.0,
+  "c_s2_median_m2s2": 3238764845.3696136,
+  "c_s2_median_log": 9.510379416653034,
+  "c_s2_scatter_dex": 0.6214289532272864,
+  "test_A_mass_trend": {
+    "spearman_rho": -0.1000152840863832,
+    "spearman_p": 0.030697104121917604,
+    "slope": -0.10651163841786611,
+    "slope_se": 0.039217034705085925,
+    "n_galaxies": 467
+  },
+  "test_B_environment": {
+    "n_field": 405,
+    "n_dense": 62,
+    "median_field_log": 9.831594538391702,
+    "median_dense_log": 9.653415836249799,
+    "delta_dex": 0.1781787021419028,
+    "mwu_p": 0.020469734192869134
+  },
+  "test_C_survey": {
+    "Catinella2005": {
+      "n": 155,
+      "median": 10.206603435881604,
+      "scatter": 0.2765450456060253
+    },
+    "SPARC": {
+      "n": 127,
+      "median": 9.434564180851462,
+      "scatter": 0.45815796244941454
+    },
+    "deBlok2002": {
+      "n": 17,
+      "median": 9.1571297689181,
+      "scatter": 0.4565716523156653
+    },
+    "GHASP": {
+      "n": 62,
+      "median": 8.886566130819253,
+      "scatter": 0.7241640932240258
+    },
+    "WALLABY": {
+      "n": 96,
+      "median": 9.899270420814254,
+      "scatter": 0.41845997599458645
+    },
+    "WALLABY_DR2": {
+      "n": 9,
+      "median": 6.751207198020956,
+      "scatter": 1.5058696302772292
+    }
+  },
+  "test_D_confound": {
+    "partial_spearman_rho": -0.1190693813637682,
+    "partial_spearman_p": 0.010012912337458602
+  },
+  "boson_mass_eV": 5.3798559341461004e-24,
+  "boson_mass_kg": 9.590464739276756e-60,
+  "boson_mass_CI95": [
+    5.116151805236956e-24,
+    5.684883297747261e-24
+  ],
+  "g_int_Jm3": 2.978919192509803e-109,
+  "lambda_coupling": 1.7628819036099457e-92,
+  "lyman_alpha_compatible": false,
+  "lyman_alpha_note": "bound relaxed by self-interaction (GPP with g_int > 0)",
+  "universality_verdict": "DISFAVORED",
+  "caveats": [
+    "X(r) is an acceleration-regime proxy, not a microphysical TF validity test. True TF validity requires L_rho >> xi_micro which cannot be verified without knowing boson mass m and scattering length a_s independently.",
+    "Density inversion assumes spherical symmetry. Disk galaxies violate this. All rho_DM values are effective spherical approximations.",
+    "The RAR-occupation number mapping g_DM/g_bar = 1/(exp(epsilon)-1) is a structural analogy. Deriving it from GPP fluid equilibrium is Paper 2.",
+    "Boson mass estimate assumes TF regime holds at median galaxy scales. If quantum pressure is significant, xi_emp overestimates true xi and m is underestimated.",
+    "c_s\u00b2 universality requires (a_s * n)^(3/2) / m\u00b2 \u2248 constant. The data tests this indirectly. Direct confirmation requires independent measurement of at least one of {m, a_s, n}."
+  ],
+  "cosmology_bridge": {
+    "kz_interpretation": "Universality not confirmed \u2014 KZ interpretation not supported by data.",
+    "lambda_connection": "Universality not confirmed \u2014 Lambda connection not testable."
+  },
+  "subanalysis": {
+    "sparc_only": {
+      "label": "SPARC-only",
+      "n_galaxies": 127,
+      "scatter_dex": 0.45815796244941454,
+      "median_log_cs2": 9.434564180851462,
+      "slope": 0.1442487082771437,
+      "slope_se": 0.044142322835786195,
+      "spearman_rho": 0.24626728483528895,
+      "spearman_p": 0.005255037203771432,
+      "env_delta_dex": -0.3035297572095743,
+      "env_mwu_p": 0.012407746815362056,
+      "boson_mass_eV": 6.530532188628127e-24,
+      "verdict": "DISFAVORED"
+    },
+    "sparc_deblok": {
+      "label": "SPARC+deBlok (hi-qual)",
+      "n_galaxies": 144,
+      "scatter_dex": 0.45663048468619366,
+      "median_log_cs2": 9.370076946736663,
+      "slope": 0.15770939733438857,
+      "slope_se": 0.04249124704128131,
+      "spearman_rho": 0.2704260735950023,
+      "spearman_p": 0.001044973500877927,
+      "env_delta_dex": -0.34643443703508225,
+      "env_mwu_p": 0.0029029451869761144,
+      "boson_mass_eV": 7.888172842975115e-24,
+      "verdict": "DISFAVORED"
+    },
+    "tf_valid": {
+      "label": "TF-valid only",
+      "n_galaxies": 105,
+      "scatter_dex": 0.5677868999245208,
+      "median_log_cs2": 9.384785036179766,
+      "slope": 0.12194224973381924,
+      "slope_se": 0.07306868260777812,
+      "spearman_rho": 0.1690547360900105,
+      "spearman_p": 0.0847094674920475,
+      "env_delta_dex": -0.08684017050212844,
+      "env_mwu_p": 0.7797018043974391,
+      "boson_mass_eV": 1.1588033725314764e-23,
+      "verdict": "DISFAVORED"
+    },
+    "sparc_tf_valid": {
+      "label": "SPARC + TF-valid",
+      "n_galaxies": 48,
+      "scatter_dex": 0.3997029218160139,
+      "median_log_cs2": 9.16927565061544,
+      "slope": 0.21266426846170772,
+      "slope_se": 0.07184566076842486,
+      "spearman_rho": 0.39340455234187716,
+      "spearman_p": 0.005670467305819079,
+      "env_delta_dex": -0.11626663130103587,
+      "env_mwu_p": 0.10251745148066688,
+      "boson_mass_eV": 1.7533463070981605e-23,
+      "verdict": "DISFAVORED"
+    },
+    "min10pts": {
+      "label": "\u226510 valid pts",
+      "n_galaxies": 242,
+      "scatter_dex": 0.6878293214094806,
+      "median_log_cs2": 9.625483493804744,
+      "slope": 0.011505727284856963,
+      "slope_se": 0.055104352481483626,
+      "spearman_rho": -0.007397167181149358,
+      "spearman_p": 0.9088583469564814,
+      "env_delta_dex": -0.03769170551170298,
+      "env_mwu_p": 0.9988769483076021,
+      "boson_mass_eV": 6.538845689614072e-24,
+      "verdict": "DISFAVORED"
+    },
+    "sparc_min10pts": {
+      "label": "SPARC + \u226510 pts",
+      "n_galaxies": 92,
+      "scatter_dex": 0.45812709147285957,
+      "median_log_cs2": 9.555610893446385,
+      "slope": 0.06668446492171733,
+      "slope_se": 0.0479958743635644,
+      "spearman_rho": 0.12660420308183745,
+      "spearman_p": 0.2291359879593949,
+      "env_delta_dex": -0.16801021735975574,
+      "env_mwu_p": 0.22952553801012232,
+      "boson_mass_eV": 5.527577921630486e-24,
+      "verdict": "DISFAVORED"
+    },
+    "source_Catinella2005": {
+      "label": "  Source: Catinella2005",
+      "n_galaxies": 155,
+      "scatter_dex": 0.2765450456060253,
+      "median_log_cs2": 10.206603435881604,
+      "slope": 0.46278913998039045,
+      "slope_se": Infinity,
+      "spearman_rho": NaN,
+      "spearman_p": NaN,
+      "env_delta_dex": null,
+      "env_mwu_p": null,
+      "boson_mass_eV": 1.1623269041833265e-24,
+      "verdict": "DISFAVORED"
+    },
+    "source_SPARC": {
+      "label": "  Source: SPARC",
+      "n_galaxies": 127,
+      "scatter_dex": 0.45815796244941454,
+      "median_log_cs2": 9.434564180851462,
+      "slope": 0.1442487082771437,
+      "slope_se": 0.044142322835786195,
+      "spearman_rho": 0.24626728483528895,
+      "spearman_p": 0.005255037203771432,
+      "env_delta_dex": -0.3035297572095743,
+      "env_mwu_p": 0.012407746815362056,
+      "boson_mass_eV": 6.530532188628127e-24,
+      "verdict": "DISFAVORED"
+    },
+    "source_deBlok2002": {
+      "label": "  Source: deBlok2002",
+      "n_galaxies": 17,
+      "scatter_dex": 0.4565716523156653,
+      "median_log_cs2": 9.1571297689181,
+      "slope": 0.41471767834334206,
+      "slope_se": Infinity,
+      "spearman_rho": NaN,
+      "spearman_p": NaN,
+      "env_delta_dex": null,
+      "env_mwu_p": null,
+      "boson_mass_eV": 2.6069152789310632e-23,
+      "verdict": "DISFAVORED"
+    },
+    "source_GHASP": {
+      "label": "  Source: GHASP",
+      "n_galaxies": 62,
+      "scatter_dex": 0.7241640932240258,
+      "median_log_cs2": 8.886566130819253,
+      "slope": 0.20431665285383288,
+      "slope_se": 0.15993729908533919,
+      "spearman_rho": 0.20294759198459675,
+      "spearman_p": 0.1136491011196284,
+      "env_delta_dex": null,
+      "env_mwu_p": null,
+      "boson_mass_eV": 1.8014884050947551e-23,
+      "verdict": "DISFAVORED"
+    },
+    "source_WALLABY": {
+      "label": "  Source: WALLABY",
+      "n_galaxies": 96,
+      "scatter_dex": 0.41845997599458645,
+      "median_log_cs2": 9.899270420814254,
+      "slope": 0.05105726932948901,
+      "slope_se": 0.04058154051562821,
+      "spearman_rho": 0.09510933852392205,
+      "spearman_p": 0.35665272596542263,
+      "env_delta_dex": -0.07491655168262668,
+      "env_mwu_p": 0.49615709683221765,
+      "boson_mass_eV": 2.182541473469465e-24,
+      "verdict": "DISFAVORED"
+    }
+  }
+}

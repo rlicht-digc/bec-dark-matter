@@ -1,0 +1,82 @@
+
+Based on the NYU-VAGC DR7 (Blanton et al. 2005), we have extracted the galaxy
+catalogue for our purpose. You may download our extracted galaxy catalogue or
+directly go to NYU-VAGC to obtain the full version of galaxies.
+
+========================================================
+Find the groups in SDSS.
+
+I. Selections:
+
+   1. 0.01 <= z <= 0.20
+   2. completeness >= 0.7     (fgotmain)
+
+   We adopt these selections in order to have a fair sample to search the
+   groups. After these selections, we get 599301, 602570 and 639359 galaxies
+   which covers an area of 7748 square degrees for Samples I, II and III,
+   respectively. (I: SDSS redshifts only; II: I+additional redshifts from
+   e.g. 2dF; III: II+additional redshifts from nearest neighbors and from ROSAT 
+   X-ray cluster catalogues.)
+
+
+   In VAGC, we have extracted two kinds of absolute magnitudes: petro and
+   model. Combine the source of redshifts and the type of magnitudes, in total
+   we have constructed six group catalogues:
+
+
+   petroA: petro magnitude + redshifts I
+   petroB: petro magnitude + redshifts II
+   petroC: petro magnitude + redshifts III
+   modelA: model magnitude + redshifts I
+   modelB: model magnitude + redshifts II
+   modelC: model magnitude + redshifts III
+
+
+II. group catalogue: (We are using luminosity normalized to z=0.1), take
+    petroA as an example:
+
+   1. The galaxies are listed in `ipetroA_1' with format:
+     1. galaxy id; 
+     2. galaxy id in NYU_VAGC
+     3. group id; (0: not selected in any groups)
+     4. brightest galaxy = 1; other galaxies in groups = 2
+     5. most massive galaxy (M_stellar) = 1; other galaxies in groups = 2
+   
+   2. The group members are listed in `ipetroA_2' with format:
+     1. group id; 
+     2. member galaxy id in NYU_VAGC
+     3. member galaxy id in SDSS7?
+
+   3. group properties are stored in `petroA_group' with format:
+     1. group id;
+     2. RA; 3. dec; 4. z; (they are luminosity weighted group center)
+     5. group L_{-19.5} log L_{\odot}/h^2; (characteristic group luminosity)
+     6. group stellar mass of galaxies brighter than M_r<-19.5   
+     7. halo mass1 in log M_halo/ (M_{\odot}/h); (estimated using the ranking of group L_{-19.5})
+     8. halo mass2 in log M_halo/ (M_{\odot}/h); (estimated using the ranking of M_stellar)
+     9. mean separation d=(1/n)^{1/3} Mpc/h of groups brighter than this; (estimated using the ranking of group L_{-19.5})
+     10. mean separation d=(1/n)^{1/3} Mpc/h of groups more massive than this;  (estimated using the ranking of M_stellar)
+     11. f_{edge}; edge effect: See Yang et al. 2007 
+     12. ID1: 1: mass estimated using the ranking of L_{-19.5}, -1: extrapolation
+     13. ID2: 1: mass estimated using the ranking of M_stellar, -1: extrapolation 
+
+   Note that the halo masses are estimated using the ranking of the groups
+   according to their L_{-19.5} or M_stellar. At high redshift, 
+   the small halos are not all resolved in our group catalogue, thus suffer 
+   from the (mass) incompleteness. [Readers who are interested in the halo 
+   mass assignment please refer to Yang et al. (2007) for more 
+   details.] The first 3 lines in `petroA_group' contain such incompleteness
+   information.   
+
+   For very small groups, no masses are assigned (with log M_halo = 0 and f_{edge}=0.0).
+   However one can obtain an estimation of the halo mass using the mean
+   relation between the stellar mass of the central galaxy and the halo mass
+   obtained in Yang et al. (2009b).
+
+   Groups with 0.0<f_{edge}<=0.6 may be removed from the catalogue.
+
+   ** Note that M_halo is estimated according to the mass function of WMAP7 cosmology
+   ** with halo mass function obtained by Tinker et al. 2008 (Delta=200), 
+   ** one can convert it to the cosmology which he/she is interested.
+
+===============================================================================================

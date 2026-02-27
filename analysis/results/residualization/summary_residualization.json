@@ -1,0 +1,218 @@
+{
+  "n_galaxies": 2892,
+  "n_points_unified": 15745,
+  "paths": {
+    "rar_points_unified": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+    "galaxy_results_unified": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_unified.csv",
+    "galaxy_results_sparc": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_sparc_orig_haubner.csv",
+    "rar_points_wallaby": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_wallaby_hubble_nodesi.csv",
+    "output_dir": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization",
+    "output_dir_fallback_used": true
+  },
+  "targets_available": {
+    "T1_cs2_median_available": false,
+    "T2_valid_n": 135,
+    "T3_valid_n": 477,
+    "T4_valid_n_points": 15410,
+    "T5_valid_n": 730
+  },
+  "confound_R2_per_target": {
+    "T1_cs2_median": null,
+    "T2_scatter_transition": 0.028034362736720997,
+    "T3_acf_lag1": 0.0732720214015008,
+    "T4_env_delta": 0.16946258168425266,
+    "T5_xi_coherence": 0.34916256403756707
+  },
+  "signal_recovery": {
+    "T1": null,
+    "T2": {
+      "R2_raw": 0.02144259543449234,
+      "R2_resid": 0.013825908507753004,
+      "delta_R2": -0.0076166869267393356,
+      "rho_mass_raw": -0.23671272931883047,
+      "rho_mass_resid": -0.19767895114587092,
+      "rho_mass_p_raw": 0.005706669772662343,
+      "rho_mass_p_resid": 0.02155092407769277,
+      "rho_accel_raw": -0.049287874353721596,
+      "rho_accel_resid": 0.004653204565408253,
+      "rho_accel_p_raw": 0.5702432453954535,
+      "rho_accel_p_resid": 0.9572834253434758,
+      "env_field_median_raw": 0.06624707461768198,
+      "env_dense_median_raw": 0.02532810657407308,
+      "env_field_median_resid": -0.007056739092459328,
+      "env_dense_median_resid": -0.03857745791115596,
+      "env_mannwhitney_p_raw": 0.06608191591670355,
+      "env_mannwhitney_p_resid": 0.0949522113745983
+    },
+    "T3": {
+      "R2_raw": 3.808727153931102e-05,
+      "R2_resid": 6.2605926160475e-05,
+      "delta_R2": 2.4518654621163982e-05,
+      "rho_mass_raw": -0.008098596641342524,
+      "rho_mass_resid": 0.014047631422763713,
+      "rho_mass_p_raw": 0.8599680451703519,
+      "rho_mass_p_resid": 0.759593198733225,
+      "rho_accel_raw": -0.18382875373248692,
+      "rho_accel_resid": 0.04959754486779317,
+      "rho_accel_p_raw": 5.372163554257368e-05,
+      "rho_accel_p_resid": 0.2796748397665713,
+      "env_field_median_raw": 0.8149033448828154,
+      "env_dense_median_raw": 0.7828847178735993,
+      "env_field_median_resid": 0.10919828416387567,
+      "env_dense_median_resid": 0.16914007159385824,
+      "env_mannwhitney_p_raw": 0.8096666150176857,
+      "env_mannwhitney_p_resid": 0.4479312014359247
+    },
+    "T4": {
+      "R2_raw": 0.004308533587155328,
+      "R2_resid": 0.005845997331270336,
+      "delta_R2": 0.0015374637441150085,
+      "rho_mass_raw": -0.12311877207682073,
+      "rho_mass_resid": -0.10574570203936116,
+      "rho_mass_p_raw": 4.0843637679261982e-53,
+      "rho_mass_p_resid": 1.4364316002895985e-39,
+      "rho_accel_raw": -0.15132071157476001,
+      "rho_accel_resid": -0.13996849703641556,
+      "rho_accel_p_raw": 1.3308176473769807e-79,
+      "rho_accel_p_resid": 2.8958285012740813e-68,
+      "env_field_median_raw": 0.212123,
+      "env_dense_median_raw": 0.1604425,
+      "env_field_median_resid": 0.17855621423329632,
+      "env_dense_median_resid": 0.1555650096975717,
+      "env_mannwhitney_p_raw": 1.6613703370437067e-19,
+      "env_mannwhitney_p_resid": 5.390470759333525e-18
+    },
+    "T5": {
+      "R2_raw": 0.0003240843291937301,
+      "R2_resid": 0.0012039805755886812,
+      "delta_R2": 0.0008798962463949511,
+      "rho_mass_raw": 0.09577046474638311,
+      "rho_mass_resid": 0.08619049421999334,
+      "rho_mass_p_raw": 0.009622865001267881,
+      "rho_mass_p_resid": 0.019854632740186107,
+      "rho_accel_raw": -0.6242376906240965,
+      "rho_accel_resid": 0.08082431616549098,
+      "rho_accel_p_raw": 4.162054112607824e-80,
+      "rho_accel_p_resid": 0.028992841413290504,
+      "env_field_median_raw": 1.453454516051005,
+      "env_dense_median_raw": 1.6333674101259739,
+      "env_field_median_resid": -0.1586782626676817,
+      "env_dense_median_resid": 0.194957670036085,
+      "env_mannwhitney_p_raw": 0.0016926679449508631,
+      "env_mannwhitney_p_resid": 0.001953211170338307
+    }
+  },
+  "verdict_per_target": {
+    "T1": "SKIPPED_NOT_AVAILABLE",
+    "T2": "UNCHANGED",
+    "T3": "UNCHANGED",
+    "T4": "UNCHANGED",
+    "T5": "UNCHANGED"
+  },
+  "overall_verdict": "MIXED_OR_UNCHANGED",
+  "flags_confound_dominance": {
+    "T2_confound_R2_gt_0p5": false,
+    "T3_confound_R2_gt_0p5": false,
+    "T4_confound_R2_gt_0p5": false,
+    "T5_confound_R2_gt_0p5": false
+  },
+  "t4_env_delta_bins": {
+    "raw": [
+      {
+        "bin": 0,
+        "n_field": 159,
+        "n_dense": 35,
+        "sigma_field": 0.5122222845326599,
+        "sigma_dense": 0.6653198459569639,
+        "delta_sigma_field_minus_dense": -0.15309756142430397
+      },
+      {
+        "bin": 1,
+        "n_field": 1992,
+        "n_dense": 354,
+        "sigma_field": 0.35866999739191935,
+        "sigma_dense": 0.3636715639284223,
+        "delta_sigma_field_minus_dense": -0.005001566536502966
+      },
+      {
+        "bin": 2,
+        "n_field": 3358,
+        "n_dense": 484,
+        "sigma_field": 0.2698545718532738,
+        "sigma_dense": 0.21319157900661112,
+        "delta_sigma_field_minus_dense": 0.05666299284666265
+      },
+      {
+        "bin": 3,
+        "n_field": 4468,
+        "n_dense": 1053,
+        "sigma_field": 0.30173415619728144,
+        "sigma_dense": 0.2183592769132843,
+        "delta_sigma_field_minus_dense": 0.08337487928399714
+      },
+      {
+        "bin": 4,
+        "n_field": 2505,
+        "n_dense": 1002,
+        "sigma_field": 0.322966262913867,
+        "sigma_dense": 0.2545828788242341,
+        "delta_sigma_field_minus_dense": 0.0683833840896329
+      }
+    ],
+    "residualized": [
+      {
+        "bin": 0,
+        "n_field": 159,
+        "n_dense": 35,
+        "sigma_field": 0.4873950616903308,
+        "sigma_dense": 0.5957543362849173,
+        "delta_sigma_field_minus_dense": -0.10835927459458644
+      },
+      {
+        "bin": 1,
+        "n_field": 1992,
+        "n_dense": 354,
+        "sigma_field": 0.3442310175593012,
+        "sigma_dense": 0.32674177436646235,
+        "delta_sigma_field_minus_dense": 0.017489243192838844
+      },
+      {
+        "bin": 2,
+        "n_field": 3358,
+        "n_dense": 484,
+        "sigma_field": 0.26988431553151243,
+        "sigma_dense": 0.20740965053826516,
+        "delta_sigma_field_minus_dense": 0.062474664993247275
+      },
+      {
+        "bin": 3,
+        "n_field": 4468,
+        "n_dense": 1053,
+        "sigma_field": 0.30173415619728144,
+        "sigma_dense": 0.2188705522587071,
+        "delta_sigma_field_minus_dense": 0.08286360393857434
+      },
+      {
+        "bin": 4,
+        "n_field": 2505,
+        "n_dense": 1002,
+        "sigma_field": 0.322966262913867,
+        "sigma_dense": 0.2545828788242341,
+        "delta_sigma_field_minus_dense": 0.0683833840896329
+      }
+    ],
+    "aggregate_raw": 0.010064425651897153,
+    "aggregate_residualized": 0.024570324323941385
+  },
+  "plot_paths": {
+    "plot_A": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_A_raw_vs_residualized_targets.png",
+    "plot_B": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_B_confound_r2_bar_chart.png",
+    "plot_C": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_C_signal_recovery_delta_R2.png",
+    "plot_D": "/Users/russelllicht/bec-dark-matter/analysis/results/residualization/plot_D_acf_lag1_env_histograms.png"
+  },
+  "notes": [
+    "T1 (cs2_median) skipped because no cs2_median column was found in available input tables.",
+    "For T4, point-level residualization uses confounds [log_gbar_bin, gas_dominated] as requested.",
+    "Targets with fewer than 20 matched samples are skipped and marked explicitly."
+  ]
+}

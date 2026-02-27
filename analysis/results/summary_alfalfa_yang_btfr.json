@@ -1,0 +1,297 @@
+{
+  "test_name": "alfalfa_yang_btfr_environmental_scatter",
+  "description": "ALFALFA \u03b1.100 \u00d7 Yang DR7 cross-match: BTFR scatter as function of velocity width (acceleration proxy) and halo mass (environment)",
+  "n_alfalfa": 25255,
+  "n_matched": 2273,
+  "n_field": 1917,
+  "n_dense": 356,
+  "btfr_fit": {
+    "slope": 0.7883,
+    "intercept": 7.9541,
+    "overall_scatter": 0.31904
+  },
+  "w50_binned_results": [
+    {
+      "w50_lo": 20,
+      "w50_hi": 50,
+      "label": "20-50",
+      "log_w50_center": 1.5,
+      "n_field": 57,
+      "n_dense": 16,
+      "sigma_field": 0.31521,
+      "sigma_dense": 0.74661,
+      "delta_sigma": -0.4314,
+      "levene_stat": 5.50661,
+      "levene_p": 0.02173936
+    },
+    {
+      "w50_lo": 50,
+      "w50_hi": 80,
+      "label": "50-80",
+      "log_w50_center": 1.8010299956639813,
+      "n_field": 104,
+      "n_dense": 13,
+      "sigma_field": 0.41091,
+      "sigma_dense": 0.54563,
+      "delta_sigma": -0.13471,
+      "levene_stat": 0.06037,
+      "levene_p": 0.80634438
+    },
+    {
+      "w50_lo": 80,
+      "w50_hi": 120,
+      "label": "80-120",
+      "log_w50_center": 1.9911356165197842,
+      "n_field": 191,
+      "n_dense": 27,
+      "sigma_field": 0.35738,
+      "sigma_dense": 0.5249,
+      "delta_sigma": -0.16752,
+      "levene_stat": 9.53099,
+      "levene_p": 0.00228503
+    },
+    {
+      "w50_lo": 120,
+      "w50_hi": 180,
+      "label": "120-180",
+      "log_w50_center": 2.1672268755754653,
+      "n_field": 443,
+      "n_dense": 53,
+      "sigma_field": 0.3249,
+      "sigma_dense": 0.36751,
+      "delta_sigma": -0.04261,
+      "levene_stat": 0.09037,
+      "levene_p": 0.76383294
+    },
+    {
+      "w50_lo": 180,
+      "w50_hi": 260,
+      "label": "180-260",
+      "log_w50_center": 2.335122926537062,
+      "n_field": 555,
+      "n_dense": 72,
+      "sigma_field": 0.2583,
+      "sigma_dense": 0.27658,
+      "delta_sigma": -0.01828,
+      "levene_stat": 0.65376,
+      "levene_p": 0.41907931
+    },
+    {
+      "w50_lo": 260,
+      "w50_hi": 400,
+      "label": "260-400",
+      "log_w50_center": 2.5085166696493904,
+      "n_field": 468,
+      "n_dense": 110,
+      "sigma_field": 0.24567,
+      "sigma_dense": 0.26502,
+      "delta_sigma": -0.01935,
+      "levene_stat": 2.03399,
+      "levene_p": 0.1543585
+    },
+    {
+      "w50_lo": 400,
+      "w50_hi": 600,
+      "label": "400-600",
+      "log_w50_center": 2.690105620855803,
+      "n_field": 99,
+      "n_dense": 65,
+      "sigma_field": 0.21435,
+      "sigma_dense": 0.26469,
+      "delta_sigma": -0.05034,
+      "levene_stat": 2.12801,
+      "levene_p": 0.1465648
+    }
+  ],
+  "fine_binned_results": [
+    {
+      "center": 1.6125,
+      "n_all": 39,
+      "n_field": 29,
+      "n_dense": 10,
+      "sigma_all": 0.50931,
+      "sigma_field": 0.313,
+      "sigma_dense": 0.76412,
+      "delta_sigma": -0.45112,
+      "levene_p": 0.05590703
+    },
+    {
+      "center": 1.7375,
+      "n_all": 63,
+      "n_field": 55,
+      "n_dense": 8,
+      "sigma_all": 0.45881,
+      "sigma_field": 0.41496,
+      "sigma_dense": null,
+      "delta_sigma": null,
+      "levene_p": null
+    },
+    {
+      "center": 1.8624999999999998,
+      "n_all": 84,
+      "n_field": 78,
+      "n_dense": 6,
+      "sigma_all": 0.37152,
+      "sigma_field": 0.38279,
+      "sigma_dense": null,
+      "delta_sigma": null,
+      "levene_p": null
+    },
+    {
+      "center": 1.9874999999999998,
+      "n_all": 154,
+      "n_field": 132,
+      "n_dense": 22,
+      "sigma_all": 0.40671,
+      "sigma_field": 0.37284,
+      "sigma_dense": 0.55062,
+      "delta_sigma": -0.17778,
+      "levene_p": 0.00970207
+    },
+    {
+      "center": 2.1125,
+      "n_all": 262,
+      "n_field": 232,
+      "n_dense": 30,
+      "sigma_all": 0.33965,
+      "sigma_field": 0.32685,
+      "sigma_dense": 0.40956,
+      "delta_sigma": -0.08271,
+      "levene_p": 0.70463356
+    },
+    {
+      "center": 2.2375,
+      "n_all": 462,
+      "n_field": 420,
+      "n_dense": 42,
+      "sigma_all": 0.30677,
+      "sigma_field": 0.30223,
+      "sigma_dense": 0.29465,
+      "delta_sigma": 0.00758,
+      "levene_p": 0.50400768
+    },
+    {
+      "center": 2.3625,
+      "n_all": 481,
+      "n_field": 419,
+      "n_dense": 62,
+      "sigma_all": 0.25759,
+      "sigma_field": 0.24608,
+      "sigma_dense": 0.29231,
+      "delta_sigma": -0.04623,
+      "levene_p": 0.05373468
+    },
+    {
+      "center": 2.4875,
+      "n_all": 424,
+      "n_field": 343,
+      "n_dense": 81,
+      "sigma_all": 0.25466,
+      "sigma_field": 0.25189,
+      "sigma_dense": 0.2578,
+      "delta_sigma": -0.00591,
+      "levene_p": 0.36210646
+    },
+    {
+      "center": 2.6125,
+      "n_all": 224,
+      "n_field": 160,
+      "n_dense": 64,
+      "sigma_all": 0.25416,
+      "sigma_field": 0.23561,
+      "sigma_dense": 0.27629,
+      "delta_sigma": -0.04069,
+      "levene_p": 0.26534708
+    },
+    {
+      "center": 2.7375,
+      "n_all": 56,
+      "n_field": 30,
+      "n_dense": 26,
+      "sigma_all": 0.22904,
+      "sigma_field": 0.18059,
+      "sigma_dense": 0.26401,
+      "delta_sigma": -0.08342,
+      "levene_p": 0.12894494
+    }
+  ],
+  "grid_2d": [
+    {
+      "w50_range": "20-80",
+      "mh_0_12": {
+        "sigma": 0.39722,
+        "n": 142
+      },
+      "mh_12_12": {
+        "sigma": 0.36001,
+        "n": 19
+      },
+      "mh_12_13": {
+        "sigma": 0.8965,
+        "n": 12
+      },
+      "mh_13_15": {
+        "sigma": 0.26595,
+        "n": 17
+      }
+    },
+    {
+      "w50_range": "80-150",
+      "mh_0_12": {
+        "sigma": 0.32579,
+        "n": 348
+      },
+      "mh_12_12": {
+        "sigma": 0.35519,
+        "n": 36
+      },
+      "mh_12_13": {
+        "sigma": 0.39769,
+        "n": 16
+      },
+      "mh_13_15": {
+        "sigma": 0.4903,
+        "n": 36
+      }
+    },
+    {
+      "w50_range": "150-250",
+      "mh_0_12": {
+        "sigma": 0.26682,
+        "n": 673
+      },
+      "mh_12_12": {
+        "sigma": 0.34131,
+        "n": 74
+      },
+      "mh_12_13": {
+        "sigma": 0.31635,
+        "n": 40
+      },
+      "mh_13_15": {
+        "sigma": 0.26847,
+        "n": 51
+      }
+    },
+    {
+      "w50_range": "250-600",
+      "mh_0_12": {
+        "sigma": 0.23135,
+        "n": 426
+      },
+      "mh_12_12": {
+        "sigma": 0.2216,
+        "n": 199
+      },
+      "mh_12_13": {
+        "sigma": 0.30098,
+        "n": 79
+      },
+      "mh_13_15": {
+        "sigma": 0.24447,
+        "n": 105
+      }
+    }
+  ],
+  "verdict": "COMPLEX: scatter pattern does not match simple BEC prediction"
+}

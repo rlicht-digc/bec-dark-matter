@@ -1,0 +1,12 @@
+source_path,dest_path,category,action,size_bytes,sha256_12
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/FINAL_STATUS.md,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/FINAL_STATUS.md,session_recovery,skipped_identical,1697,facd24d0e39b
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/cleanup_executed.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/cleanup_executed.csv,session_recovery,skipped_identical,2470,ba01d1a680dd
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/cleanup_plan.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/cleanup_plan.csv,session_recovery,skipped_identical,2494,f548d67b800c
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/compute_big_base_qc.py,/Users/russelllicht/bec-dark-matter/analysis/pipeline/compute_big_base_qc.py,pipeline,copied,3375,c9cb2fbfb476
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/missing_vs_present.md,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/missing_vs_present.md,session_recovery,skipped_identical,2373,df53155bfa80
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/organize_remaining_tng.py,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/unclassified/organize_remaining_tng.py,unclassified,skipped_identical,7472,f48c332c9b32
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/quality_cut_reconstruction.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/quality_cut_reconstruction.csv,session_recovery,skipped_identical,1456,80606c7a6b4d
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/registry_runs.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/registry_runs.csv,session_recovery,skipped_identical,1806,d767ca9ba2f2
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/registry_summary.json,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/registry_summary.json,session_recovery,skipped_identical,2095,3aa6d495c653
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/repro_commands.sh,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/repro_commands.sh,session_recovery,skipped_identical,1527,4388bcc0b2b9
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/selected_ids_catalog.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/selected_ids_catalog.csv,session_recovery,skipped_identical,2168947,9f701e867e6f

@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-02-23T17:53:32.806304",
+  "candidate_path": "/home/tnguser/rar_profiles/20260223_061026_big_base/rar_points.parquet",
+  "candidate_size_bytes": 78528877,
+  "total_rows": 2406650,
+  "unique_galaxies": 48133,
+  "points_per_galaxy_min": 50,
+  "points_per_galaxy_median": 50.0,
+  "points_per_galaxy_max": 50,
+  "all_50_points": true,
+  "required_columns_present": true,
+  "missing_columns": [],
+  "columns": [
+    "r_kpc",
+    "log_gbar",
+    "log_gobs",
+    "log_gDM",
+    "lowres_flag",
+    "SubhaloID"
+  ],
+  "expected_galaxies": 48133,
+  "expected_rows": 2406650,
+  "galaxy_match": true,
+  "row_match": true,
+  "is_valid": true
+}

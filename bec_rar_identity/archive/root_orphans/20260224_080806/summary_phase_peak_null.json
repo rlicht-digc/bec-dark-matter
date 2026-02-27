@@ -1,0 +1,40 @@
+{
+  "test": "phase_peak_null_distribution",
+  "n_sparc_points": 2784,
+  "n_sparc_galaxies": 131,
+  "bin_width_dex": 0.25,
+  "n_bins_used": 16,
+  "n_shuffles": 1000,
+  "real": {
+    "mu_peak": -9.80214248219586,
+    "delta_from_gdagger": 0.11885751780413933,
+    "aic_M1": 43.80755118704287,
+    "aic_edge": -101.0567737166808,
+    "daic": -144.86432490372366,
+    "fit_model": "M2b_edge"
+  },
+  "shuffle_A_within_galaxy": {
+    "p_delta": 0.161,
+    "p_daic": 0.071,
+    "delta_null_median": 0.47131960852979304,
+    "delta_null_5pct": 0.04087509983235185,
+    "delta_null_95pct": 2.0789634636230407,
+    "daic_null_median": -78.69580505649597,
+    "daic_null_5pct": -153.84066314698308,
+    "daic_null_95pct": -30.46015452158404,
+    "n_fail": 0,
+    "n_fallback": 0
+  },
+  "shuffle_B_galaxy_label": {
+    "p_delta": 0.232,
+    "p_daic": 0.166,
+    "delta_null_median": 0.3742430603702438,
+    "delta_null_5pct": 0.026572487929950928,
+    "delta_null_95pct": 2.0603463538418376,
+    "daic_null_median": -77.11369074543558,
+    "daic_null_5pct": -217.16303273375198,
+    "daic_null_95pct": -12.632120038420073,
+    "n_fail": 0,
+    "n_fallback": 0
+  }
+}

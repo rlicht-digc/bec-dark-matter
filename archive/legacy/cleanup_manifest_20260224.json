@@ -1,0 +1,59 @@
+{
+  "date": "2026-02-24",
+  "actions": {
+    "raw_data_reorg": {
+      "data_moved_to": "raw_data/observational",
+      "datasets_moved_to": "raw_data/tng",
+      "remaining_tng_moved_to": "raw_data/tng/ingestion_staging",
+      "compatibility_symlinks": [
+        "data -> raw_data/observational",
+        "datasets -> raw_data/tng",
+        "Remaining_TNG -> raw_data/tng/ingestion_staging"
+      ]
+    },
+    "bh_subproject_isolation": {
+      "new_root": "subprojects/bh_singularity",
+      "moved_dirs": [
+        "outputs_bh",
+        "outputs_bh3"
+      ],
+      "moved_scripts": [
+        "run_bh_viability.py",
+        "run_bh_viability_modes.py",
+        "scripts/run_bh_viability_modes.py (renamed to run_bh_viability_modes_extended.py)"
+      ],
+      "moved_run_artifacts": [
+        "outputs/20260223_192210/runlog_bh_modes.txt",
+        "outputs/20260223_192210/summary_bh_viability_modes.json",
+        "outputs/20260223_192210/figures/fig_viability_region_modes.png",
+        "outputs/20260223_192210/figures/fig_branch_winner.png",
+        "outputs/20260223_192210/figures/fig_kc_star_vs_M.png"
+      ]
+    },
+    "deduplication": {
+      "tng_big_base_duplicate": "raw_data/tng/ingestion_staging/TNG_BIG_BASE_READY replaced with symlink to canonical big-base dataset",
+      "results_vm_duplicate_tree_removed": "analysis/results_vm/results"
+    },
+    "legacy_cleanup": {
+      "legacy_docs_moved": [
+        "RoadmapDM.md",
+        "update_analysis.md",
+        "summary_rar_tng.md",
+        "docs/Primordial_Fluid_DM_Research_Roadmap.docx",
+        "docs/fluid_dm_roadmap.docx",
+        "docs/SPARC_RAR_BEC_Project_Roadmap.md"
+      ],
+      "archive_moves": [
+        "data.tar.gz -> raw_data/archives/data.tar.gz",
+        "sql_cookies.txt -> archive/legacy/private/sql_cookies.txt"
+      ]
+    },
+    "integrity": {
+      "broken_symlinks_after_cleanup": 0,
+      "pipeline_test_syntax_failures": 0,
+      "known_invalid_json_remaining": [
+        "bec_rar_identity/archive/nonviable/summary_self_consistent_mass.INVALID.json"
+      ]
+    }
+  }
+}

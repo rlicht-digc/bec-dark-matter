@@ -1,0 +1,2303 @@
+{
+  "test": "window_matching_C2",
+  "description": "Galaxy-adapted window matching: resample 67 SPARC galaxies onto ~10 log-spaced radii in [0.5, 5] \u00d7 R_half, run Lomb-Scargle periodicity detection. Tests whether SPARC periodicity survives simulation-like sampling.",
+  "parameters": {
+    "n_window_pts": 10,
+    "r_half_range": [
+      0.5,
+      5.0
+    ],
+    "spacing": "log",
+    "n_surrogates": 200,
+    "perm_alpha": 0.05,
+    "min_resamp_pts": 5,
+    "min_sparc_pts": 15
+  },
+  "sample": {
+    "n_sparc_galaxies": 67,
+    "n_valid_window": 67,
+    "n_skipped_reff": 0,
+    "n_skipped_coverage": 0,
+    "median_usable_pts": 9.0,
+    "usable_pts_range": [
+      5,
+      10
+    ]
+  },
+  "periodic_fractions": {
+    "full_sparc": {
+      "n_periodic": 25,
+      "n_total": 67,
+      "fraction": 0.3731,
+      "label": "Full SPARC (all points, \u226515 per galaxy)"
+    },
+    "window_matched": {
+      "n_periodic": 7,
+      "n_total": 67,
+      "fraction": 0.1045,
+      "label": "10 log-spaced pts in [0.5, 5] \u00d7 R_half"
+    },
+    "eagle_reference": {
+      "n_periodic": 251,
+      "n_total": 8837,
+      "fraction": 0.0284,
+      "label": "EAGLE 10 fixed radii (1-100 kpc)"
+    }
+  },
+  "recovery_analysis": {
+    "n_orig_periodic_in_valid": 25,
+    "n_recovered": 2,
+    "recovery_rate": 0.08,
+    "n_orig_nonperiodic_in_valid": 42,
+    "n_false_positives": 5,
+    "false_positive_rate": 0.119
+  },
+  "statistical_tests": {
+    "binomial_vs_eagle": {
+      "test": "binom(n_window_periodic, n_valid, 0.028, greater)",
+      "p_value": 0.002700603494978627,
+      "interpretation": "Is window fraction significantly above EAGLE 2.8%?"
+    },
+    "binomial_vs_full_sparc": {
+      "test": "binom(n_window_periodic, n_valid, 0.373, less)",
+      "p_value": 7.360176878015197e-07,
+      "interpretation": "Is window fraction significantly below full SPARC 37.3%?"
+    },
+    "mcnemar_paired": {
+      "both_detected": 2,
+      "full_only": 23,
+      "window_only": 5,
+      "neither": 37,
+      "p_value": 0.0009122341871261597
+    }
+  },
+  "wavelength": {
+    "window_detected": {
+      "n": 7,
+      "median_kpc": 11.71,
+      "q25_kpc": 2.9,
+      "q75_kpc": 15.57
+    },
+    "full_detected": {
+      "n": 25,
+      "median_kpc": 6.46,
+      "q25_kpc": 2.9,
+      "q75_kpc": 16.49
+    }
+  },
+  "verdict": "PERIODICITY_REDUCED_BUT_SIGNIFICANT \u2014 Window matching reduces periodicity but it remains well above EAGLE's 2.8%. The SPARC signal is partially robust to coarse sampling.",
+  "eagle_interpretation": "SPARC still shows >3\u00d7 EAGLE's periodic fraction even under matched sampling, supporting a genuine physical difference.",
+  "per_galaxy": [
+    {
+      "name": "D631-7",
+      "skip_reason": null,
+      "Reff": 1.22,
+      "window_kpc": [
+        0.61,
+        6.1
+      ],
+      "obs_range_kpc": [
+        0.45,
+        7.19
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.61,
+        0.788,
+        1.018,
+        1.314,
+        1.697,
+        2.192,
+        2.831,
+        3.657,
+        4.723,
+        6.1
+      ],
+      "full_detected": false,
+      "full_wl": 3.95,
+      "full_p": 0.15,
+      "window_detected": false,
+      "window_wl": 3.91,
+      "window_power": 0.4961,
+      "window_p": 0.61
+    },
+    {
+      "name": "DDO161",
+      "skip_reason": null,
+      "Reff": 2.04,
+      "window_kpc": [
+        1.02,
+        10.2
+      ],
+      "obs_range_kpc": [
+        0.6,
+        13.37
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.02,
+        1.317,
+        1.701,
+        2.198,
+        2.838,
+        3.666,
+        4.734,
+        6.115,
+        7.897,
+        10.2
+      ],
+      "full_detected": true,
+      "full_wl": 7.1,
+      "full_p": 0.01,
+      "window_detected": false,
+      "window_wl": 3.51,
+      "window_power": 0.4714,
+      "window_p": 0.665
+    },
+    {
+      "name": "ESO079-G014",
+      "skip_reason": null,
+      "Reff": 7.23,
+      "window_kpc": [
+        3.62,
+        36.15
+      ],
+      "obs_range_kpc": [
+        0.41,
+        16.67
+      ],
+      "n_target": 10,
+      "n_usable": 6,
+      "target_radii_kpc": [
+        3.615,
+        4.669,
+        6.03,
+        7.788,
+        10.059,
+        12.992
+      ],
+      "full_detected": false,
+      "full_wl": 8.49,
+      "full_p": 0.235,
+      "window_detected": false,
+      "window_wl": 9.38,
+      "window_power": 0.9524,
+      "window_p": 0.18
+    },
+    {
+      "name": "ESO116-G012",
+      "skip_reason": null,
+      "Reff": 2.75,
+      "window_kpc": [
+        1.38,
+        13.75
+      ],
+      "obs_range_kpc": [
+        0.25,
+        9.86
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        1.375,
+        1.776,
+        2.294,
+        2.962,
+        3.826,
+        4.941,
+        6.382,
+        8.243
+      ],
+      "full_detected": false,
+      "full_wl": 1.85,
+      "full_p": 0.175,
+      "window_detected": false,
+      "window_wl": 2.14,
+      "window_power": 0.5164,
+      "window_p": 0.6
+    },
+    {
+      "name": "ESO563-G021",
+      "skip_reason": null,
+      "Reff": 10.59,
+      "window_kpc": [
+        5.29,
+        52.95
+      ],
+      "obs_range_kpc": [
+        0.45,
+        42.41
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        5.295,
+        6.839,
+        8.833,
+        11.408,
+        14.734,
+        19.029,
+        24.577,
+        31.743,
+        40.997
+      ],
+      "full_detected": true,
+      "full_wl": 23.99,
+      "full_p": 0.005,
+      "window_detected": true,
+      "window_wl": 28.0,
+      "window_power": 0.8598,
+      "window_p": 0.025
+    },
+    {
+      "name": "F568-3",
+      "skip_reason": null,
+      "Reff": 7.47,
+      "window_kpc": [
+        3.73,
+        37.35
+      ],
+      "obs_range_kpc": [
+        0.64,
+        17.98
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        3.735,
+        4.824,
+        6.23,
+        8.047,
+        10.393,
+        13.423,
+        17.336
+      ],
+      "full_detected": false,
+      "full_wl": 10.11,
+      "full_p": 0.105,
+      "window_detected": true,
+      "window_wl": 11.88,
+      "window_power": 0.9611,
+      "window_p": 0.035
+    },
+    {
+      "name": "F568-V1",
+      "skip_reason": null,
+      "Reff": 4.4,
+      "window_kpc": [
+        2.2,
+        22.0
+      ],
+      "obs_range_kpc": [
+        0.39,
+        17.63
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        2.2,
+        2.841,
+        3.67,
+        4.74,
+        6.122,
+        7.906,
+        10.211,
+        13.189,
+        17.034
+      ],
+      "full_detected": false,
+      "full_wl": 8.42,
+      "full_p": 0.2,
+      "window_detected": false,
+      "window_wl": 12.0,
+      "window_power": 0.775,
+      "window_p": 0.175
+    },
+    {
+      "name": "F583-1",
+      "skip_reason": null,
+      "Reff": 3.74,
+      "window_kpc": [
+        1.87,
+        18.7
+      ],
+      "obs_range_kpc": [
+        0.26,
+        16.26
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.87,
+        2.415,
+        3.119,
+        4.029,
+        5.203,
+        6.72,
+        8.68,
+        11.21,
+        14.479
+      ],
+      "full_detected": false,
+      "full_wl": 2.55,
+      "full_p": 0.84,
+      "window_detected": false,
+      "window_wl": 11.28,
+      "window_power": 0.6535,
+      "window_p": 0.295
+    },
+    {
+      "name": "IC2574",
+      "skip_reason": null,
+      "Reff": 3.18,
+      "window_kpc": [
+        1.59,
+        15.9
+      ],
+      "obs_range_kpc": [
+        0.85,
+        10.23
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        1.59,
+        2.054,
+        2.652,
+        3.426,
+        4.424,
+        5.714,
+        7.38,
+        9.532
+      ],
+      "full_detected": false,
+      "full_wl": 4.95,
+      "full_p": 0.075,
+      "window_detected": false,
+      "window_wl": 2.0,
+      "window_power": 0.8311,
+      "window_p": 0.095
+    },
+    {
+      "name": "NGC0024",
+      "skip_reason": null,
+      "Reff": 2.01,
+      "window_kpc": [
+        1.0,
+        10.05
+      ],
+      "obs_range_kpc": [
+        0.21,
+        11.27
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.005,
+        1.298,
+        1.676,
+        2.165,
+        2.796,
+        3.612,
+        4.665,
+        6.025,
+        7.781,
+        10.05
+      ],
+      "full_detected": true,
+      "full_wl": 2.29,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 2.18,
+      "window_power": 0.4631,
+      "window_p": 0.47
+    },
+    {
+      "name": "NGC0055",
+      "skip_reason": null,
+      "Reff": 3.67,
+      "window_kpc": [
+        1.83,
+        18.35
+      ],
+      "obs_range_kpc": [
+        1.23,
+        13.5
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        1.835,
+        2.37,
+        3.061,
+        3.953,
+        5.106,
+        6.595,
+        8.517,
+        11.001
+      ],
+      "full_detected": false,
+      "full_wl": 3.8,
+      "full_p": 0.14,
+      "window_detected": false,
+      "window_wl": 3.69,
+      "window_power": 0.4638,
+      "window_p": 0.855
+    },
+    {
+      "name": "NGC0247",
+      "skip_reason": null,
+      "Reff": 5.87,
+      "window_kpc": [
+        2.94,
+        29.35
+      ],
+      "obs_range_kpc": [
+        1.08,
+        14.54
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        2.935,
+        3.791,
+        4.896,
+        6.323,
+        8.167,
+        10.548,
+        13.623
+      ],
+      "full_detected": false,
+      "full_wl": 6.52,
+      "full_p": 0.23,
+      "window_detected": false,
+      "window_wl": 6.61,
+      "window_power": 0.7376,
+      "window_p": 0.245
+    },
+    {
+      "name": "NGC0289",
+      "skip_reason": null,
+      "Reff": 2.69,
+      "window_kpc": [
+        1.34,
+        13.45
+      ],
+      "obs_range_kpc": [
+        1.5,
+        71.12
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.737,
+        2.244,
+        2.898,
+        3.743,
+        4.834,
+        6.243,
+        8.063,
+        10.414,
+        13.45
+      ],
+      "full_detected": false,
+      "full_wl": 14.03,
+      "full_p": 0.105,
+      "window_detected": true,
+      "window_wl": 11.71,
+      "window_power": 0.9358,
+      "window_p": 0.005
+    },
+    {
+      "name": "NGC0300",
+      "skip_reason": null,
+      "Reff": 1.77,
+      "window_kpc": [
+        0.89,
+        8.85
+      ],
+      "obs_range_kpc": [
+        0.91,
+        11.8
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.143,
+        1.476,
+        1.907,
+        2.463,
+        3.181,
+        4.108,
+        5.305,
+        6.852,
+        8.85
+      ],
+      "full_detected": false,
+      "full_wl": 5.95,
+      "full_p": 0.31,
+      "window_detected": true,
+      "window_wl": 2.24,
+      "window_power": 0.8371,
+      "window_p": 0.025
+    },
+    {
+      "name": "NGC1003",
+      "skip_reason": null,
+      "Reff": 2.76,
+      "window_kpc": [
+        1.38,
+        13.8
+      ],
+      "obs_range_kpc": [
+        1.25,
+        30.24
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.38,
+        1.782,
+        2.302,
+        2.973,
+        3.84,
+        4.959,
+        6.405,
+        8.273,
+        10.685,
+        13.8
+      ],
+      "full_detected": true,
+      "full_wl": 16.49,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 12.42,
+      "window_power": 0.7594,
+      "window_p": 0.055
+    },
+    {
+      "name": "NGC1090",
+      "skip_reason": null,
+      "Reff": 6.36,
+      "window_kpc": [
+        3.18,
+        31.8
+      ],
+      "obs_range_kpc": [
+        0.35,
+        30.09
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        3.18,
+        4.107,
+        5.305,
+        6.851,
+        8.849,
+        11.428,
+        14.76,
+        19.064,
+        24.622
+      ],
+      "full_detected": false,
+      "full_wl": 17.59,
+      "full_p": 0.055,
+      "window_detected": false,
+      "window_wl": 21.44,
+      "window_power": 0.7638,
+      "window_p": 0.14
+    },
+    {
+      "name": "NGC2403",
+      "skip_reason": null,
+      "Reff": 2.16,
+      "window_kpc": [
+        1.08,
+        10.8
+      ],
+      "obs_range_kpc": [
+        0.16,
+        20.87
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.08,
+        1.395,
+        1.802,
+        2.327,
+        3.005,
+        3.881,
+        5.013,
+        6.474,
+        8.362,
+        10.8
+      ],
+      "full_detected": true,
+      "full_wl": 2.67,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 2.65,
+      "window_power": 0.638,
+      "window_p": 0.325
+    },
+    {
+      "name": "NGC2841",
+      "skip_reason": null,
+      "Reff": 5.51,
+      "window_kpc": [
+        2.75,
+        27.55
+      ],
+      "obs_range_kpc": [
+        3.44,
+        63.64
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        3.558,
+        4.596,
+        5.935,
+        7.666,
+        9.901,
+        12.788,
+        16.516,
+        21.331,
+        27.55
+      ],
+      "full_detected": true,
+      "full_wl": 21.29,
+      "full_p": 0.035,
+      "window_detected": false,
+      "window_wl": 5.68,
+      "window_power": 0.5471,
+      "window_p": 0.3
+    },
+    {
+      "name": "NGC2903",
+      "skip_reason": null,
+      "Reff": 4.54,
+      "window_kpc": [
+        2.27,
+        22.7
+      ],
+      "obs_range_kpc": [
+        0.32,
+        24.96
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.27,
+        2.932,
+        3.787,
+        4.891,
+        6.316,
+        8.158,
+        10.536,
+        13.608,
+        17.576,
+        22.7
+      ],
+      "full_detected": false,
+      "full_wl": 1.92,
+      "full_p": 0.695,
+      "window_detected": false,
+      "window_wl": 17.59,
+      "window_power": 0.6681,
+      "window_p": 0.11
+    },
+    {
+      "name": "NGC2915",
+      "skip_reason": null,
+      "Reff": 0.53,
+      "window_kpc": [
+        0.27,
+        2.65
+      ],
+      "obs_range_kpc": [
+        0.34,
+        10.04
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        0.342,
+        0.442,
+        0.571,
+        0.737,
+        0.952,
+        1.23,
+        1.589,
+        2.052,
+        2.65
+      ],
+      "full_detected": false,
+      "full_wl": 0.67,
+      "full_p": 0.165,
+      "window_detected": false,
+      "window_wl": 0.51,
+      "window_power": 0.6371,
+      "window_p": 0.26
+    },
+    {
+      "name": "NGC2955",
+      "skip_reason": null,
+      "Reff": 7.22,
+      "window_kpc": [
+        3.61,
+        36.1
+      ],
+      "obs_range_kpc": [
+        0.75,
+        35.43
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        3.61,
+        4.662,
+        6.022,
+        7.778,
+        10.045,
+        12.974,
+        16.756,
+        21.641,
+        27.951
+      ],
+      "full_detected": false,
+      "full_wl": 18.06,
+      "full_p": 0.11,
+      "window_detected": false,
+      "window_wl": 18.52,
+      "window_power": 0.4806,
+      "window_p": 0.75
+    },
+    {
+      "name": "NGC2976",
+      "skip_reason": null,
+      "Reff": 1.31,
+      "window_kpc": [
+        0.66,
+        6.55
+      ],
+      "obs_range_kpc": [
+        0.11,
+        2.27
+      ],
+      "n_target": 10,
+      "n_usable": 5,
+      "target_radii_kpc": [
+        0.655,
+        0.846,
+        1.093,
+        1.411,
+        1.823
+      ],
+      "full_detected": true,
+      "full_wl": 0.43,
+      "full_p": 0.04,
+      "window_detected": false,
+      "window_wl": 0.53,
+      "window_power": 0.7519,
+      "window_p": 0.745
+    },
+    {
+      "name": "NGC3109",
+      "skip_reason": null,
+      "Reff": 1.64,
+      "window_kpc": [
+        0.82,
+        8.2
+      ],
+      "obs_range_kpc": [
+        0.26,
+        6.45
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        0.82,
+        1.059,
+        1.368,
+        1.767,
+        2.282,
+        2.947,
+        3.806,
+        4.916,
+        6.349
+      ],
+      "full_detected": false,
+      "full_wl": 0.85,
+      "full_p": 0.99,
+      "window_detected": false,
+      "window_wl": 3.24,
+      "window_power": 0.7816,
+      "window_p": 0.105
+    },
+    {
+      "name": "NGC3198",
+      "skip_reason": null,
+      "Reff": 5.84,
+      "window_kpc": [
+        2.92,
+        29.2
+      ],
+      "obs_range_kpc": [
+        0.32,
+        44.08
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.92,
+        3.771,
+        4.871,
+        6.291,
+        8.125,
+        10.494,
+        13.553,
+        17.505,
+        22.608,
+        29.2
+      ],
+      "full_detected": true,
+      "full_wl": 8.73,
+      "full_p": 0.015,
+      "window_detected": false,
+      "window_wl": 26.28,
+      "window_power": 0.6061,
+      "window_p": 0.32
+    },
+    {
+      "name": "NGC3521",
+      "skip_reason": null,
+      "Reff": 2.45,
+      "window_kpc": [
+        1.23,
+        12.25
+      ],
+      "obs_range_kpc": [
+        0.51,
+        17.74
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.225,
+        1.582,
+        2.043,
+        2.639,
+        3.409,
+        4.402,
+        5.686,
+        7.344,
+        9.485,
+        12.25
+      ],
+      "full_detected": true,
+      "full_wl": 4.11,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 3.97,
+      "window_power": 0.5325,
+      "window_p": 0.485
+    },
+    {
+      "name": "NGC3741",
+      "skip_reason": null,
+      "Reff": 0.32,
+      "window_kpc": [
+        0.16,
+        1.6
+      ],
+      "obs_range_kpc": [
+        0.23,
+        7.0
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        0.267,
+        0.345,
+        0.445,
+        0.575,
+        0.743,
+        0.959,
+        1.239,
+        1.6
+      ],
+      "full_detected": false,
+      "full_wl": 0.98,
+      "full_p": 0.64,
+      "window_detected": false,
+      "window_wl": 1.33,
+      "window_power": 0.7829,
+      "window_p": 0.225
+    },
+    {
+      "name": "NGC3917",
+      "skip_reason": null,
+      "Reff": 5.56,
+      "window_kpc": [
+        2.78,
+        27.8
+      ],
+      "obs_range_kpc": [
+        0.87,
+        14.86
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        2.78,
+        3.591,
+        4.637,
+        5.989,
+        7.736,
+        9.991,
+        12.904
+      ],
+      "full_detected": false,
+      "full_wl": 8.18,
+      "full_p": 0.085,
+      "window_detected": false,
+      "window_wl": 9.13,
+      "window_power": 0.7571,
+      "window_p": 0.46
+    },
+    {
+      "name": "NGC4100",
+      "skip_reason": null,
+      "Reff": 4.93,
+      "window_kpc": [
+        2.46,
+        24.65
+      ],
+      "obs_range_kpc": [
+        2.61,
+        22.76
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        3.184,
+        4.112,
+        5.311,
+        6.859,
+        8.859,
+        11.442,
+        14.777,
+        19.086
+      ],
+      "full_detected": true,
+      "full_wl": 6.46,
+      "full_p": 0.025,
+      "window_detected": false,
+      "window_wl": 6.41,
+      "window_power": 0.7291,
+      "window_p": 0.19
+    },
+    {
+      "name": "NGC4157",
+      "skip_reason": null,
+      "Reff": 4.44,
+      "window_kpc": [
+        2.22,
+        22.2
+      ],
+      "obs_range_kpc": [
+        1.74,
+        29.61
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.22,
+        2.867,
+        3.703,
+        4.783,
+        6.177,
+        7.978,
+        10.304,
+        13.309,
+        17.189,
+        22.2
+      ],
+      "full_detected": false,
+      "full_wl": 16.3,
+      "full_p": 0.13,
+      "window_detected": false,
+      "window_wl": 9.2,
+      "window_power": 0.6645,
+      "window_p": 0.22
+    },
+    {
+      "name": "NGC4183",
+      "skip_reason": null,
+      "Reff": 4.47,
+      "window_kpc": [
+        2.23,
+        22.35
+      ],
+      "obs_range_kpc": [
+        0.87,
+        21.02
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        2.235,
+        2.887,
+        3.728,
+        4.815,
+        6.219,
+        8.032,
+        10.374,
+        13.398,
+        17.305
+      ],
+      "full_detected": true,
+      "full_wl": 11.62,
+      "full_p": 0.01,
+      "window_detected": false,
+      "window_wl": 11.13,
+      "window_power": 0.5771,
+      "window_p": 0.495
+    },
+    {
+      "name": "NGC4559",
+      "skip_reason": null,
+      "Reff": 3.82,
+      "window_kpc": [
+        1.91,
+        19.1
+      ],
+      "obs_range_kpc": [
+        0.67,
+        20.97
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.91,
+        2.467,
+        3.186,
+        4.115,
+        5.315,
+        6.864,
+        8.865,
+        11.45,
+        14.788,
+        19.1
+      ],
+      "full_detected": false,
+      "full_wl": 9.75,
+      "full_p": 0.075,
+      "window_detected": false,
+      "window_wl": 9.72,
+      "window_power": 0.5855,
+      "window_p": 0.29
+    },
+    {
+      "name": "NGC5005",
+      "skip_reason": null,
+      "Reff": 3.97,
+      "window_kpc": [
+        1.99,
+        19.85
+      ],
+      "obs_range_kpc": [
+        0.49,
+        11.47
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        1.985,
+        2.564,
+        3.311,
+        4.277,
+        5.523,
+        7.134,
+        9.214
+      ],
+      "full_detected": false,
+      "full_wl": 1.62,
+      "full_p": 0.34,
+      "window_detected": false,
+      "window_wl": 7.23,
+      "window_power": 0.712,
+      "window_p": 0.605
+    },
+    {
+      "name": "NGC5033",
+      "skip_reason": null,
+      "Reff": 2.94,
+      "window_kpc": [
+        1.47,
+        14.7
+      ],
+      "obs_range_kpc": [
+        0.76,
+        44.59
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.47,
+        1.899,
+        2.452,
+        3.167,
+        4.09,
+        5.283,
+        6.823,
+        8.812,
+        11.382,
+        14.7
+      ],
+      "full_detected": true,
+      "full_wl": 19.24,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 13.23,
+      "window_power": 0.832,
+      "window_p": 0.05
+    },
+    {
+      "name": "NGC5055",
+      "skip_reason": null,
+      "Reff": 4.18,
+      "window_kpc": [
+        2.09,
+        20.9
+      ],
+      "obs_range_kpc": [
+        0.72,
+        54.59
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.09,
+        2.699,
+        3.486,
+        4.503,
+        5.816,
+        7.511,
+        9.701,
+        12.529,
+        16.182,
+        20.9
+      ],
+      "full_detected": false,
+      "full_wl": 9.0,
+      "full_p": 0.61,
+      "window_detected": false,
+      "window_wl": 18.81,
+      "window_power": 0.6865,
+      "window_p": 0.22
+    },
+    {
+      "name": "NGC5371",
+      "skip_reason": null,
+      "Reff": 9.8,
+      "window_kpc": [
+        4.9,
+        49.0
+      ],
+      "obs_range_kpc": [
+        1.45,
+        46.24
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        4.9,
+        6.329,
+        8.174,
+        10.557,
+        13.635,
+        17.61,
+        22.744,
+        29.375,
+        37.939
+      ],
+      "full_detected": true,
+      "full_wl": 25.38,
+      "full_p": 0.02,
+      "window_detected": false,
+      "window_wl": 33.04,
+      "window_power": 0.5939,
+      "window_p": 0.53
+    },
+    {
+      "name": "NGC5585",
+      "skip_reason": null,
+      "Reff": 2.27,
+      "window_kpc": [
+        1.14,
+        11.35
+      ],
+      "obs_range_kpc": [
+        0.09,
+        10.96
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.135,
+        1.466,
+        1.893,
+        2.445,
+        3.158,
+        4.079,
+        5.268,
+        6.804,
+        8.788
+      ],
+      "full_detected": false,
+      "full_wl": 1.36,
+      "full_p": 0.21,
+      "window_detected": false,
+      "window_wl": 4.38,
+      "window_power": 0.6922,
+      "window_p": 0.205
+    },
+    {
+      "name": "NGC5985",
+      "skip_reason": null,
+      "Reff": 10.71,
+      "window_kpc": [
+        5.36,
+        53.55
+      ],
+      "obs_range_kpc": [
+        3.54,
+        34.72
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        5.355,
+        6.916,
+        8.933,
+        11.537,
+        14.901,
+        19.245,
+        24.856,
+        32.102
+      ],
+      "full_detected": true,
+      "full_wl": 16.45,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 19.39,
+      "window_power": 0.7874,
+      "window_p": 0.155
+    },
+    {
+      "name": "NGC6015",
+      "skip_reason": null,
+      "Reff": 3.92,
+      "window_kpc": [
+        1.96,
+        19.6
+      ],
+      "obs_range_kpc": [
+        0.34,
+        29.23
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.96,
+        2.531,
+        3.269,
+        4.223,
+        5.454,
+        7.044,
+        9.098,
+        11.75,
+        15.176,
+        19.6
+      ],
+      "full_detected": true,
+      "full_wl": 6.36,
+      "full_p": 0.045,
+      "window_detected": false,
+      "window_wl": 16.95,
+      "window_power": 0.6635,
+      "window_p": 0.26
+    },
+    {
+      "name": "NGC6195",
+      "skip_reason": null,
+      "Reff": 9.52,
+      "window_kpc": [
+        4.76,
+        47.6
+      ],
+      "obs_range_kpc": [
+        1.33,
+        36.43
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        4.76,
+        6.148,
+        7.94,
+        10.255,
+        13.245,
+        17.107,
+        22.094,
+        28.535
+      ],
+      "full_detected": false,
+      "full_wl": 6.91,
+      "full_p": 0.19,
+      "window_detected": false,
+      "window_wl": 12.95,
+      "window_power": 0.6634,
+      "window_p": 0.415
+    },
+    {
+      "name": "NGC6503",
+      "skip_reason": null,
+      "Reff": 1.62,
+      "window_kpc": [
+        0.81,
+        8.1
+      ],
+      "obs_range_kpc": [
+        0.76,
+        23.5
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.81,
+        1.046,
+        1.351,
+        1.745,
+        2.254,
+        2.911,
+        3.76,
+        4.856,
+        6.272,
+        8.1
+      ],
+      "full_detected": false,
+      "full_wl": 5.68,
+      "full_p": 0.895,
+      "window_detected": false,
+      "window_wl": 4.78,
+      "window_power": 0.6989,
+      "window_p": 0.22
+    },
+    {
+      "name": "NGC6674",
+      "skip_reason": null,
+      "Reff": 7.75,
+      "window_kpc": [
+        3.88,
+        38.75
+      ],
+      "obs_range_kpc": [
+        2.5,
+        72.41
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        3.875,
+        5.005,
+        6.464,
+        8.348,
+        10.782,
+        13.926,
+        17.986,
+        23.23,
+        30.003,
+        38.75
+      ],
+      "full_detected": false,
+      "full_wl": 43.4,
+      "full_p": 0.765,
+      "window_detected": false,
+      "window_wl": 17.01,
+      "window_power": 0.4846,
+      "window_p": 0.64
+    },
+    {
+      "name": "NGC6946",
+      "skip_reason": null,
+      "Reff": 4.2,
+      "window_kpc": [
+        2.1,
+        21.0
+      ],
+      "obs_range_kpc": [
+        0.19,
+        20.4
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        2.1,
+        2.712,
+        3.503,
+        4.524,
+        5.843,
+        7.547,
+        9.747,
+        12.589,
+        16.26
+      ],
+      "full_detected": true,
+      "full_wl": 6.23,
+      "full_p": 0.045,
+      "window_detected": true,
+      "window_wl": 3.55,
+      "window_power": 0.8279,
+      "window_p": 0.025
+    },
+    {
+      "name": "NGC7331",
+      "skip_reason": null,
+      "Reff": 3.99,
+      "window_kpc": [
+        2.0,
+        19.95
+      ],
+      "obs_range_kpc": [
+        2.67,
+        36.31
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        3.328,
+        4.298,
+        5.551,
+        7.17,
+        9.26,
+        11.96,
+        15.447,
+        19.95
+      ],
+      "full_detected": true,
+      "full_wl": 18.64,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 16.62,
+      "window_power": 0.7653,
+      "window_p": 0.375
+    },
+    {
+      "name": "NGC7793",
+      "skip_reason": null,
+      "Reff": 2.19,
+      "window_kpc": [
+        1.09,
+        10.95
+      ],
+      "obs_range_kpc": [
+        0.11,
+        7.87
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        1.095,
+        1.414,
+        1.827,
+        2.359,
+        3.047,
+        3.935,
+        5.083,
+        6.564
+      ],
+      "full_detected": false,
+      "full_wl": 1.02,
+      "full_p": 0.155,
+      "window_detected": false,
+      "window_wl": 5.47,
+      "window_power": 0.7962,
+      "window_p": 0.18
+    },
+    {
+      "name": "UGC00128",
+      "skip_reason": null,
+      "Reff": 9.63,
+      "window_kpc": [
+        4.82,
+        48.15
+      ],
+      "obs_range_kpc": [
+        1.25,
+        53.75
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        4.815,
+        6.219,
+        8.032,
+        10.374,
+        13.398,
+        17.304,
+        22.349,
+        28.865,
+        37.281,
+        48.15
+      ],
+      "full_detected": false,
+      "full_wl": 32.03,
+      "full_p": 0.15,
+      "window_detected": false,
+      "window_wl": 43.34,
+      "window_power": 0.6783,
+      "window_p": 0.24
+    },
+    {
+      "name": "UGC02487",
+      "skip_reason": null,
+      "Reff": 9.63,
+      "window_kpc": [
+        4.82,
+        48.15
+      ],
+      "obs_range_kpc": [
+        9.93,
+        80.38
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        10.374,
+        13.398,
+        17.304,
+        22.349,
+        28.865,
+        37.281,
+        48.15
+      ],
+      "full_detected": true,
+      "full_wl": 34.86,
+      "full_p": 0.015,
+      "window_detected": false,
+      "window_wl": 35.22,
+      "window_power": 0.8376,
+      "window_p": 0.29
+    },
+    {
+      "name": "UGC02885",
+      "skip_reason": null,
+      "Reff": 12.2,
+      "window_kpc": [
+        6.1,
+        61.0
+      ],
+      "obs_range_kpc": [
+        1.7,
+        74.07
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        6.1,
+        7.878,
+        10.175,
+        13.142,
+        16.974,
+        21.922,
+        28.314,
+        36.569,
+        47.23,
+        61.0
+      ],
+      "full_detected": false,
+      "full_wl": 7.88,
+      "full_p": 0.155,
+      "window_detected": false,
+      "window_wl": 31.78,
+      "window_power": 0.7149,
+      "window_p": 0.12
+    },
+    {
+      "name": "UGC02916",
+      "skip_reason": null,
+      "Reff": 2.8,
+      "window_kpc": [
+        1.4,
+        14.0
+      ],
+      "obs_range_kpc": [
+        0.37,
+        38.0
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.4,
+        1.808,
+        2.335,
+        3.016,
+        3.896,
+        5.031,
+        6.498,
+        8.393,
+        10.84,
+        14.0
+      ],
+      "full_detected": true,
+      "full_wl": 9.38,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 12.6,
+      "window_power": 0.6099,
+      "window_p": 0.325
+    },
+    {
+      "name": "UGC02953",
+      "skip_reason": null,
+      "Reff": 5.03,
+      "window_kpc": [
+        2.52,
+        25.15
+      ],
+      "obs_range_kpc": [
+        0.09,
+        62.39
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.515,
+        3.248,
+        4.195,
+        5.418,
+        6.998,
+        9.038,
+        11.674,
+        15.077,
+        19.473,
+        25.15
+      ],
+      "full_detected": false,
+      "full_wl": 1.17,
+      "full_p": 0.075,
+      "window_detected": false,
+      "window_wl": 21.76,
+      "window_power": 0.6487,
+      "window_p": 0.265
+    },
+    {
+      "name": "UGC03205",
+      "skip_reason": null,
+      "Reff": 5.35,
+      "window_kpc": [
+        2.67,
+        26.75
+      ],
+      "obs_range_kpc": [
+        0.28,
+        40.04
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.675,
+        3.455,
+        4.462,
+        5.763,
+        7.443,
+        9.613,
+        12.416,
+        16.036,
+        20.712,
+        26.75
+      ],
+      "full_detected": true,
+      "full_wl": 5.96,
+      "full_p": 0.04,
+      "window_detected": false,
+      "window_wl": 14.62,
+      "window_power": 0.7922,
+      "window_p": 0.085
+    },
+    {
+      "name": "UGC03546",
+      "skip_reason": null,
+      "Reff": 2.58,
+      "window_kpc": [
+        1.29,
+        12.9
+      ],
+      "obs_range_kpc": [
+        0.63,
+        29.23
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.29,
+        1.666,
+        2.152,
+        2.779,
+        3.59,
+        4.636,
+        5.988,
+        7.733,
+        9.988,
+        12.9
+      ],
+      "full_detected": true,
+      "full_wl": 5.97,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 8.04,
+      "window_power": 0.6263,
+      "window_p": 0.275
+    },
+    {
+      "name": "UGC03580",
+      "skip_reason": null,
+      "Reff": 1.84,
+      "window_kpc": [
+        0.92,
+        9.2
+      ],
+      "obs_range_kpc": [
+        0.11,
+        27.06
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.92,
+        1.188,
+        1.535,
+        1.982,
+        2.56,
+        3.306,
+        4.27,
+        5.515,
+        7.123,
+        9.2
+      ],
+      "full_detected": true,
+      "full_wl": 2.9,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 4.79,
+      "window_power": 0.6806,
+      "window_p": 0.28
+    },
+    {
+      "name": "UGC05253",
+      "skip_reason": null,
+      "Reff": 4.28,
+      "window_kpc": [
+        2.14,
+        21.4
+      ],
+      "obs_range_kpc": [
+        0.13,
+        53.29
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.14,
+        2.764,
+        3.57,
+        4.61,
+        5.955,
+        7.691,
+        9.933,
+        12.829,
+        16.569,
+        21.4
+      ],
+      "full_detected": false,
+      "full_wl": 3.29,
+      "full_p": 0.135,
+      "window_detected": true,
+      "window_wl": 19.26,
+      "window_power": 0.8459,
+      "window_p": 0.03
+    },
+    {
+      "name": "UGC05721",
+      "skip_reason": null,
+      "Reff": 0.6,
+      "window_kpc": [
+        0.3,
+        3.0
+      ],
+      "obs_range_kpc": [
+        0.09,
+        6.74
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.3,
+        0.387,
+        0.5,
+        0.646,
+        0.835,
+        1.078,
+        1.392,
+        1.798,
+        2.323,
+        3.0
+      ],
+      "full_detected": false,
+      "full_wl": 0.94,
+      "full_p": 0.29,
+      "window_detected": true,
+      "window_wl": 1.16,
+      "window_power": 0.7993,
+      "window_p": 0.035
+    },
+    {
+      "name": "UGC06446",
+      "skip_reason": null,
+      "Reff": 2.06,
+      "window_kpc": [
+        1.03,
+        10.3
+      ],
+      "obs_range_kpc": [
+        0.58,
+        10.22
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.03,
+        1.33,
+        1.718,
+        2.219,
+        2.866,
+        3.702,
+        4.781,
+        6.175,
+        7.975
+      ],
+      "full_detected": false,
+      "full_wl": 3.59,
+      "full_p": 0.085,
+      "window_detected": false,
+      "window_wl": 3.89,
+      "window_power": 0.7971,
+      "window_p": 0.095
+    },
+    {
+      "name": "UGC06786",
+      "skip_reason": null,
+      "Reff": 3.42,
+      "window_kpc": [
+        1.71,
+        17.1
+      ],
+      "obs_range_kpc": [
+        0.16,
+        34.05
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.71,
+        2.209,
+        2.852,
+        3.684,
+        4.758,
+        6.145,
+        7.937,
+        10.251,
+        13.24,
+        17.1
+      ],
+      "full_detected": false,
+      "full_wl": 4.57,
+      "full_p": 0.07,
+      "window_detected": false,
+      "window_wl": 7.51,
+      "window_power": 0.7214,
+      "window_p": 0.07
+    },
+    {
+      "name": "UGC06787",
+      "skip_reason": null,
+      "Reff": 2.88,
+      "window_kpc": [
+        1.44,
+        14.4
+      ],
+      "obs_range_kpc": [
+        0.12,
+        37.19
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        1.44,
+        1.86,
+        2.402,
+        3.102,
+        4.007,
+        5.175,
+        6.684,
+        8.633,
+        11.149,
+        14.4
+      ],
+      "full_detected": true,
+      "full_wl": 1.1,
+      "full_p": 0.015,
+      "window_detected": false,
+      "window_wl": 3.74,
+      "window_power": 0.6314,
+      "window_p": 0.245
+    },
+    {
+      "name": "UGC06983",
+      "skip_reason": null,
+      "Reff": 3.95,
+      "window_kpc": [
+        1.98,
+        19.75
+      ],
+      "obs_range_kpc": [
+        1.74,
+        15.68
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.975,
+        2.551,
+        3.294,
+        4.255,
+        5.496,
+        7.098,
+        9.167,
+        11.84,
+        15.292
+      ],
+      "full_detected": false,
+      "full_wl": 7.05,
+      "full_p": 0.85,
+      "window_detected": false,
+      "window_wl": 6.85,
+      "window_power": 0.4936,
+      "window_p": 0.755
+    },
+    {
+      "name": "UGC07524",
+      "skip_reason": null,
+      "Reff": 3.61,
+      "window_kpc": [
+        1.8,
+        18.05
+      ],
+      "obs_range_kpc": [
+        0.35,
+        10.69
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        1.805,
+        2.331,
+        3.011,
+        3.889,
+        5.023,
+        6.487,
+        8.378
+      ],
+      "full_detected": false,
+      "full_wl": 2.74,
+      "full_p": 0.715,
+      "window_detected": false,
+      "window_wl": 2.4,
+      "window_power": 0.7692,
+      "window_p": 0.29
+    },
+    {
+      "name": "UGC08490",
+      "skip_reason": null,
+      "Reff": 1.14,
+      "window_kpc": [
+        0.57,
+        5.7
+      ],
+      "obs_range_kpc": [
+        0.34,
+        10.15
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.57,
+        0.736,
+        0.951,
+        1.228,
+        1.586,
+        2.048,
+        2.646,
+        3.417,
+        4.413,
+        5.7
+      ],
+      "full_detected": false,
+      "full_wl": 4.16,
+      "full_p": 0.27,
+      "window_detected": false,
+      "window_wl": 3.88,
+      "window_power": 0.7992,
+      "window_p": 0.055
+    },
+    {
+      "name": "UGC08699",
+      "skip_reason": null,
+      "Reff": 1.91,
+      "window_kpc": [
+        0.95,
+        9.55
+      ],
+      "obs_range_kpc": [
+        0.22,
+        25.7
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.955,
+        1.233,
+        1.593,
+        2.057,
+        2.657,
+        3.432,
+        4.433,
+        5.725,
+        7.394,
+        9.55
+      ],
+      "full_detected": false,
+      "full_wl": 2.84,
+      "full_p": 0.2,
+      "window_detected": false,
+      "window_wl": 5.79,
+      "window_power": 0.5091,
+      "window_p": 0.57
+    },
+    {
+      "name": "UGC09037",
+      "skip_reason": null,
+      "Reff": 5.69,
+      "window_kpc": [
+        2.85,
+        28.45
+      ],
+      "obs_range_kpc": [
+        2.43,
+        27.96
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        2.845,
+        3.674,
+        4.746,
+        6.129,
+        7.916,
+        10.224,
+        13.205,
+        17.055,
+        22.028
+      ],
+      "full_detected": false,
+      "full_wl": 14.37,
+      "full_p": 0.165,
+      "window_detected": false,
+      "window_wl": 9.13,
+      "window_power": 0.5788,
+      "window_p": 0.52
+    },
+    {
+      "name": "UGC09133",
+      "skip_reason": null,
+      "Reff": 5.92,
+      "window_kpc": [
+        2.96,
+        29.6
+      ],
+      "obs_range_kpc": [
+        0.32,
+        108.31
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        2.96,
+        3.823,
+        4.938,
+        6.377,
+        8.236,
+        10.638,
+        13.739,
+        17.745,
+        22.918,
+        29.6
+      ],
+      "full_detected": false,
+      "full_wl": 14.18,
+      "full_p": 0.68,
+      "window_detected": false,
+      "window_wl": 26.64,
+      "window_power": 0.806,
+      "window_p": 0.105
+    },
+    {
+      "name": "UGC11914",
+      "skip_reason": null,
+      "Reff": 3.12,
+      "window_kpc": [
+        1.56,
+        15.6
+      ],
+      "obs_range_kpc": [
+        0.28,
+        9.83
+      ],
+      "n_target": 10,
+      "n_usable": 8,
+      "target_radii_kpc": [
+        1.56,
+        2.015,
+        2.602,
+        3.361,
+        4.341,
+        5.606,
+        7.241,
+        9.352
+      ],
+      "full_detected": true,
+      "full_wl": 2.53,
+      "full_p": 0.005,
+      "window_detected": false,
+      "window_wl": 6.35,
+      "window_power": 0.7982,
+      "window_p": 0.245
+    },
+    {
+      "name": "UGC12632",
+      "skip_reason": null,
+      "Reff": 3.94,
+      "window_kpc": [
+        1.97,
+        19.7
+      ],
+      "obs_range_kpc": [
+        0.71,
+        10.66
+      ],
+      "n_target": 10,
+      "n_usable": 7,
+      "target_radii_kpc": [
+        1.97,
+        2.544,
+        3.286,
+        4.244,
+        5.482,
+        7.08,
+        9.144
+      ],
+      "full_detected": false,
+      "full_wl": 2.17,
+      "full_p": 0.775,
+      "window_detected": false,
+      "window_wl": 5.27,
+      "window_power": 0.7687,
+      "window_p": 0.26
+    },
+    {
+      "name": "UGC12732",
+      "skip_reason": null,
+      "Reff": 3.12,
+      "window_kpc": [
+        1.56,
+        15.6
+      ],
+      "obs_range_kpc": [
+        0.96,
+        15.4
+      ],
+      "n_target": 10,
+      "n_usable": 9,
+      "target_radii_kpc": [
+        1.56,
+        2.015,
+        2.602,
+        3.361,
+        4.341,
+        5.606,
+        7.241,
+        9.352,
+        12.079
+      ],
+      "full_detected": false,
+      "full_wl": 6.73,
+      "full_p": 0.72,
+      "window_detected": false,
+      "window_wl": 5.64,
+      "window_power": 0.6857,
+      "window_p": 0.24
+    },
+    {
+      "name": "UGCA444",
+      "skip_reason": null,
+      "Reff": 0.41,
+      "window_kpc": [
+        0.2,
+        2.05
+      ],
+      "obs_range_kpc": [
+        0.12,
+        2.62
+      ],
+      "n_target": 10,
+      "n_usable": 10,
+      "target_radii_kpc": [
+        0.205,
+        0.265,
+        0.342,
+        0.442,
+        0.57,
+        0.737,
+        0.952,
+        1.229,
+        1.587,
+        2.05
+      ],
+      "full_detected": true,
+      "full_wl": 0.84,
+      "full_p": 0.02,
+      "window_detected": false,
+      "window_wl": 0.71,
+      "window_power": 0.714,
+      "window_p": 0.06
+    }
+  ],
+  "skipped_galaxies": []
+}

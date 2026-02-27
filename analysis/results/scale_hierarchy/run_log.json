@@ -1,0 +1,140 @@
+{
+  "run_utc": "2026-02-23T01:49:39.582184+00:00",
+  "project_root": "/Users/russelllicht/bec-dark-matter",
+  "outdir": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy",
+  "n_perm": 1000,
+  "seed": 42,
+  "git_hash": "4c3f23fec7c78e4375a221719a68c437228d8807",
+  "inputs": {
+    "summary_healing_length_scaling": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_scaling.json",
+    "summary_healing_length_acf": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_acf.json",
+    "summary_healing_length_kstar": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_healing_length_kstar.json",
+    "summary_periodic_properties_and_scaling": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_periodic_properties_and_scaling.json",
+    "summary_window_matching": "/Users/russelllicht/bec-dark-matter/analysis/results/summary_window_matching.json",
+    "rar_points_unified": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+    "galaxy_results_unified": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_unified.csv",
+    "galaxy_results_sparc_orig_haubner": "/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_sparc_orig_haubner.csv",
+    "tng_rar_points": "/Users/russelllicht/bec-dark-matter/rar_points.parquet",
+    "tng_mass_profiles": "/Users/russelllicht/bec-dark-matter/tng_mass_profiles.npz"
+  },
+  "counts": {
+    "n_galaxy_rows": 23791,
+    "n_point_rows": 324854,
+    "n_result_rows": 23791,
+    "n_scale_sample": 67,
+    "n_within_valid": 66,
+    "n_between_sample": 67
+  },
+  "within_summary": {
+    "n_gal": 66,
+    "x_peak_mean": 2.1924242424242424,
+    "x_peak_std": 2.5075615250407717,
+    "null_std_mean": 3.949238277667477,
+    "null_std_std": 0.5509264386629594,
+    "perm_p_concentration": 0.008991008991008992,
+    "n_perm_effective": 1000
+  },
+  "between_summary": {
+    "n_sample": 67,
+    "outcome": "Lc_over_xi",
+    "confounds": [
+      "Rext",
+      "Npts",
+      "dR",
+      "incl",
+      "dist_err_frac"
+    ],
+    "unmatched": {
+      "n_hi": 34,
+      "n_lo": 33,
+      "median_hi": 0.15961385811446271,
+      "median_lo": 0.26279863481228666,
+      "median_ratio_hi_lo": 0.6073618237342543,
+      "cliffs_delta": -0.46880570409982175,
+      "cliffs_ci95_lo": -0.6898841354723707,
+      "cliffs_ci95_hi": -0.21920677361853835,
+      "cliffs_boot_sd": 0.122037408882687,
+      "perm_p_median_diff": 0.007992007992007992
+    },
+    "matched_by_caliper": [
+      {
+        "pairs": 4,
+        "caliper_z": 0.5
+      },
+      {
+        "pairs": 12,
+        "median_high": 0.11132762799637264,
+        "median_low": 0.2599790953137997,
+        "median_ratio_high_low": 0.4282176144277988,
+        "median_diff_high_low": -0.14865146731742707,
+        "cliffs_delta": -0.6805555555555556,
+        "cliffs_ci95_lo": -0.9305555555555556,
+        "cliffs_ci95_hi": -0.31909722222222253,
+        "cliffs_boot_sd": 0.16342256677213257,
+        "perm_p_median_diff": 0.008991008991008992,
+        "caliper_z": 0.75
+      },
+      {
+        "pairs": 16,
+        "median_high": 0.1545611679171116,
+        "median_low": 0.2599790953137997,
+        "median_ratio_high_low": 0.594513830931496,
+        "median_diff_high_low": -0.1054179273966881,
+        "cliffs_delta": -0.578125,
+        "cliffs_ci95_lo": -0.8359375,
+        "cliffs_ci95_hi": -0.22636718750000018,
+        "cliffs_boot_sd": 0.1577888057478372,
+        "perm_p_median_diff": 0.005994005994005994,
+        "caliper_z": 1.0
+      },
+      {
+        "pairs": 21,
+        "median_high": 0.13880025526483727,
+        "median_low": 0.26279863481228666,
+        "median_ratio_high_low": 0.5281620102934718,
+        "median_diff_high_low": -0.12399837954744938,
+        "cliffs_delta": -0.6643990929705216,
+        "cliffs_ci95_lo": -0.8684807256235828,
+        "cliffs_ci95_hi": -0.37857142857142867,
+        "cliffs_boot_sd": 0.12502999944167287,
+        "perm_p_median_diff": 0.002997002997002997,
+        "caliper_z": 1.25
+      },
+      {
+        "pairs": 22,
+        "median_high": 0.1463036378918726,
+        "median_low": 0.2599790953137997,
+        "median_ratio_high_low": 0.5627515462936792,
+        "median_diff_high_low": -0.11367545742192711,
+        "cliffs_delta": -0.6198347107438017,
+        "cliffs_ci95_lo": -0.8347107438016529,
+        "cliffs_ci95_hi": -0.3551652892561985,
+        "cliffs_boot_sd": 0.12820599881121336,
+        "perm_p_median_diff": 0.002997002997002997,
+        "caliper_z": 1.5
+      }
+    ],
+    "primary_matched": {
+      "pairs": 22.0,
+      "caliper_z": 1.5,
+      "median_high": 0.1463036378918726,
+      "median_low": 0.2599790953137997,
+      "median_ratio_high_low": 0.5627515462936792,
+      "median_diff_high_low": -0.11367545742192711,
+      "cliffs_delta": -0.6198347107438017,
+      "cliffs_ci95_lo": -0.8347107438016529,
+      "cliffs_ci95_hi": -0.3551652892561985,
+      "cliffs_boot_sd": 0.12820599881121336,
+      "perm_p_median_diff": 0.002997002997002997,
+      "abs_cd": 0.6198347107438017
+    }
+  },
+  "outputs": {
+    "galaxy_table": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/galaxy_scale_table.parquet",
+    "point_table": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/point_scale_table.parquet",
+    "results_table": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/results_scale_hierarchy.parquet",
+    "figure": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/fig_scale_map.png",
+    "report": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/scale_map_report.md",
+    "run_log": "/Users/russelllicht/bec-dark-matter/analysis/results/scale_hierarchy/run_log.json"
+  }
+}

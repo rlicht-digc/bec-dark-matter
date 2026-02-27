@@ -1,0 +1,209 @@
+{
+  "test_name": "brouwer_lensing_rar_scatter",
+  "description": "Brouwer+2021 KiDS-1000 weak lensing RAR: scatter analysis across mass bins (acceleration proxy) and isolated vs all (environment proxy). Tests whether lensing RAR shows same phase transition pattern as kinematic RAR.",
+  "datasets_loaded": {
+    "isolated": 15,
+    "gama_isolated": 15,
+    "isolated_dwarfs": 5,
+    "isolated_mass1": 15,
+    "isolated_mass2": 15,
+    "isolated_mass3": 15,
+    "isolated_mass4": 15,
+    "all_mass1": 15,
+    "all_mass2": 15,
+    "all_mass3": 15,
+    "all_mass4": 15,
+    "isolated_color1": 15,
+    "isolated_color2": 15,
+    "isolated_sersic1": 15,
+    "isolated_sersic2": 15,
+    "isolated_hotgas": 15
+  },
+  "rar_residuals": {
+    "isolated": {
+      "n_points": 15,
+      "mean_residual": 0.0968,
+      "std_residual": 0.07248
+    },
+    "gama_isolated": {
+      "n_points": 15,
+      "mean_residual": 0.01557,
+      "std_residual": 0.17962
+    },
+    "isolated_dwarfs": {
+      "n_points": 5,
+      "mean_residual": -0.21049,
+      "std_residual": 0.49666
+    },
+    "isolated_mass1": {
+      "n_points": 14,
+      "mean_residual": 0.05136,
+      "std_residual": 0.14634
+    },
+    "isolated_mass2": {
+      "n_points": 15,
+      "mean_residual": 0.10044,
+      "std_residual": 0.11788
+    },
+    "isolated_mass3": {
+      "n_points": 15,
+      "mean_residual": 0.105,
+      "std_residual": 0.08288
+    },
+    "isolated_mass4": {
+      "n_points": 15,
+      "mean_residual": 0.09746,
+      "std_residual": 0.08152
+    },
+    "all_mass1": {
+      "n_points": 14,
+      "mean_residual": 0.10565,
+      "std_residual": 0.18418
+    },
+    "all_mass2": {
+      "n_points": 15,
+      "mean_residual": 0.17333,
+      "std_residual": 0.17908
+    },
+    "all_mass3": {
+      "n_points": 15,
+      "mean_residual": 0.17918,
+      "std_residual": 0.16295
+    },
+    "all_mass4": {
+      "n_points": 15,
+      "mean_residual": 0.21098,
+      "std_residual": 0.12355
+    },
+    "isolated_color1": {
+      "n_points": 15,
+      "mean_residual": -0.07572,
+      "std_residual": 0.11311
+    },
+    "isolated_color2": {
+      "n_points": 15,
+      "mean_residual": 0.18487,
+      "std_residual": 0.07956
+    },
+    "isolated_sersic1": {
+      "n_points": 15,
+      "mean_residual": -0.02777,
+      "std_residual": 0.07856
+    },
+    "isolated_sersic2": {
+      "n_points": 15,
+      "mean_residual": 0.15695,
+      "std_residual": 0.0846
+    },
+    "isolated_hotgas": {
+      "n_points": 15,
+      "mean_residual": -0.08151,
+      "std_residual": 0.24451
+    }
+  },
+  "isolated_vs_all": [
+    {
+      "mass_bin": 1,
+      "label": "8.5-10.3 (dwarfs)",
+      "sigma_isolated": 0.14634,
+      "sigma_all": 0.18418,
+      "delta": 0.03784,
+      "n_iso": 14,
+      "n_all": 14
+    },
+    {
+      "mass_bin": 2,
+      "label": "10.3-10.6",
+      "sigma_isolated": 0.11788,
+      "sigma_all": 0.17908,
+      "delta": 0.06119,
+      "n_iso": 15,
+      "n_all": 15
+    },
+    {
+      "mass_bin": 3,
+      "label": "10.6-10.8",
+      "sigma_isolated": 0.08288,
+      "sigma_all": 0.16295,
+      "delta": 0.08007,
+      "n_iso": 15,
+      "n_all": 15
+    },
+    {
+      "mass_bin": 4,
+      "label": "10.8-11.0 (massive)",
+      "sigma_isolated": 0.08152,
+      "sigma_all": 0.12355,
+      "delta": 0.04202,
+      "n_iso": 15,
+      "n_all": 15
+    }
+  ],
+  "acceleration_profile": [
+    {
+      "center": -14.75,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.12366,
+      "sigma_all": 0.04066,
+      "delta": -0.083
+    },
+    {
+      "center": -14.25,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.09167,
+      "sigma_all": 0.06797,
+      "delta": -0.0237
+    },
+    {
+      "center": -13.75,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.12819,
+      "sigma_all": 0.07317,
+      "delta": -0.05502
+    },
+    {
+      "center": -13.25,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.08128,
+      "sigma_all": 0.06803,
+      "delta": -0.01325
+    },
+    {
+      "center": -12.75,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.09879,
+      "sigma_all": 0.09013,
+      "delta": -0.00866
+    },
+    {
+      "center": -12.25,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.05698,
+      "sigma_all": 0.06773,
+      "delta": 0.01075
+    },
+    {
+      "center": -11.75,
+      "n_iso": 8,
+      "n_all": 8,
+      "sigma_iso": 0.09763,
+      "sigma_all": 0.09661,
+      "delta": -0.00102
+    },
+    {
+      "center": -11.25,
+      "n_iso": 3,
+      "n_all": 3,
+      "sigma_iso": 0.03843,
+      "sigma_all": 0.03931,
+      "delta": 0.00088
+    }
+  ],
+  "verdict": "BEC-CONSISTENT: environment (isolated vs all) matters MORE at high mass/acceleration. Low-mass lensing RAR is environment-insensitive."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "OK",
+  "count": 2,
+  "items": [
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/nonviable/summary_self_consistent_mass.INVALID.json",
+      "size_bytes": 618
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/archive/nonviable/summary_self_consistent_mass.INVALID.reason.md",
+      "size_bytes": 283
+    }
+  ]
+}

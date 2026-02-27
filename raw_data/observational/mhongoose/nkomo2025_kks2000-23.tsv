@@ -1,0 +1,25 @@
+# MHONGOOSE: [KKS2000]23 rotation curve from Nkomo+2025 (A&A 699, A372)
+# Derived from MeerKAT MHONGOOSE survey, lowest-resolution TiRiFiC model
+# Distance: 13.9 Mpc, Inclination: 62.0 deg, PA: 224.0 deg
+# M_HI: 6.1e8 Msun, M_star: 3.2e7 Msun
+# (M/L)_3.4um: 0.18 (WISE-derived, Cluver+2014)
+# ISO halo: rho_0 = 4.29e-3 Msun/pc^3, r_c = 5.49 kpc (for M/L=0.18)
+# Vc = asymmetric drift corrected circular velocity
+# R_kpc	Vrot_kms	Vc_kms	eVc_kms
+0.00	0.00	0.00	0.00
+0.11	4.76	5.72	0.01
+0.71	10.60	11.69	0.38
+1.31	16.05	18.04	0.70
+1.91	21.11	22.62	0.70
+2.51	25.77	26.29	0.54
+3.11	30.04	30.19	0.39
+3.71	33.91	34.45	0.51
+4.31	37.40	38.47	0.72
+4.91	40.48	42.07	0.48
+5.51	43.18	45.25	0.74
+6.11	45.48	47.39	0.73
+6.71	47.38	50.80	0.85
+7.31	48.90	53.28	0.88
+8.43	52.87	55.43	3.00
+9.57	54.87	58.30	2.85
+10.71	56.51	61.42	2.24

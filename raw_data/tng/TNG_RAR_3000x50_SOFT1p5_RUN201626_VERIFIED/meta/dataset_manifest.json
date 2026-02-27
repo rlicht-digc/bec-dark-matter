@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED",
+  "created_utc": "2026-02-23T03:10:53.800755+00:00",
+  "run_tag": "20260222_221053",
+  "dataset_root": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED",
+  "intended_use": "verified dev sample with env",
+  "notes": "Supersedes earlier 3000x50 export; includes galaxy_scatter_dm_with_env.csv and CSV source-of-truth",
+  "counts": {
+    "n_galaxies": 3000,
+    "n_points": 150000,
+    "n_radii_mode": 50,
+    "n_radii_median": 50.0,
+    "n_radii_min": 50,
+    "n_radii_max": 50,
+    "declared_n_radii": 50
+  },
+  "radii_grid": {
+    "declared_n_radii": 50,
+    "soft_kpc": 1.5,
+    "r_min_factor": 0.5,
+    "r_max_factor": 5.0
+  },
+  "selection_criteria": {
+    "stellar_mass_min_msun": 1000000000.0,
+    "rhalf_min_pkpc": 0.5,
+    "n_star_min": 100,
+    "quality_cut": "LATEST_GOOD",
+    "env_join": "group catalog M200c"
+  },
+  "files": {
+    "rar_points": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points_CLEAN.parquet",
+      "size_bytes": 5975758,
+      "md5": "8e7032b2652d20b13a2fa7fa53239a91",
+      "mtime_utc": "2026-02-23T02:55:15+00:00"
+    },
+    "master_catalog": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/meta/master_catalog.csv",
+      "size_bytes": 471970,
+      "md5": "f7dceea499efe4d42d8932f22799bc17",
+      "mtime_utc": "2026-02-22T20:41:01+00:00"
+    },
+    "galaxy_scatter_dm": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/galaxy_scatter_dm_with_env.csv",
+      "size_bytes": 432121,
+      "md5": "0d5f08cb3e43a6ae5bed85c8fa270ae5",
+      "mtime_utc": "2026-02-22T21:44:22+00:00"
+    }
+  },
+  "compatibility_checks": {
+    "master_catalog": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/meta/master_catalog.csv",
+      "n_rows": 3000,
+      "n_unique_ids": 3000,
+      "ids_in_rar_not_in_master": 0,
+      "ids_in_master_not_in_rar": 0
+    },
+    "galaxy_scatter_dm": {
+      "path": "/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/galaxy_scatter_dm_with_env.csv",
+      "n_rows": 2402,
+      "n_unique_ids": 2402,
+      "ids_in_rar_not_in_scatter": 598,
+      "ids_in_scatter_not_in_rar": 0
+    }
+  },
+  "warnings": [
+    "galaxy_scatter IDs do not perfectly match rar_points IDs."
+  ],
+  "git_hash": "4c3f23fec7c78e4375a221719a68c437228d8807"
+}

@@ -1,0 +1,6 @@
+source_path,dest_path,category,action,size_bytes,sha256_12
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/FINAL_STATUS.md,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/FINAL_STATUS.md,session_recovery,would_copy,1697,facd24d0e39b
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/cleanup_executed.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/cleanup_executed.csv,session_recovery,would_copy,2470,ba01d1a680dd
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/cleanup_plan.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/cleanup_plan.csv,session_recovery,would_copy,2494,f548d67b800c
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/missing_vs_present.md,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/missing_vs_present.md,session_recovery,would_copy,2373,df53155bfa80
+/Users/russelllicht/bec-dark-matter/Remaining_TNG/quality_cut_reconstruction.csv,/Users/russelllicht/bec-dark-matter/analysis/results/session_recovery/quality_cut_reconstruction.csv,session_recovery,would_copy,1456,80606c7a6b4d

@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-02-23T12:31:21.097994",
+  "runs_found": 12,
+  "datasets": {
+    "dev_mixed": {
+      "path": "/home/tnguser/rar_profiles/20260222_201626/rar_points.parquet",
+      "n_rows": 313485,
+      "n_galaxies": 20899,
+      "pts_per_gal": 15,
+      "status": "CONTAMINATED",
+      "notes": "Mixed run: 20899 galaxies at 15 pts/gal. Contaminated by multiple extraction passes."
+    },
+    "dev_clean": {
+      "path": "/home/tnguser/rar_profiles/20260222_201626/rar_points_CLEAN.parquet",
+      "n_rows": 150000,
+      "n_galaxies": 3000,
+      "pts_per_gal": 50,
+      "status": "CLEAN_DEV",
+      "notes": "Verified clean dev set: 3000 galaxies x 50 radii"
+    },
+    "big_base": {
+      "path": "/home/tnguser/rar_profiles/20260223_061026_big_base/rar_points.parquet",
+      "n_rows": 2406650,
+      "n_galaxies": 48133,
+      "pts_per_gal": 50,
+      "status": "CLEAN_BIG_BASE",
+      "notes": "Full big base extraction: 48133 galaxies x 50 radii. Completed successfully per big_extraction.log."
+    }
+  },
+  "ambiguity_29122_resolved": {
+    "explanation": "29122 was NOT the number of galaxies in the big extraction. Per big_extraction_29122.py docstring: Exhaustive search showed 29122 is not achievable from any simple selection. The script name is a legacy reference. Actual quality-cut base: SubhaloFlag=1, Mstar>=1e8, n_star>=100, n_dm>=100, rhalf>0 => 48133 galaxies. The number 29122 appeared in an earlier binning analysis as binned_rows_after_ncut (n>=3) = 29122 from total binned_rows = 31319, applied to the DEV 3000-galaxy set.",
+    "n_galaxies_big_base": 48133,
+    "n_rows_big_base": 2406650,
+    "n_galaxies_dev_clean": 3000,
+    "n_rows_dev_clean": 150000,
+    "binned_rows_total_dev": 31319,
+    "binned_rows_after_ncut_dev": 29122
+  },
+  "quality_cut_base_params": {
+    "simulation": "TNG100-1",
+    "snapshot": 99,
+    "SubhaloFlag": 1,
+    "Mstar_min_Msun": 100000000.0,
+    "n_star_min": 100,
+    "n_dm_min": 100,
+    "rhalf_star_gt": 0,
+    "N_RADII": 50,
+    "SOFT_KPC": 1.5,
+    "DM_PARTICLE_MASS": 8850000.0,
+    "resulting_galaxies": 48133
+  }
+}

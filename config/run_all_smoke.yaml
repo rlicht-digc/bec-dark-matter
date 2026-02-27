@@ -1,0 +1,44 @@
+seed: 42
+project_root: /Users/russelllicht/bec-dark-matter
+output_base: outputs
+
+tests:
+  rar: true
+  bh: true
+
+rar:
+  n_shuffles: 5
+  strict_missing_inputs: true
+  enabled_tests:
+    test1_phase_peak_null: true
+    test2_mass_matched_phase: true
+    test3_xi_organizing: true
+    test4_alpha_star_convergence: true
+    test5_dataset_lineage: true
+  tng_sources:
+    test2_mass_matched_phase: clean_48133_points
+    test3_xi_organizing: clean_3000_points
+    test4_alpha_3k: clean_3000_points
+    test4_alpha_48k: clean_48133_points
+
+bh:
+  enabled: true
+  use_kappa_scan: true
+  kappa_min: -8.0
+  kappa_max: 8.0
+  nk: 20
+  log_rho_min: -12.0
+  log_rho_max: 120.0
+  nr: 20
+  mass_min_msun: 3.0
+  mass_max_msun: 1000000000.0
+  nm: 60
+  u_min: 0.0
+  u_max: 8.0
+  nu: 15
+  mode1_radius_policy: max_rs_rc
+  strict_checks: true
+  spot_check_samples: 4
+
+regression_lock:
+  enabled: false

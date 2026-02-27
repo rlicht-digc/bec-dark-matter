@@ -1,0 +1,19 @@
+\begin{deluxetable}{cccc}
+\tablecaption{Galaxy-grouped 5-fold cross-validation\label{tab:groupcv}}
+\tablehead{
+  \colhead{Fold} &
+  \colhead{Best kernel} &
+  \colhead{$\log_{10} s$} &
+  \colhead{OOS RMSE}
+}
+\startdata
+0 & coth & $-9.8356$ & $1.6753$ \\
+1 & BE\_RAR & $-9.9553$ & $2.1344$ \\
+2 & BE\_RAR & $-9.9523$ & $1.8304$ \\
+3 & BE\_RAR & $-9.9244$ & $1.8686$ \\
+4 & BE\_RAR & $-9.9298$ & $1.0278$ \\
+\hline
+Mean & --- & $-9.9195$ $\pm$ $0.0437$ & $1.7073$ \\
+\enddata
+\tablecomments{Group = galaxy. No galaxy appears in both train and test within any fold.}
+\end{deluxetable}

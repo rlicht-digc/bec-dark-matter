@@ -1,0 +1,152 @@
+{
+  "test_name": "mass_split_bunching",
+  "description": "Mass-binned bunching test using X=R/xi to assess whether quantum bunching strengthens with stellar mass and at radii inside the healing length.",
+  "n_total_points": 2800,
+  "n_total_galaxies": 135,
+  "global_zscore": {
+    "mu": -0.026356283478109442,
+    "sigma": 0.17748271509930502
+  },
+  "all_sparc": {
+    "n_bins": 10,
+    "n_points": 2793,
+    "chi2_quantum": 155.28944596543874,
+    "chi2_classical": 115.75502145302494,
+    "chi2_constant": 325.0163564586432,
+    "aic_quantum": 159.28944596543874,
+    "aic_classical": 119.75502145302494,
+    "delta_aic": -39.53442451241381,
+    "A_quantum": 0.026956044136855387,
+    "C_quantum": 0.49810760488501216,
+    "A_classical": 0.1865400671508915,
+    "C_classical": 0.40867819558855123
+  },
+  "mass_bin_results": [
+    {
+      "label": "Dwarf (logM*<9.5)",
+      "logMs_range": [
+        8.0,
+        9.5
+      ],
+      "logMs_median": 8.899820502427096,
+      "xi_kpc": 0.9603603012748159,
+      "R_median_kpc": 4.12,
+      "X_median": 4.290056549121166,
+      "n_galaxies": 50,
+      "n_points": 694,
+      "delta_aic_classical_minus_quantum": 1.0302173569030604,
+      "fit": {
+        "n_bins": 4,
+        "n_points": 681,
+        "chi2_quantum": 10.24687200589764,
+        "chi2_classical": 11.2770893628007,
+        "chi2_constant": 11.482496720485532,
+        "aic_quantum": 14.24687200589764,
+        "aic_classical": 15.2770893628007,
+        "delta_aic": 1.0302173569030604,
+        "A_quantum": 0.005667682580230413,
+        "C_quantum": 1.0394758784169438,
+        "A_classical": 0.021401968432987986,
+        "C_classical": 1.0721432096441212
+      }
+    },
+    {
+      "label": "Low-mass spiral (9.5-10.3)",
+      "logMs_range": [
+        9.5,
+        10.3
+      ],
+      "logMs_median": 9.77887447200274,
+      "xi_kpc": 2.642172596760337,
+      "R_median_kpc": 6.46,
+      "X_median": 2.444957610990606,
+      "n_galaxies": 22,
+      "n_points": 554,
+      "delta_aic_classical_minus_quantum": -10.8665156699042,
+      "fit": {
+        "n_bins": 5,
+        "n_points": 527,
+        "chi2_quantum": 29.60286409316794,
+        "chi2_classical": 18.73634842326374,
+        "chi2_constant": 103.11706889422466,
+        "aic_quantum": 33.60286409316794,
+        "aic_classical": 22.73634842326374,
+        "delta_aic": -10.8665156699042,
+        "A_quantum": -0.011655135384408408,
+        "C_quantum": 0.67002850918474,
+        "A_classical": -0.12167575590068795,
+        "C_classical": 0.8945601239270888
+      }
+    },
+    {
+      "label": "Massive spiral (logM*>10.3)",
+      "logMs_range": [
+        10.3,
+        11.0
+      ],
+      "logMs_median": 10.691329084374111,
+      "xi_kpc": 7.554200198653895,
+      "R_median_kpc": 7.37,
+      "X_median": 0.9756161878412068,
+      "n_galaxies": 31,
+      "n_points": 903,
+      "delta_aic_classical_minus_quantum": 0.1378038209602508,
+      "fit": {
+        "n_bins": 8,
+        "n_points": 896,
+        "chi2_quantum": 35.53478208368055,
+        "chi2_classical": 35.6725859046408,
+        "chi2_constant": 35.88576995066704,
+        "aic_quantum": 39.53478208368055,
+        "aic_classical": 39.6725859046408,
+        "delta_aic": 0.1378038209602508,
+        "A_quantum": 0.002561741308385119,
+        "C_quantum": 0.3744569347086264,
+        "A_classical": 0.008715029736585042,
+        "C_classical": 0.37339213222150125
+      }
+    }
+  ],
+  "mass_trend": {
+    "spearman_rho_X_vs_daic": 0.5,
+    "spearman_p_X_vs_daic": 0.6666666666666666,
+    "spearman_rho_logMs_vs_daic": -0.5,
+    "spearman_p_logMs_vs_daic": 0.6666666666666666,
+    "verdict": "NO_EXPECTED_MASS_TREND"
+  },
+  "radial_inner_outer_test": {
+    "n_inner_points": 890,
+    "n_outer_points": 1112,
+    "inner_fit": {
+      "n_bins": 8,
+      "n_points": 877,
+      "chi2_quantum": 141.74186255947666,
+      "chi2_classical": 114.30308882081383,
+      "chi2_constant": 158.43178128104256,
+      "aic_quantum": 145.74186255947666,
+      "aic_classical": 118.30308882081383,
+      "delta_aic": -27.43877373866283,
+      "A_quantum": 0.06965088960186679,
+      "C_quantum": 0.4010927779715759,
+      "A_classical": 0.5079338698228895,
+      "C_classical": 0.3245299725125242
+    },
+    "outer_fit": {
+      "n_bins": 4,
+      "n_points": 1112,
+      "chi2_quantum": 53.75517564970313,
+      "chi2_classical": 56.317976435676044,
+      "chi2_constant": 56.39092931896541,
+      "aic_quantum": 57.75517564970313,
+      "aic_classical": 60.317976435676044,
+      "delta_aic": 2.562800785972911,
+      "A_quantum": -0.001443026380685814,
+      "C_quantum": 0.6855151383143897,
+      "A_classical": -0.003234569120157571,
+      "C_classical": 0.6603410747056315
+    },
+    "inner_minus_outer_delta_aic": -30.001574524635743,
+    "verdict": "NO_EXPECTED_RADIAL_TREND"
+  },
+  "overall_verdict": "CONTRADICTS_BEC_TRANSITION"
+}

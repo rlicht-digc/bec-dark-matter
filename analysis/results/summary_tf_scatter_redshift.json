@@ -1,0 +1,134 @@
+{
+  "test_name": "tf_scatter_redshift",
+  "description": "Test whether TF scatter evolves with redshift. BEC (g\u2020=const) predicts no evolution. g\u2020\u221dcH(z) predicts scatter broadens at high z.",
+  "data": [
+    {
+      "reference": "Lelli+2019",
+      "z_median": 0.0,
+      "scatter_dex_logV": 0.057,
+      "scatter_err": 0.003,
+      "band": "3.6um",
+      "n_galaxies": 153,
+      "notes": "SPARC BTFR, gas+stars, intrinsic scatter"
+    },
+    {
+      "reference": "McGaugh2012",
+      "z_median": 0.0,
+      "scatter_dex_logV": 0.056,
+      "scatter_err": 0.004,
+      "band": "3.6um",
+      "n_galaxies": 47,
+      "notes": "Gas-dominated BTFR, tightest TF ever"
+    },
+    {
+      "reference": "Boehm+2004",
+      "z_median": 0.3,
+      "scatter_dex_logV": 0.14,
+      "scatter_err": 0.02,
+      "band": "B",
+      "n_galaxies": 77,
+      "notes": "FORS Deep Field, rest-frame B-band"
+    },
+    {
+      "reference": "Miller+2011",
+      "z_median": 0.6,
+      "scatter_dex_logV": 0.12,
+      "scatter_err": 0.02,
+      "band": "B",
+      "n_galaxies": 129,
+      "notes": "DEEP2/AEGIS, emission-line kinematics"
+    },
+    {
+      "reference": "Tiley+2019",
+      "z_median": 0.9,
+      "scatter_dex_logV": 0.1,
+      "scatter_err": 0.02,
+      "band": "K",
+      "n_galaxies": 409,
+      "notes": "KROSS IFS survey, rest-frame K-band"
+    },
+    {
+      "reference": "Uebler+2017",
+      "z_median": 2.2,
+      "scatter_dex_logV": 0.18,
+      "scatter_err": 0.04,
+      "band": "H",
+      "n_galaxies": 32,
+      "notes": "SINS/zC-SINF, rest-frame H-band, small sample"
+    }
+  ],
+  "trend_analysis": {
+    "raw": {
+      "slope": 0.048,
+      "intercept": 0.0769,
+      "r": 0.821,
+      "p_value": 0.0452
+    },
+    "corrected": {
+      "slope": 0.0338,
+      "intercept": 0.0479,
+      "r": 0.931,
+      "p_value": 0.007
+    },
+    "weighted": {
+      "slope": 0.0128,
+      "intercept": 0.0555,
+      "chi2_flat": 9.29,
+      "chi2_linear": 6.93,
+      "delta_chi2": 2.36
+    }
+  },
+  "bec_vs_cHz": {
+    "H_z_over_H0": [
+      1.0,
+      1.0,
+      1.17,
+      1.399,
+      1.676,
+      3.288
+    ],
+    "log_gdagger_cHz": [
+      -9.921,
+      -9.921,
+      -9.852,
+      -9.775,
+      -9.696,
+      -9.404
+    ],
+    "predicted_scatter_cHz": [
+      0.057,
+      0.057,
+      0.0599,
+      0.0638,
+      0.0686,
+      0.0961
+    ],
+    "observed_scatter_corrected": [
+      0.057,
+      0.056,
+      0.056,
+      0.048,
+      0.0769,
+      0.1286
+    ]
+  },
+  "mcgaugh_2025": {
+    "sanders_2008_exclusion": "~5sigma",
+    "mcgaugh_2025_range": "z=0 to z~2.5",
+    "conclusion": "g_dagger = constant, not proportional to cH(z)"
+  },
+  "sparc_btfr": {
+    "n_galaxies": 124,
+    "slope": 0.737,
+    "intercept": 0.701,
+    "scatter_dex": 0.0911
+  },
+  "verdict": "INCONCLUSIVE: Apparent scatter evolution detected, but dominated by band and technique differences. Cannot distinguish physical evolution from observational degradation at high z.",
+  "caveats": [
+    "Band corrections are approximate (factor ~2.5\u00d7 between B and 3.6\u03bcm)",
+    "High-z samples use different selection functions and kinematic methods",
+    "Observational scatter (noise) increases at high z \u2014 hard to separate from intrinsic",
+    "Sample sizes at z>1 are small (32-129 galaxies)",
+    "SPARC 3.6\u03bcm is uniquely low-scatter; no equivalent at z>0"
+  ]
+}

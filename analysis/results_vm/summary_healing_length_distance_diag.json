@@ -1,0 +1,163 @@
+{
+  "test": "healing_length_distance_diagnostics",
+  "description": "Tests whether \u03be/R signal is real or distance-quality artifact.",
+  "sample": {
+    "n_galaxies": 67,
+    "median_eD": 2.93
+  },
+  "test1_clean_subsets": {
+    "Q<=2, all eD": {
+      "n": 67,
+      "bivariate": {
+        "rho": 0.2429,
+        "p": 0.0476609485471392
+      },
+      "partial_N_dRRe": {
+        "rho": 0.2623,
+        "p": 0.03200008530769745
+      },
+      "partial_full": {
+        "rho": 0.2262,
+        "p": 0.06563438848160412
+      }
+    },
+    "Q==1, all eD": {
+      "n": 51,
+      "bivariate": {
+        "rho": 0.2506,
+        "p": 0.07612749013221896
+      },
+      "partial_N_dRRe": {
+        "rho": 0.2308,
+        "p": 0.1032621951834761
+      },
+      "partial_full": {
+        "rho": 0.189,
+        "p": 0.1841832015823882
+      }
+    },
+    "Q<=2, eD<=2.93": {
+      "n": 34,
+      "bivariate": {
+        "rho": 0.222,
+        "p": 0.2069927080718207
+      },
+      "partial_N_dRRe": {
+        "rho": 0.2376,
+        "p": 0.17605550300220268
+      },
+      "partial_full": {
+        "rho": 0.2492,
+        "p": 0.15524554168326263
+      }
+    },
+    "Q==1, eD<=2.93": {
+      "n": 27,
+      "bivariate": {
+        "rho": 0.1526,
+        "p": 0.44725093613221506
+      },
+      "partial_N_dRRe": {
+        "rho": 0.0519,
+        "p": 0.7971359120987014
+      },
+      "partial_full": {
+        "rho": 0.0934,
+        "p": 0.6430748520151479
+      }
+    },
+    "Q<=2, eD<=1.0": {
+      "n": 17,
+      "bivariate": {
+        "rho": 0.2206,
+        "p": 0.3948890883363402
+      },
+      "partial_N_dRRe": {
+        "rho": 0.1642,
+        "p": 0.5288225629141268
+      },
+      "partial_full": {
+        "rho": 0.0441,
+        "p": 0.8664832749198726
+      }
+    },
+    "Q==1, eD<=1.0": {
+      "n": 10,
+      "bivariate": {
+        "rho": 0.0545,
+        "p": 0.8810361811618526
+      },
+      "partial_N_dRRe": {
+        "rho": -0.2,
+        "p": 0.5795840000000002
+      },
+      "partial_full": null
+    }
+  },
+  "test2_residualized_ranks": {
+    "design_matrix": [
+      "logN",
+      "log_dRRe",
+      "Inc",
+      "eD",
+      "logD",
+      "logR_ext"
+    ],
+    "coeff_rank_r1": {
+      "intercept": -87.0966,
+      "logN": 112.0356,
+      "log_dRRe": 32.9033,
+      "Inc": 0.0419,
+      "eD": -0.873,
+      "logD": 20.0388,
+      "logR_ext": -10.2947
+    },
+    "coeff_rank_xiRe": {
+      "intercept": -37.6967,
+      "logN": 63.5254,
+      "log_dRRe": 24.4787,
+      "Inc": 0.1658,
+      "eD": -0.5267,
+      "logD": 33.5738,
+      "logR_ext": -22.929
+    },
+    "residual_rho": 0.1603,
+    "residual_p": 0.19501557965892083
+  },
+  "test3_stratified_perm": {
+    "observed_rho": 0.2429,
+    "naive_perm_p": 0.0464,
+    "stratified_perm_p": 0.038,
+    "stratified_z": 2.09,
+    "null_mean_strat": -0.0025,
+    "null_std_strat": 0.1175,
+    "n_bins": 6,
+    "bin_counts": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  "test4_mc_distance": {
+    "n_mc": 2000,
+    "xi_Re_is_D_independent": true,
+    "mc_rho_mean": 0.2429,
+    "mc_rho_ci95": [
+      0.2429,
+      0.2429
+    ],
+    "mc_rho_std": 0.0,
+    "partial_r1_eD_given_NdRRInc": {
+      "rho": 0.1461,
+      "p": 0.23823881226095184
+    },
+    "bivariate_xiRe_eD": {
+      "rho": 0.3115,
+      "p": 0.010291240070822993
+    }
+  },
+  "interpretation": "EDD_ARTIFACT"
+}

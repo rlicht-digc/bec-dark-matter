@@ -1,0 +1,24 @@
+{
+  "status": "OK",
+  "timestamp": "2026-02-24T10:34:06",
+  "hub_root": "/Users/russelllicht/bec-dark-matter/bec_rar_identity",
+  "moved_root_orphans": [],
+  "run_links": [
+    {
+      "source_path": "/Users/russelllicht/bec-dark-matter/rerun_outputs",
+      "hub_link": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/referee_battery/rerun_outputs"
+    },
+    {
+      "source_path": "/Users/russelllicht/bec-dark-matter/outputs/20260223_192210",
+      "hub_link": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/legacy_outputs/20260223_192210"
+    },
+    {
+      "source_path": "/Users/russelllicht/bec-dark-matter/outputs/universality_audit",
+      "hub_link": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/universality_audit/universality_audit"
+    },
+    {
+      "source_path": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_composition_sweep",
+      "hub_link": "/Users/russelllicht/bec-dark-matter/bec_rar_identity/runs/universality_audit/tng_sparc_composition_sweep"
+    }
+  ]
+}

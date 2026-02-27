@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-02-23T13:25:40.789139+00:00",
+  "dry_run": false,
+  "n_files": 10,
+  "counts_by_action": {
+    "skipped_identical": 5,
+    "copied": 5
+  },
+  "counts_by_category": {
+    "session_recovery": 9,
+    "unclassified": 1
+  }
+}

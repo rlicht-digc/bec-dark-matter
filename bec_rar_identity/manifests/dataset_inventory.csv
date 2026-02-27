@@ -1,0 +1,8 @@
+source_path,hub_link,exists,size_bytes
+/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/sparc_unified/rar_points_unified.csv,True,1165219
+/Users/russelllicht/bec-dark-matter/analysis/results/galaxy_results_unified.csv,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/sparc_unified/galaxy_results_unified.csv,True,214301
+/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points_CLEAN.parquet,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_3000x50_verified/rar_points_CLEAN.parquet,True,5975758
+/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points.csv,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_3000x50_verified/rar_points.csv,True,12770805
+/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/meta/master_catalog.csv,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_3000x50_verified/master_catalog.csv,True,471970
+/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/rar_points.parquet,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_48133x50_big_base/rar_points.parquet,True,78528877
+/Users/russelllicht/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/meta/master_catalog.csv,/Users/russelllicht/bec-dark-matter/bec_rar_identity/datasets/tng_48133x50_big_base/master_catalog.csv,True,4288174

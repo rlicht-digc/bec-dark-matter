@@ -1,0 +1,198 @@
+{
+  "test_name": "korsaga_ml_sensitivity",
+  "log_g_dagger": -9.920818753952375,
+  "treatments": {
+    "BFM_baseline": {
+      "kurtosis": 13.809,
+      "n_points": 664,
+      "sigma": 0.32022,
+      "derivative_peak": -10.064,
+      "n_galaxies": 100,
+      "n_rar_points": 5799
+    },
+    "fML_color": {
+      "kurtosis": 23.949,
+      "n_points": 904,
+      "sigma": 0.34526,
+      "derivative_peak": -9.927,
+      "n_galaxies": 100,
+      "n_rar_points": 5799,
+      "delta_kurtosis_from_bfm": 10.14
+    },
+    "perturbation": {
+      "noise_0.05": {
+        "noise_dex": 0.05,
+        "n_mc": 50,
+        "kurtosis_mean": 13.361,
+        "kurtosis_std": 2.572,
+        "kurtosis_min": 4.3,
+        "kurtosis_max": 17.695,
+        "peak_mean": -10.06,
+        "peak_std": 0.038,
+        "frac_kurtosis_positive": 1.0,
+        "frac_kurtosis_gt5": 0.94
+      },
+      "noise_0.10": {
+        "noise_dex": 0.1,
+        "n_mc": 50,
+        "kurtosis_mean": 12.355,
+        "kurtosis_std": 4.171,
+        "kurtosis_min": 0.612,
+        "kurtosis_max": 20.404,
+        "peak_mean": -10.044,
+        "peak_std": 0.156,
+        "frac_kurtosis_positive": 1.0,
+        "frac_kurtosis_gt5": 0.9
+      },
+      "noise_0.15": {
+        "noise_dex": 0.15,
+        "n_mc": 50,
+        "kurtosis_mean": 10.824,
+        "kurtosis_std": 5.536,
+        "kurtosis_min": 0.369,
+        "kurtosis_max": 27.084,
+        "peak_mean": -9.995,
+        "peak_std": 0.288,
+        "frac_kurtosis_positive": 1.0,
+        "frac_kurtosis_gt5": 0.82
+      },
+      "noise_0.20": {
+        "noise_dex": 0.2,
+        "n_mc": 50,
+        "kurtosis_mean": 10.175,
+        "kurtosis_std": 5.266,
+        "kurtosis_min": 0.135,
+        "kurtosis_max": 25.543,
+        "peak_mean": -10.032,
+        "peak_std": 0.3,
+        "frac_kurtosis_positive": 1.0,
+        "frac_kurtosis_gt5": 0.8
+      },
+      "noise_0.30": {
+        "noise_dex": 0.3,
+        "n_mc": 50,
+        "kurtosis_mean": 7.144,
+        "kurtosis_std": 5.007,
+        "kurtosis_min": 0.192,
+        "kurtosis_max": 20.499,
+        "peak_mean": -9.897,
+        "peak_std": 0.421,
+        "frac_kurtosis_positive": 1.0,
+        "frac_kurtosis_gt5": 0.56
+      },
+      "noise_0.50": {
+        "noise_dex": 0.5,
+        "n_mc": 50,
+        "kurtosis_mean": 5.522,
+        "kurtosis_std": 5.77,
+        "kurtosis_min": -0.465,
+        "kurtosis_max": 20.803,
+        "peak_mean": -9.939,
+        "peak_std": 0.39,
+        "frac_kurtosis_positive": 0.94,
+        "frac_kurtosis_gt5": 0.4
+      }
+    },
+    "exclude_boundary": {
+      "kurtosis": 5.716,
+      "n_points": 612,
+      "sigma": 0.29822,
+      "derivative_peak": -10.032,
+      "n_galaxies": 66,
+      "n_rar_points": 4000,
+      "n_excluded": 34,
+      "delta_kurtosis_from_bfm": -8.093
+    },
+    "jackknife": {
+      "n_galaxies": 100,
+      "baseline_kurtosis": 13.809,
+      "jk_mean": 13.81,
+      "jk_std": 1.059,
+      "jk_min": 5.246,
+      "jk_max": 18.559,
+      "max_shift": 8.563,
+      "frac_positive": 1.0,
+      "most_influential": [
+        {
+          "name": "UGC9179",
+          "kurtosis_when_removed": 5.246
+        },
+        {
+          "name": "UGC7766",
+          "kurtosis_when_removed": 18.559
+        },
+        {
+          "name": "UGC5251",
+          "kurtosis_when_removed": 16.298
+        },
+        {
+          "name": "UGC11597",
+          "kurtosis_when_removed": 15.581
+        },
+        {
+          "name": "UGC8334",
+          "kurtosis_when_removed": 12.289
+        }
+      ]
+    },
+    "scaling": {
+      "scale_0.3": {
+        "scale_factor": 0.3,
+        "kurtosis": 7.785,
+        "n_points": 478,
+        "sigma": 0.32311,
+        "derivative_peak": -9.718
+      },
+      "scale_0.5": {
+        "scale_factor": 0.5,
+        "kurtosis": 5.034,
+        "n_points": 601,
+        "sigma": 0.27381,
+        "derivative_peak": -10.308
+      },
+      "scale_0.8": {
+        "scale_factor": 0.8,
+        "kurtosis": 5.179,
+        "n_points": 685,
+        "sigma": 0.27125,
+        "derivative_peak": -10.14
+      },
+      "scale_1.0": {
+        "scale_factor": 1.0,
+        "kurtosis": 13.809,
+        "n_points": 664,
+        "sigma": 0.32022,
+        "derivative_peak": -10.064
+      },
+      "scale_1.2": {
+        "scale_factor": 1.2,
+        "kurtosis": 12.253,
+        "n_points": 663,
+        "sigma": 0.33093,
+        "derivative_peak": -10.06
+      },
+      "scale_1.5": {
+        "scale_factor": 1.5,
+        "kurtosis": 13.704,
+        "n_points": 634,
+        "sigma": 0.35895,
+        "derivative_peak": -9.871
+      },
+      "scale_2.0": {
+        "scale_factor": 2.0,
+        "kurtosis": 11.581,
+        "n_points": 646,
+        "sigma": 0.30907,
+        "derivative_peak": -9.779
+      },
+      "scale_3.0": {
+        "scale_factor": 3.0,
+        "kurtosis": 1.529,
+        "n_points": 720,
+        "sigma": 0.26555,
+        "derivative_peak": -10.307
+      }
+    }
+  },
+  "verdict": "ROBUST: Kurtosis spike persists under all M/L treatments. Survives fML color M/L, boundary exclusion, and 0.20 dex perturbation. Consistent with physical phase transition origin."
+}
