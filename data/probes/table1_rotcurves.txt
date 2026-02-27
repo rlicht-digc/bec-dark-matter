@@ -1,9 +1,0 @@
-Table 1 
-Rotation Curve Columns
-
-
-Column	Units	Description	
-(1)	(2)	(3)	
-R	arcsec	Semimajor axis location	
-V	km s^-1	Circular velocity (Section 3.2.2)	
-V_e	km s^-1	Circular velocity measurement error	

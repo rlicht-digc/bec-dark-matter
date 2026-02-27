@@ -1,0 +1,9 @@
+relative_path,bytes,sha256,source_url,citation_tag,license_note
+CITATION.md,364,73a9fde7e038e3b57c8d319288e0c95a3bc51d8c83b9770a6bb10fe6622a015a,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+README.md,810,2ceee751c81c0dc99f95a09feb1671e22539a746637257d06ff6d6b475dd9661,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+TERMS_OF_USE.md,770,789b6fe7bff2e0fdd0a83fc4094c4b53a459f5567126eb255415ee47245a98a6,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+alfalfa_alpha100_haynes2011.tsv,4948048,082fd87feabddc4f8c22f06c4d602317416eaa539f9fcb601ffe98d050160957,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+alfalfa_alpha100_haynes2018.tsv,4729340,3023bf8389a901a674d93809ecabff04b0bdd4e7fd233c07341d343f7507501c,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+data_dictionary.md,1332,aa6b2b2709d2121f3ed5a42d79e2d6cbdf7e68b1b7ed59ab66d88f54a99e7e62,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+download_instructions.md,561,9d51bb50a148aa5450e6176594af2c91b4bf4788604ac0a0118cda93f5e46d99,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
+manifest.csv,64,3c6da1ac06fa63844ca0e3cf77197618f904bca16dfaf47a9627d7fab448a69c,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/142/170,TODO_ALFALFA_MAIN,Third-party dataset; original terms apply (VizieR).
