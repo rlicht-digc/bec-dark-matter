@@ -1,0 +1,20 @@
+{
+  "run_id": "20260302T225213Z_codex_patch-mbh-censored-summary-schem_cc15cce4",
+  "timestamp_utc": "2026-03-02T22:52:13Z",
+  "tool": "codex",
+  "purpose": "Patch MBH censored summary schema to include flat keys and backfill two output summaries",
+  "prompt_sha256": "2d954c5dacdbd6d2227c7ec0436736a903ed1af4fcdcd90e43bfb603c4196289",
+  "inputs_scanned": [
+    "analysis/pipeline/test_mbh_xi_bridge_censored.py",
+    "outputs/mbh_xi_bridge_censored/20260302_164633/summary_mbh_censored_fit.json",
+    "outputs/mbh_xi_bridge_censored/20260302_164643_mdyn/summary_mbh_censored_fit.json"
+  ],
+  "outputs_changed": [
+    "analysis/pipeline/test_mbh_xi_bridge_censored.py",
+    "outputs/mbh_xi_bridge_censored/20260302_164633/summary_mbh_censored_fit.json",
+    "outputs/mbh_xi_bridge_censored/20260302_164643_mdyn/summary_mbh_censored_fit.json",
+    "mailbox/queue/M0012_codex_censored-direct-mbh-fit.md"
+  ],
+  "git_commit": "b677e60b5d27cc3bcd21d38494434c788f194c1b",
+  "todos_remaining": []
+}
