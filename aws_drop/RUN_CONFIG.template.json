@@ -1,0 +1,27 @@
+{
+  "repo_name": "bec-dark-matter",
+  "run_id": "RUN_YYYYMMDD_HHMMSS",
+  "require_csv_sha": "",
+  "require_min_sparc_points": 2500,
+  "branchC": {
+    "seed": 271828,
+    "n_perm": 10000,
+    "n_boot_bin": 800,
+    "n_bins": 15
+  },
+  "branchD": {
+    "seed": 42,
+    "n_shuffles": 1000
+  },
+  "tng_sparc": {
+    "tng_input_path": "/mnt/data/rar_points.parquet",
+    "mode": "full",
+    "n_bootstrap": 10000,
+    "n_shuffles": 1000,
+    "n_bins": 15,
+    "K": 20,
+    "seed": 42
+  },
+  "output_root": "/mnt/ebs/runs",
+  "notes": "Copy to RUN_CONFIG.json and modify values as needed."
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "model": "poly6_two_minima",
+    "m_eV": 1e-22,
+    "lambda4": 5.094638589770534e-50,
+    "lambda6": 5.0946385897705237e-70,
+    "v_GeV": 10.0,
+    "cT2": 4.245532158142111e-51,
+    "notes": "best-match asymmetry row",
+    "log10_V0_ratio": 0.168931867770341
+  },
+  {
+    "model": "poly6_two_minima",
+    "m_eV": 1e-22,
+    "lambda4": 5.094638589770534e-50,
+    "lambda6": 3.574927404133863e-70,
+    "v_GeV": 11.937766417144358,
+    "cT2": 4.245532158142111e-51,
+    "notes": "neighbor within ~2 dex of Lambda",
+    "log10_V0_ratio": 0.4766241754626483
+  },
+  {
+    "model": "poly6_two_minima",
+    "m_eV": 1e-22,
+    "lambda4": 5.094638589770534e-50,
+    "lambda6": 2.5085402466994087e-70,
+    "v_GeV": 14.251026703029966,
+    "cT2": 4.245532158142111e-51,
+    "notes": "neighbor within ~2 dex of Lambda",
+    "log10_V0_ratio": 0.7843164831549554
+  },
+  {
+    "model": "poly6_two_minima",
+    "m_eV": 1e-22,
+    "lambda4": 5.094638589770534e-50,
+    "lambda6": 1.7602522954827246e-70,
+    "v_GeV": 17.012542798525857,
+    "cT2": 4.245532158142111e-51,
+    "notes": "neighbor within ~2 dex of Lambda",
+    "log10_V0_ratio": 1.0920087908472629
+  },
+  {
+    "model": "poly6_two_minima",
+    "m_eV": 1e-21,
+    "lambda4": 5.0946385897705334e-49,
+    "lambda6": 5.094638589770433e-69,
+    "v_GeV": 10.0,
+    "cT2": 4.245532158142111e-50,
+    "notes": "neighbor within ~2 dex of Lambda",
+    "log10_V0_ratio": 1.1689318677703102
+  },
+  {
+    "model": "poly6_two_minima",
+    "m_eV": 1e-22,
+    "lambda4": 5.094638589770534e-50,
+    "lambda6": 1.235175775166049e-70,
+    "v_GeV": 20.30917620904739,
+    "cT2": 4.245532158142111e-51,
+    "notes": "neighbor within ~2 dex of Lambda",
+    "log10_V0_ratio": 1.399701098539577
+  }
+]

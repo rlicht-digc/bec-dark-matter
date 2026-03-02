@@ -1,0 +1,2934 @@
+{
+  "generated_utc": "2026-02-28T00:57:31.789074Z",
+  "repo_root": "/Users/russelllicht/bec-dark-matter",
+  "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+  "dataset": {
+    "path": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+    "sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+    "backup_path": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified__430a75f2__20260227.csv",
+    "backup_sha256": "430a75f28edcf322c0dc88f768e89003d9970dc1b70f548ff273fa3caea4283d"
+  },
+  "tests": [
+    {
+      "id": "T001",
+      "path": "analysis/gdagger_hunt.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/gdagger_hunt.py",
+      "branch": "D",
+      "description": "gdagger_hunt.py \u2014 Systematic search for the BEC acceleration scale g\u2020 in",
+      "is_test_script": false
+    },
+    {
+      "id": "T002",
+      "path": "analysis/paper3/high_density_targets.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/paper3/high_density_targets.py",
+      "branch": "C",
+      "description": "Identify high-density systems from RAR points and test residual shifts",
+      "is_test_script": false
+    },
+    {
+      "id": "T003",
+      "path": "analysis/paper3/paper3_branchC_experiments.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/paper3/paper3_branchC_experiments.py",
+      "branch": "C",
+      "description": "Branch C decisive experiments (C1-C3) for Paper3 density bridge.",
+      "is_test_script": false
+    },
+    {
+      "id": "T004",
+      "path": "analysis/paper3/paper3_bridge_pack.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/paper3/paper3_bridge_pack.py",
+      "branch": "C",
+      "description": "Paper-3 bridge pack:",
+      "is_test_script": false
+    },
+    {
+      "id": "T005",
+      "path": "analysis/pipeline/run_referee_required_tests.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/run_referee_required_tests.py",
+      "branch": "D",
+      "description": "Referee-required test runner for BEC dark matter RAR analyses.",
+      "is_test_script": false
+    },
+    {
+      "id": "T006",
+      "path": "analysis/pipeline/test_13b_composite.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_13b_composite.py",
+      "branch": "adjacent",
+      "description": "Test 13b COMPOSITE: SPARC inner + Brouwer outer lensing profiles.",
+      "is_test_script": true
+    },
+    {
+      "id": "T007",
+      "path": "analysis/pipeline/test_13b_diagnostics.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_13b_diagnostics.py",
+      "branch": "adjacent",
+      "description": "Test 13b DIAGNOSTICS: Honest analysis of composite SPARC+Brouwer results.",
+      "is_test_script": true
+    },
+    {
+      "id": "T008",
+      "path": "analysis/pipeline/test_13b_standalone.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_13b_standalone.py",
+      "branch": "adjacent",
+      "description": "Standalone Test 13b: Lensing Profile Shape \u2014 Solitonic Core vs NFW",
+      "is_test_script": true
+    },
+    {
+      "id": "T009",
+      "path": "analysis/pipeline/test_alfalfa_yang_btfr.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_alfalfa_yang_btfr.py",
+      "branch": "adjacent",
+      "description": "ALFALFA \u00d7 Yang+2007 BTFR Environmental Scatter Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T010",
+      "path": "analysis/pipeline/test_alpha_with_mtotal.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_alpha_with_mtotal.py",
+      "branch": "adjacent",
+      "description": "Alpha Rescaling Test with M_total vs M_star",
+      "is_test_script": true
+    },
+    {
+      "id": "T011",
+      "path": "analysis/pipeline/test_baryon_wiggle_vs_coherence.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_baryon_wiggle_vs_coherence.py",
+      "branch": "adjacent",
+      "description": "Baryon Wiggle Index vs Residual Coherence (Step 29)",
+      "is_test_script": true
+    },
+    {
+      "id": "T012",
+      "path": "analysis/pipeline/test_binning_robustness.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_binning_robustness.py",
+      "branch": "adjacent",
+      "description": "Binning Robustness Test for Inversion Point",
+      "is_test_script": true
+    },
+    {
+      "id": "T013",
+      "path": "analysis/pipeline/test_brouwer_lensing_rar.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_brouwer_lensing_rar.py",
+      "branch": "adjacent",
+      "description": "Brouwer+2021 Weak Lensing RAR Scatter Analysis",
+      "is_test_script": true
+    },
+    {
+      "id": "T014",
+      "path": "analysis/pipeline/test_cf4_distance_grading.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cf4_distance_grading.py",
+      "branch": "adjacent",
+      "description": "CF4 DISTANCE GRADING \u2014 Phase 1",
+      "is_test_script": true
+    },
+    {
+      "id": "T015",
+      "path": "analysis/pipeline/test_cluster_gcore_no_rxj2248.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_gcore_no_rxj2248.py",
+      "branch": "adjacent",
+      "description": "Test A3b: g_core analysis with RXJ2248 excluded (anomalous Rad=30.3 kpc)",
+      "is_test_script": true
+    },
+    {
+      "id": "T016",
+      "path": "analysis/pipeline/test_cluster_gcore_scaling.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_gcore_scaling.py",
+      "branch": "adjacent",
+      "description": "Test A3: Core-Acceleration Proxy & Multivariate Regression",
+      "is_test_script": true
+    },
+    {
+      "id": "T017",
+      "path": "analysis/pipeline/test_cluster_rar_tian2020.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_rar_tian2020.py",
+      "branch": "adjacent",
+      "description": "Cluster-Scale RAR from Tian et al. 2020 (CLASH)",
+      "is_test_script": true
+    },
+    {
+      "id": "T018",
+      "path": "analysis/pipeline/test_cluster_scale_rar.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_scale_rar.py",
+      "branch": "adjacent",
+      "description": "Cluster-Scale RAR Analysis",
+      "is_test_script": true
+    },
+    {
+      "id": "T019",
+      "path": "analysis/pipeline/test_cluster_sigma_diagnostics.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_sigma_diagnostics.py",
+      "branch": "adjacent",
+      "description": "Test A Diagnostics + Test A2: Alternative Cluster-Scale Predictors",
+      "is_test_script": true
+    },
+    {
+      "id": "T020",
+      "path": "analysis/pipeline/test_cluster_sigma_scaling.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_cluster_sigma_scaling.py",
+      "branch": "adjacent",
+      "description": "Test A: Cluster velocity dispersion vs acceleration scale",
+      "is_test_script": true
+    },
+    {
+      "id": "T021",
+      "path": "analysis/pipeline/test_eagle_injection_recovery.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_eagle_injection_recovery.py",
+      "branch": "adjacent",
+      "description": "TEST C: SPARC \u2192 EAGLE Sampling Injection\u2013Recovery",
+      "is_test_script": true
+    },
+    {
+      "id": "T022",
+      "path": "analysis/pipeline/test_eagle_rar_inversion.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_eagle_rar_inversion.py",
+      "branch": "adjacent",
+      "description": "EAGLE Simulation RAR & Scatter Derivative Inversion Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T023",
+      "path": "analysis/pipeline/test_eagle_rar_inversion_v2.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_eagle_rar_inversion_v2.py",
+      "branch": "adjacent",
+      "description": "EAGLE Simulation RAR & Scatter Derivative Inversion Test \u2014 v2",
+      "is_test_script": true
+    },
+    {
+      "id": "T024",
+      "path": "analysis/pipeline/test_env_cf4_accel_binned.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_cf4_accel_binned.py",
+      "branch": "adjacent",
+      "description": "Acceleration-Binned Environmental RAR Scatter Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T025",
+      "path": "analysis/pipeline/test_env_confound_control.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_confound_control.py",
+      "branch": "adjacent",
+      "description": "Environment Confound Control Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T026",
+      "path": "analysis/pipeline/test_env_scatter_definitive.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_scatter_definitive.py",
+      "branch": "adjacent",
+      "description": "DEFINITIVE Environmental RAR Scatter Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T027",
+      "path": "analysis/pipeline/test_env_triple_distance.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_env_triple_distance.py",
+      "branch": "adjacent",
+      "description": "ENVIRONMENTAL BATTERY x3 DISTANCE CATALOGS \u2014 Phase 3",
+      "is_test_script": true
+    },
+    {
+      "id": "T028",
+      "path": "analysis/pipeline/test_extended_rar_inversion.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_extended_rar_inversion.py",
+      "branch": "adjacent",
+      "description": "Extended RAR Inversion Point Analysis",
+      "is_test_script": true
+    },
+    {
+      "id": "T029",
+      "path": "analysis/pipeline/test_forward_model_bunching.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_forward_model_bunching.py",
+      "branch": "adjacent",
+      "description": "Forward-Model Bunching Validation: BEC vs NFW Per-Galaxy Rotation Curve Fits",
+      "is_test_script": true
+    },
+    {
+      "id": "T030",
+      "path": "analysis/pipeline/test_gpp_inversion_cs2.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_gpp_inversion_cs2.py",
+      "branch": "adjacent",
+      "description": "GPP (Gross-Pitaevskii-Poisson) Inversion of the RAR",
+      "is_test_script": true
+    },
+    {
+      "id": "T031",
+      "path": "analysis/pipeline/test_gpp_universality.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_gpp_universality.py",
+      "branch": "adjacent",
+      "description": "test_gpp_universality.py \u2014 GPP Universality Re-test",
+      "is_test_script": true
+    },
+    {
+      "id": "T032",
+      "path": "analysis/pipeline/test_gpp_universality_codex.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_gpp_universality_codex.py",
+      "branch": "adjacent",
+      "description": "test_gpp_universality.py \u2014 GPP Universality Re-test (Codex-portable)",
+      "is_test_script": true
+    },
+    {
+      "id": "T033",
+      "path": "analysis/pipeline/test_healing_length_distance_diag.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_healing_length_distance_diag.py",
+      "branch": "adjacent",
+      "description": "Healing-Length Distance Diagnostics (Step 28f)",
+      "is_test_script": true
+    },
+    {
+      "id": "T034",
+      "path": "analysis/pipeline/test_healing_length_kstar.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_healing_length_kstar.py",
+      "branch": "adjacent",
+      "description": "Healing-Length Scaling \u2014 continuous ACF (Step 28e)",
+      "is_test_script": true
+    },
+    {
+      "id": "T035",
+      "path": "analysis/pipeline/test_healing_length_scaling.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_healing_length_scaling.py",
+      "branch": "adjacent",
+      "description": "Healing-Length Scaling Test (Step 28) \u2014 \u03be vs Coherence Length",
+      "is_test_script": true
+    },
+    {
+      "id": "T036",
+      "path": "analysis/pipeline/test_hierarchical_healing_length.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_hierarchical_healing_length.py",
+      "branch": "adjacent",
+      "description": "Hierarchical Healing Length & Cluster g\u2020_eff Mass Scaling Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T037",
+      "path": "analysis/pipeline/test_injection_recovery.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_injection_recovery.py",
+      "branch": "adjacent",
+      "description": "Injection-Recovery Test (C1) \u2014 Can EAGLE's 10 Fixed Radii Detect SPARC Periodicity?",
+      "is_test_script": true
+    },
+    {
+      "id": "T038",
+      "path": "analysis/pipeline/test_interface_oscillation.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_interface_oscillation.py",
+      "branch": "adjacent",
+      "description": "Interface Oscillation Test (Step 25) \u2014 with Demeaning Control",
+      "is_test_script": true
+    },
+    {
+      "id": "T039",
+      "path": "analysis/pipeline/test_interface_oscillation_controls.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_interface_oscillation_controls.py",
+      "branch": "adjacent",
+      "description": "Interface Oscillation Controls (Step 26) \u2014 Detrending + Permutation Nulls",
+      "is_test_script": true
+    },
+    {
+      "id": "T040",
+      "path": "analysis/pipeline/test_interface_spectral.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_interface_spectral.py",
+      "branch": "adjacent",
+      "description": "Interface Spectral Test (Step 27) \u2014 Lomb-Scargle on Detrended RAR Residuals",
+      "is_test_script": true
+    },
+    {
+      "id": "T041",
+      "path": "analysis/pipeline/test_inversion_distance_sensitivity.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_inversion_distance_sensitivity.py",
+      "branch": "adjacent",
+      "description": "INVERSION POINT DISTANCE SENSITIVITY \u2014 Phase 5",
+      "is_test_script": true
+    },
+    {
+      "id": "T042",
+      "path": "analysis/pipeline/test_jackknife_robustness.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_jackknife_robustness.py",
+      "branch": "adjacent",
+      "description": "Jackknife Robustness Test for Environmental Signal",
+      "is_test_script": true
+    },
+    {
+      "id": "T043",
+      "path": "analysis/pipeline/test_korsaga_ml_sensitivity.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_korsaga_ml_sensitivity.py",
+      "branch": "adjacent",
+      "description": "test_korsaga_ml_sensitivity.py \u2014 Korsaga M/L sensitivity test for kurtosis spike",
+      "is_test_script": true
+    },
+    {
+      "id": "T044",
+      "path": "analysis/pipeline/test_kurtosis_disambiguation.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_kurtosis_disambiguation.py",
+      "branch": "adjacent",
+      "description": "Kurtosis Disambiguation: Physical vs Geometric vs Cross-Calibration",
+      "is_test_script": true
+    },
+    {
+      "id": "T045",
+      "path": "analysis/pipeline/test_kurtosis_mhongoose.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_kurtosis_mhongoose.py",
+      "branch": "adjacent",
+      "description": "MHONGOOSE Kurtosis Augmentation Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T046",
+      "path": "analysis/pipeline/test_kurtosis_phase_transition.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_kurtosis_phase_transition.py",
+      "branch": "adjacent",
+      "description": "Kurtosis Phase Transition Test (\u00a78.27)",
+      "is_test_script": true
+    },
+    {
+      "id": "T047",
+      "path": "analysis/pipeline/test_lcdm_hydro_inversion.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lcdm_hydro_inversion.py",
+      "branch": "adjacent",
+      "description": "\u039bCDM Hydrodynamic Simulation Test: Scatter Derivative Inversion",
+      "is_test_script": true
+    },
+    {
+      "id": "T048",
+      "path": "analysis/pipeline/test_lcdm_null_inversion.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lcdm_null_inversion.py",
+      "branch": "adjacent",
+      "description": "\u039bCDM Null Test: Does the Inversion Point Exist in Pure \u039bCDM?",
+      "is_test_script": true
+    },
+    {
+      "id": "T049",
+      "path": "analysis/pipeline/test_lcdm_phase_diagram.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lcdm_phase_diagram.py",
+      "branch": "adjacent",
+      "description": "LCDM Phase Diagram Null Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T050",
+      "path": "analysis/pipeline/test_lensing_profile_shape.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_lensing_profile_shape.py",
+      "branch": "adjacent",
+      "description": "test_lensing_profile_shape.py \u2014 Weak lensing ESD profile shape test",
+      "is_test_script": true
+    },
+    {
+      "id": "T051",
+      "path": "analysis/pipeline/test_mass_split_bunching.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_mass_split_bunching.py",
+      "branch": "adjacent",
+      "description": "Mass-Split Bunching Test: X = R/\u03be Prediction",
+      "is_test_script": true
+    },
+    {
+      "id": "T052",
+      "path": "analysis/pipeline/test_matched_analog_comparison.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_matched_analog_comparison.py",
+      "branch": "adjacent",
+      "description": "SPARC-Matched Analog Analysis in EAGLE & TNG",
+      "is_test_script": true
+    },
+    {
+      "id": "T053",
+      "path": "analysis/pipeline/test_mc_distance_and_inversion.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_mc_distance_and_inversion.py",
+      "branch": "adjacent",
+      "description": "Monte Carlo Distance Error Injection & Empirical Inversion Point Analysis",
+      "is_test_script": true
+    },
+    {
+      "id": "T054",
+      "path": "analysis/pipeline/test_ngc3621_single_galaxy.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_ngc3621_single_galaxy.py",
+      "branch": "adjacent",
+      "description": "test_ngc3621_single_galaxy.py \u2014 Can a SINGLE galaxy localize g\u2020?",
+      "is_test_script": true
+    },
+    {
+      "id": "T055",
+      "path": "analysis/pipeline/test_nonparametric_inversion.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_nonparametric_inversion.py",
+      "branch": "adjacent",
+      "description": "Non-Parametric Mean Relation Inversion Robustness Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T056",
+      "path": "analysis/pipeline/test_periodic_properties_and_scaling.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_periodic_properties_and_scaling.py",
+      "branch": "adjacent",
+      "description": "TESTS B.1\u2013B.3: Periodic Galaxy Properties, \u03bb-\u03be Scaling, and Bump Sharpening",
+      "is_test_script": true
+    },
+    {
+      "id": "T057",
+      "path": "analysis/pipeline/test_phangs_inner_quantum.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_phangs_inner_quantum.py",
+      "branch": "adjacent",
+      "description": "PHANGS Inner Quantum Regime Test (X < 1)",
+      "is_test_script": true
+    },
+    {
+      "id": "T058",
+      "path": "analysis/pipeline/test_phase_diagram_model.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_phase_diagram_model.py",
+      "branch": "adjacent",
+      "description": "Phase Diagram Model: Two-Feature (Peak+Dip) Variance Structure in RAR Residuals",
+      "is_test_script": true
+    },
+    {
+      "id": "T059",
+      "path": "analysis/pipeline/test_probes_gas_corrected.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_probes_gas_corrected.py",
+      "branch": "adjacent",
+      "description": "PROBES \u00d7 ALFALFA Gas-Corrected RAR Tightness Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T060",
+      "path": "analysis/pipeline/test_probes_inversion_replication.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_probes_inversion_replication.py",
+      "branch": "adjacent",
+      "description": "PROBES Inversion Point Replication Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T061",
+      "path": "analysis/pipeline/test_propensity_matched_env.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_propensity_matched_env.py",
+      "branch": "adjacent",
+      "description": "Propensity-Score Matched Environment Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T062",
+      "path": "analysis/pipeline/test_radial_variance_profile.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_radial_variance_profile.py",
+      "branch": "adjacent",
+      "description": "Radial Variance Profile Test: \u03c3\u00b2(n\u0304) Continuous Shape",
+      "is_test_script": true
+    },
+    {
+      "id": "T063",
+      "path": "analysis/pipeline/test_rar_tightness.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_rar_tightness.py",
+      "branch": "adjacent",
+      "description": "RAR Tightness as a Discriminant: The Dog That Didn't Bark",
+      "is_test_script": true
+    },
+    {
+      "id": "T064",
+      "path": "analysis/pipeline/test_rar_tightness_probes.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_rar_tightness_probes.py",
+      "branch": "adjacent",
+      "description": "RAR Tightness Test \u2014 Expanded with PROBES (Stone & Courteau 2022)",
+      "is_test_script": true
+    },
+    {
+      "id": "T065",
+      "path": "analysis/pipeline/test_residual_power_spectrum.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_residual_power_spectrum.py",
+      "branch": "adjacent",
+      "description": "TEST B: Power Spectrum Shape of RAR Residuals \u2014 Turbulence vs Oscillation",
+      "is_test_script": true
+    },
+    {
+      "id": "T066",
+      "path": "analysis/pipeline/test_residualized_bec_signal_analysis.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_residualized_bec_signal_analysis.py",
+      "branch": "adjacent",
+      "description": "Residualized BEC Signal Analysis",
+      "is_test_script": true
+    },
+    {
+      "id": "T067",
+      "path": "analysis/pipeline/test_scale_hierarchy_map.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_scale_hierarchy_map.py",
+      "branch": "adjacent",
+      "description": "Scale Hierarchy Map for RAR Residual Structure",
+      "is_test_script": true
+    },
+    {
+      "id": "T068",
+      "path": "analysis/pipeline/test_scale_hierarchy_rs_discriminator.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_scale_hierarchy_rs_discriminator.py",
+      "branch": "adjacent",
+      "description": "r_s vs xi discriminating test for scale-hierarchy outputs.",
+      "is_test_script": true
+    },
+    {
+      "id": "T069",
+      "path": "analysis/pipeline/test_scale_parameter_analysis.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_scale_parameter_analysis.py",
+      "branch": "adjacent",
+      "description": "Scale Parameter Meta-Analysis: X = R/\u03be Framework",
+      "is_test_script": true
+    },
+    {
+      "id": "T070",
+      "path": "analysis/pipeline/test_simulation_coherence.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_simulation_coherence.py",
+      "branch": "adjacent",
+      "description": "Simulation Coherence Test \u2014 EAGLE vs SPARC Radial Autocorrelation & Periodicity",
+      "is_test_script": true
+    },
+    {
+      "id": "T071",
+      "path": "analysis/pipeline/test_soliton_nfw_composite.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_soliton_nfw_composite.py",
+      "branch": "adjacent",
+      "description": "SOLITON + NFW COMPOSITE DARK MATTER PROFILE TEST",
+      "is_test_script": true
+    },
+    {
+      "id": "T072",
+      "path": "analysis/pipeline/test_spectral_slope_alpha.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_spectral_slope_alpha.py",
+      "branch": "adjacent",
+      "description": "Spectral Slope \u03b1 Test (Step 30)",
+      "is_test_script": true
+    },
+    {
+      "id": "T073",
+      "path": "analysis/pipeline/test_split_half_replication.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_split_half_replication.py",
+      "branch": "adjacent",
+      "description": "Split-Half Internal Replication of Inversion Point",
+      "is_test_script": true
+    },
+    {
+      "id": "T074",
+      "path": "analysis/pipeline/test_tf_scatter_redshift.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tf_scatter_redshift.py",
+      "branch": "adjacent",
+      "description": "test_tf_scatter_redshift.py \u2014 Tully-Fisher scatter across redshift",
+      "is_test_script": true
+    },
+    {
+      "id": "T075",
+      "path": "analysis/pipeline/test_tng_coherence.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_coherence.py",
+      "branch": "adjacent",
+      "description": "TNG Coherence Analysis \u2014 Run LOCALLY on Extracted Profiles",
+      "is_test_script": true
+    },
+    {
+      "id": "T076",
+      "path": "analysis/pipeline/test_tng_sparc_composition_sweep.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_sparc_composition_sweep.py",
+      "branch": "adjacent",
+      "description": "TNG vs SPARC Composition Sweep (Discrimination Search)",
+      "is_test_script": true
+    },
+    {
+      "id": "T077",
+      "path": "analysis/pipeline/test_tng_sparc_fairness_gap.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_tng_sparc_fairness_gap.py",
+      "branch": "adjacent",
+      "description": "Mass-Matched Fairness Sweep: TNG vs SPARC",
+      "is_test_script": true
+    },
+    {
+      "id": "T078",
+      "path": "analysis/pipeline/test_unified_model_adjudication.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_unified_model_adjudication.py",
+      "branch": "adjacent",
+      "description": "Phase 4: Unified Model Adjudication",
+      "is_test_script": true
+    },
+    {
+      "id": "T079",
+      "path": "analysis/pipeline/test_void_gradient.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_void_gradient.py",
+      "branch": "adjacent",
+      "description": "Void-Field-Dense RAR Scatter Gradient Test",
+      "is_test_script": true
+    },
+    {
+      "id": "T080",
+      "path": "analysis/pipeline/test_window_matching.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/test_window_matching.py",
+      "branch": "adjacent",
+      "description": "TASK 2: Window Matching (C2) \u2014 Galaxy-Adapted 10-Point Sampling",
+      "is_test_script": true
+    },
+    {
+      "id": "T081",
+      "path": "analysis/run_branchC_paper3_experiments.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/run_branchC_paper3_experiments.py",
+      "branch": "C",
+      "description": "Single source-of-truth Branch C entrypoint (bec-dark-matter only).",
+      "is_test_script": false
+    },
+    {
+      "id": "T082",
+      "path": "analysis/run_branchD_rar_control.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/run_branchD_rar_control.py",
+      "branch": "D",
+      "description": "Single source-of-truth Branch D entrypoint (bec-dark-matter only).",
+      "is_test_script": false
+    },
+    {
+      "id": "T083",
+      "path": "analysis/tests/test_gdagger_hunt_pilot.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_gdagger_hunt_pilot.py",
+      "branch": "D",
+      "description": "test_gdagger_hunt_pilot.py \u2014 Pilot end-to-end test for the g\u2020 Hunt module.",
+      "is_test_script": true
+    },
+    {
+      "id": "T084",
+      "path": "analysis/tests/test_gdagger_hunt_refereeproof.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_gdagger_hunt_refereeproof.py",
+      "branch": "D",
+      "description": "test_gdagger_hunt_refereeproof.py \u2014 Adversarial validation suite for g\u2020 Hunt.",
+      "is_test_script": true
+    },
+    {
+      "id": "T085",
+      "path": "analysis/tests/test_unified_pipeline_regression.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_unified_pipeline_regression.py",
+      "branch": "adjacent",
+      "description": "Regression tests guarding against silent SPARC dataset drift.",
+      "is_test_script": true
+    },
+    {
+      "id": "T086",
+      "path": "analysis/tools/repo_provenance_scan.py",
+      "abs_path": "/Users/russelllicht/bec-dark-matter/analysis/tools/repo_provenance_scan.py",
+      "branch": "adjacent",
+      "description": "Scan bec-dark-matter for potential provenance leakage from bh-singularity.",
+      "is_test_script": false
+    }
+  ],
+  "runs": [
+    {
+      "id": "R001",
+      "run_name": "20260224_141322_synthetic_sanity",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141322_synthetic_sanity/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R002",
+      "run_name": "20260224_141324_sparc_rar_control",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141324_sparc_rar_control/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R003",
+      "run_name": "20260224_141326_cluster_rar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_141326_cluster_rar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R004",
+      "run_name": "20260224_142012_synthetic_sanity",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142012_synthetic_sanity/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R005",
+      "run_name": "20260224_142013_cluster_rar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_cluster_rar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R006",
+      "run_name": "20260224_142013_sparc_rar_control",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_142013_sparc_rar_control/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R007",
+      "run_name": "20260224_143526_synthetic_sanity",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143526_synthetic_sanity/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R008",
+      "run_name": "20260224_143527_sparc_rar_control",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143527_sparc_rar_control/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R009",
+      "run_name": "20260224_143528_cluster_rar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_143528_cluster_rar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R010",
+      "run_name": "20260224_145514_baseline_sparc_rar",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_baseline_sparc_rar/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R011",
+      "run_name": "20260224_145514_refereeproof",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/figures/fig1_three_panel.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/figures/fig2_validation_stability.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/figures/fig3_negative_controls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/pip_freeze.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/sha256_hashes.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": "BE_RAR",
+        "baseline_best_log_scale": -9.934740124750645,
+        "A1_p_within_0p10": 0.0,
+        "A2_p_within_0p10": 1.0,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": 0.0,
+        "suite_c_max_delta_log_scale": 0.06982542067017583,
+        "suite_d_max_delta_log_scale": 0.0,
+        "suite_f_F1_aLambda_aic": 15994.65019980624,
+        "suite_f_F1_gdagger_aic": 10840.180208741956,
+        "suite_f_F2_aLambda_aic": 10889.775236809575,
+        "suite_f_F2_gdagger_aic": 10839.657704913801,
+        "suite_g_best_log_scale": -8.000004154309972,
+        "suite_g_delta_from_gdagger": 1.9208145996424033
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145514_refereeproof/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": "BE_RAR"
+        }
+      ]
+    },
+    {
+      "id": "R012",
+      "run_name": "20260224_145517_cluster_nonrar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145517_cluster_nonrar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R013",
+      "run_name": "20260224_145527_baseline_sparc_rar",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_baseline_sparc_rar/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R014",
+      "run_name": "20260224_145527_refereeproof",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/figures/fig1_three_panel.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/figures/fig2_validation_stability.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/figures/fig3_negative_controls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/pip_freeze.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/sha256_hashes.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": "BE_RAR",
+        "baseline_best_log_scale": -9.934740124750645,
+        "A1_p_within_0p10": 0.0,
+        "A2_p_within_0p10": 1.0,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": 0.0,
+        "suite_c_max_delta_log_scale": 0.06982542067017583,
+        "suite_d_max_delta_log_scale": 0.0,
+        "suite_f_F1_aLambda_aic": 15994.65019980624,
+        "suite_f_F1_gdagger_aic": 10840.180208741956,
+        "suite_f_F2_aLambda_aic": 10889.775236809575,
+        "suite_f_F2_gdagger_aic": 10839.657704913801,
+        "suite_g_best_log_scale": -8.000004154309972,
+        "suite_g_delta_from_gdagger": 1.9208145996424033
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145527_refereeproof/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": "BE_RAR"
+        }
+      ]
+    },
+    {
+      "id": "R015",
+      "run_name": "20260224_145536_cluster_nonrar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_145536_cluster_nonrar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R016",
+      "run_name": "20260224_151048_baseline_sparc_rar",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_baseline_sparc_rar/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R017",
+      "run_name": "20260224_151048_refereeproof",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/figures/fig1_three_panel.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/figures/fig2_validation_stability.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/figures/fig3_negative_controls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/pip_freeze.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/sha256_hashes.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": "BE_RAR",
+        "baseline_best_log_scale": -9.934740124750645,
+        "A1_p_within_0p10": 0.0,
+        "A2_p_within_0p10": 1.0,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": 0.0,
+        "suite_c_max_delta_log_scale": 0.06982542067017583,
+        "suite_d_max_delta_log_scale": 0.0,
+        "suite_f_F1_aLambda_aic": 15994.65019980624,
+        "suite_f_F1_gdagger_aic": 10840.180208741956,
+        "suite_f_F2_aLambda_aic": 10889.775236809575,
+        "suite_f_F2_gdagger_aic": 10839.657704913801,
+        "suite_g_best_log_scale": -8.000004154309972,
+        "suite_g_delta_from_gdagger": 1.9208145996424033
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151048_refereeproof/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": "BE_RAR"
+        }
+      ]
+    },
+    {
+      "id": "R018",
+      "run_name": "20260224_151058_cluster_nonrar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151058_cluster_nonrar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R019",
+      "run_name": "20260224_151241_baseline_sparc_rar",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_baseline_sparc_rar/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R020",
+      "run_name": "20260224_151241_refereeproof",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/figures/fig1_three_panel.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/figures/fig2_validation_stability.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/figures/fig3_negative_controls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/pip_freeze.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/sha256_hashes.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": "BE_RAR",
+        "baseline_best_log_scale": -9.934740124750645,
+        "A1_p_within_0p10": 0.0,
+        "A2_p_within_0p10": 1.0,
+        "A2b_p_within_0p10": 0.158,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": 0.0,
+        "suite_c_max_delta_log_scale": 0.06982542067017583,
+        "suite_d_max_delta_log_scale": 0.0,
+        "suite_f_F1_aLambda_aic": 15994.65019980624,
+        "suite_f_F1_gdagger_aic": 10840.180208741956,
+        "suite_f_F2_aLambda_aic": 10889.775236809575,
+        "suite_f_F2_gdagger_aic": 10839.657704913801,
+        "suite_g_best_log_scale": -8.000004154309972,
+        "suite_g_delta_from_gdagger": 1.9208145996424033
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151241_refereeproof/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": "BE_RAR"
+        }
+      ]
+    },
+    {
+      "id": "R021",
+      "run_name": "20260224_151250_cluster_nonrar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151250_cluster_nonrar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R022",
+      "run_name": "20260224_151453_baseline_sparc_rar",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_baseline_sparc_rar/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R023",
+      "run_name": "20260224_151453_refereeproof",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/figures/fig1_three_panel.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/figures/fig2_validation_stability.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/figures/fig3_negative_controls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/pip_freeze.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/sha256_hashes.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": "BE_RAR",
+        "baseline_best_log_scale": -9.934740124750645,
+        "A1_p_within_0p10": 0.0,
+        "A2_p_within_0p10": 1.0,
+        "A2b_p_within_0p10": 0.19,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": 0.0,
+        "suite_c_max_delta_log_scale": 0.06982542067017583,
+        "suite_d_max_delta_log_scale": 0.0,
+        "suite_f_F1_aLambda_aic": 15994.65019980624,
+        "suite_f_F1_gdagger_aic": 10840.180208741956,
+        "suite_f_F2_aLambda_aic": 10889.775236809575,
+        "suite_f_F2_gdagger_aic": 10839.657704913801,
+        "suite_g_best_log_scale": -8.000004154309972,
+        "suite_g_delta_from_gdagger": 1.9208145996424033
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151453_refereeproof/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": "BE_RAR"
+        }
+      ]
+    },
+    {
+      "id": "R024",
+      "run_name": "20260224_151457_cluster_nonrar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_151457_cluster_nonrar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R025",
+      "run_name": "20260224_152455_baseline_sparc_rar",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_baseline_sparc_rar/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R026",
+      "run_name": "20260224_152455_refereeproof",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/figures/fig1_three_panel.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/figures/fig2_validation_stability.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/figures/fig3_negative_controls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/pip_freeze.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/sha256_hashes.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": "BE_RAR",
+        "baseline_best_log_scale": -9.934740124750645,
+        "A1_p_within_0p10": 0.0,
+        "A2_p_within_0p10": 1.0,
+        "A2b_p_within_0p10": 0.158,
+        "A2b_p_within_0p05": 0.078,
+        "A3_p_within_0p10": 0.0,
+        "suite_c_max_delta_log_scale": 0.06982542067017583,
+        "suite_d_max_delta_log_scale": 0.0,
+        "suite_f_F1_aLambda_aic": 15994.65019980624,
+        "suite_f_F1_gdagger_aic": 10840.180208741956,
+        "suite_f_F2_aLambda_aic": 10889.775236809575,
+        "suite_f_F2_gdagger_aic": 10839.657704913801,
+        "suite_g_best_log_scale": -8.000004154309972,
+        "suite_g_delta_from_gdagger": 1.9208145996424033
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": "BE_RAR"
+        }
+      ]
+    },
+    {
+      "id": "R027",
+      "run_name": "20260224_152504_cluster_nonrar_pilot",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot",
+      "branch": "D",
+      "run_type": "branchD_gdagger",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/data_overview.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/kernel_comparison.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/nearby_scale_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/scale_scan_aic.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/scale_scan_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/shuffle_null_rms.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/figures/shuffle_null_scales.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/metrics.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/params.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/summary.json"
+      ],
+      "key_metrics": {
+        "baseline_best_kernel": null,
+        "baseline_best_log_scale": null,
+        "A1_p_within_0p10": null,
+        "A2_p_within_0p10": null,
+        "A2b_p_within_0p10": null,
+        "A2b_p_within_0p05": null,
+        "A3_p_within_0p10": null,
+        "suite_c_max_delta_log_scale": null,
+        "suite_d_max_delta_log_scale": null,
+        "suite_f_F1_aLambda_aic": null,
+        "suite_f_F1_gdagger_aic": null,
+        "suite_f_F2_aLambda_aic": null,
+        "suite_f_F2_gdagger_aic": null,
+        "suite_g_best_log_scale": null,
+        "suite_g_delta_from_gdagger": null
+      },
+      "evidence": [
+        {
+          "claim": "Refereeproof best kernel",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152504_cluster_nonrar_pilot/summary.json",
+          "locator": "json:baseline.best_kernel_name",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "R028",
+      "run_name": "20260227_143339",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339",
+      "branch": "C",
+      "run_type": "branchC_density_window_prototype",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/paper3_density_window_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/rho_vs_residual_scatter.png"
+      ],
+      "key_metrics": {
+        "input_file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+        "theilsen_slope": "0.043813",
+        "bootstrap_p": "0.0476",
+        "spearman_p": "0.029597",
+        "pooled_shift_dex": "0.184776",
+        "perm_p": "9.999e-05"
+      },
+      "evidence": [
+        {
+          "claim": "prototype pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143339/paper3_density_window_report.txt",
+          "locator": "text:line=54",
+          "value": "- Top-vs-bottom residual median difference (top-bottom): 0.184776 dex"
+        }
+      ]
+    },
+    {
+      "id": "R029",
+      "run_name": "20260227_143408",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408",
+      "branch": "C",
+      "run_type": "branchC_density_window_prototype",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/paper3_density_window_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/rho_vs_residual_scatter.png"
+      ],
+      "key_metrics": {
+        "input_file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+        "theilsen_slope": "0.043813",
+        "bootstrap_p": "0.0476",
+        "spearman_p": "0.029597",
+        "pooled_shift_dex": "0.184776",
+        "perm_p": "9.999e-05"
+      },
+      "evidence": [
+        {
+          "claim": "prototype pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_143408/paper3_density_window_report.txt",
+          "locator": "text:line=54",
+          "value": "- Top-vs-bottom residual median difference (top-bottom): 0.184776 dex"
+        }
+      ]
+    },
+    {
+      "id": "R030",
+      "run_name": "20260227_162156",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.184776",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.020178 dex; permutation p-value: 0.129887",
+        "theilsen_slope": "0.043813",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density rho_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162156/paper3_density_bridge_report.txt",
+          "locator": "text:line=55",
+          "value": "- pooled-point median shift (top-bottom): 0.184776 dex"
+        }
+      ]
+    },
+    {
+      "id": "R031",
+      "run_name": "20260227_162238",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.184776",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.020178 dex; permutation p-value: 0.129887",
+        "theilsen_slope": "0.043813",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density \u03c1_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/paper3_density_bridge_report.txt",
+          "locator": "text:line=55",
+          "value": "- pooled-point median shift (top-bottom): 0.184776 dex"
+        }
+      ]
+    },
+    {
+      "id": "R032",
+      "run_name": "20260227_174839",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839",
+      "branch": "C",
+      "run_type": "branchC_density_window_prototype",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/paper3_density_window_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/rho_vs_residual_scatter.png"
+      ],
+      "key_metrics": {
+        "input_file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+        "theilsen_slope": "-0.061178",
+        "bootstrap_p": "0.3204",
+        "spearman_p": "0.271173",
+        "pooled_shift_dex": "-0.010387",
+        "perm_p": "0.70223"
+      },
+      "evidence": [
+        {
+          "claim": "prototype pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174839/paper3_density_window_report.txt",
+          "locator": "text:line=54",
+          "value": "- Top-vs-bottom residual median difference (top-bottom): -0.010387 dex"
+        }
+      ]
+    },
+    {
+      "id": "R033",
+      "run_name": "20260227_174849",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849",
+      "branch": "C",
+      "run_type": "branchC_density_window_prototype",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/paper3_density_window_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/rho_vs_residual_scatter.png"
+      ],
+      "key_metrics": {
+        "input_file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+        "theilsen_slope": "-0.020133",
+        "bootstrap_p": "0.7984",
+        "spearman_p": "0.89561",
+        "pooled_shift_dex": "0.156497",
+        "perm_p": "9.999e-05"
+      },
+      "evidence": [
+        {
+          "claim": "prototype pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174849/paper3_density_window_report.txt",
+          "locator": "text:line=54",
+          "value": "- Top-vs-bottom residual median difference (top-bottom): 0.156497 dex"
+        }
+      ]
+    },
+    {
+      "id": "R034",
+      "run_name": "20260227_174900",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900",
+      "branch": "C",
+      "run_type": "branchC_density_window_prototype",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/paper3_density_window_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/rho_vs_residual_scatter.png"
+      ],
+      "key_metrics": {
+        "input_file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+        "theilsen_slope": "0.001740",
+        "bootstrap_p": "0.9748",
+        "spearman_p": "0.980002",
+        "pooled_shift_dex": "0.033429",
+        "perm_p": "0.0746925"
+      },
+      "evidence": [
+        {
+          "claim": "prototype pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_174900/paper3_density_window_report.txt",
+          "locator": "text:line=54",
+          "value": "- Top-vs-bottom residual median difference (top-bottom): 0.033429 dex"
+        }
+      ]
+    },
+    {
+      "id": "R035",
+      "run_name": "20260227_175543",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.156497",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.103712 dex; permutation p-value: 0.428557",
+        "theilsen_slope": "-0.020133",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density \u03c1_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175543/paper3_density_bridge_report.txt",
+          "locator": "text:line=57",
+          "value": "- pooled-point median shift (top-bottom): 0.156497 dex"
+        }
+      ]
+    },
+    {
+      "id": "R036",
+      "run_name": "20260227_175557",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.156497",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.103712 dex; permutation p-value: 0.428557",
+        "theilsen_slope": "-0.020133",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density \u03c1_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_175557/paper3_density_bridge_report.txt",
+          "locator": "text:line=57",
+          "value": "- pooled-point median shift (top-bottom): 0.156497 dex"
+        }
+      ]
+    },
+    {
+      "id": "R037",
+      "run_name": "20260227_181036",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.156497",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.103712 dex; permutation p-value: 0.428557",
+        "theilsen_slope": "-0.020133",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density \u03c1_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181036/paper3_density_bridge_report.txt",
+          "locator": "text:line=67",
+          "value": "- pooled-point median shift (top-bottom): 0.156497 dex"
+        }
+      ]
+    },
+    {
+      "id": "R038",
+      "run_name": "20260227_181106",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.156497",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.103712 dex; permutation p-value: 0.428557",
+        "theilsen_slope": "-0.020133",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density \u03c1_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181106/paper3_density_bridge_report.txt",
+          "locator": "text:line=69",
+          "value": "- pooled-point median shift (top-bottom): 0.156497 dex"
+        }
+      ]
+    },
+    {
+      "id": "R039",
+      "run_name": "20260227_181129",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": null,
+        "ss20_excluded_points": null,
+        "pooled_shift_dex": "0.156497",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "0.103712 dex; permutation p-value: 0.428557",
+        "theilsen_slope": "-0.020133",
+        "interpretations": [
+          "interpretation: \"high-density systems show a systematic residual shift under constant-coupling RAR-BEC\"",
+          "interpretation: \"this provides an empirical handle on the critical density \u03c1_c\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_181129/paper3_density_bridge_report.txt",
+          "locator": "text:line=69",
+          "value": "- pooled-point median shift (top-bottom): 0.156497 dex"
+        }
+      ]
+    },
+    {
+      "id": "R040",
+      "run_name": "20260227_193632",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": "False",
+        "ss20_excluded_points": "40",
+        "pooled_shift_dex": "0.027282",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "-0.005223 dex; permutation p-value: 0.693731",
+        "theilsen_slope": "0.006696",
+        "interpretations": [
+          "interpretation: \"residual shifts are suggestive but not robustly stable across density windows under current cuts\"",
+          "interpretation: \"this run provides candidate targets; constraints on critical density \u03c1_c remain provisional\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193632/paper3_density_bridge_report.txt",
+          "locator": "text:line=88",
+          "value": "- pooled-point median shift (top-bottom): 0.027282 dex"
+        }
+      ]
+    },
+    {
+      "id": "R041",
+      "run_name": "20260227_193650",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": null,
+        "require_csv_sha": null,
+        "include_ss20": "True",
+        "ss20_excluded_points": "0",
+        "pooled_shift_dex": "0.027282",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "-0.005223 dex; permutation p-value: 0.693731",
+        "theilsen_slope": "0.006696",
+        "interpretations": [
+          "interpretation: \"residual shifts are suggestive but not robustly stable across density windows under current cuts\"",
+          "interpretation: \"this run provides candidate targets; constraints on critical density \u03c1_c remain provisional\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_193650/paper3_density_bridge_report.txt",
+          "locator": "text:line=93",
+          "value": "- pooled-point median shift (top-bottom): 0.027282 dex"
+        }
+      ]
+    },
+    {
+      "id": "R042",
+      "run_name": "20260227_194611",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611",
+      "branch": "C",
+      "run_type": "branchC_bridgepack",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/density_vs_residuals.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/high_density_targets.csv",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_bridge_writeup.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/residual_hist_high_vs_low.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/residual_vs_gbar_high_density.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/rho_vs_residual_scatter.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/robustness_summary.csv"
+      ],
+      "key_metrics": {
+        "actual_csv_sha": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "require_csv_sha": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "include_ss20": "False",
+        "ss20_excluded_points": "40",
+        "pooled_shift_dex": "0.027282",
+        "pooled_perm_p": "9.999e-05",
+        "pergal_shift_and_p": "-0.005223 dex; permutation p-value: 0.693731",
+        "theilsen_slope": "0.006696",
+        "interpretations": [
+          "interpretation: \"residual shifts are suggestive but not robustly stable across density windows under current cuts\"",
+          "interpretation: \"this run provides candidate targets; constraints on critical density \u03c1_c remain provisional\""
+        ]
+      },
+      "evidence": [
+        {
+          "claim": "pooled shift",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+          "locator": "text:line=90",
+          "value": "- pooled-point median shift (top-bottom): 0.027282 dex"
+        }
+      ]
+    },
+    {
+      "id": "R043",
+      "run_name": "BRANCHC_C1C2C3_20260228_001114",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114",
+      "branch": "C",
+      "run_type": "branchC_C1C2C3",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/figures/C1_block_nulls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/figures/C2_binwise_shift.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/figures/C3_source_replication.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/metrics_C1C2C3.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/report_C1C2C3.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/summary_C1C2C3.json"
+      ],
+      "key_metrics": {
+        "final_decision": "sampling artifact",
+        "input_csv_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "seed": 271828,
+        "c1_shift_unweighted": 0.02728203631533166,
+        "c1_shift_weighted": 0.050821975424623744,
+        "c1_p_unweighted_block": 0.5584441555844416,
+        "c1_p_weighted_block": 0.0805919408059194,
+        "c2_aggregate_equal": 0.24133561219154442,
+        "c2_aggregate_matched": 0.23049695215247568,
+        "c2_n_bins_valid": 4
+      },
+      "evidence": [
+        {
+          "claim": "Branch C final decision",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001114/summary_C1C2C3.json",
+          "locator": "json:final_decision",
+          "value": "sampling artifact"
+        }
+      ]
+    },
+    {
+      "id": "R044",
+      "run_name": "BRANCHC_C1C2C3_20260228_001605",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605",
+      "branch": "C",
+      "run_type": "branchC_C1C2C3",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/figures/C1_block_nulls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/figures/C2_binwise_shift.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/figures/C3_source_replication.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/metrics_C1C2C3.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/report_C1C2C3.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/run_stamp_branchC.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/summary_C1C2C3.json"
+      ],
+      "key_metrics": {
+        "final_decision": "sampling artifact",
+        "input_csv_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "seed": 271828,
+        "c1_shift_unweighted": 0.02728203631533166,
+        "c1_shift_weighted": 0.050821975424623744,
+        "c1_p_unweighted_block": 0.527363184079602,
+        "c1_p_weighted_block": 0.0845771144278607,
+        "c2_aggregate_equal": 0.28233850983128406,
+        "c2_aggregate_matched": 0.22429160504767454,
+        "c2_n_bins_valid": 3
+      },
+      "evidence": [
+        {
+          "claim": "Branch C final decision",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_001605/summary_C1C2C3.json",
+          "locator": "json:final_decision",
+          "value": "sampling artifact"
+        }
+      ]
+    },
+    {
+      "id": "R045",
+      "run_name": "BRANCHC_C1C2C3_20260228_002303",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303",
+      "branch": "C",
+      "run_type": "branchC_C1C2C3",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/figures/C1_block_nulls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/figures/C2_binwise_shift.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/figures/C3_source_replication.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/metrics_C1C2C3.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/report_C1C2C3.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/run_stamp_branchC.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/summary_C1C2C3.json"
+      ],
+      "key_metrics": {
+        "final_decision": "sampling artifact",
+        "input_csv_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "seed": 271828,
+        "c1_shift_unweighted": 0.02728203631533166,
+        "c1_shift_weighted": 0.050821975424623744,
+        "c1_p_unweighted_block": 0.527363184079602,
+        "c1_p_weighted_block": 0.0845771144278607,
+        "c2_aggregate_equal": 0.28233850983128406,
+        "c2_aggregate_matched": 0.22429160504767454,
+        "c2_n_bins_valid": 3
+      },
+      "evidence": [
+        {
+          "claim": "Branch C final decision",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_002303/summary_C1C2C3.json",
+          "locator": "json:final_decision",
+          "value": "sampling artifact"
+        }
+      ]
+    },
+    {
+      "id": "R046",
+      "run_name": "BRANCHC_C1C2C3_20260228_004320",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320",
+      "branch": "C",
+      "run_type": "branchC_C1C2C3",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/figures/C1_block_nulls.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/figures/C2_binwise_shift.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/figures/C3_source_replication.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/logs.txt",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/metrics_C1C2C3.parquet",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/report_C1C2C3.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/summary_C1C2C3.json"
+      ],
+      "key_metrics": {
+        "final_decision": "sampling artifact",
+        "input_csv_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "seed": 42,
+        "c1_shift_unweighted": 0.02728203631533166,
+        "c1_shift_weighted": 0.050821975424623744,
+        "c1_p_unweighted_block": 0.5581441855814419,
+        "c1_p_weighted_block": 0.0852914708529147,
+        "c2_aggregate_equal": 0.24133561219154442,
+        "c2_aggregate_matched": 0.23049695215247568,
+        "c2_n_bins_valid": 4
+      },
+      "evidence": [
+        {
+          "claim": "Branch C final decision",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/summary_C1C2C3.json",
+          "locator": "json:final_decision",
+          "value": "sampling artifact"
+        }
+      ]
+    },
+    {
+      "id": "R047",
+      "run_name": "20260228_001605",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605",
+      "branch": "D",
+      "run_type": "branchD_entrypoint_stamp",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605/dataset_lineage.md",
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605/fig_phase_null.png",
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605/run_stamp_branchD.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605/summary_dataset_lineage.json",
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605/summary_phase_peak_null.json"
+      ],
+      "key_metrics": {
+        "status": "interrupted",
+        "dataset_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "smoke_mode": true,
+        "output_dir": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605"
+      },
+      "evidence": [
+        {
+          "claim": "Branch D wrapper stamp",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_001605/run_stamp_branchD.json",
+          "locator": "json:status|dataset_sha256",
+          "value": {
+            "status": "interrupted",
+            "dataset_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c"
+          }
+        }
+      ]
+    },
+    {
+      "id": "R048",
+      "run_name": "20260228_002202",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002202",
+      "branch": "D",
+      "run_type": "branchD_entrypoint_stamp",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002202/run_stamp_branchD.json"
+      ],
+      "key_metrics": {
+        "status": "dry_run_ok",
+        "dataset_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "smoke_mode": true,
+        "output_dir": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002202"
+      },
+      "evidence": [
+        {
+          "claim": "Branch D wrapper stamp",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002202/run_stamp_branchD.json",
+          "locator": "json:status|dataset_sha256",
+          "value": {
+            "status": "dry_run_ok",
+            "dataset_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c"
+          }
+        }
+      ]
+    },
+    {
+      "id": "R049",
+      "run_name": "20260228_002303",
+      "run_path": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002303",
+      "branch": "D",
+      "run_type": "branchD_entrypoint_stamp",
+      "outputs": [
+        "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002303/run_stamp_branchD.json"
+      ],
+      "key_metrics": {
+        "status": "dry_run_ok",
+        "dataset_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+        "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+        "smoke_mode": true,
+        "output_dir": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002303"
+      },
+      "evidence": [
+        {
+          "claim": "Branch D wrapper stamp",
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/branchD_rar_control/20260228_002303/run_stamp_branchD.json",
+          "locator": "json:status|dataset_sha256",
+          "value": {
+            "status": "dry_run_ok",
+            "dataset_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c"
+          }
+        }
+      ]
+    }
+  ],
+  "corrections_timeline": [
+    {
+      "id": "CORR-01",
+      "title": "AASTeX acknowledgments syntax compliance",
+      "issue": "Deprecated AASTeX acknowledgment command can break manuscript checks.",
+      "change": "Manuscript currently uses environment form `begin/end{acknowledgments}`.",
+      "scientific_effect": "Formatting compliance risk reduced; no direct Branch C/D metric impact.",
+      "status": "partially_evidenced_current_state_only",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/paper/main.tex",
+          "locator": "text:line=277",
+          "value": "\\begin{acknowledgments}"
+        }
+      ]
+    },
+    {
+      "id": "CORR-02",
+      "title": "CP bound terminology and explicit storage",
+      "issue": "Zero-hit null experiments need explicit binomial upper bounds.",
+      "change": "Refereeproof suite computes Clopper-Pearson upper bounds and stores `p_upper_95*` fields.",
+      "scientific_effect": "Null proximity claims are bounded conservatively when hits=0.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_gdagger_hunt_refereeproof.py",
+          "locator": "text:line=213",
+          "value": "def clopper_pearson_upper(k: int, n: int, alpha: float = 0.05) -> float:"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A1_global.p_upper_95_0p10",
+          "value": 0.005973551516349596
+        }
+      ]
+    },
+    {
+      "id": "CORR-03",
+      "title": "Null vs control relabeling",
+      "issue": "Within-bin shuffle can be misinterpreted as a destructive null.",
+      "change": "Suite A2 is explicitly labeled `structure_preserving_control` and annotated as not a null test.",
+      "scientific_effect": "Interpretation avoids false evidence inflation from a control expected to give p\u22481.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2_within_bin.type",
+          "value": "structure_preserving_control"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2_within_bin.note",
+          "value": "Within-bin shuffle preserves the conditional distribution p(y|x) by construction. It is NOT a null test; p\u22481 is the expected outcome. This control confirms that the scale preference resides in the global x-y correlation, not in bin-local structure."
+        }
+      ]
+    },
+    {
+      "id": "CORR-04",
+      "title": "Added destructive bin-aware null (A2b)",
+      "issue": "Global and galaxy-shift nulls alone do not isolate cross-bin composition effects.",
+      "change": "Suite A2b block-permute-bin destructive null added with dedicated output fields.",
+      "scientific_effect": "Shows intermediate proximity rates (`p_within_0p10_dex=0.158`), refining null interpretation.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2b_block_permute_bins.type",
+          "value": "destructive_bin_aware_null"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2b_block_permute_bins.p_within_0p10_dex",
+          "value": 0.158
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2b_block_permute_bins.p_within_0p05_dex",
+          "value": 0.078
+        }
+      ]
+    },
+    {
+      "id": "CORR-05",
+      "title": "Dual-window proximity (\u00b10.05/\u00b10.10 dex)",
+      "issue": "Single-window proximity can hide scale-local sensitivity.",
+      "change": "Dual-window proximity function emits both \u00b10.05 and \u00b10.10 dex hit fractions and p-values.",
+      "scientific_effect": "Improves discrimination between tight and broad scale concentration under null.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_gdagger_hunt_refereeproof.py",
+          "locator": "text:line=224",
+          "value": "def compute_dual_window_proximity("
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2b_block_permute_bins.p_within_0p05_dex",
+          "value": 0.078
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+          "locator": "json:suite_a.A2b_block_permute_bins.p_within_0p10_dex",
+          "value": 0.158
+        }
+      ]
+    },
+    {
+      "id": "CORR-06",
+      "title": "SPARC path resolver + dataset rebuild hash change",
+      "issue": "Legacy-path drift could drop SPARC coverage and shift pooled residual statistics.",
+      "change": "Unified pipeline adds path resolution/guardrails and emits stamped metadata; dataset hash changed from backup `430a75f2...` to restored `11742ae3...`.",
+      "scientific_effect": "Branch C headline changed materially: pooled shift from ~0.184776 dex (older run) to ~0.027282 dex (restored hash-locked run).",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/09_unified_rar_pipeline.py",
+          "locator": "text:line=769",
+          "value": "def resolve_sparc_paths():"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/09_unified_rar_pipeline.py",
+          "locator": "text:line=3997",
+          "value": "\"SPARC guardrail triggered: insufficient SPARC coverage. \""
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified__430a75f2__20260227.csv",
+          "locator": "sha256",
+          "value": "430a75f28edcf322c0dc88f768e89003d9970dc1b70f548ff273fa3caea4283d"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+          "locator": "sha256",
+          "value": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_162238/paper3_density_bridge_report.txt",
+          "locator": "text:- pooled-point median shift",
+          "value": "0.184776"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+          "locator": "text:- pooled-point median shift",
+          "value": "0.027282"
+        }
+      ]
+    },
+    {
+      "id": "CORR-07",
+      "title": "galaxy_key canonicalization and default SS20 exclusion",
+      "issue": "Mixed galaxy naming and SS20 single-point stubs can distort pooled-point analyses.",
+      "change": "Bridge pack canonicalizes `galaxy_key` and excludes `SS20_*` by default unless opt-in.",
+      "scientific_effect": "Improves grouping integrity; report explicitly shows excluded SS20 points.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/paper3/paper3_bridge_pack.py",
+          "locator": "text:line=241",
+          "value": "galaxy_key = raw_df[mapping[\"galaxy_key\"]].astype(str).map(canonicalize_galaxy_name)"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/paper3/paper3_bridge_pack.py",
+          "locator": "text:line=1004",
+          "value": "if not args.include_ss20:"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+          "locator": "text:include_ss20",
+          "value": "False"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+          "locator": "text:ss20_excluded_points",
+          "value": "40"
+        }
+      ]
+    },
+    {
+      "id": "CORR-08",
+      "title": "Meta stamping + enforce-hash execution guardrails",
+      "issue": "Unstamped runs allow silent dataset drift.",
+      "change": "Pipeline writes `rar_points_unified.meta.json` with output SHA/git head; bridge and Branch C scripts enforce `require_csv_sha` checks.",
+      "scientific_effect": "Run provenance is auditable and hash-locked.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.meta.json",
+          "locator": "json:output_csv_sha256",
+          "value": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.meta.json",
+          "locator": "json:git_head",
+          "value": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/paper3/paper3_bridge_pack.py",
+          "locator": "text:line=976",
+          "value": "if args.require_csv_sha is not None:"
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+          "locator": "text:require_csv_sha",
+          "value": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c"
+        }
+      ]
+    },
+    {
+      "id": "CORR-09",
+      "title": "Regression tests for SPARC presence floors",
+      "issue": "SPARC depletion can silently pass unless explicitly tested.",
+      "change": "Regression test enforces minimum SPARC points and galaxy-key counts in loader and unified CSV.",
+      "scientific_effect": "Protects Branch C/D against recurrence of SPARC-missing drift.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_unified_pipeline_regression.py",
+          "locator": "text:line=68",
+          "value": "assert sparc_points >= 2500, ("
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/tests/test_unified_pipeline_regression.py",
+          "locator": "text:line=73",
+          "value": "assert sparc_galaxies >= 120, ("
+        }
+      ]
+    },
+    {
+      "id": "CORR-10",
+      "title": "Branch entrypoints + provenance scan guardrails",
+      "issue": "Cross-repo leakage and wrong-CWD execution can invalidate provenance.",
+      "change": "Dedicated Branch C/D entrypoints enforce repo-root checks and run-stamp sidecars; provenance scanner reports BH references.",
+      "scientific_effect": "Improves reproducibility and auditability of execution context.",
+      "status": "evidenced",
+      "evidence": [
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/run_branchC_paper3_experiments.py",
+          "locator": "text:line=45",
+          "value": "\"Wrong repo execution context. \""
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/run_branchD_rar_control.py",
+          "locator": "text:line=45",
+          "value": "\"Wrong repo execution context. \""
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/tools/repo_provenance_scan.py",
+          "locator": "docstring",
+          "value": "Scan bec-dark-matter for potential provenance leakage from bh-singularity."
+        },
+        {
+          "file": "/Users/russelllicht/bec-dark-matter/analysis/results/provenance_scan_20260228_001541.md",
+          "locator": "text:Vendoring recommendation",
+          "value": "- Vendoring recommendation: **no vendoring required** (no identical-hash matches found)."
+        }
+      ]
+    }
+  ],
+  "highlighted": {
+    "branchD_key_run": "/Users/russelllicht/bec-dark-matter/outputs/gdagger_hunt/20260224_152455_refereeproof/summary.json",
+    "branchC_baseline_run": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/20260227_194611/paper3_density_bridge_report.txt",
+    "branchC_C1C2C3_latest": "/Users/russelllicht/bec-dark-matter/outputs/paper3_high_density/BRANCHC_C1C2C3_20260228_004320/summary_C1C2C3.json"
+  },
+  "warnings": []
+}

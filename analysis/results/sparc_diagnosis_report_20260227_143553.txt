@@ -1,0 +1,30 @@
+SPARC DIAGNOSIS REPORT
+timestamp_utc=2026-02-27T19:35:53.174926Z
+allow_missing_sparc=False
+sparc_points=2784
+sparc_unique_galaxy_keys=131
+datasets_has_sparc=False (SPARC seeded separately)
+parsed_mass_model_galaxies=175
+parsed_mrt_properties=175
+sparc_galaxies_after_cuts=131
+sparc_points_after_cuts=2784
+table2_missing_reason=None
+resolved_paths:
+  table2.chosen=/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_table2_rotmods.dat
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/SPARC_table2_rotmods.dat exists=False
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_table2_rotmods.dat exists=True
+  mrt.chosen=/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_Lelli2016c.mrt
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/SPARC_Lelli2016c.mrt exists=False
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_Lelli2016c.mrt exists=True
+  cf4_cache.chosen=/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4/cf4_distance_cache.json
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4_distance_cache.json exists=False
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4/cf4_distance_cache.json exists=True
+  env_catalog.chosen=/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/environment/sparc_environment_catalog.json
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc_environment_catalog.json exists=False
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/environment/sparc_environment_catalog.json exists=True
+  coordinates.chosen=/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/sparc_coordinates.json
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc_coordinates.json exists=False
+    - /Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/sparc_coordinates.json exists=True
+rar_points_unified_csv=/Users/russelllicht/bec-dark-matter/analysis/pipeline/results/rar_points_unified.csv
+rar_points_unified_sha256=11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c
+rar_points_unified_lines=12622

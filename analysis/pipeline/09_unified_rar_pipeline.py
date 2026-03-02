@@ -34,6 +34,9 @@ Russell Licht -- Primordial Fluid DM Project
 Feb 2026
 """
 
+import argparse
+import datetime as dt
+import hashlib
 import numpy as np
 from scipy import stats, optimize
 from scipy.optimize import curve_fit
@@ -41,6 +44,7 @@ import csv
 import json
 import os
 import re
+import subprocess
 import sys
 import warnings
 warnings.filterwarnings('ignore')
@@ -52,6 +56,26 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, 'results')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+UTILS_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..', 'utils'))
+if UTILS_DIR not in sys.path:
+    sys.path.insert(0, UTILS_DIR)
+try:
+    from chi2_calibration import chi2_red_given_sigma_int, solve_sigma_int_for_chi2_1
+    CHI2_CAL_IMPORT_ERROR = None
+except Exception as _chi2_cal_import_err:
+    chi2_red_given_sigma_int = None
+    solve_sigma_int_for_chi2_1 = None
+    CHI2_CAL_IMPORT_ERROR = str(_chi2_cal_import_err)
+try:
+    from galaxy_naming import canonicalize_galaxy_name
+except Exception:
+    def canonicalize_galaxy_name(name):
+        s = str(name).strip().upper()
+        s = re.sub(r'\s+', ' ', s)
+        if s.startswith('WALLABY'):
+            return s
+        return s.replace(' ', '')
 
 # Physical constants
 g_dagger = 1.20e-10       # m/s^2 (McGaugh+2016 RAR acceleration scale)
@@ -625,12 +649,7 @@ def normalize_galaxy_name(name):
     Examples: 'NGC 300' -> 'NGC300', 'DDO 154' -> 'DDO154',
               'UGC 4325' -> 'UGC4325'
     """
-    n = name.strip().upper()
-    # Remove all spaces
-    n = re.sub(r'\s+', '', n)
-    # Normalize some common patterns
-    n = re.sub(r'^LSBC', 'LSBC', n)
-    return n
+    return canonicalize_galaxy_name(name)
 
 
 def build_sparc_name_set(sparc_names):
@@ -724,6 +743,53 @@ def fit_ml_ratio(gdata, D_Mpc, props_entry):
 # ============================================================
 # DATASET 1: SPARC (175 galaxies, full mass models)
 # ============================================================
+def sha256_file(path):
+    """Streaming SHA256 for reproducibility metadata."""
+    h = hashlib.sha256()
+    with open(path, 'rb') as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def git_head_sha():
+    """Best-effort git HEAD hash (or None outside a git checkout)."""
+    try:
+        out = subprocess.check_output(
+            ['git', 'rev-parse', 'HEAD'],
+            cwd=os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..')),
+            stderr=subprocess.DEVNULL,
+            text=True,
+        ).strip()
+        return out or None
+    except Exception:
+        return None
+
+
+def resolve_sparc_paths():
+    """
+    Resolve SPARC inputs across legacy and reorganized data layouts.
+
+    Returns a dict with selected path + candidates/existence for diagnostics.
+    """
+    def _pick(candidates):
+        expanded = [os.path.join(DATA_DIR, p) for p in candidates]
+        chosen = next((p for p in expanded if os.path.exists(p)), None)
+        return {
+            'chosen': chosen,
+            'candidates': expanded,
+            'exists': {p: os.path.exists(p) for p in expanded},
+        }
+
+    return {
+        'table2': _pick(['SPARC_table2_rotmods.dat', os.path.join('sparc', 'SPARC_table2_rotmods.dat')]),
+        'mrt': _pick(['SPARC_Lelli2016c.mrt', os.path.join('sparc', 'SPARC_Lelli2016c.mrt')]),
+        'cf4_cache': _pick(['cf4_distance_cache.json', os.path.join('cf4', 'cf4_distance_cache.json')]),
+        'env_catalog': _pick(['sparc_environment_catalog.json', os.path.join('environment', 'sparc_environment_catalog.json')]),
+        'coordinates': _pick(['sparc_coordinates.json', os.path.join('sparc', 'sparc_coordinates.json')]),
+    }
+
+
 def load_sparc_data():
     """
     Load SPARC galaxies from the fixed-width table2 (mass models)
@@ -733,11 +799,22 @@ def load_sparc_data():
     """
     print("\n  [1/10] Loading SPARC (175 galaxies)...")
 
+    sparc_diag = {
+        'paths': resolve_sparc_paths(),
+        'table2_missing_reason': None,
+        'parsed_mass_model_galaxies': 0,
+        'parsed_mrt_properties': 0,
+        'sparc_galaxies_after_cuts': 0,
+        'sparc_points_after_cuts': 0,
+    }
+
     # --- Parse Table 2: mass models (fixed-width) ---
-    table2_path = os.path.join(DATA_DIR, 'SPARC_table2_rotmods.dat')
-    if not os.path.exists(table2_path):
-        print("    WARNING: SPARC_table2_rotmods.dat not found")
-        return [], []
+    table2_path = sparc_diag['paths']['table2']['chosen']
+    print(f"    [DEBUG] SPARC table2 path: {table2_path}")
+    if not table2_path:
+        print("    WARNING: SPARC_table2_rotmods.dat not found in any known location")
+        sparc_diag['table2_missing_reason'] = 'table2_not_found'
+        return [], [], sparc_diag
 
     galaxies = {}
     with open(table2_path, 'r') as f:
@@ -783,12 +860,13 @@ def load_sparc_data():
         for key in ['R', 'Vobs', 'eVobs', 'Vgas', 'Vdisk', 'Vbul', 'SBdisk', 'SBbul']:
             galaxies[name][key] = np.array(galaxies[name][key])
 
+    sparc_diag['parsed_mass_model_galaxies'] = int(len(galaxies))
     print(f"    Parsed mass models for {len(galaxies)} galaxies")
 
     # --- Parse MRT: galaxy properties ---
-    mrt_path = os.path.join(DATA_DIR, 'SPARC_Lelli2016c.mrt')
+    mrt_path = sparc_diag['paths']['mrt']['chosen']
     props = {}
-    if os.path.exists(mrt_path):
+    if mrt_path and os.path.exists(mrt_path):
         with open(mrt_path, 'r') as f:
             lines = f.readlines()
 
@@ -832,28 +910,29 @@ def load_sparc_data():
             except (ValueError, IndexError):
                 continue
 
+        sparc_diag['parsed_mrt_properties'] = int(len(props))
         print(f"    Parsed properties for {len(props)} galaxies")
 
     # --- Load CF4 distances if available ---
-    cf4_cache_path = os.path.join(DATA_DIR, 'cf4_distance_cache.json')
+    cf4_cache_path = sparc_diag['paths']['cf4_cache']['chosen']
     cf4_distances = {}
-    if os.path.exists(cf4_cache_path):
+    if cf4_cache_path and os.path.exists(cf4_cache_path):
         with open(cf4_cache_path, 'r') as f:
             cf4_distances = json.load(f)
         print(f"    Loaded {len(cf4_distances)} CF4 distances from cache")
 
     # --- Load environment catalog ---
     env_catalog = {}
-    env_path = os.path.join(DATA_DIR, 'sparc_environment_catalog.json')
-    if os.path.exists(env_path):
+    env_path = sparc_diag['paths']['env_catalog']['chosen']
+    if env_path and os.path.exists(env_path):
         with open(env_path, 'r') as f:
             env_catalog = json.load(f)
         print(f"    Loaded environment catalog for {len(env_catalog)} galaxies")
 
     # --- Load SPARC coordinates ---
-    coord_path = os.path.join(DATA_DIR, 'sparc_coordinates.json')
+    coord_path = sparc_diag['paths']['coordinates']['chosen']
     coordinates = {}
-    if os.path.exists(coord_path):
+    if coord_path and os.path.exists(coord_path):
         with open(coord_path, 'r') as f:
             coordinates = json.load(f)
 
@@ -940,6 +1019,7 @@ def load_sparc_data():
         for i in range(len(log_gbar)):
             sparc_points.append({
                 'galaxy': name,
+                'galaxy_key': canonicalize_galaxy_name(name),
                 'source': 'SPARC',
                 'log_gbar': float(log_gbar[i]),
                 'log_gobs': float(log_gobs[i]),
@@ -953,6 +1033,7 @@ def load_sparc_data():
         # Per-galaxy summary
         sparc_galaxies.append({
             'name': name,
+            'galaxy_key': canonicalize_galaxy_name(name),
             'source': 'SPARC',
             'n_points': int(np.sum(valid)),
             'D_Mpc': float(D_use),
@@ -967,8 +1048,10 @@ def load_sparc_data():
             'dec': coordinates.get(name, {}).get('dec', np.nan),
         })
 
+    sparc_diag['sparc_galaxies_after_cuts'] = int(len(sparc_galaxies))
+    sparc_diag['sparc_points_after_cuts'] = int(len(sparc_points))
     print(f"    SPARC: {len(sparc_galaxies)} galaxies, {len(sparc_points)} RAR points")
-    return sparc_points, sparc_names
+    return sparc_points, sparc_names, sparc_diag
 
 
 # ============================================================
@@ -3876,7 +3959,11 @@ def load_wallaby_dr2():
 # ============================================================
 # MAIN PIPELINE
 # ============================================================
-def run_unified_pipeline():
+def run_unified_pipeline(
+    chi2_shared_sigma_int=False,
+    chi2_sigma_ref_model='bec',
+    allow_missing_sparc=False,
+):
     """Run the unified RAR environmental scatter pipeline."""
 
     print("=" * 80)
@@ -3891,7 +3978,27 @@ def run_unified_pipeline():
     print("STEP 1: LOADING ALL DATASETS")
     print("=" * 80)
 
-    sparc_points, sparc_names = load_sparc_data()
+    sparc_points, sparc_names, sparc_diag = load_sparc_data()
+
+    # Root-cause diagnostics for SPARC drift: print resolved paths and existence.
+    print("    [DEBUG] SPARC path resolution:")
+    for key, info in sparc_diag.get('paths', {}).items():
+        chosen = info.get('chosen')
+        print(f"      {key}: chosen={chosen}")
+        for cand, exists in info.get('exists', {}).items():
+            print(f"        - {cand}: exists={exists}")
+    print(f"    [DEBUG] len(sparc_points)={len(sparc_points)} len(sparc_names)={len(sparc_names)}")
+
+    sparc_points_floor = 2000
+    sparc_galaxies_floor = 100
+    sparc_unique_keys = len({p.get('galaxy_key', canonicalize_galaxy_name(p.get('galaxy', ''))) for p in sparc_points})
+    if (len(sparc_points) < sparc_points_floor or sparc_unique_keys < sparc_galaxies_floor) and not allow_missing_sparc:
+        raise RuntimeError(
+            "SPARC guardrail triggered: insufficient SPARC coverage. "
+            f"points={len(sparc_points)} (floor={sparc_points_floor}), "
+            f"galaxies={sparc_unique_keys} (floor={sparc_galaxies_floor}). "
+            "Use --allow_missing_sparc to bypass explicitly."
+        )
     deblok_points, deblok_names = load_deblok2002()
     wallaby_points, wallaby_names = load_wallaby()
     santos_points, santos_names = load_santos_santos()
@@ -3908,6 +4015,15 @@ def run_unified_pipeline():
     verheijen_points, verheijen_names = load_verheijen2001_uma()
     manga_points, manga_names = load_manga_ristea2023()
     wallaby_dr2_points, wallaby_dr2_names = load_wallaby_dr2()
+
+    # Ensure every point carries a canonical galaxy key before overlap checks.
+    for _pts in (
+        sparc_points, deblok_points, wallaby_points, santos_points, lt_points, lvhis_points,
+        yu_points, swaters_points, ghasp_points, noord_points, vogt_points, catinella_points,
+        virgorc_points, phangs_points, verheijen_points, manga_points, wallaby_dr2_points
+    ):
+        for _p in _pts:
+            _p['galaxy_key'] = _p.get('galaxy_key', canonicalize_galaxy_name(_p.get('galaxy', '')))
 
     # ============================================================
     # STEP 2: Remove SPARC overlaps from other datasets
@@ -3937,6 +4053,11 @@ def run_unified_pipeline():
         'MaNGA':       (manga_points, manga_names),
         'WALLABY_DR2': (wallaby_dr2_points, wallaby_dr2_names),
     }
+    print(
+        f"    [DEBUG] datasets has SPARC={'SPARC' in datasets}; "
+        f"SPARC is seeded separately with len(sparc_points)={len(sparc_points)}",
+        flush=True,
+    )
 
     # Check and remove overlaps
     for ds_name, (pts, nms) in datasets.items():
@@ -4009,54 +4130,66 @@ def run_unified_pipeline():
         pts, _ = datasets.get(ds_name, ([], []))
         all_points.extend(pts)
 
-    # Count by source
-    source_counts = {}
-    source_dense = {}
-    source_field = {}
+    # Count by source and canonical galaxy key (raw + grouped rollups).
+    source_counts_grouped = {}
+    source_counts_raw = {}
+    source_dense_grouped = {}
+    source_field_grouped = {}
+    source_dense_raw = {}
+    source_field_raw = {}
     galaxy_sources = {}
 
     for p in all_points:
-        src = p['source']
-        if src.startswith('SS20_'):
-            src_key = 'SS2020'
-        else:
-            src_key = src
-        source_counts[src_key] = source_counts.get(src_key, 0) + 1
+        p['galaxy_key'] = p.get('galaxy_key', canonicalize_galaxy_name(p.get('galaxy', '')))
+        src_raw = p['source']
+        src_grouped = 'SS2020' if src_raw.startswith('SS20_') else src_raw
 
-        gname = p['galaxy']
-        if gname not in galaxy_sources:
-            galaxy_sources[gname] = src_key
+        source_counts_raw[src_raw] = source_counts_raw.get(src_raw, 0) + 1
+        source_counts_grouped[src_grouped] = source_counts_grouped.get(src_grouped, 0) + 1
+
+        gkey = p['galaxy_key']
+        if gkey not in galaxy_sources:
+            galaxy_sources[gkey] = src_grouped
 
         if p['env_dense'] == 'dense':
-            source_dense[src_key] = source_dense.get(src_key, 0) + 1
+            source_dense_raw[src_raw] = source_dense_raw.get(src_raw, 0) + 1
+            source_dense_grouped[src_grouped] = source_dense_grouped.get(src_grouped, 0) + 1
         else:
-            source_field[src_key] = source_field.get(src_key, 0) + 1
+            source_field_raw[src_raw] = source_field_raw.get(src_raw, 0) + 1
+            source_field_grouped[src_grouped] = source_field_grouped.get(src_grouped, 0) + 1
 
     n_galaxies = len(galaxy_sources)
     n_points = len(all_points)
 
     print(f"\n  Total unique galaxies: {n_galaxies}")
     print(f"  Total RAR points: {n_points}")
-    print(f"\n  {'Dataset':<20} {'Points':>8} {'Dense':>8} {'Field':>8}")
-    print(f"  {'-'*50}")
+    print(f"\n  {'Dataset (grouped)':<20} {'Points':>8} {'Dense':>8} {'Field':>8}")
+    print(f"  {'-'*62}")
     for src in ['SPARC', 'deBlok2002', 'WALLABY', 'SS2020',
                 'LITTLETHINGS', 'LVHIS', 'Yu2020', 'Swaters2025',
                 'GHASP', 'Noordermeer2005', 'Vogt2004', 'Catinella2005',
                 'VirgoRC', 'PHANGS', 'Verheijen2001', 'MaNGA', 'WALLABY_DR2']:
-        nd = source_dense.get(src, 0)
-        nf = source_field.get(src, 0)
-        nt = source_counts.get(src, 0)
+        nd = source_dense_grouped.get(src, 0)
+        nf = source_field_grouped.get(src, 0)
+        nt = source_counts_grouped.get(src, 0)
         if nt > 0:
             print(f"  {src:<20} {nt:>8} {nd:>8} {nf:>8}")
     print(f"  {'TOTAL':<20} {n_points:>8} "
-          f"{sum(source_dense.values()):>8} {sum(source_field.values()):>8}")
+          f"{sum(source_dense_grouped.values()):>8} {sum(source_field_grouped.values()):>8}")
+    print(f"\n  {'Dataset (raw)':<20} {'Points':>8} {'Dense':>8} {'Field':>8}")
+    print(f"  {'-'*62}")
+    for src in sorted(source_counts_raw):
+        nd = source_dense_raw.get(src, 0)
+        nf = source_field_raw.get(src, 0)
+        nt = source_counts_raw.get(src, 0)
+        print(f"  {src:<20} {nt:>8} {nd:>8} {nf:>8}")
 
     # Count galaxies by environment
     gal_envs = {}
     for p in all_points:
-        gname = p['galaxy']
-        if gname not in gal_envs:
-            gal_envs[gname] = p['env_dense']
+        gkey = p.get('galaxy_key', canonicalize_galaxy_name(p.get('galaxy', '')))
+        if gkey not in gal_envs:
+            gal_envs[gkey] = p['env_dense']
     n_dense_gal = sum(1 for v in gal_envs.values() if v == 'dense')
     n_field_gal = sum(1 for v in gal_envs.values() if v == 'field')
     print(f"\n  Galaxy counts: {n_dense_gal} dense, {n_field_gal} field")
@@ -4363,18 +4496,19 @@ def run_unified_pipeline():
     # ============================================================
     galaxy_summary = {}
     for p in all_points:
-        gname = p['galaxy']
-        if gname not in galaxy_summary:
-            galaxy_summary[gname] = {
-                'name': gname,
+        gkey = p.get('galaxy_key', canonicalize_galaxy_name(p.get('galaxy', '')))
+        if gkey not in galaxy_summary:
+            galaxy_summary[gkey] = {
+                'name': p.get('galaxy', gkey),
+                'galaxy_key': gkey,
                 'source': p['source'],
                 'env_dense': p['env_dense'],
                 'logMh': p['logMh'],
                 'log_res_list': [],
                 'log_gbar_list': [],
             }
-        galaxy_summary[gname]['log_res_list'].append(p['log_res'])
-        galaxy_summary[gname]['log_gbar_list'].append(p['log_gbar'])
+        galaxy_summary[gkey]['log_res_list'].append(p['log_res'])
+        galaxy_summary[gkey]['log_gbar_list'].append(p['log_gbar'])
 
     # ============================================================
     # STEP 5c: REFINED BEC PREDICTION TESTS
@@ -4963,6 +5097,42 @@ def run_unified_pipeline():
     bin_gbar_centers = np.array(bin_gbar_centers)
     bin_n_pairs = np.array(bin_n_pairs)
 
+    # χ² intrinsic-scatter calibration state for Test 7 (ΔZσ residual space)
+    # Space inference: residuals here are ΔZσ in standardized units, not dex.
+    reduced_chi2_bec_z_uncalibrated = np.nan
+    reduced_chi2_linear_z_uncalibrated = np.nan
+    reduced_chi2_const_z_uncalibrated = np.nan
+    reduced_chi2_bec_z_calibrated = np.nan
+    reduced_chi2_linear_z_calibrated = np.nan
+    reduced_chi2_const_z_calibrated = np.nan
+    sigma_int_bec_z = np.nan
+    sigma_int_linear_z = np.nan
+    sigma_int_const_z = np.nan
+    chi2_cal_method_bec = None
+    chi2_cal_method_linear = None
+    chi2_cal_method_const = None
+    chi2_cal_n_used_bec = None
+    chi2_cal_n_used_linear = None
+    chi2_cal_n_used_const = None
+    chi2_cal_bracket_bec = None
+    chi2_cal_bracket_linear = None
+    chi2_cal_bracket_const = None
+    chi2_cal_reason_bec = None
+    chi2_cal_reason_linear = None
+    chi2_cal_reason_const = None
+    chi2_cal_dof_used_bec = None
+    chi2_cal_dof_used_linear = None
+    chi2_cal_dof_used_const = None
+    chi2_cal_dof_assumption = None
+    sigma_int_shared_z = np.nan
+    reduced_chi2_bec_z_shared = np.nan
+    reduced_chi2_linear_z_shared = np.nan
+    reduced_chi2_const_z_shared = np.nan
+    chi2_shared_ref_model = str(chi2_sigma_ref_model).lower()
+    chi2_shared_method = None
+    chi2_shared_n_used_ref = None
+    chi2_shared_reason = None
+
     if len(bin_delta_z) >= 4:
         # Fit Model 1: BEC transition  Δσ(gbar) = A / [exp(sqrt(10^gbar / g†)) - 1] + C
         def bec_model(log_gbar, A, C):
@@ -5003,14 +5173,174 @@ def run_unified_pipeline():
             chi2_const = np.sum(weights**2 * resid_const**2)
 
             n_bins_fit = len(bin_delta_z)
-            dof_bec = n_bins_fit - 2
-            dof_lin = n_bins_fit - 2
-            dof_const = n_bins_fit - 1
+            k_bec = 2
+            k_lin = 2
+            k_const = 1
+            dof_bec = n_bins_fit - k_bec
+            dof_lin = n_bins_fit - k_lin
+            dof_const = n_bins_fit - k_const
+            chi2_cal_dof_used_bec = max(dof_bec, 1)
+            chi2_cal_dof_used_linear = max(dof_lin, 1)
+            chi2_cal_dof_used_const = max(dof_const, 1)
+            chi2_cal_dof_assumption = (
+                "k_bec=2, k_lin=2, k_const=1 from Test-7 fit parameter counts"
+            )
 
             # Reduced chi-squared
             rchi2_bec = chi2_bec / max(dof_bec, 1)
             rchi2_lin = chi2_lin / max(dof_lin, 1)
             rchi2_const = chi2_const / max(dof_const, 1)
+
+            # Intrinsic-scatter calibration in the same residual space (ΔZσ).
+            # We preserve legacy χ²/dof definitions (dof from number of bins),
+            # and build per-pair expanded residuals equivalent to bin weighting.
+            reduced_chi2_bec_z_uncalibrated = rchi2_bec
+            reduced_chi2_linear_z_uncalibrated = rchi2_lin
+            reduced_chi2_const_z_uncalibrated = rchi2_const
+
+            if solve_sigma_int_for_chi2_1 is None:
+                reason = f"chi2_calibration_import_failed: {CHI2_CAL_IMPORT_ERROR}"
+                chi2_cal_reason_bec = reason
+                chi2_cal_reason_linear = reason
+                chi2_cal_reason_const = reason
+                if chi2_shared_sigma_int:
+                    chi2_shared_reason = reason
+            else:
+                sigma_bins = np.divide(
+                    1.0,
+                    weights,
+                    out=np.full_like(weights, np.nan, dtype=float),
+                    where=weights > 0,
+                )
+                pair_counts = np.maximum(np.round(bin_n_pairs).astype(int), 1)
+
+                def _expand_for_calibration(resid_arr):
+                    r_exp = np.repeat(np.asarray(resid_arr, dtype=float), pair_counts)
+                    # Equivalent to per-bin sigma=1/sqrt(N): replicate each bin N times
+                    # with unit sigma so chi2 = sum(N_bin * resid_bin^2), matching legacy chi2.
+                    s_exp = np.ones_like(r_exp, dtype=float)
+                    return r_exp, s_exp
+
+                def _run_chi2_cal(model_name, resid_arr, dof_model):
+                    resid_exp, sigma_exp = _expand_for_calibration(resid_arr)
+                    cal = solve_sigma_int_for_chi2_1(
+                        resid=resid_exp,
+                        sigma_meas=sigma_exp,
+                        dof=max(int(dof_model), 1),
+                    )
+                    sigma_int_val = cal.get('sigma_int_best')
+                    chi2_uncal = cal.get('chi2_red_uncal')
+                    chi2_cal = cal.get('chi2_red_cal')
+                    method = cal.get('method')
+                    bracket_used = cal.get('bracket_used')
+                    n_used = cal.get('n_used')
+                    reason = cal.get('reason')
+                    sigma_txt = f"{sigma_int_val:.6g}" if sigma_int_val is not None else "None"
+                    chi2_uncal_txt = f"{chi2_uncal:.4f}" if chi2_uncal is not None else "None"
+                    chi2_cal_txt = f"{chi2_cal:.4f}" if chi2_cal is not None else "None"
+                    print(
+                        f"[CHI2 CAL] model={model_name} space=z N={n_used} dof={max(int(dof_model), 1)} "
+                        f"chi2_red_uncal={chi2_uncal_txt} sigma_int={sigma_txt} "
+                        f"chi2_red_cal={chi2_cal_txt} method={method} reason={reason}"
+                    )
+                    return cal
+
+                print("    [CHI2 CAL] residual space inference: ΔZσ (dimensionless z units)")
+                cal_bec = _run_chi2_cal('BEC', resid_bec, dof_bec)
+                cal_lin = _run_chi2_cal('Linear', resid_lin, dof_lin)
+                cal_const = _run_chi2_cal('Const', resid_const, dof_const)
+
+                if cal_bec.get('sigma_int_best') is not None:
+                    sigma_int_bec_z = float(cal_bec['sigma_int_best'])
+                if cal_lin.get('sigma_int_best') is not None:
+                    sigma_int_linear_z = float(cal_lin['sigma_int_best'])
+                if cal_const.get('sigma_int_best') is not None:
+                    sigma_int_const_z = float(cal_const['sigma_int_best'])
+
+                if cal_bec.get('chi2_red_cal') is not None:
+                    reduced_chi2_bec_z_calibrated = float(cal_bec['chi2_red_cal'])
+                if cal_lin.get('chi2_red_cal') is not None:
+                    reduced_chi2_linear_z_calibrated = float(cal_lin['chi2_red_cal'])
+                if cal_const.get('chi2_red_cal') is not None:
+                    reduced_chi2_const_z_calibrated = float(cal_const['chi2_red_cal'])
+
+                chi2_cal_method_bec = cal_bec.get('method')
+                chi2_cal_method_linear = cal_lin.get('method')
+                chi2_cal_method_const = cal_const.get('method')
+                chi2_cal_n_used_bec = cal_bec.get('n_used')
+                chi2_cal_n_used_linear = cal_lin.get('n_used')
+                chi2_cal_n_used_const = cal_const.get('n_used')
+                chi2_cal_bracket_bec = cal_bec.get('bracket_used')
+                chi2_cal_bracket_linear = cal_lin.get('bracket_used')
+                chi2_cal_bracket_const = cal_const.get('bracket_used')
+                chi2_cal_reason_bec = cal_bec.get('reason')
+                chi2_cal_reason_linear = cal_lin.get('reason')
+                chi2_cal_reason_const = cal_const.get('reason')
+
+                if chi2_shared_sigma_int:
+                    ref_raw = str(chi2_sigma_ref_model).lower()
+                    if ref_raw in ('bec', 'b'):
+                        ref_key = 'bec'
+                    elif ref_raw in ('lin', 'linear', 'l'):
+                        ref_key = 'lin'
+                    elif ref_raw in ('const', 'constant', 'c'):
+                        ref_key = 'const'
+                    else:
+                        ref_key = 'bec'
+                        chi2_shared_reason = f"invalid_ref_model:{ref_raw}; fallback=bec"
+
+                    chi2_shared_ref_model = ref_key
+                    ref_map = {
+                        'bec': ('BEC', resid_bec, dof_bec),
+                        'lin': ('LIN', resid_lin, dof_lin),
+                        'const': ('CONST', resid_const, dof_const),
+                    }
+                    ref_label, ref_resid, ref_dof = ref_map[ref_key]
+                    ref_resid_exp, ref_sigma_exp = _expand_for_calibration(ref_resid)
+                    cal_shared = solve_sigma_int_for_chi2_1(
+                        resid=ref_resid_exp,
+                        sigma_meas=ref_sigma_exp,
+                        dof=max(int(ref_dof), 1),
+                    )
+                    chi2_shared_method = cal_shared.get('method')
+                    chi2_shared_n_used_ref = cal_shared.get('n_used')
+                    if chi2_shared_reason is None:
+                        chi2_shared_reason = cal_shared.get('reason')
+
+                    sigma_shared = cal_shared.get('sigma_int_best')
+                    if sigma_shared is not None and np.isfinite(sigma_shared):
+                        sigma_int_shared_z = float(sigma_shared)
+
+                        def _shared_rchi2(resid_arr, dof_model):
+                            resid_exp, sigma_exp = _expand_for_calibration(resid_arr)
+                            dof_eff = max(int(dof_model), 1)
+                            if chi2_red_given_sigma_int is not None:
+                                return float(
+                                    chi2_red_given_sigma_int(
+                                        resid_exp, sigma_exp, dof_eff, sigma_int_shared_z
+                                    )
+                                )
+                            sigma_tot = np.sqrt(np.square(sigma_exp) + sigma_int_shared_z**2)
+                            return float(np.sum((resid_exp / sigma_tot) ** 2) / float(dof_eff))
+
+                        reduced_chi2_bec_z_shared = _shared_rchi2(resid_bec, dof_bec)
+                        reduced_chi2_linear_z_shared = _shared_rchi2(resid_lin, dof_lin)
+                        reduced_chi2_const_z_shared = _shared_rchi2(resid_const, dof_const)
+                    else:
+                        chi2_shared_reason = (
+                            f"{chi2_shared_reason}; shared_sigma_unavailable"
+                            if chi2_shared_reason
+                            else "shared_sigma_unavailable"
+                        )
+
+                    sig_txt = f"{sigma_int_shared_z:.6g}" if np.isfinite(sigma_int_shared_z) else "None"
+                    b_txt = f"{reduced_chi2_bec_z_shared:.4f}" if np.isfinite(reduced_chi2_bec_z_shared) else "None"
+                    l_txt = f"{reduced_chi2_linear_z_shared:.4f}" if np.isfinite(reduced_chi2_linear_z_shared) else "None"
+                    c_txt = f"{reduced_chi2_const_z_shared:.4f}" if np.isfinite(reduced_chi2_const_z_shared) else "None"
+                    print(
+                        f"[CHI2 SHARED] ref={ref_label} sigma_int_shared={sig_txt} "
+                        f"-> rchi2_bec={b_txt}, rchi2_lin={l_txt}, rchi2_const={c_txt}"
+                    )
 
             # AIC comparison (lower is better)
             # AIC = chi2 + 2*k where k = number of parameters
@@ -5080,6 +5410,11 @@ def run_unified_pipeline():
             best_model = 'FAILED'
             spearman_r = np.nan
             spearman_p = np.nan
+            chi2_cal_reason_bec = f"model_fitting_failed: {e}"
+            chi2_cal_reason_linear = f"model_fitting_failed: {e}"
+            chi2_cal_reason_const = f"model_fitting_failed: {e}"
+            if chi2_shared_sigma_int:
+                chi2_shared_reason = f"model_fitting_failed: {e}"
     else:
         print("    Not enough bins for model fitting")
         t7_supports = False
@@ -5096,6 +5431,11 @@ def run_unified_pipeline():
         best_model = 'N/A'
         spearman_r = np.nan
         spearman_p = np.nan
+        chi2_cal_reason_bec = "not_enough_bins_for_model_fitting"
+        chi2_cal_reason_linear = "not_enough_bins_for_model_fitting"
+        chi2_cal_reason_const = "not_enough_bins_for_model_fitting"
+        if chi2_shared_sigma_int:
+            chi2_shared_reason = "not_enough_bins_for_model_fitting"
 
     n_support += int(t7_supports)
     t7_sig = f"ΔAIC={delta_aic_bec_vs_lin:+.1f}" if not np.isnan(delta_aic_bec_vs_lin) else "N/A"
@@ -9975,11 +10315,12 @@ def run_unified_pipeline():
 
     # galaxy_summary was already built before Step 5c
     galaxy_rows = []
-    for gname, gs in galaxy_summary.items():
+    for gkey, gs in galaxy_summary.items():
         res = np.array(gs['log_res_list'])
         gbar = np.array(gs['log_gbar_list'])
         galaxy_rows.append({
-            'galaxy': gname,
+            'galaxy': gs.get('name', gkey),
+            'galaxy_key': gs.get('galaxy_key', gkey),
             'source': gs['source'],
             'n_points': len(res),
             'sigma_res': float(np.std(res)),
@@ -10001,7 +10342,7 @@ def run_unified_pipeline():
 
     # 1. Per-point RAR data
     rar_csv = os.path.join(OUTPUT_DIR, 'rar_points_unified.csv')
-    fieldnames = ['galaxy', 'source', 'log_gbar', 'log_gobs', 'log_res',
+    fieldnames = ['galaxy', 'galaxy_key', 'source', 'log_gbar', 'log_gobs', 'log_res',
                   'sigma_log_gobs', 'R_kpc', 'env_dense', 'logMh']
     with open(rar_csv, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -10013,12 +10354,17 @@ def run_unified_pipeline():
                 if k in row and isinstance(row[k], float):
                     row[k] = round(row[k], 6)
             writer.writerow(row)
+    rar_csv_sha = sha256_file(rar_csv)
+    with open(rar_csv, 'r') as _f:
+        rar_csv_line_count = sum(1 for _ in _f)
     print(f"  Saved: {rar_csv}")
     print(f"    {len(all_points)} RAR points")
+    print(f"    SHA256: {rar_csv_sha}")
+    print(f"    Lines: {rar_csv_line_count}")
 
     # 2. Per-galaxy summary
     gal_csv = os.path.join(OUTPUT_DIR, 'galaxy_results_unified.csv')
-    gal_fields = ['galaxy', 'source', 'n_points', 'sigma_res', 'mean_res',
+    gal_fields = ['galaxy', 'galaxy_key', 'source', 'n_points', 'sigma_res', 'mean_res',
                   'median_res', 'mean_log_gbar', 'env_dense', 'logMh']
     with open(gal_csv, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=gal_fields)
@@ -10031,6 +10377,69 @@ def run_unified_pipeline():
     print(f"  Saved: {gal_csv}")
     print(f"    {len(galaxy_rows)} galaxies")
 
+    # Root-cause SPARC diagnosis report with concrete runtime evidence.
+    diag_ts = dt.datetime.now().strftime('%Y%m%d_%H%M%S')
+    sparc_diag_report = os.path.join(OUTPUT_DIR, f'sparc_diagnosis_report_{diag_ts}.txt')
+    with open(sparc_diag_report, 'w') as f:
+        f.write("SPARC DIAGNOSIS REPORT\n")
+        f.write(f"timestamp_utc={dt.datetime.utcnow().isoformat()}Z\n")
+        f.write(f"allow_missing_sparc={bool(allow_missing_sparc)}\n")
+        f.write(f"sparc_points={len(sparc_points)}\n")
+        f.write(f"sparc_unique_galaxy_keys={sparc_unique_keys}\n")
+        f.write(f"datasets_has_sparc={'SPARC' in datasets} (SPARC seeded separately)\n")
+        f.write(f"parsed_mass_model_galaxies={sparc_diag.get('parsed_mass_model_galaxies')}\n")
+        f.write(f"parsed_mrt_properties={sparc_diag.get('parsed_mrt_properties')}\n")
+        f.write(f"sparc_galaxies_after_cuts={sparc_diag.get('sparc_galaxies_after_cuts')}\n")
+        f.write(f"sparc_points_after_cuts={sparc_diag.get('sparc_points_after_cuts')}\n")
+        f.write(f"table2_missing_reason={sparc_diag.get('table2_missing_reason')}\n")
+        f.write("resolved_paths:\n")
+        for key, info in sparc_diag.get('paths', {}).items():
+            f.write(f"  {key}.chosen={info.get('chosen')}\n")
+            for cand, exists in info.get('exists', {}).items():
+                f.write(f"    - {cand} exists={exists}\n")
+        f.write(f"rar_points_unified_csv={rar_csv}\n")
+        f.write(f"rar_points_unified_sha256={rar_csv_sha}\n")
+        f.write(f"rar_points_unified_lines={rar_csv_line_count}\n")
+    print(f"  Saved: {sparc_diag_report}")
+
+    # Reproducibility stamp for dataset composition.
+    sparc_input_shas = {}
+    for key, info in sparc_diag.get('paths', {}).items():
+        chosen = info.get('chosen')
+        if chosen and os.path.exists(chosen):
+            try:
+                sparc_input_shas[key] = sha256_file(chosen)
+            except Exception:
+                sparc_input_shas[key] = None
+        else:
+            sparc_input_shas[key] = None
+    meta_path = os.path.join(OUTPUT_DIR, 'rar_points_unified.meta.json')
+    meta_obj = {
+        'timestamp_utc': dt.datetime.utcnow().isoformat() + 'Z',
+        'git_head': git_head_sha(),
+        'output_csv': rar_csv,
+        'output_csv_sha256': rar_csv_sha,
+        'output_csv_lines': int(rar_csv_line_count),
+        'n_points': int(n_points),
+        'n_galaxies': int(n_galaxies),
+        'counts_by_source_grouped': {k: int(v) for k, v in sorted(source_counts_grouped.items())},
+        'counts_by_source_raw': {k: int(v) for k, v in sorted(source_counts_raw.items())},
+        'flags': {
+            'allow_missing_sparc': bool(allow_missing_sparc),
+            'chi2_shared_sigma_int': bool(chi2_shared_sigma_int),
+            'chi2_sigma_ref_model': str(chi2_sigma_ref_model),
+        },
+        'sparc_runtime': {
+            'sparc_points': int(len(sparc_points)),
+            'sparc_unique_galaxy_keys': int(sparc_unique_keys),
+            'sparc_paths': sparc_diag.get('paths', {}),
+            'sparc_input_sha256': sparc_input_shas,
+        },
+    }
+    with open(meta_path, 'w') as f:
+        json.dump(meta_obj, f, indent=2)
+    print(f"  Saved: {meta_path}")
+
     # 3. Summary JSON
     summary = {
         'pipeline': 'unified_rar',
@@ -10041,7 +10450,13 @@ def run_unified_pipeline():
         'n_field_galaxies': n_field_gal,
         'n_dense_points': int(len(dense_res)),
         'n_field_points': int(len(field_res)),
-        'datasets': {k: int(v) for k, v in source_counts.items()},
+        'rar_points_unified_sha256': rar_csv_sha,
+        'rar_points_unified_lines': int(rar_csv_line_count),
+        'rar_points_unified_meta': os.path.basename(meta_path),
+        'sparc_diagnosis_report': os.path.basename(sparc_diag_report),
+        'datasets': {k: int(v) for k, v in source_counts_grouped.items()},
+        'datasets_grouped': {k: int(v) for k, v in source_counts_grouped.items()},
+        'datasets_raw': {k: int(v) for k, v in source_counts_raw.items()},
         'overall': {
             'sigma_all': float(np.std([p['log_res'] for p in all_points])),
             'mean_all': float(np.mean([p['log_res'] for p in all_points])),
@@ -10174,17 +10589,52 @@ def run_unified_pipeline():
                 'bec_fit': {
                     'amplitude_A': float(bec_A) if not np.isnan(bec_A) else None,
                     'offset_C': float(bec_C) if not np.isnan(bec_C) else None,
-                    'reduced_chi2': float(rchi2_bec) if not np.isnan(rchi2_bec) else None,
+                    'reduced_chi2': float(reduced_chi2_bec_z_uncalibrated) if not np.isnan(reduced_chi2_bec_z_uncalibrated) else None,
+                    'reduced_chi2_bec_z_uncalibrated': float(reduced_chi2_bec_z_uncalibrated) if not np.isnan(reduced_chi2_bec_z_uncalibrated) else None,
+                    'sigma_int_bec_z': float(sigma_int_bec_z) if not np.isnan(sigma_int_bec_z) else None,
+                    'reduced_chi2_bec_z_calibrated': float(reduced_chi2_bec_z_calibrated) if not np.isnan(reduced_chi2_bec_z_calibrated) else None,
+                    'chi2_cal_method_bec': chi2_cal_method_bec,
+                    'chi2_cal_n_used_bec': int(chi2_cal_n_used_bec) if chi2_cal_n_used_bec is not None else None,
+                    'chi2_cal_dof_used_bec': int(chi2_cal_dof_used_bec) if chi2_cal_dof_used_bec is not None else None,
+                    'chi2_cal_dof_assumption_bec': chi2_cal_dof_assumption,
+                    'chi2_cal_bracket_bec': [float(x) for x in chi2_cal_bracket_bec] if chi2_cal_bracket_bec else None,
+                    'chi2_cal_reason_bec': chi2_cal_reason_bec,
                     'aic': float(aic_bec) if not np.isnan(aic_bec) else None,
                 },
                 'linear_fit': {
-                    'reduced_chi2': float(rchi2_lin) if not np.isnan(rchi2_lin) else None,
+                    'reduced_chi2': float(reduced_chi2_linear_z_uncalibrated) if not np.isnan(reduced_chi2_linear_z_uncalibrated) else None,
+                    'reduced_chi2_linear_z_uncalibrated': float(reduced_chi2_linear_z_uncalibrated) if not np.isnan(reduced_chi2_linear_z_uncalibrated) else None,
+                    'sigma_int_linear_z': float(sigma_int_linear_z) if not np.isnan(sigma_int_linear_z) else None,
+                    'reduced_chi2_linear_z_calibrated': float(reduced_chi2_linear_z_calibrated) if not np.isnan(reduced_chi2_linear_z_calibrated) else None,
+                    'chi2_cal_method_linear': chi2_cal_method_linear,
+                    'chi2_cal_n_used_linear': int(chi2_cal_n_used_linear) if chi2_cal_n_used_linear is not None else None,
+                    'chi2_cal_dof_used_linear': int(chi2_cal_dof_used_linear) if chi2_cal_dof_used_linear is not None else None,
+                    'chi2_cal_dof_assumption_linear': chi2_cal_dof_assumption,
+                    'chi2_cal_bracket_linear': [float(x) for x in chi2_cal_bracket_linear] if chi2_cal_bracket_linear else None,
+                    'chi2_cal_reason_linear': chi2_cal_reason_linear,
                     'aic': float(aic_lin) if not np.isnan(aic_lin) else None,
                 },
                 'constant_fit': {
-                    'reduced_chi2': float(rchi2_const) if not np.isnan(rchi2_const) else None,
+                    'reduced_chi2': float(reduced_chi2_const_z_uncalibrated) if not np.isnan(reduced_chi2_const_z_uncalibrated) else None,
+                    'reduced_chi2_const_z_uncalibrated': float(reduced_chi2_const_z_uncalibrated) if not np.isnan(reduced_chi2_const_z_uncalibrated) else None,
+                    'sigma_int_const_z': float(sigma_int_const_z) if not np.isnan(sigma_int_const_z) else None,
+                    'reduced_chi2_const_z_calibrated': float(reduced_chi2_const_z_calibrated) if not np.isnan(reduced_chi2_const_z_calibrated) else None,
+                    'chi2_cal_method_const': chi2_cal_method_const,
+                    'chi2_cal_n_used_const': int(chi2_cal_n_used_const) if chi2_cal_n_used_const is not None else None,
+                    'chi2_cal_dof_used_const': int(chi2_cal_dof_used_const) if chi2_cal_dof_used_const is not None else None,
+                    'chi2_cal_dof_assumption_const': chi2_cal_dof_assumption,
+                    'chi2_cal_bracket_const': [float(x) for x in chi2_cal_bracket_const] if chi2_cal_bracket_const else None,
+                    'chi2_cal_reason_const': chi2_cal_reason_const,
                     'aic': float(aic_const) if not np.isnan(aic_const) else None,
                 },
+                'chi2_shared_ref_model': chi2_shared_ref_model if chi2_shared_sigma_int else None,
+                'sigma_int_shared_z': float(sigma_int_shared_z) if not np.isnan(sigma_int_shared_z) else None,
+                'reduced_chi2_bec_z_shared': float(reduced_chi2_bec_z_shared) if not np.isnan(reduced_chi2_bec_z_shared) else None,
+                'reduced_chi2_lin_z_shared': float(reduced_chi2_linear_z_shared) if not np.isnan(reduced_chi2_linear_z_shared) else None,
+                'reduced_chi2_const_z_shared': float(reduced_chi2_const_z_shared) if not np.isnan(reduced_chi2_const_z_shared) else None,
+                'chi2_shared_method': chi2_shared_method,
+                'chi2_shared_n_used_ref': int(chi2_shared_n_used_ref) if chi2_shared_n_used_ref is not None else None,
+                'chi2_shared_reason': chi2_shared_reason,
                 'delta_aic_linear_minus_bec': float(delta_aic_bec_vs_lin) if not np.isnan(delta_aic_bec_vs_lin) else None,
                 'delta_aic_constant_minus_bec': float(delta_aic_bec_vs_const) if not np.isnan(delta_aic_bec_vs_const) else None,
                 'best_model': best_model,
@@ -10496,5 +10946,36 @@ def run_unified_pipeline():
 
 
 # ============================================================
+def parse_cli_args():
+    """CLI options for optional chi2 calibration reporting modes."""
+    parser = argparse.ArgumentParser(
+        description="Unified RAR environmental scatter pipeline"
+    )
+    parser.add_argument(
+        "--chi2_shared_sigma_int",
+        action="store_true",
+        help="Use a shared intrinsic scatter term across Test-7 BEC/linear/const fits.",
+    )
+    parser.add_argument(
+        "--chi2_sigma_ref_model",
+        type=str,
+        default="bec",
+        choices=["bec", "lin", "const"],
+        help="Reference model used to fit shared sigma_int in Test-7 z-space.",
+    )
+    parser.add_argument(
+        "--allow_missing_sparc",
+        action="store_true",
+        help="Allow pipeline execution when SPARC points fail minimum coverage guardrails.",
+    )
+    return parser.parse_args()
+
+
+# ============================================================
 if __name__ == '__main__':
-    summary = run_unified_pipeline()
+    _args = parse_cli_args()
+    summary = run_unified_pipeline(
+        chi2_shared_sigma_int=bool(_args.chi2_shared_sigma_int),
+        chi2_sigma_ref_model=str(_args.chi2_sigma_ref_model).lower(),
+        allow_missing_sparc=bool(_args.allow_missing_sparc),
+    )

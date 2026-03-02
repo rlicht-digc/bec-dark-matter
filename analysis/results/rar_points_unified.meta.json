@@ -1,0 +1,122 @@
+{
+  "timestamp_utc": "2026-02-27T19:35:53.177618Z",
+  "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+  "output_csv": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/results/rar_points_unified.csv",
+  "output_csv_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+  "output_csv_lines": 12622,
+  "n_points": 12621,
+  "n_galaxies": 1468,
+  "counts_by_source_grouped": {
+    "Catinella2005": 2191,
+    "GHASP": 3877,
+    "LITTLETHINGS": 11,
+    "LVHIS": 35,
+    "Noordermeer2005": 47,
+    "PHANGS": 1213,
+    "SPARC": 2784,
+    "SS2020": 40,
+    "Swaters2025": 85,
+    "Verheijen2001": 82,
+    "VirgoRC": 18,
+    "Vogt2004": 327,
+    "WALLABY": 1220,
+    "WALLABY_DR2": 194,
+    "Yu2020": 132,
+    "deBlok2002": 365
+  },
+  "counts_by_source_raw": {
+    "Catinella2005": 2191,
+    "GHASP": 3877,
+    "LITTLETHINGS": 11,
+    "LVHIS": 35,
+    "Noordermeer2005": 47,
+    "PHANGS": 1213,
+    "SPARC": 2784,
+    "SS20_A": 2,
+    "SS20_LT": 11,
+    "SS20_R": 3,
+    "SS20_S": 22,
+    "SS20_TH": 2,
+    "Swaters2025": 85,
+    "Verheijen2001": 82,
+    "VirgoRC": 18,
+    "Vogt2004": 327,
+    "WALLABY": 1220,
+    "WALLABY_DR2": 194,
+    "Yu2020": 132,
+    "deBlok2002": 365
+  },
+  "flags": {
+    "allow_missing_sparc": false,
+    "chi2_shared_sigma_int": false,
+    "chi2_sigma_ref_model": "bec"
+  },
+  "sparc_runtime": {
+    "sparc_points": 2784,
+    "sparc_unique_galaxy_keys": 131,
+    "sparc_paths": {
+      "table2": {
+        "chosen": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_table2_rotmods.dat",
+        "candidates": [
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/SPARC_table2_rotmods.dat",
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_table2_rotmods.dat"
+        ],
+        "exists": {
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/SPARC_table2_rotmods.dat": false,
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_table2_rotmods.dat": true
+        }
+      },
+      "mrt": {
+        "chosen": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_Lelli2016c.mrt",
+        "candidates": [
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/SPARC_Lelli2016c.mrt",
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_Lelli2016c.mrt"
+        ],
+        "exists": {
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/SPARC_Lelli2016c.mrt": false,
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/SPARC_Lelli2016c.mrt": true
+        }
+      },
+      "cf4_cache": {
+        "chosen": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4/cf4_distance_cache.json",
+        "candidates": [
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4_distance_cache.json",
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4/cf4_distance_cache.json"
+        ],
+        "exists": {
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4_distance_cache.json": false,
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/cf4/cf4_distance_cache.json": true
+        }
+      },
+      "env_catalog": {
+        "chosen": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/environment/sparc_environment_catalog.json",
+        "candidates": [
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc_environment_catalog.json",
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/environment/sparc_environment_catalog.json"
+        ],
+        "exists": {
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc_environment_catalog.json": false,
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/environment/sparc_environment_catalog.json": true
+        }
+      },
+      "coordinates": {
+        "chosen": "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/sparc_coordinates.json",
+        "candidates": [
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc_coordinates.json",
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/sparc_coordinates.json"
+        ],
+        "exists": {
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc_coordinates.json": false,
+          "/Users/russelllicht/bec-dark-matter/analysis/pipeline/data/sparc/sparc_coordinates.json": true
+        }
+      }
+    },
+    "sparc_input_sha256": {
+      "table2": "7d027e515441c6b4ebbf6aadee0327e6ad81156c4e8b151af2f6d62cb44c3962",
+      "mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+      "cf4_cache": "bc85e12a16db6a7f38c71cb62a1051ed4a3948afb8e690df19db024f6fe5d295",
+      "env_catalog": "d807fb8641b83bb0e972c1a7720f87ba601ad94cbc31edb5fa3bf24334f0a2ea",
+      "coordinates": "3d05f3e9c61e875d7d747f0180d469f556c6ff4de1ccff38e8679568b9e3c738"
+    }
+  }
+}

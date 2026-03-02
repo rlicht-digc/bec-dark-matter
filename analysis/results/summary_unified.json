@@ -1,12 +1,16 @@
 {
   "pipeline": "unified_rar",
   "description": "Unified RAR environmental scatter test combining 8 datasets",
-  "n_galaxies": 2892,
-  "n_data_points": 15745,
-  "n_dense_galaxies": 927,
-  "n_field_galaxies": 1965,
-  "n_dense_points": 197,
-  "n_field_points": 7027,
+  "n_galaxies": 1468,
+  "n_data_points": 12621,
+  "n_dense_galaxies": 463,
+  "n_field_galaxies": 1005,
+  "n_dense_points": 1753,
+  "n_field_points": 10868,
+  "rar_points_unified_sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+  "rar_points_unified_lines": 12622,
+  "rar_points_unified_meta": "rar_points_unified.meta.json",
+  "sparc_diagnosis_report": "sparc_diagnosis_report_20260227_143553.txt",
   "datasets": {
     "SPARC": 2784,
     "deBlok2002": 365,
@@ -16,122 +20,161 @@
     "LVHIS": 35,
     "Yu2020": 132,
     "Swaters2025": 85,
-    "GHASP": 3875,
+    "GHASP": 3877,
     "Noordermeer2005": 47,
     "Vogt2004": 327,
-    "Catinella2005": 2236,
+    "Catinella2005": 2191,
     "VirgoRC": 18,
-    "PHANGS": 1212,
+    "PHANGS": 1213,
     "Verheijen2001": 82,
-    "MaNGA": 3082,
+    "WALLABY_DR2": 194
+  },
+  "datasets_grouped": {
+    "SPARC": 2784,
+    "deBlok2002": 365,
+    "WALLABY": 1220,
+    "SS2020": 40,
+    "LITTLETHINGS": 11,
+    "LVHIS": 35,
+    "Yu2020": 132,
+    "Swaters2025": 85,
+    "GHASP": 3877,
+    "Noordermeer2005": 47,
+    "Vogt2004": 327,
+    "Catinella2005": 2191,
+    "VirgoRC": 18,
+    "PHANGS": 1213,
+    "Verheijen2001": 82,
+    "WALLABY_DR2": 194
+  },
+  "datasets_raw": {
+    "SPARC": 2784,
+    "deBlok2002": 365,
+    "WALLABY": 1220,
+    "SS20_S": 22,
+    "SS20_A": 2,
+    "SS20_LT": 11,
+    "SS20_TH": 2,
+    "SS20_R": 3,
+    "LITTLETHINGS": 11,
+    "LVHIS": 35,
+    "Yu2020": 132,
+    "Swaters2025": 85,
+    "GHASP": 3877,
+    "Noordermeer2005": 47,
+    "Vogt2004": 327,
+    "Catinella2005": 2191,
+    "VirgoRC": 18,
+    "PHANGS": 1213,
+    "Verheijen2001": 82,
     "WALLABY_DR2": 194
   },
   "overall": {
-    "sigma_all": 0.3341422312414692,
-    "mean_all": 0.05565796814501977
+    "sigma_all": 0.3202407811511185,
+    "mean_all": 0.10010512994653481
   },
   "environment": {
-    "sigma_dense": 0.46022557584767243,
-    "sigma_field": 0.4125186877851195,
-    "delta_sigma": -0.04770688806255291,
-    "sigma_int_dense": 0.30382637512063365,
-    "sigma_int_field": 0.31284416223768347,
-    "delta_sigma_int": 0.009017787117049814,
-    "mean_err2_dense": 0.006916640172143969,
-    "mean_err2_field": 0.014630370741189534,
-    "p_field_gt_dense": 0.9996,
-    "p_value_onesided": 0.0004,
-    "levene_F": 46.6314439648366,
-    "levene_p": 8.880852454799186e-12,
-    "brown_forsythe_F": 46.6314439648366,
-    "brown_forsythe_p": 8.880852454799186e-12
+    "sigma_dense": 0.3166608369882876,
+    "sigma_field": 0.3204801569855733,
+    "delta_sigma": 0.003819319997285686,
+    "sigma_int_dense": 0.30221863851516484,
+    "sigma_int_field": 0.2940536764330081,
+    "delta_sigma_int": -0.008164962082156724,
+    "mean_err2_dense": 0.008937980216162995,
+    "mean_err2_field": 0.016239966397729486,
+    "p_field_gt_dense": 0.6853,
+    "p_value_onesided": 0.3147,
+    "levene_F": 17.41975458628862,
+    "levene_p": 3.0170444806206195e-05,
+    "brown_forsythe_F": 17.41975458628862,
+    "brown_forsythe_p": 3.0170444806206195e-05
   },
   "binned_results": [
     {
       "center": -12.5,
       "lo": -13.0,
       "hi": -12.0,
-      "n_dense": 69,
-      "n_field": 408,
-      "sigma_dense": 0.5722069443283027,
-      "sigma_field": 0.478111314039972,
-      "delta": -0.09409563028833068,
-      "p_field_gt_dense": 0.011399999999999966,
-      "levene_stat": 4.270128628366383,
-      "levene_p": 0.03932945485962506
+      "n_dense": 59,
+      "n_field": 479,
+      "sigma_dense": 0.530476822537395,
+      "sigma_field": 0.49929856685995766,
+      "delta": -0.031178255677437372,
+      "p_field_gt_dense": 0.19820000000000004,
+      "levene_stat": 0.044857245562091905,
+      "levene_p": 0.8323472506677819
     },
     {
       "center": -11.5,
       "lo": -12.0,
       "hi": -11.0,
-      "n_dense": 532,
-      "n_field": 3353,
-      "sigma_dense": 0.33356851319117736,
-      "sigma_field": 0.3171710197243083,
-      "delta": -0.016397493466869084,
-      "p_field_gt_dense": 0.14159999999999995,
-      "levene_stat": 0.2787027495654187,
-      "levene_p": 0.5975829096523314
+      "n_dense": 523,
+      "n_field": 3347,
+      "sigma_dense": 0.3226473392342988,
+      "sigma_field": 0.3203058520742319,
+      "delta": -0.0023414871600668796,
+      "p_field_gt_dense": 0.40900000000000003,
+      "levene_stat": 4.638875600825332,
+      "levene_p": 0.0313170735161637
     },
     {
       "center": -10.5,
       "lo": -11.0,
       "hi": -10.0,
-      "n_dense": 1000,
-      "n_field": 4987,
-      "sigma_dense": 0.20999306431872913,
-      "sigma_field": 0.2833161714751468,
-      "delta": 0.07332310715641768,
+      "n_dense": 682,
+      "n_field": 4316,
+      "sigma_dense": 0.1995910634547237,
+      "sigma_field": 0.26643957341892177,
+      "delta": 0.06684850996419808,
       "p_field_gt_dense": 1.0,
-      "levene_stat": 110.91393433576772,
-      "levene_p": 1.0360492482735972e-25
+      "levene_stat": 78.72502031045491,
+      "levene_p": 9.778577852915552e-19
     },
     {
       "center": -9.5,
       "lo": -10.0,
       "hi": -9.0,
-      "n_dense": 1327,
-      "n_field": 3734,
-      "sigma_dense": 0.2539865646448769,
-      "sigma_field": 0.32213880048189336,
-      "delta": 0.06815223583701646,
-      "p_field_gt_dense": 1.0,
-      "levene_stat": 58.63630393719636,
-      "levene_p": 2.2580732827786118e-14
+      "n_dense": 418,
+      "n_field": 2447,
+      "sigma_dense": 0.26104925263691214,
+      "sigma_field": 0.273633958367527,
+      "delta": 0.012584705730614876,
+      "p_field_gt_dense": 0.8018000000000001,
+      "levene_stat": 0.0035153970788551633,
+      "levene_p": 0.9527246394000205
     },
     {
       "center": -8.5,
       "lo": -9.0,
       "hi": -8.0,
-      "n_dense": 131,
-      "n_field": 177,
-      "sigma_dense": 0.32805830334638214,
-      "sigma_field": 0.28123574697347326,
-      "delta": -0.046822556372908886,
-      "p_field_gt_dense": 0.0514,
-      "levene_stat": 3.142338618509586,
-      "levene_p": 0.07727919226521814
+      "n_dense": 66,
+      "n_field": 249,
+      "sigma_dense": 0.38417319011892126,
+      "sigma_field": 0.29399844630933847,
+      "delta": -0.09017474380958279,
+      "p_field_gt_dense": 0.0048000000000000265,
+      "levene_stat": 14.604607967216735,
+      "levene_p": 0.000159939588554613
     }
   ],
   "dm_regime_test": {
     "description": "BEC prediction test: field > dense scatter in DM-dominated regime",
     "threshold_log_gbar": -10.5,
     "dm_regime": {
-      "n_dense": 965,
-      "n_field": 6035,
-      "n_dense_gal": 294,
-      "n_field_gal": 954,
-      "sigma_dense": 0.3238144354356855,
-      "sigma_field": 0.3211792201807661,
-      "delta": -0.0026352152549193875,
-      "p_field_gt_dense": 0.39490000000000003
+      "n_dense": 862,
+      "n_field": 5836,
+      "n_dense_gal": 235,
+      "n_field_gal": 806,
+      "sigma_dense": 0.32106648379456826,
+      "sigma_field": 0.31963211839528094,
+      "delta": -0.0014343653992873184,
+      "p_field_gt_dense": 0.4367
     },
     "baryon_regime": {
-      "n_dense": 2100,
-      "n_field": 6645,
-      "sigma_dense": 0.266906697270878,
-      "sigma_field": 0.31702670658126686,
-      "delta": 0.05012000931038885
+      "n_dense": 891,
+      "n_field": 5032,
+      "sigma_dense": 0.26564685976283,
+      "sigma_field": 0.28754798435539775,
+      "delta": 0.021901124592567767
     },
     "per_dataset_dm": {
       "SPARC": {
@@ -149,11 +192,11 @@
         "delta": 0.08277055575178033
       },
       "Yu2020": {
-        "n_dense": 39,
-        "n_field": 93,
-        "sigma_dense": 0.3036283774496946,
-        "sigma_field": 0.2169590691465082,
-        "delta": -0.08666930830318642
+        "n_dense": 25,
+        "n_field": 107,
+        "sigma_dense": 0.30702345894057004,
+        "sigma_field": 0.23240201917266354,
+        "delta": -0.0746214397679065
       },
       "deBlok2002": {
         "n_dense": 0,
@@ -170,11 +213,11 @@
         "delta": null
       },
       "LVHIS": {
-        "n_dense": 7,
-        "n_field": 28,
-        "sigma_dense": 0.3897109218451181,
-        "sigma_field": 0.2470340503160996,
-        "delta": -0.14267687152901848
+        "n_dense": 4,
+        "n_field": 31,
+        "sigma_dense": 0.47221245077195306,
+        "sigma_field": 0.27138760044251614,
+        "delta": -0.20082485032943692
       }
     }
   },
@@ -210,12 +253,12 @@
       "p_field_gt_dense": 0.9996
     },
     "SS2020": {
-      "n_dense_gal": 5,
-      "n_field_gal": 35,
-      "n_dense_pts": 5,
-      "n_field_pts": 35,
-      "sigma_dense": 0.22634272928517554,
-      "sigma_field": 0.24276654352299984,
+      "n_dense_gal": 4,
+      "n_field_gal": 36,
+      "n_dense_pts": 4,
+      "n_field_pts": 36,
+      "sigma_dense": 0.1739435272248824,
+      "sigma_field": 0.24061313596851155,
       "delta": null,
       "p_field_gt_dense": null
     },
@@ -230,32 +273,32 @@
       "p_field_gt_dense": null
     },
     "LVHIS": {
-      "n_dense_gal": 6,
-      "n_field_gal": 22,
-      "n_dense_pts": 7,
-      "n_field_pts": 28,
-      "sigma_dense": 0.3897109218451181,
-      "sigma_field": 0.2470340503160996,
-      "delta": -0.14267687152901848,
-      "p_field_gt_dense": 0.13660000000000005
+      "n_dense_gal": 3,
+      "n_field_gal": 25,
+      "n_dense_pts": 4,
+      "n_field_pts": 31,
+      "sigma_dense": 0.47221245077195306,
+      "sigma_field": 0.27138760044251614,
+      "delta": null,
+      "p_field_gt_dense": null
     },
     "Yu2020": {
-      "n_dense_gal": 39,
-      "n_field_gal": 93,
-      "n_dense_pts": 39,
-      "n_field_pts": 93,
-      "sigma_dense": 0.3036283774496946,
-      "sigma_field": 0.2169590691465082,
-      "delta": -0.08666930830318642,
-      "p_field_gt_dense": 0.06820000000000004
+      "n_dense_gal": 25,
+      "n_field_gal": 107,
+      "n_dense_pts": 25,
+      "n_field_pts": 107,
+      "sigma_dense": 0.30702345894057004,
+      "sigma_field": 0.23240201917266354,
+      "delta": -0.0746214397679065,
+      "p_field_gt_dense": 0.12280000000000002
     },
     "Swaters2025": {
-      "n_dense_gal": 3,
-      "n_field_gal": 82,
-      "n_dense_pts": 3,
-      "n_field_pts": 82,
-      "sigma_dense": 0.2576524280139198,
-      "sigma_field": 0.15897455850986586,
+      "n_dense_gal": 2,
+      "n_field_gal": 83,
+      "n_dense_pts": 2,
+      "n_field_pts": 83,
+      "sigma_dense": 0.24088588459562565,
+      "sigma_field": 0.15801496147791577,
       "delta": null,
       "p_field_gt_dense": null
     },
@@ -263,19 +306,19 @@
       "n_dense_gal": 2,
       "n_field_gal": 67,
       "n_dense_pts": 76,
-      "n_field_pts": 3799,
-      "sigma_dense": 0.16265120508256317,
-      "sigma_field": 0.3714381455746599,
-      "delta": 0.2087869404920967,
+      "n_field_pts": 3801,
+      "sigma_dense": 0.20176147225206123,
+      "sigma_field": 0.3214250663581396,
+      "delta": 0.11966359410607838,
       "p_field_gt_dense": 1.0
     },
     "Noordermeer2005": {
-      "n_dense_gal": 5,
-      "n_field_gal": 42,
-      "n_dense_pts": 5,
-      "n_field_pts": 42,
-      "sigma_dense": 0.489026223475593,
-      "sigma_field": 0.38836396444668947,
+      "n_dense_gal": 3,
+      "n_field_gal": 44,
+      "n_dense_pts": 3,
+      "n_field_pts": 44,
+      "sigma_dense": 0.2578804785114848,
+      "sigma_field": 0.4057979166425687,
       "delta": null,
       "p_field_gt_dense": null
     },
@@ -293,11 +336,11 @@
       "n_dense_gal": 4,
       "n_field_gal": 318,
       "n_dense_pts": 20,
-      "n_field_pts": 2216,
-      "sigma_dense": 0.14959901020582447,
-      "sigma_field": 0.19333334019435233,
-      "delta": 0.04373432998852786,
-      "p_field_gt_dense": 0.757
+      "n_field_pts": 2171,
+      "sigma_dense": 0.14919431757798515,
+      "sigma_field": 0.19414273940080734,
+      "delta": 0.04494842182282219,
+      "p_field_gt_dense": 0.7436
     },
     "VirgoRC": {
       "n_dense_gal": 1,
@@ -310,41 +353,31 @@
       "p_field_gt_dense": null
     },
     "PHANGS": {
-      "n_dense_gal": 19,
-      "n_field_gal": 22,
-      "n_dense_pts": 672,
-      "n_field_pts": 540,
-      "sigma_dense": 0.31334277271029515,
-      "sigma_field": 0.2563011364253498,
-      "delta": -0.05704163628494535,
-      "p_field_gt_dense": 0.0020000000000000018
+      "n_dense_gal": 8,
+      "n_field_gal": 33,
+      "n_dense_pts": 307,
+      "n_field_pts": 906,
+      "sigma_dense": 0.30498434012554204,
+      "sigma_field": 0.2769111959088604,
+      "delta": -0.028073144216681667,
+      "p_field_gt_dense": 0.07079999999999997
     },
     "Verheijen2001": {
       "n_dense_gal": 12,
       "n_field_gal": 0,
       "n_dense_pts": 82,
       "n_field_pts": 0,
-      "sigma_dense": 0.23473971348320272,
+      "sigma_dense": 0.20453279053189763,
       "sigma_field": null,
       "delta": null,
       "p_field_gt_dense": null
-    },
-    "MaNGA": {
-      "n_dense_gal": 432,
-      "n_field_gal": 992,
-      "n_dense_pts": 926,
-      "n_field_pts": 2156,
-      "sigma_dense": 0.19644833063458422,
-      "sigma_field": 0.20199399433446058,
-      "delta": 0.0055456636998763575,
-      "p_field_gt_dense": 0.732
     },
     "WALLABY_DR2": {
       "n_dense_gal": 39,
       "n_field_gal": 0,
       "n_dense_pts": 194,
       "n_field_pts": 0,
-      "sigma_dense": 0.14791110419257106,
+      "sigma_dense": 0.1180096381469196,
       "sigma_field": null,
       "delta": null,
       "p_field_gt_dense": null
@@ -354,163 +387,163 @@
     "description": "Five refined tests to prove/disprove BEC scatter prediction",
     "z_score_test": {
       "description": "Within-dataset Z-score normalization eliminates Simpson Paradox",
-      "z_sigma_dense_dm": 0.9903044764755028,
-      "z_sigma_field_dm": 0.950685353192163,
-      "z_delta_dm": -0.03961912328333983,
-      "p_field_gt_dense_dm": 0.1815,
-      "z_sigma_dense_all": 1.034405758727392,
-      "z_sigma_field_all": 0.9900419961691495,
-      "z_delta_all": -0.04436376255824259,
+      "z_sigma_dense_dm": 0.9783484110740345,
+      "z_sigma_field_dm": 0.9640935697570766,
+      "z_delta_dm": -0.014254841316957867,
+      "p_field_gt_dense_dm": 0.35509999999999997,
+      "z_sigma_dense_all": 1.0397389145638856,
+      "z_sigma_field_all": 0.9911320765682411,
+      "z_delta_all": -0.04860683799564447,
       "supports_bec": false
     },
     "threshold_scan": {
       "description": "Optimal threshold for BEC signal",
       "best_threshold": -11.5,
-      "best_z_delta": 0.2605213966634051,
-      "best_p": 0.9986,
+      "best_z_delta": 0.28438258611259337,
+      "best_p": 0.9996,
       "all_thresholds": [
         {
           "threshold": -12.0,
-          "n_dense": 61,
-          "n_field": 340,
-          "z_sigma_dense": 1.138497103526713,
-          "z_sigma_field": 1.2585743524036113,
-          "z_delta": 0.12007724887689819,
-          "z_p_field_gt_dense": 0.6138
+          "n_dense": 50,
+          "n_field": 351,
+          "z_sigma_dense": 1.0902991334868863,
+          "z_sigma_field": 1.262303726830987,
+          "z_delta": 0.17200459334410056,
+          "z_p_field_gt_dense": 0.6868000000000001
         },
         {
           "threshold": -11.75,
-          "n_dense": 155,
-          "n_field": 843,
-          "z_sigma_dense": 1.0058526872006348,
-          "z_sigma_field": 1.1423542443561565,
-          "z_delta": 0.1365015571555217,
-          "z_p_field_gt_dense": 0.8522000000000001
+          "n_dense": 140,
+          "n_field": 858,
+          "z_sigma_dense": 0.9851394138469367,
+          "z_sigma_field": 1.1444573997849106,
+          "z_delta": 0.15931798593797386,
+          "z_p_field_gt_dense": 0.8894
         },
         {
           "threshold": -11.5,
-          "n_dense": 254,
-          "n_field": 1447,
-          "z_sigma_dense": 0.881943901207178,
-          "z_sigma_field": 1.1424652978705832,
-          "z_delta": 0.2605213966634051,
-          "z_p_field_gt_dense": 0.9986
+          "n_dense": 238,
+          "n_field": 1463,
+          "z_sigma_dense": 0.8598576862816071,
+          "z_sigma_field": 1.1442402723942005,
+          "z_delta": 0.28438258611259337,
+          "z_p_field_gt_dense": 0.9996
         },
         {
           "threshold": -11.25,
-          "n_dense": 325,
-          "n_field": 1943,
-          "z_sigma_dense": 0.8722520242540838,
-          "z_sigma_field": 1.0976923493106177,
-          "z_delta": 0.22544032505653389,
-          "z_p_field_gt_dense": 0.9986
+          "n_dense": 309,
+          "n_field": 1959,
+          "z_sigma_dense": 0.8545743741678452,
+          "z_sigma_field": 1.0995568929443997,
+          "z_delta": 0.24498251877655453,
+          "z_p_field_gt_dense": 0.9996
         },
         {
           "threshold": -11.0,
-          "n_dense": 382,
-          "n_field": 2358,
-          "z_sigma_dense": 0.8850449673625388,
-          "z_sigma_field": 1.058116883105654,
-          "z_delta": 0.1730719157431152,
-          "z_p_field_gt_dense": 0.9898
+          "n_dense": 365,
+          "n_field": 2375,
+          "z_sigma_dense": 0.8718890387956943,
+          "z_sigma_field": 1.0598068386627235,
+          "z_delta": 0.18791779986702917,
+          "z_p_field_gt_dense": 0.994
         },
         {
           "threshold": -10.75,
-          "n_dense": 461,
-          "n_field": 2622,
-          "z_sigma_dense": 0.8612464651418882,
-          "z_sigma_field": 1.0445091253575272,
-          "z_delta": 0.18326266021563897,
-          "z_p_field_gt_dense": 0.9966
+          "n_dense": 444,
+          "n_field": 2639,
+          "z_sigma_dense": 0.8491865249431608,
+          "z_sigma_field": 1.0460538926738276,
+          "z_delta": 0.19686736773066682,
+          "z_p_field_gt_dense": 0.996
         },
         {
           "threshold": -10.5,
-          "n_dense": 530,
-          "n_field": 2845,
-          "z_sigma_dense": 0.8815452955172759,
-          "z_sigma_field": 1.020463995900804,
-          "z_delta": 0.13891870038352805,
-          "z_p_field_gt_dense": 0.9782
+          "n_dense": 513,
+          "n_field": 2862,
+          "z_sigma_dense": 0.8720672914741586,
+          "z_sigma_field": 1.0220126684868174,
+          "z_delta": 0.14994537701265875,
+          "z_p_field_gt_dense": 0.9884
         },
         {
           "threshold": -10.25,
-          "n_dense": 584,
-          "n_field": 3033,
-          "z_sigma_dense": 0.8887935366989297,
-          "z_sigma_field": 0.9969246356432943,
-          "z_delta": 0.10813109894436457,
-          "z_p_field_gt_dense": 0.9438
+          "n_dense": 567,
+          "n_field": 3050,
+          "z_sigma_dense": 0.8805107456185335,
+          "z_sigma_field": 0.9985031326873993,
+          "z_delta": 0.11799238706886583,
+          "z_p_field_gt_dense": 0.9644
         },
         {
           "threshold": -10.0,
-          "n_dense": 641,
-          "n_field": 3250,
-          "z_sigma_dense": 0.9042214494805054,
-          "z_sigma_field": 0.9894543713364461,
-          "z_delta": 0.08523292185594067,
-          "z_p_field_gt_dense": 0.899
+          "n_dense": 623,
+          "n_field": 3268,
+          "z_sigma_dense": 0.897874676097149,
+          "z_sigma_field": 0.9908104459583833,
+          "z_delta": 0.09293576986123431,
+          "z_p_field_gt_dense": 0.915
         },
         {
           "threshold": -9.75,
-          "n_dense": 679,
-          "n_field": 3429,
-          "z_sigma_dense": 0.9629716068635286,
-          "z_sigma_field": 0.9847872679651971,
-          "z_delta": 0.02181566110166855,
-          "z_p_field_gt_dense": 0.613
+          "n_dense": 661,
+          "n_field": 3447,
+          "z_sigma_dense": 0.9589241833821552,
+          "z_sigma_field": 0.986055444703673,
+          "z_delta": 0.027131261321517774,
+          "z_p_field_gt_dense": 0.6414
         },
         {
           "threshold": -9.5,
-          "n_dense": 706,
-          "n_field": 3578,
-          "z_sigma_dense": 1.0203537017927298,
-          "z_sigma_field": 0.983820544656407,
-          "z_delta": -0.03653315713632277,
-          "z_p_field_gt_dense": 0.2692
+          "n_dense": 688,
+          "n_field": 3596,
+          "z_sigma_dense": 1.0181684627214262,
+          "z_sigma_field": 0.9850208447617455,
+          "z_delta": -0.0331476179596808,
+          "z_p_field_gt_dense": 0.29400000000000004
         },
         {
           "threshold": -9.25,
-          "n_dense": 735,
-          "n_field": 3684,
-          "z_sigma_dense": 1.031835743695646,
-          "z_sigma_field": 0.9749712992049172,
-          "z_delta": -0.056864444490728805,
-          "z_p_field_gt_dense": 0.18679999999999997
+          "n_dense": 717,
+          "n_field": 3702,
+          "z_sigma_dense": 1.0300738538872245,
+          "z_sigma_field": 0.976178845654066,
+          "z_delta": -0.053895008233158515,
+          "z_p_field_gt_dense": 0.19620000000000004
         }
       ]
     },
     "galaxy_level_test": {
       "description": "One value per galaxy removes point-count bias",
-      "n_dense_gal": 927,
-      "n_field_gal": 1965,
-      "sigma_dense_all": 0.2741154262893931,
-      "sigma_field_all": 0.3225332132269936,
-      "delta_all": 0.04841778693760046,
-      "n_dense_gal_dm": 267,
-      "n_field_gal_dm": 795,
-      "sigma_dense_dm": 0.36865422052331687,
-      "sigma_field_dm": 0.3803116730042553,
-      "delta_dm": 0.011657452480938413,
-      "p_field_gt_dense_dm": 0.7001,
+      "n_dense_gal": 463,
+      "n_field_gal": 1005,
+      "sigma_dense_all": 0.29408162516867575,
+      "sigma_field_all": 0.3781500743341172,
+      "delta_all": 0.08406844916544143,
+      "n_dense_gal_dm": 219,
+      "n_field_gal_dm": 704,
+      "sigma_dense_dm": 0.36081938082000353,
+      "sigma_field_dm": 0.40896506109000186,
+      "delta_dm": 0.048145680269998326,
+      "p_field_gt_dense_dm": 0.9851,
       "supports_bec": true
     },
     "dm_fraction_weighted": {
       "description": "Points weighted by DM fraction (f_DM = 1 - gbar/gobs)",
       "f_dm_gt_0p5": {
-        "n_dense": 1315,
-        "n_field": 8122,
-        "w_sigma_dense": 0.2997523590170445,
-        "w_sigma_field": 0.26703950943539867,
-        "delta": -0.03271284958164583,
-        "p_field_gt_dense": 0.0017000000000000348
+        "n_dense": 1093,
+        "n_field": 7599,
+        "w_sigma_dense": 0.29018036424079496,
+        "w_sigma_field": 0.2745831470170138,
+        "delta": -0.015597217223781157,
+        "p_field_gt_dense": 0.2025
       },
       "f_dm_gt_0p8": {
-        "n_dense": 679,
-        "n_field": 4643,
-        "sigma_dense": 0.3029660091130905,
-        "sigma_field": 0.25044610362193953,
-        "delta": -0.05251990549115099,
-        "p_field_gt_dense": 0.0
+        "n_dense": 592,
+        "n_field": 4407,
+        "sigma_dense": 0.29300744306616516,
+        "sigma_field": 0.2560789126462264,
+        "delta": -0.036928530419938765,
+        "p_field_gt_dense": 0.0016000000000000458
       },
       "supports_bec": false
     },
@@ -518,46 +551,45 @@
       "description": "MC error propagation (1000 realizations)",
       "n_mc": 1000,
       "overall": {
-        "median_delta": 0.029300615745958353,
+        "median_delta": 0.014059104281131468,
         "ci_68": [
-          0.02479543988375139,
-          0.03661755679135264
+          0.007253832262598343,
+          0.022516831709457494
         ],
         "ci_95": [
-          0.021487687020137466,
-          0.04749633389714879
+          0.001809479428256003,
+          0.0345252272840966
         ],
-        "frac_positive": 1.0
+        "frac_positive": 0.994
       },
       "dm_regime": {
-        "median_delta": 0.018221346517068,
+        "median_delta": 0.022200448534936468,
         "ci_68": [
-          0.008285773386576068,
-          0.033611917843652875
+          0.009976061446444173,
+          0.037268096095764244
         ],
         "ci_95": [
-          0.0018369977865752038,
-          0.05536754750935133
+          0.0012066188861344508,
+          0.05716062387419637
         ],
-        "frac_positive": 0.988
+        "frac_positive": 0.982
       },
       "supports_bec": true
     },
     "z_norm_galaxy_level": {
       "description": "Galaxy-level scatter with Z-score normalization (DM regime)",
-      "n_dense_gal": 267,
-      "n_field_gal": 795,
-      "z_sigma_dense": 1.1526451421516848,
-      "z_sigma_field": 0.9132100898552724,
-      "z_delta": -0.23943505229641238,
-      "p_field_gt_dense": 0.00039999999999995595,
+      "n_dense_gal": 219,
+      "n_field_gal": 704,
+      "z_sigma_dense": 1.1603359986254276,
+      "z_sigma_field": 0.860754668541858,
+      "z_delta": -0.2995813300835696,
+      "p_field_gt_dense": 0.0,
       "supports_bec": false
     },
     "bec_transition_function": {
       "description": "Tests if Dsigma(gbar) follows Bose-Einstein occupation number",
-      "n_bins": 8,
+      "n_bins": 7,
       "bin_centers": [
-        -12.75,
         -12.25,
         -11.75,
         -11.25,
@@ -567,323 +599,366 @@
         -9.25
       ],
       "bin_delta_z": [
-        -0.36989187767170106,
-        0.03806152813032182,
-        0.19686299451406952,
-        -0.027925296528319765,
-        -0.21184595143356755,
-        0.08826698255136334,
-        0.11274296956118901,
-        -0.03278789475445021
+        0.15880603204879518,
+        0.28320869212425137,
+        -0.003270604368631358,
+        -0.3346387410497049,
+        0.08168552806870433,
+        -0.031910381339220306,
+        -0.0996103673287223
       ],
       "bec_fit": {
-        "amplitude_A": 0.0015206776260307205,
-        "offset_C": 0.029620076874092,
-        "reduced_chi2": 6.787636108438789,
-        "aic": 44.72581665063273
+        "amplitude_A": 0.030169376106965608,
+        "offset_C": -0.08960439697483878,
+        "reduced_chi2": 8.507838559846688,
+        "reduced_chi2_bec_z_uncalibrated": 8.507838559846688,
+        "sigma_int_bec_z": 2.740043532472758,
+        "reduced_chi2_bec_z_calibrated": 1.0000000000001052,
+        "chi2_cal_method_bec": "brentq",
+        "chi2_cal_n_used_bec": 1675,
+        "chi2_cal_dof_used_bec": 5,
+        "chi2_cal_dof_assumption_bec": "k_bec=2, k_lin=2, k_const=1 from Test-7 fit parameter counts",
+        "chi2_cal_bracket_bec": [
+          0.0,
+          10.0
+        ],
+        "chi2_cal_reason_bec": null,
+        "aic": 129.32070752449107
       },
       "linear_fit": {
-        "reduced_chi2": 6.798506416347803,
-        "aic": 44.79103849808682
+        "reduced_chi2": 9.858068560815122,
+        "reduced_chi2_linear_z_uncalibrated": 9.858068560815122,
+        "sigma_int_linear_z": 2.976250756424176,
+        "reduced_chi2_linear_z_calibrated": 0.999999999563773,
+        "chi2_cal_method_linear": "brentq",
+        "chi2_cal_n_used_linear": 1675,
+        "chi2_cal_dof_used_linear": 5,
+        "chi2_cal_dof_assumption_linear": "k_bec=2, k_lin=2, k_const=1 from Test-7 fit parameter counts",
+        "chi2_cal_bracket_linear": [
+          0.0,
+          10.0
+        ],
+        "chi2_cal_reason_linear": null,
+        "aic": 53.29034280407561
       },
       "constant_fit": {
-        "reduced_chi2": 16.711281965262923,
-        "aic": 185.82410161789215
+        "reduced_chi2": 9.769267853281073,
+        "reduced_chi2_const_z_uncalibrated": 9.769267853281073,
+        "sigma_int_const_z": 2.96129496291863,
+        "reduced_chi2_const_z_calibrated": 0.9999999995776371,
+        "chi2_cal_method_const": "brentq",
+        "chi2_cal_n_used_const": 1675,
+        "chi2_cal_dof_used_const": 6,
+        "chi2_cal_dof_assumption_const": "k_bec=2, k_lin=2, k_const=1 from Test-7 fit parameter counts",
+        "chi2_cal_bracket_const": [
+          0.0,
+          10.0
+        ],
+        "chi2_cal_reason_const": null,
+        "aic": 247.16247907243124
       },
-      "delta_aic_linear_minus_bec": 0.06522184745409021,
-      "delta_aic_constant_minus_bec": 8.116433344489721,
+      "chi2_shared_ref_model": null,
+      "sigma_int_shared_z": null,
+      "reduced_chi2_bec_z_shared": null,
+      "reduced_chi2_lin_z_shared": null,
+      "reduced_chi2_const_z_shared": null,
+      "chi2_shared_method": null,
+      "chi2_shared_n_used_ref": null,
+      "chi2_shared_reason": null,
+      "delta_aic_linear_minus_bec": 6.751150004842167,
+      "delta_aic_constant_minus_bec": 14.076414320452997,
       "best_model": "BEC",
-      "spearman_r": 0.19047619047619052,
-      "spearman_p": 0.6514014957024813,
+      "spearman_r": -0.6785714285714287,
+      "spearman_p": 0.0937502539598313,
       "supports_bec": true,
       "robustness": {
         "bootstrap_daic": {
           "n_iterations": 1000,
           "n_valid": 1000,
-          "median_daic": -0.1387704621511574,
+          "median_daic": 3.630103565874194,
           "ci_68": [
-            -4.021589452394253,
-            2.0070689580495054
+            -1.3807496508500066,
+            10.612485667851788
           ],
           "ci_95": [
-            -11.187096677282964,
-            7.3252096917098894
+            -10.391068403804425,
+            20.34142654964419
           ],
-          "frac_bec_preferred": 0.453,
-          "median_amplitude_A": 0.002879563620687259,
-          "robust": false
+          "frac_bec_preferred": 0.769,
+          "median_amplitude_A": 0.02504139824832783,
+          "robust": true
         },
         "leave_one_out": {
           "SPARC": {
-            "daic_lin_bec": -4.551443129814331,
-            "bec_A": -0.020818064320407313,
+            "daic_lin_bec": -6.306736238901124,
+            "bec_A": -0.006614112011289239,
             "n_bins": 7,
             "best_model": "Linear"
           },
           "deBlok2002": {
-            "daic_lin_bec": 0.007360054446351683,
-            "bec_A": 0.000518066345514101,
-            "n_bins": 8,
+            "daic_lin_bec": 6.42729624343761,
+            "bec_A": 0.030627941741519758,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "WALLABY": {
-            "daic_lin_bec": -0.7009892968040532,
-            "bec_A": -0.008414865196237947,
-            "n_bins": 8,
-            "best_model": "Linear"
+            "daic_lin_bec": 5.476979828279148,
+            "bec_A": 0.029023371098211886,
+            "n_bins": 7,
+            "best_model": "BEC"
           },
           "SS2020": {
-            "daic_lin_bec": 0.06614952037853072,
-            "bec_A": 0.001533337029098157,
-            "n_bins": 8,
+            "daic_lin_bec": 6.83158057684183,
+            "bec_A": 0.030184295893821697,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "LITTLETHINGS": {
-            "daic_lin_bec": 0.06971518538360044,
-            "bec_A": 0.0015682526201689993,
-            "n_bins": 8,
+            "daic_lin_bec": 6.793649705418396,
+            "bec_A": 0.030253916360832772,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "LVHIS": {
-            "daic_lin_bec": 1.0344808095558022,
-            "bec_A": 0.007125661074147015,
+            "daic_lin_bec": 7.32997647861599,
+            "bec_A": 0.03175934286612482,
             "n_bins": 7,
             "best_model": "BEC"
           },
           "Yu2020": {
-            "daic_lin_bec": 1.8629604946850833,
-            "bec_A": 0.010353002025770486,
+            "daic_lin_bec": 7.770572277101664,
+            "bec_A": 0.033877114715674644,
             "n_bins": 7,
             "best_model": "BEC"
           },
           "Swaters2025": {
-            "daic_lin_bec": 0.03923606429222559,
-            "bec_A": 0.0012691214945890206,
-            "n_bins": 8,
+            "daic_lin_bec": 6.868117709814804,
+            "bec_A": 0.02972345854650377,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "GHASP": {
-            "daic_lin_bec": 0.11508327212784053,
-            "bec_A": 0.005044315129635154,
-            "n_bins": 8,
+            "daic_lin_bec": 3.8329037428465327,
+            "bec_A": 0.01838804848886015,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "Noordermeer2005": {
-            "daic_lin_bec": 0.0653192708830872,
-            "bec_A": 0.001514274346012645,
-            "n_bins": 8,
+            "daic_lin_bec": 6.76399283445064,
+            "bec_A": 0.030341904411168654,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "Vogt2004": {
-            "daic_lin_bec": -0.8279677808658761,
-            "bec_A": 0.0030432312837844634,
-            "n_bins": 8,
-            "best_model": "Linear"
+            "daic_lin_bec": 1.2676969687892523,
+            "bec_A": 0.033627397285231626,
+            "n_bins": 7,
+            "best_model": "BEC"
           },
           "Catinella2005": {
-            "daic_lin_bec": 2.2660073123451454,
-            "bec_A": 0.014959033926566095,
-            "n_bins": 8,
+            "daic_lin_bec": 9.600108390548016,
+            "bec_A": 0.0480945731100179,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "VirgoRC": {
-            "daic_lin_bec": 0.05520447829400155,
-            "bec_A": 0.0014043012607596658,
-            "n_bins": 8,
+            "daic_lin_bec": 6.747050516017403,
+            "bec_A": 0.03016969916960388,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "PHANGS": {
-            "daic_lin_bec": 0.2550020651935654,
-            "bec_A": 0.003417290307474257,
-            "n_bins": 8,
+            "daic_lin_bec": 5.89253286125809,
+            "bec_A": 0.03882103193552292,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "Verheijen2001": {
-            "daic_lin_bec": 0.3503948239575436,
-            "bec_A": 0.0040566241891692185,
+            "daic_lin_bec": 4.889807851705008,
+            "bec_A": 0.026828454633665975,
             "n_bins": 7,
             "best_model": "BEC"
           },
           "MaNGA": {
-            "daic_lin_bec": 0.5197885932686575,
-            "bec_A": 0.0062064356184502855,
-            "n_bins": 8,
+            "daic_lin_bec": 6.751150004842152,
+            "bec_A": 0.030169376851015273,
+            "n_bins": 7,
             "best_model": "BEC"
           },
           "WALLABY_DR2": {
-            "daic_lin_bec": 0.019227038754110026,
-            "bec_A": 0.003886588893375361,
-            "n_bins": 8,
+            "daic_lin_bec": 6.769753365202504,
+            "bec_A": 0.03394298165032022,
+            "n_bins": 7,
             "best_model": "BEC"
           }
         },
         "test6_diagnostic": {
           "SPARC": {
-            "delta": -0.27049227997617586,
+            "delta": -0.3876853651780794,
             "supports_bec": false,
-            "n_dense": 266,
-            "n_field": 858
+            "n_dense": 207,
+            "n_field": 710
           },
           "deBlok2002": {
-            "delta": -0.23257584468505232,
+            "delta": -0.3292828546890395,
             "supports_bec": false,
-            "n_dense": 294,
-            "n_field": 936
+            "n_dense": 235,
+            "n_field": 788
           },
           "WALLABY": {
-            "delta": -0.278806539223143,
+            "delta": -0.4051275742062831,
             "supports_bec": false,
-            "n_dense": 262,
-            "n_field": 821
+            "n_dense": 203,
+            "n_field": 673
           },
           "SS2020": {
-            "delta": -0.2435610898470082,
+            "delta": -0.3438134850327098,
             "supports_bec": false,
-            "n_dense": 291,
-            "n_field": 929
+            "n_dense": 232,
+            "n_field": 781
           },
           "LITTLETHINGS": {
-            "delta": -0.2347097318284017,
+            "delta": -0.3324010580433222,
             "supports_bec": false,
-            "n_dense": 294,
-            "n_field": 944
+            "n_dense": 235,
+            "n_field": 796
           },
           "LVHIS": {
-            "delta": -0.22862048568515425,
+            "delta": -0.3209081626041016,
             "supports_bec": false,
-            "n_dense": 288,
-            "n_field": 932
+            "n_dense": 232,
+            "n_field": 781
           },
           "Yu2020": {
-            "delta": -0.2188052222072907,
+            "delta": -0.33832796002523124,
             "supports_bec": false,
-            "n_dense": 255,
-            "n_field": 861
+            "n_dense": 210,
+            "n_field": 699
           },
           "Swaters2025": {
-            "delta": -0.24657226971761825,
+            "delta": -0.34301330281480624,
             "supports_bec": false,
-            "n_dense": 294,
-            "n_field": 915
+            "n_dense": 235,
+            "n_field": 767
           },
           "GHASP": {
-            "delta": -0.23110100724949267,
+            "delta": -0.3328284841723007,
             "supports_bec": false,
-            "n_dense": 292,
-            "n_field": 912
+            "n_dense": 234,
+            "n_field": 771
           },
           "Noordermeer2005": {
-            "delta": -0.23212163319279233,
+            "delta": -0.3299408007442387,
             "supports_bec": false,
-            "n_dense": 293,
-            "n_field": 943
-          },
-          "Vogt2004": {
-            "delta": -0.0882656637824345,
-            "supports_bec": false,
-            "n_dense": 202,
-            "n_field": 949
-          },
-          "Catinella2005": {
-            "delta": -0.12281396281826074,
-            "supports_bec": false,
-            "n_dense": 290,
-            "n_field": 656
-          },
-          "VirgoRC": {
-            "delta": -0.23559840603787452,
-            "supports_bec": false,
-            "n_dense": 293,
-            "n_field": 954
-          },
-          "PHANGS": {
-            "delta": -0.23819689875567884,
-            "supports_bec": false,
-            "n_dense": 292,
-            "n_field": 952
-          },
-          "Verheijen2001": {
-            "delta": -0.23787317736083835,
-            "supports_bec": false,
-            "n_dense": 286,
-            "n_field": 954
-          },
-          "MaNGA": {
-            "delta": -0.3560589844222105,
-            "supports_bec": false,
-            "n_dense": 257,
+            "n_dense": 235,
             "n_field": 794
           },
-          "WALLABY_DR2": {
-            "delta": -0.23449599076713945,
+          "Vogt2004": {
+            "delta": -0.09170040566462667,
             "supports_bec": false,
-            "n_dense": 255,
-            "n_field": 954
+            "n_dense": 143,
+            "n_field": 801
+          },
+          "Catinella2005": {
+            "delta": -0.220547499287146,
+            "supports_bec": false,
+            "n_dense": 231,
+            "n_field": 509
+          },
+          "VirgoRC": {
+            "delta": -0.3320723609557341,
+            "supports_bec": false,
+            "n_dense": 234,
+            "n_field": 806
+          },
+          "PHANGS": {
+            "delta": -0.32992077159612143,
+            "supports_bec": false,
+            "n_dense": 235,
+            "n_field": 802
+          },
+          "Verheijen2001": {
+            "delta": -0.3398998481803859,
+            "supports_bec": false,
+            "n_dense": 227,
+            "n_field": 806
+          },
+          "MaNGA": {
+            "delta": -0.3298315689877993,
+            "supports_bec": false,
+            "n_dense": 235,
+            "n_field": 806
+          },
+          "WALLABY_DR2": {
+            "delta": -0.3638875967768447,
+            "supports_bec": false,
+            "n_dense": 197,
+            "n_field": 806
           }
         }
       }
     },
     "summary": {
-      "n_tests": 13,
-      "n_supporting": 7,
-      "n_primary_tests": 8,
-      "n_primary_supporting": 7,
+      "n_tests": 14,
+      "n_supporting": 5,
+      "n_primary_tests": 6,
+      "n_primary_supporting": 5,
       "n_robustness_checks": 3,
       "n_robustness_supporting": 0,
       "tests": [
         {
           "name": "Z-score (DM regime)",
-          "delta": -0.03961912328333983,
-          "significance": "P=0.181",
+          "delta": -0.014254841316957867,
+          "significance": "P=0.355",
           "supports_bec": "False",
           "category": "robustness"
         },
         {
           "name": "Threshold scan peak",
-          "delta": 0.2605213966634051,
-          "significance": "P=0.999",
+          "delta": 0.28438258611259337,
+          "significance": "P=1.000",
           "supports_bec": "True",
           "category": "primary"
         },
         {
           "name": "Galaxy-level (DM regime)",
-          "delta": 0.011657452480938413,
-          "significance": "P=0.700",
+          "delta": 0.048145680269998326,
+          "significance": "P=0.985",
           "supports_bec": true,
           "category": "primary"
         },
         {
           "name": "DM-weighted f_DM>0.5",
-          "delta": -0.03271284958164583,
-          "significance": "P=0.002",
+          "delta": -0.015597217223781157,
+          "significance": "P=0.203",
           "supports_bec": "False",
           "category": "robustness"
         },
         {
           "name": "MC error propagation (DM)",
-          "delta": 0.018221346517068,
-          "significance": "99%",
+          "delta": 0.022200448534936468,
+          "significance": "98%",
           "supports_bec": "True",
           "category": "primary"
         },
         {
           "name": "Z-norm galaxy-level (DM)",
-          "delta": -0.23943505229641238,
+          "delta": -0.2995813300835696,
           "significance": "P=0.000",
           "supports_bec": false,
           "category": "robustness"
         },
         {
           "name": "BEC transition function",
-          "delta": 0.0015206776260307205,
-          "significance": "\u0394AIC=+0.1",
+          "delta": 0.030169376106965608,
+          "significance": "\u0394AIC=+6.8",
           "supports_bec": true,
           "category": "primary"
         },
         {
           "name": "Boson bunching \u03c3\u00b2\u221dn\u0304(n\u0304+1)",
-          "delta": 9.691951526397759,
-          "significance": "\u0394AIC=+9.7",
+          "delta": 8.886748653600534,
+          "significance": "\u0394AIC=+8.9",
           "supports_bec": "True",
           "category": "primary"
         },
@@ -892,66 +967,73 @@
           "delta": null,
           "significance": "N/A",
           "supports_bec": false,
-          "category": "robustness"
+          "category": "primary"
         },
         {
           "name": "ALFALFA+WISE bunching (N~10k)",
-          "delta": 3.028537938842959,
-          "significance": "\u0394AIC=+3.0",
-          "supports_bec": "True",
-          "category": "robustness"
+          "delta": null,
+          "significance": "N/A",
+          "supports_bec": false,
+          "category": "primary"
         },
         {
           "name": "MaNGA V/\u03c3 bunching (dispersion channel)",
           "delta": null,
           "significance": "N/A",
           "supports_bec": false,
-          "category": "robustness"
+          "category": "primary"
         },
         {
           "name": "HI profile coherence (non-kinematic)",
-          "delta": -0.04770688806255291,
-          "significance": "\u0394\u03c3=-0.0477",
-          "supports_bec": true,
-          "category": "robustness"
+          "delta": null,
+          "significance": "N/A",
+          "supports_bec": false,
+          "category": "primary"
         },
         {
           "name": "Yang halo mass scatter bunching (weak lensing)",
           "delta": -11461.415286483812,
           "significance": "\u0394AIC=-11461.4",
           "supports_bec": false,
-          "category": "robustness"
+          "category": "primary"
+        },
+        {
+          "name": "Lensing profile shape: solitonic core vs NFW",
+          "delta": null,
+          "significance": "N/A",
+          "supports_bec": false,
+          "category": "primary"
         }
       ],
       "verdict": "STRONG"
     },
     "test8_boson_bunching": {
       "quantum_model": {
-        "A": 0.0008185178758751988,
-        "C": 0.8996791864071719,
-        "chi2_dof": 17.248410922288606,
-        "aic": 176.48410922288605
+        "A": 0.0016339598759578281,
+        "C": 0.8555706979390952,
+        "chi2_dof": 20.308832832076952,
+        "aic": 207.0883283207695
       },
       "classical_model": {
-        "A": 0.004781965368671773,
-        "C": 0.9012973430906456,
-        "chi2_dof": 18.21760607492838,
-        "aic": 186.1760607492838
+        "A": 0.023563203225134277,
+        "C": 0.8217367483901662,
+        "chi2_dof": 21.197507697437004,
+        "aic": 215.97507697437004
       },
       "constant_model": {
-        "mean_var": 0.9130205119216441,
-        "chi2_dof": 16.711281965262923,
-        "aic": 185.82410161789215
+        "mean_var": 0.8838972497735276,
+        "chi2_dof": 22.28749809749375,
+        "aic": 247.16247907243124
       },
-      "delta_aic_classical_minus_quantum": 9.691951526397759,
-      "delta_aic_constant_minus_quantum": 9.339992395006107,
+      "delta_aic_classical_minus_quantum": 8.886748653600534,
+      "delta_aic_constant_minus_quantum": 40.07415075166173,
       "correlation_quantum": {
-        "r": 0.173677452760236,
-        "p": 0.5893204021834716
+        "r": 0.1932417475861169,
+        "p": 0.5473402621192484
       },
       "correlation_classical": {
-        "r": 0.06963426384127876,
-        "p": 0.8297375246838521
+        "r": 0.15727360949663716,
+        "p": 0.6254432391149243
       },
       "n_bins": 12,
       "supports_quantum": "True",
@@ -959,100 +1041,180 @@
         {
           "log_gbar": -12.8,
           "N": 45,
-          "var_obs": 1.3598543874403455,
-          "var_err": 0.28992192954160145,
+          "var_obs": 1.3197078435790208,
+          "var_err": 0.28136265763116514,
           "nbar": 27.019365645772343,
           "nbar_sq_plus_n": 757.0654855457151
         },
         {
           "log_gbar": -12.399999999999999,
-          "N": 149,
-          "var_obs": 1.1972996222209955,
-          "var_err": 0.1391832539520576,
+          "N": 166,
+          "var_obs": 1.235787285014913,
+          "var_err": 0.13605570222053015,
           "nbar": 16.866434644715145,
           "nbar_sq_plus_n": 301.34305226916246
         },
         {
           "log_gbar": -12.0,
-          "N": 832,
-          "var_obs": 1.012218419919673,
-          "var_err": 0.04965794259365371,
+          "N": 938,
+          "var_obs": 1.3401687249369028,
+          "var_err": 0.061916255131569585,
           "nbar": 10.462057351492472,
           "nbar_sq_plus_n": 119.91670137741016
         },
         {
           "log_gbar": -11.599999999999998,
-          "N": 1514,
-          "var_obs": 1.1067615947007807,
-          "var_err": 0.040239225608854415,
+          "N": 1535,
+          "var_obs": 1.0302188797871101,
+          "var_err": 0.037199047741765426,
           "nbar": 6.423843894757457,
           "nbar_sq_plus_n": 47.68961427897011
         },
         {
           "log_gbar": -11.2,
-          "N": 1822,
-          "var_obs": 0.7955574406867267,
-          "var_err": 0.026365230157638583,
+          "N": 1724,
+          "var_obs": 0.8570203279517263,
+          "var_err": 0.029198697736932955,
           "nbar": 3.8801373953719525,
           "nbar_sq_plus_n": 18.935603602335792
         },
         {
           "log_gbar": -10.799999999999997,
-          "N": 2020,
-          "var_obs": 0.7792114783220881,
-          "var_err": 0.024524613950062453,
+          "N": 1801,
+          "var_obs": 0.6969134963621592,
+          "var_err": 0.023230449878738638,
           "nbar": 2.281852303706732,
           "nbar_sq_plus_n": 7.488702239638451
         },
         {
           "log_gbar": -10.399999999999999,
-          "N": 2459,
-          "var_obs": 0.8353955973396353,
-          "var_err": 0.02382957192251105,
+          "N": 2110,
+          "var_obs": 0.7831970386248448,
+          "var_err": 0.02411835840689532,
           "nbar": 1.28389873928132,
           "nbar_sq_plus_n": 2.9322947120094827
         },
         {
           "log_gbar": -9.999999999999996,
-          "N": 3062,
-          "var_obs": 0.9388583933922939,
-          "var_err": 0.023998462910093794,
+          "N": 1941,
+          "var_obs": 1.0958852395733951,
+          "var_err": 0.035186754453691356,
           "nbar": 0.6704816646891006,
           "nbar_sq_plus_n": 1.1200273273733683
         },
         {
           "log_gbar": -9.599999999999998,
-          "N": 2383,
-          "var_obs": 1.155707162410707,
-          "var_err": 0.033488209201738235,
+          "N": 1322,
+          "var_obs": 1.1073360249712456,
+          "var_err": 0.043086678691854494,
           "nbar": 0.30773901144890153,
           "nbar_sq_plus_n": 0.4024423106164487
         },
         {
           "log_gbar": -9.199999999999996,
-          "N": 1124,
-          "var_obs": 0.9950431166585736,
-          "var_err": 0.04199204444879418,
+          "N": 689,
+          "var_obs": 0.8347983379562578,
+          "var_err": 0.04500930992372224,
           "nbar": 0.11229790902375704,
           "nbar_sq_plus_n": 0.12490872939486505
         },
         {
           "log_gbar": -8.799999999999997,
-          "N": 248,
-          "var_obs": 1.672882860981793,
-          "var_err": 0.15053311649760934,
+          "N": 237,
+          "var_obs": 1.2023374654589336,
+          "var_err": 0.11068413528496963,
           "nbar": 0.027121057367408535,
           "nbar_sq_plus_n": 0.0278566091201348
         },
         {
           "log_gbar": -8.399999999999995,
-          "N": 52,
-          "var_obs": 1.9032156413319063,
-          "var_err": 0.3768928582039125,
+          "N": 63,
+          "var_obs": 2.1248214424645484,
+          "var_err": 0.3816291969268127,
           "nbar": 0.003161623754728212,
           "nbar_sq_plus_n": 0.0031716196194946735
         }
       ]
+    },
+    "test13b_lensing_profile": {
+      "n_bins": 4,
+      "total_delta_aic": -16.21869394587231,
+      "n_bec_preferred": 0,
+      "scaling_slope": 0.9661236138626871,
+      "scaling_prediction": 0.3333333333333333,
+      "corr_rc_xi": 0.9439060010751447,
+      "p_corr_rc_xi": 0.05609399892485545,
+      "bins": [
+        {
+          "mass_bin": "[8.5, 10.3]",
+          "logMs": 9.4,
+          "n_pts": 15,
+          "nfw_logM200": 12.00606992391047,
+          "nfw_c200": 7.427781523059613,
+          "nfw_chi2_dof": 2.445551783644519,
+          "nfw_aic": 35.79217318737875,
+          "bec_logM200": 12.010545053914148,
+          "bec_c200": 7.45083007436642,
+          "bec_rc_kpc": 1.460642915000187,
+          "bec_f_sol": 0.001000012810872382,
+          "bec_chi2_dof": 2.890458684920287,
+          "bec_aic": 39.795045534123155,
+          "delta_aic": -4.002872346744404,
+          "xi_pred_kpc": 1.7081419082343061
+        },
+        {
+          "mass_bin": "[10.3, 10.6]",
+          "logMs": 10.45,
+          "n_pts": 15,
+          "nfw_logM200": 12.321298255838192,
+          "nfw_c200": 9.4609313706361,
+          "nfw_chi2_dof": 5.1757077140827255,
+          "nfw_aic": 71.28420028307544,
+          "bec_logM200": 12.321300361826971,
+          "bec_c200": 9.457791906855071,
+          "bec_rc_kpc": 22.029675155535713,
+          "bec_f_sol": 0.0010000091677918738,
+          "bec_chi2_dof": 6.124143585162869,
+          "bec_aic": 75.36557943679156,
+          "delta_aic": -4.081379153716128,
+          "xi_pred_kpc": 5.721685044355934
+        },
+        {
+          "mass_bin": "[10.6, 10.8]",
+          "logMs": 10.7,
+          "n_pts": 15,
+          "nfw_logM200": 12.423591288489565,
+          "nfw_c200": 10.233673765604685,
+          "nfw_chi2_dof": 8.76216838310191,
+          "nfw_aic": 117.90818898032484,
+          "bec_logM200": 12.423790384750818,
+          "bec_c200": 10.231826093425848,
+          "bec_rc_kpc": 35.4241224770139,
+          "bec_f_sol": 0.0010000021658000697,
+          "bec_chi2_dof": 10.359824255338053,
+          "bec_aic": 121.95806680871857,
+          "delta_aic": -4.049877828393733,
+          "xi_pred_kpc": 7.629989634736999
+        },
+        {
+          "mass_bin": "[10.8, 11.0]",
+          "logMs": 10.9,
+          "n_pts": 15,
+          "nfw_logM200": 12.547646528003522,
+          "nfw_c200": 11.25598006192762,
+          "nfw_chi2_dof": 9.325857146728694,
+          "nfw_aic": 125.23614290747302,
+          "bec_logM200": 12.547738316873374,
+          "bec_c200": 11.253019611602062,
+          "bec_rc_kpc": 32.07416506674535,
+          "bec_f_sol": 0.0010000023824176334,
+          "bec_chi2_dof": 11.029155229499189,
+          "bec_aic": 129.32070752449107,
+          "delta_aic": -4.084564617018046,
+          "xi_pred_kpc": 9.605587842896513
+        }
+      ],
+      "composite_note": "Composite SPARC+Brouwer approach also tested; INCONCLUSIVE due to V\u00b2/(4GR) conversion systematic. BEC with fixed r_c=\u03be shows no improvement over NFW (\u0394AIC \u2248 -2 to -3)."
     }
   }
 }

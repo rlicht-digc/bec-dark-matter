@@ -1,0 +1,399 @@
+{
+  "generated_utc": "2026-03-01T22:53:49.380227Z",
+  "repo_root": "/Users/russelllicht/bec-dark-matter",
+  "tng_inputs": [
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/raw_data/tng/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points_CLEAN.parquet",
+      "sha256": "98c08968891ed21b5bc0e8dec5715b3863da4b21966ceffa54783afa4b6974fe",
+      "schema_summary": {
+        "n_rows": 150000,
+        "n_columns": 6,
+        "columns": [
+          "r_kpc",
+          "log_gbar",
+          "log_gobs",
+          "log_gDM",
+          "lowres_flag",
+          "SubhaloID"
+        ],
+        "dtypes": {
+          "r_kpc": "float64",
+          "log_gbar": "float64",
+          "log_gobs": "float64",
+          "log_gDM": "float64",
+          "lowres_flag": "int64",
+          "SubhaloID": "int64"
+        },
+        "log_gbar_range": [
+          -11.921141361682873,
+          -8.472642647559915
+        ],
+        "log_gobs_range": [
+          -11.1307817478079,
+          -8.376740607832305
+        ],
+        "log_gDM_range": [
+          -11.216283973841444,
+          -9.020818304477144
+        ],
+        "lowres_nonzero_fraction": 0.0
+      },
+      "n_gal": 3000,
+      "radii_stats": {
+        "points_per_gal_min": 50,
+        "points_per_gal_median": 50.0,
+        "points_per_gal_max": 50,
+        "radius_min_global_kpc": 1.5,
+        "radius_max_global_kpc": 200.00000000000003,
+        "radius_span_per_gal_min_kpc": 2.4933365391600897,
+        "radius_span_per_gal_median_kpc": 22.573334860315995,
+        "radius_span_per_gal_max_kpc": 179.11127544906518
+      }
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/raw_data/tng/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points.csv",
+      "sha256": "9c07d54fce9dd2839244481ae5a135bbdedfa4485469d52a8258f52d3b9438a4",
+      "schema_summary": {
+        "n_rows": 150000,
+        "n_columns": 6,
+        "columns": [
+          "r_kpc",
+          "log_gbar",
+          "log_gobs",
+          "log_gDM",
+          "lowres_flag",
+          "SubhaloID"
+        ],
+        "dtypes": {
+          "r_kpc": "float64",
+          "log_gbar": "float64",
+          "log_gobs": "float64",
+          "log_gDM": "float64",
+          "lowres_flag": "int64",
+          "SubhaloID": "int64"
+        },
+        "log_gbar_range": [
+          -11.921141361682873,
+          -8.472642647559915
+        ],
+        "log_gobs_range": [
+          -11.1307817478079,
+          -8.376740607832305
+        ],
+        "log_gDM_range": [
+          -11.216283973841444,
+          -9.020818304477144
+        ],
+        "lowres_nonzero_fraction": 0.0
+      },
+      "n_gal": 3000,
+      "radii_stats": {
+        "points_per_gal_min": 50,
+        "points_per_gal_median": 50.0,
+        "points_per_gal_max": 50,
+        "radius_min_global_kpc": 1.5,
+        "radius_max_global_kpc": 200.00000000000003,
+        "radius_span_per_gal_min_kpc": 2.4933365391600897,
+        "radius_span_per_gal_median_kpc": 22.573334860315995,
+        "radius_span_per_gal_max_kpc": 179.11127544906518
+      }
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/raw_data/tng/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/rar_points.parquet",
+      "sha256": "25d2169920829bc21fa48302c06351f208a3e18246a1f82d185d6499c1ffdbb3",
+      "schema_summary": {
+        "n_rows": 2406650,
+        "n_columns": 6,
+        "columns": [
+          "r_kpc",
+          "log_gbar",
+          "log_gobs",
+          "log_gDM",
+          "lowres_flag",
+          "SubhaloID"
+        ],
+        "dtypes": {
+          "r_kpc": "float64",
+          "log_gbar": "float64",
+          "log_gobs": "float64",
+          "log_gDM": "float64",
+          "lowres_flag": "int64",
+          "SubhaloID": "int64"
+        },
+        "log_gbar_range": [
+          -30.0,
+          -8.433038361566826
+        ],
+        "log_gobs_range": [
+          -30.0,
+          -8.366513025520888
+        ],
+        "log_gDM_range": [
+          -30.0,
+          -9.012020306809912
+        ],
+        "lowres_nonzero_fraction": 0.0020796542912347037
+      },
+      "n_gal": 48133,
+      "radii_stats": {
+        "points_per_gal_min": 50,
+        "points_per_gal_median": 50.0,
+        "points_per_gal_max": 50,
+        "radius_min_global_kpc": 1.5,
+        "radius_max_global_kpc": 200.00000000000003,
+        "radius_span_per_gal_min_kpc": 0.33717265725135803,
+        "radius_span_per_gal_median_kpc": 13.313258647918701,
+        "radius_span_per_gal_max_kpc": 179.9278316497803
+      }
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/raw_data/tng/quarantine_contaminated/rar_points_20899x15_CONTAMINATED.parquet",
+      "sha256": "e3af2cc1c45959597c91d2904b0cb236be1b6f233667d5380baee0d6722d3b28",
+      "schema_summary": {
+        "n_rows": 313485,
+        "n_columns": 6,
+        "columns": [
+          "SubhaloID",
+          "r_kpc",
+          "log_gbar",
+          "log_gobs",
+          "log_gDM",
+          "lowres_flag"
+        ],
+        "dtypes": {
+          "SubhaloID": "int64",
+          "r_kpc": "float64",
+          "log_gbar": "float64",
+          "log_gobs": "float64",
+          "log_gDM": "float64",
+          "lowres_flag": "int64"
+        },
+        "log_gbar_range": [
+          -12.997097087553328,
+          -8.077049581031146
+        ],
+        "log_gobs_range": [
+          -11.834683785148837,
+          -8.066080377482178
+        ],
+        "log_gDM_range": [
+          -30.0,
+          -9.02059277711395
+        ],
+        "lowres_nonzero_fraction": 0.0
+      },
+      "n_gal": 20899,
+      "radii_stats": {
+        "points_per_gal_min": 15,
+        "points_per_gal_median": 15.0,
+        "points_per_gal_max": 15,
+        "radius_min_global_kpc": 0.25001195073127747,
+        "radius_max_global_kpc": 652.0412445068359,
+        "radius_span_per_gal_min_kpc": 2.250107556581497,
+        "radius_span_per_gal_median_kpc": 14.35893988609314,
+        "radius_span_per_gal_max_kpc": 586.8371200561523
+      }
+    },
+    {
+      "path": "/Users/russelllicht/bec-dark-matter/raw_data/tng/quarantine_contaminated/tng_mass_profiles_CONTAMINATED_20899_session.npz",
+      "sha256": "b11cfa2b779181c169877fe331bab935a6173b7d2bf5b3b641913cf1c6d21c60",
+      "schema_summary": {
+        "npz_keys": [
+          "galaxy_ids",
+          "r_half_kpc",
+          "vmax",
+          "m_star_total",
+          "radii_kpc",
+          "m_star_enc",
+          "m_gas_enc",
+          "m_dm_enc",
+          "r_multipliers",
+          "n_radii",
+          "r_min_factor",
+          "r_max_factor",
+          "m_star_min",
+          "h",
+          "description"
+        ],
+        "shapes": {
+          "galaxy_ids": [
+            20899
+          ],
+          "r_half_kpc": [
+            20899
+          ],
+          "vmax": [
+            20899
+          ],
+          "m_star_total": [
+            20899
+          ],
+          "radii_kpc": [
+            20899,
+            15
+          ],
+          "m_star_enc": [
+            20899,
+            15
+          ],
+          "m_gas_enc": [
+            20899,
+            15
+          ],
+          "m_dm_enc": [
+            20899,
+            15
+          ],
+          "r_multipliers": [
+            15
+          ],
+          "n_radii": [],
+          "r_min_factor": [],
+          "r_max_factor": [],
+          "m_star_min": [],
+          "h": [],
+          "description": []
+        },
+        "dtypes": {
+          "galaxy_ids": "int64",
+          "r_half_kpc": "float64",
+          "vmax": "float64",
+          "m_star_total": "float64",
+          "radii_kpc": "float64",
+          "m_star_enc": "float64",
+          "m_gas_enc": "float64",
+          "m_dm_enc": "float64",
+          "r_multipliers": "float64",
+          "n_radii": "int64",
+          "r_min_factor": "float64",
+          "r_max_factor": "float64",
+          "m_star_min": "float64",
+          "h": "float64",
+          "description": "<U128"
+        }
+      },
+      "n_gal": 20899,
+      "radii_stats": {
+        "n_radii": 15
+      }
+    }
+  ],
+  "sparc_inputs": {
+    "path": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+    "sha256": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+    "schema_summary": {
+      "n_rows": 12621,
+      "n_columns": 10,
+      "columns": [
+        "galaxy",
+        "galaxy_key",
+        "source",
+        "log_gbar",
+        "log_gobs",
+        "log_res",
+        "sigma_log_gobs",
+        "R_kpc",
+        "env_dense",
+        "logMh"
+      ],
+      "dtypes": {
+        "galaxy": "str",
+        "galaxy_key": "str",
+        "source": "str",
+        "log_gbar": "float64",
+        "log_gobs": "float64",
+        "log_res": "float64",
+        "sigma_log_gobs": "float64",
+        "R_kpc": "float64",
+        "env_dense": "str",
+        "logMh": "float64"
+      },
+      "sparc_rows": 2784,
+      "sparc_galaxies": 131,
+      "sparc_points_per_gal_min": 5,
+      "sparc_points_per_gal_median": 15.0,
+      "sparc_points_per_gal_max": 115,
+      "sparc_R_kpc_range": [
+        0.053952,
+        157.495259
+      ]
+    }
+  },
+  "formulas": {
+    "tng_gbar": "Likely truth-level spherical enclosed-mass proxy: log_gbar = log10(G * M_bar(<R) / R^2), where M_bar = M_star_enc + M_gas_enc. Evidence: analysis/pipeline/test_tng_coherence.py uses this exact construction on TNG enclosed-mass profiles; current rar_points writer script (big_extraction_29122.py) is referenced in raw_data/tng/ingestion_staging/repro_commands.sh but is not present in this repo.",
+    "tng_gobs": "Likely truth-level spherical enclosed-mass proxy: log_gobs = log10(G * M_total(<R) / R^2), with M_total = M_bar + M_dm. Evidence: same as above and presence of companion column log_gDM.",
+    "sparc_gbar": "From SPARC rotation-curve decomposition in analysis/pipeline/09_unified_rar_pipeline.py: Vbar^2 = sign(Vgas)*Vgas^2 + Y_disk*Vdisk^2 + Y_bulge*Vbul^2, then gbar = Vbar^2 / R * conv.",
+    "sparc_gobs": "From observed rotation curve in analysis/pipeline/09_unified_rar_pipeline.py: gobs = Vobs^2 / R * conv."
+  },
+  "comparability": {
+    "disk_geometry": {
+      "status": "FAIL",
+      "reason": "Current TNG rar_points appear truth-level enclosed-mass accelerations (spherical M(<R)/R^2 style), not disk-plane baryonic rotation decomposition analogous to SPARC Vbar(R).",
+      "evidence": [
+        "analysis/pipeline/test_tng_coherence.py uses gbar = G*M_bar(<R)/R^2 and gobs = G*M_total(<R)/R^2 on TNG enclosed profiles",
+        "raw_data/tng/.../meta/dataset_manifest.json records extraction/grid constants but no observer-side decomposition terms",
+        "Writer script big_extraction_29122.py is external and absent, so no contrary disk-potential implementation is verifiable locally"
+      ]
+    },
+    "observer_mimic": {
+      "status": "FAIL",
+      "reason": "No evidence of projection, inclination effects, M/L scatter, decomposition inference, RC noise, or beam/systematics in current TNG point products.",
+      "evidence": [
+        "TNG manifests/validation emphasize extraction counts and quality cuts only",
+        "No observer-mimic transform script found in-repo for current production rar_points files"
+      ]
+    },
+    "radial_sampling": {
+      "status": "FAIL",
+      "reason": "Raw TNG products are fixed 50 radii per galaxy, while SPARC is irregular (5-115 points/galaxy).",
+      "mitigation": "analysis/tng/matching.py + analysis/tng/tng_sparc_feature_repro.py now implement pairwise K matching (K_eff=min(K,n_s,n_t))."
+    },
+    "gobs_definition": {
+      "status": "PASS_WITH_CAVEAT",
+      "reason": "TNG gobs is consistent with total-gravity truth acceleration convention (Vcirc_total^2/R equivalent to G*M_total(<R)/R^2), but not observer-measured Vobs under projection/noise."
+    }
+  },
+  "recommendation": {
+    "run_tier": "fix_then_A",
+    "rationale": "Current TNG point products are strong for truth-level checks but mass-model parity to SPARC is not yet demonstrated: disk-geometry comparability fails and writer provenance is external. First fix TNG gbar/gobs parity definition in-repo, then run Tier A strict. Tier B observer-mimic should follow as a sensitivity/realism layer, not replace Tier A.",
+    "required_changes": [
+      {
+        "id": "A1",
+        "title": "Recover/commit canonical TNG rar_points writer with explicit formulas",
+        "targets": [
+          "analysis/pipeline/tng_extract_profiles.py (or new extraction companion)",
+          "raw_data/tng/.../meta/dataset_manifest.json"
+        ],
+        "details": "Bring big_extraction_29122.py logic into version-controlled repo, including exact definitions of log_gbar/log_gobs/log_gDM/lowres_flag and unit conversions."
+      },
+      {
+        "id": "A2",
+        "title": "Tier A parity correction: disk-consistent baryonic acceleration",
+        "targets": [
+          "analysis/tng/adapters.py",
+          "analysis/tng/tng_sparc_feature_repro.py",
+          "analysis/pipeline/new_tng_disk_geometry_builder.py"
+        ],
+        "details": "Compute/ingest Vbar(R) and Vtot(R) in a disk-consistent framework (or documented cylindrical potential proxy), then set gbar=Vbar^2/R and gobs=Vtot^2/R before strict feature tests."
+      },
+      {
+        "id": "A3",
+        "title": "Lock matched radial sampling by construction",
+        "targets": [
+          "analysis/tng/matching.py",
+          "analysis/tests/test_tng_sparc_feature_repro_smoke.py"
+        ],
+        "details": "Keep pairwise K-matching mandatory for strict runs and log K_eff distributions in summary/report."
+      },
+      {
+        "id": "B1",
+        "title": "Tier B observer-mimic layer (after Tier A parity)",
+        "targets": [
+          "analysis/tng/observer_mimic.py",
+          "analysis/tng/tng_sparc_feature_repro.py"
+        ],
+        "details": "Add projection, inclination, M/L scatter, RC sampling/noise to create mock-observed TNG and rerun strict features as sensitivity test."
+      }
+    ]
+  }
+}

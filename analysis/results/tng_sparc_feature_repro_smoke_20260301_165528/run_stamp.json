@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-03-01T21:55:52.772241+00:00",
+  "git_head": "f8f914933f3b0e3d9b2d1935c6377cd1f5db9a73",
+  "repo_root": "/Users/russelllicht/bec-dark-matter",
+  "mode": "smoke",
+  "output_dir": "/Users/russelllicht/bec-dark-matter/analysis/results/tng_sparc_feature_repro_smoke_20260301_165528",
+  "input_paths": {
+    "sparc_unified_csv": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+    "tng_input": "/Users/russelllicht/bec-dark-matter/raw_data/tng/TNG_RAR_3000x50_SOFT1p5_RUN201626_VERIFIED/rar_points_CLEAN.parquet"
+  },
+  "input_sha256": {
+    "sparc_unified_csv": "11742ae37d3cfdab57014e40ee982de07d7955d3ad1d02cce94587530a148b2c",
+    "tng_input": "98c08968891ed21b5bc0e8dec5715b3863da4b21966ceffa54783afa4b6974fe"
+  },
+  "params": {
+    "seed": 42,
+    "n_bootstrap": 500,
+    "n_shuffles": 200,
+    "n_splits": 80,
+    "n_bins": 15,
+    "bin_offsets": 5,
+    "K": 20,
+    "max_pairs": 24,
+    "min_bin_points": 8,
+    "calipers": {
+      "gbar_med": 0.35,
+      "gbar_iqr": 0.3,
+      "R_med": 6.0
+    }
+  }
+}
