@@ -395,13 +395,15 @@ def fit_edge_model(
     if best is None:
         return {"ok": False, "model": "M2b_edge"}
     nll = float(best.fun)
+    mup = float(best.x[3]); mud = float(best.x[6])
+    mu_peak = mup if abs(mup - LOG_G_DAGGER) <= abs(mud - LOG_G_DAGGER) else mud
     return {
         "ok": True,
         "model": "M2b_edge",
         "params": np.asarray(best.x, dtype=float),
         "nll": nll,
         "aic": float(2 * 11 + 2 * nll),  # referee-specified k=11
-        "mu_peak": float(best.x[3]),
+        "mu_peak": mu_peak, "mup_raw": mup, "mud_raw": mud,
         "result_success": bool(getattr(best, "success", False)),
     }
 
@@ -474,13 +476,15 @@ def fit_peak_dip_fallback(
     if best is None:
         return {"ok": False, "model": "M2b_peak_dip_fallback"}
     nll = float(best.fun)
+    mup = float(best.x[3]); mud = float(best.x[6])
+    mu_peak = mup if abs(mup - LOG_G_DAGGER) <= abs(mud - LOG_G_DAGGER) else mud
     return {
         "ok": True,
         "model": "M2b_peak_dip_fallback",
         "params": np.asarray(best.x, dtype=float),
         "nll": nll,
         "aic": float(2 * 9 + 2 * nll),  # technical-note k=9 fallback
-        "mu_peak": float(best.x[3]),
+        "mu_peak": mu_peak, "mup_raw": mup, "mud_raw": mud,
         "result_success": bool(getattr(best, "success", False)),
     }
 
@@ -713,6 +717,11 @@ def run_test1_phase_peak_null(
 
     summary = {
         "test": "phase_peak_null_distribution",
+        "_provenance": {
+            "x_col": "log_gbar", "log_base": "log10", "units": "m/s^2",
+            "peak_definition": "M2b_edge Gaussian center nearest log10(g_dagger)",
+            "log_g_dagger": LOG_G_DAGGER,
+        },
         "n_sparc_points": int(len(sparc_df)),
         "n_sparc_galaxies": int(sparc_df["galaxy"].nunique()),
         "bin_width_dex": BIN_WIDTH,
@@ -720,6 +729,8 @@ def run_test1_phase_peak_null(
         "n_shuffles": int(n_shuffles),
         "real": {
             "mu_peak": mu_real,
+            "mup_raw": fit_real["edge"].get("mup_raw"),
+            "mud_raw": fit_real["edge"].get("mud_raw"),
             "delta_from_gdagger": delta_real,
             "aic_M1": float(fit_real["aic_m1"]),
             "aic_edge": float(fit_real["aic_edge"]),
@@ -985,6 +996,11 @@ def run_test2_mass_matched_phase(
     summary = {
         "status": "OK",
         "test": "mass_matched_phase",
+        "_provenance": {
+            "x_col": "log_gbar", "log_base": "log10", "units": "m/s^2",
+            "peak_definition": "M2b_edge Gaussian center nearest log10(g_dagger)",
+            "log_g_dagger": LOG_G_DAGGER,
+        },
         "tng_file_used": str(tng_points_path),
         "N_matched": int(len(pairs)),
         "mass_range": [float(min(sp_mass_vals.min(), tng_mass_vals.min())), float(max(sp_mass_vals.max(), tng_mass_vals.max()))],
@@ -993,6 +1009,8 @@ def run_test2_mass_matched_phase(
             "n_points": int(len(sp_m)),
             "n_galaxies": int(sp_m["id"].nunique()),
             "mu_peak": float(fit_sp["fit"]["mu_peak"]),
+            "mup_raw": fit_sp["fit"]["edge"].get("mup_raw"),
+            "mud_raw": fit_sp["fit"]["edge"].get("mud_raw"),
             "mu_peak_ci95": mu_sp_ci,
             "daic": float(fit_sp["fit"]["daic"]),
             "daic_ci95": daic_sp_ci,
@@ -1002,6 +1020,8 @@ def run_test2_mass_matched_phase(
             "n_points": int(len(tng_m)),
             "n_galaxies": int(tng_m["id"].nunique()),
             "mu_peak": float(fit_tng["fit"]["mu_peak"]),
+            "mup_raw": fit_tng["fit"]["edge"].get("mup_raw"),
+            "mud_raw": fit_tng["fit"]["edge"].get("mud_raw"),
             "mu_peak_ci95": mu_tng_ci,
             "daic": float(fit_tng["fit"]["daic"]),
             "daic_ci95": daic_tng_ci,

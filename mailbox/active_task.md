@@ -1,20 +1,20 @@
 ---
-task_id: T001
-title: "OSF Package Alignment"
-status: IN_PROGRESS
-owner: human
-created_utc: "2026-02-25T21:00:00Z"
-updated_utc: "2026-02-26T05:30:00Z"
+task_id: null
+title: null
+status: null
+owner: null
 ---
 
-## Objective
-Align the bec-dark-matter repository's analysis outputs with the OSF package structure. Ensure all summary JSONs conform to schema, move plans are executed, OSF HTML pages are regenerated, and upload lists are finalized.
+No active task. T001 (OSF Package Alignment) and T002 (Pre-Commit Repo
+Restructure) are both COMPLETED.
 
-## Steps
-1. [x] Add append-only run logging + schemas (codex)
-2. [x] Resolve OSF metadata TODOs, citations (claude)
-3. [x] Build Step 1 alignment inventory (codex)
-4. [x] Fix 8 core summary JSONs for schema conformance (claude)
-5. [x] Step 3: move plan + OSF page regeneration + upload list (codex)
-6. [x] Review Step 3 outputs and validate completeness (claude)
-7. [ ] Final OSF upload preparation (human)
+## Completed Tasks
+- T001: OSF Package Alignment — completed 2026-03-01
+- T002: Pre-Commit Repo Restructure (C1-C4) — completed 2026-03-01
+
+## Recent Activity (post-task)
+- M0008: Test 6 (Xi Mass-Matched Pairs) — completed 2026-03-02
+- M0009: mu_peak selection fix across all phase-peak scripts — completed 2026-03-02
+  - PROBES control suite created and run (4 modules)
+  - PROBES massmatched controls created and validated
+  - Referee battery re-validated with fix
