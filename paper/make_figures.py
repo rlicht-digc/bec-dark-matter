@@ -363,8 +363,8 @@ def fig3_kurtosis():
 # ════════════════════════════════════════════════════════════
 # FIGURE 4: Scatter Inversion
 # ════════════════════════════════════════════════════════════
-def _scatter_profile(log_gbar, resid, bin_width=0.30, offset=0.0, min_pts=10):
-    """Compute robust scatter profile and its numerical derivative."""
+def _scatter_profile(log_gbar, resid, bin_width=0.30, offset=0.0, min_pts=20):
+    """Compute scatter profile (std) and its numerical derivative."""
     bin_edges = np.arange(-12.5 + offset, -8.5, bin_width)
     centers = 0.5 * (bin_edges[:-1] + bin_edges[1:])
     sigmas = []
@@ -372,8 +372,7 @@ def _scatter_profile(log_gbar, resid, bin_width=0.30, offset=0.0, min_pts=10):
         mask = (log_gbar >= bin_edges[i]) & (log_gbar < bin_edges[i + 1])
         pts = resid[mask]
         if len(pts) >= min_pts:
-            mad = np.median(np.abs(pts - np.median(pts)))
-            sigmas.append(1.4826 * mad)
+            sigmas.append(np.std(pts))
         else:
             sigmas.append(np.nan)
     sigmas = np.array(sigmas)
@@ -416,7 +415,7 @@ def fig4_inversion():
              alpha=0.6, label=r"$\Lambda$CDM mock")
 
     ax1.axvline(LOG_GDAG, color="red", linewidth=0.8, linestyle=":", alpha=0.7)
-    ax1.set_ylabel(r"$\sigma$ (robust, dex)")
+    ax1.set_ylabel(r"$\sigma$ (std, dex)")
     ax1.legend(fontsize=7, loc="upper left")
     ax1.text(0.05, 0.05, "(a)", transform=ax1.transAxes,
              fontsize=10, fontweight="bold", va="bottom")
@@ -446,26 +445,23 @@ def fig4_inversion():
                     -dsigma[i] / (dsigma[i + 1] - dsigma[i])
                 )
                 crossings.append(x_cross)
-    if crossings:
-        best = min(crossings, key=lambda x: abs(x - LOG_GDAG))
-        ax2.axvline(best, color="blue", linewidth=0.8, linestyle="-.", alpha=0.6)
-        # Label the crossing
-        ax2.annotate(f"crossing = {best:.2f}",
-                     xy=(best, 0), xytext=(best + 0.3, 0.03),
-                     fontsize=6.5, color="blue",
-                     arrowprops=dict(arrowstyle="->", color="blue", lw=0.7))
+    # --- Binning robustness band (wide, 25 configs): -9.890 ± 0.180 ---
+    ax2.axvspan(-9.890 - 0.180, -9.890 + 0.180,
+                color="orange", alpha=0.12,
+                label=r"Binning robustness ($-9.89 \pm 0.18$, 25 configs)")
+
+    # --- Method spread band (narrow, fixed binning): -9.97 ± 0.006 ---
+    ax2.axvspan(-9.970 - 0.006, -9.970 + 0.006,
+                color="blue", alpha=0.25,
+                label=r"Method spread ($-9.97 \pm 0.006$, fixed bins)")
+    ax2.axvline(-9.970, color="blue", linewidth=1.0, linestyle="--", alpha=0.8)
 
     ax2.set_xlabel(r"$\log\,g_{\rm bar}$ [m s$^{-2}$]")
     ax2.set_ylabel(r"$d\sigma/d(\log g_{\rm bar})$")
     ax2.set_xlim(-12.5, -8.5)
-    ax2.legend(fontsize=7, loc="lower left")
+    ax2.legend(fontsize=5.5, loc="lower left")
     ax2.text(0.05, 0.95, "(b)", transform=ax2.transAxes,
              fontsize=10, fontweight="bold", va="top")
-
-    # Annotate the 4-method agreement from full analysis
-    ax2.text(0.97, 0.97, "4 methods agree:\n" + r"crossing at $-9.97 \pm 0.002$",
-             transform=ax2.transAxes, fontsize=6, ha="right", va="top",
-             bbox=dict(facecolor="lightyellow", alpha=0.8, edgecolor="gray"))
 
     plt.setp(ax1.get_xticklabels(), visible=False)
     fig.subplots_adjust(left=0.18, right=0.95, top=0.97, bottom=0.10)
