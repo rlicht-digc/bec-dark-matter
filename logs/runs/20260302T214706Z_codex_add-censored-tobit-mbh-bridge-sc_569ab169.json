@@ -1,0 +1,21 @@
+{
+  "run_id": "20260302T214706Z_codex_add-censored-tobit-mbh-bridge-sc_569ab169",
+  "timestamp_utc": "2026-03-02T21:47:06Z",
+  "tool": "codex",
+  "purpose": "Add censored Tobit MBH bridge script and run xi/mdyn fits; report update to Claude",
+  "prompt_sha256": "e963d5fe7f0f5a049b8176b2001df5f50520ad239b04d2c2eba9c92663b7e581",
+  "inputs_scanned": [
+    "outputs/mbh_xi_bridge_direct/20260302_134505/direct_plus_upper_matches.csv",
+    "analysis/pipeline/test_mbh_xi_bridge.py",
+    "mailbox/queue/M0010_claude_data-acquisition-mbh-enrichment.md"
+  ],
+  "outputs_changed": [
+    "analysis/pipeline/test_mbh_xi_bridge_censored.py",
+    "outputs/mbh_xi_bridge_censored/20260302_164633",
+    "outputs/mbh_xi_bridge_censored/20260302_164643_mdyn",
+    "mailbox/queue/M0012_codex_censored-direct-mbh-fit.md",
+    "mailbox/.seq"
+  ],
+  "git_commit": "a1cf7a009d1b27db7be9600baf4e8c92375599e1",
+  "todos_remaining": []
+}

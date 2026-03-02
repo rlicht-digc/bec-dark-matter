@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "figure": "/Users/russelllicht/bec-dark-matter/outputs/mbh_xi_bridge_censored/20260302_164633/fig_mbh_censored_fit.png"
+  },
+  "counts": {
+    "n_detections": 6,
+    "n_total": 10,
+    "n_upper_limits": 4
+  },
+  "in_dir": "/Users/russelllicht/bec-dark-matter/outputs/mbh_xi_bridge_direct/20260302_134505",
+  "input_csv": "/Users/russelllicht/bec-dark-matter/outputs/mbh_xi_bridge_direct/20260302_134505/direct_plus_upper_matches.csv",
+  "method": "tobit",
+  "models": {
+    "ols_detection_only": {
+      "intercept": 3.2824591705550072,
+      "mad": 0.8791518175950536,
+      "rms": 0.6537894515119899,
+      "sigma": 0.8007252777092295,
+      "slope": 3.6340903339647044
+    },
+    "tobit_censored": {
+      "aic": 28.388181118835817,
+      "bic": 29.295936397817954,
+      "intercept": 3.0022259979202777,
+      "loglik": -11.194090559417909,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "n_iter": 16,
+      "se_intercept": 2.378696622123158,
+      "se_log_sigma": 0.32246974617320184,
+      "se_slope": 1.9835776420795008,
+      "sigma": 0.9394434468515459,
+      "slope": 3.389713879838549,
+      "success": true
+    }
+  },
+  "n_detections": 6,
+  "n_total": 10,
+  "n_upper_limits": 4,
+  "ols": {
+    "intercept": 3.2824591705550072,
+    "n": 6,
+    "r2": null,
+    "rms": 0.6537894515119899,
+    "sigma": 0.8007252777092295,
+    "slope": 3.6340903339647044
+  },
+  "out_dir": "/Users/russelllicht/bec-dark-matter/outputs/mbh_xi_bridge_censored/20260302_164633",
+  "test": "mbh_xi_bridge_censored",
+  "timestamp": "20260302_164636",
+  "tobit": {
+    "converged": true,
+    "intercept": 3.0022259979202777,
+    "n": 10,
+    "nll": 11.194090559417909,
+    "rms": null,
+    "sigma": 0.9394434468515459,
+    "slope": 3.389713879838549
+  },
+  "x_choice": "xi",
+  "y_choice": "mbh"
+}
