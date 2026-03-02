@@ -1,26 +1,26 @@
 galaxy,log10_MBH_Msun,MBH_sigma_dex,ref,notes
-NGC4051,6.13,0.13,Denney+2009,RM Seyfert1 direct
+NGC0891,7.26,0.5,Kregel+2005,M-sigma sigma_e=105
+NGC2683,7.19,0.5,Ho+2009,M-sigma sigma_e=101
 NGC2841,8.55,0.49,KormendyHo2013,M-sigma sigma_e=206
-NGC5005,8.20,0.49,HeraudeauSimien1998,M-sigma sigma_e=172
-NGC7331,7.66,0.50,Pinkney+2003,M-sigma sigma_e=129
-NGC5033,7.44,0.50,Ho+2009,M-sigma sigma_e=115 Seyfert1.9
-NGC3521,7.67,0.50,Ho+2009,M-sigma sigma_e=130
-NGC0891,7.26,0.50,Kregel+2005,M-sigma sigma_e=105
-NGC2903,7.07,0.50,Ho+2009,M-sigma sigma_e=95
-NGC5907,7.35,0.50,Bottema1989,M-sigma sigma_e=110
-NGC7814,7.88,0.48,KormendyHo2013,M-sigma sigma_e=145
-NGC3992,7.68,0.50,Ho+2009,M-sigma sigma_e=131
-NGC3953,7.52,0.50,Ho+2009,M-sigma sigma_e=120
-NGC2683,7.19,0.50,Ho+2009,M-sigma sigma_e=101
-NGC6946,6.44,0.55,Bottema1988,M-sigma sigma_e=68
-NGC6503,5.52,0.60,Bottema1989,M-sigma sigma_e=42
-NGC5055,7.19,0.50,Ho+2009,M-sigma sigma_e=101
+NGC2903,7.07,0.5,Ho+2009,M-sigma sigma_e=95
+NGC2976,5.52,0.6,Barth+2002,M-sigma sigma_e=42 pseudobulge
 NGC3198,6.44,0.55,Bottema1988,M-sigma sigma_e=68
-NGC4138,7.35,0.50,Ho+2009,M-sigma sigma_e=110
+NGC3521,7.67,0.5,Ho+2009,M-sigma sigma_e=130
+NGC3726,7.05,0.5,Ho+2009,M-sigma sigma_e=94
+NGC3877,7.13,0.5,Ho+2009,M-sigma sigma_e=98
+NGC3953,7.3323,0.2909,van_den_Bosch_2016,vdB16;REF=beifiori12;TYPE=gas;SELECTED=1
+NGC3992,7.5149,0.2844,van_den_Bosch_2016,vdB16;REF=beifiori12;TYPE=gas;SELECTED=1
+NGC4013,7.07,0.5,Ho+2009,M-sigma sigma_e=95
+NGC4051,6.13,0.13,Denney+2009,RM Seyfert1 direct
+NGC4088,7.07,0.5,Ho+2009,M-sigma sigma_e=95
+NGC4138,7.35,0.5,Ho+2009,M-sigma sigma_e=110
+NGC5005,8.2733,0.2319,van_den_Bosch_2016,vdB16;REF=beifiori12;TYPE=gas;SELECTED=1
+NGC5033,7.44,0.5,Ho+2009,M-sigma sigma_e=115 Seyfert1.9
+NGC5055,8.9183,0.0987,van_den_Bosch_2016,vdB16;REF=blais-ouellette04;TYPE=gas;SELECTED=1
 NGC5371,8.03,0.48,HeraudeauSimien1998,M-sigma sigma_e=157
-NGC3726,7.05,0.50,Ho+2009,M-sigma sigma_e=94
-NGC3877,7.13,0.50,Ho+2009,M-sigma sigma_e=98
-NGC4088,7.07,0.50,Ho+2009,M-sigma sigma_e=95
+NGC5907,7.35,0.5,Bottema1989,M-sigma sigma_e=110
 NGC5985,7.78,0.48,HeraudeauSimien1998,M-sigma sigma_e=138
-NGC4013,7.07,0.50,Ho+2009,M-sigma sigma_e=95
-NGC2976,5.52,0.60,Barth+2002,M-sigma sigma_e=42 pseudobulge
+NGC6503,5.52,0.6,Bottema1989,M-sigma sigma_e=42
+NGC6946,6.44,0.55,Bottema1988,M-sigma sigma_e=68
+NGC7331,8.0215,0.1826,van_den_Bosch_2016,vdB16;REF=beifiori12;TYPE=gas;SELECTED=1
+NGC7814,7.88,0.48,KormendyHo2013,M-sigma sigma_e=145

@@ -1,0 +1,110 @@
+ 1  Object    Hubble  Distance    K       M_K      M_V      V-K)0   (B-V)0        log(M)     Object  log(M_BH) log(M_BH high) log(M_BH low) sigma_e     Flags   Source
+ 2  name      type    (Mpc)      total   total    total                        Solar masses   name      ------ Solar masses -----             km/s    M  C MBH     
+ 3  (2)        (3)     (4)       (5)      (6)      (7)       (8)      (9)      (10)    (11)   (12)      (13)     (14)     (15)                (16)   (17,18,19) (20) 
+ 4
+ 5  M32        E2     0.805      5.10    -19.45   -16.64    2.816    0.895     9.05 ± 0.10   M32        2.45e6   1.43e6   3.46e6             77 ±  3    1 0 1   van den Bosch & de Zeeuw 2010
+ 6  NGC1332    E6    22.66       7.05    -24.73   -21.58    3.159    0.931    11.27 ± 0.09   NGC1332    1.47e9   1.27e9   1.68e9            328 ±  9    1 0 0   Rusli et al. 2011
+ 7  NGC1374    E0    19.57       8.16    -23.30   -20.43    2.874    0.908    10.65 ± 0.09   NGC1374    5.90e8   5.39e8   6.51e8            167 ±  3    1 0 1   Rusli 2012, Rusli et al. 2013
+ 8  NGC1399    E1    20.85       6.31    -25.29   -22.43    2.863    0.948    11.50 ± 0.09   NGC1399    8.81e8   4.35e8  17.81e8            315 ±  3    1 1 0   See sidebar, Notes on Some Individual Galaxies
+ 9  NGC1407    E0    29.00       6.46    -25.87   -22.89    2.980    0.969    11.74 ± 0.09   NGC1407    4.65e9   4.24e9   5.38e9            276 ±  2    1 1 1   Rusli 2012, Rusli et al. 2013
+10  NGC1550    E1    52.50       8.77    -24.87   -21.89    2.974    0.963    11.33 ± 0.09   NGC1550    3.87e9   3.16e9   4.48e9            270 ± 10    1 1 1   Rusli 2012, Rusli et al. 2013
+11  NGC3091    E3    53.02       8.09    -25.54   -22.56    2.980    0.962    11.61 ± 0.09   NGC3091    3.72e9   3.21e9   3.83e9            297 ± 12    1 1 1   Rusli 2012, Rusli et al. 2013
+12  NGC3377    E5    10.99       7.16    -23.06   -20.08    2.980    0.830    10.50 ± 0.09   NGC3377    1.78e8   0.85e8   2.72e8            145 ±  7    1 0 1   Schulze & Gebhardt 2011
+13  NGC3379    E1    10.70       6.27    -23.88   -21.01    2.867    0.939    10.91 ± 0.09   NGC3379    4.16e8   3.12e8   5.20e8            206 ± 10    1 1 1   van den Bosch & de Zeeuw 2010
+14  NGC3608    E1    22.75       7.62    -24.17   -21.19    2.980    0.921    11.01 ± 0.09   NGC3608    4.65e8   3.66e8   5.64e8            182 ±  9    1 1 1   Schulze & Gebhardt 2011
+15  NGC3842    E1    92.2        8.84    -25.99   -23.01    2.980    0.941    11.77 ± 0.09   NGC3842    9.09e9   6.28e9  11.43e9            270 ± 27    1 1 1   McConnell et al. 2012
+16  NGC4291    E2    26.58       8.42    -23.72   -20.76    2.954    0.927    10.85 ± 0.09   NGC4291    9.78e8   6.70e8  12.86e8            242 ± 12    1 1 1   Schulze & Gebhardt 2011
+17  NGC4374    E1    18.51       5.75    -25.60   -22.62    2.980    0.945    11.62 ± 0.09   NGC4374    9.25e8   8.38e8  10.23e8            296 ± 14    2 1 0   Walsh, Barth & Sarzi 2010
+18  NGC4472    E2    16.72       4.97    -26.16   -23.18    2.980    0.940    11.84 ± 0.09   NGC4472    2.54e9   2.44e9   3.12e9            300 ±  7    1 1 1   Rusli 2012, Rusli et al. 2013
+19  NGC4473    E5    15.25       7.16    -23.77   -20.89    2.874    0.935    10.85 ± 0.09   NGC4473    0.90e8   0.45e8   1.35e8            190 ±  9    1 0 1   Schulze & Gebhardt 2011
+20  M87        E1    16.68       5.27    -25.85   -22.87    2.980    0.940    11.72 ± 0.09   M87        6.15e9   5.78e9   6.53e9            324 +28 -12 1 1 1   Gebhardt et al. 2011
+21  NGC4486A   E2    18.36       9.49    -21.83   -18.85    2.980    9.999    10.04 ± 0.09   NGC4486A   1.44e7   0.92e7   1.97e7            111 ±  5    1 0 0   Nowak et al. 2007
+22  NGC4486B   E0    16.26      10.39    -20.67   -17.69    2.980    0.991     9.64 ± 0.10   NGC4486B   6.00e8   4.00e8   9.00e8            185 ±  9    1 0 0   Kormendy et al. 1997
+23  NGC4649    E2    16.46       5.49    -25.61   -22.63    2.980    0.947    11.64 ± 0.09   NGC4649    4.72e9   3.67e9   5.76e9            380 ± 19    1 1 1   Shen & Gebhardt 2010
+24  NGC4697    E5    12.54       6.37    -24.13   -21.33    2.799    0.883    10.97 ± 0.09   NGC4697    2.02e8   1.52e8   2.53e8            177 ±  8    1 0 1   Schulze & Gebhardt 2011
+25  NGC4751    E6    32.81       8.24    -24.38   -21.22    3.158    0.983    11.16 ± 0.09   NGC4751    1.71e9   1.52e9   1.81e9            355 ± 14    1 0 1   Rusli 2012, Rusli et al. 2013
+26  NGC4889    E4   102.0        8.41    -26.64   -23.63    3.007    1.031    12.09 ± 0.09   NGC4889    2.08e10  0.49e10  3.66e10           347 ±  5    1 1 1   McConnell et al. 2012
+27  NGC5077    E3    38.7        8.22    -24.74   -21.66    2.949    0.987    11.28 ± 0.09   NGC5077    8.55e8   4.07e8  12.93e8            222 ± 11    2 1 0   De Francesco, Capetti & Marconi 2008
+28  NGC5328    E2    64.4        8.49    -25.58   -22.61    2.966    1.004    11.65 ± 0.09   NGC5328    4.75e9   2.81e9   5.63e9            333 ±  2    1 1 1   Rusli et al. 2013
+29  NGC5516    E3    55.3        8.31    -25.47   -22.50    2.970    0.993    11.60 ± 0.09   NGC5516    3.69e9   2.65e9   3.79e9            328 ± 11    1 1 1   Rusli 2012, Rusli et al. 2013
+30  NGC5576    E3    25.68       7.83    -24.23   -21.29    2.939    0.862    11.00 ± 0.09   NGC5576    2.73e8   1.94e8   3.41e8            183 ±  9    1 1 0   Gultekin et al. 2009b
+31  NGC5845    E3    25.87       9.11    -22.97   -19.73    3.238    0.973    10.57 ± 0.09   NGC5845    4.87e8   3.34e8   6.40e8            239 ± 11    1 0 1   Schulze & Gebhardt 2011
+32  NGC6086    E    138.0        9.97    -25.74   -22.84    2.884    0.965    11.69 ± 0.09   NGC6086    3.74e9   2.59e9   5.50e9            318 ±  2    1 1 1   McConnell et al. 2011b
+33  NGC6861    E4    28.71       7.71    -24.60   -21.42    3.179    0.962    11.25 ± 0.09   NGC6861    2.10e9   2.00e9   2.73e9            389 ±  3    1 0 1   Rusli 2012, Rusli et al. 2013
+34  NGC7619    E3    53.85       8.03    -25.65   -22.83    2.821    0.969    11.65 ± 0.09   NGC7619    2.30e9   2.19e9   3.45e9            292 ±  5    1 1 1   Rusli 2012, Rusli et al. 2013
+35  NGC7768    E4   116.0        9.34    -26.00   -23.19    2.811    0.906    11.75 ± 0.09   NGC7768    1.34e9   0.93e9   1.85e9            257 ± 26    1 1 1   McConnell et al. 2012
+36  IC1459     E4    28.92       6.81    -25.51   -22.42    3.081    0.966    11.60 ± 0.09   IC1459     2.48e9   2.29e9   2.96e9            331 ±  5    1 0 0   Cappellari et al. 2002
+37                                                                                                                                                                                                      
+38  NGC1316    E4    20.95       5.32    -26.29   -23.38    2.910    0.871    11.84 ± 0.09   NGC1316    1.69e8   1.39e8   1.97e8            226 ±  9    1 0 0   Nowak et al. 2008
+39  NGC2960    E2    67.1        9.78    -24.36   -21.30    3.068    0.880    11.06 ± 0.09   NGC2960    1.08e7   1.03e7   1.12e7            166 ± 16    3 0 0   Kuo et al. 2011
+40  NGC4382    E2    17.88       5.76    -25.51   -22.53    2.980    0.863    11.51 ± 0.09   NGC4382    1.30e7   0.00e7  22.40e7            182 ±  5    1 1 0   Gultekin et al. 2011
+41  NGC5128    E      3.62       3.49    -24.34   -21.36    2.980    0.898    11.05 ± 0.09   NGC5128    5.69e7   4.65e7   6.73e7            150 ±  7    1 1 0   Cappellari et al. 2009
+42  IC1481     E1.5  89.9       10.62    -24.17    99.99    9.999    9.999    99.99 ± 9.99   IC1481     1.49e7   1.04e7   1.93e7             -1 ±  0    3 0 0   Hure et al. 2011
+43                                                                                                                                                                                                                  
+44  NGC2778    E2    23.44       9.51    -22.34   -19.39    2.955    0.911    10.26 ± 0.09   NGC2778    1.45e7   0.00e7   2.91e7            175 ±  8    1 0 1   Schulze & Gebhardt 2011
+45  NGC3607    E1    22.65       6.99    -24.79   -21.92    2.872    0.911    11.26 ± 0.09   NGC3607    1.37e8   0.90e8   1.82e8            229 ± 11    1 1 0   Gultekin et al. 2009b
+46  NGC4261    E2    32.36       6.94    -25.62   -22.64    2.980    0.974    11.65 ± 0.09   NGC4261    5.29e8   4.21e8   6.36e8            315 ± 15    2 1 0   Ferrarese, Ford & Jaffe 1996
+47  NGC4459    E2    16.01       7.15    -23.88   -20.91    2.975    0.909    10.88 ± 0.09   NGC4459    6.96e7   5.62e7   8.29e7            167 ±  8    2 0 0   Sarzi et al. 2001
+48  NGC6251    E1   108.4        9.03    -26.18   -23.18    2.998    9.999    11.88 ± 0.09   NGC6251    6.14e8   4.09e8   8.18e8            290 ± 14    2 1 0   Ferrarese & Ford 1999
+49  NGC7052    E3    70.4        8.57    -25.70   -22.86    2.841    0.86     11.61 ± 0.10   NGC7052    3.96e8   2.40e8   6.72e8            266 ± 13    2 1 0   van der Marel & van den Bosch 1998
+50  A1836BCG   E    152.4        9.99    -25.95   -22.64    3.310    1.043    11.81 ± 0.10   A1836BCG   3.74e9   3.22e9   4.16e9            288 ± 14    2 1 0   Dalla Bonta et al. 2009
+51  A3565BCG   E     49.2        7.50    -25.98   -23.03    2.948    0.956    11.78 ± 0.09   A3565BCG   1.30e9   1.11e9   1.50e9            322 ± 16    2 1 0   Dalla Bonta et al. 2009
+52  CygnusA    E    242.7       10.28    -26.77   -23.23    3.54     9.999    99.99 ± 9.99   CygnusA    2.66e9   1.91e9   3.40e9            270 ± 90    2 1 0   Tadhunter et al. 2003
+
+123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789112345678911234567891123456789112345678911234567891123456789112345678911234567891123456789112345678921234567892
+         0         0         0         0         0         0         0         0         0         0         1         2         3         4         5         6         7         8         9         0         1
+                                                                                                   0         0         0         0         0         0         0         0         0         0         0         0
+
+Note: There are 3 blocks of galaxies.  Rows  5 - 36 list ellipticals that have reliable black hole mass estimates to within the errors quoted in Columns 14 and 15. 
+                                                    Note that high-M_BH monsters and BHs that do not satisfy the M_BH -- sigma_e correlation fit
+                                                    at the highest M_BH values are included in these rows (see the original table for identification).
+                                       Rows 38 - 42 list mergers in progress that have reliable black hole mass estimates to within the errors quoted in Columns 14 and 15.
+                                       Rows 44 - 52 list ellipticals that have problems with the black hole mass measurements; e. g. (most frequently), that
+                                                    the widths of the emission lines were not taken into account in the mass measurements.  We do not use these values.
+
+At the bottom of the table, three rows count characters horizontally; this again may be useful in reading the table from within a program.
+
+Column 1 counts lines in this ascii table (for use in plot programs).
+
+Column 2 is the galaxy name. BCGs are brightest cluster galaxies in the Abell clusters named.
+
+Column 3 is Hubble type, mostly from RC3 (de Vaucouleurs et al. 1991). Green rows are for mergers in progress (Section 6.4).
+
+Column 4 is the assumed distance (see Table 2 in the published paper for sources).
+
+Column 5 is the 2MASS Ks total magnitude (hereafter written K). When (V - K)0 = 2.980 in Column 7, Ks has been corrected as discussed in the Supplemental Material, S3.1. 
+         Corrections to 2MASS Apparent Galaxy Magnitudes.
+
+Columns 6 and 7 are the K- and V-band absolute magnitudes based on the adopted distances and Galactic absorption corrections from Schlegel, Finkbeiner & Davis (1998) 
+          as recalibrated by Schlafly & Finkbeiner (2011).  The V-band magnitudes are taken, in order of preference, from Kormendy et al. (2009), RC3, or HyperLeda 
+          (usually "integrated photometry" but sometimes the main table if it implies a more realistic (V K)0 color).
+
+Columns 8 and 9 are the V-K and B-V colors of the galaxy corrected for Galactic reddening.
+
+Column 10 is the base-10 logarithm of the total stellar mass (Section 6.6.1).
+
+Column 11 is the 1-sigma error in the value in Column 10.
+
+Column 12 repeats the name of the galaxy.
+
+Column 13 is the base-10 logarithm of  the measured BH mass.
+
+Column 14 is the base-10 logarithm of (the measured BH mass minus 1-sigma estimated error).
+
+Column 15 is the base-10 logarithm of (the measured BH mass plus  1-sigma estimated error).
+
+Column 16 is the stellar velocity dispersion sigma_e and its 1-sigma error. We adopt the usual convention that sigma_e is the intensity-weighted mean of V**2 + sigma**2 out to a fixed fraction 
+          of the effective radius r_e that contains half of the light of the galaxy.  As discussed in the Supplemental Material, S3.3. Corrections to Effective Velocity Dispersions, 
+          we adopt r_e/2 when we calculate sigma_e from photometry and published kinematics (see the sidebar, Notes on Some Individual Galaxies, or see the Supplemental Material, S4.1.). 
+          When no note is given, sigma_e is from the BH mass source paper or from Gultekin et al. (2009c).
+
+Columns 17 - 19 list three flags: Flag M encodes the method used to measure BH mass using 1 for stellar dynamics, 2 for ionized gas dynamics, and 3 for maser dynamics.
+                                  Flag C is 1 if the galaxy has a core (e. g., Lauer et al. 1995) or 0 if the galaxy has no core. 
+                                  Flag MBH is 1 if the BH mass has been Òcorrected by making dynamical models that include large orbit libraries and triaxiality (M32 and NGC 3379) or dark matter halos.
+
+Column 20 is the source of the BH mass measurement. When there is more than one measurement, the other sources are given in the Supplemental Material, S4. If a galaxy does not appear there, 
+          then the reference in Column 20 is also the BH discovery paper.
+
+Note that various dummy flag values that should be obvious are inserted in a number of columns when measured values are not known.  The value 0.00 is never a flag value except when quoted as an error estimate.
+
+

@@ -1,0 +1,19 @@
+Table 1 
+Filters and Photometric Calibrations
+
+
+Source	lambda	ps	zp	${{\mathfrak{M}}}_{\odot }$	${{\rm{\Upsilon }}}_{* }$	
+	(mum)	(arcsec)		(mag)	(${M}_{\odot }/{L}_{\odot }$)	
+(1)	(2)	(3)	(4)	(5)	(6)	
+Spitzer IRAC1: ${{\rm{S}}}^{4}{\rm{G}}$	3.550	0.75	21.097^a	6.02^b	0.60 +or- 0.09^c	
+Spitzer IRAC1: SHA	3.550	0.60	21.581	6.02^b	0.60 +or- 0.09^c	
+HST WFC3 UVIS2 F814W	0.8024	0.04	25.110^d	4.52	1.88 +or- 0.40	
+HST WFPC2/WFC F814W	0.8012	0.10	24.211^e	4.52	1.88 +or- 0.40	
+2MASS LGA K_s	2.159	1.00	Image-specific^f	5.08	0.62 +or- 0.08	
+Notes. Columns: (1) Image source. (2) Effective wavelength midpoint. (3) Pixel size. (4) AB magnitude photometric zero-point. (5) Solar absolute AB magnitude (from http://mips.as.arizona.edu/~cnaw/sun.html). (6) (Stellar mass)-to-(stellar light) ratio.
+^a From Salo et al. (2015, Equation (13)). Munoz-Mateos et al. (2016) provided a zero-point of 20.472 for the ${{\rm{S}}}^{4}{\rm{G}}$ surface brightness maps with the same 0."75 pixel size but combined the zero-point and pixel size into one constant such that $20.472=21.097+5\mathrm{log}(0\buildrel{\prime\prime}\over{.} 75)$.
+^b From Oh et al. (2008), after applying a 3.6 mum Vega-to-AB magnitude conversion: ${{\mathfrak{m}}}_{\mathrm{AB}}={{\mathfrak{m}}}_{\mathrm{Vega}}+2.78\,\mathrm{mag}$.
+^c From Meidt et al. (2014), assuming a Chabrier (2003) IMF and a Bruzual & Charlot (2003) SSP with exponentially declining SFHs for a range of metallicities.
+^d http://www.stsci.edu/hst/wfc3/documents/ISRs/WFC3-2017-14.pdf
+^e http://www.stsci.edu/hst/acs/documents/handbooks/currentDHB/acs_Ch52.html#94716
+^f Photometric zero-points have been converted to the AB system via ${{\mathfrak{m}}}_{{K}_{s},\mathrm{AB}}={{\mathfrak{m}}}_{{K}_{s},\mathrm{Vega}}+1.85\,\mathrm{mag}$ (Blanton et al. 2005).
