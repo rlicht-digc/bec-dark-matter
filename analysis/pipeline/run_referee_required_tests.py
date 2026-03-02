@@ -14,6 +14,25 @@ JSON/figure artifacts requested by the referee prompt:
 
 from __future__ import annotations
 
+import os
+import sys
+
+
+def _pin_blas(n: int) -> None:
+    for var in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS",
+                "VECLIB_MAXIMUM_THREADS", "NUMEXPR_NUM_THREADS"):
+        os.environ[var] = str(n)
+
+
+_blas_n = 1
+for _i, _a in enumerate(sys.argv):
+    if _a == "--blas-threads" and _i + 1 < len(sys.argv):
+        try:
+            _blas_n = int(sys.argv[_i + 1])
+        except ValueError:
+            pass
+_pin_blas(_blas_n)
+
 import argparse
 import json
 import math
@@ -575,6 +594,48 @@ def shuffle_galaxy_label(
     return out
 
 
+# --- Test 1 parallel worker infrastructure ---
+
+_W1_LOG_GBAR: Optional[np.ndarray] = None
+_W1_RESIDUALS: Optional[np.ndarray] = None
+_W1_PREP: Optional[BinPrep] = None
+_W1_GROUPS: List[np.ndarray] = []
+
+
+def _phase_worker_init(
+    log_gbar: np.ndarray, residuals: np.ndarray,
+    groups: List[np.ndarray], prep: BinPrep,
+) -> None:
+    global _W1_LOG_GBAR, _W1_RESIDUALS, _W1_PREP, _W1_GROUPS
+    _W1_LOG_GBAR = log_gbar
+    _W1_RESIDUALS = residuals
+    _W1_PREP = prep
+    _W1_GROUPS = groups
+
+
+def _phase_shuffle_worker(args: Tuple[int, str]) -> dict:
+    seed, mode_code = args
+    rng = np.random.default_rng(seed)
+    if mode_code == "A":
+        rs = shuffle_within_galaxy(_W1_RESIDUALS, _W1_GROUPS, rng)
+    else:
+        rs = shuffle_galaxy_label(_W1_RESIDUALS, _W1_GROUPS, rng)
+    xb, vb, eb = variance_profile_from_prebinned(rs, _W1_PREP)
+    fit = fit_phase_profile_models(
+        xb, vb, eb, rng=rng,
+        n_starts_edge=5, n_starts_null=5, for_null=True,
+    )
+    if not fit["ok"]:
+        return {"ok": False}
+    return {
+        "ok": True,
+        "mu_peak": float(fit["mu_peak"]),
+        "delta": float(abs(fit["mu_peak"] - LOG_G_DAGGER)),
+        "daic": float(fit["daic"]),
+        "fallback": bool(fit.get("used_fallback", False)),
+    }
+
+
 def run_phase_null_shuffles(
     log_gbar: np.ndarray,
     residuals: np.ndarray,
@@ -583,71 +644,92 @@ def run_phase_null_shuffles(
     daic_real: float,
     rng: np.random.Generator,
     n_shuffles: int = 1000,
+    n_jobs: int = 1,
+    chunksize: int = 10,
+    num_shards: int = 1,
+    shard_id: int = 0,
+    base_seed: int = 42,
 ) -> Dict[str, Any]:
     prep = prepare_binning(log_gbar, min_points=10)
     groups = [np.where(galaxies == g)[0] for g in pd.unique(galaxies)]
     groups = [g for g in groups if len(g) > 0]
 
+    shard_indices = [i for i in range(n_shuffles) if (i % num_shards) == shard_id]
+    n_shard = len(shard_indices)
+
     out: Dict[str, Any] = {}
-    for mode in ["A_within_galaxy", "B_galaxy_label"]:
-        delta_null = np.full(n_shuffles, np.nan, dtype=float)
-        daic_null = np.full(n_shuffles, np.nan, dtype=float)
-        mu_null = np.full(n_shuffles, np.nan, dtype=float)
+    for mode, mode_code in [("A_within_galaxy", "A"), ("B_galaxy_label", "B")]:
+        tasks = [(base_seed + i, mode_code) for i in shard_indices]
+
+        all_results: List[dict] = []
+        if n_jobs > 1:
+            import multiprocessing as mp
+            with mp.Pool(n_jobs, initializer=_phase_worker_init,
+                         initargs=(log_gbar, residuals, groups, prep)) as pool:
+                done = 0
+                for result in pool.imap_unordered(_phase_shuffle_worker, tasks, chunksize=chunksize):
+                    all_results.append(result)
+                    done += 1
+                    if done % 100 == 0:
+                        print(f"    [{mode}] {done}/{n_shard}")
+        else:
+            _phase_worker_init(log_gbar, residuals, groups, prep)
+            for j, task in enumerate(tasks):
+                result = _phase_shuffle_worker(task)
+                all_results.append(result)
+                if (j + 1) % 100 == 0:
+                    print(f"    [{mode}] {j+1}/{n_shard}")
+
+        mu_null = np.full(n_shard, np.nan, dtype=float)
+        delta_null = np.full(n_shard, np.nan, dtype=float)
+        daic_null = np.full(n_shard, np.nan, dtype=float)
         n_fail = 0
         n_fallback = 0
-
-        for i in range(n_shuffles):
-            if mode.startswith("A_"):
-                rs = shuffle_within_galaxy(residuals, groups, rng)
-            else:
-                rs = shuffle_galaxy_label(residuals, groups, rng)
-
-            xb, vb, eb = variance_profile_from_prebinned(rs, prep)
-            fit = fit_phase_profile_models(
-                xb,
-                vb,
-                eb,
-                rng=rng,
-                n_starts_edge=5,
-                n_starts_null=5,
-                for_null=True,
-            )
-            if not fit["ok"]:
+        k = 0
+        for result in all_results:
+            if not result["ok"]:
                 n_fail += 1
-                continue
-            if fit.get("used_fallback", False):
-                n_fallback += 1
-            mu_null[i] = fit["mu_peak"]
-            delta_null[i] = abs(fit["mu_peak"] - LOG_G_DAGGER)
-            daic_null[i] = fit["daic"]
+            else:
+                if result.get("fallback", False):
+                    n_fallback += 1
+                mu_null[k] = result["mu_peak"]
+                delta_null[k] = result["delta"]
+                daic_null[k] = result["daic"]
+            k += 1
 
-            if (i + 1) % 100 == 0:
-                print(f"    [{mode}] {i+1}/{n_shuffles}")
-
-        p_delta = float(np.mean(np.where(np.isfinite(delta_null), delta_null <= delta_real, False)))
-        p_daic = float(np.mean(np.where(np.isfinite(daic_null), daic_null <= daic_real, False)))
-        d50, d05, d95 = robust_percentiles(delta_null, [50, 5, 95])
-        a50, a05, a95 = robust_percentiles(daic_null, [50, 5, 95])
-        out[mode] = {
-            "p_delta": p_delta,
-            "p_daic": p_daic,
-            "delta_null_median": d50,
-            "delta_null_5pct": d05,
-            "delta_null_95pct": d95,
-            "daic_null_median": a50,
-            "daic_null_5pct": a05,
-            "daic_null_95pct": a95,
+        mode_result: Dict[str, Any] = {
             "delta_null": delta_null,
             "daic_null": daic_null,
             "mu_null": mu_null,
             "n_fail": int(n_fail),
             "n_fallback": int(n_fallback),
         }
+
+        if num_shards == 1:
+            p_delta = float(np.mean(np.where(np.isfinite(delta_null), delta_null <= delta_real, False)))
+            p_daic = float(np.mean(np.where(np.isfinite(daic_null), daic_null <= daic_real, False)))
+            d50, d05, d95 = robust_percentiles(delta_null, [50, 5, 95])
+            a50, a05, a95 = robust_percentiles(daic_null, [50, 5, 95])
+            mode_result.update({
+                "p_delta": p_delta,
+                "p_daic": p_daic,
+                "delta_null_median": d50,
+                "delta_null_5pct": d05,
+                "delta_null_95pct": d95,
+                "daic_null_median": a50,
+                "daic_null_5pct": a05,
+                "daic_null_95pct": a95,
+            })
+
+        out[mode] = mode_result
+    out["_shard_indices"] = shard_indices
     return out
 
 
 def run_test1_phase_peak_null(
-    sparc_df: pd.DataFrame, out_dir: Path, rng: np.random.Generator, n_shuffles: int
+    sparc_df: pd.DataFrame, out_dir: Path, rng: np.random.Generator, n_shuffles: int,
+    n_jobs: int = 1, chunksize: int = 10, shard_id: int = 0, num_shards: int = 1,
+    base_seed: int = 42,
 ) -> Dict[str, Any]:
     print("\n[TEST 1] Phase peak null distribution")
     x = sparc_df["log_gbar"].to_numpy(dtype=float)
@@ -663,7 +745,32 @@ def run_test1_phase_peak_null(
     mu_real = float(fit_real["mu_peak"])
     delta_real = float(abs(mu_real - LOG_G_DAGGER))
     daic_real = float(fit_real["daic"])
-    nulls = run_phase_null_shuffles(x, r, g, delta_real, daic_real, rng=rng, n_shuffles=n_shuffles)
+    nulls = run_phase_null_shuffles(
+        x, r, g, delta_real, daic_real, rng=rng, n_shuffles=n_shuffles,
+        n_jobs=n_jobs, chunksize=chunksize,
+        num_shards=num_shards, shard_id=shard_id, base_seed=base_seed,
+    )
+
+    if num_shards > 1:
+        shard_dir = out_dir / "shuffle_shards" / f"shard_{shard_id}_of_{num_shards}"
+        shard_dir.mkdir(parents=True, exist_ok=True)
+        for key, mode in [("A", "A_within_galaxy"), ("B", "B_galaxy_label")]:
+            np.savez_compressed(
+                shard_dir / f"test1_{key}_shuffle_results.npz",
+                mu_null=nulls[mode]["mu_null"],
+                delta_null=nulls[mode]["delta_null"],
+                daic_null=nulls[mode]["daic_null"],
+                indices=np.array(nulls["_shard_indices"]),
+            )
+        meta = {
+            "seed": int(base_seed), "shard_id": int(shard_id),
+            "num_shards": int(num_shards), "n_shuffles": int(n_shuffles),
+            "indices": nulls["_shard_indices"],
+            "delta_real": delta_real, "daic_real": daic_real, "mu_real": mu_real,
+        }
+        write_json(shard_dir / "shard_metadata.json", meta)
+        print(f"  [TEST 1] Shard {shard_id}/{num_shards} saved to {shard_dir}")
+        return {"status": "SHARD_SAVED", "shard_dir": str(shard_dir)}
 
     # Plot
     fig, axes = plt.subplots(2, 2, figsize=(12, 8), dpi=180)
@@ -1085,36 +1192,71 @@ def concentration_from_profile(centers: np.ndarray, mean_var: np.ndarray) -> flo
     return float(num / den)
 
 
+# --- Test 3 parallel worker infrastructure ---
+
+_W3_LOGX: Optional[List[np.ndarray]] = None
+_W3_RES: Optional[List[np.ndarray]] = None
+_W3_CENTERS: Optional[np.ndarray] = None
+
+
+def _xi_worker_init(
+    logx_list: List[np.ndarray], res_list: List[np.ndarray], centers: np.ndarray,
+) -> None:
+    global _W3_LOGX, _W3_RES, _W3_CENTERS
+    _W3_LOGX = logx_list
+    _W3_RES = res_list
+    _W3_CENTERS = centers
+
+
+def _xi_worker_chunk(seeds: List[int]) -> List[float]:
+    results: List[float] = []
+    for seed in seeds:
+        rng = np.random.default_rng(seed)
+        rr = [r[rng.permutation(len(r))] for r in _W3_RES]
+        _, vmat = stacked_variance_profile(_W3_LOGX, rr)
+        mean_prof = np.nanmean(vmat, axis=0)
+        results.append(concentration_from_profile(_W3_CENTERS, mean_prof))
+    return results
+
+
 def xi_permutation_null(
     payload: List[Dict[str, Any]],
     centers: np.ndarray,
     rng: np.random.Generator,
     n_perm: int = 1000,
+    n_jobs: int = 1,
+    chunksize: int = 10,
+    num_shards: int = 1,
+    shard_id: int = 0,
+    base_seed: int = 42,
 ) -> np.ndarray:
     # For large fixed-length TNG payloads, use vectorized permutation path.
     n_g = len(payload)
     if n_g == 0:
         return np.array([], dtype=float)
 
+    shard_indices = [i for i in range(n_perm) if (i % num_shards) == shard_id]
+    n_shard = len(shard_indices)
+
     lengths = np.array([len(p["res"]) for p in payload], dtype=int)
     fixed_len = np.all(lengths == lengths[0])
     large = n_g > 1000 and fixed_len and lengths[0] <= 64
     edges = np.linspace(-2.0, 1.5, 9)
     n_bins = len(edges) - 1
-    cnull = np.full(n_perm, np.nan, dtype=float)
+    cnull = np.full(n_shard, np.nan, dtype=float)
 
     if large:
-        P = int(lengths[0])
+        # Vectorized path — keep sequential
         res_arr = np.vstack([p["res"] for p in payload]).astype(float)
         logx_arr = np.vstack([p["logX"] for p in payload]).astype(float)
         bin_arr = np.digitize(logx_arr, edges) - 1
         mask_bins = [(bin_arr == b).astype(float) for b in range(n_bins)]
         counts = np.stack([m.sum(axis=1) for m in mask_bins], axis=1)  # G x K
         valid = counts >= 2
-        core = (10.0 ** centers >= 0.3) & (10.0 ** centers <= 3.0)
 
-        for i in range(n_perm):
-            rp = rng.permuted(res_arr, axis=1)
+        for j, perm_idx in enumerate(shard_indices):
+            perm_rng = np.random.default_rng(base_seed + perm_idx)
+            rp = perm_rng.permuted(res_arr, axis=1)
             rp2 = rp * rp
             vmat = np.full((n_g, n_bins), np.nan, dtype=float)
             for b in range(n_bins):
@@ -1127,21 +1269,38 @@ def xi_permutation_null(
                 vb[ok] = (s2[ok] - (s1[ok] ** 2) / n[ok]) / (n[ok] - 1.0)
                 vmat[:, b] = vb
             mean_prof = np.nanmean(vmat, axis=0)
-            cnull[i] = concentration_from_profile(centers, mean_prof)
-            if (i + 1) % 100 == 0:
-                print(f"    [xi perm vectorized] {i+1}/{n_perm}")
+            cnull[j] = concentration_from_profile(centers, mean_prof)
+            if (j + 1) % 100 == 0:
+                print(f"    [xi perm vectorized] {j+1}/{n_shard}")
         return cnull
 
-    # Generic path (SPARC and small datasets)
+    # Generic path (SPARC and small datasets) — parallel
     logx_list = [p["logX"] for p in payload]
     res_list = [p["res"] for p in payload]
-    for i in range(n_perm):
-        rr = [r[rng.permutation(len(r))] for r in res_list]
-        _, vmat = stacked_variance_profile(logx_list, rr)
-        mean_prof = np.nanmean(vmat, axis=0)
-        cnull[i] = concentration_from_profile(centers, mean_prof)
-        if (i + 1) % 100 == 0:
-            print(f"    [xi perm] {i+1}/{n_perm}")
+
+    if n_jobs > 1:
+        import multiprocessing as mp
+        chunk_tasks: List[List[int]] = []
+        for ci in range(0, n_shard, chunksize):
+            chunk_idxs = shard_indices[ci:ci + chunksize]
+            chunk_tasks.append([base_seed + idx for idx in chunk_idxs])
+        with mp.Pool(n_jobs, initializer=_xi_worker_init,
+                     initargs=(logx_list, res_list, centers)) as pool:
+            chunk_results = pool.map(_xi_worker_chunk, chunk_tasks)
+        k = 0
+        for chunk_result in chunk_results:
+            for val in chunk_result:
+                cnull[k] = val
+                k += 1
+    else:
+        for j, perm_idx in enumerate(shard_indices):
+            perm_rng = np.random.default_rng(base_seed + perm_idx)
+            rr = [r[perm_rng.permutation(len(r))] for r in res_list]
+            _, vmat = stacked_variance_profile(logx_list, rr)
+            mean_prof = np.nanmean(vmat, axis=0)
+            cnull[j] = concentration_from_profile(centers, mean_prof)
+            if (j + 1) % 100 == 0:
+                print(f"    [xi perm] {j+1}/{n_shard}")
     return cnull
 
 
@@ -1154,6 +1313,11 @@ def xi_dataset_summary(
     rng: np.random.Generator,
     n_boot: int = 500,
     n_perm: int = 1000,
+    n_jobs: int = 1,
+    chunksize: int = 10,
+    num_shards: int = 1,
+    shard_id: int = 0,
+    base_seed: int = 42,
 ) -> Dict[str, Any]:
     payload = per_galaxy_xi_payload(df, id_col=id_col, r_col=r_col, res_col=res_col)
     if len(payload) == 0:
@@ -1176,8 +1340,12 @@ def xi_dataset_summary(
     hi = np.nanpercentile(boot, 97.5, axis=0)
 
     C_real = concentration_from_profile(centers, mean_prof)
-    cnull = xi_permutation_null(payload, centers, rng=rng, n_perm=n_perm)
-    p_c = float(np.mean(np.where(np.isfinite(cnull), cnull >= C_real, False)))
+    cnull = xi_permutation_null(
+        payload, centers, rng=rng, n_perm=n_perm,
+        n_jobs=n_jobs, chunksize=chunksize,
+        num_shards=num_shards, shard_id=shard_id, base_seed=base_seed,
+    )
+    p_c = float(np.mean(np.where(np.isfinite(cnull), cnull >= C_real, False))) if num_shards == 1 else None
 
     # Per-galaxy X_peak
     peaks = []
@@ -1214,8 +1382,7 @@ def xi_dataset_summary(
             "wilcoxon_pvalue_median_eq_0": None,
         }
 
-    c50, c5, c95 = robust_percentiles(cnull, [50, 5, 95])
-    return {
+    result: Dict[str, Any] = {
         "status": "OK",
         "dataset": name,
         "n_galaxies": int(n_g),
@@ -1224,13 +1391,20 @@ def xi_dataset_summary(
         "stacked_variance_ci95_low": lo,
         "stacked_variance_ci95_high": hi,
         "concentration_C": C_real,
-        "concentration_null_median": c50,
-        "concentration_null_5pct": c5,
-        "concentration_null_95pct": c95,
-        "concentration_pvalue": p_c,
         "X_peak_stats": peak_stats,
         "concentration_null_samples": cnull,
     }
+
+    if num_shards == 1:
+        c50, c5, c95 = robust_percentiles(cnull, [50, 5, 95])
+        result.update({
+            "concentration_null_median": c50,
+            "concentration_null_5pct": c5,
+            "concentration_null_95pct": c95,
+            "concentration_pvalue": p_c,
+        })
+
+    return result
 
 
 def run_test3_xi_organizing(
@@ -1238,6 +1412,11 @@ def run_test3_xi_organizing(
     sparc_df: pd.DataFrame,
     tng_points_path: Optional[Path],
     rng: np.random.Generator,
+    n_jobs: int = 1,
+    chunksize: int = 10,
+    num_shards: int = 1,
+    shard_id: int = 0,
+    base_seed: int = 42,
 ) -> Dict[str, Any]:
     print("\n[TEST 3] xi organizing on clean TNG + SPARC")
 
@@ -1252,9 +1431,33 @@ def run_test3_xi_organizing(
         rng=rng,
         n_boot=500,
         n_perm=1000,
+        n_jobs=n_jobs,
+        chunksize=chunksize,
+        num_shards=num_shards,
+        shard_id=shard_id,
+        base_seed=base_seed + 100000,
     )
 
     if tng_points_path is None or not tng_points_path.exists():
+        if num_shards > 1:
+            shard_dir = out_dir / "shuffle_shards" / f"shard_{shard_id}_of_{num_shards}"
+            shard_dir.mkdir(parents=True, exist_ok=True)
+            if sparc_res.get("status") == "OK":
+                np.savez_compressed(
+                    shard_dir / "test3_sparc_cnull.npz",
+                    cnull=np.asarray(sparc_res["concentration_null_samples"], dtype=float),
+                    indices=np.arange(len(sparc_res["concentration_null_samples"])),
+                )
+                # Update shard metadata with Test 3 real-data stats
+                meta_path = shard_dir / "shard_metadata.json"
+                if meta_path.exists():
+                    meta = json.loads(meta_path.read_text())
+                else:
+                    meta = {}
+                meta["C_real_sparc"] = sparc_res["concentration_C"]
+                write_json(meta_path, meta)
+            print(f"  [TEST 3] Shard {shard_id}/{num_shards} saved (TNG blocked)")
+            return {"status": "SHARD_SAVED", "sparc": sparc_res, "tng_status": "BLOCKED"}
         summary = {"sparc": sparc_res, "tng_status": "BLOCKED", "reason": "TNG per-point data not found"}
         write_json(out_dir / "summary_xi_organizing.json", summary)
         return summary
@@ -1269,7 +1472,36 @@ def run_test3_xi_organizing(
         rng=rng,
         n_boot=500,
         n_perm=1000,
+        n_jobs=n_jobs,
+        chunksize=chunksize,
+        num_shards=num_shards,
+        shard_id=shard_id,
+        base_seed=base_seed + 200000,
     )
+
+    if num_shards > 1:
+        shard_dir = out_dir / "shuffle_shards" / f"shard_{shard_id}_of_{num_shards}"
+        shard_dir.mkdir(parents=True, exist_ok=True)
+        for tag, res in [("sparc", sparc_res), ("tng", tng_res)]:
+            if res.get("status") == "OK":
+                np.savez_compressed(
+                    shard_dir / f"test3_{tag}_cnull.npz",
+                    cnull=np.asarray(res["concentration_null_samples"], dtype=float),
+                    indices=np.arange(len(res["concentration_null_samples"])),
+                )
+        # Update shard metadata with Test 3 real-data stats
+        meta_path = shard_dir / "shard_metadata.json"
+        if meta_path.exists():
+            meta = json.loads(meta_path.read_text())
+        else:
+            meta = {}
+        if sparc_res.get("status") == "OK":
+            meta["C_real_sparc"] = sparc_res["concentration_C"]
+        if tng_res.get("status") == "OK":
+            meta["C_real_tng"] = tng_res["concentration_C"]
+        write_json(meta_path, meta)
+        print(f"  [TEST 3] Shard {shard_id}/{num_shards} saved to {shard_dir}")
+        return {"status": "SHARD_SAVED", "shard_dir": str(shard_dir)}
 
     # Figure
     fig, axes = plt.subplots(2, 2, figsize=(12, 8), dpi=180)
@@ -1736,6 +1968,13 @@ def main() -> None:
     parser.add_argument("--output-dir", type=str, default=None)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--n-shuffles", type=int, default=1000)
+    parser.add_argument("--n-jobs", type=int, default=1)
+    parser.add_argument("--auto-jobs", action="store_true")
+    parser.add_argument("--reserve-cpus", type=int, default=1)
+    parser.add_argument("--blas-threads", type=int, default=1)
+    parser.add_argument("--chunksize", type=int, default=10)
+    parser.add_argument("--shuffle-num-shards", type=int, default=1)
+    parser.add_argument("--shuffle-shard-id", type=int, default=0)
     args = parser.parse_args()
 
     script_path = Path(__file__).resolve()
@@ -1744,6 +1983,18 @@ def main() -> None:
     out_dir = Path(args.output_dir).resolve() if args.output_dir else root
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # Auto-jobs resolution
+    n_jobs = args.n_jobs
+    if args.auto_jobs:
+        import multiprocessing as mp
+        total = mp.cpu_count() or 1
+        n_jobs = max(1, total - args.reserve_cpus)
+        print(f"[auto-jobs] {total} CPUs -> {n_jobs} workers")
+
+    num_shards = args.shuffle_num_shards
+    shard_id = args.shuffle_shard_id
+    base_seed = args.seed
+
     rng = np.random.default_rng(args.seed)
     print("=" * 72)
     print("REFEREE-REQUIRED TEST RUNNER")
@@ -1751,6 +2002,9 @@ def main() -> None:
     print(f"Project root: {root}")
     print(f"Output dir:   {out_dir}")
     print(f"Seed:         {args.seed}")
+    print(f"n_jobs:       {n_jobs}")
+    if num_shards > 1:
+        print(f"Shard:        {shard_id} of {num_shards}")
 
     # Pre-run structure verification
     structure = ensure_repo_structure(root)
@@ -1781,7 +2035,11 @@ def main() -> None:
 
     # Execution order required by referee prompt:
     # 1) Test 1, 5) Test 5, 2) Test 2, 3) Test 3, 4) Test 4
-    t1 = run_test1_phase_peak_null(sparc_df, out_dir=out_dir, rng=rng, n_shuffles=int(args.n_shuffles))
+    t1 = run_test1_phase_peak_null(
+        sparc_df, out_dir=out_dir, rng=rng, n_shuffles=int(args.n_shuffles),
+        n_jobs=n_jobs, chunksize=args.chunksize,
+        shard_id=shard_id, num_shards=num_shards, base_seed=base_seed,
+    )
     _ = t1
     run_test5_dataset_lineage(root, out_dir=out_dir, sparc_df=sparc_df, tng_paths=tng_paths)
     run_test2_mass_matched_phase(
@@ -1796,6 +2054,8 @@ def main() -> None:
         sparc_df=sparc_df,
         tng_points_path=tng_paths.get("clean_3000_points"),
         rng=rng,
+        n_jobs=n_jobs, chunksize=args.chunksize,
+        num_shards=num_shards, shard_id=shard_id, base_seed=base_seed,
     )
     run_test4_alpha_convergence(
         out_dir=out_dir,
