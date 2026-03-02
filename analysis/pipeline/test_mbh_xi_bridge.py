@@ -142,6 +142,17 @@ def match_catalogs(sparc: pd.DataFrame, mbh: pd.DataFrame) -> Tuple[pd.DataFrame
     return merged, n_unmatched
 
 
+def classify_measurement_method(ref: Any, notes: Any) -> str:
+    """Classify MBH estimate provenance for split reporting."""
+    txt = f"{str(ref)} {str(notes)}".lower()
+    txt = txt.replace("–", "-").replace("—", "-")
+    if ("m-sigma" in txt) or ("m sigma" in txt) or ("msigma" in txt):
+        return "M-sigma"
+    if ("dyn" in txt) or ("dynamical" in txt) or ("reverb" in txt) or re.search(r"\brm\b", txt):
+        return "dyn/RM"
+    return "unknown"
+
+
 def ols_fit(x: np.ndarray, y: np.ndarray) -> Dict[str, float]:
     """OLS linear fit: y = a + b*x."""
     A = np.column_stack([np.ones_like(x), x])
@@ -202,6 +213,18 @@ def make_scatter_plot(ax, x, y, xlabel, ylabel, title, fit_result):
     ax.legend(fontsize=7, frameon=False)
 
 
+def run_model_bundle(df: pd.DataFrame, models: Dict[str, Tuple[str, str]]) -> Optional[Dict[str, Any]]:
+    """Fit all bridge models for a subset. Returns None if too few points."""
+    if len(df) < 3:
+        return None
+    y = df["log10_MBH_Msun"].to_numpy(dtype=float)
+    out: Dict[str, Any] = {}
+    for key, (xcol, _xlabel) in models.items():
+        x = df[xcol].to_numpy(dtype=float)
+        out[key] = run_model(key, x, y)
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="MBH-xi bridge test")
     parser.add_argument("--project-root", type=str, default=None)
@@ -234,24 +257,40 @@ def main() -> None:
     if len(matched) < 3:
         raise RuntimeError(f"Only {len(matched)} matches — need at least 3 to fit.")
 
+    matched["method_group"] = matched.apply(
+        lambda r: classify_measurement_method(r.get("ref", ""), r.get("notes", "")),
+        axis=1,
+    )
+    method_counts = {
+        str(k): int(v)
+        for k, v in matched["method_group"].value_counts(dropna=False).to_dict().items()
+    }
+
     # Save match table
-    match_cols = ["galaxy", "log10_MBH_Msun", "MBH_sigma_dex", "ref",
+    match_cols = ["galaxy", "log10_MBH_Msun", "MBH_sigma_dex", "ref", "notes", "method_group",
                   "log_Mdyn", "log_Mstar", "log_xi", "log_Vout",
                   "V_out_kms", "xi_kpc", "R_out_kpc", "n_points"]
     matched[match_cols].to_csv(out_dir / "mbh_matches.csv", index=False)
 
     # Run four models
-    y = matched["log10_MBH_Msun"].to_numpy(dtype=float)
     models = {
         "A_MBH_vs_Mdyn": ("log_Mdyn", "log₁₀ Mdyn [M☉]"),
         "B_MBH_vs_xi": ("log_xi", "log₁₀ ξ [kpc]"),
         "C_MBH_vs_Vout": ("log_Vout", "log₁₀ Vout [km/s]"),
         "D_MBH_vs_Mstar": ("log_Mstar", "log₁₀ M★ [M☉]"),
     }
-    results: Dict[str, Any] = {}
-    for key, (xcol, xlabel) in models.items():
-        x = matched[xcol].to_numpy(dtype=float)
-        results[key] = run_model(key, x, y)
+    subset_frames: Dict[str, pd.DataFrame] = {
+        "m_sigma_only": matched[matched["method_group"] == "M-sigma"].copy(),
+        "dyn_rm_only": matched[matched["method_group"] == "dyn/RM"].copy(),
+        "combined": matched.copy(),
+    }
+    subset_results: Dict[str, Optional[Dict[str, Any]]] = {
+        key: run_model_bundle(df_sub, models) for key, df_sub in subset_frames.items()
+    }
+    if subset_results["combined"] is None:
+        raise RuntimeError("Combined sample has <3 rows; cannot fit bridge models.")
+    results = subset_results["combined"]
+    y = matched["log10_MBH_Msun"].to_numpy(dtype=float)
 
     # --- Plots ---
     # Individual scatter plots
@@ -293,13 +332,37 @@ def main() -> None:
         "n_matched": int(len(matched)),
         "n_unmatched_mbh": int(n_unmatched),
         "n_sparc_total": int(len(sparc)),
+        "method_group_counts": method_counts,
         "models": {},
+        "models_by_subset": {},
     }
     for key, r in results.items():
         summary["models"][key] = {
             "N": r["N"],
             "OLS": r["OLS"],
             "Huber": r["Huber"],
+        }
+    for subset_key in ["m_sigma_only", "dyn_rm_only", "combined"]:
+        df_sub = subset_frames[subset_key]
+        fitted = subset_results[subset_key]
+        if fitted is None:
+            summary["models_by_subset"][subset_key] = {
+                "N": int(len(df_sub)),
+                "status": "insufficient_n_for_fit",
+                "models": {},
+            }
+            continue
+        summary["models_by_subset"][subset_key] = {
+            "N": int(len(df_sub)),
+            "status": "ok",
+            "models": {
+                model_key: {
+                    "N": model_result["N"],
+                    "OLS": model_result["OLS"],
+                    "Huber": model_result["Huber"],
+                }
+                for model_key, model_result in fitted.items()
+            },
         }
     write_json(out_dir / "mbh_fit_summary.json", summary)
 
@@ -312,7 +375,46 @@ def main() -> None:
         f"**Matched galaxies**: {len(matched)}",
         f"**Unmatched MBH entries**: {n_unmatched}",
         "",
-        "## Scaling Relations",
+        "## Method split",
+        "",
+        f"- M-sigma-only: {len(subset_frames['m_sigma_only'])}",
+        f"- dyn/RM-only: {len(subset_frames['dyn_rm_only'])}",
+        f"- combined: {len(subset_frames['combined'])}",
+        f"- unknown tags: {method_counts.get('unknown', 0)}",
+        "",
+        "## Scaling Relations (by subset)",
+        "",
+    ]
+    subset_titles = [
+        ("M-sigma-only", "m_sigma_only"),
+        ("dyn/RM-only", "dyn_rm_only"),
+        ("combined", "combined"),
+    ]
+    for subset_label, subset_key in subset_titles:
+        lines += [
+            f"### {subset_label}",
+            "",
+        ]
+        subset_fit = subset_results[subset_key]
+        if subset_fit is None:
+            lines += [
+                f"- N={len(subset_frames[subset_key])}; insufficient N for regression fits (need N ≥ 3).",
+                "",
+            ]
+            continue
+        lines += [
+            "| Model | N | OLS slope | OLS rms | OLS MAD | Huber slope | Huber rms | Huber MAD |",
+            "|-------|---|-----------|---------|---------|-------------|-----------|-----------|",
+        ]
+        for key, r in subset_fit.items():
+            o, h = r["OLS"], r["Huber"]
+            lines.append(
+                f"| {key} | {r['N']} | {o['b']:.3f} | {o['rms']:.3f} | {o['mad']:.3f} "
+                f"| {h['b']:.3f} | {h['rms']:.3f} | {h['mad']:.3f} |"
+            )
+        lines.append("")
+    lines += [
+        "## Scaling Relations (combined, compatibility view)",
         "",
         "| Model | N | OLS slope | OLS rms | OLS MAD | Huber slope | Huber rms | Huber MAD |",
         "|-------|---|-----------|---------|---------|-------------|-----------|-----------|",
@@ -337,12 +439,29 @@ def main() -> None:
     print("=" * 60)
     print(f"N matched galaxies: {len(matched)}")
     print(f"Match issues (unmatched MBH): {n_unmatched}")
+    print(
+        "Method groups: "
+        f"M-sigma-only={len(subset_frames['m_sigma_only'])}, "
+        f"dyn/RM-only={len(subset_frames['dyn_rm_only'])}, "
+        f"combined={len(subset_frames['combined'])}, "
+        f"unknown={method_counts.get('unknown', 0)}"
+    )
     print()
-    for key, r in results.items():
-        o, h = r["OLS"], r["Huber"]
-        print(f"  {key}:")
-        print(f"    OLS   slope={o['b']:.3f}  rms={o['rms']:.3f}  MAD={o['mad']:.3f}")
-        print(f"    Huber slope={h['b']:.3f}  rms={h['rms']:.3f}  MAD={h['mad']:.3f}")
+    for subset_label, subset_key in [
+        ("M-sigma-only", "m_sigma_only"),
+        ("dyn/RM-only", "dyn_rm_only"),
+        ("combined", "combined"),
+    ]:
+        print(f"  [{subset_label}] N={len(subset_frames[subset_key])}")
+        subset_fit = subset_results[subset_key]
+        if subset_fit is None:
+            print("    insufficient N for regression fits (need N >= 3)")
+            continue
+        for key, r in subset_fit.items():
+            o, h = r["OLS"], r["Huber"]
+            print(f"    {key}:")
+            print(f"      OLS   slope={o['b']:.3f}  rms={o['rms']:.3f}  MAD={o['mad']:.3f}")
+            print(f"      Huber slope={h['b']:.3f}  rms={h['rms']:.3f}  MAD={h['mad']:.3f}")
     print(f"\nOutput folder: {out_dir}")
     print("=" * 60)
 

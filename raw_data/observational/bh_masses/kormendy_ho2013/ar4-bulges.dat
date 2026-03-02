@@ -1,0 +1,133 @@
+  1  Object  Hubble  Distance     K       M_K     M_K     M_K   B/T  PB/T     M_V     M_V     M_V   (V-K)0  (B-V)0  log(M_bulge)    Object     log(M_BH)  log(M_BH high) log(M_BH low)  sigma_e    V_circ  Flag Flag Source
+  2   name    type    (Mpc)      total   total  (P)Bulge  Disk               total  (P)bulge  Disk                  Solar masses     name    Solar masses  Solar masses  Solar masses    km/s       km/s     1   2
+  3   (2)      (3)     (4)       (5)      (6)     (7)     (8)   (9)  (10)    (11)    (12)    (13)    (14)   (15)    (16)    (17)     (18)       (19)        (20)        (21)             (22)       (23)   (24) (25) (26) 
+  4
+  5  M31       Sb     0.774      0.573  -23.89  -22.62  -23.85  0.31  0.0   -21.14  -19.64  -20.83   2.746  0.865   10.35 ± 0.09     M31        1.43e8      1.12e8      2.34e8         169 ±  8   250 ± 20   1   0   Bender et al. 2005 					  
+  6  M81       Sb     3.604      3.831  -23.98  -22.81  -23.53  0.34  0.0   -21.06  -19.89  -20.61   2.913  0.879   10.42 ± 0.09     M81        6.50e7      5.00e7      9.00e7         143 ±  7   240 ± 10   1,2 0   See sidebar, Notes on Some Individual Galaxiesa		  
+  7  NGC524    S0    24.22       7.163  -24.78  -24.69  -22.04  0.92  0.0   -21.86  -21.77  -19.12   2.923  0.977   11.26 ± 0.09     NGC524     8.67e8      8.21e8      9.61e8         247 ± 12   -1. ±  0   1   0   Krajnovic et al. 2009					  
+  8  NGC821    S0    23.44       7.715  -24.17  -24.11  -20.92  0.95  0.0   -21.19  -21.13  -17.94   2.980  0.893   10.98 ± 0.09     NGC821     1.65e8      0.92e8      2.39e8         209 ± 10   -1. ±  0   1   1   Schulze & Gebhardt 2011					  
+  9  NGC1023   SB0   10.81       6.238  -23.95  -22.93  -23.41  0.39  0.0   -20.99  -19.96  -20.45   2.964  0.946   10.53 ± 0.09     NGC1023    4.13e7      3.71e7      4.56e7         205 ± 10   251 ± 15   1   0   Bower et al. 2001				  
+ 10  NGC1194   S0/    57.98      9.758  -24.08  -23.33  -23.33  0.5   0.0   -21.16  -20.40  -20.40   2.925  0.893   10.64 ± 0.09     NGC1194    7.08e7      6.76e7      7.41e7         148 ± 24   203 ± 16   3   0   Kuo et al. 2011				  
+ 11  NGC1277   S0/    73.        9.813  -24.63  -23.98  -23.76  0.55  0.0   -21.31  -20.67  -20.45   3.313  0.985   11.00 ± 0.09     NGC1277    1.70e10     1.40e10     2.00e10        333 ± 17   -1. ±  0   1   1   van den Bosch et al. 2012				  
+ 12  NGC2549   S0/    12.70      8.046  -22.49  -20.99  -22.18  0.25  0.0   -19.55  -18.05  -19.24   2.942  0.912    9.71 ± 0.09     NGC2549    1.45e7      0.31e7      1.65e7         145 ±  7   -1. ±  0   1   0   Krajnovic et al. 2009					  
+ 13  NGC3115   S0/     9.54      5.883  -24.03  -23.91  -21.53  0.90  0.0   -21.13  -21.01  -18.63   2.901  0.928   10.92 ± 0.09     NGC3115    8.97e8      6.20e8      9.54e8         230 ± 11   315 ± 20   1   1   Emsellem, Dejonghe & Bacon 1999		  
+ 14  NGC3245   S0     21.38      7.862  -23.80  -23.41  -22.49  0.70  0.0   -20.88  -20.50  -19.58   2.914  0.888   10.69 ± 0.09     NGC3245    2.39e8      1.63e8      2.66e8         205 ± 10   -1. ±  0   2   0   Barth et al. 2001					  
+ 15  NGC3585   S0     20.51      6.703  -24.88  -24.80  -21.99  0.93  0.0   -21.93  -21.85  -19.04   2.951  0.913   11.26 ± 0.09     NGC3585    3.29e8      2.71e8      4.74e8         213 ± 11   280 ± 20   1   0   Gultekin et al. 2009b				  
+ 16  NGC3998   S0     14.30      7.365  -23.42  -23.24  -21.36  0.85  0.0   -20.63  -20.46  -18.57   2.786  0.936   10.67 ± 0.09     NGC3998    8.45e8      7.79e8      9.15e8         275 ±  7   -1. ±  0   1   1   Walsh et al. 2012					  
+ 17  NGC4026   S0     13.35      7.584  -23.05  -22.51  -22.03  0.61  0.0   -20.01  -19.47  -18.99   3.043  0.900   10.33 ± 0.09     NGC4026    1.80e8      1.45e8      2.40e8         180 ±  9   300 ± 20   1   0   Gultekin et al. 2009b				  
+ 18  NGC4258   SABbc   7.27      5.464  -23.85  -21.55  -23.71  0.12  0.0   -20.94  -18.64  -20.80   2.907  0.676    9.86 ± 0.09     NGC4258    3.78e7      3.74e7      3.82e7         115 ± 10   208 ±  6   3   0   See Section 3.3.2				  
+ 19  NGC4342   S0     22.91      9.023  -22.78  -22.40  -21.48  0.70  0.01  -19.50  -19.11  -18.19   3.287  0.932   10.31 ± 0.09     NGC4342    4.53e8      3.05e8      7.18e8         225 ± 11   -1. ±  0   1   0   Cretton & van den Bosch 1999				  
+ 20  NGC4526   S0/    16.44      6.473  -24.61  -24.15  -23.47  0.65  0.0   -21.44  -20.98  -20.30   3.170  0.941   11.02 ± 0.09     NGC4526    4.51e8      3.48e8      5.91e8         222 ± 11   290 ± 20   4   0   Davis et al. 2013				  
+ 21  NGC4564   S0     15.94      7.937  -23.09  -22.65  -21.88  0.67  0.0   -20.06  -19.62  -18.85   3.028  0.899   10.38 ± 0.09     NGC4564    8.81e7      6.38e7     11.26e7         162 ±  8   -1. ±  0   1   1   Schulze & Gebhardt 2011				  
+ 22  NGC4594   Sa      9.87      4.625  -25.36  -25.28  -22.55  0.925 0.01  -22.38  -22.30  -19.57   2.980  0.934   11.47 ± 0.09     NGC4594    6.65e8      6.24e8      7.05e8         240 ± 12   360 ± 10   1   1   Jardel et al. 2011				  
+ 23  NGC7457   S0     12.53      8.179  -22.33  -20.82  -22.02  0.25  0.0   -19.45  -17.94  -19.14   2.880  0.844    9.56 ± 0.09     NGC7457    0.90e7      0.36e7      1.43e7          67 ±  3   145 ±  6   1   1   Schulze & Gebhardt 2011				  
+ 24                                                                                                                                                                                                                                                                   
+ 25  MilkyWay  Sbc     0.00828  -9.999  -23.7   -21.9   -23.5   0.0   0.19  -20.8   -18.9   -20.5    2.980  9.999   10.09 ± 0.10     MilkyWay   4.30e6      3.94e6      4.66e6         105 ± 20   220 ± 20   1   0   Genzel, Eisenhauer & Gillessen 2010		  
+ 26  Circinus  SABb:   2.82      4.71   -22.85  -21.55  -22.47  0.0   0.30  -19.80  -18.49  -19.41   3.052  0.410    9.63 ± 0.14     Circinus   1.14e6      0.94e6      1.34e6          79 ±  3   155 ±  5   3   0   Greenhill et al. 2003				  
+ 27  NGC1068   Sb     15.9       5.788  -25.23  -24.25  -24.66  0.0   0.41  -22.23  -20.92  -21.84   3.000  0.710   10.92 ± 0.10     NGC1068    8.39e6      7.95e6      8.83e6         151 ±  7   283 ±  9   3   0   Lodato & Bertin 2003, Hure 2002			  
+ 28  NGC1300   SBbc   21.5       7.564  -24.11  -21.71  -23.98  0.0   0.11  -21.32  -18.92  -21.19   2.791  0.653    9.84 ± 0.10     NGC1300    7.55e7      3.89e7     14.75e7          88 ±  3   220 ± 10   2   0   Atkinson et al. 2005				  
+ 29  NGC2273   SBa    29.5       8.480  -23.89  -22.07  -23.67  0.0   0.19  -20.88  -19.06  -20.66   3.007  0.827   10.08 ± 0.09     NGC2273    8.61e6      8.15e6      9.07e6         125 ±  9   220 ±  6   3   0   Kuo et al. 2011					  
+ 30  NGC2748   Sc     23.4       8.723  -23.13  -20.56  -23.02  0.0   0.094 -20.27  -17.70  -20.16   2.862  0.707    9.41 ± 0.10     NGC2748    4.44e7      2.62e7      6.20e7         115 ±  5   150 ± 10   2   0   Atkinson et al. 2005				  
+ 31  NGC2787   SB0/a   7.45      7.263  -22.14  -21.06  -21.64  0.11  0.26  -19.10  -18.02  -18.60   3.038  0.944    9.78 ± 0.09     NGC2787    4.07e7      3.55e7      4.47e7         189 ±  9   226 ± 10   2   0   Sarzi et al. 2001				  
+ 32  NGC3227   SBa    23.75      7.639  -24.25  -21.83  -24.12  0.0   0.108 -21.55  -19.13  -21.43   2.696  0.800    9.99 ± 0.09     NGC3227    2.10e7      0.98e7      2.79e7         133 ± 12   250 ± 10   1   0   Davies et al. 2006				  
+ 33  NGC3368   SABab  10.62      6.320  -23.99  -22.48  -23.68  0.0   0.25  -21.14  -19.63  -20.82   2.854  0.838   10.26 ± 0.09     NGC3368    7.66e6      6.13e6      9.19e6         125 ±  6   204 ±  5   1   0   Nowak et al. 2010				  
+ 34  NGC3384   SB0    11.49      6.750  -23.65  -22.56  -23.15  0.0   0.37  -20.55  -19.46  -20.05   3.105  0.906   10.34 ± 0.09     NGC3384    1.08e7      0.59e7      1.57e7         146 ±  7   160 ± 10   1   1   Schulze & Gebhardt 2011				  
+ 35  NGC3393   SABa   49.2       9.059  -24.45  -23.03  -24.11  0.0   0.27  -21.48  -20.05  -21.14   2.968  0.813   10.48 ± 0.09     NGC3393    1.57e7      0.58e7      2.55e7         148 ± 10   -1. ±  0   3   0   Kondratko, Greenhill & Moran 2008; Hure et al. 2011	  
+ 36  NGC3489   SABa   11.98      7.370  -23.29  -22.15  -22.82  0.11  0.24  -20.17  -19.03  -19.70   3.120  0.815   10.11 ± 0.09     NGC3489    5.94e6      5.11e6      6.78e6         113 ±  4   -1. ±  0   1   0   Nowak et al. 2010					  
+ 37  NGC3945   SB0    19.5       7.526  -23.93  -22.88  -23.41  0.04  0.34  -20.95  -19.90  -20.43   2.980  0.925   10.50 ± 0.09     NGC3945    8.80e6      0.00e6     25.50e6         192 ± 10   -1. ±  0   1   0   Gultekin et al. 2009b					  
+ 38  NGC4388   SBbc   16.53      8.004  -23.10  -20.55  -22.99  0.0   0.096 -20.14  -17.60  -20.03   2.955  0.711    9.41 ± 0.10     NGC4388    7.31e6      7.13e6      7.48e6          99 ± 10   200 ± 10   3   0   Kuo et al. 2011					  
+ 39  NGC4736   Sab     5.00      5.106  -23.39  -22.29  -22.91  0.0   0.36  -20.68  -19.58  -20.20   2.710  0.735   10.13 ± 0.10     NGC4736    6.77e6      5.21e6      8.33e6         120 ±  6   181 ± 10   1   0   Gebhardt et al. 2013				  
+ 40  NGC4826   Sab     7.27      5.330  -23.99  -22.24  -23.75  0.0   0.20  -20.98  -19.23  -20.74   3.009  0.803   10.14 ± 0.09     NGC4826    1.56e6      1.17e6      1.95e6         104 ±  3   155 ±  5   1   0   Gebhardt et al. 2013				  
+ 41  NGC4945   Scd     3.58      4.438  -23.38  -20.50  -23.30  0.0   0.07  -20.58  -17.70  -20.50   2.801  1.20     9.35 ± 0.12     NGC4945    1.35e6      0.87e6      2.03e6         134 ± 20   174 ± 10   3   0   Greenhill, Moran & Herrnstein 1997		  
+ 42  NGC6264   SBb   147.6      11.407  -24.5   -22.6   -24.3   0.0   0.17   99.     99.     99.     9.999  9.999   10.36 ± 0.09     NGC6264    3.08e7      3.04e7      3.12e7         158 ± 15   -1. ±  0   3   0   Kuo et al. 2011					  
+ 43  NGC6323   SBab  113.4      10.530  -24.80  -21.55  -24.75  0.0   0.050  99.     99.     99.     9.999  9.999    9.94 ± 0.09     NGC6323    1.01e7      1.00e7      1.03e7         158 ± 26   -1. ±  0   3   0   Kuo et al. 2011					  
+ 44  NGC7582   SBab   22.3       7.316  -24.43  -21.96  -24.31  0.0   0.103 -21.78  -19.31  -21.66   2.649  0.738   10.02 ± 0.10     NGC7582    5.51e7      4.56e7      6.81e7         156 ± 19   226 ± 10   2   0   Wold et al. 2006				  
+ 45  IC2560    SBbc   37.2       8.694  -24.19  -22.05  -24.02  0.0   0.14  -21.65  -19.51  -21.48   2.541  0.886   10.12 ± 0.09     IC2560     5.01e6      0.00e6      5.72e6         141 ± 10   196 ±  3   3   0   Yamauchi et al. 2012				  
+ 46  UGC3789   SABab  49.9       9.510  -24.03  -22.79  -23.61  0.0   0.32  -21.13  -19.89  -20.71   2.9    0.86    10.39 ± 0.09     UGC3789    9.65e6      8.10e6     11.20e6         107 ± 12   273 ± 20   3   0   Kuo et al. 2011, Hure et al. 2011               
+ 47
+ 48  NGC3998   S0     14.30      7.365  -23.42  -23.24  -21.36  0.85  0.0   -20.63  -20.46  -18.57   2.786  0.936   10.67 ± 0.09     NGC3998    2.27e8      1.43e8      3.28e8         275 ±  7   -1. ±  0   2   0   De Francesco, Capetti & Marconi 2006			  
+ 49  NGC4596   SB0    16.53      7.463  -23.64  -22.21  -23.29  0.27  0.0   -20.72  -19.30  -20.38   2.913  0.920   10.20 ± 0.09     NGC4596    7.67e7      4.43e7     11.41e7         136 ±  6   230 ± 30   2   0   Sarzi et al. 2001			
+ 
+123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789112345678911234567891123456789112345678911234567891123456789112345678911234567891123456789112345678921234567892123456789212345678921234567892123456789212345678921234567892
+         0         0         0         0         0         0         0         0         0         0         1         2         3         4         5         6         7         8         9         0         1         2         3          4        5         6         7
+                                                                                                   0         0         0         0         0         0         0         0         0         0         0         0         0         0          0        0         0         0
+
+Note: There are 3 blocks of galaxies.  Rows  5 - 23 list galaxies that have classical bulges and reliable black hole mass estimates to within the errors quoted in Columns 20 and 21.
+                                       Rows 25 - 46 list galaxies that have     pseudobulges and reliable black hole mass estimates to within the errors quoted in Columns 20 and 21.
+                                       Rows 48 and 49 list two galaxies that have classical bulges but black hole mass measurements in which the widths of the emission lines were not taken into account in the mass measurements.  We do not use these values.
+                                                      Note that one of these -- NGC 3998 -- has a black hole mass from stellar-dynamical measurements in row 16.
+
+At the bottom of the table, three rows count characters horizontally; this again may be useful in reading the table from within a program.
+
+Column 1 counts lines in this ascii table (for use in plot programs).
+
+Column 2 is the galaxy name. 
+
+Column 3 is the galaxy Hubble type, mostly from RC3 (de Vaucouleurs et al. 1991) with a few corrections taken from Kormendy & Bender (2013b).
+
+Column 4 is the assumed distance (see Table 2 notes). For the Milky Way, Circinus, NGC 4945, and UGC 3789, see the Supplemental Material, S4.3, Notes on Individual Disk Galaxies with Pseudobulges. 
+
+Column 5 is the 2MASS Ks total magnitude, hereafter K. For three galaxies, it has been corrected as discussed in the Supplemental Material, S3.1. These corrections are generally negligible for disk galaxies, which usually have steep (nearly exponential) outer profiles, 
+         unless their images are both very large and very bulge-dominated. The biggest corrections are -0.363 mag for NGC 4594 (which has an outer brightness profile like that of a giant elliptical) and -0.411 mag for M31 (which has an exceptionally large
+         image on the sky). Both corrections were determined in order to make (V - K)0 = 2.980 (in M31, for the bulge only). 
+
+Columns 6 - 8 are the total, (pseudo)bulge, and disk K-band absolute magnitudes based on the adopted distances and Galactic absorption corrections from the Schlafly & Finkbeiner (2011) recalibration of Schlegel, Finkbeiner & Davis (1998) as tabulated in NED. 
+
+Columns 9 and 10 are the classical-bulge-to-total luminosity ratio B/T and the pseudobulge-to-total luminosity ratio PB/T from Kormendy & Bender (2013b). These values used in K band are determined as close to K band as feasible; for some galaxies (especially S0s), 
+          they are determined in the optical but can be used in the infrared with relatively small errors. Parameters for the Milky Way and for Circinus are summarized further in the Supplemental Material, S4.3. 
+
+Columns 11 - 13 are the V-band total, (pseudo)bulge, and disk absolute magnitudes. Total magnitudes are taken from Kormendy & Bender (2013b) or from the RC3 and HyperLeda. We generally used the mean of the RC3, HyperLeda main table, and HyperLeda  "integrated photometry"
+           B_T values and subtracted (B - V)_T , usually from RC3. When the RC3 or HyperLeda magnitude gave a much more realistic (V - K)_0 color, we used these values. The V-band B/T and PB/T values are usually assumed to be the same as the K-band values. For two galaxies, 
+           optical and infrared measurements imply different (pseudo)bulge-to-total ratios. Then we used (B/T )_V = 0.25 for M31 and (PB/T )_V = 0.30 for NGC 1068 to get the V-band (pseudo)bulge magnitudes.
+
+Columns 14 and 15 are the V - K and B - V colors of the galaxy corrected for Galactic reddening. 
+
+Column 16 is the base-10 logarithm of the (pseudo)bulge stellar mass derived from M_K,bulge and from the average of the M/L_K values given by Equations 8 and 9 in Section 6.6.1.
+
+Column 17 is the 1-sigma error in the value in Column 16.
+
+Column 18 repeats the name of the galaxy.
+
+Column 19 is the base-10 logarithm of  the measured BH mass.
+
+Column 20 is the base-10 logarithm of (the measured BH mass minus 1-sigma estimated error).
+
+Column 21 is the base-10 logarithm of (the measured BH mass plus  1-sigma estimated error).
+
+Column 22 is the stellar velocity dispersion sigma_e with 1-sigma error, mostly from Gultekin et al. (2009c) or the source in Column 26. Checks or corrections are described in the Supplemental Material, S3. Corrections to Parameters Listed in Tables 2 and 3 and S4. BH Database. 
+          For the definition of sigma_e, see Section 5.1 or the Supplemental Material, S3.3. Corrections to Effective Velocity Dispersions. 
+
+Column 23 is the asymptotic, circular-orbit rotation velocity V_circ at large radii, usually from HI observations, as documented by Kormendy & Bender (2013b). 
+
+Column 24 lists a flag that encodes the method used to measure the black hole mass, using 1 for stellar dynamics, 2 for ionized gas dynamics, 3 for maser dynamics, and 4 for CO rotation curve dynamics. 
+
+Column 25 lists a flag that encodes (1) whether or (0) not the BH mass has been corrected by making dynamical models that include large orbit libraries and dark matter halos.  This is relevant only for BH masses determined from stellar dynamics.
+
+Column 26 is the source of the BH mass in Columns 19 - 21. When there is more than one measurement, the other sources are given in the Supplemental Material, S4. If a galaxy does not appear there, then the reference in Column 26 is also the BH discovery paper.
+
+Note that various dummy values that should be obvious are inserted in a number of columns when measured values are not known.  The value 0.00 is never a flag value except when quoted as an error estimate.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
