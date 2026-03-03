@@ -1,0 +1,17 @@
+{
+  "run_id": "20260303T000645Z_codex_add-referee-safe-mbh-censored-br_496125f8",
+  "timestamp_utc": "2026-03-03T00:06:45Z",
+  "tool": "codex",
+  "purpose": "Add referee-safe MBH censored bridge interpretation note",
+  "prompt_sha256": "89205712857d62e726ec46125b4e994f9a2b7ebcae66bdc2d6b181b636b6ec5b",
+  "inputs_scanned": [
+    "outputs/mbh_xi_bridge_direct/20260302_134505",
+    "outputs/mbh_xi_bridge_censored/20260302_164633/summary_mbh_censored_fit.json",
+    "outputs/mbh_xi_bridge_censored/20260302_164643_mdyn/summary_mbh_censored_fit.json"
+  ],
+  "outputs_changed": [
+    "analysis/collab/mbh_xi_bridge_censored_referee_note.md"
+  ],
+  "git_commit": "cc7e28656833e45e4c58cc8311716f2900bb1e81",
+  "todos_remaining": []
+}
