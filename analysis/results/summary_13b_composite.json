@@ -1,0 +1,27 @@
+{
+  "test_name": "test_13b_composite",
+  "description": "Composite SPARC(inner)+Brouwer(outer) lensing profile fit comparing NFW vs BEC soliton+envelope with stitch-offset diagnostics.",
+  "verdict": "INCONCLUSIVE_SYSTEMATIC",
+  "sample": {
+    "n_mass_bins": 4,
+    "n_valid_bins": 4,
+    "n_points_per_bin": 25,
+    "n_sparc_galaxies_used": 88
+  },
+  "aggregate": {
+    "total_delta_aic_nfw_minus_bec": 179.13,
+    "n_bec_preferred_bins": 4,
+    "n_nfw_preferred_bins": 0,
+    "core_radius_slope_dlogrc_dlogmstar": 0.058,
+    "core_radius_vs_xi_pearson_r": 0.549,
+    "core_radius_vs_xi_pearson_p": 0.451,
+    "red_flags": 4
+  },
+  "diagnostics": {
+    "fixed_rc_equals_xi_delta_aic_nfw_minus_bec": [-3.11, -2.76, -2.39, -2.16],
+    "interpretation": "Raw BEC gain is absorbed by stitch/conversion systematics; fixed-r_c test reverts to NFW preference."
+  },
+  "artifacts": {
+    "run_log": "outputs/test13b_refresh/20260304_155010/test_13b_composite.log"
+  }
+}

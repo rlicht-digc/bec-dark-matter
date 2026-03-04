@@ -14,7 +14,7 @@
     "n_significant_005": 25,
     "frac_significant": 0.373,
     "expected_null": 3.4,
-    "binom_p_excess": 6.318796266506839e-16
+    "binom_p_excess": 6.318796266506839E-16
   },
   "peak_power": {
     "mean_observed": 0.4008,
@@ -1003,5 +1003,6 @@
       "Vflat": 37.0,
       "med_log_gbar": -11.365871408218249
     }
-  ]
+  ],
+  "verdict": "EXCESS_PERIODIC_STRUCTURE_DETECTED"
 }

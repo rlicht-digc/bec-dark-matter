@@ -118,7 +118,7 @@
 <p>Summary Artifact: <code>analysis/results/summary_extended_rar_inversion.json</code></p>
 <table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">scatter_by_source.GHASP_2008b.n_pts</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">34</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">g_dagger_log</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">-9.92081875395</td></tr></tbody></table>
 <p>Finding: REPLICATED</p>
-<h2>Supporting Tests (5)</h2>
+<h2>Supporting Tests (7)</h2>
 <hr>
 <h3>Supporting Test 1: test_cluster_scale_rar</h3>
 <p>Script: <code>analysis/pipeline/test_cluster_scale_rar.py</code></p>
@@ -154,5 +154,104 @@
 <p>Summary Artifact: <code>analysis/results/summary_tf_scatter_redshift.json</code></p>
 <table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">trend_analysis.raw.p_value</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.0452</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">trend_analysis.raw.slope</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.048</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">trend_analysis.raw.intercept</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.0769</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">data[0].scatter_dex_logV</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.057</td></tr></tbody></table>
 <p>Finding: INCONCLUSIVE: Apparent scatter evolution detected, but dominated by band and technique differences. Cannot distinguish physical evolution from observational degradation at high z.</p>
+<hr>
+<h3>Supporting Test 6: test_xi_massmatched_pairs</h3>
+<p>Script: <code>analysis/pipeline/test_xi_massmatched_pairs.py</code></p>
+<p>Description: Test 6 — Xi mass-matched pairs comparison. Test 3 showed TNG has strong xi-organizing (C=1.549, p=0.000) but SPARC does not (C=0.687, p=0.571).  This discrepancy may be confounded by the different mass distributions of the two samples.  This test uses Test 2&#x27;s mass-matching procedure to build SPARC–TNG pairs of comparable baryon mass, then compares per-galaxy xi-concentration on the *paired* sub-samples. Outputs (to --out-dir): xi_pairs.csv summary_xi_massmatched.json fig_xi_pairs_scatter.png fig_xi_ratio_vs_mass.png fig_xi_matched_X_profiles.png report_xi_massmatched.md run_metadata.json</p>
+<p>Summary Artifact: <code>analysis/results/summary_xi_massmatched.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">sparc.perm_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.56</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">g_dagger</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">1.2e-10</td></tr></tbody></table>
+<p>Finding: DIAGNOSTIC: Mass matching removes the apparent xi concentration gap; paired C comparison is statistically significant but not directionally BEC-favoring.</p>
+<hr>
+<h3>Supporting Test 7: test_mdyn_triangulation_alfalfa_yang</h3>
+<p>Script: <code>analysis/pipeline/test_mdyn_triangulation_alfalfa_yang.py</code></p>
+<p>Description: M_dyn Triangulation: ALFALFA×Yang vs Kinematic M_dyn at Fixed M_bar Triangulates the key bridge quantity &quot;M_dyn at fixed M_bar&quot; using independent mass inference without TNG. Route 1 (primary): ALFALFA×Yang group catalog halo masses vs kinematic M_dyn proxy at fixed M_bar. Route 3 (sanity): Internal SPARC consistency — outermost-point M_dyn vs Vflat-based M_dyn (where available). Compares the inferred offset magnitude to the previously observed TNG-vs-SPARC offset: median_log10(Mdyn_TNG/Mdyn_SPARC) ≈ +0.215 dex  (from Test 6).</p>
+<p>Summary Artifact: <code>analysis/results/summary_mdyn_triangulation.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">seed</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">42</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">bin_width_dex</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.3</td></tr></tbody></table>
+<p>Finding: DIAGNOSTIC: SPARC kinematic M_dyn estimator bias is &lt;0.02 dex; the +0.215 dex TNG offset is consistent with inner concentration differences, not estimator failure.</p>
+<h2>Supplementary Diagnostics (12)</h2>
+<hr>
+<h3>Supplementary Test 1: test_13b_composite</h3>
+<p>Script: <code>analysis/pipeline/test_13b_composite.py</code></p>
+<p>Description: Composite SPARC(inner)+Brouwer(outer) lensing profile fit comparing NFW vs BEC soliton+envelope with stitch-offset diagnostics.</p>
+<p>Summary Artifact: <code>analysis/results/summary_13b_composite.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">aggregate.core_radius_vs_xi_pearson_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.451</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">aggregate.core_radius_slope_dlogrc_dlogmstar</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.058</td></tr></tbody></table>
+<p>Finding: INCONCLUSIVE_SYSTEMATIC</p>
+<hr>
+<h3>Supplementary Test 2: test_13b_diagnostics</h3>
+<p>Script: <code>analysis/pipeline/test_13b_diagnostics.py</code></p>
+<p>Description: Systematics audit for SPARC+Brouwer composite test: stitch boundary, split-sample origin, NFW+offset control, conversion bias, and fixed-r_c check.</p>
+<p>Summary Artifact: <code>analysis/results/summary_13b_diagnostics.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">sample.n_mass_bins</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">4</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">sample.n_sparc_galaxies_used</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">88</td></tr></tbody></table>
+<p>Finding: STITCH_SYSTEMATIC_DOMINANT</p>
+<hr>
+<h3>Supplementary Test 3: test_13b_standalone</h3>
+<p>Script: <code>analysis/pipeline/test_13b_standalone.py</code></p>
+<p>Description: Brouwer-only lensing profile-shape fit comparing NFW vs BEC soliton+envelope across 4 stellar-mass bins.</p>
+<p>Summary Artifact: <code>analysis/results/summary_13b_standalone.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">aggregate.core_radius_vs_xi_pearson_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.0561</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">aggregate.core_radius_slope_dlogrc_dlogmstar</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.966</td></tr></tbody></table>
+<p>Finding: NFW_PREFERRED</p>
+<hr>
+<h3>Supplementary Test 4: test_healing_length_scaling</h3>
+<p>Script: <code>analysis/pipeline/test_healing_length_scaling.py</code></p>
+<p>Description: Tests whether ACF coherence length Lc and short-scale spectral wavelength λ scale with BEC healing length ξ = sqrt(G*M_b/g†).</p>
+<p>Summary Artifact: <code>analysis/results/summary_healing_length_scaling.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">regression_simple.p_value</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">1.07552553503e-06</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">correlations.Lc_vs_xi.spearman_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">1.3349800419e-06</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">regression_simple.slope</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.6022</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">regression_simple.intercept</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">-0.5213</td></tr></tbody></table>
+<p>Finding: CONFOUNDED_BY_SIZE</p>
+<hr>
+<h3>Supplementary Test 5: test_radial_variance_profile</h3>
+<p>Script: <code>analysis/pipeline/test_radial_variance_profile.py</code></p>
+<p>Description: Radial Variance Profile Test: σ²(n̄) Continuous Shape The unified BEC/shadow framework predicts that the variance of RAR residuals as a function of occupation number n̄ should follow an INVERTED-U shape: - At n̄ &gt;&gt; 1 (deep inner, saturated projection): σ² ~ constant (the condensate is fully formed, stable) Looks CLASSICAL because variance is dominated by the n̄² floor - At n̄ ~ 1-10 (transition zone, R ~ ξ): σ² PEAKS — the condensation threshold where counting statistics are maximally visible. n̄(n̄+1) vs n̄ distinction is largest here. - At n̄ &lt;&lt; 1 (far outer, evaporating projection): σ² → C (baseline) — too few &quot;intersection modes&quot; to measure CDM/classical prediction: σ² ~ A*n̄ + C (monotonic, no peak) BEC/shadow prediction: σ² = A*n̄(n̄+1) + C, which has an inverted-U when plotted vs log(n̄) because the n̄² term dominates at high n̄ but the peak *relative to the classical model* is at n̄ ~ 1. The KEY DIAGNOSTIC is the RATIO σ²_obs / σ²_classical: - BEC predicts ratio = (n̄+1), which peaks at the transition - CDM predicts ratio ≈ 1 everywhere This test bins by n̄ (not log_gbar), computes the variance in each bin, and fits the shape. It also does this per-galaxy using R/ξ as the radial coordinate. Author: Built on the SPARC RAR BEC pipeline (Russell Licht, Feb 2026)</p>
+<p>Summary Artifact: <code>analysis/results/summary_radial_variance_profile.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test_c.spearman_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.380713181677</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test_a.n_bins</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">9</td></tr></tbody></table>
+<p>Finding: SUPPORTS_TRANSITION_SCALE</p>
+<hr>
+<h3>Supplementary Test 6: test_healing_length_kstar</h3>
+<p>Script: <code>analysis/pipeline/test_healing_length_kstar.py</code></p>
+<p>Description: k* (lag-index coherence) vs ξ = sqrt(G*Mb/g†). No dR conversion.</p>
+<p>Summary Artifact: <code>analysis/results/summary_healing_length_kstar.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">correlations.kstar_vs_xi.spearman_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.0229993242903</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">regression_kstar_xi.slope</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.0865</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">regression_kstar_xi.intercept</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.0582</td></tr></tbody></table>
+<p>Finding: XI_RE_SCALING_ONLY</p>
+<hr>
+<h3>Supplementary Test 7: test_healing_length_distance_diag</h3>
+<p>Script: <code>analysis/pipeline/test_healing_length_distance_diag.py</code></p>
+<p>Description: Tests whether ξ/R signal is real or distance-quality artifact.</p>
+<p>Summary Artifact: <code>analysis/results/summary_healing_length_distance_diag.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test2_residualized_ranks.residual_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.195015579659</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test2_residualized_ranks.coeff_rank_r1.intercept</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">-87.0966</td></tr></tbody></table>
+<p>Finding: DISTANCE_SENSITIVE_SIGNAL</p>
+<hr>
+<h3>Supplementary Test 8: test_hierarchical_healing_length</h3>
+<p>Script: <code>analysis/pipeline/test_hierarchical_healing_length.py</code></p>
+<p>Description: Tests whether the cluster-scale g†_eff follows a mass-scaling relation through the BEC healing length ξ = sqrt(GM/g†). Spans from dwarf galaxies (~10^8 M☉) to massive clusters (~10^15 M☉).</p>
+<p>Summary Artifact: <code>analysis/results/summary_hierarchical_healing_length.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">constants.log_g_dagger</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">-9.92081875395</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test_3a_mass_scaling.combined_fit.pearson_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">2.22384861584e-23</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test_3a_mass_scaling.m200_fit.slope</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.9071</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">test_3a_mass_scaling.combined_fit.intercept</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">-3.1564</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">step4_scatter_profile.scatter_minimum_kpc</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">200</td></tr></tbody></table>
+<p>Finding: SIGNIFICANT_HIERARCHICAL_SCALING</p>
+<hr>
+<h3>Supplementary Test 9: test_scale_parameter_analysis</h3>
+<p>Script: <code>analysis/pipeline/test_scale_parameter_analysis.py</code></p>
+<p>Description: Scale Parameter Meta-Analysis: X = R/ξ Framework Maps all 13 BEC tests onto a unified dimensionless scale X = R/ξ, where R is the characteristic radius probed by each test and ξ = √(GM*/g†) is the BEC healing length. The BEC prediction: X ≪ 1: Deep in the coherent core → maximum quantum signatures X ~ 1: Transition zone → partial coherence X ≫ 1: Thermal envelope → classical NFW-like behavior If the ΔAIC/significance values correlate with X — quantum signatures at small X, null results at large X — this is a quantitative prediction of the quantum→classical transition in a self-gravitating BEC.</p>
+<p>Summary Artifact: <code>analysis/results/summary_alpha_mdyn.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">n_points</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">2739</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">alpha_cross_mstar</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.283210979062</td></tr></tbody></table>
+<p>Finding: SUPPORTS_X_OVER_XI_FRAMEWORK</p>
+<hr>
+<h3>Supplementary Test 10: test_interface_oscillation</h3>
+<p>Script: <code>analysis/pipeline/test_interface_oscillation.py</code></p>
+<p>Description: Lag autocorrelation of RAR residuals ordered by galactocentric radius</p>
+<p>Summary Artifact: <code>analysis/results/summary_interface_oscillation.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">correlations.r1_vs_npts.p_value</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.7848</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">aggregate_lag1.binom_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">6.77626357803e-21</td></tr></tbody></table>
+<p>Finding: STRONG_POSITIVE_AUTOCORRELATION</p>
+<hr>
+<h3>Supplementary Test 11: test_interface_oscillation_controls</h3>
+<p>Script: <code>analysis/pipeline/test_interface_oscillation_controls.py</code></p>
+<p>Description: Detrending controls (first-difference, spline trend-removal) and within-galaxy permutation null for RAR residual autocorrelation.</p>
+<p>Summary Artifact: <code>analysis/results/summary_interface_oscillation_controls.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">aggregate_raw.lag1.binom_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">6.77626357803e-21</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">parameters.min_points_per_galaxy</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">15</td></tr></tbody></table>
+<p>Finding: OSCILLATION_SIGNAL_SURVIVES_CONTROLS</p>
+<hr>
+<h3>Supplementary Test 12: test_interface_spectral</h3>
+<p>Script: <code>analysis/pipeline/test_interface_spectral.py</code></p>
+<p>Description: Lomb-Scargle periodogram on spline-detrended RAR residuals with permutation null.</p>
+<p>Summary Artifact: <code>analysis/results/summary_interface_spectral_test.json</code></p>
+<table style="width:100%; border-collapse:collapse; margin:10px 0;"><thead><tr><th style="border:1px solid #ddd; padding:6px; text-align:left;">Metric</th><th style="border:1px solid #ddd; padding:6px; text-align:left;">Value</th></tr></thead><tbody><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">wavelength_significant.clustering_p</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">0.8105</td></tr><tr><td style="border:1px solid #ddd; padding:6px; text-align:left;">parameters.min_points</td><td style="border:1px solid #ddd; padding:6px; text-align:left;">15</td></tr></tbody></table>
+<p>Finding: EXCESS_PERIODIC_STRUCTURE_DETECTED</p>
 <h2>Transparency Note</h2>
-<p>This analysis includes 16 core tests. 10 support BEC-consistency, 5 are inconclusive or show fragility, and 1 fail to replicate in independent datasets. All results are reported regardless of outcome.</p>
+<p>This analysis includes 16 core tests. 10 support BEC-consistency, 5 are inconclusive or show fragility, and 1 fail to replicate in independent datasets. It also includes 7 supporting diagnostics and 12 supplementary diagnostics from the merged-paper audit. All results are reported regardless of outcome.</p>

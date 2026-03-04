@@ -1,0 +1,44 @@
+{
+  "test": "xi_massmatched_pairs",
+  "status": "OK",
+  "g_dagger": 1.2E-10,
+  "caliper_dex": 0.3,
+  "seed": 42,
+  "n_perm": 1000,
+  "n_boot": 500,
+  "N_pairs_mass": 131,
+  "N_pairs_with_C": 110,
+  "tng_file": "/mnt/ebs/bec-dark-matter/datasets/TNG_RAR_48133x50_SOFT1p5_RUN20260223_061026_BIG_BASE/rar_points.parquet",
+  "sparc": {
+    "n_payload_galaxies": 113,
+    "C_stacked": 0.6874069269041914,
+    "C_ci95": [
+      0.41471089090400726,
+      1.0072277610658409
+    ],
+    "perm_p": 0.56
+  },
+  "tng": {
+    "n_payload_galaxies": 131,
+    "C_stacked": 0.12889975367700449,
+    "C_ci95": [
+      0.0654360822516843,
+      0.5007059950145237
+    ],
+    "perm_p": 1.0
+  },
+  "paired_comparison": {
+    "N": 110,
+    "median_log10_C_ratio": 0.01748467392041172,
+    "mean_log10_C_ratio": 0.16866471497800228,
+    "wilcoxon_signed_rank_p": 9.916925629315218E-7,
+    "wilcoxon_statistic": 424.0
+  },
+  "healing_length_comparison": {
+    "N_pairs": 131,
+    "median_log10_xi_ratio": 0.10729166419152651,
+    "median_log10_Mdyn_ratio": 0.21458332838305338
+  },
+  "elapsed_seconds": 16.3,
+  "verdict": "DIAGNOSTIC: Mass matching removes the apparent xi concentration gap; paired C comparison is statistically significant but not directionally BEC-favoring."
+}

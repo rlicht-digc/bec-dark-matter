@@ -22,11 +22,11 @@
       "ci_95_upper": 0.7426,
       "ci_excludes_zero": true,
       "ttest_t": 31.008,
-      "ttest_p_one_sided": 2.287357401227732e-41,
+      "ttest_p_one_sided": 2.287357401227732E-41,
       "frac_positive": 1.0,
       "n_positive": 67,
       "n_total": 67,
-      "binom_p": 6.776263578034403e-21
+      "binom_p": 6.776263578034403E-21
     },
     "lag2": {
       "mean": 0.4994,
@@ -37,11 +37,11 @@
       "ci_95_upper": 0.5576,
       "ci_excludes_zero": true,
       "ttest_t": 16.603,
-      "ttest_p_one_sided": 1.4835735984434356e-25,
+      "ttest_p_one_sided": 1.4835735984434356E-25,
       "frac_positive": 0.955,
       "n_positive": 64,
       "n_total": 67,
-      "binom_p": 3.4006001140007847e-16
+      "binom_p": 3.4006001140007847E-16
     }
   },
   "aggregate_diff": {
@@ -54,11 +54,11 @@
       "ci_95_upper": 0.2868,
       "ci_excludes_zero": true,
       "ttest_t": 7.508,
-      "ttest_p_one_sided": 1.0038788086833947e-10,
+      "ttest_p_one_sided": 1.0038788086833947E-10,
       "frac_positive": 0.746,
       "n_positive": 50,
       "n_total": 67,
-      "binom_p": 3.36898683345773e-05
+      "binom_p": 0.0000336898683345773
     },
     "lag2": {
       "mean": 0.0423,
@@ -86,11 +86,11 @@
       "ci_95_upper": 0.4347,
       "ci_excludes_zero": true,
       "ttest_t": 12.559,
-      "ttest_p_one_sided": 1.8486695232158612e-19,
+      "ttest_p_one_sided": 1.8486695232158612E-19,
       "frac_positive": 0.925,
       "n_positive": 62,
       "n_total": 67,
-      "binom_p": 7.097669891056868e-14
+      "binom_p": 7.097669891056868E-14
     },
     "lag2": {
       "mean": 0.0406,
@@ -259,8 +259,8 @@
   "permutation_null_summary": {
     "n_galaxies": 67,
     "n_perm_per_galaxy": 5000,
-    "fisher_combined_p_lag1": 1.8472202604644776e-149,
-    "fisher_combined_p_lag2": 1.474574440959467e-96,
+    "fisher_combined_p_lag1": 1.8472202604644776E-149,
+    "fisher_combined_p_lag2": 1.474574440959467E-96,
     "n_sig_005_lag1": 66,
     "n_sig_005_lag2": 57,
     "frac_sig_005_lag1": 0.985,
@@ -269,8 +269,9 @@
     "null_mean_r1": -0.0405,
     "null_std_r1": 0.0219,
     "z_score": 33.83,
-    "z_p_one_sided": 3.344298055293435e-251
+    "z_p_one_sided": 3.344298055293435E-251
   },
   "structure_verdict": "OSCILLATORY_STRUCTURE",
-  "perm_null_rejected": true
+  "perm_null_rejected": true,
+  "verdict": "OSCILLATION_SIGNAL_SURVIVES_CONTROLS"
 }

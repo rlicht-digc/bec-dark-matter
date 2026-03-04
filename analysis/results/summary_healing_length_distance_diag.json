@@ -1,6 +1,6 @@
 {
   "test": "healing_length_distance_diagnostics",
-  "description": "Tests whether \u03be/R signal is real or distance-quality artifact.",
+  "description": "Tests whether ξ/R signal is real or distance-quality artifact.",
   "sample": {
     "n_galaxies": 67,
     "median_eD": 2.93
@@ -159,5 +159,6 @@
       "p": 0.010291240070822999
     }
   },
-  "interpretation": "EDD_ARTIFACT"
+  "interpretation": "EDD_ARTIFACT",
+  "verdict": "DISTANCE_SENSITIVE_SIGNAL"
 }

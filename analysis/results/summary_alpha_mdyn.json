@@ -487,5 +487,6 @@
       "X_peak": 0.021332729090373925,
       "daic": 11.579792771764717
     }
-  ]
+  ],
+  "verdict": "SUPPORTS_X_OVER_XI_FRAMEWORK"
 }

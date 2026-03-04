@@ -45,7 +45,7 @@ upload() {
   if [ -n "$DRY_RUN" ]; then
     echo "  [dry-run] osf -p $OSF_PROJECT upload $src osfstorage/$dest"
   else
-    osf -p "$OSF_PROJECT" upload "$src" "osfstorage/$dest"
+    osf -p "$OSF_PROJECT" upload --force "$src" "osfstorage/$dest"
   fi
 }
 
@@ -71,6 +71,13 @@ done
 echo "Uploading supporting/ (State 2 summaries)..."
 for f in "$STAGING"/supporting/*.json; do
   upload "$f" "supporting/$(basename "$f")"
+  ((UPLOADED++))
+done
+
+# --- Supplementary diagnostics ---
+echo "Uploading supplementary/ (merged-audit diagnostics)..."
+for f in "$STAGING"/supplementary/*.json; do
+  upload "$f" "supplementary/$(basename "$f")"
   ((UPLOADED++))
 done
 

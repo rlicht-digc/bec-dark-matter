@@ -1,5 +1,5 @@
 # OSF Upload List
-Generated: 2026-02-26T02:31:42Z
+Generated: 2026-03-04T22:35:00Z
 
 ## Wiki Pages
 - analysis/results/tests_results_osf.html → OSF wiki "Tests & Results"
@@ -29,6 +29,22 @@ Generated: 2026-02-26T02:31:42Z
 - analysis/results/summary_kurtosis_mhongoose.json
 - analysis/results/summary_soliton_nfw_composite.json
 - analysis/results/summary_tf_scatter_redshift.json
+- analysis/results/summary_xi_massmatched.json
+- analysis/results/summary_mdyn_triangulation.json
+
+## Summary JSONs (Supplementary Diagnostics — Merged Paper Addendum)
+- analysis/results/summary_13b_composite.json
+- analysis/results/summary_13b_diagnostics.json
+- analysis/results/summary_13b_standalone.json
+- analysis/results/summary_healing_length_scaling.json
+- analysis/results/summary_radial_variance_profile.json
+- analysis/results/summary_healing_length_kstar.json
+- analysis/results/summary_healing_length_distance_diag.json
+- analysis/results/summary_hierarchical_healing_length.json
+- analysis/results/summary_alpha_mdyn.json
+- analysis/results/summary_interface_oscillation.json
+- analysis/results/summary_interface_oscillation_controls.json
+- analysis/results/summary_interface_spectral_test.json
 
 ## Figures (if any are directly cited by OSF pages)
 - None — all test outputs on the OSF Tests page are rendered from summary JSON metrics tables.

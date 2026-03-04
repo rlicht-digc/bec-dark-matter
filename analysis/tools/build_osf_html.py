@@ -80,9 +80,38 @@ SUPPORTING_TEST_SCRIPTS: List[str] = [
     "analysis/pipeline/test_kurtosis_mhongoose.py",
     "analysis/pipeline/test_soliton_nfw_composite.py",
     "analysis/pipeline/test_tf_scatter_redshift.py",
+    "analysis/pipeline/test_xi_massmatched_pairs.py",
+    "analysis/pipeline/test_mdyn_triangulation_alfalfa_yang.py",
+]
+
+SUPPLEMENTARY_TEST_SCRIPTS: List[str] = [
+    "analysis/pipeline/test_13b_composite.py",
+    "analysis/pipeline/test_13b_diagnostics.py",
+    "analysis/pipeline/test_13b_standalone.py",
+    "analysis/pipeline/test_healing_length_scaling.py",
+    "analysis/pipeline/test_radial_variance_profile.py",
+    "analysis/pipeline/test_healing_length_kstar.py",
+    "analysis/pipeline/test_healing_length_distance_diag.py",
+    "analysis/pipeline/test_hierarchical_healing_length.py",
+    "analysis/pipeline/test_scale_parameter_analysis.py",
+    "analysis/pipeline/test_interface_oscillation.py",
+    "analysis/pipeline/test_interface_oscillation_controls.py",
+    "analysis/pipeline/test_interface_spectral.py",
 ]
 
 CORE_SUMMARY_OVERRIDE = {
+    "analysis/pipeline/test_13b_composite.py": "analysis/results/summary_13b_composite.json",
+    "analysis/pipeline/test_13b_diagnostics.py": "analysis/results/summary_13b_diagnostics.json",
+    "analysis/pipeline/test_13b_standalone.py": "analysis/results/summary_13b_standalone.json",
+    "analysis/pipeline/test_healing_length_scaling.py": "analysis/results/summary_healing_length_scaling.json",
+    "analysis/pipeline/test_radial_variance_profile.py": "analysis/results/summary_radial_variance_profile.json",
+    "analysis/pipeline/test_healing_length_kstar.py": "analysis/results/summary_healing_length_kstar.json",
+    "analysis/pipeline/test_healing_length_distance_diag.py": "analysis/results/summary_healing_length_distance_diag.json",
+    "analysis/pipeline/test_hierarchical_healing_length.py": "analysis/results/summary_hierarchical_healing_length.json",
+    "analysis/pipeline/test_scale_parameter_analysis.py": "analysis/results/summary_alpha_mdyn.json",
+    "analysis/pipeline/test_interface_oscillation.py": "analysis/results/summary_interface_oscillation.json",
+    "analysis/pipeline/test_interface_oscillation_controls.py": "analysis/results/summary_interface_oscillation_controls.json",
+    "analysis/pipeline/test_interface_spectral.py": "analysis/results/summary_interface_spectral_test.json",
     "analysis/pipeline/test_env_scatter_definitive.py": "analysis/results/summary_env_definitive.json",
     "analysis/pipeline/test_mc_distance_and_inversion.py": "analysis/results/summary_mc_distance_and_inversion.json",
     "analysis/pipeline/test_nonparametric_inversion.py": "analysis/results/summary_nonparametric_inversion.json",
@@ -105,6 +134,8 @@ CORE_SUMMARY_OVERRIDE = {
     "analysis/pipeline/test_tf_scatter_redshift.py": "analysis/results/summary_tf_scatter_redshift.json",
     "analysis/pipeline/integrate_mhongoose.py": "analysis/results/summary_mhongoose_integration.json",
     "analysis/pipeline/validate_mhongoose_sparc.py": "analysis/results/summary_validate_mhongoose_sparc.json",
+    "analysis/pipeline/test_xi_massmatched_pairs.py": "analysis/results/summary_xi_massmatched.json",
+    "analysis/pipeline/test_mdyn_triangulation_alfalfa_yang.py": "analysis/results/summary_mdyn_triangulation.json",
 }
 
 PREFERRED_METRIC_PATTERNS = [
@@ -413,7 +444,7 @@ def build_test_section(
 ) -> Tuple[List[str], str]:
     record = dict(record_map.get(script_rel, {}))
     record.setdefault("script", script_rel)
-    summary_rel = record.get("summary") or CORE_SUMMARY_OVERRIDE.get(script_rel, "")
+    summary_rel = CORE_SUMMARY_OVERRIDE.get(script_rel) or record.get("summary") or ""
     summary_obj = load_json(ROOT / summary_rel) if summary_rel else None
     finding = choose_finding(summary_obj, script_rel)
     metrics = pick_metrics(summary_obj, minimum=2, maximum=8)
@@ -477,9 +508,14 @@ def build_tests_results_html(records: List[Dict[str, Any]]) -> str:
             core_findings.append(finding)
             test_counter += 1
 
-    parts.append("<h2>Supporting Tests (5)</h2>")
+    parts.append(f"<h2>Supporting Tests ({len(SUPPORTING_TEST_SCRIPTS)})</h2>")
     for idx, script_rel in enumerate(SUPPORTING_TEST_SCRIPTS, start=1):
         section, _ = build_test_section(record_map, script_rel, f"Supporting Test {idx}")
+        parts.extend(section)
+
+    parts.append(f"<h2>Supplementary Diagnostics ({len(SUPPLEMENTARY_TEST_SCRIPTS)})</h2>")
+    for idx, script_rel in enumerate(SUPPLEMENTARY_TEST_SCRIPTS, start=1):
+        section, _ = build_test_section(record_map, script_rel, f"Supplementary Test {idx}")
         parts.extend(section)
 
     total_core = len(core_findings)
@@ -492,6 +528,8 @@ def build_tests_results_html(records: List[Dict[str, Any]]) -> str:
         "<p>"
         f"This analysis includes {total_core} core tests. {support} support BEC-consistency, "
         f"{inconclusive} are inconclusive or show fragility, and {failed} fail to replicate in independent datasets. "
+        f"It also includes {len(SUPPORTING_TEST_SCRIPTS)} supporting diagnostics and "
+        f"{len(SUPPLEMENTARY_TEST_SCRIPTS)} supplementary diagnostics from the merged-paper audit. "
         "All results are reported regardless of outcome."
         "</p>"
     )

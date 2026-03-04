@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# stage_for_osf.sh — Assemble all 73 OSF upload files into public_osf/staging/
+# stage_for_osf.sh — Assemble all OSF upload files into public_osf/staging/
 # Run from repo root: bash tools/osf_packaging/stage_for_osf.sh
 set -euo pipefail
 
@@ -20,7 +20,7 @@ echo "Repo root: $REPO_ROOT"
 
 # Clean and recreate staging tree
 rm -rf "$STAGING"
-mkdir -p "$STAGING"/{wiki,core,supporting,metadata}
+mkdir -p "$STAGING"/{wiki,core,supporting,supplementary,metadata}
 for ds in "${DATASETS[@]}"; do
   mkdir -p "$STAGING/datasets/$ds"
 done
@@ -52,16 +52,37 @@ for name in "${CORE_JSONS[@]}"; do
   cp "$RESULTS/${name}.json" "$STAGING/core/"
 done
 
-# --- Supporting summaries — State 2 (5 files) ---
+# --- Supporting summaries — State 2 (7 files) ---
 SUPPORTING_JSONS=(
   summary_cluster_scale_rar
   summary_cluster_sigma_scaling
   summary_kurtosis_mhongoose
   summary_soliton_nfw_composite
   summary_tf_scatter_redshift
+  summary_xi_massmatched
+  summary_mdyn_triangulation
 )
 for name in "${SUPPORTING_JSONS[@]}"; do
   cp "$RESULTS/${name}.json" "$STAGING/supporting/"
+done
+
+# --- Supplementary diagnostics from merged-paper audit (12 files) ---
+SUPPLEMENTARY_JSONS=(
+  summary_13b_composite
+  summary_13b_diagnostics
+  summary_13b_standalone
+  summary_healing_length_scaling
+  summary_radial_variance_profile
+  summary_healing_length_kstar
+  summary_healing_length_distance_diag
+  summary_hierarchical_healing_length
+  summary_alpha_mdyn
+  summary_interface_oscillation
+  summary_interface_oscillation_controls
+  summary_interface_spectral_test
+)
+for name in "${SUPPLEMENTARY_JSONS[@]}"; do
+  cp "$RESULTS/${name}.json" "$STAGING/supplementary/"
 done
 
 # --- Metadata (2 files) ---
@@ -77,7 +98,7 @@ done
 # --- Summary ---
 echo ""
 echo "Staged files by directory:"
-for dir in wiki core supporting metadata; do
+for dir in wiki core supporting supplementary metadata; do
   count=$(find "$STAGING/$dir" -type f | wc -l | tr -d ' ')
   printf "  %-14s %s files\n" "$dir/" "$count"
 done
@@ -86,8 +107,8 @@ printf "  %-14s %s files  (%s datasets)\n" "datasets/" "$ds_count" "${#DATASETS[
 
 total=$(find "$STAGING" -type f | wc -l | tr -d ' ')
 echo ""
-echo "Total: $total files (expected: 73)"
-if [ "$total" -eq 73 ]; then
+echo "Total: $total files (expected: 87)"
+if [ "$total" -eq 87 ]; then
   echo "PASS"
 else
   echo "FAIL — count mismatch!" >&2

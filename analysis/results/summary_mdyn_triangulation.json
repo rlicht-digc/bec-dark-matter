@@ -1,0 +1,43 @@
+{
+  "test": "mdyn_triangulation_alfalfa_yang",
+  "status": "OK",
+  "seed": 42,
+  "bin_width_dex": 0.3,
+  "min_bin_n": 30,
+  "n_boot": 1000,
+  "reference_delta_tng_sparc": 0.215,
+  "route1": {
+    "overlap_logMbar_range": [
+      7.556128035678238,
+      10.986128035678238
+    ],
+    "n_bins": 5,
+    "n_yang_total": 1070,
+    "n_kin_total": 107,
+    "delta_global": 1.770919707176617,
+    "delta_global_ci95": [
+      1.4643849184810147,
+      1.9191577736597014
+    ],
+    "interpretation": "delta_global (+1.771 dex) is much larger than the TNG-SPARC reference offset (+0.215 dex). This is expected: Yang M_200 includes the full dark matter halo out to the virial radius (~200 kpc), while SPARC kinematic M_dyn is measured only to the last rotation-curve point (~20-50 kpc). The aperture gap dominates. The TNG-SPARC offset (+0.215 dex) is a small fraction (12.1%) of the total Yang-kinematic gap, meaning the TNG M_dyn excess at fixed M_bar is NOT simply 'catching up to the full halo mass' but rather reflects a more concentrated inner mass profile. Route 3 (SPARC internal consistency: Vflat vs outer-point) provides a cleaner diagnostic of estimator bias."
+  },
+  "route3": {
+    "n_galaxies": 57,
+    "median_log_ratio": -0.012834457649407938,
+    "mean_log_ratio": -0.0085161059877765,
+    "std_log_ratio": 0.019107380774778675,
+    "ci95_median": [
+      -0.017346000412491236,
+      -0.0017971553649474004
+    ]
+  },
+  "paths_used": {
+    "rar_points": "/Users/russelllicht/bec-dark-matter/analysis/results/rar_points_unified.csv",
+    "btfr": "/Users/russelllicht/bec-dark-matter/raw_data/observational/hi_surveys/sparc/BTFR_Lelli2019.mrt",
+    "sparc_halo": "/Users/russelllicht/bec-dark-matter/raw_data/observational/hi_surveys/sparc/HI_linewidths_vs_halo_mass.mrt",
+    "alfalfa": "/Users/russelllicht/bec-dark-matter/raw_data/observational/alfalfa/alfalfa_alpha100_haynes2018.tsv",
+    "yang_dir": "/Users/russelllicht/bec-dark-matter/raw_data/observational/yang_catalogs"
+  },
+  "elapsed_seconds": 5.2,
+  "verdict": "DIAGNOSTIC: SPARC kinematic M_dyn estimator bias is <0.02 dex; the +0.215 dex TNG offset is consistent with inner concentration differences, not estimator failure."
+}

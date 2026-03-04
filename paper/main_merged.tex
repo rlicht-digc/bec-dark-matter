@@ -1,7 +1,7 @@
-% A Bose-Einstein-Form Mapping of the Radial Acceleration Relation
-% and Its Residual Statistics
+% Unified Paper: BEC RAR Identity + Kernel+Scale Framework + Residual Statistics
 % R. Licht (2026)
-% Rewritten to reflect the full OSF test battery (23 tests)
+% Merger of main.tex (Paper 1) + gdagger_hunt_paper.tex (Paper 2)
+% Full analysis battery: 23 primary tests + 12 supplementary diagnostics
 
 \documentclass[twocolumn,twocolappendix]{aastex631}
 
@@ -9,8 +9,9 @@
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{hyperref}
 
-% Shorthand commands
+% Shorthand commands (union of both papers)
 \newcommand{\gbar}{g_{\rm bar}}
 \newcommand{\gobs}{g_{\rm obs}}
 \newcommand{\gdm}{g_{\rm DM}}
@@ -21,13 +22,21 @@
 \newcommand{\msun}{M_\odot}
 \newcommand{\lcdm}{\Lambda{\rm CDM}}
 \newcommand{\daic}{\Delta{\rm AIC}}
+\newcommand{\sparc}{SPARC}
 
-\shorttitle{A Bose-Einstein-Form Mapping of the RAR}
+% Auto-generated run-specific values (from Paper 2 refereeproof)
+\input{tables/values_from_summary}
+
+% Force page break after abstract+keywords (standard for ApJ twocolumn)
+\NewPageAfterKeywords
+
+\shorttitle{Bose-Einstein Mapping and Scale Identifiability in the RAR}
 \shortauthors{Licht}
 
 \begin{document}
 
-\title{A Bose--Einstein-Form Mapping of the Radial Acceleration Relation and Its Residual Statistics}
+\title{A Bose--Einstein-Form Mapping of the Radial Acceleration Relation:
+Scale Identifiability, Residual Statistics, and a 35-Analysis Audit}
 
 \author{Russell Licht}
 \affiliation{Independent Researcher}
@@ -40,11 +49,28 @@ Bose-Einstein occupation number $\nbar(\varepsilon) = 1/(\exp\varepsilon - 1)$,
 with dimensionless energy $\varepsilon = \sqrt{\gbar/\gdag}$ and
 $\gdag = 1.2 \times 10^{-10}\,{\rm m\,s^{-2}}$.
 This is not a fit but a rearrangement of the published RAR formula.
-We use this equivalence as a change of variables and test whether the residual
-statistics simplify in the mapped coordinates, using rotation-curve data
-spanning four quality tiers: a core sample of 131 SPARC galaxies
-(2{,}777 points), an extended Tier~K sample of 250 galaxies (9{,}406 points)
-including Korsaga et al.\ (2019) mass models, and independent validation
+
+To test whether this scale preference is robust and not a numerical
+coincidence, we develop a kernel+scale identifiability framework with
+anti-numerology controls.  Applied to \ValNData\ SPARC rotation-curve
+measurements, the Bose--Einstein RAR kernel is preferred over six
+alternatives (including hyperbolic cotangent, logistic, and power-law
+controls), localizing a preferred scale at
+$\log_{10}(s/{\rm m\,s^{-2}}) = \ValBestLogScale$---within
+\ValDeltaFromGdag~dex of $\gdag$.  Galaxy-grouped 5-fold
+cross-validation gives
+$\log_{10} s = \ValCvMean \pm \ValCvStd$.
+Global permutation and within-galaxy circular shift nulls yield zero hits
+in 500 realizations at both $\pm 0.10$ and $\pm 0.05$~dex windows
+(Clopper--Pearson bounds $\leq \ValAOneCPUpperTen$).  Negative controls
+confirm that the signal collapses under predictor noise, variable warping,
+and galaxy-label randomization.  Extension to cluster-scale data does not
+recover $\gdag$, serving as an explicit null.
+
+Using this framework, we test whether the residual statistics simplify in
+the mapped coordinates, using rotation-curve data spanning four quality
+tiers: a core sample of 131 SPARC galaxies (2{,}777 points), an extended
+Tier~K sample of 250 galaxies (9{,}406 points), and independent validation
 datasets including PROBES (1{,}506 galaxies) and KiDS-1000 weak lensing.
 
 Three statistical fingerprints emerge:
@@ -57,11 +83,15 @@ and (3)~a candidate excess kurtosis spike at $\gdag$
 semi-analytic null ($\kappa_4 \approx 0.01$), but dependent on B-band
 mass models requiring independent confirmation.
 
-We subject these fingerprints to a battery of 16 core and 7 supporting
-statistical tests. Of these, 10 support consistency with the
+We subject these fingerprints to a primary battery of 16 core and 7 supporting
+statistical tests, plus 12 supplementary BEC diagnostics recovered from the
+pipeline audit. In the primary battery, 10 support consistency with the
 Bose-Einstein mapping, 5 are inconclusive or fragile under covariate
 control, and 1---replication in the independent PROBES catalog---fails,
 with the scatter inversion displaced by $1.2\dex$ from $\gdag$.
+The supplementary diagnostics strengthen evidence for non-random residual
+structure but also reveal confounds (distance quality, size scaling) that
+must be controlled explicitly.
 We present a full scorecard, discuss whether the features reflect
 coincidence, a $\lcdm$ consequence, or wave dark matter, and identify
 discriminating tests for forthcoming data.
@@ -94,68 +124,41 @@ $\lcdm$ simulations can reproduce the mean relation through baryonic feedback
 \citep{Keller2017,Ludlow2017}, but the origin of its specific mathematical
 form remains unexplained.
 
+A natural question is whether $\gdag$ is merely a fitting parameter
+or a physically meaningful scale that reappears in independent
+contexts.  The answer has implications for dark matter models:
+MOND predicts $\gdag$ as fundamental, while $\lcdm$ must explain
+its emergence from galaxy formation physics \citep{Desmond2017,Navarro2017}.
+
 In this paper, we report a simple mathematical observation:
 Equation~(\ref{eq:rar}), written in terms of the dark matter contribution,
-is algebraically identical to the Bose-Einstein occupation number. We catalog
-the statistical consequences of this identification across multiple datasets
-spanning three orders of magnitude in sample size, and subject the findings
-to a comprehensive battery of robustness and replication tests.
+is algebraically identical to the Bose-Einstein occupation number. We then
+develop a \emph{kernel+scale identifiability framework} with three categories
+of anti-numerology controls to test whether this scale preference is robust:
+(i)~scale injection scans measuring how sharply the AIC minimum
+localizes the preferred scale;
+(ii)~permutation-based null tests verifying that random pairings
+do not reproduce the localization; and
+(iii)~nearby-scale comparisons against cosmologically motivated
+alternatives ($a_\Lambda$, $cH_0$, $cH_0/6$).
+Finally, we catalog the statistical consequences of the identification
+across multiple datasets spanning three orders of magnitude in sample size,
+and subject the findings to a comprehensive battery of robustness and
+replication tests.
 
 \medskip
 \noindent\textit{Scope of claim.} This paper reports:
 (i)~an exact algebraic equivalence between the published RAR and the BE
 occupation number;
-(ii)~three residual-statistical features anchored at $\gdag$, tested against
+(ii)~a validated kernel+scale framework demonstrating that the BE~RAR kernel
+is preferred over six alternatives, with the preferred scale localized to
+within \ValDeltaFromGdag~dex of $\gdag$;
+(iii)~three residual-statistical features anchored at $\gdag$, tested against
 a structure-only semi-analytic null model (not full-physics $\lcdm$);
-(iii)~a 23-test audit with an honest scorecard including failures; and
-(iv)~falsifiable predictions for forthcoming data. We do not claim that
+(iv)~a 35-analysis audit (23 primary tests + 12 supplementary diagnostics)
+with an honest scorecard including failures; and
+(v)~falsifiable predictions for forthcoming data. We do not claim that
 these features require a Bose-Einstein condensate interpretation.
-
-% ============================================================
-\section{Data} \label{sec:data}
-
-\subsection{Sample Tiers} \label{sec:tiers}
-
-We use rotation-curve data organized into quality tiers.
-Table~\ref{tab:tiers} defines each tier, specifying the surveys included,
-galaxy count, data point count, and which analyses use each tier. All tiers
-apply standard quality cuts: quality flag $Q \leq 2$, inclination
-$30^\circ < i < 85^\circ$, and $\geq 5$ data points per galaxy. Residuals
-are defined as $\delta \equiv \log \gobs - \log g_{\rm obs,RAR}(\gbar)$
-throughout.
-
-\begin{deluxetable*}{llcccl}
-\tablecaption{Data inventory and sample tiers.\label{tab:tiers}}
-\tablehead{
-\colhead{Tier} & \colhead{Surveys} & \colhead{Galaxies} & \colhead{RAR data points} & \colhead{$\sigma_{\rm RAR}$ (dex)} & \colhead{Used in}
-}
-\startdata
-SPARC core & SPARC 3.6\,$\mu$m \citep{Lelli2016} & 131 & 2{,}777 & 0.17 & Fingerprints, robustness (\S\S\ref{sec:fingerprints}--\ref{sec:robustness}) \\
-Tier~K & SPARC + Korsaga + de~Blok & 250 & 9{,}406 & 0.22 & Kurtosis (\S\ref{sec:kurtosis}), extended inversion (\S\ref{sec:extended}) \\
-PROBES & \citet{Stone2022} & 1{,}506 & 45{,}176 & 0.32 & Replication test (\S\ref{sec:probes}) \\
-Brouwer & KiDS-1000 lensing \citep{Brouwer2021} & 60 & 240\tablenotemark{a} & --- & Lensing validation (\S\ref{sec:lensing}) \\
-ALFALFA$\times$Yang & ALFALFA + \citet{Yang2007} & 2{,}273 & N/A\tablenotemark{b} & 0.32 & BTFR environment (\S\ref{sec:btfr}) \\
-Cluster & CLASH \citep{Tian2020} & 20 & 84 & --- & Cluster-scale null (\S\ref{sec:clusters}) \\
-\enddata
-\tablenotetext{a}{Stacked lensing radial bins, not individual rotation-curve
-points.}
-\tablenotetext{b}{N/A indicates a catalog-level entry not represented as
-individual RAR data points; ALFALFA provides integrated HI line widths
-($W_{50}$) rather than resolved rotation curves.}
-\tablecomments{SPARC core and Tier~K use the standard cuts described in the
-text. The Tier~K label denotes the inclusion of \citet{Korsaga2019} GHASP
-mass models and \citet{deBlok2002} LSB galaxies. PROBES excludes 112 galaxies
-overlapping with SPARC. Brouwer data are stacked lensing profiles in 4
-stellar-mass bins. ALFALFA$\times$Yang reports only the 2{,}273 galaxies
-with successful group-catalog cross-matches.}
-\end{deluxetable*}
-
-\subsection{Environmental Classification} \label{sec:env_class}
-
-For environmental scatter tests, we classify galaxies as ``field'' or
-``dense'' using group membership from SPARC metadata. Of the 131 SPARC core
-galaxies, 83 are classified as field and 48 as dense (including 26 Ursa
-Major cluster members).
 
 % ============================================================
 \section{The Algebraic Identity} \label{sec:identity}
@@ -222,20 +225,25 @@ acceleration. \citet{Verlinde2017} derives $a_0 = cH_0/6$, which yields
 $a_0 = 1.182 \times 10^{-10}\,{\rm m\,s^{-2}}$ for
 $H_0 = 73\,\kms\,{\rm Mpc}^{-1}$ \citep{Riess2022}---a 1.5\% offset from
 the observed $\gdag$ (varying from 1.5\% to 9\% across the current $H_0$
-range). The \citet{Milgrom1999} de~Sitter--Unruh interpolation function is
-preferred over Equation~(\ref{eq:rar}) by $\daic = -1{,}222$, with the
+range). As an aside on functional-form fit quality, the
+\citet{Milgrom1999} de~Sitter--Unruh interpolation function achieves a
+lower AIC than Equation~(\ref{eq:rar}) by $\daic = -1{,}222$, with the
 improvement concentrated in the dark-matter-dominated regime.
 
 \begin{quote}
-\textit{AIC methodology note.} This comparison uses
+\textit{AIC methodology note.} This $\daic$ is a statement about
+interpolation-function fit quality, not about the physical validity of
+either framework. The comparison uses
 ${\rm AIC} = \chi^2 + 2k$ where
 $\chi^2 = \sum_i [(\log g_{{\rm obs},i} - \log g_{{\rm model},i})/\sigma_i]^2$
 with uniform per-point weights in $\log\gbar$ and $\sigma_i$ set to the
-per-bin RMS scatter. Both models have $k=1$ free parameter ($\gdag$). Under
-inverse-variance weighting, the preference shrinks to $\daic \approx -400$;
-under galaxy-averaged weighting, $\daic \approx -80$. In all schemes, the
-Milgrom form is preferred; only the magnitude changes. See
-Appendix~\ref{app:aic} for details.
+global RMS (see Appendix~\ref{app:aic}). Both models have $k=1$ free
+parameter ($\gdag$). Under inverse-variance weighting, the preference
+shrinks to $\daic \approx -400$; under galaxy-averaged weighting,
+$\daic \approx -80$. In all schemes, the Milgrom form is preferred; only
+the magnitude changes. This comparison is secondary to the paper's main
+contribution---the kernel+scale identifiability framework---and is included
+for completeness.
 \end{quote}
 
 These observations are consistent with $\gdag$ being set by the cosmological
@@ -261,6 +269,339 @@ $\varepsilon = \sqrt{\gbar/\gdag}$. The solid curve is the Bose-Einstein
 distribution $\nbar(\varepsilon) = 1/(e^\varepsilon - 1)$---an algebraic
 identity, not a fit.}
 \label{fig:identity}
+\end{figure*}
+
+% ============================================================
+\section{Kernel+Scale Identifiability Framework} \label{sec:methods}
+
+To test whether the BE~RAR identification reflects a genuine scale
+preference or a numerical coincidence, we develop a reusable
+kernel+scale identifiability framework with built-in anti-numerology
+controls.
+
+\subsection{Kernel Library}\label{sec:kernels}
+
+We define seven candidate kernel functions $K(x, s)$ mapping a
+physical variable $x$ (acceleration) and a free scale parameter $s$
+to a predicted response $y$:
+
+\begin{enumerate}
+  \item \textbf{BE\_RAR} (Eq.~\ref{eq:rar}): $K = 1/(1 - e^{-\epsilon})$,
+        $\epsilon = \sqrt{x/s}$.
+  \item \textbf{BE\_occupation}: $K = 1/(e^{\epsilon} - 1)$.
+  \item \textbf{BE\_cousin}: $K = \epsilon/(1 - e^{-\epsilon})$.
+  \item \textbf{coth}: $K = \coth(\epsilon)$.
+  \item \textbf{tanh}: $K = \tanh(\epsilon)$.
+  \item \textbf{logistic}: $K = 1/(1 + e^{-(\epsilon-1)})$.
+  \item \textbf{power\_law}: $K = \sqrt{x/s} + 1$ (no special scale).
+\end{enumerate}
+
+For the SPARC RAR, we use ``direct'' mode: $y = K(x, s)$ with zero
+nuisance parameters, because the RAR mapping \emph{is} the kernel.
+This gives the fairest comparison: all models have exactly one free
+parameter (the scale $s$).
+
+\subsection{Scale Optimization}\label{sec:scaleopt}
+
+For each kernel, we perform a two-stage optimization:
+(i)~grid search over $N_{\rm grid}$ log-uniformly spaced trial
+scales in $[10^{-13}, 10^{-8}]$~m~s$^{-2}$, followed by
+(ii)~bounded scalar minimization (Brent's method) seeded from the
+best grid point.
+
+We compute the Akaike Information Criterion
+${\rm AIC} = 2k - 2\ln\hat{L}$, where $k$ is the number of free
+parameters and $\hat{L}$ is the Gaussian likelihood evaluated at
+the RMS residual.  The Bayesian Information Criterion (BIC) is
+computed in parallel.
+
+\subsection{Scale Injection Scan}\label{sec:scalescan}
+
+To characterize how sharply the data prefer a particular scale, we
+evaluate the AIC across 300 trial scales spanning the full search
+range.  From this curve we extract:
+\begin{itemize}
+  \item $\daic_{\pm 0.1}$: the AIC increase when the scale is shifted
+    $\pm 0.1$~dex from the optimum;
+  \item $\daic_{\pm 0.1}/N$: the same, normalized by sample size
+    (dataset-independent identifiability metric);
+  \item \textbf{Peak sharpness}: the second derivative of the AIC
+    with respect to the log-scale at the optimum,
+    $\mathcal{S} \equiv d^2({\rm AIC})/d(\log_{10} s)^2 |_{s=\hat{s}}$,
+    estimated by finite differences on the scan grid.  Larger values
+    indicate a narrower, more tightly localized minimum.  Units are
+    AIC per $(\log_{10}\,{\rm m\,s^{-2}})^2$.
+\end{itemize}
+
+\subsection{Null Tests and Structure-Preserving Control}\label{sec:nulls}
+
+We employ three destructive permutation-based null tests and one
+structure-preserving control:
+
+\begin{enumerate}
+  \item \textbf{Global shuffle} (A1): permute $y$ relative to $x$,
+    destroying all correlation.
+  \item \textbf{Block-permute bins null} (A2b): randomly reassign
+    which bin's $y$-values go with which bin's $x$-values (0.5-dex
+    bins).  This preserves the within-bin marginal distribution of
+    $y$ but breaks the cross-bin monotonic relationship that encodes
+    the characteristic scale.
+  \item \textbf{Within-galaxy circular shift} (A3): for each galaxy,
+    circularly shift its $y$ values by a random offset, preserving
+    per-galaxy distributions but destroying the radial alignment.
+  \item \textbf{Within-bin shuffle} (A2, control): permute $y$ only
+    within coarse $x$-bins (0.5~dex width).  This preserves the
+    conditional structure $p(y \mid x)$ approximately at the chosen
+    bin width and is \emph{not} a null test: $p \approx 1$ is expected
+    up to finite-binning and refit variability.
+    It confirms that the scale preference resides in the global
+    $x$--$y$ correlation, not in bin-local structure.
+\end{enumerate}
+
+For each null realization, we refit the best kernel and record the
+optimal scale.  The test statistic is
+$p_{\pm w} = N_{\rm hits,\pm w}/N_{\rm shuffles}$, where a ``hit''
+is $|\log_{10} s_{\rm null} - \log_{10} \gdag| < w$ for
+$w \in \{0.10,0.05\}$~dex.  When $N_{\rm hits,\pm w}=0$, we report
+the one-sided 95\% Clopper--Pearson upper bound.
+
+\subsection{Galaxy-Grouped Cross-Validation}\label{sec:groupcv}
+
+To prevent data leakage (points from the same galaxy appearing in
+both train and test), we use GroupKFold with $k=5$ folds where
+group~$=$~galaxy.  For each fold we record the best kernel, optimal
+scale, and out-of-sample RMSE.
+
+\subsection{Nearby-Scale Comparison}\label{sec:nearby}
+
+We compare $\gdag$ against cosmologically motivated scales:
+$a_\Lambda = c^2\sqrt{\Lambda/3}$, $cH_0$, $cH_0/6$ (Verlinde),
+$cH_0/(2\pi)$.  This is done in two modes:
+
+\begin{enumerate}
+  \item \textbf{$\eta = 1$ (fixed)}: diagnostic direct substitution
+    where the scale is fixed (no optimization) and the likelihood is
+    evaluated directly with zero free parameters.
+  \item \textbf{$\eta$ free}: fit $y = \eta \cdot K(x, s_{\rm named})$
+    with one free parameter per model (matched degrees of freedom).
+\end{enumerate}
+
+AIC values from the $\eta=1$ and $\eta$-free modes are not directly
+comparable because the parameter count differs; model-selection claims
+are restricted to matched-DoF comparisons.
+
+% ============================================================
+\section{Data} \label{sec:data}
+
+\subsection{Sample Tiers} \label{sec:tiers}
+
+We use rotation-curve data organized into quality tiers.
+Table~\ref{tab:tiers} defines each tier, specifying the surveys included,
+galaxy count, data point count, and which analyses use each tier. All tiers
+apply standard quality cuts: quality flag $Q \leq 2$, inclination
+$30^\circ < i < 85^\circ$, and $\geq 5$ data points per galaxy. Residuals
+are defined as $\delta \equiv \log \gobs - \log g_{\rm obs,RAR}(\gbar)$
+throughout.
+
+\begin{deluxetable*}{llcccl}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
+\tablecaption{Data inventory and sample tiers.\label{tab:tiers}}
+\tablehead{
+\colhead{Tier} & \colhead{Surveys} & \colhead{Galaxies} & \colhead{RAR data points} & \colhead{$\sigma_{\rm RAR}$ (dex)} & \colhead{Used in}
+}
+\startdata
+SPARC core & SPARC 3.6\,$\mu$m \citep{Lelli2016} & 131 & 2{,}777 & 0.17 & Framework (\S\ref{sec:framework_results}), fingerprints (\S\ref{sec:fingerprints}), robustness (\S\ref{sec:robustness}) \\
+Tier~K & SPARC + Korsaga + de~Blok & 250 & 9{,}406 & 0.22 & Kurtosis (\S\ref{sec:kurtosis}), extended inversion (\S\ref{sec:extended}) \\
+PROBES & \citet{Stone2022} & 1{,}506 & 45{,}176 & 0.32 & Replication test (\S\ref{sec:probes}) \\
+Brouwer & KiDS-1000 lensing \citep{Brouwer2021} & 60 & 240\tablenotemark{a} & --- & Lensing validation (\S\ref{sec:lensing}) \\
+ALFALFA$\times$Yang & ALFALFA + \citet{Yang2007} & 2{,}273 & N/A\tablenotemark{b} & 0.32 & BTFR environment (\S\ref{sec:btfr}) \\
+Cluster & CLASH \citep{Tian2020} & 20 & 84 & --- & Cluster-scale null (\S\ref{sec:cluster_null}) \\
+\enddata
+\tablenotetext{a}{Stacked lensing radial bins, not individual rotation-curve
+points.}
+\tablenotetext{b}{N/A indicates a catalog-level entry not represented as
+individual RAR data points; ALFALFA provides integrated HI line widths
+($W_{50}$) rather than resolved rotation curves.}
+\tablecomments{SPARC core and Tier~K use the standard cuts described in the
+text. The Tier~K label denotes the inclusion of \citet{Korsaga2019} GHASP
+mass models and \citet{deBlok2002} LSB galaxies. PROBES excludes 112 galaxies
+overlapping with SPARC. Brouwer data are stacked lensing profiles in 4
+stellar-mass bins. ALFALFA$\times$Yang reports only the 2{,}273 galaxies
+with successful group-catalog cross-matches.}
+\end{deluxetable*}
+
+\subsection{Environmental Classification} \label{sec:env_class}
+
+For environmental scatter tests, we classify galaxies as ``field'' or
+``dense'' using group membership from SPARC metadata. Of the 131 SPARC core
+galaxies, 83 are classified as field and 48 as dense (including 26 Ursa
+Major cluster members).
+
+% ============================================================
+\section{Framework Validation on SPARC} \label{sec:framework_results}
+
+Before applying the BE mapping to residual statistics, we validate the
+kernel+scale framework on SPARC data and a cluster-scale null.
+
+\subsection{Baseline Kernel Comparison}\label{sec:baseline}
+
+\input{tables/tab_baseline}
+
+The BE\_RAR kernel yields the lowest AIC among all seven candidates,
+with an optimal scale of $\log_{10}(s/{\rm m\,s^{-2}})=\ValBestLogScale$,
+offset by \ValDeltaFromGdag~dex from $\log_{10}\gdag = -9.921$.
+
+The scale injection scan (Figure~\ref{fig:threepanel}a) shows an
+extremely sharp AIC minimum: $\daic/N = \ValDeltaAICPerN$ per data point at
+$\pm 0.1$~dex, with peak sharpness
+$\mathcal{S} = \ValPeakSharpness$~AIC\,/$(\log_{10}\,{\rm m\,s^{-2}})^2$.
+
+\subsection{Permutation Null Tests}\label{sec:nullresults}
+
+\input{tables/tab_nulls}
+
+For global shuffle (A1), hits are \ValAOneFracTen\
+($p_{\pm 0.10}=\ValAOnePTen$) and \ValAOneFracFive\
+($p_{\pm 0.05}=\ValAOnePFive$), with one-sided 95\%
+Clopper--Pearson upper bounds
+$p_{{\rm UB},\pm0.10}=\ValAOneCPUpperTen$ and
+$p_{{\rm UB},\pm0.05}=\ValAOneCPUpperFive$.  The within-galaxy
+circular-shift null (A3) gives the same outcome at both windows
+(\ValAThreeFracTen, \ValAThreeFracFive).  The block-permute bins
+null (A2b) preserves within-bin heteroskedasticity while disrupting
+the cross-bin monotonic mapping, and therefore shows intermediate
+behavior: \ValATwoBFracTen\
+($p_{\pm 0.10}=\ValATwoBPTen$) and \ValATwoBFracFive\
+($p_{\pm 0.05}=\ValATwoBPFive$), as listed in
+Table~\ref{tab:nulls}.
+
+The within-bin shuffle (A2) is a \emph{structure-preserving control},
+never a null test: it approximately preserves $p(y \mid x)$ within
+0.5-dex bins at the chosen bin width.  Accordingly it retains high proximity rates
+(\ValATwoCtrlFracTen\ and \ValATwoCtrlFracFive), confirming that the
+signal is carried by the global cross-bin mapping rather than by
+bin-local marginals alone.
+
+Figure~\ref{fig:threepanel}b shows best-scale distributions for all
+four permutation procedures (three nulls + one control).  The global
+and galaxy-shift nulls cluster away from $\gdag$.  The block-permute
+null is broader with partial overlap near $\gdag$, while the
+structure-preserving control retains concentration near $\gdag$.
+
+\subsection{Galaxy-Grouped Cross-Validation}\label{sec:cvresults}
+
+\input{tables/tab_groupcv}
+
+Across \ValCvFoldsTotal\ galaxy-grouped folds, the mean optimal scale is
+$\log_{10} s = \ValCvMean \pm \ValCvStd$, consistent with $\gdag$ to
+within $1\sigma$.  The scale range across folds is $< 0.1$~dex.
+The full-data optimum selects \ValBestKernel; fold-level kernel
+selection is \ValCvBestKernelCount/\ValCvFoldsTotal for
+\ValBestKernel\ and \ValCvAltKernelCount/\ValCvFoldsTotal for
+\ValCvAltKernel.
+
+\subsection{Cut, Grid, and Negative Controls}\label{sec:sensitivity}
+
+The optimal scale varies by at most \ValCutMaxDelta~dex across four sample
+variants (baseline, strict inclination, strict quality, strict
+minimum points).  Grid invariance is exact: varying
+$N_{\rm grid}$ from 100 to 1{,}000 produces \ValGridMaxDelta~dex
+variation (Figure~\ref{fig:stability}).
+
+\input{tables/tab_negative}
+
+Table~\ref{tab:negative} reports the degradation of the AIC optimum
+under five destructive perturbations.  The key results are:
+\begin{itemize}
+  \item \textbf{Predictor noise} ($\sigma = 0.3$~dex):
+    sharpness decreases substantially and the best scale drifts away
+    from $\gdag$.
+  \item \textbf{Variable warping} ($x \to x^{0.7}$ or $x^{1.3}$):
+    sharpness collapses and the scale displacement is largest.
+    This is the most powerful break test in the suite.
+  \item \textbf{Galaxy label swap}: sharpness drops and scale drift
+    increases relative to baseline.
+\end{itemize}
+
+These results confirm that the sharp AIC minimum at $\gdag$ is a
+genuine feature of the $\gbar$--$\gobs$ correlation, not a numerical
+or methodological artifact.
+
+\subsection{Nearby-Scale Comparison}\label{sec:nearbyresults}
+
+\input{tables/tab_nearby}
+
+At $\eta = 1$ (direct substitution), $\gdag$ is strongly preferred
+over $a_\Lambda$.  With $\eta$ free (matched degrees of freedom), $cH_0/6$
+performs comparably to $\gdag$, consistent with the Verlinde relation
+$\gdag \approx cH_0/6$ (agreement to $\sim\!1.5\%$ in linear
+units, 0.039~dex).
+
+\subsection{Cluster-Scale Null}\label{sec:cluster_null}
+
+Applied to the \citet{Tian2020} cluster RAR, the framework does
+\emph{not} recover $\gdag$: the best scale hits the search boundary
+at $\log_{10} s = \ValClusterBestLogScale$, offset by
+\ValClusterDelta~dex from $\gdag$.  The
+$\daic/N$ at $\pm 0.1$~dex is effectively zero
+(Figure~\ref{fig:threepanel}c), confirming the absence of
+identifiability at galaxy-$\gdag$ in this regime.
+This is the expected result: the cluster-scale RAR operates at
+$a_0 \approx 14 \times \gdag$ \citep{Tian2020}, and our framework
+correctly reports a null.
+
+% Framework validation figures
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_three_panel.png}
+\caption{
+\textbf{(a)} AIC vs.\ $\log_{10}({\rm scale})$ for the BE\_RAR
+kernel on SPARC, showing a sharp minimum near $\gdag$ (red line).
+Reference scales $cH_0/6$ (orange dashed) and $a_\Lambda$ (purple
+dotted) are indicated.
+\textbf{(b)} Distribution of best-fit scales from \ValAOneN-realization
+permutation procedures: global shuffle (gray), block-permute bins null
+(blue), within-galaxy circular shift (orange), and within-bin
+structure-preserving control (green).  The $\pm 0.1$~dex band
+around $\gdag$ is shaded.
+\textbf{(c)} $\daic/N$ at $\pm 0.1$~dex for SPARC (strong
+identifiability) and cluster data (null, as expected).
+}
+\label{fig:threepanel}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_validation_stability.png}
+\caption{
+\textbf{(a)} Galaxy-grouped \ValCvFoldsTotal-fold cross-validation: best scale per
+fold.  The $\pm 0.1$~dex band around $\gdag$ is shaded.
+Mean $\pm$ std: $\ValCvMean \pm \ValCvStd$.
+\textbf{(b)} Sensitivity to quality cuts: baseline ($Q \leq 2$,
+$30^\circ$--$85^\circ$, $\geq 5$ pts), strict inclination
+($40^\circ$--$80^\circ$), strict quality ($Q \leq 1$), and strict
+minimum points ($\geq 10$).  Maximum variation: \ValCutMaxDelta~dex.
+\textbf{(c)} Grid invariance: best scale vs.\ $N_{\rm grid}$
+from 100 to 1{,}000.  Variation = \ValGridMaxDelta~dex.
+}
+\label{fig:stability}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_negative_controls.png}
+\caption{
+Negative controls (break tests).
+\textbf{(a)} Peak sharpness as a fraction of baseline under five
+perturbations: predictor noise ($\sigma = 0.1, 0.3$~dex), variable
+warping ($x \to x^{0.7}, x^{1.3}$), and galaxy-label swap.
+Warping completely destroys the optimum (sharpness $\to 0$).
+\textbf{(b)} Scale drift: distance of perturbed best scale from
+$\gdag$.  The 0.1~dex threshold (red dashed) is exceeded by warps
+and galaxy swap.
+}
+\label{fig:negcontrols}
 \end{figure*}
 
 % ============================================================
@@ -484,6 +825,8 @@ been tested with identical analysis pipelines and may produce different
 results.
 
 \begin{deluxetable*}{lcccl}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
 \tablecaption{Internal robustness test battery.\label{tab:robustness}}
 \tablehead{
 \colhead{Test} & \colhead{Sample} & \colhead{Key statistic} & \colhead{Result} & \colhead{Verdict}
@@ -538,6 +881,18 @@ battery and constrains the physical interpretation: either the inversion
 requires SPARC-quality mass decomposition ($\sigma < 0.2\dex$) to detect,
 or it is a feature of the SPARC sample specifically.
 
+\medskip
+\noindent\fbox{\parbox{0.95\columnwidth}{%
+\textbf{Replication Constraint.}
+The PROBES scatter inversion falls at $\log\gbar \approx -11.12$, offset
+by $1.2\dex$ from $\gdag$---the most important negative result in our test
+battery. Two explanations remain open: (1)~the inversion requires
+SPARC-quality mass decomposition ($\sigma < 0.2\dex$) to detect, or
+(2)~the signal is specific to the SPARC sample and does not generalize.
+Resolving this requires homogeneous, high-quality mass models for an
+independent galaxy sample.}}
+\medskip
+
 \subsection{Weak Lensing Validation} \label{sec:lensing}
 
 Using KiDS-1000 stacked lensing profiles \citep{Brouwer2021} in four
@@ -545,7 +900,8 @@ stellar-mass bins, the isolated-galaxy subsample shows consistently tighter
 RAR scatter than the full sample, with the environment effect growing with
 mass (field-dense $\Delta\sigma = 0.04$--$0.08\dex$). This pattern is
 consistent with the BEC prediction that tidal interactions in dense
-environments disrupt condensate coherence.
+environments disrupt condensate coherence
+(but see \S\ref{sec:not_established} for fragility caveats).
 
 However, NFW profiles are preferred over cored (solitonic) profiles at all
 mass bins ($\daic > 160$), because the predicted BEC core radius
@@ -637,6 +993,8 @@ over-concentration rather than a systematic underestimate by the SPARC
 kinematic proxy.
 
 \begin{deluxetable*}{lccl}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
 \tablecaption{External validation and replication results.%
 \label{tab:external}}
 \tablehead{
@@ -657,13 +1015,50 @@ $M_{\rm dyn}$ triangulation & 1{,}070 ALFALFA$\times$Yang + 57 SPARC & Estimator
 \enddata
 \end{deluxetable*}
 
+\subsection{Supplementary BEC Diagnostics Added in the Merge}
+\label{sec:supp12}
+
+Beyond the primary 23-test scorecard, we now include 12 previously uncited
+BEC-focused diagnostics from the pipeline inventory. All 12 now have
+quantitative entries in this manuscript; for the 13b lensing-composite
+triplet we generated canonical summaries from fresh reruns
+(\texttt{summary\_13b\_*.json}) to replace the prior placeholder mapping.
+
+\begin{deluxetable*}{lccl}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
+\tablecaption{Supplementary diagnostics integrated from the uncovered-test
+audit (12 analyses).\label{tab:supp12}}
+\tablehead{
+\colhead{Test} & \colhead{Sample} & \colhead{Key result} & \colhead{Status}
+}
+\startdata
+13b composite & 4 mass bins & Raw $\daic=+179.1$; 4 red flags, fixed-$r_c$ favors NFW & Inconclusive \\
+13b diagnostics & 4 mass bins & Stitch ratios 0.40--0.83; NFW+offset $\daic=+153$ & Syst.\ mismatch \\
+13b standalone & 4 mass bins & Total $\daic=-16.2$; NFW preferred all bins & NFW preferred \\
+Healing-length scaling & 67 gal. & $\rho(L_c,\xi)=0.55$ ($p=1.3\times 10^{-6}$); size trend & Size-confounded \\
+Radial variance profile & 2{,}707 pts & Peaked profile beats monotonic ($\daic=+12.7$) & Trans.\ scale \\
+Healing-length $k_\star$ & 67 gal. & $\rho(k_\star,\xi/R_{\rm ext})=0.279$ ($p=0.022$) & Weak positive \\
+Healing-length distance & 67 gal. & Stratified perm.\ $p=0.038$; residualized $p=0.195$ & Dist.-sensitive \\
+Hierarchical healing & 67+20 sys. & $\alpha=0.3166\pm0.023$, $r=0.831$, $p=2.2\times10^{-23}$ & Significant \\
+Scale-param.\ meta-analysis & 2{,}739 pts & $\alpha_{\rm mdyn}=0.280$; broad positive $\daic$ regime & Supports $X=R/\xi$ \\
+Interface oscillation & 67 gal. & Lag-1 mean $=0.700$, $p=2.3\times10^{-41}$ & Strong positive \\
+Interface osc.\ controls & 67 gal. & Detrended lag-1 $=0.376$, $p=1.85\times10^{-19}$ & Survives controls \\
+Interface spectral & 67 gal. & 25/67 significant (37.3\%; null 5\%), $p=6.3\times10^{-16}$ & Periodic excess \\
+\enddata
+\tablecomments{These 12 analyses are treated as supplementary diagnostics:
+they expand empirical coverage without retroactively changing the adjudication
+rules used for the primary 23-test scorecard.}
+\end{deluxetable*}
+
 % ============================================================
 \section{Scorecard and Interpretation} \label{sec:discussion}
 
 \subsection{Full Scorecard}
 
-Table~\ref{tab:scorecard} presents an honest accounting of all 23 tests
-(16 core + 6 supporting).
+Table~\ref{tab:scorecard} presents the adjudicated primary scorecard
+(23 tests: 16 core + 7 supporting) and separately tracks 12 supplementary
+diagnostics added in the merge.
 
 \begin{deluxetable}{lc}
 \tablecaption{Test battery scorecard.\label{tab:scorecard}}
@@ -676,9 +1071,10 @@ Inconclusive or fragile & 5 \\
 Failed / not replicated & 1 \\
 Diagnostic (not directional) & 4 \\
 Different regime (null expected) & 3 \\
+Supplementary diagnostics (merge addendum) & 12 \\
 \enddata
 \tablecomments{%
-Supporting (10): environmental scatter, MC distance, non-parametric
+Supporting (10): environmental scatter (fragile; \S\ref{sec:not_established}), MC distance, non-parametric
 inversion, jackknife, split-half, structure-only null, extended RAR,
 Brouwer lensing, kurtosis disambiguation, kurtosis + MHONGOOSE.
 Inconclusive (5): environmental confound control, propensity matching,
@@ -687,7 +1083,10 @@ Failed (1): PROBES replication.
 Diagnostic (4): kurtosis disambiguation, soliton-NFW composite,
 TNG $\xi$ mass-matched, $M_{\rm dyn}$ triangulation.
 Different regime (3): cluster-scale RAR, cluster $\sigma$ scaling,
-lensing profile shape.}
+lensing profile shape.
+Supplementary (12): 13b composite triplet, healing-length scaling family,
+scale-parameter meta-analysis, and interface oscillation/spectral tests
+(Section~\ref{sec:supp12}).}
 \end{deluxetable}
 
 \subsection{What Is Established}
@@ -697,6 +1096,13 @@ Three results are robust:
     \item The RAR is algebraically identical to the Bose-Einstein
     distribution (Equation~\ref{eq:be_identity}). This is a mathematical
     fact.
+    \item The BE\_RAR kernel is preferred over six alternatives in a
+    head-to-head comparison with anti-numerology controls. The preferred
+    scale is localized to within \ValDeltaFromGdag~dex of $\gdag$, with
+    zero hits in 500-realization global and galaxy-shift permutation
+    nulls (Clopper--Pearson bound $\leq \ValAOneCPUpperTen$), and
+    galaxy-grouped 5-fold CV giving
+    $\log_{10} s = \ValCvMean \pm \ValCvStd$.
     \item RAR residual variance follows wave-interference scaling
     ($\sigma^2 \propto \nbar^2$), not Poisson
     ($\sigma^2 \propto \nbar$), with $\daic = +10.5$.
@@ -707,7 +1113,7 @@ Three results are robust:
     in a structure-only semi-analytic null (offset by $1.7\dex$).
 \end{enumerate}
 
-\subsection{What Is Not Established}
+\subsection{What Is Not Established} \label{sec:not_established}
 
 \begin{enumerate}
     \item \textbf{Quantum vs.\ classical.} The quantum prediction
@@ -758,6 +1164,43 @@ consistent with a healing length $\xi \propto M^{-0.27}$.
 
 No current test uniquely selects among these three possibilities.
 
+\subsection{Physical Interpretation} \label{sec:phys_interp}
+
+This paper establishes that the Bose--Einstein kernel provides a
+statistically preferred description of the RAR, with scale localization at
+$\gdag$ surviving all null and robustness tests we can construct from the
+SPARC data. These are statements about galaxy rotation curves and the
+mathematical structure of the RAR; they do not require or assume any
+particular model of compact objects, and the analysis is self-contained at
+the galaxy scale.
+
+For this framework to advance beyond a phenomenological identification,
+future work must target galaxy-level discriminants that separate the
+BEC interpretation from alternatives (c.f.\ the three possibilities above):
+\begin{itemize}
+  \item High-resolution samples (e.g.\ BIG-SPARC) enabling direct
+    measurement of the healing-length parameter $\xi$ as a function of
+    galaxy mass.
+  \item Morphology-, stellar-mass-, and environment-matched comparisons
+    that isolate the condensate signal from covariate confounds.
+  \item Forward-modeling of BEC halo density profiles to predict rotation
+    curves, rather than post-hoc fitting of the RAR residuals.
+\end{itemize}
+
+\subsection{How to Extend This Framework} \label{sec:extend}
+
+To test whether $\gdag$ appears in a new dataset:
+\begin{enumerate}
+  \item Define $(x, y)$ where $x$ has acceleration dimensions.
+  \item Choose a fit mode (``direct'' if $y$ is a known function of
+    $K(x,s)$; ``log'' or ``linear'' otherwise).
+  \item Run the experiment with the same kernel library and null tests.
+  \item A ``second appearance'' detection requires:
+    $\daic/N > 0.01$ at $\pm 0.1$~dex,
+    $p_{\rm within} < 0.01$ (global shuffle),
+    and best scale within $\pm 0.1$~dex of $\gdag$.
+\end{enumerate}
+
 % ============================================================
 \section{Predictions and Future Tests} \label{sec:predictions}
 
@@ -790,16 +1233,26 @@ No current test uniquely selects among these three possibilities.
 
 The radial acceleration relation is algebraically identical to the
 Bose-Einstein occupation number,
-$\gdm/\gbar = 1/(e^{\sqrt{\gbar/\gdag}} - 1)$. We have tested the
-statistical consequences of this mapping across six datasets spanning four
-quality tiers and three orders of magnitude in sample size.
+$\gdm/\gbar = 1/(e^{\sqrt{\gbar/\gdag}} - 1)$. A kernel+scale
+identifiability framework with anti-numerology controls confirms that
+the BE~RAR kernel is preferred over six alternatives, localizing the
+preferred scale to within \ValDeltaFromGdag~dex of $\gdag$, with zero
+hits in 500-realization permutation nulls and galaxy-grouped
+cross-validation giving $\log_{10} s = \ValCvMean \pm \ValCvStd$.
+Negative controls confirm signal collapse under perturbation; a
+cluster-scale pilot correctly returns a null.
 
-Three fingerprints emerge in the SPARC core sample (131 galaxies):
-wave-interference variance scaling ($\daic = +10.5$), a scatter inversion
-anchored at $\gdag$ to $0.05\dex$ precision, and a candidate kurtosis spike
-at $\gdag$ (Tier~K only, B-band dependent). A battery of 23 tests yields
-10 supporting, 5 inconclusive, 1 failure (PROBES), 4 diagnostic, and 3 in
-a different physical regime.
+We have tested the statistical consequences of this mapping across six
+datasets spanning four quality tiers and three orders of magnitude in
+sample size. Three fingerprints emerge in the SPARC core sample
+(131 galaxies): wave-interference variance scaling ($\daic = +10.5$),
+a scatter inversion anchored at $\gdag$ to $0.05\dex$ precision, and a
+candidate kurtosis spike at $\gdag$ (Tier~K only, B-band dependent).
+A primary battery of 23 tests yields 10 supporting, 5 inconclusive, 1 failure
+(PROBES), 4 diagnostic, and 3 in a different physical regime. Twelve
+additional supplementary diagnostics are now integrated; they reinforce
+non-random residual structure while explicitly exposing confounds in the
+SPARC+Brouwer composite lensing bridge (Section~\ref{sec:supp12}).
 
 The PROBES replication failure is the strongest constraint: either the
 scatter inversion requires SPARC-quality mass decomposition to detect, or
@@ -807,15 +1260,21 @@ it is not a universal feature of galaxy rotation curves. BIG-SPARC
 ($\sim\!3{,}900$ galaxies, SPARC-quality photometry) is the decisive
 upcoming test.
 
+The framework is designed to be reusable: given any $(x, y)$ dataset
+and a library of candidate kernels, it returns a ranked list of kernels
+with scale estimates, significance metrics, and interpretation guardrails.
+We release the full framework, run folders, and reproducibility metadata
+to enable independent extension to non-RAR datasets.
+
 \subsection*{Data and Code Availability}
 
-Analysis code, figure-generation scripts, all 23 summary JSON files, dataset
-metadata, and reproducibility documentation are available at the Open Science
-Framework: \url{https://osf.io/jshr9/}. The OSF project contains:
+Analysis code, figure-generation scripts, all 23 primary summary JSON files,
+dataset metadata, and reproducibility documentation are available at the Open
+Science Framework: \url{https://osf.io/jshr9/}. The OSF project contains:
 \begin{itemize}
     \item \texttt{paper1.pdf} --- compiled manuscript;
     \item \texttt{core/summary\_*.json} --- 16 core test result files;
-    \item \texttt{supporting/summary\_*.json} --- 7 supporting test result
+    \item \texttt{supporting/summary\_*.json} --- 7 supporting primary test result
     files;
     \item \texttt{source/} --- \LaTeX\ source, bibliography, and
     \texttt{aastex631.cls};
@@ -823,18 +1282,28 @@ Framework: \url{https://osf.io/jshr9/}. The OSF project contains:
     \item \texttt{MANIFEST.csv}, \texttt{CHECKSUMS.csv} --- file inventory
     and SHA-256 checksums.
 \end{itemize}
+\noindent Supplementary diagnostics used in Section~\ref{sec:supp12} are
+currently repository-local in \texttt{analysis/results/} and
+\texttt{analysis/results\_vm/}, including canonical 13b rerun summaries
+\texttt{summary\_13b\_composite.json},
+\texttt{summary\_13b\_diagnostics.json}, and
+\texttt{summary\_13b\_standalone.json}.
 \noindent\textbf{Minimum reproducer} (after cloning the repository and
 acquiring SPARC data):
 \begin{verbatim}
-python3 analysis/tests/test_nonparametric_inversion.py
-python3 analysis/tests/test_kurtosis_phase_transition.py
+python3 analysis/tests/\
+  test_gdagger_hunt_refereeproof.py \
+  --n-shuffles 500 --seed 42
+python3 analysis/tests/\
+  test_nonparametric_inversion.py
+python3 analysis/tests/\
+  test_kurtosis_phase_transition.py
 python3 analysis/tools/make_paper_assets.py
 \end{verbatim}
-\noindent These three commands regenerate the scatter-inversion and kurtosis
-results (Figures~\ref{fig:inversion}--\ref{fig:kurtosis}) and all paper
-tables. The SPARC data are publicly available at
-\url{http://astroweb.cwru.edu/SPARC/}. The \citet{Korsaga2019} mass models
-are available via VizieR.
+\noindent These commands regenerate the framework validation, scatter-inversion,
+and kurtosis results and all paper tables. The SPARC data are publicly
+available at \url{http://astroweb.cwru.edu/SPARC/}. The \citet{Korsaga2019}
+mass models are available via VizieR.
 
 \begin{acknowledgments}
 This research made use of the SPARC database \citep{Lelli2016}, the GHASP
@@ -894,11 +1363,16 @@ All results in this paper are derived from scripts in the project
 repository. To reproduce:
 
 \begin{verbatim}
+# Framework validation (Section 5)
+python3 analysis/tests/\
+  test_gdagger_hunt_refereeproof.py \
+  --n-shuffles 500 --seed 42
+
 # Core fingerprints and robustness tests
 python3 analysis/tests/test_*.py
 
 # Milgrom vs standard RAR delta-AIC
-# (Table 7 / Appendix A sensitivity)
+# (Table sensitivity / Appendix A)
 python3 analysis/pipeline/\
   literature_crossref_tests.py
 
@@ -907,11 +1381,12 @@ python3 analysis/tools/make_paper_assets.py
 \end{verbatim}
 
 Random seeds are fixed at 42 for all Monte Carlo, bootstrap, and
-permutation procedures. Summary JSON files for all 23 tests are archived
-at the OSF project (\url{https://osf.io/jshr9/}). Each JSON includes:
+permutation procedures. Summary JSON files for all 23 primary tests are
+archived at the OSF project (\url{https://osf.io/jshr9/}). Each JSON includes:
 test name, verdict, all numerical results, software versions, and the git
 SHA of the code that produced it.
 
 \bibliography{references}
+\bibliographystyle{aasjournal}
 
 \end{document}

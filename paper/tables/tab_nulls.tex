@@ -1,4 +1,6 @@
-\begin{deluxetable}{llcccc}
+\begin{deluxetable*}{llcccc}
+\tabletypesize{\scriptsize}
+\tablewidth{0pt}
 \tablecaption{Permutation procedures: dual-window proximity statistics around $g^\dagger$\label{tab:nulls}}
 \tablehead{
   \colhead{Test} &
@@ -16,4 +18,4 @@ Within-bin shuffle (0.5 dex) & Control & 500 & 500/500 (1.0000) & 499/500 (0.998
 \enddata
 \tablecomments{For each permutation procedure, Hits/$N$ gives the count and empirical fraction of realizations with best scale within the stated window of $\log_{10}g^\dagger$. Rows marked Null are destructive tests expected to drive proximity rates toward zero. The block-permute bins null preserves within-bin heteroskedasticity while disrupting the cross-bin monotonic mapping, so intermediate behavior is expected. The within-bin shuffle row is a structure-preserving Control row: it approximately preserves within-bin conditional structure $p(y\mid x)$ at the chosen bin width, so $p\approx 1$ is expected up to finite-binning and refit variability. Clopper--Pearson (CP) one-sided 95\% upper bounds are reported only for windows with $k=0$ hits; otherwise CP entries are shown as ---. CP bounds use the exact binomial inverse-beta form $p_{\rm UB}=\mathrm{BetaInv}(1-\alpha; k+1, n-k)$, which for $k=0$ reduces to $1-\alpha^{1/n}$.
 }
-\end{deluxetable}
+\end{deluxetable*}

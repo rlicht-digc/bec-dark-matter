@@ -1,0 +1,27 @@
+{
+  "test_name": "test_13b_diagnostics",
+  "description": "Systematics audit for SPARC+Brouwer composite test: stitch boundary, split-sample origin, NFW+offset control, conversion bias, and fixed-r_c check.",
+  "verdict": "STITCH_SYSTEMATIC_DOMINANT",
+  "sample": {
+    "n_mass_bins": 4,
+    "n_sparc_galaxies_used": 88
+  },
+  "stitch_boundary_ratio_brouwer_over_extrapolated_sparc": {
+    "bin1": 0.83,
+    "bin2": 0.62,
+    "bin3": 0.40,
+    "bin4": 0.80
+  },
+  "split_sample_delta_aic_nfw_minus_bec": {
+    "sparc_only": [24.51, 7.20, 43.52, -4.00],
+    "brouwer_only": [-4.00, -4.08, -4.07, -4.12]
+  },
+  "nfw_plus_offset_control": {
+    "delta_aic_nfw_minus_nfw_offset": [-1.5, 127.7, 127.7, 153.2],
+    "a_sparc": [1.045, 0.376, 0.436, 0.428]
+  },
+  "fixed_rc_equals_xi_delta_aic_nfw_minus_bec": [-3.11, -2.76, -2.39, -2.16],
+  "artifacts": {
+    "run_log": "outputs/test13b_refresh/20260304_155010/test_13b_diagnostics.log"
+  }
+}

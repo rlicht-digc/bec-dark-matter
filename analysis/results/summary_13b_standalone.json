@@ -1,0 +1,27 @@
+{
+  "test_name": "test_13b_standalone",
+  "description": "Brouwer-only lensing profile-shape fit comparing NFW vs BEC soliton+envelope across 4 stellar-mass bins.",
+  "verdict": "NFW_PREFERRED",
+  "sample": {
+    "n_mass_bins": 4,
+    "n_valid_bins": 4,
+    "n_points_per_bin": 15
+  },
+  "aggregate": {
+    "total_delta_aic_nfw_minus_bec": -16.22,
+    "n_bec_preferred_bins": 0,
+    "n_nfw_preferred_bins": 4,
+    "core_radius_slope_dlogrc_dlogmstar": 0.966,
+    "core_radius_vs_xi_pearson_r": 0.944,
+    "core_radius_vs_xi_pearson_p": 0.0561
+  },
+  "per_bin_delta_aic_nfw_minus_bec": {
+    "bin1": -4.00,
+    "bin2": -4.08,
+    "bin3": -4.05,
+    "bin4": -4.08
+  },
+  "artifacts": {
+    "run_log": "outputs/test13b_refresh/20260304_155010/test_13b_standalone.log"
+  }
+}

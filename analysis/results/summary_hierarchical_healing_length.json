@@ -1,11 +1,11 @@
 {
   "test_name": "hierarchical_healing_length",
-  "description": "Tests whether the cluster-scale g\u2020_eff follows a mass-scaling relation through the BEC healing length \u03be = sqrt(GM/g\u2020). Spans from dwarf galaxies (~10^8 M\u2609) to massive clusters (~10^15 M\u2609).",
+  "description": "Tests whether the cluster-scale g†_eff follows a mass-scaling relation through the BEC healing length ξ = sqrt(GM/g†). Spans from dwarf galaxies (~10^8 M☉) to massive clusters (~10^15 M☉).",
   "constants": {
-    "g_dagger": 1.2e-10,
+    "g_dagger": 1.2E-10,
     "log_g_dagger": -9.920818753952375,
-    "G_SI": 6.674e-11,
-    "prefactor_kpc": 3.408e-05
+    "G_SI": 6.674E-11,
+    "prefactor_kpc": 0.00003408
   },
   "data": {
     "n_galaxies": 67,
@@ -34,7 +34,7 @@
       "alpha_err": 0.023,
       "intercept": -3.1564,
       "pearson_r": 0.8312,
-      "pearson_p": 2.2238486158373725e-23,
+      "pearson_p": 2.2238486158373725E-23,
       "M_ref_Msun": 9302010406.3,
       "log_M_ref": 9.969
     },
@@ -55,7 +55,7 @@
       "combined_slope_err": 0.0129,
       "combined_M_ref": 12133612829.55
     },
-    "verdict": "SIGNIFICANT \u2014 g\u2020_eff scales with Mtot within clusters"
+    "verdict": "SIGNIFICANT — g†_eff scales with Mtot within clusters"
   },
   "test_3b_core_size": {
     "xi_core_over_Rad_median": 5.7,
@@ -73,16 +73,16 @@
       "xi_200_eff_median_kpc": 305.6,
       "xi_200_eff_over_R200_median": 0.162
     },
-    "verdict": "SUGGESTIVE \u2014 \u03be_eff \u2248 1.4\u00d7 Rad (same order of magnitude)"
+    "verdict": "SUGGESTIVE — ξ_eff ≈ 1.4× Rad (same order of magnitude)"
   },
   "test_3c_hierarchical": {
     "combined_slope": 0.5,
-    "combined_slope_err": 6.303209650227706e-06,
+    "combined_slope_err": 0.000006303209650227706,
     "expected_slope": 0.5,
     "deviation_sigma": 0.0,
     "pearson_r": 1.0,
     "pearson_p": 0.0,
-    "verdict": "CONSISTENT \u2014 slope = 0.500 \u00b1 6.30e-06, within 2\u03c3 of 0.5"
+    "verdict": "CONSISTENT — slope = 0.500 ± 6.30e-06, within 2σ of 0.5"
   },
   "test_3d_potential_well": {
     "gdagger_eff_vs_gcore": {
@@ -110,7 +110,7 @@
       "spearman_p": 0.4685
     },
     "previous_E5_multivariate_R2": 0.749,
-    "verdict": "SIGNIFICANT \u2014 g\u2020_eff correlates with Mtot (p = 0.008)"
+    "verdict": "SIGNIFICANT — g†_eff correlates with Mtot (p = 0.008)"
   },
   "step4_scatter_profile": {
     "scatter_minimum_kpc": 200.0,
@@ -119,7 +119,7 @@
     "xi_eff_median_kpc": 21.8,
     "xi_200_eff_median_kpc": 305.6,
     "sigma_at_xi_eff": 0.1388,
-    "closest_scale_to_scatter_min": "\u03be_200_eff",
+    "closest_scale_to_scatter_min": "ξ_200_eff",
     "closest_scale_value_kpc": 305.6,
     "closest_scale_factor": 1.528,
     "inner_scatter": 0.1506,
@@ -366,5 +366,6 @@
       "xi_200_kpc": null,
       "xi_200_eff_kpc": null
     }
-  }
+  },
+  "verdict": "SIGNIFICANT_HIERARCHICAL_SCALING"
 }
